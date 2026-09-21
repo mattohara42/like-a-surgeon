@@ -141,3 +141,68 @@ Every decision made without asking. Append, do not rewrite.
   so having at least one clean example of that tier in place is useful, not
   filler. Flagged as **Q9** in `QUESTIONS.md` in case Matt would rather cut
   it than keep it.
+
+## Added while building M2 (docs/m2-architecture.md)
+
+- **A30.** Machines get their own dedicated band above the six lineage
+  lanes rather than sharing a lane with the lineage named in
+  `machine.lineage`. Resolves the "whether machines should share lanes with
+  artists or get their own band" open question `BACKLOG.md` had been
+  carrying since M1. `machine.lineage` still drives `edge.crossLineage`
+  computation, it just isn't what positions a machine vertically. This is
+  layout code, cheap to reverse if it reads wrong once there's more machine
+  data to look at.
+- **A31.** Node/edge position (x1/x2/y, i.e. where something sits on the
+  time axis) is left in content coordinates and scales with the viewport
+  transform on purpose. Every other visual property, marker radius, stroke
+  width, font size, hit-area size, dash length, is divided by the current
+  scale before being set, so it reads as a constant size on screen
+  regardless of zoom level. Found the hard way: the first version set all
+  of these in content-space units too, and they were multiplying with the
+  zoom transform on top of the already-tiered collapsed/mid/detail sizing,
+  blowing up to hundreds of screen pixels at high zoom and shrinking to
+  nothing at low zoom.
+
+## Added restyling M2 to Matt's "galaxy" direction
+
+Matt asked for a visual more like a 3D galaxy: colorful glowing planets
+sized by popularity, linked by trails, click one to zoom to another. That
+collides directly with `SPEC.md` ("Layout is a left-to-right time axis with
+horizontal lanes by lineage. Explicitly not force-directed.") and
+`CLAUDE.md`'s anti-goals ("No force-directed layout, it looks impressive
+and destroys chronological reading"), which exist because the project's
+success test depends on a reader seeing *when* things happened relative to
+each other. Raised this in chat before touching anything; Matt chose
+restyling the existing chronological layout as glowing planets/trails over
+a true 3D/force-directed rebuild, so the time axis and lineage lanes are
+unchanged, only the visual language changed.
+
+- **A32.** Node size ("planet size") is driven by graph connectedness
+  (in+out edge count for that node), not record sales. Matt's original
+  framing was "more popular artists that sold more records are larger,"
+  but no sales/certification data exists in the schema, and real sales
+  figures are exactly the kind of thing `CLAUDE.md`'s accuracy rules would
+  need serious sourcing discipline for (contested, patchy for older and
+  non-US/non-mainstream acts, which is a lot of this roster). Raised this
+  as a separate question; Matt chose connectedness. Radius scales with the
+  square root of degree (not degree directly), so visual area rather than
+  radius grows roughly linearly with connections, standard bubble-chart
+  practice. If real sales/certification data gets added to the schema
+  later, this is a one-function change in `render/graph.js`
+  (`computeDegreeFactors`), not a rearchitecture.
+- **A33.** Click-to-fly-to (`render/viewport.js`'s `flyTo`) animates the
+  pan/zoom transform to center and zoom in on whatever was clicked, rather
+  than jumping instantly, per Matt's "click on it to zoom to another planet
+  or cluster." Any user-initiated pan or zoom interrupts an in-flight
+  fly-to instead of fighting it, so grabbing the view mid-animation always
+  wins.
+- Glow (a blurred, larger, low-opacity copy of each node's/edge's own color
+  behind the crisp shape) uses two *shared* SVG filters, one for nodes and
+  one for edges, rather than one filter instance per element. Filters are
+  costly enough in SVG that per-element instances would have been a real
+  perf risk; a shared filter whose blur radius is updated once per frame
+  (same counter-scaling approach as everything else, see A31) costs two
+  attribute writes regardless of how many nodes/edges are on screen.
+  Re-measured the M2 perf gate after this restyle: `render()` averages
+  3.2ms (was 1.9ms pre-restyle), max 13.5ms, still 0/90 sampled frames over
+  the 16.7ms budget.

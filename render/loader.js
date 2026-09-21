@@ -1,0 +1,99 @@
+// Loads the sharded dataset and normalizes it into the shape the renderer
+// needs. Two data sources, picked automatically:
+//   - window.LINEAGE_DATA, set by the release bundle (data/data.bundle.js,
+//     a classic script per ASSUMPTIONS.md A18)
+//   - dev mode: fetch data/manifest.json, then fetch every record it lists,
+//     served over http by tools/serve.js (solves the file:// fetch block)
+//
+// Never assumes the roster size: node/edge counts come entirely from what
+// the manifest or bundle actually contains.
+
+const SHARD_TYPES = ['artists', 'machines', 'scenes', 'labels', 'edges', 'demos', 'threads'];
+
+const CURRENT_YEAR = new Date().getFullYear();
+
+// Per-kind field mapping to a common {startYear, endYear} shape used by
+// layout. `endYear: null` on the record (still active/open) maps to the
+// current year so the node's span reaches the present on the time axis.
+const YEAR_FIELDS = {
+  artist: ['activeFrom', 'activeTo'],
+  machine: ['releasedYear', 'discontinuedYear'],
+  scene: ['yearFrom', 'yearTo'],
+  label: ['foundedYear', 'closedYear'],
+};
+
+async function fetchJson(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(`Failed to fetch ${path}: ${res.status}`);
+  return res.json();
+}
+
+async function loadFromDevServer() {
+  const manifest = await fetchJson('data/manifest.json');
+  const bundle = {};
+  for (const shard of SHARD_TYPES) {
+    bundle[shard] = {};
+    const ids = manifest[shard] || [];
+    const records = await Promise.all(ids.map((id) => fetchJson(`data/${shard}/${id}.json`)));
+    ids.forEach((id, i) => {
+      bundle[shard][id] = records[i];
+    });
+  }
+  return bundle;
+}
+
+function normalizeNode(kind, record) {
+  const [startField, endField] = YEAR_FIELDS[kind];
+  const startYear = record[startField] ?? null;
+  const rawEnd = record[endField];
+  const endYear = rawEnd === null || rawEnd === undefined ? CURRENT_YEAR : rawEnd;
+  return {
+    id: record.id,
+    kind,
+    lineage: record.lineage,
+    name: record.name,
+    hook: record.hook ?? '',
+    startYear,
+    endYear,
+    open: rawEnd === null || rawEnd === undefined,
+    raw: record,
+  };
+}
+
+export async function loadGraphData() {
+  const bundle = window.LINEAGE_DATA ?? (await loadFromDevServer());
+
+  const nodesById = new Map();
+  for (const [kind, shard] of [
+    ['artist', 'artists'],
+    ['machine', 'machines'],
+    ['scene', 'scenes'],
+    ['label', 'labels'],
+  ]) {
+    for (const record of Object.values(bundle[shard] ?? {})) {
+      nodesById.set(record.id, normalizeNode(kind, record));
+    }
+  }
+
+  const edges = [];
+  for (const edge of Object.values(bundle.edges ?? {})) {
+    const from = nodesById.get(edge.from);
+    const to = nodesById.get(edge.to);
+    if (!from || !to) {
+      console.warn(`[loader] edge ${edge.id} references an unknown node (${edge.from} -> ${edge.to}), skipping`);
+      continue;
+    }
+    if (from.startYear === null || to.startYear === null) {
+      console.warn(`[loader] edge ${edge.id} touches a node with no start year, skipping`);
+      continue;
+    }
+    edges.push({ ...edge, from, to });
+  }
+
+  return {
+    nodes: [...nodesById.values()],
+    edges,
+    demos: bundle.demos ?? {},
+    threads: bundle.threads ?? {},
+  };
+}
