@@ -112,3 +112,41 @@ Every decision made without asking. Append, do not rewrite.
   references that connect nodes rather than name a not-yet-written one
   (`scene.memberIds`, `edge.from`/`to`, `demoId`, thread steps) stay hard
   errors, since those are added alongside the nodes they connect.
+
+## Added during the M1 cleanup pass (backlog items resolved before Track D batch 1)
+
+- **A27.** The six seed artists short on `signatureTracks` (below `SCHEMA.md`'s
+  2-3 target) were backfilled to two entries each with real, verified tracks
+  rather than by inventing plausible-sounding ones. Every added title and
+  year was checked against web sources before being written in, per
+  `CLAUDE.md`'s "never invent a date" rule; this took real search effort
+  and is not a rubber-stamp fix.
+- **A28.** The five scenes (`dusseldorf-kling-klang`, `chicago-house`,
+  `uk-punk-77`, `uk-post-punk`, `swinging-london`) and eight labels
+  (`tommy-boy`, `metroplex`, `kling-klang`, `trax`, `virgin`, `cbs-uk`,
+  `pye`, `brunswick`) referenced by existing artists but never authored are
+  now written, closing the two `BACKLOG.md` "Observed problems" entries
+  about missing scenes and labels. Founding years, founders, and ownership
+  facts were verified by web search rather than drawn from memory alone.
+  Two content judgment calls worth flagging: `kling-klang` is written as a
+  label even though it's really Kraftwerk's own private studio, not a
+  company that signed outside acts, because the schema's label/edge node
+  namespace needed something at that id and the ownership-structure story
+  (a band retaining its own means of production) is itself worth telling;
+  and Chicago house's `geopolitics` field states the now-dominant
+  historical reading of 1979's Disco Demolition Night as an outlet for
+  homophobia and racism, hedged as "widely read since" rather than
+  asserted as settled fact, since organizers of the event have disputed
+  that motive.
+- **A29.** `data/edges/e-tubby-kraftwerk-nonedge.json` renamed to
+  `e-tubby-atkins-resemblance.json` (file and `id` both), since its old
+  name referenced Kraftwerk while its actual `from`/`to` are King Tubby and
+  Juan Atkins, a stale naming mismatch rather than a content problem. Its
+  content was kept substantively as-is (an honest `asserted`-tier edge that
+  explicitly states "no documented connection" and frames itself as
+  resemblance, not transmission) rather than removed, since it demonstrates
+  a real, defensible pattern this dataset needs: `BUILD_PLAN.md`'s M1 gate
+  itself asks Matt to review "the twenty edges you are least sure about,"
+  so having at least one clean example of that tier in place is useful, not
+  filler. Flagged as **Q9** in `QUESTIONS.md` in case Matt would rather cut
+  it than keep it.

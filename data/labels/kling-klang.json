@@ -1,0 +1,20 @@
+{
+  "id": "kling-klang",
+  "name": "Kling Klang",
+  "type": "label",
+  "lineage": "electronic",
+  "foundedYear": 1970,
+  "closedYear": null,
+  "city": "Düsseldorf",
+  "founders": [
+    "Ralf Hütter",
+    "Florian Schneider"
+  ],
+  "ownershipStory": "Not a label in the usual sense so much as Kraftwerk's own studio and production company, giving the band full ownership of their masters and unlimited recording time from 1970 onward. Finished recordings were distributed through Philips/Vertigo in the early 1970s and through EMI/Capitol from the mid-1970s, but the studio and the music made in it stayed Kraftwerk's own property throughout.",
+  "hook": "Not really a label. Kraftwerk's own studio, which is why they never had to ask anyone's permission.",
+  "blurb": {
+    "age7": "Kraftwerk built their own studio so they could make music exactly how they wanted, whenever they wanted.",
+    "age13": "Kling Klang was Kraftwerk's own recording studio in Düsseldorf, not a record label they signed to. Owning it meant they could work as long as they wanted and kept control of everything they recorded, even though other companies handled getting the records into shops.",
+    "adult": "Kling Klang is the label field's edge case: a wholly owned production studio rather than a company that signed outside acts. Its inclusion here is deliberate, since the ownership structure it represents, a band controlling its own means of production outright, is one of the more consequential and unusual facts in Kraftwerk's story."
+  }
+}

@@ -39,19 +39,9 @@ correct response to a good idea arriving mid-milestone.
 (Claude Code: record code smells and architectural concerns here rather than
 fixing them inline.)
 
-- Six of the seed's ten artists carry only one `signatureTracks` entry
-  against `SCHEMA.md`'s 2-3 target (`tools/validate.js` warns on this now).
-  The seed was meant to be the quality bar, so this is worth a pass before
-  using it as a template for the next batch, not just backfilling the count.
-- `data/edges/e-tubby-kraftwerk-nonedge.json` is still present after the M1
-  migration. The seed's own note on it says "replace or remove it in M1" as
-  a deliberate `asserted`-tier pattern demonstration, not a claim to defend.
-  Left in place during the sharding migration since deciding its fate is
-  data-expansion work, not tooling work. Needs a decision during the next
-  data batch.
-- Five scenes are referenced by `artist.scenes[]` but were never authored in
-  the seed: `swinging-london`, `uk-punk-77`, `uk-post-punk`,
-  `dusseldorf-kling-klang`, `chicago-house`. `docs/m1-architecture.md`
-  flagged the analogous gap for labels (8 missing) but missed this one for
-  scenes. Both now show as expected validator warnings (A26) until authored,
-  not errors, so CI stays green through Track D.
+- The new scenes and labels authored in the cleanup pass (see A28) are all
+  orphan nodes: no edge touches any of them yet. Wiring them into real edges
+  (scene-type and label-type edges, machine cross-references) is Track D
+  content work, not a defect, but worth doing early in the next batch since
+  eight labels and five scenes sitting unconnected is a lot of dead weight
+  in the graph.

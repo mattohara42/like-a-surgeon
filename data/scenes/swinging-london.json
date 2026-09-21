@@ -1,0 +1,32 @@
+{
+  "id": "swinging-london",
+  "name": "Swinging London",
+  "type": "scene",
+  "lineage": "rock",
+  "yearFrom": 1963,
+  "yearTo": 1969,
+  "city": "London",
+  "country": "UK",
+  "hook": "A postwar generation with money in its pocket for the first time decided youth itself was worth building an entire culture around.",
+  "blurb": {
+    "age7": "In 1960s London, young people had more money than before, and they used it on new music, new fashion, and new clubs.",
+    "age13": "Britain's economy recovered enough by the early 1960s that, for the first time, ordinary teenagers had spending money of their own. Mod fashion, Carnaby Street boutiques, and bands like the Kinks and the Who grew out of the same scene, sometimes sharing the same producer, Shel Talmy, and openly competing for the same audience.",
+    "adult": "Swinging London names the moment postwar austerity had eased enough for a mass teenage consumer culture, Mod fashion and its boutique economy on Carnaby Street, to fully form, with pop music as its soundtrack and export product. The scene was tightly commercial and producer-driven, not purely organic; Shel Talmy shaping both the Kinks and the Who from the same small pool of session players and studios is a clean example of how explicit and business-like the influence between acts actually was."
+  },
+  "geopolitics": "Post-war rationing had only fully ended in the UK in the mid-1950s. By the early 1960s a sustained economic recovery gave working- and lower-middle-class British teenagers disposable income for the first time in a generation, which is the direct precondition for a youth-fashion-and-music economy centered on a single street.",
+  "whatWasNew": "A self-consciously youth-owned commercial culture, boutiques, clubs, and pop singles marketed at teenagers as teenagers rather than as junior versions of adult taste, with London itself branded internationally (Time magazine's 1966 cover) as the culture's capital.",
+  "production": "Small UK studios (IBC, Pye, Olympic) and producers like Shel Talmy working fast and cheap across multiple acts, which is why the same guitar tone and rhythm section show up on records credited to different bands.",
+  "labels": "Pye and other British labels signed the scene's guitar bands directly; American majors mostly licensed British Invasion acts rather than developing them, a different power relationship than Motown or Stax had with their own artists.",
+  "politics": "Mostly apolitical on the surface and consumerist at its core, though the mod subculture's working-class origins and its rivalry with rockers carried a real class charge underneath the fashion.",
+  "memberIds": [
+    "the-kinks",
+    "the-who"
+  ],
+  "palette": {
+    "ink": "#0e0e10",
+    "paper": "#f1e9da",
+    "accent": "#1f3a93",
+    "accent2": "#c0392b"
+  },
+  "motif": "mod-target"
+}

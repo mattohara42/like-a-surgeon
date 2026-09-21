@@ -1,0 +1,31 @@
+{
+  "id": "uk-punk-77",
+  "name": "UK Punk, 1976-77",
+  "type": "scene",
+  "lineage": "rock",
+  "yearFrom": 1976,
+  "yearTo": 1979,
+  "city": "London",
+  "country": "UK",
+  "hook": "Bored, broke, and unemployed British teenagers decided not being able to play was the point.",
+  "blurb": {
+    "age7": "In London, young people who felt bored and ignored started fast, loud bands and did not care if they played perfectly.",
+    "age13": "Britain in the mid-1970s had high unemployment, power cuts, and a three-day work week. Young Londoners answered with punk: songs played fast, loud, and often by people who had barely learned their instruments, on purpose. The Sex Pistols' 100 Club gig in September 1976 is usually treated as the moment it became a real scene rather than a few isolated bands.",
+    "adult": "Punk's 1976-77 London moment came out of a genuinely rough economic stretch: high youth unemployment, the aftermath of the 1973-74 three-day week and oil shock, and a general sense that the 1960s' promised prosperity had not arrived for most people. The music's amateurism was a deliberate rejection of the technical, progressive-rock mainstream, and its DIY ethic, that anyone can start a band and anyone can start a label, is the direct ancestor of the independent-label explosion that followed in post-punk."
+  },
+  "geopolitics": "The UK's mid-1970s recession, high inflation, and the 1973-74 three-day week, imposed to conserve electricity during industrial disputes and an oil crisis, hit young people entering the job market hardest. The National Front's growing visibility in this period is the other half of punk's context, and it produced a direct response in Rock Against Racism.",
+  "whatWasNew": "Speed, brevity, and a refusal of instrumental virtuosity as a value at all, delivered with an aggressive DIY visual and verbal style. Performance mattered more than the recording; several defining bands were confrontational live long before they had a record out.",
+  "production": "Cheap, fast studio sessions, often mixing amateur playing with experienced producers brought in to shape the chaos into a record, as happened with the Clash and Guy Stevens and, later, Lee Perry.",
+  "labels": "A handful of majors moved fast to sign the most visible bands (CBS signed the Clash within a year of the 100 Club show), which is itself a controversy the scene never fully resolved: whether major-label punk was a contradiction in terms.",
+  "politics": "Explicitly anti-establishment lyrically, and increasingly organized through Rock Against Racism as the National Front gained visibility; not a unified politics so much as a shared refusal.",
+  "memberIds": [
+    "the-clash"
+  ],
+  "palette": {
+    "ink": "#111111",
+    "paper": "#eeeeee",
+    "accent": "#e2001a",
+    "accent2": "#f2c200"
+  },
+  "motif": "safety-pin-tear"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "chicago-house",
+  "name": "Chicago House",
+  "type": "scene",
+  "lineage": "electronic",
+  "yearFrom": 1977,
+  "yearTo": 1988,
+  "city": "Chicago",
+  "country": "USA",
+  "hook": "A Black and gay Chicago dance floor that turned a DJ's edits into a genre, then let a broken bass machine finish the job.",
+  "blurb": {
+    "age7": "In Chicago, a DJ made old disco records sound new by editing them live, and people started calling the whole style 'house' music.",
+    "age13": "At a club called the Warehouse, DJ Frankie Knuckles re-edited and extended disco records for a mostly Black, mostly gay crowd after disco had been pushed out of the mainstream. Record shops started calling that sound 'Warehouse music,' shortened to house. A few years later, a crew called Phuture got hold of a cheap, misused Roland bass machine and gave the scene its own new sound: acid house.",
+    "adult": "Chicago house grew directly out of the 1979 backlash against disco, which was itself entangled with homophobia and racism aimed at disco's core audiences. Frankie Knuckles, resident at the Warehouse from 1977, kept that audience's music alive by editing and re-sequencing records live; the club's name became the genre's name. Ron Hardy's Music Box pushed the sound rawer and faster. Phuture's 1987 'Acid Tracks,' pressed on Trax, added the TB-303 and split off acid house as its own sound."
+  },
+  "geopolitics": "Chicago in this period carried the same postindustrial pressures as Detroit, with the added specific context of the disco backlash, most visibly the 1979 'Disco Demolition Night' at Comiskey Park, widely read since as an outlet for homophobia and racism directed at disco's Black and gay dance-floor audiences. House music kept that audience's music alive under a new name after the mainstream industry abandoned it.",
+  "whatWasNew": "DJ-as-editor turned into DJ-as-producer: drum machines and edits used to extend and rebuild a track live, then eventually to build new tracks from scratch on cheap drum machines and samplers, aimed at the same floor, at four-on-the-floor tempo.",
+  "production": "Club sound systems and DJ booths first, home and small-studio production on affordable Roland gear (808, 909, 303) second, once tracks moved from live edits to original productions.",
+  "labels": "Trax Records, founded 1984 by Larry Sherman, pressed much of the scene's foundational output and is central to one of the dataset's clearest labels-and-power stories: contested and frequently absent royalty payments to the Black artists who made the genre.",
+  "politics": "House music's earliest audience was the same Black, gay, and Latino Chicago dance floor that disco's backlash had targeted. Its continuation and renaming is itself a political fact, not just a musical one.",
+  "memberIds": [
+    "phuture"
+  ],
+  "palette": {
+    "ink": "#101014",
+    "paper": "#f4ede0",
+    "accent": "#7d3ccf",
+    "accent2": "#22b8a0"
+  },
+  "motif": "strobe-fourfloor"
+}

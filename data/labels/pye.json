@@ -1,0 +1,17 @@
+{
+  "id": "pye",
+  "name": "Pye Records",
+  "type": "label",
+  "lineage": "rock",
+  "foundedYear": 1955,
+  "closedYear": 1980,
+  "city": "London",
+  "founders": [],
+  "ownershipStory": "Originated as the record division of Pye Ltd, a British electronics manufacturer, entering the record business by buying Nixa Records in 1953 and Polygon Records in 1955. It was one of the major British labels of the 1960s British Invasion era, home to the Kinks, the Searchers, and Donovan. Trademark issues forced a rename to PRT Records in 1980; the Pye name has since been briefly revived twice, most recently in 2024.",
+  "hook": "A TV and radio manufacturer's record division that ended up shaping the sound of 1960s British guitar pop.",
+  "blurb": {
+    "age7": "Pye started as a company that made TVs and radios, then also became a record label, and put out the Kinks' records.",
+    "age13": "Pye Records began as the music arm of a British electronics company and grew into one of the major labels of the 1960s, releasing the Kinks and other British Invasion bands. It stopped using the Pye name in 1980 after a trademark dispute.",
+    "adult": "Pye's origin as an electronics manufacturer's sideline rather than a music specialist is a useful reminder that Britain's major 1960s labels were often industrial companies that backed into music, not music people who built companies. It released the Kinks throughout their commercially defining run before a trademark dispute forced the rename to PRT in 1980."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "cbs-uk",
+  "name": "CBS Records UK",
+  "type": "label",
+  "lineage": "rock",
+  "foundedYear": 1965,
+  "closedYear": 1991,
+  "city": "London",
+  "founders": [],
+  "ownershipStory": "The UK arm of CBS Inc.'s international Columbia operation, formed in 1965 after CBS bought the ailing British label Oriole Records for its pressing plants and UK distribution. As a major label subsidiary it signed The Clash in January 1977 for a reported £100,000, a deal the punk scene loudly accused the band of selling out for. CBS Inc. sold its whole record division to Sony in 1988, and the CBS label name itself was retired worldwide in favor of Columbia from 1991.",
+  "hook": "The major label that bought punk's most political band, and became punk's cleanest 'sold out' argument in the process.",
+  "blurb": {
+    "age7": "CBS was a big record company. Punk fans argued about whether the Clash should have signed with a company that big.",
+    "age13": "CBS Records UK was the British branch of a large American record company. When the Clash signed with CBS in 1977 for a lot of money, many punk fans accused them of betraying punk's do-it-yourself values, an argument that never really got settled.",
+    "adult": "CBS UK began in 1965 out of CBS Inc.'s purchase of the ailing Oriole Records for its UK pressing and distribution. The Clash's 1977 signing to CBS for a reported £100,000 is one of the clearest test cases in this dataset for punk's central contradiction: an anti-establishment scene that needed major-label money and distribution to actually reach the audience its politics addressed."
+  }
+}

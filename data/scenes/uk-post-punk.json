@@ -1,0 +1,31 @@
+{
+  "id": "uk-post-punk",
+  "name": "UK Post-Punk",
+  "type": "scene",
+  "lineage": "rock",
+  "yearFrom": 1978,
+  "yearTo": 1984,
+  "city": "London",
+  "country": "UK",
+  "hook": "Punk kept its DIY nerve and threw out almost every rule about what a rock band had to sound like.",
+  "blurb": {
+    "age7": "After punk, some bands kept the do-it-yourself attitude but let in dub, funk, and strange new sounds instead of just playing fast.",
+    "age13": "Once punk's first wave burned out fast, bands like Public Image Ltd took its DIY confidence in a completely different direction: dub bass, empty space, and studio experimentation instead of speed. Independent labels like Rough Trade, founded in 1978, made it possible to release this stranger music without asking a major label's permission.",
+    "adult": "Post-punk kept punk's institutional lesson, that you did not need major-label permission to record and release music, while abandoning nearly all of its musical conservatism. The independent-label infrastructure that made this possible, led by Rough Trade's shop-turned-label-turned-national-distributor model (the Cartel), let bands absorb dub, funk, disco, and electronic music on their own terms rather than a major's."
+  },
+  "geopolitics": "The same late-1970s British economic strain that produced punk continued into post-punk's window, now compounded by early Thatcher-era monetarist policy from 1979 and its effect on manufacturing employment. The independent distribution network mattered because it let this music reach an audience without depending on major-label investment in a depressed economy.",
+  "whatWasNew": "Genuine cross-pollination with dub (empty space, bass as lead instrument, studio-as-instrument thinking), funk, and early electronic music, treated as available tools rather than novelties, by bands who had grown up in a genuinely multiracial urban Britain.",
+  "production": "Small independent studios and low budgets, but used for texture and space rather than speed; engineers with reggae and dub backgrounds were directly recruited by rock producers and bands.",
+  "labels": "Rough Trade, founded 1978 by Geoff Travis, is the scene's central label and distributor, structured as a cooperative splitting profits with artists, and it built the Cartel distribution network that let Factory, 2 Tone, and other small labels reach shops nationally without a major.",
+  "politics": "Often explicitly feminist and left-wing (Rough Trade's own business model was ideological, not just practical), and generally less interested in a unified political message than punk had been, favoring interiority and formal experiment instead.",
+  "memberIds": [
+    "public-image-ltd"
+  ],
+  "palette": {
+    "ink": "#05070a",
+    "paper": "#dcdfe3",
+    "accent": "#3a86ff",
+    "accent2": "#adb5bd"
+  },
+  "motif": "metal-canister-dub"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "metroplex",
+  "name": "Metroplex",
+  "type": "label",
+  "lineage": "electronic",
+  "foundedYear": 1985,
+  "closedYear": null,
+  "city": "Detroit",
+  "founders": [
+    "Juan Atkins"
+  ],
+  "ownershipStory": "Founded and owned outright by Juan Atkins, based on Gratiot Avenue alongside Derrick May's Transmat in what the scene nicknamed Techno Boulevard. Atkins kept ownership and creative control of his own masters from the label's first release, unusual for a young dance label of the era.",
+  "hook": "Juan Atkins' own label, and the first release techno ever had.",
+  "blurb": {
+    "age7": "Juan Atkins started his own record company so he could put his music out exactly the way he wanted.",
+    "age13": "Metroplex was Juan Atkins' own label, started in 1985 on Gratiot Avenue in Detroit next door to another techno label, Transmat. Atkins owned it outright, which meant he kept control of his own music from the start, unusual for underground dance records at the time.",
+    "adult": "Metroplex matters as much for its ownership structure as its catalogue. Atkins retaining outright ownership of his masters through his own label is one of the few clean counterexamples in this dataset to the pattern of young Black producers losing control of their work to labels that owned the copyrights."
+  }
+}
