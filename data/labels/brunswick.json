@@ -1,0 +1,17 @@
+{
+  "id": "brunswick",
+  "name": "Brunswick (UK)",
+  "type": "label",
+  "lineage": "rock",
+  "foundedYear": null,
+  "closedYear": 1967,
+  "city": "London",
+  "founders": "British Decca (licensing imprint)",
+  "ownershipStory": "Brunswick in Britain was not an independent label but British Decca's imprint for licensing American Decca-family recordings for UK release; the exact date the arrangement began isn't clearly established, but it ran until 1967, when Decca's American partner MCA set up its own UK branch. The Who's early singles and their debut album 'My Generation' were released on Brunswick in the UK in 1965, before the band's split from producer Shel Talmy ended their Decca/Brunswick contract.",
+  "hook": "Not really a label of its own: the licensing imprint that happened to carry the Who's first records.",
+  "blurb": {
+    "age7": "Brunswick was the name used to release the Who's first songs in Britain.",
+    "age13": "Brunswick wasn't an independent company; it was the name British Decca used to put out certain American-linked records in the UK, including the Who's early singles and first album in 1965.",
+    "adult": "Brunswick's UK existence as a licensing imprint rather than a standalone label is a useful small case study in how tangled major-label structures could be even for a band as commercially important as the Who's earliest material."
+  }
+}

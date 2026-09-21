@@ -1,0 +1,32 @@
+{
+  "id": "uk-punk-77",
+  "name": "UK Punk 77",
+  "type": "scene",
+  "lineage": "rock",
+  "yearFrom": 1975,
+  "yearTo": 1979,
+  "city": "London",
+  "country": "UK",
+  "hook": "Three chords, a safety pin, and a direct rejection of the pop-star distance Swinging London's survivors had settled into.",
+  "blurb": {
+    "age7": "In the late 1970s, young bands in London started playing fast, angry, simple songs because they wanted rock music to feel close to ordinary people again.",
+    "age13": "Punk bands like the Sex Pistols and the Clash formed in London around 1975-76, playing short, aggressive songs and rejecting the technical showing-off of a lot of mid-1970s rock. It was as much about attitude and do-it-yourself independence as about the music itself.",
+    "adult": "UK punk crystallized around 1975-77 as a reaction against both the perceived excess of progressive rock and the economic stagnation of mid-1970s Britain, mixing working-class and art-school participants in venues like the 100 Club. Its DIY ethic, anyone could start a band, a label, a fanzine, mattered as much as its sound, and directly enabled the independent label boom that followed."
+  },
+  "geopolitics": "Britain's mid-1970s economic troubles (high unemployment, inflation, industrial strikes, later dubbed the 'Winter of Discontent') tracked a real, widely shared sense of decline, particularly among working-class teenagers with few prospects.",
+  "whatWasNew": "Stripping rock back to its simplest possible form and treating a total lack of musical polish as a legitimate, even superior, artistic choice, explicitly against the instrumental virtuosity of the era's dominant rock acts.",
+  "production": "Cheap, fast studio time, often recorded in a few days; the raw, compressed sound was as much a budget constraint as an aesthetic choice.",
+  "labels": "A mix of major-label opportunism (EMI, then Virgin, signing the Sex Pistols after early controversy) and a wave of new independent labels that punk's DIY ethic directly enabled.",
+  "politics": "Explicitly confrontational: anti-monarchist ('God Save the Queen'), anti-establishment, and class-conscious, though frequently more about shock and negation than a coherent political program.",
+  "memberIds": [
+    "the-clash",
+    "sex-pistols"
+  ],
+  "palette": {
+    "ink": "#0a0a0a",
+    "paper": "#eeeeee",
+    "accent": "#e0d000",
+    "accent2": "#d61f1f"
+  },
+  "motif": "safety-pin"
+}

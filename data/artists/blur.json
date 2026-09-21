@@ -1,0 +1,32 @@
+{
+  "id": "blur",
+  "name": "Blur",
+  "sortName": "Blur",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1988,
+  "activeTo": null,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Took Ray Davies' observational English songwriting and rebuilt it for a country arguing about Britpop and class in the 1990s.",
+  "blurb": {
+    "age7": "Blur were a British band in the 1990s who wrote songs about ordinary English life, following in the footsteps of the Kinks.",
+    "age13": "Formed in London in 1988, Blur's Damon Albarn has repeatedly named the Kinks, and Ray Davies' wry, observational songwriting especially, as a direct influence on how he wrote about English life on albums like 'Parklife' (1994). Albarn has even performed 'Waterloo Sunset' on stage with Davies himself.",
+    "adult": "Blur are the clearest inheritor in this dataset of the observational-English-songwriting mode the Kinks' own blurb already credits Ray Davies with starting. Albarn has stated in interviews that 'Waterloo Sunset' is the song he wishes he had written, and the band's mid-1990s run, 'Parklife' especially, applies that same close, specific attention to English class and place that runs through Davies' writing."
+  },
+  "signatureTracks": [
+    {
+      "title": "Parklife",
+      "year": 1994,
+      "whyThisOne": "The title track most directly working the Kinks' observational, character-sketch songwriting mode into 1990s Britpop."
+    },
+    {
+      "title": "Country House",
+      "year": 1995,
+      "whyThisOne": "Went head-to-head with Oasis's \"Roll With It\" in the same release week, a chart battle the UK press turned into the defining media event of Britpop."
+    }
+  ]
+}

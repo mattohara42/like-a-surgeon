@@ -1,0 +1,33 @@
+{
+  "id": "swinging-london",
+  "name": "Swinging London",
+  "type": "scene",
+  "lineage": "rock",
+  "yearFrom": 1962,
+  "yearTo": 1967,
+  "city": "London",
+  "country": "UK",
+  "hook": "British teenagers picked up American blues records and gave them back reshaped, loud, and impossibly fashionable.",
+  "blurb": {
+    "age7": "In London in the 1960s, young bands took old American blues and rock and roll songs and made them louder and more exciting.",
+    "age13": "Bands like the Kinks, the Who, and the Rolling Stones grew up on American blues and R&B records and turned them into something faster, louder, and more aggressive, at the same time as London became a global center for fashion, art, and youth culture.",
+    "adult": "The British R&B boom of the early-to-mid 1960s (the Kinks, the Who, the Rolling Stones, among many others) was built on close, sometimes note-for-note study of American blues and R&B singles, filtered through British art schools and a media apparatus (fashion, photography, pirate radio) that branded the whole moment 'Swinging London,' an image that obscured how narrow and class-specific access to that scene actually was."
+  },
+  "geopolitics": "Postwar Britain's rationing had only fully ended in the mid-1950s, and the generation that formed these bands was the first with disposable income and mass access to records, helped by the 1944 Education Act and postwar full employment. National service (compulsory military conscription) ended in 1960, freeing 18-year-olds to form bands instead.",
+  "whatWasNew": "White British teenagers playing electric blues and R&B with real technical ambition, not as novelty covers but as close study of Chess Records and Motown catalogues that were largely unavailable on British radio at the time.",
+  "production": "Small independent studios and BBC or pirate radio sessions; bands often recorded quickly and cheaply, with producers like Shel Talmy shaping a harder, more compressed guitar sound than contemporary American records.",
+  "labels": "Major UK labels (Decca, Pye, and Decca's Brunswick imprint) signed most of the scene's biggest acts, generally on standard-for-the-era contracts that gave the artists limited long-term control over their master recordings.",
+  "politics": "Mostly implicit: the scene's energy came from a generational break with postwar austerity and deference rather than explicit protest, though its embrace of Black American music complicates any simple story about British identity in this period.",
+  "memberIds": [
+    "the-kinks",
+    "the-who",
+    "rolling-stones"
+  ],
+  "palette": {
+    "ink": "#141420",
+    "paper": "#f0e6d2",
+    "accent": "#c8102e",
+    "accent2": "#1c355e"
+  },
+  "motif": "mod-target"
+}

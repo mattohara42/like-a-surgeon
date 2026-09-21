@@ -1,0 +1,33 @@
+{
+  "id": "uk-post-punk",
+  "name": "UK Post-Punk",
+  "type": "scene",
+  "lineage": "rock",
+  "yearFrom": 1978,
+  "yearTo": 1984,
+  "city": "London",
+  "country": "UK",
+  "hook": "Punk's negation turned into experimentation: dub bass, funk rhythm, and art-school theory smuggled back into guitar music punk had tried to strip bare.",
+  "blurb": {
+    "age7": "After punk, some bands got even stranger and more experimental, mixing in reggae bass sounds and unusual, artistic ideas.",
+    "age13": "Bands like Public Image Ltd, Joy Division, and Gang of Four took punk's energy but rejected its simple three-chord format, bringing in dub reggae's bass-heavy sound, funk rhythm, and political theory instead.",
+    "adult": "Post-punk (roughly 1978-84) treated punk's rejection of the mainstream as a starting point rather than an endpoint, pulling in dub reggae's structural logic (PiL), Situationist and Marxist theory (Gang of Four), and a bleaker, more atmospheric guitar sound shaped partly by industrial Manchester and Leeds (Joy Division, Gang of Four). It is the point where this dataset's dub lineage most directly crosses into British guitar rock."
+  },
+  "geopolitics": "Late-1970s Britain under growing economic strain and, from 1979, Thatcherite austerity; Manchester and Leeds in particular were deep into industrial decline, which shaped the bleaker, more overtly political tone of bands from those cities compared to London's scene.",
+  "whatWasNew": "Applying dub reggae's structural approach (bass and space as the song's foundation) and explicit political or theoretical content to guitar-based rock, rather than treating punk's simplicity as a fixed rulebook.",
+  "production": "A mix of major-label deals (Gang of Four on EMI internationally) and fiercely independent operations, most famously Tony Wilson's Factory Records in Manchester, known as much for its design and ethos as its music.",
+  "labels": "Factory Records (Manchester, artist-friendly contracts that famously left the label itself insolvent) and Virgin (London) are the two most important labels for this scene in this dataset.",
+  "politics": "Explicitly theoretical and political in a way punk's shock tactics usually weren't: Gang of Four's Marxist critique of consumerism and Joy Division's bleaker, more interior focus both reflect a British post-industrial landscape under strain.",
+  "memberIds": [
+    "public-image-ltd",
+    "joy-division",
+    "gang-of-four"
+  ],
+  "palette": {
+    "ink": "#111111",
+    "paper": "#dcdcdc",
+    "accent": "#8a1c1c",
+    "accent2": "#4a4a4a"
+  },
+  "motif": "monochrome-sleeve"
+}

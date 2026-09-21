@@ -1,0 +1,42 @@
+{
+  "id": "joy-division",
+  "name": "Joy Division",
+  "sortName": "Joy Division",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1976,
+  "activeTo": 1980,
+  "originCity": "Salford, Manchester",
+  "originCountry": "UK",
+  "scenes": [
+    "uk-post-punk"
+  ],
+  "labels": [
+    {
+      "labelId": "factory",
+      "from": 1978,
+      "to": 1980
+    }
+  ],
+  "keyProducers": [
+    "Martin Hannett"
+  ],
+  "hook": "Formed after watching the Sex Pistols play Manchester, and became the coldest, bleakest sound to come out of punk's aftermath.",
+  "blurb": {
+    "age7": "Joy Division were a band from Manchester whose music sounded cold and sad, and they became one of the most important bands to come after punk.",
+    "age13": "Bernard Sumner and Peter Hook formed Joy Division in Salford after seeing the Sex Pistols play, with singer Ian Curtis and drummer Stephen Morris completing the band. Signed to Tony Wilson's Factory Records, their music was slower and starker than punk, and singer Ian Curtis died by suicide in 1980, just before their planned first US tour.",
+    "adult": "Joy Division's formation after a Sex Pistols gig is one of the most directly documented lines from London punk's initial spark to a completely different regional sound: Manchester's post-industrial bleakness, producer Martin Hannett's spacious, echo-heavy production, and Ian Curtis's interior lyrics, complicated by his diagnosed epilepsy and depression. The surviving members formed New Order after his death."
+  },
+  "signatureTracks": [
+    {
+      "title": "Love Will Tear Us Apart",
+      "year": 1980,
+      "whyThisOne": "Released after Curtis's death, and the song that carried Joy Division's cold, melodic bleakness to a much wider audience."
+    },
+    {
+      "title": "Transmission",
+      "year": 1979,
+      "whyThisOne": "Built almost entirely from Peter Hook's melodic, high-register bassline carrying the song, a Joy Division signature."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-stones-kinks",
+  "from": "rolling-stones",
+  "to": "the-kinks",
+  "type": "scene",
+  "confidence": "consensus",
+  "evidence": "The Rolling Stones and the Kinks are widely treated in British music history as the two key contemporaneous British R&B chart rivals of the early-to-mid 1960s, both signed within about a year of each other and drawing on the same American blues and R&B catalogue, without a documented instance of one directly shaping the other's specific records.",
+  "year": 1964,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "The Rolling Stones",
+      "title": "Come On",
+      "year": 1963
+    },
+    "later": {
+      "artist": "The Kinks",
+      "title": "You Really Got Me",
+      "year": 1964
+    },
+    "whatToListenFor": "The Stones' early singles stay close to their American blues sources. The Kinks' 1964 breakthrough pushes past covering the blues into something rawer and more English; hear the difference in how much more compressed and torn the Kinks' guitar sound is."
+  },
+  "explanation": {
+    "age7": "The Rolling Stones and the Kinks were both British bands turning American blues records into their own sound at the same time.",
+    "age13": "The two bands were chart rivals working from the same blues and R&B source material, developing in parallel rather than one leading the other.",
+    "adult": "Consensus tier: a shared-scene, shared-source claim rather than a documented direct influence between the two bands' own records."
+  },
+  "tags": [
+    "production"
+  ]
+}

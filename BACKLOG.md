@@ -38,7 +38,13 @@ correct response to a good idea arriving mid-milestone.
 
 - How to show an artist whose influence arrived decades later (rediscovery
   edges) without breaking left-to-right chronology.
-- How to represent a scene that has no single city.
+- How to represent a scene that has no single city. **Hit this concretely in
+  data batch 2:** `uk-post-punk` spans London (PiL), Manchester (Joy
+  Division), and Leeds (Gang of Four), each with different local geopolitics
+  that actually mattered. Set `city: "London"` as a pragmatic single value
+  and named the other two in the prose fields instead. `city` as an array,
+  or a looser `region` concept, would fix this properly; jazz, if it's ever
+  added, will hit the same wall across several US cities.
 - Whether machines should share lanes with artists or get their own band.
 - Whether historically important but indefensible artists need a data flag, or
   whether careful `hook` writing is sufficient. Starting with writing only.
@@ -84,3 +90,9 @@ fixing them inline.)
   Pete Holdsworth) but not authored as a label record in batch 1; his
   `labels` field is left empty rather than reference an unauthored label.
   Cheap to add in a later pass.
+- Data batch 2 (UK rock spine: Swinging London through punk, post-punk, and
+  into Britpop) authored `swinging-london`, `uk-punk-77`, and `uk-post-punk`
+  plus the four originally-dangling labels (`pye`, `brunswick`, `cbs-uk`,
+  `virgin`) and one new one (`factory`). `e-tubby-kraftwerk-nonedge` (above)
+  was still not touched, since resolving it isn't rock-spine work; the next
+  data batch should make a call on it.

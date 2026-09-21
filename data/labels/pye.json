@@ -1,0 +1,17 @@
+{
+  "id": "pye",
+  "name": "Pye Records",
+  "type": "label",
+  "lineage": "rock",
+  "foundedYear": 1953,
+  "closedYear": null,
+  "city": "London",
+  "founders": "Pye Ltd (electronics manufacturer)",
+  "ownershipStory": "Founded in 1953 when the Pye electronics company, better known for making radios and televisions, bought the independent label Nixa and turned it into Pye Nixa. It signed the Kinks in the mid-1960s on a standard-for-the-era contract that gave the band little long-term control over their masters. The Pye brand was absorbed into other companies over subsequent decades of the UK record industry's consolidation.",
+  "hook": "A television and radio manufacturer that happened to also make some of the biggest British Invasion records.",
+  "blurb": {
+    "age7": "Pye Records was started by a company that made TVs and radios, and it released some of the biggest British bands of the 1960s.",
+    "age13": "Pye began in 1953 as the record label of an electronics manufacturer, and by the mid-1960s it was releasing hits by bands like the Kinks, usually on contracts that gave the band little control over their own recordings.",
+    "adult": "Pye's corporate origin (an electronics manufacturer diversifying into records) is a reminder that Britain's 1960s guitar-band boom was still built on the same standard, artist-unfriendly major-label contract structure as the rest of the era's pop industry."
+  }
+}
