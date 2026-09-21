@@ -64,3 +64,24 @@ Every decision made without asking. Append, do not rewrite.
 - **A19.** `tools/validate.js` validates the sharded `data/` tree via
   `data/manifest.json`, never `data/seed.json`. The seed is a frozen
   reference copy, not live data.
+
+## Added after Q4 to Q8 were resolved
+
+- **A20.** The version-stamp UI from Q4 ships at M3 (reading surface),
+  alongside the confidence legend rather than earlier, since neither is
+  useful until there's a real reading surface to put it on.
+- **A21.** Q5 (repo name, public from the start) taken as answered by the
+  repository's own existing state (`mattohara42/like-a-surgeon`, public)
+  rather than asked directly, since re-asking a question the filesystem
+  already answers would be theater. Flagged in `QUESTIONS.md` in case that
+  reading is wrong.
+- **A22.** Q8's "give machines/scenes/labels a lineage field" resolved to
+  specifics: `machine.lineage`, `scene.lineage`, and `label.lineage` use the
+  same enum as `artist.lineage` (`"rock" | "electronic" | "hiphop" | "dub" |
+  "funk" | "other"`) and are required, representing the node's editorial
+  "home" lineage rather than a computed genealogy. `edge.crossLineage` is
+  computed as `fromNode.lineage !== toNode.lineage`, resolving `from`/`to`
+  through whichever of the four node types they name. `tools/validate.js`
+  checks the stored boolean against that computation and treats a mismatch
+  as a hard error, since it's now a real derived value, not an editorial
+  claim.
