@@ -1,0 +1,33 @@
+{
+  "id": "e-303-phuture",
+  "from": "tb-303",
+  "to": "phuture",
+  "type": "technological",
+  "confidence": "documented",
+  "evidence": "The origin of the acid sound from a secondhand TB-303 operated without its manual is documented in many interviews with DJ Pierre and the other members of Phuture.",
+  "year": 1987,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Roland",
+      "title": "TB-303 as intended",
+      "year": 1981
+    },
+    "later": {
+      "artist": "Phuture",
+      "title": "Acid Tracks",
+      "year": 1987
+    },
+    "whatToListenFor": "The pattern of notes barely changes for twelve minutes. Everything that moves is the filter, opening and closing, and the resonance screaming at the top. Listen for the slide between notes, which is the machine doing a thing a bass player would do, badly, and brilliantly."
+  },
+  "explanation": {
+    "age7": "They used an old machine the wrong way and it made a squelchy noise nobody had heard.",
+    "age13": "The 303 failed as a product, which made it cheap. Phuture got one without instructions and turned the knobs while it was playing. A whole genre is named after the sound that came out.",
+    "adult": "The clearest machine-as-protagonist case available. Commercial failure created affordability, affordability created access, and access by people with no stake in the intended use created the genre."
+  },
+  "demoId": "demo-303-twist",
+  "tags": [
+    "technology",
+    "labels"
+  ]
+}

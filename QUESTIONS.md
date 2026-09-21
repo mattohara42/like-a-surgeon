@@ -1,0 +1,65 @@
+# QUESTIONS
+
+Things Claude Code needs from Matt. Answer inline and mark resolved.
+
+## Open
+
+(none)
+
+## Resolved
+
+- **Q4. Version stamp.** Resolved: **yes.** Show a last-updated date and
+  dataset version somewhere in the interface, so the map reads as a living
+  document. Scheduled for the M3 reading-surface milestone alongside the
+  confidence legend, since both are "how honest is this map" UI. Logged as
+  **A20** in `ASSUMPTIONS.md`.
+
+- **Q5. Repo name and visibility.** Resolved by observation rather than a
+  direct answer: the repo already exists as `mattohara42/like-a-surgeon`,
+  public, created at project start. Treating that as the answer unless told
+  otherwise. Logged as **A21** in `ASSUMPTIONS.md`.
+
+- **Q6. Manifest: generated or hand-maintained?** Resolved: **generated.**
+  `data/manifest.json` is build output produced by a shared helper
+  (`tools/manifest.js`) that `serve.js`, `validate.js`, and `bundle.js` all
+  call, rather than something Matt hand-edits. Adding a record costs one
+  file and zero manifest edits. See `docs/m1-architecture.md` section 2.
+
+- **Q7. Scene's missing reader-facing field.** Resolved: **add `hook` +
+  `blurb` to scene**, matching artist and machine. The five existing fields
+  (`geopolitics`, `whatWasNew`, `production`, `labels`, `politics`) stay as
+  adult-only backing detail that informs the blurb but isn't itself
+  register-aware. `data/SCHEMA.md` updated. See `docs/m1-architecture.md`
+  section 5.
+
+- **Q8. What `crossLineage` means.** Resolved: **give machines, scenes, and
+  labels a real `lineage` field**, same enum as artist. `crossLineage`
+  becomes an actually-computable value (`from` node's lineage differs from
+  `to` node's lineage) rather than an unverifiable editorial call, and
+  `tools/validate.js` checks the stored boolean against that computation as
+  a hard error. `data/SCHEMA.md` updated. See `docs/m1-architecture.md`
+  section 5, and **A22** in `ASSUMPTIONS.md` for the specifics I had to
+  decide beyond "add a field."
+
+- **Q1. Reading levels.** Resolved: write **Teen and Adult first**. The Kid
+  (7-11) register is deferred to Track D and gets written across the whole
+  dataset once the Teen and Adult text is stable and has been tested on a real
+  reader. The reading-level selector ships two-way at M3 and reads available
+  registers from the data rather than hardcoding the count. `age7` fields in
+  `data/seed.json` stay as the exemplar for that later pass.
+
+- **Q2. Indefensible but important artists.** Resolved: **include them.** The
+  `hook` field states what they changed and why they are on the map. It does
+  not praise the music and it does not editorialize about the person. Where an
+  artist's conduct is a documented part of why their standing changed, that
+  goes in the adult register as fact, without adjectives. No data flag for now,
+  writing discipline only. Logged as an open design question in `BACKLOG.md` in
+  case it proves insufficient.
+
+- **Q3. Political directness.** Resolved: **direct and factual, no softening,
+  and the same facts at every reading level.** Registers change vocabulary and
+  sentence length only. Redlining, deindustrialization, colonial economics,
+  arson-for-insurance, and uncompensated session musicians are part of the
+  causal story for Detroit, the Bronx, Kingston, and London, and they are
+  stated plainly in every register. This rule is now in `CLAUDE.md` under
+  "Writing rules" and it also constrains the Kid pass when it happens.

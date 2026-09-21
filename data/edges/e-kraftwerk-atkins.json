@@ -1,0 +1,32 @@
+{
+  "id": "e-kraftwerk-atkins",
+  "from": "kraftwerk",
+  "to": "juan-atkins",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Atkins has cited Kraftwerk as a formative influence in numerous interviews, alongside Parliament and the programming of Detroit radio DJ the Electrifying Mojo.",
+  "year": 1983,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Kraftwerk",
+      "title": "Numbers",
+      "year": 1981
+    },
+    "later": {
+      "artist": "Cybotron",
+      "title": "Clear",
+      "year": 1983
+    },
+    "whatToListenFor": "Both are built from short repeating electronic figures with no human looseness. The Detroit record has more funk in how the accents fall. Listen to where the emphasis lands in the bar. That small difference is the entire Atlantic crossing."
+  },
+  "explanation": {
+    "age7": "A man in Detroit heard a German band on the radio and made his own machine music.",
+    "age13": "Atkins was hearing Kraftwerk on Detroit radio next to funk records, which was unusual programming. He put the two together and called the result techno.",
+    "adult": "Reception history matters more than intent here. Kraftwerk's search for a post-war German identity was received in Detroit as Afrofuturist raw material, and the resulting genre was named by its makers rather than by critics."
+  },
+  "tags": [
+    "politics",
+    "technology"
+  ]
+}

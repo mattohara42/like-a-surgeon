@@ -1,0 +1,29 @@
+{
+  "id": "lee-perry",
+  "name": "Lee \"Scratch\" Perry",
+  "sortName": "Perry, Lee",
+  "type": "artist",
+  "lineage": "dub",
+  "activeFrom": 1963,
+  "activeTo": 2021,
+  "originCity": "Kingston",
+  "originCountry": "Jamaica",
+  "scenes": [
+    "kingston-dub"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Built a four-track studio in his back yard and got sounds out of it that 24-track rooms could not.",
+  "blurb": {
+    "age7": "Lee Perry recorded music in his garden shed and made it sound like a cave.",
+    "age13": "The Black Ark was a small studio behind Perry's house with only four tracks to record on. He got around the limit by bouncing recordings on top of each other over and over, which added hiss and smear every time. That damage became the sound. He also recorded odd things on purpose, like rain, a cow, or himself breathing into the microphone.",
+    "adult": "Perry is the clearest case in this dataset of constraint producing signature. Limited tracks forced generational bouncing, which degraded the signal in a way that engineers with better rooms could not replicate and later spent decades trying to emulate in software. His production work put him directly into the English punk lineage."
+  },
+  "signatureTracks": [
+    {
+      "title": "Police and Thieves",
+      "year": 1976,
+      "whyThisOne": "Produced for Junior Murvin, and the record that carried dub into English punk a year later."
+    }
+  ]
+}

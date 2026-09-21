@@ -1,0 +1,29 @@
+{
+  "id": "e-tubby-kraftwerk-nonedge",
+  "from": "king-tubby",
+  "to": "juan-atkins",
+  "type": "direct",
+  "confidence": "asserted",
+  "evidence": "No documented connection. Included in the seed deliberately as an example of an edge that should be tiered asserted, rendered dotted, and worded carefully. Claude Code: this is a pattern demonstration, not a claim to defend. Replace or remove it in M1.",
+  "year": 1985,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "King Tubby",
+      "title": "various versions",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Juan Atkins",
+      "title": "No UFO's",
+      "year": 1985
+    },
+    "whatToListenFor": "Both treat the mixing desk as the instrument and the arrangement as something to be performed rather than fixed. This is a resemblance we are pointing out, not a line of transmission we can trace."
+  },
+  "explanation": {
+    "age7": "These two sound a bit alike, but we do not know that one heard the other.",
+    "age13": "Sometimes two people arrive at a similar idea separately. We think these two approaches rhyme, but nobody has shown that one led to the other, so we mark it as our own guess.",
+    "adult": "Retained as a deliberate illustration of the asserted tier and of the difference between resemblance and transmission."
+  },
+  "tags": []
+}

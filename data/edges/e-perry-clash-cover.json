@@ -1,0 +1,31 @@
+{
+  "id": "e-perry-clash-cover",
+  "from": "lee-perry",
+  "to": "the-clash",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "The Clash recorded Junior Murvin's 'Police and Thieves' on their 1977 debut. Perry produced the Murvin original in 1976.",
+  "year": 1977,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Junior Murvin",
+      "title": "Police and Thieves",
+      "year": 1976
+    },
+    "later": {
+      "artist": "The Clash",
+      "title": "Police and Thieves",
+      "year": 1977
+    },
+    "whatToListenFor": "Murvin's version floats. The guitar chops on the offbeat and there is air around everything. The Clash version takes the same song and puts a hard downstroke guitar on it, but keeps the length, which on a 1977 punk album is an obvious act of allegiance. Listen to where the guitar lands relative to the drum in each."
+  },
+  "explanation": {
+    "age7": "A punk band loved a reggae song so much they played their own version of it.",
+    "age13": "Punk records were supposed to be short and fast. The Clash put a six-minute reggae cover on their first album, which told everyone that punk did not have to mean one sound.",
+    "adult": "This is the hinge between the rock and dub spines. It reflects the actual sonic environment of multiracial West London and the Rock Against Racism moment rather than a purely aesthetic borrowing."
+  },
+  "tags": [
+    "politics"
+  ]
+}

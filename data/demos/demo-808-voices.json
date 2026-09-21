@@ -1,0 +1,33 @@
+{
+  "id": "demo-808-voices",
+  "title": "The three sounds everyone stole",
+  "kind": "machine-voice",
+  "params": {
+    "voices": [
+      "kick",
+      "snare",
+      "clap",
+      "cowbell",
+      "hat"
+    ],
+    "controls": {
+      "kickTuning": [
+        30,
+        120
+      ],
+      "kickDecay": [
+        0.1,
+        2
+      ]
+    },
+    "note": "Synthesized recreation. Kick is a tuned sine with a fast pitch envelope, snare a tuned body plus filtered noise, clap a burst of noise gated three times then a tail."
+  },
+  "caption": {
+    "age7": "Press the buttons. These are the drum sounds from a machine, not a real drum kit.",
+    "age13": "Turn the kick tuning down and the decay up. It stops being a drum and becomes a bass note. That single trick is most of hip-hop's low end.",
+    "adult": "Synthesized approximation of the TR-808 voice architecture. The tunable long-decay kick is the specific parameter that reframed the machine's perceived weakness as its value."
+  },
+  "safety": {
+    "maxGain": 0.7
+  }
+}

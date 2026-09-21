@@ -1,0 +1,42 @@
+{
+  "id": "the-kinks",
+  "name": "The Kinks",
+  "sortName": "Kinks, The",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1963,
+  "activeTo": 1996,
+  "originCity": "Muswell Hill, London",
+  "originCountry": "UK",
+  "scenes": [
+    "swinging-london"
+  ],
+  "labels": [
+    {
+      "labelId": "pye",
+      "from": 1964,
+      "to": 1971
+    }
+  ],
+  "keyProducers": [
+    "Shel Talmy"
+  ],
+  "hook": "Two brothers, a slashed speaker cone, and the riff that taught rock guitar to sound broken on purpose.",
+  "blurb": {
+    "age7": "The Kinks made their amplifier sound torn and growly on purpose, and everyone copied it.",
+    "age13": "Dave Davies cut slits in the speaker of a small cheap amp with a razor blade, which made the guitar sound fuzzy and mean. On 'You Really Got Me' in 1964 that sound was the whole record. Distortion went from being a mistake to being the point.",
+    "adult": "The Kinks matter twice over. The slashed-cone distortion on 'You Really Got Me' is the origin point for hard rock guitar tone, and Ray Davies' later songwriting invented the English observational narrative mode that runs straight through Bowie, Blur, and Pulp. The band were also banned from touring the US for most of 1965 to 1969, which cut them out of the American market at the exact moment their peers consolidated it."
+  },
+  "signatureTracks": [
+    {
+      "title": "You Really Got Me",
+      "year": 1964,
+      "whyThisOne": "The distorted riff as the entire architecture of a pop single."
+    },
+    {
+      "title": "Waterloo Sunset",
+      "year": 1967,
+      "whyThisOne": "The other Kinks, observational and tender, and the template for English songwriting about ordinary places."
+    }
+  ]
+}

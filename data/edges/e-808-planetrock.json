@@ -1,0 +1,32 @@
+{
+  "id": "e-808-planetrock",
+  "from": "tr-808",
+  "to": "afrika-bambaataa",
+  "type": "technological",
+  "confidence": "documented",
+  "evidence": "The TR-808 is the drum source on 'Planet Rock', credited to Arthur Baker's production.",
+  "year": 1982,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Roland",
+      "title": "TR-808 factory voices",
+      "year": 1980
+    },
+    "later": {
+      "artist": "Afrika Bambaataa & Soulsonic Force",
+      "title": "Planet Rock",
+      "year": 1982
+    },
+    "whatToListenFor": "The handclap and the cowbell are unmistakably the machine, straight out of the box with no attempt to hide it. The kick is tuned long so it functions as a bass note. Once you know those three sounds you will hear them in a thousand records after this one."
+  },
+  "explanation": {
+    "age7": "The drum sounds on this song come from a machine, and you can hear that it is a machine.",
+    "age13": "The 808 had failed in shops because it did not sound like real drums. On 'Planet Rock' nobody tries to hide that. Sounding electronic is the point, and after this record it stays the point.",
+    "adult": "The moment the 808's perceived defect is reframed as its value. Everything downstream in hip-hop's low end follows from this reframing."
+  },
+  "demoId": "demo-808-voices",
+  "tags": [
+    "technology"
+  ]
+}

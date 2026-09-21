@@ -1,0 +1,39 @@
+{
+  "id": "demo-303-twist",
+  "title": "Turn the knob while it plays",
+  "kind": "machine-voice",
+  "params": {
+    "engine": "port SQUELCH 303 AudioWorklet",
+    "controls": {
+      "cutoff": [
+        0,
+        1
+      ],
+      "resonance": [
+        0,
+        1
+      ],
+      "envMod": [
+        0,
+        1
+      ],
+      "decay": [
+        0,
+        1
+      ],
+      "accent": [
+        0,
+        1
+      ]
+    },
+    "pattern": "one 16-step sequence with slides and accents, looping"
+  },
+  "caption": {
+    "age7": "The notes stay the same. Move the slider and listen to the sound change shape.",
+    "age13": "Every knob here changes how the sound is filtered, not which note is played. Push resonance high and open the cutoff slowly. That squelch is what acid house is named after.",
+    "adult": "Diode-ladder-style filter with high resonance, slide, and accent behaviour. The parameter space is the instrument, not the note sequence."
+  },
+  "safety": {
+    "maxGain": 0.6
+  }
+}

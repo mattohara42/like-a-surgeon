@@ -1,0 +1,37 @@
+{
+  "id": "the-who",
+  "name": "The Who",
+  "sortName": "Who, The",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1964,
+  "activeTo": null,
+  "originCity": "Shepherd's Bush, London",
+  "originCountry": "UK",
+  "scenes": [
+    "swinging-london"
+  ],
+  "labels": [
+    {
+      "labelId": "brunswick",
+      "from": 1965,
+      "to": 1966
+    }
+  ],
+  "keyProducers": [
+    "Shel Talmy"
+  ],
+  "hook": "A mod band who took the Kinks' riff, the same producer, and a drummer who refused to keep time.",
+  "blurb": {
+    "age7": "The Who's drummer played like the drums were the lead instrument.",
+    "age13": "Their first hit was built on purpose to sound like the Kinks, using the same producer. What made them different was Keith Moon, who played drums as constant rolling chaos instead of a steady beat, and Pete Townshend treating feedback as something to compose with.",
+    "adult": "The Who are a useful early demonstration that influence in this period was often explicit, commercial, and producer-brokered rather than mysterious. Shel Talmy produced both bands, and Townshend has said plainly that 'I Can't Explain' was written to sound like a Kinks record."
+  },
+  "signatureTracks": [
+    {
+      "title": "I Can't Explain",
+      "year": 1965,
+      "whyThisOne": "A deliberate Kinks imitation, made with the Kinks' producer, that became its own thing."
+    }
+  ]
+}
