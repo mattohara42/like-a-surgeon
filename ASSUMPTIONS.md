@@ -121,23 +121,14 @@ Every decision made without asking. Append, do not rewrite.
   year was checked against web sources before being written in, per
   `CLAUDE.md`'s "never invent a date" rule; this took real search effort
   and is not a rubber-stamp fix.
-- **A28.** The five scenes (`dusseldorf-kling-klang`, `chicago-house`,
-  `uk-punk-77`, `uk-post-punk`, `swinging-london`) and eight labels
-  (`tommy-boy`, `metroplex`, `kling-klang`, `trax`, `virgin`, `cbs-uk`,
-  `pye`, `brunswick`) referenced by existing artists but never authored are
-  now written, closing the two `BACKLOG.md` "Observed problems" entries
-  about missing scenes and labels. Founding years, founders, and ownership
-  facts were verified by web search rather than drawn from memory alone.
-  Two content judgment calls worth flagging: `kling-klang` is written as a
-  label even though it's really Kraftwerk's own private studio, not a
-  company that signed outside acts, because the schema's label/edge node
-  namespace needed something at that id and the ownership-structure story
-  (a band retaining its own means of production) is itself worth telling;
-  and Chicago house's `geopolitics` field states the now-dominant
-  historical reading of 1979's Disco Demolition Night as an outlet for
-  homophobia and racism, hedged as "widely read since" rather than
-  asserted as settled fact, since organizers of the event have disputed
-  that motive.
+- **A28.** This pass originally authored the five scenes and eight labels
+  referenced by existing artists but never written. While that work was in
+  flight, data batches 1 and 2 merged into `main` and independently
+  authored the same records. Rather than reconcile two separately
+  researched versions field by field, `main`'s versions were kept wholesale
+  and this pass's own copies dropped; nothing here should be read as a
+  claim about their content. See those batches' own `BACKLOG.md` and
+  `ASSUMPTIONS.md` entries for how they were sourced.
 - **A29.** `data/edges/e-tubby-kraftwerk-nonedge.json` renamed to
   `e-tubby-atkins-resemblance.json` (file and `id` both), since its old
   name referenced Kraftwerk while its actual `from`/`to` are King Tubby and
