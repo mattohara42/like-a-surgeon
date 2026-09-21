@@ -1,0 +1,31 @@
+{
+  "id": "e-flash-bambaataa",
+  "from": "grandmaster-flash",
+  "to": "afrika-bambaataa",
+  "type": "scene",
+  "confidence": "consensus",
+  "evidence": "Flash and Bambaataa are consistently described together in Bronx hip-hop oral histories (e.g. Jeff Chang's 'Can't Stop Won't Stop', Fricke and Ahearn's 'Yes Yes Y'all') as the two most prominent DJ/crew leaders of the mid-1970s Bronx park-jam scene, mutually aware and sometimes rival, without a single documented direct collaboration.",
+  "year": 1976,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Grandmaster Flash",
+      "title": "early Bronx park-jam sets",
+      "year": 1975
+    },
+    "later": {
+      "artist": "Afrika Bambaataa",
+      "title": "early Bronx park-jam sets",
+      "year": 1976
+    },
+    "whatToListenFor": "No single record captures this; the comparison is between two DJs building sound systems and crews in the same neighborhood at the same time, out of the same breakbeat culture."
+  },
+  "explanation": {
+    "age7": "Grandmaster Flash and Afrika Bambaataa were both DJs throwing parties in the Bronx around the same time, and they knew about each other.",
+    "age13": "Flash and Bambaataa led two of the biggest DJ crews in the early Bronx scene. They developed their styles in parallel rather than one directly teaching the other, but neither happened in a vacuum from the other.",
+    "adult": "Consensus tier because the claim is about shared scene and mutual awareness rather than a specific documented act of direct influence, distinguishing it from edges like e-baker-bambaataa where a studio credit anchors the claim."
+  },
+  "tags": [
+    "production"
+  ]
+}

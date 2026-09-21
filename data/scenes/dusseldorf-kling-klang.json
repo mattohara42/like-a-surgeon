@@ -1,0 +1,31 @@
+{
+  "id": "dusseldorf-kling-klang",
+  "name": "Düsseldorf and Kling Klang",
+  "type": "scene",
+  "lineage": "electronic",
+  "yearFrom": 1970,
+  "yearTo": 1986,
+  "city": "Düsseldorf",
+  "country": "West Germany",
+  "hook": "A self-built studio in a former factory space, where a band decided rock music should sound nothing like rock music.",
+  "blurb": {
+    "age7": "In Germany, Kraftwerk built their own studio and made music that sounded like machines on purpose.",
+    "age13": "Ralf Hütter and Florian Schneider set up Kling Klang, their own studio in Düsseldorf, in 1970, and used it to build custom instruments and write music that rejected American and British rock entirely. It was a deliberate attempt to find a German sound after a war that had made \"German culture\" a loaded phrase.",
+    "adult": "Kling Klang, founded in 1970 and run as Kraftwerk's private studio and (from 1975) their own vanity label, let the band work at their own pace outside a commercial label's schedule, which is part of why their catalogue is so tightly controlled and small. The scene around it was less a night-life culture than a studio practice: a search for a distinctly German, post-war electronic identity that avoided the American blues-rock vocabulary most of their contemporaries were still working in."
+  },
+  "geopolitics": "West Germany's postwar generation, coming of age in the late 1960s, was reckoning openly with the Nazi period for the first time, and much of the era's German rock and experimental music (labeled 'krautrock' by the British press) was an explicit attempt to build a new cultural identity that owed nothing to either American pop culture or Germany's own recent past.",
+  "whatWasNew": "Electronic music built entirely from synthesizers, drum machines, and vocoders, performed with a deliberately flat, mechanical stage presence, at a time when 'electronic' still mostly meant an experimental sideline to a rock band's real instruments.",
+  "production": "Kling Klang studio, built and continually modified by the band themselves, including custom-built electronic percussion and voice synthesis equipment not commercially available elsewhere.",
+  "labels": "Released through Philips and later EMI in Europe, while retaining ownership of the Kling Klang studio and, from 1975, their own vanity label for the master recordings.",
+  "politics": "Rarely explicit in lyrics, but the concept itself, mechanized, depersonalized, and proudly German, was a political statement about what postwar German art could be.",
+  "memberIds": [
+    "kraftwerk"
+  ],
+  "palette": {
+    "ink": "#0c0d10",
+    "paper": "#e6e8ea",
+    "accent": "#c23b3b",
+    "accent2": "#8a8f98"
+  },
+  "motif": "vocoder-grid"
+}

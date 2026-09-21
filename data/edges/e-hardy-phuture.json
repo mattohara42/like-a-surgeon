@@ -1,0 +1,32 @@
+{
+  "id": "e-hardy-phuture",
+  "from": "ron-hardy",
+  "to": "phuture",
+  "type": "scene",
+  "confidence": "documented",
+  "evidence": "DJ Pierre and the other members of Phuture are documented as having brought Hardy early dubs of what became 'Acid Tracks' to play at the Music Box before its 1987 release.",
+  "year": 1986,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Ron Hardy",
+      "title": "Music Box DJ sets",
+      "year": 1986
+    },
+    "later": {
+      "artist": "Phuture",
+      "title": "Acid Tracks",
+      "year": 1987
+    },
+    "whatToListenFor": "'Acid Tracks' was reportedly played at the Music Box on cassette for months before release; Hardy's sets are part of why a twelve-minute record built from one squelching filter sweep had an audience ready for it."
+  },
+  "explanation": {
+    "age7": "Before \"Acid Tracks\" was an official record, Ron Hardy was already playing an early tape of it at the Music Box.",
+    "age13": "Phuture tested \"Acid Tracks\" at the Music Box on tape before it was pressed, the same pipeline Larry Heard and Marshall Jefferson used.",
+    "adult": "Ties this dataset's existing e-303-phuture edge (the machine-as-protagonist story) to the scene mechanism that actually got the record heard and eventually pressed."
+  },
+  "tags": [
+    "production",
+    "technology"
+  ]
+}

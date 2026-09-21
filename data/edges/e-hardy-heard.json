@@ -1,0 +1,31 @@
+{
+  "id": "e-hardy-heard",
+  "from": "ron-hardy",
+  "to": "larry-heard",
+  "type": "scene",
+  "confidence": "documented",
+  "evidence": "Heard, alongside Marshall Jefferson, Adonis, and Phuture's DJ Pierre, is documented as one of the Chicago producers who brought Hardy acetates and reel-to-reel dubs of new tracks to debut at the Music Box in the mid-1980s.",
+  "year": 1985,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Ron Hardy",
+      "title": "Music Box DJ sets",
+      "year": 1984
+    },
+    "later": {
+      "artist": "Mr. Fingers (Larry Heard)",
+      "title": "Can You Feel It",
+      "year": 1986
+    },
+    "whatToListenFor": "Heard's record is slower and softer than most of what Hardy played, which is itself part of the story: the Music Box could break a record that didn't sound like everything else in the room."
+  },
+  "explanation": {
+    "age7": "Larry Heard brought his new songs to Ron Hardy, who played them for the crowd at the Music Box before they were even officially released.",
+    "age13": "Heard was one of several Chicago producers who gave Hardy early copies of tracks on tape or acetate to test out on the Music Box dancefloor before pressing them.",
+    "adult": "This test-the-record-at-the-club-first pipeline is one of the clearest structural facts about how Chicago house records got made: the DJ, not a label, was the first filter."
+  },
+  "tags": [
+    "production"
+  ]
+}
