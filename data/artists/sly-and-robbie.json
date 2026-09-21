@@ -1,0 +1,34 @@
+{
+  "id": "sly-and-robbie",
+  "name": "Sly and Robbie",
+  "sortName": "Sly and Robbie",
+  "type": "artist",
+  "lineage": "dub",
+  "activeFrom": 1975,
+  "activeTo": 2021,
+  "originCity": "Kingston",
+  "originCountry": "Jamaica",
+  "scenes": [
+    "kingston-dub"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Jamaica's most recorded rhythm section, who took the dub studio's logic of drum and bass as the song into reggae, pop, and hip-hop sessions worldwide.",
+  "blurb": {
+    "age7": "A drummer and a bass player who played together so often and so well that people just called them one name.",
+    "age13": "Drummer Sly Dunbar and bassist Robbie Shakespeare started playing together at Channel One studio in Kingston in 1975. As the in-house band, they built new drum-and-bass patterns on hundreds of records, then took that sound out of Jamaica and onto records by Black Uhuru, Grace Jones, and many others.",
+    "adult": "Dunbar and Shakespeare were the house rhythm section at Channel One from 1975, developing patterns that shifted reggae away from rocksteady toward the more mechanical, bass-forward feel that dub had been pointing toward. Their move to Chris Blackwell's Compass Point Studios in Nassau put them at the center of early-1980s crossover pop production, applying the same rhythm logic to a much wider range of artists."
+  },
+  "signatureTracks": [
+    {
+      "title": "Sinsemilla (Black Uhuru)",
+      "year": 1980,
+      "whyThisOne": "The rhythm section at its most influential, driving Black Uhuru toward an international audience."
+    },
+    {
+      "title": "Language Barrier",
+      "year": 1985,
+      "whyThisOne": "Recorded with Bill Laswell in New York, this is Sly and Robbie stepping out from behind other artists to make the record under their own name."
+    }
+  ]
+}

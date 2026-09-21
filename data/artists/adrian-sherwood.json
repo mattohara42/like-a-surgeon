@@ -1,0 +1,32 @@
+{
+  "id": "adrian-sherwood",
+  "name": "Adrian Sherwood",
+  "sortName": "Sherwood, Adrian",
+  "type": "artist",
+  "lineage": "dub",
+  "activeFrom": 1979,
+  "activeTo": null,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A London teenager who took the Jamaican dub studio's tricks and built a British label out of them.",
+  "blurb": {
+    "age7": "Adrian Sherwood learned how Jamaican producers made echoey dub music and started making his own version of it in London.",
+    "age13": "Sherwood founded On-U Sound in 1979, a label built around the same dub techniques King Tubby and Lee Perry had pioneered in Kingston, but played by British and Jamaican musicians together in London studios. Bands like African Head Charge and Tackhead used his production to mix dub with punk, funk, and industrial noise.",
+    "adult": "Sherwood is the clearest case of dub technique outliving its original geography and economy. On-U Sound, founded in 1979, applied Tubby- and Perry-style mixing (heavy echo, dropped-out vocals, the studio as an instrument) to a rotating cast of Jamaican session players and British post-punk musicians, carrying dub's structural logic into UK industrial and dance production through the 1980s and beyond."
+  },
+  "signatureTracks": [
+    {
+      "title": "My Life in a Hole in the Ground (African Head Charge)",
+      "year": 1981,
+      "whyThisOne": "On-U Sound's debut album, and an early statement of Sherwood's dub-as-collage production style."
+    },
+    {
+      "title": "Rebel Discharge Vs Tricky Kid (Tackhead)",
+      "year": 1988,
+      "whyThisOne": "Sugarhill Records' former house rhythm section, Doug Wimbish and Skip McDonald, rebuilt as an On-U dub-industrial unit under Sherwood."
+    }
+  ]
+}

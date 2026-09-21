@@ -1,0 +1,32 @@
+{
+  "id": "e-tubby-lee",
+  "from": "king-tubby",
+  "to": "bunny-lee",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Tubby worked as engineer on a large share of Bunny Lee's productions through the 1970s; Lee's obituaries and biographies consistently describe the working relationship as central to both men's output.",
+  "year": 1971,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "King Tubby",
+      "title": "early dub plates for Duke Reid",
+      "year": 1968
+    },
+    "later": {
+      "artist": "Bunny Lee productions, dubbed by King Tubby",
+      "title": "various",
+      "year": 1974
+    },
+    "whatToListenFor": "Lee's productions from the mid-1970s onward routinely exist in two forms: a vocal version, and a King Tubby dub cut sold or played separately. The dub cut is where the empty space and echo live."
+  },
+  "explanation": {
+    "age7": "Bunny Lee made a lot of records, and King Tubby remixed many of them into dub versions.",
+    "age13": "Lee was Jamaica's most prolific producer of the 1970s, and Tubby was his regular dub engineer. The sheer volume of material they worked through together is part of why Tubby's remixing techniques spread so widely and so fast.",
+    "adult": "Lee's prolific output gave Tubby an unusually large canvas to develop and repeat his mixing techniques across, which is part of the case for treating the Lee/Tubby partnership as an engine for dub's spread, not just a source of individual classic tracks."
+  },
+  "tags": [
+    "production",
+    "labels"
+  ]
+}

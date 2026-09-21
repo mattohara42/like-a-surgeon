@@ -1,0 +1,32 @@
+{
+  "id": "e-atkins-ur",
+  "from": "juan-atkins",
+  "to": "underground-resistance",
+  "type": "reaction-against",
+  "confidence": "consensus",
+  "evidence": "Underground Resistance's anti-major-label, anti-commercial stance is widely described by critics and by Mike Banks himself as a reaction to the increasing commercialization of Detroit techno's first wave, without a specific documented statement naming Atkins individually.",
+  "year": 1989,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Cybotron",
+      "title": "Clear",
+      "year": 1983
+    },
+    "later": {
+      "artist": "Underground Resistance",
+      "title": "Death Star",
+      "year": 1992
+    },
+    "whatToListenFor": "Atkins' record is cool and controlled; UR's is aggressive and stripped of any pop concession. Same machine vocabulary, opposite emotional register and opposite stance toward the music industry."
+  },
+  "explanation": {
+    "age7": "A group called Underground Resistance made angry, uncompromising techno partly as a reaction against techno becoming more commercial.",
+    "age13": "UR rejected the major-label deals that some first-wave Detroit techno artists had started signing, choosing to stay independent and anonymous instead.",
+    "adult": "Marked reaction-against rather than direct: the claim is about UR positioning itself against a trend the Belleville Three had begun (crossover success, major-label licensing) rather than against Atkins personally, hence consensus rather than documented."
+  },
+  "tags": [
+    "politics",
+    "labels"
+  ]
+}

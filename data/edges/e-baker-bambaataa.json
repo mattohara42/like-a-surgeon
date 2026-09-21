@@ -1,0 +1,32 @@
+{
+  "id": "e-baker-bambaataa",
+  "from": "arthur-baker",
+  "to": "afrika-bambaataa",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Baker and engineer John Robie are the credited producers of 'Planet Rock' (1982) for Tommy Boy Records.",
+  "year": 1982,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Arthur Baker",
+      "title": "Breaker's Revenge",
+      "year": 1982
+    },
+    "later": {
+      "artist": "Afrika Bambaataa and the Soulsonic Force",
+      "title": "Planet Rock",
+      "year": 1982
+    },
+    "whatToListenFor": "Both records share Baker's production fingerprints: hard, dry electro drums and a preference for interpolated melodic hooks over sampled ones."
+  },
+  "explanation": {
+    "age7": "Arthur Baker was the producer who helped Afrika Bambaataa build \"Planet Rock\" in the studio.",
+    "age13": "Baker and Bambaataa worked together at Tommy Boy Records to build \"Planet Rock\" out of Kraftwerk parts and a drum machine.",
+    "adult": "This edge separates the producer's specific contribution from the machine's (see e-808-planetrock) and the sampled material's (see e-kraftwerk-planetrock): three distinct, individually documented inputs into one record."
+  },
+  "tags": [
+    "production",
+    "labels"
+  ]
+}

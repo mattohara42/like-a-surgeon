@@ -1,0 +1,34 @@
+{
+  "id": "grandmaster-flash",
+  "name": "Grandmaster Flash",
+  "sortName": "Flash, Grandmaster",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1975,
+  "activeTo": null,
+  "originCity": "South Bronx, New York",
+  "originCountry": "USA",
+  "scenes": [
+    "south-bronx"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Turned two turntables and a mixer into an instrument with its own technique, before hip-hop had a name for what he was doing.",
+  "blurb": {
+    "age7": "Grandmaster Flash figured out how to use two record players like a musical instrument, cutting and mixing records live.",
+    "age13": "Born Joseph Saddler, Flash developed techniques like the quick-mix and backspin, methods for cutting between two copies of the same record so the crowd never heard the song stop. His 1981 record \"The Adventures of Grandmaster Flash on the Wheels of Steel\" is a recording of that technique itself, mixing Chic, Queen, and Blondie live.",
+    "adult": "Flash formalized DJ techniques (the quick-mix theory, the backspin, punch phrasing) that had been developing informally at Bronx park jams into a repeatable, teachable method. \"Wheels of Steel\" documents the technique directly rather than a song built from it, which is why it is treated as a foundational hip-hop text even though it predates most rapping on record."
+  },
+  "signatureTracks": [
+    {
+      "title": "The Adventures of Grandmaster Flash on the Wheels of Steel",
+      "year": 1981,
+      "whyThisOne": "A recording of the DJ technique itself: three turntables, no rapping, Flash cutting between Chic, Queen, and Blondie in real time."
+    },
+    {
+      "title": "The Message (Grandmaster Flash and the Furious Five)",
+      "year": 1982,
+      "whyThisOne": "Credited to Flash and the group, though written mainly by Melle Mel, Duke Bootee, and Sugar Hill staff; a useful case of a group name carrying more authorship weight than the credits reflect."
+    }
+  ]
+}

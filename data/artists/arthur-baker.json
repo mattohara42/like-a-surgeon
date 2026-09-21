@@ -1,0 +1,38 @@
+{
+  "id": "arthur-baker",
+  "name": "Arthur Baker",
+  "sortName": "Baker, Arthur",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1981,
+  "activeTo": null,
+  "originCity": "Boston",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "tommy-boy",
+      "from": 1981,
+      "to": 1985
+    }
+  ],
+  "keyProducers": [],
+  "hook": "The producer who welded Kraftwerk to a Roland drum machine and got sued for it.",
+  "blurb": {
+    "age7": "Arthur Baker was the producer who helped build \"Planet Rock\" out of a German band's music and a drum machine.",
+    "age13": "Baker moved to New York in 1981 and started working at Tommy Boy Records, where he and engineer John Robie produced \"Planet Rock\" with Afrika Bambaataa the next year. He kept making electro and dance records through the eighties, and later produced for Bruce Springsteen and New Order.",
+    "adult": "Baker's engineering-school background shows in how methodically \"Planet Rock\" was assembled: the Kraftwerk elements were interpolated by studio musicians rather than sampled, which shaped the legal dispute that followed. His subsequent run producing rock and pop acts is a reminder that the electro/hip-hop production toolkit crossed over commercially very quickly."
+  },
+  "signatureTracks": [
+    {
+      "title": "Planet Rock (Afrika Bambaataa and the Soulsonic Force)",
+      "year": 1982,
+      "whyThisOne": "Baker and John Robie's production, built around interpolated Kraftwerk parts and an 808, is the record that defined electro."
+    },
+    {
+      "title": "Breaker's Revenge",
+      "year": 1982,
+      "whyThisOne": "Baker's own instrumental single, built for the breakdancing crews the electro sound was feeding."
+    }
+  ]
+}

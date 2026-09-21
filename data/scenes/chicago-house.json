@@ -1,0 +1,34 @@
+{
+  "id": "chicago-house",
+  "name": "Chicago House",
+  "type": "scene",
+  "lineage": "electronic",
+  "yearFrom": 1977,
+  "yearTo": 1988,
+  "city": "Chicago",
+  "country": "USA",
+  "hook": "A DJ's taste at one club, and then another, became a genre with its own instrument palette inside a decade.",
+  "blurb": {
+    "age7": "In Chicago, DJs at a few clubs played a mix of disco and drum-machine music that people started calling house music.",
+    "age13": "Frankie Knuckles' residency at the Warehouse from 1977 gave the genre its name. When Ron Hardy took over at the Music Box in 1982, his rougher, louder style pushed local producers like Marshall Jefferson and Larry Heard to start making their own tracks, often pressed on the local label Trax.",
+    "adult": "Chicago house grew out of two competing DJ residencies (Knuckles at the Warehouse, then the Power Plant; Hardy at the Music Box) whose audiences and sounds overlapped but diverged, with Hardy's harder, more chaotic sets acting as the direct proving ground for a wave of bedroom producers between 1983 and 1986. Trax and DJ International, the two dominant local labels, are also central to house music's worst-documented labor story: producers pressured into signing away rights for a fraction of their records' value."
+  },
+  "geopolitics": "Chicago's South and West Sides in this period carried the same disinvestment and job loss common to Rust Belt cities, with house music's early audience drawn heavily from the city's Black and Latino gay club scene, a community facing both economic marginalization and, by the mid-1980s, the onset of the AIDS crisis.",
+  "whatWasNew": "Building a track from a drum machine, a cheap synthesizer, and a DJ's ear for what worked on a specific dancefloor, with no expectation of radio play or a live band. The DJ, not a record label A&R department, decided what got made.",
+  "production": "Home setups and small studios built around the Roland TR-808 and TR-909 and cheap synthesizers like the Roland Juno-60, often recorded direct to cassette or reel-to-reel before ever reaching a pressing plant.",
+  "labels": "Trax Records (founded 1984 by Larry Sherman) and DJ International were the two major local outlets, both later the subject of long-running disputes over unpaid royalties and rights producers signed away for cash advances.",
+  "politics": "Largely implicit rather than lyrical: a Black and Latino, heavily gay club culture building its own sound and its own economy at a moment when both were under pressure from the AIDS crisis and continued urban disinvestment.",
+  "memberIds": [
+    "frankie-knuckles",
+    "marshall-jefferson",
+    "larry-heard",
+    "phuture"
+  ],
+  "palette": {
+    "ink": "#141a1f",
+    "paper": "#eef0e8",
+    "accent": "#e0483c",
+    "accent2": "#3c8ee0"
+  },
+  "motif": "tb303-waveform"
+}
