@@ -103,3 +103,12 @@ Every decision made without asking. Append, do not rewrite.
   `data/manifest.json` is regenerated fresh each time rather than assumed
   current. Cheap at this dataset size; revisit if manifest generation ever
   gets expensive enough to matter.
+- **A26.** `artist.scenes[]` and `artist.labels[].labelId` referencing a
+  scene or label that doesn't exist yet is downgraded from a hard error to
+  a warning in `tools/validate.js`, ahead of wiring up CI. `CLAUDE.md`'s
+  scope rule states data expansion "is a permanent parallel track with no
+  gate at all," and a hard error here would make CI red for the entire
+  Track D expansion period, exactly the gate that rule forbids. Structural
+  references that connect nodes rather than name a not-yet-written one
+  (`scene.memberIds`, `edge.from`/`to`, `demoId`, thread steps) stay hard
+  errors, since those are added alongside the nodes they connect.

@@ -53,4 +53,5 @@ fixing them inline.)
   the seed: `swinging-london`, `uk-punk-77`, `uk-post-punk`,
   `dusseldorf-kling-klang`, `chicago-house`. `docs/m1-architecture.md`
   flagged the analogous gap for labels (8 missing) but missed this one for
-  scenes. Both show as expected validator errors until authored.
+  scenes. Both now show as expected validator warnings (A26) until authored,
+  not errors, so CI stays green through Track D.

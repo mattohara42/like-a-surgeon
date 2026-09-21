@@ -178,16 +178,24 @@ for (const shard of SHARD_TYPES) {
 }
 
 // artist references
+//
+// artist.scenes[] and artist.labels[].labelId are warnings, not hard
+// errors, when unresolved: CLAUDE.md's scope rule says data expansion "is a
+// permanent parallel track with no gate at all," and an artist naming a
+// scene or label that hasn't been authored yet is exactly that in-progress
+// roster growth, not a bug. Structural references (scene.memberIds,
+// edge.from/to, demoId, thread steps) stay hard errors below, since those
+// are graph edges added alongside the nodes they connect, not backlog.
 for (const [id, artist] of records.artists) {
   const where = `artists/${id}.json`;
   for (const sceneId of artist.scenes || []) {
     if (!records.scenes.has(sceneId)) {
-      fail(`${where}: scenes references unresolved scene "${sceneId}"`);
+      warn(`${where}: scenes references unresolved scene "${sceneId}" (not yet authored?)`);
     }
   }
   for (const labelRef of artist.labels || []) {
     if (!records.labels.has(labelRef.labelId)) {
-      fail(`${where}: labels references unresolved label "${labelRef.labelId}"`);
+      warn(`${where}: labels references unresolved label "${labelRef.labelId}" (not yet authored?)`);
     }
   }
   for (const producer of artist.keyProducers || []) {
