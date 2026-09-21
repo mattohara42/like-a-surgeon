@@ -5,15 +5,64 @@
 
 import { CONFIG } from '../config.js';
 import { computeLayout } from './layout.js';
-import { createViewportState, transformString, visibleContentRange } from './viewport.js';
+import { createViewportState, transformString, visibleContentRange, flyTo } from './viewport.js';
 import { zoomLevelForScale } from './zoomLevels.js';
 import { attachPanZoomHandlers } from './interactions.js';
-import { svgEl } from './svg.js';
+import { svgEl, setAttrs } from './svg.js';
 import { createNodeElement, updateNodeElement, setNodeHovered } from './nodes.js';
 import { createEdgeElement, updateEdgeElement, setEdgeHovered } from './edges.js';
 
 function clampYear(year, min, max) {
   return Math.min(max, Math.max(min, year));
+}
+
+// Shared glow filters, referenced by every node/edge via url(#id) rather
+// than one filter instance each -- SVG filters are relatively expensive,
+// and there's nothing per-node about the blur itself, only its current
+// (counter-scaled) radius, which is updated on the shared instance each
+// frame instead.
+function createGlowDefs() {
+  const defs = svgEl('defs');
+  const nodeFilter = svgEl('filter', {
+    id: 'node-glow-filter',
+    x: '-200%',
+    y: '-200%',
+    width: '500%',
+    height: '500%',
+  });
+  nodeFilter.appendChild(svgEl('feGaussianBlur', { class: 'node-glow-blur', stdDeviation: CONFIG.node.glow.blurStdDev }));
+  const edgeFilter = svgEl('filter', {
+    id: 'edge-glow-filter',
+    x: '-200%',
+    y: '-200%',
+    width: '500%',
+    height: '500%',
+  });
+  edgeFilter.appendChild(svgEl('feGaussianBlur', { class: 'edge-glow-blur', stdDeviation: CONFIG.edge.glow.blurStdDev }));
+  defs.append(nodeFilter, edgeFilter);
+  return defs;
+}
+
+// Graph connectedness (edge count touching a node) -> a radius multiplier
+// in CONFIG.node.degreeRadiusFactor's range. Square root, not linear, so
+// visual area rather than radius scales roughly with degree (standard
+// bubble-chart practice) -- see ASSUMPTIONS.md for why degree and not
+// record sales.
+function computeDegreeFactors(nodes, edges) {
+  const degreeById = new Map();
+  const bump = (id) => degreeById.set(id, (degreeById.get(id) ?? 0) + 1);
+  for (const edge of edges) {
+    bump(edge.from.id);
+    bump(edge.to.id);
+  }
+  const maxDegree = Math.max(1, ...degreeById.values());
+  const { min, max } = CONFIG.node.degreeRadiusFactor;
+  const factorById = new Map();
+  for (const node of nodes) {
+    const degree = degreeById.get(node.id) ?? 0;
+    factorById.set(node.id, min + (max - min) * Math.sqrt(degree / maxDegree));
+  }
+  return factorById;
 }
 
 // Axis ticks and lane/band labels are drawn once. Their x/y stay in raw
@@ -118,17 +167,20 @@ export function createGraph(container, data, callbacks = {}) {
   const vp = createViewportState();
 
   const root = svgEl('svg', { class: 'graph-svg', width: '100%', height: '100%' });
+  const defs = createGlowDefs();
   const viewportG = svgEl('g', { class: 'viewport' });
   const bandsG = svgEl('g', { class: 'bands-layer' });
   const axisG = svgEl('g', { class: 'axis-layer' });
   const edgesG = svgEl('g', { class: 'edges-layer' });
   const nodesG = svgEl('g', { class: 'nodes-layer' });
   viewportG.append(bandsG, axisG, edgesG, nodesG);
-  root.appendChild(viewportG);
+  root.append(defs, viewportG);
   container.appendChild(root);
 
   drawBands(bandsG, layout);
   drawAxis(axisG, layout);
+
+  const degreeFactorById = computeDegreeFactors(data.nodes, data.edges);
 
   // Node position and edge anchors are both static once computed (nodes
   // don't move, edge.year doesn't change), so both are precomputed once
@@ -166,9 +218,25 @@ export function createGraph(container, data, callbacks = {}) {
   // zooming anyway.
   let containerRect = container.getBoundingClientRect();
 
+  // Click-to-fly-to: center and zoom in on whatever was clicked, then tell
+  // the caller what got selected. Runs against the render() driven directly
+  // by the animation's own rAF loop (not the debounced scheduleRender)
+  // since flyTo already paces itself frame by frame.
+  function selectAndFlyTo(item, contentX, contentY, onSelect) {
+    onSelect(item);
+    flyTo(vp, contentX, contentY, CONFIG.zoom.flyToScale, containerRect.width, containerRect.height, timedRender);
+  }
+
   function render() {
     viewportG.setAttribute('transform', transformString(vp));
     updateStaticLayerScale(axisG, bandsG, vp.scale);
+    // Glow blur radius is a UI adornment like everything else in
+    // nodes.js/edges.js: counter-scaled so it reads as a constant size on
+    // screen rather than blurring more at high zoom and vanishing at low
+    // zoom. One shared filter each, not per-element, so this is two
+    // attribute writes per frame regardless of how many nodes/edges render.
+    setAttrs(defs.querySelector('.node-glow-blur'), { stdDeviation: CONFIG.node.glow.blurStdDev / vp.scale });
+    setAttrs(defs.querySelector('.edge-glow-blur'), { stdDeviation: CONFIG.edge.glow.blurStdDev / vp.scale });
     const level = zoomLevelForScale(vp.scale);
     const range = visibleContentRange(vp, containerRect.width, containerRect.height);
 
@@ -191,11 +259,12 @@ export function createGraph(container, data, callbacks = {}) {
         continue;
       }
       const visible = nodeVisible(pos, range);
+      const degreeFactor = degreeFactorById.get(node.id) ?? CONFIG.node.degreeRadiusFactor.min;
       if (visible) {
         if (!el) {
           const created = createNodeElement(
             node,
-            onSelectNode,
+            (n) => selectAndFlyTo(n, pos.x1, pos.y, onSelectNode),
             (n, hovered) => {
               const current = nodeElements.get(n.id);
               if (current) setNodeHovered(current, hovered, vp.scale);
@@ -203,9 +272,9 @@ export function createGraph(container, data, callbacks = {}) {
           );
           nodesG.appendChild(created);
           nodeElements.set(node.id, created);
-          updateNodeElement(created, node, pos, level, vp.scale);
+          updateNodeElement(created, node, pos, level, vp.scale, degreeFactor);
         } else {
-          updateNodeElement(el, node, pos, level, vp.scale);
+          updateNodeElement(el, node, pos, level, vp.scale, degreeFactor);
         }
       } else if (el) {
         el.remove();
@@ -227,9 +296,11 @@ export function createGraph(container, data, callbacks = {}) {
       const visible = maxX >= range.x1 && maxY >= range.y1 && minY <= range.y2;
       if (visible) {
         if (!el) {
+          const midX = (anchors.x1 + anchors.x2) / 2;
+          const midY = (anchors.y1 + anchors.y2) / 2;
           const created = createEdgeElement(
             edge,
-            onSelectEdge,
+            (e) => selectAndFlyTo(e, midX, midY, onSelectEdge),
             (e, hovered) => {
               const current = edgeElements.get(e.id);
               if (current) setEdgeHovered(current, e, hovered);

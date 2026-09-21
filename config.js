@@ -22,6 +22,17 @@ export const CONFIG = {
     labelFontSize: 11,
     hookFontSize: 10,
     labelMaxChars: 28,
+    // "Planet size" by graph connectedness (in+out edge count), not record
+    // sales -- see ASSUMPTIONS.md. Multiplies the per-zoom-level base
+    // radius above; sqrt of degree so area, not radius, scales roughly
+    // linearly with connections (standard bubble-chart practice, avoids a
+    // node with 4x the edges looking 16x the area).
+    degreeRadiusFactor: { min: 0.7, max: 2.4 },
+    glow: {
+      blurStdDev: 4,
+      radiusMultiplier: 2.2,
+      opacity: 0.55,
+    },
   },
 
   edge: {
@@ -31,6 +42,13 @@ export const CONFIG = {
     opacity: 0.5,
     hoverOpacity: 0.95,
     crossLineageOpacity: 0.75,
+    // How far the trail's curve control point bows off the straight line
+    // between endpoints, as a fraction of the straight-line distance.
+    curveBow: 0.12,
+    glow: {
+      blurStdDev: 2.5,
+      opacity: 0.5,
+    },
   },
 
   zoom: {
@@ -46,6 +64,11 @@ export const CONFIG = {
       { name: 'detail', maxScale: Infinity },
     ],
     transitionMs: 180,
+    // Click-to-fly-to: how long the animated pan+zoom to a clicked node or
+    // edge takes, and roughly what scale it settles at (still governed by
+    // min/max above).
+    flyToDurationMs: 650,
+    flyToScale: 3,
   },
 
   viewport: {
@@ -63,7 +86,7 @@ export const CONFIG = {
       funk: '#8e44ad',
       other: '#6b7280',
     },
-    background: '#0b0c10',
+    background: '#05060a',
     laneLabel: '#9aa0a8',
     axisLine: 'rgba(255,255,255,0.10)',
     axisText: 'rgba(255,255,255,0.45)',

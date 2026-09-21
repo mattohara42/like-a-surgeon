@@ -122,3 +122,46 @@ Passes with real margin. Not yet measured: real GPU-accelerated paint/
 composite cost in a non-headless browser, which this harness can't reach;
 worth a spot check once the dataset is closer to its real 120/350 M1 size
 and there's an actual reason to worry about it.
+
+## 8. The galaxy restyle
+
+After seeing the first static version, Matt asked for something closer to
+a 3D galaxy: glowing colored planets sized by popularity, linked by trails,
+click one to fly to another. That's a real conflict with `SPEC.md`'s
+"Explicitly not force-directed" and `CLAUDE.md`'s anti-goal against
+force-directed layout, both there because chronological position is core
+to how this project teaches. Raised before building anything; Matt chose
+restyling the existing time-axis/lineage-lane layout rather than replacing
+it, so position still means what it always meant. What actually changed:
+
+- **Node size by connectedness, not sales.** No sales/certification data
+  exists in the schema, and it's the kind of number `CLAUDE.md`'s accuracy
+  rules would need real sourcing for. Radius scales with `sqrt(degree /
+  maxDegree)` against `CONFIG.node.degreeRadiusFactor`'s range, layered on
+  top of the existing per-zoom-level base radius. See **A32**.
+- **Glow.** Each node/edge gets a second, larger, blurred, lower-opacity
+  copy of itself behind the crisp shape (an SVG `feGaussianBlur` filter).
+  Two *shared* filter instances, not one per element (filters are
+  expensive; a shared instance whose blur radius is updated once per frame,
+  same counter-scaling pattern as radius/stroke-width elsewhere, costs two
+  attribute writes regardless of node/edge count). Re-measured the perf
+  gate after this: `render()` averages 3.2ms, up from 1.9ms, still nowhere
+  near the 16.7ms budget.
+- **Curved trails.** Edges are now a quadratic Bezier (`M ... Q ... `)
+  instead of a straight line, bowed a small amount off the direct path.
+  The bow direction is a deterministic hash of the edge's own id, not
+  random, so the same edge always curves the same way across renders
+  without needing to store anything extra.
+- **Orbital tracks, not Gantt bars.** The node's active-year span line
+  dropped from a bold, readable bar to a faint dotted track (opacity 0.22
+  for artists, kept more visible at 0.5 for machines) -- the glowing
+  planet marker is now the dominant shape, the span line is a quiet
+  reference rather than the main event.
+- **Starfield background.** Pure CSS (`index.html`), a couple of repeating
+  radial-gradient dot layers. No new render logic, nothing to tune in
+  `CONFIG`, so it isn't one.
+- **Click-to-fly-to.** `render/viewport.js`'s `flyTo` animates tx/ty/scale
+  to center and zoom in on whatever was clicked (ease-in-out cubic,
+  `CONFIG.zoom.flyToDurationMs`/`flyToScale`), instead of the previous
+  instant jump. A user-initiated pan or zoom always interrupts an in-flight
+  fly-to rather than fighting it. See **A33**.

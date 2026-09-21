@@ -1,8 +1,9 @@
-// Draws one node: a horizontal line for its active-year span, a circle
-// marking its start year (the primary hit target and label anchor), and,
-// depending on the current semantic zoom level, a name label and a one-line
-// hook. Elements are created once per node and mutated in place afterward
-// so panning/zooming never rebuilds the DOM.
+// Draws one node as a glowing "planet": a blurred glow circle behind a
+// crisp core circle, sized by graph connectedness (degree), plus a faint
+// orbital track for its active-year span and, depending on the current
+// semantic zoom level, a name label and a one-line hook. Elements are
+// created once per node and mutated in place afterward so panning/zooming
+// never rebuilds the DOM.
 //
 // Position (x1/x2/y) lives in content coordinates and is left for the
 // viewport's own transform to scale, since a career's time span should
@@ -27,11 +28,12 @@ export function createNodeElement(node, onSelect, onHover) {
   // footprint for pointer events to land reliably otherwise.
   const hitArea = svgEl('rect', { class: 'node-hit', fill: 'transparent' });
   const span = svgEl('line', { class: 'node-span' });
+  const glow = svgEl('circle', { class: 'node-glow', filter: 'url(#node-glow-filter)' });
   const marker = svgEl('circle', { class: 'node-marker' });
   const label = svgEl('text', { class: 'node-label' });
   const hook = svgEl('text', { class: 'node-hook' });
 
-  g.append(hitArea, span, marker, label, hook);
+  g.append(hitArea, span, glow, marker, label, hook);
 
   g.addEventListener('click', () => onSelect(node));
   g.addEventListener('mouseenter', () => onHover(node, true));
@@ -40,15 +42,19 @@ export function createNodeElement(node, onSelect, onHover) {
   return g;
 }
 
-export function updateNodeElement(g, node, position, zoomLevel, scale) {
+// degreeFactor: precomputed per-node multiplier from graph connectedness
+// (see graph.js), already scaled into CONFIG.node.degreeRadiusFactor's
+// min..max range.
+export function updateNodeElement(g, node, position, zoomLevel, scale, degreeFactor) {
   const color = CONFIG.colors.lineage[node.lineage] ?? CONFIG.colors.lineage.other;
-  const radius = (CONFIG.node.radius[zoomLevel] ?? CONFIG.node.radius.mid) / scale;
+  const radius = ((CONFIG.node.radius[zoomLevel] ?? CONFIG.node.radius.mid) * degreeFactor) / scale;
   const strokeWidth = (zoomLevel === 'collapsed' ? 1 : CONFIG.node.strokeWidth) / scale;
   const labelFontSize = CONFIG.node.labelFontSize / scale;
   const hookFontSize = CONFIG.node.hookFontSize / scale;
 
   const hitArea = g.querySelector('.node-hit');
   const span = g.querySelector('.node-span');
+  const glow = g.querySelector('.node-glow');
   const marker = g.querySelector('.node-marker');
   const label = g.querySelector('.node-label');
   const hook = g.querySelector('.node-hook');
@@ -62,6 +68,8 @@ export function updateNodeElement(g, node, position, zoomLevel, scale) {
     height: hitHeight,
   });
 
+  // A faint "orbital track" for the active-year span rather than a bold
+  // Gantt bar -- the planet marker should read as the dominant shape.
   setAttrs(span, {
     x1: position.x1,
     y1: position.y,
@@ -69,7 +77,16 @@ export function updateNodeElement(g, node, position, zoomLevel, scale) {
     y2: position.y,
     stroke: color,
     'stroke-width': strokeWidth,
-    'stroke-opacity': node.kind === 'machine' ? 0.9 : 0.6,
+    'stroke-opacity': node.kind === 'machine' ? 0.5 : 0.22,
+    'stroke-dasharray': node.kind === 'machine' ? 'none' : `${1 / scale},${3 / scale}`,
+  });
+
+  setAttrs(glow, {
+    cx: position.x1,
+    cy: position.y,
+    r: radius * CONFIG.node.glow.radiusMultiplier,
+    fill: color,
+    opacity: CONFIG.node.glow.opacity,
   });
 
   setAttrs(marker, {
