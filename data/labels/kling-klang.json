@@ -3,18 +3,15 @@
   "name": "Kling Klang",
   "type": "label",
   "lineage": "electronic",
-  "foundedYear": 1970,
+  "foundedYear": 1975,
   "closedYear": null,
   "city": "Düsseldorf",
-  "founders": [
-    "Ralf Hütter",
-    "Florian Schneider"
-  ],
-  "ownershipStory": "Not a label in the usual sense so much as Kraftwerk's own studio and production company, giving the band full ownership of their masters and unlimited recording time from 1970 onward. Finished recordings were distributed through Philips/Vertigo in the early 1970s and through EMI/Capitol from the mid-1970s, but the studio and the music made in it stayed Kraftwerk's own property throughout.",
-  "hook": "Not really a label. Kraftwerk's own studio, which is why they never had to ask anyone's permission.",
+  "founders": "Ralf Hütter, Florian Schneider",
+  "ownershipStory": "Kling Klang began as Kraftwerk's private studio in 1970 and became their own vanity label for master recordings from 1975, letting the band control the pace and ownership of their catalogue rather than working to an external label's schedule.",
+  "hook": "Kraftwerk's own studio, turned into their own label, so nobody else would own the masters.",
   "blurb": {
-    "age7": "Kraftwerk built their own studio so they could make music exactly how they wanted, whenever they wanted.",
-    "age13": "Kling Klang was Kraftwerk's own recording studio in Düsseldorf, not a record label they signed to. Owning it meant they could work as long as they wanted and kept control of everything they recorded, even though other companies handled getting the records into shops.",
-    "adult": "Kling Klang is the label field's edge case: a wholly owned production studio rather than a company that signed outside acts. Its inclusion here is deliberate, since the ownership structure it represents, a band controlling its own means of production outright, is one of the more consequential and unusual facts in Kraftwerk's story."
+    "age7": "Kling Klang was Kraftwerk's own studio and record label, so they could make music their own way.",
+    "age13": "Kling Klang started as the studio Kraftwerk built for themselves in Düsseldorf in 1970, and became their own label in 1975 so they would own their own recordings.",
+    "adult": "Kling Klang's dual role as studio and label is a big part of why Kraftwerk's catalogue is so small and so tightly controlled compared to peers: they were never on anyone else's release schedule, and never had to hand over their masters to get a record out."
   }
 }

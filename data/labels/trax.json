@@ -6,14 +6,12 @@
   "foundedYear": 1984,
   "closedYear": null,
   "city": "Chicago",
-  "founders": [
-    "Larry Sherman"
-  ],
-  "ownershipStory": "Founded by Larry Sherman, who began by buying a Chicago pressing plant and moved into releasing the city's house records directly. Trax pressed much of house music's foundational catalogue, including Phuture's 'Acid Tracks,' but became infamous for contracts that were absent or unenforced and royalties that were rarely paid to the Black artists who made the records. Sherman was reportedly working on a royalty fund for Trax artists before his death in 2020.",
-  "hook": "Pressed the records that built house music, and is one of the dataset's clearest examples of a label profiting while its artists did not.",
+  "founders": "Larry Sherman",
+  "ownershipStory": "Sherman bought a pressing plant and began releasing Chicago house records in 1984, becoming, with rival DJ International, one of the genre's two dominant local labels. Trax became one of house music's most cited cautionary tales for artist payment: multiple producers, including Marshall Jefferson and Larry Heard, later pursued Trax and Sherman's estate over unpaid royalties and unclear rights, a dispute that outlasted Sherman's death in 2020.",
+  "hook": "The Chicago pressing plant that put house music on vinyl, and the label whose contracts became a lasting cautionary tale.",
   "blurb": {
-    "age7": "This company put out a lot of the first house music records, but it did not pay the musicians fairly.",
-    "age13": "Trax Records released many of house music's most important early records, including Phuture's 'Acid Tracks.' Its founder, Larry Sherman, became known for not paying artists what they were owed, something several of them have spoken about publicly for decades.",
-    "adult": "Trax's catalogue and its exploitation of artists are inseparable parts of the same story. Sherman built the label around Chicago's Black house-music pioneers while contracts and royalty payments were frequently absent or unenforced, a pattern DJ Pierre, Marshall Jefferson, and others have described directly. This belongs squarely in the labels overlay this dataset is building toward."
+    "age7": "Trax Records made records for a lot of the first house music songs in Chicago.",
+    "age13": "Larry Sherman started Trax in 1984, and it released some of the most important early house records, including songs by Marshall Jefferson and Larry Heard. Years later, several of those artists said they were never paid fairly for their work.",
+    "adult": "Trax's catalogue is inseparable from house music's foundational years, and inseparable from the genre's worst labor story: standard contracts that took full ownership of masters from young, often broke producers in exchange for small flat fees, a pattern that generated lawsuits and public disputes for decades afterward."
   }
 }

@@ -1,0 +1,31 @@
+{
+  "id": "e-knuckles-jefferson",
+  "from": "frankie-knuckles",
+  "to": "marshall-jefferson",
+  "type": "scene",
+  "confidence": "consensus",
+  "evidence": "Knuckles' Warehouse residency (from 1977) predates and is widely credited with establishing the Chicago club culture Jefferson entered in the early 1980s, though no specific documented meeting between the two anchors this individual claim.",
+  "year": 1983,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Frankie Knuckles",
+      "title": "Warehouse-era DJ sets",
+      "year": 1978
+    },
+    "later": {
+      "artist": "Marshall Jefferson",
+      "title": "Move Your Body (The House Music Anthem)",
+      "year": 1986
+    },
+    "whatToListenFor": "Knuckles' sets built the audience and the vocabulary ('house music') that Jefferson's generation of producers was writing directly for by the time they started making records."
+  },
+  "explanation": {
+    "age7": "Frankie Knuckles helped build the Chicago club scene that Marshall Jefferson later made his own music for.",
+    "age13": "By the time Jefferson started producing, Knuckles had already spent years shaping what a Chicago dancefloor expected to hear.",
+    "adult": "Consensus tier: this is a scene-genealogy claim (the audience and vocabulary Knuckles built) rather than a documented direct interaction between the two men."
+  },
+  "tags": [
+    "production"
+  ]
+}

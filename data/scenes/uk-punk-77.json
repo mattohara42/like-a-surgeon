@@ -1,31 +1,32 @@
 {
   "id": "uk-punk-77",
-  "name": "UK Punk, 1976-77",
+  "name": "UK Punk 77",
   "type": "scene",
   "lineage": "rock",
-  "yearFrom": 1976,
+  "yearFrom": 1975,
   "yearTo": 1979,
   "city": "London",
   "country": "UK",
-  "hook": "Bored, broke, and unemployed British teenagers decided not being able to play was the point.",
+  "hook": "Three chords, a safety pin, and a direct rejection of the pop-star distance Swinging London's survivors had settled into.",
   "blurb": {
-    "age7": "In London, young people who felt bored and ignored started fast, loud bands and did not care if they played perfectly.",
-    "age13": "Britain in the mid-1970s had high unemployment, power cuts, and a three-day work week. Young Londoners answered with punk: songs played fast, loud, and often by people who had barely learned their instruments, on purpose. The Sex Pistols' 100 Club gig in September 1976 is usually treated as the moment it became a real scene rather than a few isolated bands.",
-    "adult": "Punk's 1976-77 London moment came out of a genuinely rough economic stretch: high youth unemployment, the aftermath of the 1973-74 three-day week and oil shock, and a general sense that the 1960s' promised prosperity had not arrived for most people. The music's amateurism was a deliberate rejection of the technical, progressive-rock mainstream, and its DIY ethic, that anyone can start a band and anyone can start a label, is the direct ancestor of the independent-label explosion that followed in post-punk."
+    "age7": "In the late 1970s, young bands in London started playing fast, angry, simple songs because they wanted rock music to feel close to ordinary people again.",
+    "age13": "Punk bands like the Sex Pistols and the Clash formed in London around 1975-76, playing short, aggressive songs and rejecting the technical showing-off of a lot of mid-1970s rock. It was as much about attitude and do-it-yourself independence as about the music itself.",
+    "adult": "UK punk crystallized around 1975-77 as a reaction against both the perceived excess of progressive rock and the economic stagnation of mid-1970s Britain, mixing working-class and art-school participants in venues like the 100 Club. Its DIY ethic, anyone could start a band, a label, a fanzine, mattered as much as its sound, and directly enabled the independent label boom that followed."
   },
-  "geopolitics": "The UK's mid-1970s recession, high inflation, and the 1973-74 three-day week, imposed to conserve electricity during industrial disputes and an oil crisis, hit young people entering the job market hardest. The National Front's growing visibility in this period is the other half of punk's context, and it produced a direct response in Rock Against Racism.",
-  "whatWasNew": "Speed, brevity, and a refusal of instrumental virtuosity as a value at all, delivered with an aggressive DIY visual and verbal style. Performance mattered more than the recording; several defining bands were confrontational live long before they had a record out.",
-  "production": "Cheap, fast studio sessions, often mixing amateur playing with experienced producers brought in to shape the chaos into a record, as happened with the Clash and Guy Stevens and, later, Lee Perry.",
-  "labels": "A handful of majors moved fast to sign the most visible bands (CBS signed the Clash within a year of the 100 Club show), which is itself a controversy the scene never fully resolved: whether major-label punk was a contradiction in terms.",
-  "politics": "Explicitly anti-establishment lyrically, and increasingly organized through Rock Against Racism as the National Front gained visibility; not a unified politics so much as a shared refusal.",
+  "geopolitics": "Britain's mid-1970s economic troubles (high unemployment, inflation, industrial strikes, later dubbed the 'Winter of Discontent') tracked a real, widely shared sense of decline, particularly among working-class teenagers with few prospects.",
+  "whatWasNew": "Stripping rock back to its simplest possible form and treating a total lack of musical polish as a legitimate, even superior, artistic choice, explicitly against the instrumental virtuosity of the era's dominant rock acts.",
+  "production": "Cheap, fast studio time, often recorded in a few days; the raw, compressed sound was as much a budget constraint as an aesthetic choice.",
+  "labels": "A mix of major-label opportunism (EMI, then Virgin, signing the Sex Pistols after early controversy) and a wave of new independent labels that punk's DIY ethic directly enabled.",
+  "politics": "Explicitly confrontational: anti-monarchist ('God Save the Queen'), anti-establishment, and class-conscious, though frequently more about shock and negation than a coherent political program.",
   "memberIds": [
-    "the-clash"
+    "the-clash",
+    "sex-pistols"
   ],
   "palette": {
-    "ink": "#111111",
+    "ink": "#0a0a0a",
     "paper": "#eeeeee",
-    "accent": "#e2001a",
-    "accent2": "#f2c200"
+    "accent": "#e0d000",
+    "accent2": "#d61f1f"
   },
-  "motif": "safety-pin-tear"
+  "motif": "safety-pin"
 }

@@ -6,17 +6,12 @@
   "foundedYear": 1972,
   "closedYear": null,
   "city": "London",
-  "founders": [
-    "Richard Branson",
-    "Simon Draper",
-    "Nik Powell",
-    "Tom Newman"
-  ],
-  "ownershipStory": "Grew out of a record shop into an independent label built on Mike Oldfield's 'Tubular Bells' (1973), then expanded aggressively into punk and post-punk while staying independent. Branson sold Virgin Records to Thorn EMI in 1992; the label continues to operate today as part of Universal Music Group.",
-  "hook": "Started as a record shop and became big enough to sign punk's aftermath without blinking.",
+  "founders": "Richard Branson, Simon Draper, Nik Powell, Tom Newman",
+  "ownershipStory": "Founded in 1972 by Richard Branson, Simon Draper, Nik Powell, and musician Tom Newman, growing out of Branson and Powell's Notting Hill record shop, which specialized in krautrock and progressive-rock imports. Virgin later became the label willing to sign the Sex Pistols in 1977 after both EMI and A&M had dropped them over controversy.",
+  "hook": "Started as a mail-order shop for krautrock imports, ended up releasing \"Never Mind the Bollocks.\"",
   "blurb": {
-    "age7": "Virgin started as a record shop and grew into a record company big enough to release Public Image Ltd's strange music.",
-    "age13": "Richard Branson and his partners started Virgin as a record shop, then a label, and its first release, Mike Oldfield's 'Tubular Bells,' made it rich enough to take chances on stranger music later, including John Lydon's post-punk band Public Image Ltd.",
-    "adult": "Virgin's trajectory from scrappy independent to major label happened fast, largely on the back of 'Tubular Bells,' and by the time it signed Public Image Ltd in 1978 it had the resources to release genuinely difficult music (Metal Box's unusual packaging among them) at real commercial scale. Branson sold the label to Thorn EMI in 1992."
+    "age7": "Virgin Records started as a small record shop and grew into a label big enough to release the Sex Pistols.",
+    "age13": "Richard Branson and friends founded Virgin in 1972, starting from a record shop that specialized in imported German electronic music. Five years later it was the only label willing to sign the Sex Pistols.",
+    "adult": "Virgin's origin in a shop specializing in krautrock imports is a nice small link back to this dataset's Kraftwerk/Dusseldorf scene, and its willingness to sign the Sex Pistols after two majors backed out shows how much of punk's early commercial life still ran through label risk tolerance rather than pure independence."
   }
 }

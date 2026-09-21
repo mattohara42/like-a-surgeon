@@ -1,0 +1,34 @@
+{
+  "id": "underground-resistance",
+  "name": "Underground Resistance",
+  "sortName": "Underground Resistance",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1989,
+  "activeTo": null,
+  "originCity": "Detroit",
+  "originCountry": "USA",
+  "scenes": [
+    "detroit-techno"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A second-generation Detroit collective who ran techno as a political project, in ski masks, against major labels and the artists who signed to them.",
+  "blurb": {
+    "age7": "Underground Resistance was a group of Detroit musicians who made angry, powerful techno music and refused to hide who they were making it for.",
+    "age13": "Founded in 1989 by Mike Banks, Jeff Mills, and Robert Hood, Underground Resistance rejected the major-label deals some of the first Detroit techno artists had signed. They performed and released records anonymously, in masks and combat gear, treating techno as a tool for political and economic self-determination rather than a genre to be sold off.",
+    "adult": "UR positioned itself explicitly against the commercialization the first-wave Belleville Three artists had begun to accept, tying that stance to the same Reagan-era Detroit economic collapse the earlier scene had already made central to its identity. The group operated as both a production unit and an independent label, refusing distribution deals that would cede control of the masters, a direct response to the labels overlay running through this dataset."
+  },
+  "signatureTracks": [
+    {
+      "title": "Death Star",
+      "year": 1992,
+      "whyThisOne": "A harsh, minimal statement of the militant, anti-commercial second wave of Detroit techno."
+    },
+    {
+      "title": "World 2 World",
+      "year": 1992,
+      "whyThisOne": "One of UR's core early singles, built around the collective's Afrofuturist and anti-corporate imagery."
+    }
+  ]
+}

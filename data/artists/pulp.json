@@ -1,0 +1,32 @@
+{
+  "id": "pulp",
+  "name": "Pulp",
+  "sortName": "Pulp",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1978,
+  "activeTo": null,
+  "originCity": "Sheffield",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Jarvis Cocker started the band as a schoolboy in Sheffield and spent fifteen years turning it into Britpop's sharpest class commentary.",
+  "blurb": {
+    "age7": "Pulp were a band from Sheffield led by Jarvis Cocker, who wrote clever, funny songs about ordinary people's lives.",
+    "age13": "Jarvis Cocker started Pulp while still at school in Sheffield in 1978, but the band didn't become famous until the mid-1990s, when 'Common People' (1995) turned a sharp, specific story about class tourism into one of the era's biggest hits. Critics have often compared Cocker's witty, observational songwriting to the Kinks' Ray Davies.",
+    "adult": "Pulp's fifteen-plus-year gap between formation and success is unusual even by British music's standards, and it shaped Cocker's songwriting into something more specific and class-conscious than most of his Britpop peers. Critics reaching for a comparison for Cocker's persona and lyrical eye have repeatedly landed on Ray Davies, framing Pulp (in one widely repeated line) as \"the Kinks\" to Blur and Oasis's Beatles and Stones."
+  },
+  "signatureTracks": [
+    {
+      "title": "Common People",
+      "year": 1995,
+      "whyThisOne": "A specific, class-conscious narrative built the way a Kinks song is built: one character, one situation, observed closely rather than generalized."
+    },
+    {
+      "title": "Disco 2000",
+      "year": 1995,
+      "whyThisOne": "The other half of Pulp's commercial peak, trading \"Common People\"'s anger for wistful, very English nostalgia."
+    }
+  ]
+}

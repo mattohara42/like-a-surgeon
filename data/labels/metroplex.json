@@ -6,14 +6,12 @@
   "foundedYear": 1985,
   "closedYear": null,
   "city": "Detroit",
-  "founders": [
-    "Juan Atkins"
-  ],
-  "ownershipStory": "Founded and owned outright by Juan Atkins, based on Gratiot Avenue alongside Derrick May's Transmat in what the scene nicknamed Techno Boulevard. Atkins kept ownership and creative control of his own masters from the label's first release, unusual for a young dance label of the era.",
-  "hook": "Juan Atkins' own label, and the first release techno ever had.",
+  "founders": "Juan Atkins",
+  "ownershipStory": "Atkins founded Metroplex in 1985 to release his own Model 500 material after major labels showed no interest in Detroit's machine music. Unlike Trax in Chicago, Metroplex stayed artist-owned from the start, a structure Derrick May's Transmat and Kevin Saunderson's KMS both followed.",
+  "hook": "Detroit's first artist-owned techno label, started because nobody else would put the records out.",
   "blurb": {
-    "age7": "Juan Atkins started his own record company so he could put his music out exactly the way he wanted.",
-    "age13": "Metroplex was Juan Atkins' own label, started in 1985 on Gratiot Avenue in Detroit next door to another techno label, Transmat. Atkins owned it outright, which meant he kept control of his own music from the start, unusual for underground dance records at the time.",
-    "adult": "Metroplex matters as much for its ownership structure as its catalogue. Atkins retaining outright ownership of his masters through his own label is one of the few clean counterexamples in this dataset to the pattern of young Black producers losing control of their work to labels that owned the copyrights."
+    "age7": "Juan Atkins started his own record label, Metroplex, so he could release his own machine music.",
+    "age13": "Atkins founded Metroplex in 1985 after struggling to interest existing labels in Detroit's new electronic sound. Releasing his own music as Model 500, he set a pattern other Detroit techno artists followed: keep the label, and the masters, in the artist's own hands.",
+    "adult": "Metroplex is the founding document of Detroit techno as a self-published genre. Its artist-ownership model, unusual for dance music at the time, is one reason Detroit techno artists mostly avoided the rights disputes that plagued Chicago house labels like Trax."
   }
 }

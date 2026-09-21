@@ -1,0 +1,31 @@
+{
+  "id": "e-hardy-jefferson",
+  "from": "ron-hardy",
+  "to": "marshall-jefferson",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Jefferson has described being drawn into house music after hearing Ron Hardy's DJ sets at the Music Box starting in 1983, and Hardy mixed the released version of Jefferson's 'Move Your Body' (1986).",
+  "year": 1986,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Ron Hardy",
+      "title": "Music Box DJ sets",
+      "year": 1983
+    },
+    "later": {
+      "artist": "Marshall Jefferson",
+      "title": "Move Your Body (The House Music Anthem)",
+      "year": 1986
+    },
+    "whatToListenFor": "Jefferson's piano hook is the part everyone remembers, but the mix, the sequencing and drum programming Hardy shaped, is what makes it a dancefloor record rather than just a song."
+  },
+  "explanation": {
+    "age7": "Ron Hardy was a DJ whose sets inspired Marshall Jefferson to start making his own music, and Hardy helped shape how Jefferson's biggest song was mixed.",
+    "age13": "Jefferson got into house music by going to hear Hardy DJ. Later, Hardy himself mixed the version of \"Move Your Body\" that came out on Trax.",
+    "adult": "One of the more concretely documented DJ-to-producer pipelines in Chicago house: Hardy is both the reason Jefferson started and a hands-on contributor to his best-known record."
+  },
+  "tags": [
+    "production"
+  ]
+}

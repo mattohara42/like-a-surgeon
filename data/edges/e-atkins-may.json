@@ -1,0 +1,31 @@
+{
+  "id": "e-atkins-may",
+  "from": "juan-atkins",
+  "to": "derrick-may",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Atkins, May, and Saunderson are consistently documented, including by Atkins and May themselves in interviews, as high school friends in Belleville, Michigan, with Atkins the first of the three to record and release music, directly informing May's own start.",
+  "year": 1981,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Cybotron",
+      "title": "Clear",
+      "year": 1983
+    },
+    "later": {
+      "artist": "Rhythim Is Rhythim",
+      "title": "Nude Photo",
+      "year": 1987
+    },
+    "whatToListenFor": "Both share the same cold, sequenced foundation, but May's record adds a warmth and swing Atkins' more rigid, Kraftwerk-indebted arrangements don't reach for."
+  },
+  "explanation": {
+    "age7": "Juan Atkins was the first of three friends from the same town to start making electronic music, and Derrick May followed his example.",
+    "age13": "Atkins, May, and Saunderson grew up together and are called the Belleville Three. Atkins recorded and released first, and his example, plus his taste in music, shaped what May went on to do.",
+    "adult": "The Belleville Three origin story is one of the most consistently documented in this dataset, repeated near-identically across decades of interviews with all three men."
+  },
+  "tags": [
+    "production"
+  ]
+}

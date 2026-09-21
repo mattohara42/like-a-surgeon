@@ -1,0 +1,35 @@
+{
+  "id": "david-bowie",
+  "name": "David Bowie",
+  "sortName": "Bowie, David",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1969,
+  "activeTo": 2016,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Tony Visconti",
+    "Brian Eno"
+  ],
+  "hook": "Chased Kraftwerk's European electronic sound to Berlin and came back with a trilogy that pointed rock somewhere it hadn't been.",
+  "blurb": {
+    "age7": "David Bowie kept changing his musical style completely, and one of his biggest changes came from listening to a German band called Kraftwerk.",
+    "age13": "Bowie moved to Berlin in the late 1970s partly because he was captivated by Kraftwerk's 'Autobahn' and wanted to get away from American rock cliches. With Brian Eno, he made three albums (Low, Heroes, Lodger) that pulled electronic and ambient textures into rock, including 'V-2 Schneider,' a direct tribute to Kraftwerk's Florian Schneider.",
+    "adult": "Bowie has said directly that Kraftwerk's 'Autobahn' pulled his attention back toward a specifically European electronic sensibility, and the Berlin Trilogy (Low, Heroes, Lodger, 1977-79), made with Brian Eno and Tony Visconti, is the clearest point of contact between the German electronic lineage and mainstream rock in this dataset. Kraftwerk reciprocated by name-checking Bowie and Iggy Pop on 'Trans-Europe Express.'"
+  },
+  "signatureTracks": [
+    {
+      "title": "Space Oddity",
+      "year": 1969,
+      "whyThisOne": "The breakthrough that established Bowie as a shape-shifting art-rock figure years before the Berlin period."
+    },
+    {
+      "title": "Heroes",
+      "year": 1977,
+      "whyThisOne": "Recorded in Berlin with Eno and Visconti, and the clearest example of Bowie folding Kraftwerk-indebted electronic texture into a rock song without losing the song."
+    }
+  ]
+}

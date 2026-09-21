@@ -1,17 +1,17 @@
 {
   "id": "cbs-uk",
-  "name": "CBS Records UK",
+  "name": "CBS Records (UK)",
   "type": "label",
   "lineage": "rock",
   "foundedYear": 1965,
   "closedYear": 1991,
   "city": "London",
-  "founders": [],
-  "ownershipStory": "The UK arm of CBS Inc.'s international Columbia operation, formed in 1965 after CBS bought the ailing British label Oriole Records for its pressing plants and UK distribution. As a major label subsidiary it signed The Clash in January 1977 for a reported £100,000, a deal the punk scene loudly accused the band of selling out for. CBS Inc. sold its whole record division to Sony in 1988, and the CBS label name itself was retired worldwide in favor of Columbia from 1991.",
-  "hook": "The major label that bought punk's most political band, and became punk's cleanest 'sold out' argument in the process.",
+  "founders": "CBS (Columbia Broadcasting System), via acquisition of Oriole Records",
+  "ownershipStory": "The American broadcaster CBS entered the UK market by acquiring the independent label Oriole Records in 1964, renaming it CBS Records in 1965. The label signed the Clash in 1977 on a major-label deal the band was later publicly conflicted about, given punk's independent, anti-corporate ethos. CBS Records was acquired by Sony in 1988 and the label was rebranded Sony Music in 1991.",
+  "hook": "An American broadcaster's record arm that bought its way into Britain, and ended up signing punk's most commercially ambitious band.",
   "blurb": {
-    "age7": "CBS was a big record company. Punk fans argued about whether the Clash should have signed with a company that big.",
-    "age13": "CBS Records UK was the British branch of a large American record company. When the Clash signed with CBS in 1977 for a lot of money, many punk fans accused them of betraying punk's do-it-yourself values, an argument that never really got settled.",
-    "adult": "CBS UK began in 1965 out of CBS Inc.'s purchase of the ailing Oriole Records for its UK pressing and distribution. The Clash's 1977 signing to CBS for a reported £100,000 is one of the clearest test cases in this dataset for punk's central contradiction: an anti-establishment scene that needed major-label money and distribution to actually reach the audience its politics addressed."
+    "age7": "CBS was a record label that started in America and came to Britain, and it released records by the Clash.",
+    "age13": "CBS entered Britain in the mid-1960s by buying a small label and renaming it, and by 1977 it was big enough to sign the Clash, a deal that sat uneasily with punk's independent spirit.",
+    "adult": "CBS UK's growth from an acquired independent into a major label mirrors the wider consolidation of the UK record industry across this period, and the Clash's major-label deal is one of punk's clearest tests of how much the movement's anti-corporate stance could survive contact with a band that wanted to reach a mass audience."
   }
 }

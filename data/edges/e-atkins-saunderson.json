@@ -1,0 +1,32 @@
+{
+  "id": "e-atkins-saunderson",
+  "from": "juan-atkins",
+  "to": "kevin-saunderson",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Saunderson has repeatedly described founding KMS in 1987 after watching Atkins run Metroplex, part of the same well-documented Belleville Three origin story as e-atkins-may.",
+  "year": 1981,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Model 500 (Juan Atkins)",
+      "title": "No UFOs",
+      "year": 1985
+    },
+    "later": {
+      "artist": "Inner City (Kevin Saunderson)",
+      "title": "Big Fun",
+      "year": 1988
+    },
+    "whatToListenFor": "Atkins' record is stark and functional; Saunderson's has a full vocal and pop structure built on the same machine palette, showing how far the Belleville Three's shared starting point could stretch."
+  },
+  "explanation": {
+    "age7": "Kevin Saunderson followed his friend Juan Atkins into making electronic music and starting his own record label.",
+    "age13": "Saunderson watched Atkins release his own records on his own label, Metroplex, and did the same thing three years later with KMS.",
+    "adult": "Saunderson is explicit in interviews that Atkins and May's example, not just their music, was the direct model for founding KMS and self-releasing."
+  },
+  "tags": [
+    "production",
+    "labels"
+  ]
+}

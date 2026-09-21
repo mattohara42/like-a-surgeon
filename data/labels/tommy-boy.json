@@ -5,15 +5,13 @@
   "lineage": "hiphop",
   "foundedYear": 1981,
   "closedYear": null,
-  "city": "New York City",
-  "founders": [
-    "Tom Silverman"
-  ],
-  "ownershipStory": "Started by Tom Silverman in his own apartment with a $5,000 loan from his parents. Built into hip-hop and electro's most important independent through Afrika Bambaataa, Stetsasonic, and De La Soul, then sold to Warner Music Group in 2002. Silverman bought the label back in 2015 and still runs it independently.",
-  "hook": "The apartment-sized label that put 'Planet Rock,' and electro with it, into the world.",
+  "city": "New York",
+  "founders": "Tom Silverman",
+  "ownershipStory": "Silverman started Tommy Boy out of his New York apartment in 1981 with a small loan from his parents. Its first major hit, \"Planet Rock,\" effectively launched the label and the electro genre at once, and Tommy Boy went on to release early records by Queen Latifah, De La Soul, and Naughty by Nature before changing hands through Warner Music, then returning to Silverman's ownership in 2017.",
+  "hook": "A record label started in an apartment with a family loan, that ended up releasing \"Planet Rock.\"",
   "blurb": {
-    "age7": "A small record company in New York that put out 'Planet Rock' and a lot of other important hip-hop and electro music.",
-    "age13": "Tom Silverman started Tommy Boy with a loan from his parents and turned it into the label that released 'Planet Rock' and other foundational hip-hop and electro records. It was sold to a bigger company in 2002, and Silverman later bought it back.",
-    "adult": "Tommy Boy is a clean case of an independent label built around a single scene's trust: Silverman's ear for electro and early hip-hop, and his willingness to release records other labels considered too strange, made it the commercial home for the Bronx-to-electro pipeline this dataset tracks through Bambaataa."
+    "age7": "Tommy Boy Records was a small record label in New York that released \"Planet Rock,\" one of the most important electro songs ever made.",
+    "age13": "Tom Silverman started Tommy Boy in 1981 with money borrowed from his parents. Its breakthrough was \"Planet Rock\" the next year, and the label went on to release early hip-hop by De La Soul and Queen Latifah.",
+    "adult": "Tommy Boy is a useful case study in how small independents drove early hip-hop and electro: a $5,000 loan and one crossover single (\"Planet Rock\") were enough to establish a label that stayed commercially relevant across four decades and several ownership changes."
   }
 }
