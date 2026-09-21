@@ -1,0 +1,31 @@
+{
+  "id": "e-kinks-blur",
+  "from": "the-kinks",
+  "to": "blur",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Damon Albarn has stated directly in interviews that the Kinks' 'Waterloo Sunset' is the song he wishes he had written, and has performed it on stage with Ray Davies; music writers and Albarn's own peers (Noel Gallagher among them) consistently describe the Kinks as a defining influence on his songwriting.",
+  "year": 1994,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "The Kinks",
+      "title": "Waterloo Sunset",
+      "year": 1967
+    },
+    "later": {
+      "artist": "Blur",
+      "title": "Parklife",
+      "year": 1994
+    },
+    "whatToListenFor": "Both zoom in on one small, specific English scene (a couple crossing a bridge; a man walking his dog in a park) rather than making a generalized statement, and both use a talky, almost-spoken vocal delivery over a fairly simple melody."
+  },
+  "explanation": {
+    "age7": "Damon Albarn from Blur loved the Kinks so much he even sang one of their songs on stage with Ray Davies himself.",
+    "age13": "Albarn has named \"Waterloo Sunset\" as the song he most wishes he had written, and Blur's own songs about English life follow the same close, specific approach.",
+    "adult": "The most directly self-documented edge in this batch: Albarn's own repeated public statements, not just critical inference, tie Blur's songwriting mode back to Ray Davies."
+  },
+  "tags": [
+    "production"
+  ]
+}

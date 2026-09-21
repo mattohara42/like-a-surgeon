@@ -1,0 +1,42 @@
+{
+  "id": "sex-pistols",
+  "name": "Sex Pistols",
+  "sortName": "Sex Pistols",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1975,
+  "activeTo": 1978,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [
+    "uk-punk-77"
+  ],
+  "labels": [
+    {
+      "labelId": "virgin",
+      "from": 1977,
+      "to": 1978
+    }
+  ],
+  "keyProducers": [
+    "Chris Thomas"
+  ],
+  "hook": "Four singles, one album, eighteen months, and British punk has a starting gun.",
+  "blurb": {
+    "age7": "The Sex Pistols were a punk band who only made one album but changed music forever.",
+    "age13": "Formed in London in 1975 by manager Malcolm McLaren, the Sex Pistols played fast, rude, deliberately offensive songs. Their only album, 'Never Mind the Bollocks,' came out in 1977 and is still seen as the record that started British punk as a movement, even though the band broke up within a year of releasing it.",
+    "adult": "The Pistols' brief run (1975-78) produced a strikingly small catalogue for a band this influential: four singles and one album. Much of their notoriety was manufactured by McLaren's provocations (the Jubilee-timed 'God Save the Queen', the chaotic Bill Grundy television interview), which is itself a useful lesson in how much of 'punk as movement' was managed image versus spontaneous revolt."
+  },
+  "signatureTracks": [
+    {
+      "title": "Anarchy in the U.K.",
+      "year": 1976,
+      "whyThisOne": "The debut single that announced the band's whole confrontational stance before the music press had even settled on what to call it."
+    },
+    {
+      "title": "God Save the Queen",
+      "year": 1977,
+      "whyThisOne": "Released to coincide with the Queen's Silver Jubilee and banned by the BBC; long rumored, though never proven, to have been undercounted by the chart compiler to keep it from the number-one spot."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "cbs-uk",
+  "name": "CBS Records (UK)",
+  "type": "label",
+  "lineage": "rock",
+  "foundedYear": 1965,
+  "closedYear": 1991,
+  "city": "London",
+  "founders": "CBS (Columbia Broadcasting System), via acquisition of Oriole Records",
+  "ownershipStory": "The American broadcaster CBS entered the UK market by acquiring the independent label Oriole Records in 1964, renaming it CBS Records in 1965. The label signed the Clash in 1977 on a major-label deal the band was later publicly conflicted about, given punk's independent, anti-corporate ethos. CBS Records was acquired by Sony in 1988 and the label was rebranded Sony Music in 1991.",
+  "hook": "An American broadcaster's record arm that bought its way into Britain, and ended up signing punk's most commercially ambitious band.",
+  "blurb": {
+    "age7": "CBS was a record label that started in America and came to Britain, and it released records by the Clash.",
+    "age13": "CBS entered Britain in the mid-1960s by buying a small label and renaming it, and by 1977 it was big enough to sign the Clash, a deal that sat uneasily with punk's independent spirit.",
+    "adult": "CBS UK's growth from an acquired independent into a major label mirrors the wider consolidation of the UK record industry across this period, and the Clash's major-label deal is one of punk's clearest tests of how much the movement's anti-corporate stance could survive contact with a band that wanted to reach a mass audience."
+  }
+}

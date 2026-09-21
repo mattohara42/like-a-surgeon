@@ -1,0 +1,17 @@
+{
+  "id": "virgin",
+  "name": "Virgin Records",
+  "type": "label",
+  "lineage": "rock",
+  "foundedYear": 1972,
+  "closedYear": null,
+  "city": "London",
+  "founders": "Richard Branson, Simon Draper, Nik Powell, Tom Newman",
+  "ownershipStory": "Founded in 1972 by Richard Branson, Simon Draper, Nik Powell, and musician Tom Newman, growing out of Branson and Powell's Notting Hill record shop, which specialized in krautrock and progressive-rock imports. Virgin later became the label willing to sign the Sex Pistols in 1977 after both EMI and A&M had dropped them over controversy.",
+  "hook": "Started as a mail-order shop for krautrock imports, ended up releasing \"Never Mind the Bollocks.\"",
+  "blurb": {
+    "age7": "Virgin Records started as a small record shop and grew into a label big enough to release the Sex Pistols.",
+    "age13": "Richard Branson and friends founded Virgin in 1972, starting from a record shop that specialized in imported German electronic music. Five years later it was the only label willing to sign the Sex Pistols.",
+    "adult": "Virgin's origin in a shop specializing in krautrock imports is a nice small link back to this dataset's Kraftwerk/Dusseldorf scene, and its willingness to sign the Sex Pistols after two majors backed out shows how much of punk's early commercial life still ran through label risk tolerance rather than pure independence."
+  }
+}

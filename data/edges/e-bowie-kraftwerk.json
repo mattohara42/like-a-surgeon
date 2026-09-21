@@ -1,0 +1,32 @@
+{
+  "id": "e-bowie-kraftwerk",
+  "from": "kraftwerk",
+  "to": "david-bowie",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Bowie stated directly, describing the origin of his Berlin period, that Kraftwerk's 'Autobahn' (1974) redirected his attention toward a European electronic sensibility; 'V-2 Schneider' on 'Heroes' (1977) is a direct instrumental tribute to Kraftwerk co-founder Florian Schneider.",
+  "year": 1977,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Kraftwerk",
+      "title": "Autobahn",
+      "year": 1974
+    },
+    "later": {
+      "artist": "David Bowie",
+      "title": "V-2 Schneider",
+      "year": 1977
+    },
+    "whatToListenFor": "Bowie's track doesn't sound much like \"Autobahn\" on the surface, it's built around a saxophone line, not synth arpeggios. The tribute is in the title and in both productions' shared interest in cold, motorik repetition underneath."
+  },
+  "explanation": {
+    "age7": "David Bowie loved a German band called Kraftwerk so much he named a song after one of its members.",
+    "age13": "Bowie has said Kraftwerk's music pulled his own sound toward Europe and away from American rock, and he wrote a track as a direct tribute to one of the band's founders.",
+    "adult": "One of this dataset's clearest documented crossings between the European electronic lineage and mainstream rock, backed by statements from both artists rather than critical inference alone."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}
