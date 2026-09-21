@@ -34,3 +34,33 @@ Every decision made without asking. Append, do not rewrite.
 - **A12.** Inclusion of historically important but indefensible artists is
   handled by writing discipline in the `hook` field rather than by a data flag.
   Revisit if the writing proves insufficient.
+
+## Added during M1 architecture planning (docs/m1-architecture.md)
+
+- **A13.** Artist, machine, scene, and label ids share one uniqueness
+  namespace rather than one namespace per folder, since an edge's `from`/`to`
+  can be any of the four with no type tag alongside it. Enforced by the
+  validator as a hard error on collision.
+- **A14.** `keyProducers` keeps its current flat array of "artist ids or
+  plain names" for now rather than moving to a discriminated
+  `{ref}`/`{name}` shape. The validator treats an unresolved entry as a
+  warning, not an error, since the schema explicitly allows plain names.
+  Revisit if that warning proves noisy once real batches land — cheap to fix
+  now, expensive to migrate later.
+- **A15.** A record's filename must equal its own `id` field exactly.
+  Disagreement is a hard validator error, not a warning.
+- **A16.** (Restates A13 in validator terms.) Duplicate-id checking covers
+  the shared artist/machine/scene/label namespace, and separately the edge,
+  demo, and thread id spaces.
+- **A17.** A thread step object must have exactly one of `nodeId`/`edgeId`,
+  never both or neither. Implicit in the seed's usage, made explicit here.
+- **A18.** `tools/bundle.js`'s output (`data.bundle.js`) is a classic script
+  that assigns to `window.LINEAGE_DATA`, not an ES module with `export`.
+  Chrome (and others) apply CORS checks to module loads, and `file://`
+  origins fail that check the same way `fetch()` does; a classic
+  `<script src>` tag is not subject to it. This is the one deliberate
+  exception to `CLAUDE.md`'s "ES modules" rule, scoped to the data payload
+  only.
+- **A19.** `tools/validate.js` validates the sharded `data/` tree via
+  `data/manifest.json`, never `data/seed.json`. The seed is a frozen
+  reference copy, not live data.
