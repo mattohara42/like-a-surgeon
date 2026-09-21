@@ -58,12 +58,20 @@ fixing them inline.)
   against `SCHEMA.md`'s 2-3 target (`tools/validate.js` warns on this now).
   The seed was meant to be the quality bar, so this is worth a pass before
   using it as a template for the next batch, not just backfilling the count.
+  **Resolved, M1 cleanup pass:** all six backfilled to 2 entries with
+  verified real tracks. See A27 in `ASSUMPTIONS.md`.
 - `data/edges/e-tubby-kraftwerk-nonedge.json` is still present after the M1
   migration. The seed's own note on it says "replace or remove it in M1" as
   a deliberate `asserted`-tier pattern demonstration, not a claim to defend.
   Left in place during the sharding migration since deciding its fate is
   data-expansion work, not tooling work. Needs a decision during the next
   data batch.
+  **Resolved, M1 cleanup pass:** renamed to `e-tubby-atkins-resemblance.json`
+  (file and `id`), since the old name referenced Kraftwerk while the edge's
+  actual `from`/`to` are King Tubby and Juan Atkins. Content kept as the
+  dataset's deliberate example of an asserted-tier resemblance-not-
+  transmission edge rather than removed. See A29 in `ASSUMPTIONS.md` and Q9
+  in `QUESTIONS.md` in case that call should be reversed.
 - Five scenes are referenced by `artist.scenes[]` but were never authored in
   the seed: `swinging-london`, `uk-punk-77`, `uk-post-punk`,
   `dusseldorf-kling-klang`, `chicago-house`. `docs/m1-architecture.md`
@@ -96,3 +104,4 @@ fixing them inline.)
   `virgin`) and one new one (`factory`). `e-tubby-kraftwerk-nonedge` (above)
   was still not touched, since resolving it isn't rock-spine work; the next
   data batch should make a call on it.
+>>>>>>> origin/main

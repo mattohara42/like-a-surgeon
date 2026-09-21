@@ -8,6 +8,18 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Resolved
 
+- **Q9. Keep or cut the King Tubby to Juan Atkins resemblance edge?**
+  Resolved by me for now: **kept, renamed.** The edge (`asserted` tier, "no
+  documented connection," framed explicitly as resemblance rather than
+  transmission) was left in the seed with a note to "replace or remove it
+  in M1." I kept it and just fixed its stale filename
+  (`e-tubby-kraftwerk-nonedge.json` -> `e-tubby-atkins-resemblance.json`,
+  matching its actual `from`/`to`), on the reasoning that it's an honest,
+  well-tiered example of exactly the kind of edge `BUILD_PLAN.md`'s M1 gate
+  asks Matt to review ("the twenty edges you are least sure about"). If you
+  would rather cut it than keep it as a standing demonstration, say so and
+  I'll remove it. Logged as **A29** in `ASSUMPTIONS.md`.
+
 - **Q4. Version stamp.** Resolved: **yes.** Show a last-updated date and
   dataset version somewhere in the interface, so the map reads as a living
   document. Scheduled for the M3 reading-surface milestone alongside the

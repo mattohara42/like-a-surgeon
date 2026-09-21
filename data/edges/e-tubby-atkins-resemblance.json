@@ -1,10 +1,10 @@
 {
-  "id": "e-tubby-kraftwerk-nonedge",
+  "id": "e-tubby-atkins-resemblance",
   "from": "king-tubby",
   "to": "juan-atkins",
   "type": "direct",
   "confidence": "asserted",
-  "evidence": "No documented connection. Included in the seed deliberately as an example of an edge that should be tiered asserted, rendered dotted, and worded carefully. Claude Code: this is a pattern demonstration, not a claim to defend. Replace or remove it in M1.",
+  "evidence": "No documented connection between Tubby and Atkins. Retained deliberately as the dataset's example of a resemblance edge: asserted tier, rendered dotted, worded to make clear it is not a claim of transmission.",
   "year": 1985,
   "crossLineage": true,
   "trackPair": {

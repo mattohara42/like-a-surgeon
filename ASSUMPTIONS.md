@@ -112,3 +112,32 @@ Every decision made without asking. Append, do not rewrite.
   references that connect nodes rather than name a not-yet-written one
   (`scene.memberIds`, `edge.from`/`to`, `demoId`, thread steps) stay hard
   errors, since those are added alongside the nodes they connect.
+
+## Added during the M1 cleanup pass (backlog items resolved before Track D batch 1)
+
+- **A27.** The six seed artists short on `signatureTracks` (below `SCHEMA.md`'s
+  2-3 target) were backfilled to two entries each with real, verified tracks
+  rather than by inventing plausible-sounding ones. Every added title and
+  year was checked against web sources before being written in, per
+  `CLAUDE.md`'s "never invent a date" rule; this took real search effort
+  and is not a rubber-stamp fix.
+- **A28.** This pass originally authored the five scenes and eight labels
+  referenced by existing artists but never written. While that work was in
+  flight, data batches 1 and 2 merged into `main` and independently
+  authored the same records. Rather than reconcile two separately
+  researched versions field by field, `main`'s versions were kept wholesale
+  and this pass's own copies dropped; nothing here should be read as a
+  claim about their content. See those batches' own `BACKLOG.md` and
+  `ASSUMPTIONS.md` entries for how they were sourced.
+- **A29.** `data/edges/e-tubby-kraftwerk-nonedge.json` renamed to
+  `e-tubby-atkins-resemblance.json` (file and `id` both), since its old
+  name referenced Kraftwerk while its actual `from`/`to` are King Tubby and
+  Juan Atkins, a stale naming mismatch rather than a content problem. Its
+  content was kept substantively as-is (an honest `asserted`-tier edge that
+  explicitly states "no documented connection" and frames itself as
+  resemblance, not transmission) rather than removed, since it demonstrates
+  a real, defensible pattern this dataset needs: `BUILD_PLAN.md`'s M1 gate
+  itself asks Matt to review "the twenty edges you are least sure about,"
+  so having at least one clean example of that tier in place is useful, not
+  filler. Flagged as **Q9** in `QUESTIONS.md` in case Matt would rather cut
+  it than keep it.
