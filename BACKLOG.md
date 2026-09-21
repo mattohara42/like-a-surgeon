@@ -16,6 +16,15 @@ correct response to a good idea arriving mid-milestone.
 - Non-English scene coverage and translated reading levels.
 - Video-free "listening session" mode for a classroom.
 - Quiz or recall mode for the 7-11 reader.
+- **"Six Degrees of Weird Al" thread.** Matt's idea: "Weird Al" Yankovic
+  genuinely touches a surprising cross-section of artists (parody targets
+  like Coolio, Michael Jackson, Nirvana, The Knack, Devo; polka-medley
+  covers of dozens more), which is exactly what the `thread` object is for.
+  Not buildable yet: none of his real, documented connections land on
+  anyone currently in the graph. Revisit once a batch adds an overlapping
+  artist (a 90s/grunge or mainstream-pop batch would probably do it), then
+  build it with the same evidence discipline as every other edge, not as
+  an exception to it.
 
 ## Deferred data
 
