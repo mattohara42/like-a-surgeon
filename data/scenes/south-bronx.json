@@ -1,0 +1,31 @@
+{
+  "id": "south-bronx",
+  "name": "The South Bronx",
+  "type": "scene",
+  "lineage": "hiphop",
+  "yearFrom": 1973,
+  "yearTo": 1984,
+  "city": "New York",
+  "country": "USA",
+  "hook": "A neighborhood the city had abandoned, and the two turntables and a mixer that became its answer.",
+  "blurb": {
+    "age7": "In a part of New York where a lot had been torn down, kids used two record players to keep the best drum part going forever.",
+    "age13": "By the 1970s the South Bronx had a highway cut through its middle, landlords burning their own buildings for insurance money, and the city pulling services out. DJs there found they could use two copies of the same record to loop just the drum break, stretching a few seconds into a whole party. That trick, more than any single song, is where hip-hop starts.",
+    "adult": "The South Bronx scene formed directly out of disinvestment: the Cross Bronx Expressway's construction, landlord arson during the city's mid-1970s fiscal crisis, and cuts to school music programs that left turntables as the accessible instrument. The breakbeat-extension technique DJs developed there reframed the record as raw material, the same conceptual move Kingston made, arrived at independently."
+  },
+  "geopolitics": "The Cross Bronx Expressway cut the borough apart in the fifties and sixties and displaced tens of thousands. Landlord arson, municipal near-bankruptcy in 1975, and the withdrawal of city services left whole blocks derelict. Music education was cut from many public schools in the same period, which is part of why turntables and a mixer became the available instrument.",
+  "whatWasNew": "Using two copies of the same record to extend the drum break indefinitely. This reframes the record as raw material rather than a finished work, which is the same conceptual move Kingston made, arrived at independently and by people whose parents were often Caribbean migrants.",
+  "production": "Live, in parks and community rooms, powered sometimes by tapped street lighting. Recording came later and initially tried to imitate the party rather than the other way round.",
+  "labels": "Small independents, Sugar Hill and then Tommy Boy, with contracts that frequently did not favour the artists. The twelve-inch single was the commercial unit.",
+  "politics": "Bambaataa's Zulu Nation explicitly offered an alternative to gang affiliation. The wider politics are those of abandonment, and the music's early joy is not separable from the conditions it was made in.",
+  "memberIds": [
+    "afrika-bambaataa"
+  ],
+  "palette": {
+    "ink": "#141014",
+    "paper": "#ede4d3",
+    "accent": "#e0a12b",
+    "accent2": "#b5283a"
+  },
+  "motif": "turntable-circles"
+}

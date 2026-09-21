@@ -1,0 +1,20 @@
+{
+  "id": "tr-808",
+  "name": "Roland TR-808",
+  "type": "machine",
+  "kind": "drum-machine",
+  "lineage": "electronic",
+  "maker": "Roland",
+  "releasedYear": 1980,
+  "discontinuedYear": 1983,
+  "originalPurpose": "A rhythm machine for musicians to practice and demo with, intended to sound like a drum kit.",
+  "whatActuallyHappened": "It did not sound like a drum kit. It sounded like a machine, with a kick drum that could be tuned so long it became a bass note. It sold poorly, was discontinued after roughly three years, turned up cheap secondhand, and became the rhythmic foundation of electro, hip-hop, and a large share of pop music ever since.",
+  "priceStory": "Around 1200 US dollars new in 1980, which was cheap next to a Linn LM-1 at close to 5000. After discontinuation it fell far enough that Bronx and Detroit producers could own one.",
+  "hook": "A commercial failure that sounded wrong and therefore changed everything.",
+  "blurb": {
+    "age7": "A drum machine that did not sound like real drums, which turned out to be much better.",
+    "age13": "Roland wanted it to imitate a drum kit and it could not, so people stopped buying it. But that long booming kick drum and that thin tick of a snare were sounds that did not exist before. Once it was cheap, the people who could afford it built new music on it.",
+    "adult": "The 808's failure is causally load-bearing. Its analogue voices were a cost decision made just before sampling became affordable, and the resulting timbres, especially the tunable long-decay kick, defined low-end expectations in popular music for four decades."
+  },
+  "demoId": "demo-808-voices"
+}

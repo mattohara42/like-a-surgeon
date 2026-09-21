@@ -1,0 +1,31 @@
+{
+  "id": "thread-machine-nobody-wanted",
+  "title": "The Machine Nobody Wanted",
+  "subtitle": "Two Roland failures that rebuilt popular music",
+  "intro": {
+    "age7": "Two machines nobody wanted to buy changed music forever.",
+    "age13": "Roland made a drum machine and a bass machine that both failed. Because they failed they got cheap, and because they got cheap the right people got hold of them.",
+    "adult": "The economic chain from commercial failure to affordability to genre formation, told through the 808 and the 303."
+  },
+  "steps": [
+    {
+      "nodeId": "tr-808",
+      "demoId": "demo-808-voices"
+    },
+    {
+      "edgeId": "e-808-planetrock"
+    },
+    {
+      "nodeId": "tb-303",
+      "demoId": "demo-303-twist"
+    },
+    {
+      "edgeId": "e-303-phuture"
+    }
+  ],
+  "outro": {
+    "age7": "Being bad at the job you were built for is sometimes the best thing that can happen.",
+    "age13": "Neither machine was used the way it was designed. That is the pattern to watch for everywhere else on this map.",
+    "adult": "Sets up the machine-as-protagonist reading that recurs through the sampler, the four-track, and the dub plate."
+  }
+}

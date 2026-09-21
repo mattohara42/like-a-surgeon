@@ -1,0 +1,40 @@
+{
+  "id": "juan-atkins",
+  "name": "Juan Atkins",
+  "sortName": "Atkins, Juan",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1981,
+  "activeTo": null,
+  "originCity": "Detroit",
+  "originCountry": "USA",
+  "scenes": [
+    "detroit-techno"
+  ],
+  "labels": [
+    {
+      "labelId": "metroplex",
+      "from": 1985,
+      "to": null
+    }
+  ],
+  "keyProducers": [],
+  "hook": "Heard Kraftwerk on Detroit radio next to Parliament and built techno out of the gap between them.",
+  "blurb": {
+    "age7": "He made music about the future in a city where the car factories were closing.",
+    "age13": "Atkins grew up in Detroit as the car industry collapsed, listening to a radio DJ called the Electrifying Mojo who played Kraftwerk, Parliament, and Prince in the same hour. With Rick Davis he made 'Clear' in 1983, then founded Metroplex and named what he was doing techno. It is machine music made by someone watching machines put his city out of work.",
+    "adult": "Atkins is the point where the European electronic lineage and Black American funk fully merge into something new, and the geopolitics are not incidental. Detroit's deindustrialization, white flight, and the resulting cheap rent and cheap secondhand gear are part of the causal story, as is Mojo's unusually unsegregated radio programming."
+  },
+  "signatureTracks": [
+    {
+      "title": "Clear",
+      "year": 1983,
+      "whyThisOne": "Electro logic rebuilt as something colder and more mechanical. Credited as Cybotron."
+    },
+    {
+      "title": "No UFO's",
+      "year": 1985,
+      "whyThisOne": "The first Metroplex release and the founding document of techno as a named genre."
+    }
+  ]
+}

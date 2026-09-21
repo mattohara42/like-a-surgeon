@@ -1,0 +1,31 @@
+{
+  "id": "e-perry-clash-production",
+  "from": "lee-perry",
+  "to": "the-clash",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Perry is credited as producer on The Clash's 1977 single 'Complete Control'.",
+  "year": 1977,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Lee \"Scratch\" Perry",
+      "title": "Black Ark productions",
+      "year": 1976
+    },
+    "later": {
+      "artist": "The Clash",
+      "title": "Complete Control",
+      "year": 1977
+    },
+    "whatToListenFor": "Perry's own records are all space and echo. The Clash single is not, because the band and label largely mixed his approach back out. What survives is the treatment on the vocal and the size of the drum sound. This is a good example of an influence being audible in the negotiation rather than the result."
+  },
+  "explanation": {
+    "age7": "The punk band hired the reggae producer to record them.",
+    "age13": "Twelve months after covering a song he produced, the Clash brought Perry to London to produce them. The result does not sound much like a Perry record, which tells you something about how much control a producer actually has in a rock band's studio.",
+    "adult": "Useful for the production overlay because the influence is partly legible as absence. The finished single sits closer to conventional rock mixing than to the Black Ark, and the gap between the two is the story."
+  },
+  "tags": [
+    "production"
+  ]
+}

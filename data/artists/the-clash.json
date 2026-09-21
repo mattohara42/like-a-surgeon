@@ -1,0 +1,43 @@
+{
+  "id": "the-clash",
+  "name": "The Clash",
+  "sortName": "Clash, The",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1976,
+  "activeTo": 1986,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [
+    "uk-punk-77"
+  ],
+  "labels": [
+    {
+      "labelId": "cbs-uk",
+      "from": 1977,
+      "to": 1985
+    }
+  ],
+  "keyProducers": [
+    "Lee \"Scratch\" Perry",
+    "Guy Stevens"
+  ],
+  "hook": "The punk band that kept letting other people's music in, which is why they lasted.",
+  "blurb": {
+    "age7": "The Clash liked reggae as much as punk and put both in the same songs.",
+    "age13": "Most punk bands played fast and stopped there. The Clash covered a Jamaican song on their first album and then hired the man who produced it to produce them. Over six years they absorbed reggae, dub, rockabilly, and eventually hip-hop. That openness is why their records still sound alive.",
+    "adult": "The Clash are the hinge between the rock spine and the dub spine in this map. Their engagement with Jamaican music was not tourism. It reflected the actual sonic environment of multiracial West London in the mid-seventies, and it was mediated through Rock Against Racism, a political movement as much as a musical one."
+  },
+  "signatureTracks": [
+    {
+      "title": "Police and Thieves",
+      "year": 1977,
+      "whyThisOne": "A punk band covering a Lee Perry production, six minutes long, on a punk debut album."
+    },
+    {
+      "title": "Complete Control",
+      "year": 1977,
+      "whyThisOne": "Produced by Perry himself. A song about their record label, made with a dub engineer."
+    }
+  ]
+}

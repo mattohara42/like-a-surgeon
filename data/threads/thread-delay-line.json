@@ -1,0 +1,30 @@
+{
+  "id": "thread-delay-line",
+  "title": "The Delay Line",
+  "subtitle": "From a repair shop in Kingston to the empty spaces in English rock",
+  "intro": {
+    "age7": "Follow an echo from Jamaica all the way to London.",
+    "age13": "A man who fixed radios in Kingston figured out that you could take a song apart and make the leftover space into the music. Follow that idea across an ocean and watch it change punk.",
+    "adult": "Traces the dub structural logic from Tubby and Perry into English punk and post-punk, and shows the difference between surface borrowing and structural transfer."
+  },
+  "steps": [
+    {
+      "nodeId": "king-tubby",
+      "cameraHint": "kingston"
+    },
+    {
+      "edgeId": "e-perry-clash-cover"
+    },
+    {
+      "edgeId": "e-perry-clash-production"
+    },
+    {
+      "edgeId": "e-tubby-pil"
+    }
+  ],
+  "outro": {
+    "age7": "The echo kept travelling and it never really stopped.",
+    "age13": "The same idea turns up later in Bristol, in jungle, and in almost every record with a lot of space in it.",
+    "adult": "Terminates at PiL for now. Extend forward through Bristol and dubstep in Track D."
+  }
+}

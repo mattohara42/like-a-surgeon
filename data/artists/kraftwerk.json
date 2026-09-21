@@ -1,0 +1,40 @@
+{
+  "id": "kraftwerk",
+  "name": "Kraftwerk",
+  "sortName": "Kraftwerk",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1970,
+  "activeTo": null,
+  "originCity": "Düsseldorf",
+  "originCountry": "Germany",
+  "scenes": [
+    "dusseldorf-kling-klang"
+  ],
+  "labels": [
+    {
+      "labelId": "kling-klang",
+      "from": 1970,
+      "to": null
+    }
+  ],
+  "keyProducers": [],
+  "hook": "The most important node in this entire map, because almost every electronic lineage runs back through it.",
+  "blurb": {
+    "age7": "Kraftwerk made music with machines and sang about trains and robots.",
+    "age13": "A German group who built their own studio and their own instruments and made music that sounded deliberately mechanical at a time when rock musicians were trying to sound human and loose. Young people in Detroit and the Bronx heard it on the radio and built two entire genres out of it, which almost certainly was not the plan.",
+    "adult": "Kraftwerk's reception history is the more interesting story than their intent. Their post-war German search for a non-Anglo-American identity produced music that Black American audiences in Detroit and New York received as futurist and claimed as their own. The Electrifying Mojo in Detroit and club DJs in New York put them in rotation next to funk records, and both techno and electro follow from that."
+  },
+  "signatureTracks": [
+    {
+      "title": "Trans-Europe Express",
+      "year": 1977,
+      "whyThisOne": "The melody that became the skeleton of 'Planet Rock' five years later."
+    },
+    {
+      "title": "Numbers",
+      "year": 1981,
+      "whyThisOne": "The rhythm half of the same theft, and a direct blueprint for electro."
+    }
+  ]
+}

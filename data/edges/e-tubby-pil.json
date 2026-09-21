@@ -1,0 +1,31 @@
+{
+  "id": "e-tubby-pil",
+  "from": "king-tubby",
+  "to": "public-image-ltd",
+  "type": "direct",
+  "confidence": "consensus",
+  "evidence": "Jah Wobble's formation as a bassist in London's sound system culture is well documented, and the dub structural logic of 'Metal Box' is near-universally identified by critics. What is not documented is a specific Tubby record named as the source, so this sits at consensus rather than documented.",
+  "year": 1979,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "King Tubby",
+      "title": "King Tubby Meets Rockers Uptown",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Public Image Ltd",
+      "title": "Careering",
+      "year": 1979
+    },
+    "whatToListenFor": "Both records put the bass where you would expect the voice and leave large holes elsewhere. In the Tubby track, instruments vanish and reappear. In the PiL track they never arrive in the first place. Same architecture, opposite method."
+  },
+  "explanation": {
+    "age7": "A London band built their songs the way Jamaican records were built, mostly out of bass and empty space.",
+    "age13": "PiL did not copy dub's sound so much as its shape. Bass carries the song, the guitar is texture, and the silence is deliberate.",
+    "adult": "Structural transfer rather than surface borrowing, and therefore a better teaching example than most direct-influence edges."
+  },
+  "tags": [
+    "production"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "king-tubby",
+  "name": "King Tubby",
+  "sortName": "King Tubby",
+  "type": "artist",
+  "lineage": "dub",
+  "activeFrom": 1968,
+  "activeTo": 1989,
+  "originCity": "Waterhouse, Kingston",
+  "originCountry": "Jamaica",
+  "scenes": [
+    "kingston-dub"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "An electronics repairman who rebuilt his own mixing desk and, in doing so, invented the remix.",
+  "blurb": {
+    "age7": "King Tubby took songs apart and made the empty spaces into the music.",
+    "age13": "Osbourne Ruddock repaired radios and ran a sound system in Kingston. He modified his mixing board so he could drop instruments in and out live and slam echo onto whatever was left. Instead of a song with singing, you got a version with the singing mostly gone and the drums, bass, and echo enormous. That idea, that a finished record is raw material you can rebuild, underlies almost all dance music and hip-hop.",
+    "adult": "Tubby's innovation was as much electrical engineering as music. He built a custom high-pass filter into his MCI board and used spring reverb and tape delay as performance instruments rather than corrective effects. The economic driver matters: Jamaican sound systems needed exclusive material, and B-side versions were a cheap way to get it. Scarcity produced a form."
+  },
+  "signatureTracks": [
+    {
+      "title": "King Tubby Meets Rockers Uptown",
+      "year": 1976,
+      "whyThisOne": "Augustus Pablo's melodica track dismantled and rebuilt as pure space and pressure."
+    }
+  ]
+}

@@ -85,3 +85,21 @@ Every decision made without asking. Append, do not rewrite.
   checks the stored boolean against that computation and treats a mismatch
   as a hard error, since it's now a real derived value, not an editorial
   claim.
+
+## Added while building M1 tooling
+
+- **A23.** `data/manifest.json` and `data/data.bundle.js` are gitignored,
+  since A21/Q6 made the manifest generated output and the bundle is a
+  release artifact. Both are one command away (`npm run validate` /
+  `npm run dev` regenerate the manifest; `npm run build` writes the bundle).
+- **A24.** Only artist/machine/scene/label carry a literal `type` marker
+  field (`"type": "artist"`, matching `SCHEMA.md`). Edge repurposes `type`
+  for its relationship enum instead, and demo/thread have no `type` field
+  at all, matching how the seed already writes them. `tools/validate.js`'s
+  type-marker check is scoped to the four node shards only; edge's `type`
+  is validated separately against `EDGE_TYPES`.
+- **A25.** `tools/serve.js` and `tools/bundle.js` both call
+  `tools/manifest.js`'s `writeManifest()` on every run, so
+  `data/manifest.json` is regenerated fresh each time rather than assumed
+  current. Cheap at this dataset size; revisit if manifest generation ever
+  gets expensive enough to matter.

@@ -1,0 +1,35 @@
+{
+  "id": "phuture",
+  "name": "Phuture",
+  "sortName": "Phuture",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1985,
+  "activeTo": null,
+  "originCity": "Chicago",
+  "originCountry": "USA",
+  "scenes": [
+    "chicago-house"
+  ],
+  "labels": [
+    {
+      "labelId": "trax",
+      "from": 1987,
+      "to": 1990
+    }
+  ],
+  "keyProducers": [],
+  "hook": "Found a discontinued bass machine nobody wanted and used it completely wrong.",
+  "blurb": {
+    "age7": "They used a broken-sounding old machine the wrong way and invented a new kind of music.",
+    "age13": "The Roland TB-303 was sold to guitarists as a robot bass player. It was terrible at that, so it failed and ended up cheap in secondhand shops. DJ Pierre and his friends got one without a manual, twisted the knobs while it played, and got a squelching, sliding sound nobody had heard. 'Acid Tracks' came out in 1987 and an entire genre was named after the noise.",
+    "adult": "Acid house is the cleanest example in this dataset of the machine-as-protagonist thesis. The sound exists because a commercial failure made the device affordable to people with no investment in its intended use. The Trax Records side of the story, with its famously poor pressings and contested artist payments, belongs in the labels overlay."
+  },
+  "signatureTracks": [
+    {
+      "title": "Acid Tracks",
+      "year": 1987,
+      "whyThisOne": "Twelve minutes of a bass machine being operated incorrectly, and a genre named after it."
+    }
+  ]
+}
