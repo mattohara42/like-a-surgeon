@@ -141,3 +141,24 @@ Every decision made without asking. Append, do not rewrite.
   so having at least one clean example of that tier in place is useful, not
   filler. Flagged as **Q9** in `QUESTIONS.md` in case Matt would rather cut
   it than keep it.
+
+## Added while building M2 (docs/m2-architecture.md)
+
+- **A30.** Machines get their own dedicated band above the six lineage
+  lanes rather than sharing a lane with the lineage named in
+  `machine.lineage`. Resolves the "whether machines should share lanes with
+  artists or get their own band" open question `BACKLOG.md` had been
+  carrying since M1. `machine.lineage` still drives `edge.crossLineage`
+  computation, it just isn't what positions a machine vertically. This is
+  layout code, cheap to reverse if it reads wrong once there's more machine
+  data to look at.
+- **A31.** Node/edge position (x1/x2/y, i.e. where something sits on the
+  time axis) is left in content coordinates and scales with the viewport
+  transform on purpose. Every other visual property, marker radius, stroke
+  width, font size, hit-area size, dash length, is divided by the current
+  scale before being set, so it reads as a constant size on screen
+  regardless of zoom level. Found the hard way: the first version set all
+  of these in content-space units too, and they were multiplying with the
+  zoom transform on top of the already-tiered collapsed/mid/detail sizing,
+  blowing up to hundreds of screen pixels at high zoom and shrinking to
+  nothing at low zoom.

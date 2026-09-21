@@ -16,6 +16,12 @@ correct response to a good idea arriving mid-milestone.
 - Non-English scene coverage and translated reading levels.
 - Video-free "listening session" mode for a classroom.
 - Quiz or recall mode for the 7-11 reader.
+- A sticky time axis (year ticks fixed to the top of the viewport while
+  content pans/zooms underneath, like a frozen header row). M2's axis
+  currently lives inside the same pannable/zoomable group as everything
+  else, which is simpler and works, but means the tick labels shrink/grow
+  with zoom and scroll away vertically. Worth doing once there's a reason
+  to prioritize it over other M3+ work.
 - **"Six Degrees of Weird Al" thread.** Matt's idea: "Weird Al" Yankovic
   genuinely touches a surprising cross-section of artists (parody targets
   like Coolio, Michael Jackson, Nirvana, The Knack, Devo; polka-medley
@@ -45,7 +51,6 @@ correct response to a good idea arriving mid-milestone.
   and named the other two in the prose fields instead. `city` as an array,
   or a looser `region` concept, would fix this properly; jazz, if it's ever
   added, will hit the same wall across several US cities.
-- Whether machines should share lanes with artists or get their own band.
 - Whether historically important but indefensible artists need a data flag, or
   whether careful `hook` writing is sufficient. Starting with writing only.
 
@@ -104,4 +109,16 @@ fixing them inline.)
   `virgin`) and one new one (`factory`). `e-tubby-kraftwerk-nonedge` (above)
   was still not touched, since resolving it isn't rock-spine work; the next
   data batch should make a call on it.
->>>>>>> origin/main
+- M2's perf gate (2x-M1-scale, simulated by duplication) was validated with
+  a headless Chromium session via Playwright: `render()` itself averages
+  1.9ms against a 16.7ms budget. That's not the same as a real GPU-
+  accelerated browser's paint/composite cost, which this harness can't
+  reach. Worth a spot check in an actual browser session once the dataset
+  is closer to its real M1 size (120 artists, 350 edges) and there's an
+  actual reason to worry about it. See `docs/m2-architecture.md` section 7.
+- Still-active nodes (`activeTo`/`closedYear`/etc. null, drawn extending to
+  the current year) produce long horizontal span lines that run in parallel
+  across most of the timeline's width once a lane has more than a few of
+  them, visible already in the current ~30-artist dataset. Not a bug, just
+  worth a styling pass (fainter stroke, or fading the line's far end)
+  before the roster gets a lot bigger and lanes get busier.
