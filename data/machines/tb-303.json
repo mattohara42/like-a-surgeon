@@ -1,0 +1,20 @@
+{
+  "id": "tb-303",
+  "name": "Roland TB-303",
+  "type": "machine",
+  "kind": "synth",
+  "lineage": "electronic",
+  "maker": "Roland",
+  "releasedYear": 1981,
+  "discontinuedYear": 1984,
+  "originalPurpose": "A programmable bass accompaniment for a guitarist practising alone.",
+  "whatActuallyHappened": "It was difficult to program, did not convincingly imitate a bass guitar, and failed commercially. Secondhand units reached Chicago cheaply, where people ignored the intended use and turned the filter and resonance knobs while the sequence ran. The result is the acid sound.",
+  "priceStory": "Roughly 400 US dollars new, then very cheap used in the mid-eighties, then thousands of dollars once the sound became iconic.",
+  "hook": "Sold as a fake bass player, repurposed as a screaming filter and the name of a genre.",
+  "blurb": {
+    "age7": "A machine that was bad at its job and great at something nobody expected.",
+    "age13": "The 303 was meant to be a robot bass player for practising guitarists, and it was not good at it. But if you turn the two big knobs while a pattern plays, the sound slides and squelches and cuts. Nobody designed that. People found it.",
+    "adult": "The 303 is the strongest argument for modelling machines as nodes. Its diode-ladder filter with high resonance and its slide and accent behaviour produce a timbre that its designers did not intend and that a generation of musicians organized an entire genre around."
+  },
+  "demoId": "demo-303-twist"
+}

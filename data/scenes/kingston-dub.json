@@ -1,0 +1,32 @@
+{
+  "id": "kingston-dub",
+  "name": "Kingston Sound Systems and Dub",
+  "type": "scene",
+  "lineage": "dub",
+  "yearFrom": 1968,
+  "yearTo": 1980,
+  "city": "Kingston",
+  "country": "Jamaica",
+  "hook": "Where a limited studio and a street sound system turned dropping the vocal into a whole new instrument.",
+  "blurb": {
+    "age7": "In Kingston, people took parts out of a song and made the empty spaces huge and exciting.",
+    "age13": "In 1970s Kingston, records were mostly heard through big sound systems in the street, not on radios people owned at home. Producers like King Tubby and Lee Perry stripped songs down to drums, bass, and echo and called the result a 'version.' One song could then become two records, and sound systems fought over whose version sounded biggest.",
+    "adult": "Kingston's dub scene turned two commercial constraints, low record and radio ownership and sound systems competing for exclusive material, into an aesthetic. Tubby's rebuilt mixing desk and Perry's four-track Black Ark are the scene's two central studios; between them they established that a finished record was raw material, an idea dance music and hip-hop both later inherited."
+  },
+  "geopolitics": "Jamaica became independent from Britain in 1962. Kingston in the seventies was economically strained and politically violent, with the two main parties operating through armed garrison communities, and the 1976 election period under a state of emergency. Most people could not afford records or radios, so music reached them through mobile sound systems in the street, which made the sound system operator, not the record label, the gatekeeper.",
+  "whatWasNew": "The idea that a finished record is unfinished. Dropping the vocal out, making the drums and bass enormous, and treating echo as a performed instrument were new because they served a specific commercial need for exclusive material no rival sound system could play.",
+  "production": "Small rooms with few tracks. Tubby's modified MCI board with a custom high-pass filter, spring reverb driven hard, and tape delay used live. Perry's Black Ark ran four tracks and produced its signature murk through repeated generational bouncing.",
+  "labels": "Producers and sound system owners held the power and usually the copyrights. Studio musicians were commonly paid a flat session fee for rhythms that were reused for decades, which is one of the starkest uncompensated-labour stories in recorded music.",
+  "politics": "Rastafarian language and imagery, Black liberation politics, and direct commentary on police violence and poverty, delivered to an audience standing in the street rather than sitting in a concert hall.",
+  "memberIds": [
+    "king-tubby",
+    "lee-perry"
+  ],
+  "palette": {
+    "ink": "#0d1b12",
+    "paper": "#f2e9d8",
+    "accent": "#d94f2a",
+    "accent2": "#1f7a4d"
+  },
+  "motif": "soundsystem-stack"
+}

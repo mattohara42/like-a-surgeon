@@ -1,0 +1,35 @@
+{
+  "id": "public-image-ltd",
+  "name": "Public Image Ltd",
+  "sortName": "Public Image Ltd",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1978,
+  "activeTo": null,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [
+    "uk-post-punk"
+  ],
+  "labels": [
+    {
+      "labelId": "virgin",
+      "from": 1978,
+      "to": 1992
+    }
+  ],
+  "keyProducers": [],
+  "hook": "Took dub's empty space and bass pressure into rock and removed almost everything else.",
+  "blurb": {
+    "age7": "This band made the bass guitar the loudest thing and left big holes everywhere else.",
+    "age13": "After the Sex Pistols ended, John Lydon started a band with a bass player who had learned from Jamaican sound systems. On 'Metal Box' the bass is enormous and low, the guitar is scraping metal, and there is far more silence than a rock record usually allows. It is punk energy arranged like a dub record.",
+    "adult": "PiL demonstrate the dub-to-post-punk transfer more completely than the Clash, because they imported the structural logic rather than the surface. Jah Wobble's bass sits where the vocal would normally be. The record was originally issued in a metal film canister, which is a useful detail for the labels overlay."
+  },
+  "signatureTracks": [
+    {
+      "title": "Careering",
+      "year": 1979,
+      "whyThisOne": "Bass as lead instrument, synthesizer as noise, and space where the arrangement should be."
+    }
+  ]
+}

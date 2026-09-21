@@ -1,0 +1,33 @@
+{
+  "id": "e-kraftwerk-planetrock",
+  "from": "kraftwerk",
+  "to": "afrika-bambaataa",
+  "type": "sample",
+  "confidence": "documented",
+  "evidence": "'Planet Rock' interpolates the melody of 'Trans-Europe Express' and the rhythm of 'Numbers'. It was not licensed in advance and the dispute with Kraftwerk's publishers was settled.",
+  "year": 1982,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Kraftwerk",
+      "title": "Trans-Europe Express",
+      "year": 1977
+    },
+    "later": {
+      "artist": "Afrika Bambaataa & Soulsonic Force",
+      "title": "Planet Rock",
+      "year": 1982
+    },
+    "whatToListenFor": "Hum the Kraftwerk melody, then play 'Planet Rock'. It is the same line, faster and harder. Underneath, the rhythm is lifted from a different Kraftwerk track entirely, and the drum sounds come from an 808. Three separate sources welded into one record."
+  },
+  "explanation": {
+    "age7": "A New York DJ took a German band's tune and a drum machine and made something completely new.",
+    "age13": "This one record joins German electronic music, a Bronx block party, and a Japanese drum machine. It also caused a legal fight, because taking a melody without asking was new enough in 1982 that nobody had settled the rules.",
+    "adult": "The densest crossing in the dataset and the cleanest available teaching case for interpolation, ownership, and the gap between musical practice and copyright law."
+  },
+  "demoId": "demo-planetrock-ab",
+  "tags": [
+    "technology",
+    "labels"
+  ]
+}

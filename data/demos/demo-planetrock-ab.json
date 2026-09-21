@@ -1,0 +1,27 @@
+{
+  "id": "demo-planetrock-ab",
+  "title": "One melody, two records",
+  "kind": "ab",
+  "params": {
+    "a": {
+      "label": "1977 tempo and timbre",
+      "bpm": 124,
+      "voice": "soft-square-pad"
+    },
+    "b": {
+      "label": "1982 tempo and timbre",
+      "bpm": 130,
+      "voice": "hard-square-lead",
+      "drums": "808"
+    },
+    "melody": "the shared melodic contour, played on synthesized voices, not sampled from either record"
+  },
+  "caption": {
+    "age7": "Same tune, two different outfits. Switch between them.",
+    "age13": "The notes do not change. What changes is speed, the sharpness of the sound, and what the drums are doing. That is most of what made the second record feel new.",
+    "adult": "Deliberately synthesized rather than sampled. Isolating the melodic contour from its two treatments demonstrates the interpolation question better than either recording would."
+  },
+  "safety": {
+    "maxGain": 0.7
+  }
+}

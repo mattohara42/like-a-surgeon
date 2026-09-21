@@ -16,7 +16,11 @@ This folder is the design package. There is no code yet, on purpose.
 | `ASSUMPTIONS.md` | Decisions made without asking. Append-only. |
 | `QUESTIONS.md` | Five open questions that need Matt's answers before M1. |
 | `data/SCHEMA.md` | The data contract. |
-| `data/seed.json` | Ten artists, two machines, three scenes, nine edges, three audio demos, two threads. This is the quality bar, not the dataset. |
+| `data/seed.json` | Frozen reference copy of the original ten-artist quality bar. No longer live data; see `data/artists/` etc. |
+| `data/artists/`, `data/machines/`, `data/scenes/`, `data/labels/`, `data/edges/`, `data/demos/`, `data/threads/` | The live, sharded dataset. One file per record. |
+| `tools/validate.js` | Checks the data tree. `npm run validate`. |
+| `tools/serve.js` | Dev static server, solves the `file://` fetch problem. `npm run dev`. |
+| `tools/bundle.js` | Release bundler, inlines all data into `data/data.bundle.js`. `npm run build`. |
 
 ## How to start with Claude Code
 

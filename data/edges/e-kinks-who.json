@@ -1,0 +1,31 @@
+{
+  "id": "e-kinks-who",
+  "from": "the-kinks",
+  "to": "the-who",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Pete Townshend has said repeatedly in interviews across decades that 'I Can't Explain' was written to sound like a Kinks record. Shel Talmy produced both bands, which is how the imitation reached the studio.",
+  "year": 1965,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "The Kinks",
+      "title": "You Really Got Me",
+      "year": 1964
+    },
+    "later": {
+      "artist": "The Who",
+      "title": "I Can't Explain",
+      "year": 1965
+    },
+    "whatToListenFor": "The same trick in both: a short chord shape shoved up the neck, no bass movement underneath, and the riff repeated with almost no variation. Then listen to the drums. The Kinks keep time. Keith Moon refuses to, and that difference is the whole future of the Who."
+  },
+  "explanation": {
+    "age7": "One band copied another band's guitar sound, then their drummer made it wild.",
+    "age13": "The Who deliberately wrote a song to sound like the Kinks, using the same producer to get there. What separates them is the drumming, which never settles into a simple beat.",
+    "adult": "A clean early case of producer-brokered influence. Talmy is the transmission mechanism, and the imitation was commercial strategy rather than homage."
+  },
+  "tags": [
+    "production"
+  ]
+}

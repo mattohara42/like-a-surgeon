@@ -64,3 +64,51 @@ Every decision made without asking. Append, do not rewrite.
 - **A19.** `tools/validate.js` validates the sharded `data/` tree via
   `data/manifest.json`, never `data/seed.json`. The seed is a frozen
   reference copy, not live data.
+
+## Added after Q4 to Q8 were resolved
+
+- **A20.** The version-stamp UI from Q4 ships at M3 (reading surface),
+  alongside the confidence legend rather than earlier, since neither is
+  useful until there's a real reading surface to put it on.
+- **A21.** Q5 (repo name, public from the start) taken as answered by the
+  repository's own existing state (`mattohara42/like-a-surgeon`, public)
+  rather than asked directly, since re-asking a question the filesystem
+  already answers would be theater. Flagged in `QUESTIONS.md` in case that
+  reading is wrong.
+- **A22.** Q8's "give machines/scenes/labels a lineage field" resolved to
+  specifics: `machine.lineage`, `scene.lineage`, and `label.lineage` use the
+  same enum as `artist.lineage` (`"rock" | "electronic" | "hiphop" | "dub" |
+  "funk" | "other"`) and are required, representing the node's editorial
+  "home" lineage rather than a computed genealogy. `edge.crossLineage` is
+  computed as `fromNode.lineage !== toNode.lineage`, resolving `from`/`to`
+  through whichever of the four node types they name. `tools/validate.js`
+  checks the stored boolean against that computation and treats a mismatch
+  as a hard error, since it's now a real derived value, not an editorial
+  claim.
+
+## Added while building M1 tooling
+
+- **A23.** `data/manifest.json` and `data/data.bundle.js` are gitignored,
+  since A21/Q6 made the manifest generated output and the bundle is a
+  release artifact. Both are one command away (`npm run validate` /
+  `npm run dev` regenerate the manifest; `npm run build` writes the bundle).
+- **A24.** Only artist/machine/scene/label carry a literal `type` marker
+  field (`"type": "artist"`, matching `SCHEMA.md`). Edge repurposes `type`
+  for its relationship enum instead, and demo/thread have no `type` field
+  at all, matching how the seed already writes them. `tools/validate.js`'s
+  type-marker check is scoped to the four node shards only; edge's `type`
+  is validated separately against `EDGE_TYPES`.
+- **A25.** `tools/serve.js` and `tools/bundle.js` both call
+  `tools/manifest.js`'s `writeManifest()` on every run, so
+  `data/manifest.json` is regenerated fresh each time rather than assumed
+  current. Cheap at this dataset size; revisit if manifest generation ever
+  gets expensive enough to matter.
+- **A26.** `artist.scenes[]` and `artist.labels[].labelId` referencing a
+  scene or label that doesn't exist yet is downgraded from a hard error to
+  a warning in `tools/validate.js`, ahead of wiring up CI. `CLAUDE.md`'s
+  scope rule states data expansion "is a permanent parallel track with no
+  gate at all," and a hard error here would make CI red for the entire
+  Track D expansion period, exactly the gate that rule forbids. Structural
+  references that connect nodes rather than name a not-yet-written one
+  (`scene.memberIds`, `edge.from`/`to`, `demoId`, thread steps) stay hard
+  errors, since those are added alongside the nodes they connect.

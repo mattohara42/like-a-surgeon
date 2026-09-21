@@ -1,0 +1,38 @@
+{
+  "id": "afrika-bambaataa",
+  "name": "Afrika Bambaataa",
+  "sortName": "Bambaataa, Afrika",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1977,
+  "activeTo": null,
+  "originCity": "South Bronx, New York",
+  "originCountry": "USA",
+  "scenes": [
+    "south-bronx"
+  ],
+  "labels": [
+    {
+      "labelId": "tommy-boy",
+      "from": 1981,
+      "to": 1988
+    }
+  ],
+  "keyProducers": [
+    "Arthur Baker",
+    "John Robie"
+  ],
+  "hook": "A Bronx DJ who welded a German art-rock melody to a Japanese drum machine and started electro.",
+  "blurb": {
+    "age7": "He mixed a German band's song with a drum machine and made a brand new kind of music.",
+    "age13": "Bambaataa was famous for playing records nobody expected at block parties, including rock, and European electronic music. In 1982 he and producer Arthur Baker built 'Planet Rock' out of a Kraftwerk melody, a Kraftwerk rhythm, and a Roland TR-808. Kraftwerk's publishers were not pleased and it ended in a settlement. The track invented electro and pushed the 808 into the center of Black American music for the next forty years.",
+    "adult": "'Planet Rock' is the single densest crossing point in this dataset. It joins the German electronic lineage, the Bronx sound system lineage, and the Japanese drum machine lineage in one record, and its legal aftermath is also a clean teaching case about sampling, interpolation, and who owns a melody."
+  },
+  "signatureTracks": [
+    {
+      "title": "Planet Rock",
+      "year": 1982,
+      "whyThisOne": "Three lineages colliding in one twelve-inch single."
+    }
+  ]
+}
