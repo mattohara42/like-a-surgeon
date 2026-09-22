@@ -53,6 +53,19 @@ correct response to a good idea arriving mid-milestone.
   added, will hit the same wall across several US cities.
 - Whether historically important but indefensible artists need a data flag, or
   whether careful `hook` writing is sufficient. Starting with writing only.
+- `edge.type: "label"` still has no worked example anywhere in the dataset
+  (no direction convention for label-to-artist vs. artist-to-label, no
+  sense of what the edge is claiming). `edge.type: "scene"` *does* now have
+  two examples on `main` (`e-knuckles-atkins`, `e-hardy-phuture`: a
+  scene-level cultural influence reaching a specific artist, `from` the
+  influencing figure `to` the influenced artist), so treat that one as
+  settled precedent for the next batch that wants it.
+- Mad Professor (Ariwa Sounds, London, active from 1979) doesn't fit any
+  authored scene: `kingston-dub` is the wrong city and ends in 1980, and
+  there's no UK/diaspora "second wave" dub scene yet. Left his `scenes: []`
+  empty rather than force a wrong-city membership. A `uk-dub` or
+  `ariwa-sounds` scene is a natural addition once there's more than one
+  artist to put in it.
 
 ## Observed problems
 
@@ -122,3 +135,25 @@ fixing them inline.)
   them, visible already in the current ~30-artist dataset. Not a bug, just
   worth a styling pass (fainter stroke, or fading the line's far end)
   before the roster gets a lot bigger and lanes get busier.
+- A separate parallel session's Track D batch (the one merged as this
+  entry's predecessor) added 8 artists whose `scenes[]` already point at
+  `detroit-techno` and `kingston-dub`, but those two scenes' own
+  `memberIds` were never updated to include them: `detroit-techno.json`
+  still lists only `juan-atkins` despite Derrick May and Kevin Saunderson
+  both declaring it, and `kingston-dub.json` lists only `king-tubby` and
+  `lee-perry` despite Augustus Pablo and Sly and Robbie both declaring it.
+  `tools/validate.js` has no check in either direction (artist-declares-
+  scene vs. scene-lists-member), so this passes silently. Worth adding
+  that consistency check to the validator, and backfilling the four
+  missing memberIds, in a tooling-focused pass.
+- This session's own Track D batch (8 artists, 6 labels, 2 scenes) turned
+  out to duplicate work from two other Track D batches that merged into
+  `main` first. Reconciled by keeping `main`'s versions of everything both
+  sides wrote and rebuilding this branch to carry only the genuinely new
+  content: Man Parrish, Mad Professor, the Ariwa and Rockers International
+  labels, and four new edges. See `ASSUMPTIONS.md` A34-A36 for the detail
+  and for why this reads as convergent validation rather than a process
+  failure. Worth a lighter-weight coordination signal (a claimed-artists
+  list, or just checking `main` right before starting a batch rather than
+  only at the start of a long session) so the next parallel collision costs
+  less rework than this one did.

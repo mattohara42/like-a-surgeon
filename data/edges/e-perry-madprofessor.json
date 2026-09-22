@@ -1,0 +1,31 @@
+{
+  "id": "e-perry-madprofessor",
+  "from": "lee-perry",
+  "to": "mad-professor",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Perry and Mad Professor recorded and released collaborative albums together at Ariwa from the mid-1980s onward, a well-documented working relationship covered in interviews with both men and in reggae discographies.",
+  "year": 1987,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Lee \"Scratch\" Perry",
+      "title": "Black Ark productions",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Lee \"Scratch\" Perry & Mad Professor",
+      "title": "Ariwa studio collaborations",
+      "year": 1987
+    },
+    "whatToListenFor": "Perry's original records are raw and cluttered on purpose. The Ariwa collaborations are cleaner and more controlled, Mad Professor's studio discipline audibly reining in Perry's chaos without erasing it."
+  },
+  "explanation": {
+    "age7": "The two dub producers recorded music together at Mad Professor's studio.",
+    "age13": "Perry, dub's most chaotic originator, and Mad Professor, its more disciplined second-generation heir, worked together directly at Ariwa rather than Mad Professor simply learning from a distance.",
+    "adult": "A direct collaboration rather than an inferred influence, which is why it sits at documented confidence even though the specific date of first collaboration is not pinned down precisely here."
+  },
+  "tags": [
+    "production"
+  ]
+}

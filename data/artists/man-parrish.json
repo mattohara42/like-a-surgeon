@@ -1,0 +1,32 @@
+{
+  "id": "man-parrish",
+  "name": "Man Parrish",
+  "sortName": "Parrish, Man",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1982,
+  "activeTo": null,
+  "originCity": "New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Built a club-floor anthem almost entirely out of a drum machine and two synthesizers, months ahead of 'Planet Rock' making that the whole point.",
+  "blurb": {
+    "age7": "He made a famous dance song using mostly a drum machine and two keyboards, without much singing.",
+    "age13": "Parrish grew up in Brooklyn on funk and experimental electronic music, then built 'Hip Hop, Be Bop (Don't Stop)' in 1982 almost entirely from a Roland TR-808 and a couple of synthesizers, with barely any vocal. It came out before 'Planet Rock' and is one of electro's very first records.",
+    "adult": "'Hip Hop, Be Bop' is a useful counterweight to 'Planet Rock' as electro's origin point: a record built from the same machine, arriving from downtown New York's club and disco underground rather than from the Bronx sound-system lineage, on almost exactly the same timeline. Genre origin stories rarely have one clean start, and this is a clean case of two."
+  },
+  "signatureTracks": [
+    {
+      "title": "Hip Hop, Be Bop (Don't Stop)",
+      "year": 1982,
+      "whyThisOne": "Built almost entirely from a TR-808 and synthesizers with minimal vocal, and among the earliest records to put the 808 at the center rather than in the background."
+    },
+    {
+      "title": "Male Stripper",
+      "year": 1983,
+      "whyThisOne": "A club record that found a second life on UK charts nearly a decade later, showing how far electro's reach outlasted its founding scene."
+    }
+  ]
+}
