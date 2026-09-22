@@ -112,6 +112,8 @@ function drawBands(bandsG, layout) {
     bandsG.appendChild(label);
   }
 
+  if (!layout.substrate) return;
+
   const floorLabel = svgEl('text', {
     class: 'band-label',
     x: originX,
@@ -156,19 +158,32 @@ function edgeAnchors(edge, layout) {
 }
 
 export function createGraph(container, data, callbacks = {}) {
-  const { onSelectNode = () => {}, onSelectEdge = () => {}, transportEl = null } = callbacks;
+  const {
+    onSelectNode = () => {},
+    onSelectEdge = () => {},
+    transportEl = null,
+    layers = CONFIG.layers.defaults,
+    initialViewport = null,
+    initialYear = null,
+  } = callbacks;
 
-  // Scenes are drawn as atmosphere rather than as graph markers, and
-  // labels are left to the labels overlay (SPEC.md), so neither takes a
-  // lane row. CONFIG decides, so reversing this is one line -- see
-  // ASSUMPTIONS.md A44.
-  const graphNodes = data.nodes.filter((n) => CONFIG.layout.graphNodeKinds.includes(n.kind));
-  const sceneRecords = data.nodes.filter((n) => n.kind === 'scene').map((n) => n.raw);
+  // Which record types draw, from the reader's layer toggles. Scenes render
+  // as atmosphere and so never take a lane row even when on; labels and
+  // machines are markers and do. See ASSUMPTIONS.md A48.
+  const kinds = ['artist'];
+  if (layers.labels) kinds.push('label');
+  if (layers.machines) kinds.push('machine');
+
+  const graphNodes = data.nodes.filter((n) => kinds.includes(n.kind));
+  const sceneRecords = layers.scenes
+    ? data.nodes.filter((n) => n.kind === 'scene').map((n) => n.raw)
+    : [];
   const graphNodeIds = new Set(graphNodes.map((n) => n.id));
   const graphEdges = data.edges.filter((e) => graphNodeIds.has(e.from.id) && graphNodeIds.has(e.to.id));
 
-  const layout = computeLayout(graphNodes);
+  const layout = computeLayout(graphNodes, { withSubstrate: layers.machines });
   const vp = createViewportState();
+  if (initialViewport) Object.assign(vp, { tx: initialViewport.tx, ty: initialViewport.ty, scale: initialViewport.scale });
 
   const dust = createDustLayer(container);
 
@@ -187,14 +202,14 @@ export function createGraph(container, data, callbacks = {}) {
   container.appendChild(root);
 
   drawBands(bandsG, layout);
-  drawSubstrate(floorG, layout);
+  if (layout.substrate) drawSubstrate(floorG, layout);
   drawAxis(axisG, layout);
   drawNebulae(nebulaG, sceneRecords, layout);
 
   const degreeFactorById = computeDegreeFactors(graphNodes, graphEdges);
 
   const transport = transportEl
-    ? createTransport(transportEl, layout, graphNodes, graphEdges, () => scheduleRender())
+    ? createTransport(transportEl, layout, graphNodes, graphEdges, () => scheduleRender(), initialYear)
     : null;
   const currentYear = () => transport?.year() ?? layout.timeScale.yearEnd;
 
@@ -282,7 +297,7 @@ export function createGraph(container, data, callbacks = {}) {
   function render() {
     viewportG.setAttribute('transform', transformString(vp));
     updateStaticLayerScale(axisG, bandsG, vp.scale);
-    updateSubstrateScale(floorG, vp.scale);
+    if (layout.substrate) updateSubstrateScale(floorG, vp.scale);
 
     // Scene clouds sit fractionally behind the graph plane. That offset is
     // the only differential transform in the whole renderer, and it is
@@ -399,13 +414,16 @@ export function createGraph(container, data, callbacks = {}) {
   }
 
   attachPanZoomHandlers(root, vp, scheduleRender);
-  new ResizeObserver(() => {
+  const resizeObserver = new ResizeObserver(() => {
     containerRect = container.getBoundingClientRect();
     dust.resize();
     scheduleRender();
-  }).observe(container);
+  });
+  resizeObserver.observe(container);
 
-  fitToContent(containerRect.width, containerRect.height);
+  // A rebuild (a layer toggle) keeps the reader where they were rather than
+  // yanking the camera back to the opening view.
+  if (!initialViewport) fitToContent(containerRect.width, containerRect.height);
   dust.start(vp);
   timedRender();
 
@@ -428,6 +446,13 @@ export function createGraph(container, data, callbacks = {}) {
       scheduleRender();
     },
     transport,
-    destroy: () => dust.stop(),
+    layers,
+    destroy: () => {
+      resizeObserver.disconnect();
+      transport?.stop();
+      dust.stop();
+      root.remove();
+      container.querySelector('.dust-layer')?.remove();
+    },
   };
 }

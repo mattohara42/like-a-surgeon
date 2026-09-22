@@ -72,7 +72,7 @@ function arrivalsByYear(nodes, edges) {
   return byYear;
 }
 
-export function createTransport(root, layout, nodes, edges, onYearChange) {
+export function createTransport(root, layout, nodes, edges, onYearChange, initialYear = null) {
   const minYear = layout.timeScale.year0;
   const maxYear = layout.timeScale.yearEnd;
   const arrivals = arrivalsByYear(nodes, edges);
@@ -104,7 +104,12 @@ export function createTransport(root, layout, nodes, edges, onYearChange) {
     scrub.appendChild(pip);
   }
 
-  let year = maxYear;
+  // A rebuild (a layer toggle) keeps the reader's year. Clamped, because
+  // toggling labels on pulls the axis back to 1953 and toggling them off
+  // pushes it forward again.
+  let year = initialYear === null
+    ? maxYear
+    : Math.max(minYear, Math.min(maxYear, initialYear));
   let timer = null;
 
   function setYear(next) {

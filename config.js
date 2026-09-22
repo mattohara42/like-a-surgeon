@@ -26,11 +26,6 @@ export const CONFIG = {
     // yet (funk, other); reserving vertical space for them pushes the
     // populated lanes apart for no reading benefit.
     dropEmptyLanes: true,
-    // Which node kinds get a marker in the graph. Scenes are drawn as
-    // atmosphere behind their members instead (atmosphere.js) and labels
-    // belong to the labels overlay, so neither takes a lane row here.
-    // One line to reverse -- see ASSUMPTIONS.md A44.
-    graphNodeKinds: ['artist', 'machine'],
   },
 
   // The machine substrate: a floor receding below the lineage lanes, with
@@ -146,6 +141,23 @@ export const CONFIG = {
     fitPaddingPx: 70,
     fitBottomInsetPx: 104,   // the transport bar
     fitMaxScale: 1.1,
+  },
+
+  // Which record types are drawn, and how each one is drawn when it is.
+  // These are defaults for the reader's layer toggles, not fixed decisions:
+  // A44 originally settled scenes and labels one way for everyone, and the
+  // honest answer is that the right set depends on what you came to read.
+  // Artists are not listed because a map of nothing but scenes is not a
+  // thing anyone wants.
+  //
+  //   scenes   - blurred colour behind their members (atmosphere.js)
+  //   labels   - markers in the lineage lanes, same as artists
+  //   machines - the substrate: floor, markers, and the beams rising off it
+  //
+  // Persisted per reader in localStorage under `storageKey`.
+  layers: {
+    defaults: { scenes: true, labels: false, machines: true },
+    storageKey: 'lineage.layers.v1',
   },
 
   // The year cursor. Not a scrollbar with a graph attached: dragging it is

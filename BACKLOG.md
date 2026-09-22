@@ -116,6 +116,13 @@ correct response to a good idea arriving mid-milestone.
 
 ## Observed problems
 
+- `data/labels/brunswick.json` has no `foundedYear`, so it cannot be placed
+  on the time axis and is silently absent whenever the Labels layer is on
+  (12 of 13 labels draw). `render/loader.js` now warns, but the real fix is
+  either the founding year or an explicit decision that undated records are
+  acceptable and should render somewhere. `tools/validate.js` does not
+  currently treat a missing year as worth flagging.
+
 (Claude Code: record code smells and architectural concerns here rather than
 fixing them inline.)
 

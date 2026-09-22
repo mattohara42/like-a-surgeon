@@ -90,6 +90,16 @@ export async function loadGraphData() {
     edges.push({ ...edge, from, to });
   }
 
+  // A node with no start year can't be placed on a time axis, so layout
+  // drops it. Worth saying out loud now that labels are drawable: an
+  // unplaceable record is a data gap, and silently missing is the one way
+  // a reader would never find out.
+  for (const node of nodesById.values()) {
+    if (node.startYear === null) {
+      console.warn(`[loader] ${node.kind} ${node.id} has no start year, so it cannot be placed on the time axis`);
+    }
+  }
+
   return {
     nodes: [...nodesById.values()],
     edges,

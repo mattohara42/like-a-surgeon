@@ -4,9 +4,11 @@
 
 import { loadGraphData } from './render/loader.js';
 import { createGraph } from './render/graph.js';
+import { loadLayers, saveLayers, createLayerToggles } from './render/layers.js';
 
 const statusEl = document.getElementById('status');
 const appEl = document.getElementById('app');
+const layersEl = document.getElementById('layers');
 
 function setStatus(text, isError = false) {
   statusEl.textContent = text;
@@ -28,18 +30,46 @@ async function main() {
     return;
   }
 
-  const graph = createGraph(appEl, data, {
-    transportEl: document.getElementById('transport'),
-    onSelectNode: (node) => console.log('[select] node', node.id, node.name),
-    onSelectEdge: (edge) => console.log('[select] edge', edge.id, edge.from.id, '->', edge.to.id),
-  });
+  let layers = loadLayers();
+  let graph = null;
 
-  window.__graph = graph; // for manual/automated inspection during dev
+  // Toggling a layer changes which records take a lane row, so the layout
+  // has to be recomputed rather than restyled -- turning labels on moves
+  // every artist below them. Rebuilding the whole graph is the honest way
+  // to do that, and at this size it is imperceptible. The reader's camera
+  // and year are carried across so it doesn't feel like a reload.
+  function build() {
+    const carried = graph
+      ? { viewport: { ...graph.viewport }, year: graph.transport?.year() ?? null }
+      : { viewport: null, year: null };
+    graph?.destroy();
 
-  // Report what the graph actually draws, not what the loader parsed:
-  // scenes render as atmosphere and labels are left to the labels overlay,
-  // so neither is a marker on screen (CONFIG.layout.graphNodeKinds).
-  setStatus(`${graph.graphNodeCount} nodes, ${graph.graphEdgeCount} edges`);
+    graph = createGraph(appEl, data, {
+      transportEl: document.getElementById('transport'),
+      layers,
+      initialViewport: carried.viewport,
+      initialYear: carried.year,
+      onSelectNode: (node) => console.log('[select] node', node.id, node.name),
+      onSelectEdge: (edge) => console.log('[select] edge', edge.id, edge.from.id, '->', edge.to.id),
+    });
+
+    window.__graph = graph; // for manual/automated inspection during dev
+
+    // Report what the graph actually draws, not what the loader parsed:
+    // scenes render as atmosphere, and labels and machines are only on
+    // screen when their layer is.
+    setStatus(`${graph.graphNodeCount} nodes, ${graph.graphEdgeCount} edges`);
+  }
+
+  function applyLayers(next) {
+    layers = next;
+    saveLayers(layers);
+    createLayerToggles(layersEl, layers, applyLayers);
+    build();
+  }
+
+  createLayerToggles(layersEl, layers, applyLayers);
+  build();
 }
 
 main();
