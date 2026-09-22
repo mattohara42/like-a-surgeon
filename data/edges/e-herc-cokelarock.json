@@ -1,0 +1,29 @@
+{
+  "id": "e-herc-cokelarock",
+  "from": "kool-herc",
+  "to": "coke-la-rock",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1973,
+  "crossLineage": false,
+  "evidence": "La Rock is consistently described in hip-hop histories as the MC at Herc's parties from 1973, initially without a stage name and positioned out of the crowd's sight, so that nobody knew who was speaking. He was an original member of Herc's MC crew, the Herculoids.",
+  "trackPair": {
+    "earlier": {
+      "artist": "DJ Kool Herc",
+      "title": "the back-to-school jam at 1520 Sedgwick Avenue",
+      "year": 1973
+    },
+    "later": {
+      "artist": "Coke La Rock",
+      "title": "shout-outs over Herc's records at Bronx parties",
+      "year": 1973
+    },
+    "whatToListenFor": "Nothing was recorded, so listen forward instead. Take any rap record and strip out the rhyme, the meter and the subject, and what is left underneath is a person naming friends in the room over somebody else's drums. That residue is what La Rock was doing, and it is the part that never went away."
+  },
+  "explanation": {
+    "age7": "Herc played the records and his friend talked to the crowd over the top. That is where rapping starts.",
+    "age13": "Herc was the DJ, so he needed someone else to talk to the room. La Rock did it, hidden from view and at first without even a name, mostly calling out people he knew. Rapping did not begin as poetry or as a performance. It began as one person greeting a room over a beat, and everything since is built on that.",
+    "adult": "A division of labour edge. The DJ's hands are busy, so the microphone goes to somebody else, and the MC role exists from that practical fact rather than from an artistic intent. Documented, though necessarily through oral history, since nothing from these rooms was recorded for release."
+  },
+  "tags": []
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-flash-theodore",
+  "from": "grandmaster-flash",
+  "to": "grand-wizzard-theodore",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1975,
+  "crossLineage": false,
+  "evidence": "Theodore came up around Flash through his older brother Mean Gene, Flash's DJ partner, and learned in that circle before developing the scratch. The mentorship is described consistently across hip-hop histories and by Theodore himself.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Grandmaster Flash",
+      "title": "quick-mix theory at Bronx jams",
+      "year": 1975
+    },
+    "later": {
+      "artist": "Grand Wizzard Theodore",
+      "title": "the scratch",
+      "year": 1975
+    },
+    "whatToListenFor": "Flash's technique is about making the join invisible: you should not hear the second record arrive. Theodore's does the opposite and makes the hand audible on purpose. Listen for that inversion, because it is the moment the turntable stops pretending to be a playback device and starts admitting it is being operated."
+  },
+  "explanation": {
+    "age7": "He learned from the best DJ around, then found a sound his teacher had spent years trying to hide.",
+    "age13": "Theodore learned in Flash's circle, through his older brother who was Flash's partner. Flash's whole craft was about hiding the seams so a loop sounded smooth. Theodore did the reverse: he made the sound of the hand on the record part of the music. Same equipment, opposite instinct, and both are still in use.",
+    "adult": "A mentorship edge whose interest is in the divergence rather than the transmission. Flash's project is concealment of the mechanism, Theodore's is its exposure. Both remain central techniques, which suggests the turntable supported two incompatible aesthetics from the start."
+  },
+  "tags": [
+    "technology"
+  ]
+}

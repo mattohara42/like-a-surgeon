@@ -1,0 +1,31 @@
+{
+  "id": "e-sl1200-theodore",
+  "from": "technics-sl-1200",
+  "to": "grand-wizzard-theodore",
+  "type": "technological",
+  "confidence": "consensus",
+  "year": 1975,
+  "crossLineage": true,
+  "evidence": "Scratching requires a platter that can be held stationary, moved by hand against its own rotation and released back to speed without damage or lag, which is a property of direct drive rather than of any particular technique. The physical dependency is not in dispute. Held at consensus rather than documented because accounts of which deck Theodore was personally using in 1975 vary.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Technics",
+      "title": "SL-1200 as a domestic hi-fi turntable",
+      "year": 1972
+    },
+    "later": {
+      "artist": "Grand Wizzard Theodore",
+      "title": "the scratch",
+      "year": 1975
+    },
+    "whatToListenFor": "Listen to the pitch of a scratch. It bends down as the hand slows the record and snaps back up the instant it is released, and the snap is the motor recovering almost immediately. On a belt-driven deck that recovery is a slow sag, which is a different and much less usable sound. The character of the scratch is partly the character of the motor."
+  },
+  "explanation": {
+    "age7": "You can only make that sound on a record player strong enough to be grabbed and let go of.",
+    "age13": "Hold a record still on a belt-driven turntable and you strain it, and when you let go it takes a moment to get back to speed. A direct-drive deck has the motor right under the platter, so it fights your hand and recovers the instant you release it. That snap back to speed is what makes a scratch sound like a scratch rather than like a record slowing down.",
+    "adult": "The same enabling property that underwrites Flash's technique underwrites Theodore's, which is worth stating twice in the data because it is the same physical fact producing two opposite aesthetics. Consensus rather than documented: the dependency is certain, the specific deck in Theodore's hands in 1975 is not."
+  },
+  "tags": [
+    "technology"
+  ]
+}

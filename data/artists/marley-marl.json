@@ -1,0 +1,32 @@
+{
+  "id": "marley-marl",
+  "name": "Marley Marl",
+  "sortName": "Marley Marl",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1984,
+  "activeTo": null,
+  "originCity": "Queensbridge, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Made a mistake in a mixing session, caught a snare drum off a record by accident, and worked out on the spot that this was better than any drum machine.",
+  "blurb": {
+    "age7": "He made a mistake in the studio and accidentally recorded a drum hit from an old record. It sounded better than his drum machine, so he did it on purpose after that.",
+    "age13": "In 1984, working on someone else's record, Marlon Williams was trying to grab a piece of a vocal and accidentally caught the snare drum along with it. He noticed it sounded better than the snare on his drum machine, and understood immediately what that meant: you could take the drums off any record ever made and build a new beat out of them. That is the technique almost all hip-hop production rests on, and it started as an error.",
+    "adult": "Marl's discovery is the hinge between the drum machine era and the sampling era. The 808 and the 909 offered synthesised voices; sampling offered the actual sound of a specific drummer in a specific room, with the compression and the tape and the bleed already baked in. The consequences run in both directions: an enormous expansion of available sound, and the copyright regime that grew up around it once it became clear what had been taken and from whom. Accounts of the session name the record and the year consistently; the specific sampler he was using is not named in the sources consulted here, so this record does not name one."
+  },
+  "signatureTracks": [
+    {
+      "title": "The Bridge (produced for MC Shan)",
+      "year": 1986,
+      "whyThisOne": "The record that started the Bridge Wars, and an early full demonstration of drums lifted off other people's records."
+    },
+    {
+      "title": "The Symphony (produced for the Juice Crew)",
+      "year": 1988,
+      "whyThisOne": "Four MCs taking turns over one of his loops. The template for the posse cut, and the loop is the fixed thing everyone else works against."
+    }
+  ]
+}

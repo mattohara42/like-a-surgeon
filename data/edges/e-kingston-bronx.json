@@ -1,0 +1,32 @@
+{
+  "id": "e-kingston-bronx",
+  "from": "kingston-dub",
+  "to": "south-bronx",
+  "type": "scene",
+  "confidence": "consensus",
+  "year": 1973,
+  "crossLineage": true,
+  "evidence": "Drawn between the scenes rather than through a person, because that is the level at which the claim holds. Somewhere over ten thousand Jamaican migrants arrived in the Bronx between 1965 and 1975, and Caribbean birth or parentage runs through the founding generation of Bronx DJs: Kool Herc left Kingston at twelve, and Grandmaster Flash's family came from Barbados. The practices resemble each other closely: a system built rather than bought, one person selecting records for a crowd outdoors, a second on the microphone over the top, and rival crews competing on volume and exclusives. The dispute is real and belongs on the record. Herc has rejected the toasting connection outright in some interviews, saying he could not play reggae to a Bronx crowd and naming James Brown and the Last Poets as the source of rap's vocal style, while affirming his Jamaican roots in others. Some scholars read the resemblance as shared African-American and Caribbean DJ roots rather than one scene feeding the other. Consensus, not documented, and it stays there.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Kingston sound systems",
+      "title": "street dances and sound clashes",
+      "year": 1968
+    },
+    "later": {
+      "artist": "DJ Kool Herc",
+      "title": "the back-to-school jam at 1520 Sedgwick Avenue",
+      "year": 1973
+    },
+    "whatToListenFor": "Listen for what crossed and what did not. The shape is the same in both places: a crowd outdoors, one person choosing records, another one talking over them, a system loud enough to be the event itself. The records are not the same at all. Put on what a Kingston sound was playing in 1970 and what Herc was playing in 1973 and they share almost nothing, because Bronx crowds would not take reggae and he switched to funk and soul. The method travelled. The music did not."
+  },
+  "explanation": {
+    "age7": "Lots of Jamaican families moved to the Bronx, and the way they threw parties at home came with them, even though the records changed.",
+    "age13": "Over ten thousand Jamaicans moved to the Bronx between 1965 and 1975, Kool Herc among them. In Kingston a party meant a sound system somebody had built, one person picking the records and another talking on the microphone, and rival crews trying to beat each other. Bronx parties ended up looking the same. But Herc has said more than once that he could not play reggae there because people would not have it, so he played funk and soul instead. The way of doing it seems to have crossed. The music did not.",
+    "adult": "Held at consensus and drawn scene to scene deliberately. Routing it through Kool Herc would attribute to him a transmission he has repeatedly denied, and this map does not put words in people's mouths to make a lineage look tidier. At the scene level the evidence is demographic and structural rather than testimonial, which is a weaker but more honest basis: the migration is documented, the resemblance in practice is plain, and the causal direction is inferred. Some scholars argue the resemblance reflects common African-American and Caribbean roots in DJ practice rather than Kingston feeding the Bronx, and that reading is not refuted here."
+  },
+  "tags": [
+    "politics",
+    "technology"
+  ]
+}

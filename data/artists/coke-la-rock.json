@@ -1,0 +1,23 @@
+{
+  "id": "coke-la-rock",
+  "name": "Coke La Rock",
+  "sortName": "Coke La Rock",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1973,
+  "activeTo": null,
+  "originCity": "South Bronx, New York",
+  "originCountry": "USA",
+  "scenes": [
+    "south-bronx"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Talked over Kool Herc's records at the first party and is widely called the first MC, having released nothing and been credited for less.",
+  "blurb": {
+    "age7": "At the very first hip-hop party, he was the one talking on the microphone between the records.",
+    "age13": "Coke La Rock was Kool Herc's friend and got on the microphone at Herc's parties from 1973. At first he did not even have a stage name and stood out of sight, so the crowd had no idea who was talking. What he said was mostly shout-outs to people he knew in the room, which is where rapping starts: not as poetry, but as one person naming his friends over a record. Phrases he used turned up later on 'Rapper's Delight', the first rap hit, with no credit to him.",
+    "adult": "The clearest example on this map of foundational work that produced no property. La Rock's contribution predates the recording industry's involvement in hip-hop, was improvised in rooms nobody was taping for release, and entered the commercial record through phrases other people sold. He is here for what he started, and the absence of a discography is the historically interesting fact about him rather than a gap in the data."
+  },
+  "signatureTracks": []
+}

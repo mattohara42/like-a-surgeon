@@ -1,0 +1,32 @@
+{
+  "id": "e-robinson-mellemel",
+  "from": "sylvia-robinson",
+  "to": "melle-mel",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1982,
+  "crossLineage": true,
+  "evidence": "Grandmaster Flash and the Furious Five were reluctant to record 'The Message', judging it wrong for clubs, and Sylvia Robinson pushed it through and persuaded Melle Mel to write verses for it. Mel has said he took part without much enthusiasm at first. The episode is described consistently in oral histories of the record.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Sylvia Robinson",
+      "title": "Pillow Talk",
+      "year": 1973
+    },
+    "later": {
+      "artist": "Grandmaster Flash and the Furious Five",
+      "title": "The Message",
+      "year": 1982
+    },
+    "whatToListenFor": "Listen to the tempo and then imagine a dancefloor. It does not work, and the group knew it did not work, which is why they did not want it. What the record buys with that refusal is room: at this speed a voice has time to finish a thought. Nearly everything rap does with slow tempo afterwards depends on somebody proving a slow rap record could sell."
+  },
+  "explanation": {
+    "age7": "The group did not want to make the song. The woman who ran the record label made them, and she was right.",
+    "age13": "Flash and the Furious Five made party music and 'The Message' was not party music: too slow, too bleak, no use in a club. They did not want to do it. Sylvia Robinson, who ran Sugar Hill, pushed it anyway and got Melle Mel to write verses. Mel has said he was not keen at first. It became the most important record any of them made, and afterwards rap could be about anything.",
+    "adult": "An uncomfortable and useful edge. The judgement that expanded the form's subject matter came from a label owner overriding the artists, not from the artists, and the artists' objection was professionally sound on its own terms. Cross-lineage because Robinson's home is R&B and funk rather than hip-hop, which is the substance of the story: the person who saw what rap could carry had spent twenty years in another business entirely."
+  },
+  "tags": [
+    "production",
+    "labels"
+  ]
+}

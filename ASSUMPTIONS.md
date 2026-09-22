@@ -479,3 +479,52 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   this one file because I was editing it anyway; the validator still has no
   check in either direction, and the other scenes are still unreconciled, so
   the backlog item stands.
+- **A65.** Q12 resolved yes, so the Kingston-to-Bronx crossing is drawn, but
+  it runs `kingston-dub` to `south-bronx` rather than through Kool Herc.
+  Routing it through him would attribute to a living person a transmission
+  he has repeatedly denied. At the scene level the basis is demographic and
+  structural rather than testimonial (documented migration, plainly
+  resembling practices, inferred causal direction), which is weaker
+  evidence and a more honest claim. Held at `consensus` per `CLAUDE.md`
+  rule 4, with the dispute stated in the evidence and in the adult
+  register, including the reading that the resemblance reflects common
+  African-American and Caribbean DJ roots rather than one scene feeding the
+  other.
+- **A66.** This is the dataset's first edge with a scene node on either end,
+  which clears `kingston-dub` and `south-bronx` from the orphan warnings and
+  sets the precedent for scene-to-scene edges: use them for claims about
+  cultures rather than people, where naming an individual carrier would
+  overstate what the sources support.
+- **A67.** Matt signed off M1 in chat ("M1 is good") in the same message that
+  asked for another batch. Read as: the gate report passes on quality, and
+  the numeric targets held at Q11 still stand, since "batch" is Track D
+  language and no feature milestone was opened. If that reading is wrong and
+  M1 is meant to be closed outright, say so and M3 can open; nothing in this
+  batch depends on which way it goes.
+
+## Added during the Bronx batch
+
+- **A68.** `sylvia-robinson` carries `lineage: "funk"`, not `hiphop`,
+  following A56's logic applied to a person: her home is the R&B and funk
+  business she had worked in since 1957, and hip-hop is what she crossed
+  into. This makes her edges into rap genuinely cross-lineage, which is the
+  substance of her story rather than a technicality: the person who first
+  saw that rap could be sold on a record had spent two decades in another
+  business. Duke Bootee is filed `hiphop` despite arriving from a session
+  band, because unlike Robinson his defining work is inside the form.
+- **A69.** `edge.type: "label"` now has its worked example
+  (`e-sugarhill-mellemel`) and a direction convention, which `BACKLOG.md`
+  had flagged as missing: a label edge runs **label to artist** and claims
+  that the label's decisions changed the artist's output, matching the
+  machine-to-artist direction where the thing acts on the person. Founding
+  and roster relationships are deliberately not edges: they live in the
+  label's `founders` field and the artist's `labels` field. That keeps
+  label edges to actual causal claims rather than turning the graph into a
+  directory.
+- **A70.** I wrote three artist records with `labels` as bare id strings
+  instead of the schema's `{ labelId, from, to }` objects, and four with
+  `signatureTracks` entries missing `whyThisOne`. The validator caught the
+  first and not the second, because it counts `signatureTracks` entries
+  without checking their shape. Both are fixed here; the validator gap is
+  logged in `BACKLOG.md`, since `whyThisOne` is reader-facing text and a
+  record can currently ship without it and pass clean.

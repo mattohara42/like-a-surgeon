@@ -1,0 +1,40 @@
+{
+  "id": "melle-mel",
+  "name": "Melle Mel",
+  "sortName": "Melle Mel",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1979,
+  "activeTo": null,
+  "originCity": "South Bronx, New York",
+  "originCountry": "USA",
+  "scenes": [
+    "south-bronx"
+  ],
+  "labels": [
+    {
+      "labelId": "sugar-hill",
+      "from": 1979,
+      "to": 1985
+    }
+  ],
+  "keyProducers": [],
+  "hook": "Took a song his own group did not want to make and delivered it in a voice that changed what rap was allowed to be about.",
+  "blurb": {
+    "age7": "His group did not want to record a serious song about their neighbourhood. He did it anyway, and it became the most famous thing any of them did.",
+    "age13": "Melle Mel rapped with Grandmaster Flash and the Furious Five, who were built for parties. When Sugar Hill's Sylvia Robinson pushed 'The Message' at them in 1982, the group did not want it: it was slow, it was grim, and it would not work in a club. Mel wrote verses for it anyway, by his own account without much enthusiasm at first. His delivery on it, heavy and deliberate and closer to preaching than partying, is why the record lands, and after it rap could be about anything.",
+    "adult": "Mel's performance is the reason a record written by someone else, about conditions his group had no commercial interest in describing, became canonical. Worth keeping both facts adjacent: the artistic breakthrough is genuinely his, and the song's existence is owed to a label boss overriding the act's own judgement. The map is better for holding those together than for choosing one."
+  },
+  "signatureTracks": [
+    {
+      "title": "The Message (with Duke Bootee)",
+      "year": 1982,
+      "whyThisOne": "The verse everybody remembers is his, on a record his own group did not want to make."
+    },
+    {
+      "title": "White Lines (Don't Don't Do It)",
+      "year": 1983,
+      "whyThisOne": "Released under a Grandmaster Flash credit at a point when the group had already come apart, which is the same credit problem repeating a year later."
+    }
+  ]
+}
