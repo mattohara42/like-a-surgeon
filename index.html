@@ -15,6 +15,9 @@
     --hairline: rgba(150, 180, 235, 0.12);
     --ui: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
     --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    /* System serif only: no font files to license or fetch. */
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --body: #c3cfe6;
   }
   * { box-sizing: border-box; }
   html, body {
@@ -124,6 +127,104 @@
   }
   .layer-toggle:focus-visible { outline: 1px solid rgba(150,180,235,0.7); outline-offset: 3px; }
 
+  #registers {
+    position: fixed; top: 76px; left: 18px; z-index: 6;
+    display: flex; gap: 7px; align-items: center;
+  }
+  .register-caption {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--dim); margin-right: 3px;
+  }
+
+  /* What the reader is reading about stays marked on the map. */
+  .node.selected .node-ring { stroke: var(--ink); stroke-opacity: 0.95; }
+  .node.selected .node-name { fill: #fff; }
+  .edge.selected .edge-line { stroke-opacity: 1; }
+
+  /* ---- the reading drawer (docs/m3-architecture.md, section 4) ------- */
+  #panel {
+    position: fixed; top: 0; right: 0; z-index: 10;
+    background: rgba(6, 10, 22, 0.88);
+    backdrop-filter: blur(22px) saturate(1.3); -webkit-backdrop-filter: blur(22px) saturate(1.3);
+    border-left: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline);
+    transform: translateX(102%); transition-property: transform;
+    transition-timing-function: cubic-bezier(.16, 1, .3, 1);
+    overflow-y: auto; overscroll-behavior: contain; padding: 30px 32px 40px;
+  }
+  #panel.open { transform: none; }
+  .panel-controls { display: flex; justify-content: space-between; align-items: center; min-height: 28px; margin-bottom: 10px; }
+  .panel-back, .panel-close {
+    background: none; border: 0; color: var(--dim); cursor: pointer; font-family: var(--ui);
+  }
+  .panel-back { font-size: 13px; padding: 4px 0; }
+  .panel-close { font-size: 24px; line-height: 1; padding: 0 4px; margin-left: auto; }
+  .panel-back:hover, .panel-close:hover { color: var(--ink); }
+  .panel-back:focus-visible, .panel-close:focus-visible, .chip:focus-visible, .link-row:focus-visible {
+    outline: 1px solid rgba(150,180,235,0.7); outline-offset: 3px;
+  }
+
+  .panel-body .kicker {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.22em;
+    text-transform: uppercase; margin-bottom: 12px;
+  }
+  .panel-body h2 {
+    margin: 0 0 6px; font-family: var(--serif); font-weight: 400;
+    font-size: 30px; line-height: 1.15;
+  }
+  .panel-body h2:focus { outline: none; }
+  .panel-body h2 .arrow { color: var(--dim); }
+  .panel-body .meta {
+    font-family: var(--mono); font-size: 11.5px; color: var(--dim); margin-bottom: 20px;
+    display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  }
+  .panel-body .hook {
+    font-family: var(--serif); font-size: 19px; line-height: 1.45; font-style: italic;
+    color: #d3def3; margin: 0 0 18px;
+  }
+  .panel-body p.body { font-size: 15.5px; line-height: 1.65; color: var(--body); margin: 0 0 14px; }
+  .panel-body p.note { font-size: 14px; line-height: 1.55; color: var(--dim); margin: 0 0 12px; }
+  .panel-body p.listen {
+    font-family: var(--serif); font-size: 18px; line-height: 1.55; color: var(--ink);
+    margin: 14px 0 6px; padding-left: 14px; border-left: 2px solid rgba(150,180,235,0.35);
+  }
+  .panel-body h3 {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--dim); font-weight: 500; margin: 28px 0 12px; padding-top: 16px;
+    border-top: 1px solid var(--hairline);
+  }
+  .track { margin-bottom: 10px; }
+  .track .t { font-size: 15.5px; color: var(--ink); }
+  .track .year { color: var(--dim); font-family: var(--mono); font-size: 12px; }
+  .track p.w { font-size: 14px; line-height: 1.55; color: var(--dim); margin: 3px 0 0; }
+
+  .tier { display: inline-flex; align-items: center; gap: 6px; color: var(--ink); }
+  .tier-swatch { width: 24px; height: 6px; color: var(--ink); flex: 0 0 auto; }
+  .tier-explain .tier { font-size: 13px; margin-bottom: 6px; }
+
+  .chips { display: flex; gap: 7px; flex-wrap: wrap; }
+  .chip {
+    font-family: var(--ui); font-size: 13px; color: var(--ink);
+    background: rgba(140,170,220,0.06); border: 1px solid var(--hairline);
+    border-radius: 999px; padding: 5px 12px; cursor: pointer;
+    transition: border-color 200ms, background 200ms;
+  }
+  .chip:hover { border-color: rgba(150,180,235,0.4); background: rgba(140,170,220,0.12); }
+  .chip-static { cursor: default; color: var(--dim); }
+  .chip-static:hover { border-color: var(--hairline); background: rgba(140,170,220,0.06); }
+
+  .link-row {
+    display: flex; width: 100%; justify-content: space-between; align-items: baseline; gap: 12px;
+    text-align: left; background: none; border: 0; border-bottom: 1px solid var(--hairline);
+    cursor: pointer; padding: 10px 0; color: var(--ink); font-size: 15px; font-family: var(--ui);
+  }
+  .link-row:hover .link-name { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  .link-meta, .link-dir {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; color: var(--dim);
+    display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+  }
+  .link-dir { text-transform: uppercase; letter-spacing: 0.16em; min-width: 42px; }
+  .link-name { flex: 1 1 auto; }
+
   #status {
     position: fixed; top: 14px; left: 18px; z-index: 6;
     font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
@@ -135,6 +236,7 @@
      and readable. Someone who does not want it loses nothing. */
   @media (prefers-reduced-motion: reduce) {
     #grain { animation: none; }
+    #panel { transition: none; }
     .node, .edge { transition: none; }
     .dust-layer { display: none; }
   }
@@ -151,7 +253,9 @@
   <div id="veil"></div>
   <div id="status">Loading&hellip;</div>
   <div id="layers" role="group" aria-label="Which records to show"></div>
+  <div id="registers" role="group"></div>
   <div id="transport"></div>
+  <aside id="panel"></aside>
   <script type="module" src="main.js"></script>
 </body>
 </html>
