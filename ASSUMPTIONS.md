@@ -602,3 +602,26 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   link. The validator rejects any other type as a hard error, since a
   malformed value would silently draw a wrong link.
 
+## Added while building M3 step 1 (panels)
+
+- **A79.** The drawer stops above the transport bar rather than running to
+  the bottom of the screen, so the year readout and play button stay usable
+  while reading. Its bottom edge reuses `CONFIG.viewport.fitBottomInsetPx`,
+  the height the opening fit already reserves for the transport.
+- **A80.** Added `reading/dom.js`, a small element builder that is not in
+  the plan's file list. It is the one place that enforces the plan's
+  "textContent only, never innerHTML" rule for record text, and it holds the
+  tier swatch, which draws from the same `CONFIG.edge` values the map uses.
+- **A81.** The Teen register names the `asserted` tier "Our reading". The
+  Adult register keeps "Asserted". Same fact, simpler word: "asserted" is
+  exactly the vocabulary a 13-year-old does not have yet, and the tier's
+  explanation sits beside it in both registers.
+- **A82.** A scene's member list is the union of `scene.memberIds` and
+  every artist whose `scenes[]` names it, because the two are known to be
+  out of sync (BACKLOG). The reader should not lose a member to a data gap
+  the validator does not catch yet.
+- **A83.** Following a panel link moves the camera. Clicking the map opens
+  the panel. Back steps through the drawer's stack and moves the camera
+  with it. Closing the drawer clears the map highlight but leaves the
+  camera where it is.
+

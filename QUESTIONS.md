@@ -4,7 +4,26 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
-(none)
+- **Q18. The app does not run from `file://`, and never has.** Found while
+  verifying M3 step 1. Opening `index.html` directly fails before any data
+  loads: Chrome blocks the `<script type="module" src="main.js">` load
+  itself as a cross-origin request from origin `null`, the same rule A18
+  worked around for the data bundle. It fails identically on `main` without
+  this branch's changes, and `index.html` has no `<script>` tag for
+  `data/data.bundle.js` either. So the offline release path in CLAUDE.md's
+  hard constraints exists only for the data, not for the code.
+
+  The two honest fixes pull against each other. (a) Have `npm run build`
+  also concatenate the ES modules into one classic script, next to the data
+  bundle. It is one command and stdlib-only, but it is a build step for code,
+  which the anti-goals rule out. (b) Rewrite every module as a classic
+  script sharing one global namespace. That needs no build step, but it
+  gives up ES modules everywhere, which the constraints also name. My
+  recommendation is (a), scoped to the release artifact only: dev stays
+  unbundled ES modules under `tools/serve.js`, exactly as now. It is the
+  same trade A18 already made for data. BUILD_PLAN puts offline
+  verification in M6, so this does not block M3. It does mean nobody should
+  test the map by double-clicking `index.html` until it is settled.
 
 ## Resolved
 
