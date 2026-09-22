@@ -55,7 +55,10 @@ correct response to a good idea arriving mid-milestone.
   whether careful `hook` writing is sufficient. Starting with writing only.
 - `edge.type: "label"` still has no worked example anywhere in the dataset
   (no direction convention for label-to-artist vs. artist-to-label, no
-  sense of what the edge is claiming). `edge.type: "scene"` *does* now have
+  sense of what the edge is claiming). **Resolved in the Bronx batch:**
+  `e-sugarhill-mellemel` is the worked example, and the convention is label
+  to artist, claiming the label's decisions changed the artist's output.
+  Founding and roster relationships stay out of the graph. See A69. `edge.type: "scene"` *does* now have
   two examples on `main` (`e-knuckles-atkins`, `e-hardy-phuture`: a
   scene-level cultural influence reaching a specific artist, `from` the
   influencing figure `to` the influenced artist), so treat that one as
@@ -236,6 +239,9 @@ fixing them inline.)
   now on the map and the crossing is still not drawn, deliberately. See
   **A63** and **Q12**: whether this map should carry that edge at all is
   now an open question for Matt rather than a gap waiting on a node.
+  **Closed:** Matt answered Q12 yes. The crossing is drawn as
+  `e-kingston-bronx`, scene to scene at `consensus` tier, not through Herc.
+  See A65.
 - Demos are now the furthest-behind gate metric after edges: 4 of 30 edges
   carry a `demoId`, against 11 machines that could each plausibly have one.
   The machines batch deliberately did not invent demo records, since
@@ -248,3 +254,30 @@ fixing them inline.)
   ended too, so the machine floor now carries several lines spanning most
   of the axis. Formats and practices genuinely do not end, so this is
   honest data hitting a styling gap rather than a data problem.
+- `grandmaster-flash.json` gives `originCity: "South Bronx, New York"`, but
+  Flash was born in Barbados and came to the Bronx as a child. That is not
+  obviously wrong, because the dataset has no stated convention for
+  `originCity`: `mad-professor` and `kool-herc` both use birthplace
+  (Georgetown, Kingston) while Flash uses the city he formed in. Worth
+  settling, since Caribbean birth across the founding Bronx generation is
+  part of the evidence for `e-kingston-bronx` and the map currently hides
+  it for one of the three people it most applies to. Left alone rather than
+  edited inline, because it is a convention decision and not a typo.
+- `tools/validate.js` counts `signatureTracks` entries but never checks
+  their shape, so an entry missing `whyThisOne` passes clean. That is
+  reader-facing text, and four records shipped from this batch's first pass
+  without it (caught by reading the schema, not by the validator). The same
+  gap applies to `labels` entries, where a malformed object surfaces only
+  indirectly as an unresolved-reference warning for `"undefined"`. Worth a
+  shape check on both in the next tooling pass. See A70.
+- Two labels this batch wanted and did not author: Enjoy Records (Bobby
+  Robinson), where Grandmaster Flash recorded 'Superrappin'' before Sugar
+  Hill, and Cold Chillin' (1986), Marley Marl's home as in-house producer.
+  Both were left out because neither had a label-to-artist causal claim
+  strong enough to justify the edge under the A69 convention, and adding
+  them without one would have produced two more orphan labels. Worth
+  revisiting with the artists who make the claim land.
+- `duke-bootee` carries one `signatureTracks` entry against the schema's
+  two to three. Rather than pad it with a record I could not verify, it
+  stands at one and warns. His catalogue outside 'The Message' needs real
+  research rather than a guess.

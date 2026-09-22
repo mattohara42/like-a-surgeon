@@ -4,25 +4,19 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
-- **Q12. Should the map draw a Kingston-to-Bronx edge at all?** Adding Kool
-  Herc was supposed to supply the missing node for it. Researching him
-  undercut the premise instead. Herc has answered the Jamaican-influence
-  question both ways over the years: sometimes rejecting any connection to
-  toasting and naming James Brown and the Last Poets as the source of rap's
-  vocal style, sometimes describing his DJing as something he brought from
-  Jamaica. Scholars split too, some reading the resemblance as shared
-  African-American and Caribbean DJ roots rather than one feeding the other.
-  I left the edge undrawn and wrote the dispute into Herc's adult register
-  instead (**A63**). Three options if you disagree: draw it at `asserted`
-  tier, worded as resemblance rather than transmission, the way the Tubby to
-  Atkins edge is; draw it at `consensus` and let the adult text carry the
-  dispute, which is what `CLAUDE.md` rule 4 prescribes for contested
-  popular history; or leave it undrawn as it stands. This matters more than
-  one edge, because "dub and sound system culture reach hip-hop" is a
-  crossing the whole map is shaped around, and right now it is a crossing
-  the data does not actually contain.
+(none)
 
 ## Resolved
+
+- **Q12. Should the map draw a Kingston-to-Bronx edge at all?** Resolved:
+  **yes, it should connect.** Drawn as `e-kingston-bronx`, from the
+  `kingston-dub` scene to the `south-bronx` scene rather than through Kool
+  Herc, at `consensus` tier, with the dispute stated in both the evidence
+  and the adult register. Scene to scene because routing it through Herc
+  would attribute to him a transmission he has denied; at the scene level
+  the basis is migration and resemblance of practice rather than anyone's
+  testimony about themselves. It is also the dataset's first edge touching
+  a scene node, which clears two orphan warnings. See **A65** and **A66**.
 
 - **Q10. Should `edge` carry a certainty note, or is the derived proxy
   enough?** Resolved: **keep it derived.** No schema change. The ranking in
