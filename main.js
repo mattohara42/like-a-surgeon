@@ -1,14 +1,32 @@
 // Entry point: load the dataset, build the graph, mount it, and report a
 // live node/edge/status readout so a person (or a Playwright check) can
 // confirm what actually rendered.
+//
+// This is also the only place the graph and the reading surface meet
+// (A73): the graph never imports from reading/, and reading/ reaches the
+// graph only through the callbacks and focus calls wired up here.
 
+import { CONFIG } from './config.js';
 import { loadGraphData } from './render/loader.js';
 import { createGraph } from './render/graph.js';
 import { loadLayers, saveLayers, createLayerToggles } from './render/layers.js';
+import { availableRegisters, loadRegister, saveRegister, createRegisterSelector } from './reading/registers.js';
+import { buildNeighbours } from './reading/neighbours.js';
+import { createPanel } from './reading/panel.js';
+import { renderNodePanel } from './reading/nodePanel.js';
+import { renderEdgePanel } from './reading/edgePanel.js';
+import { createLegend } from './reading/legend.js';
 
 const statusEl = document.getElementById('status');
 const appEl = document.getElementById('app');
 const layersEl = document.getElementById('layers');
+const registersEl = document.getElementById('registers');
+const panelEl = document.getElementById('panel');
+const legendEl = document.getElementById('legend');
+
+// Which layer toggle has to be on for a node of this kind to be drawn.
+// Artists are always drawn, and scenes are framed through their members.
+const LAYER_FOR_KIND = { label: 'labels', machine: 'machines' };
 
 function setStatus(text, isError = false) {
   statusEl.textContent = text;
@@ -30,18 +48,96 @@ async function main() {
     return;
   }
 
+  const nodesById = new Map(data.nodes.map((n) => [n.id, n]));
+  const edgesById = new Map(data.edges.map((e) => [e.id, e]));
+  const neighbours = buildNeighbours(data.edges);
+
+  // A scene's members are the artists that name it, plus whoever the scene
+  // lists itself. Both directions, because the two are not kept in sync
+  // (BACKLOG, "Observed problems") and a reader should not lose a member
+  // to that gap.
+  function sceneMembers(sceneId) {
+    const ids = new Set(nodesById.get(sceneId)?.raw.memberIds ?? []);
+    for (const node of data.nodes) {
+      if (node.kind === 'artist' && node.raw.scenes?.includes(sceneId)) ids.add(node.id);
+    }
+    return [...ids]
+      .map((id) => nodesById.get(id))
+      .filter(Boolean)
+      .sort((a, b) => (a.startYear ?? 0) - (b.startYear ?? 0));
+  }
+
+  const registers = availableRegisters(data);
+  let register = loadRegister(registers);
   let layers = loadLayers();
   let graph = null;
+
+  const legend = createLegend(legendEl, data.meta);
+
+  const panelContext = () => ({ register, nodesById, neighbours, sceneMembers, goNode, goEdge });
+
+  const panel = createPanel(panelEl, {
+    renderTarget: (target) =>
+      target.kind === 'node'
+        ? renderNodePanel(nodesById.get(target.id), panelContext())
+        : renderEdgePanel(edgesById.get(target.id), panelContext()),
+    onNavigate: focusTarget,
+    onClose: () => graph?.clearSelection(),
+  });
+  // Stops above the transport bar, so the year and play button stay usable
+  // while reading.
+  panelEl.style.bottom = `${CONFIG.viewport.fitBottomInsetPx}px`;
+
+  // Turns on whatever layers the given node kinds need, in one rebuild.
+  // A reader who follows a link to a label asked to see it (A74).
+  function ensureLayersFor(kinds) {
+    const next = { ...layers };
+    for (const kind of kinds) {
+      const key = LAYER_FOR_KIND[kind];
+      if (key) next[key] = true;
+    }
+    if (Object.keys(next).some((k) => next[k] !== layers[k])) applyLayers(next);
+  }
+
+  function focusTarget(target) {
+    if (target.kind === 'edge') {
+      const edge = edgesById.get(target.id);
+      if (!edge) return;
+      ensureLayersFor([edge.from.kind, edge.to.kind]);
+      graph.focusEdge(edge.id);
+      return;
+    }
+    const node = nodesById.get(target.id);
+    if (!node) return;
+    if (node.kind === 'scene') {
+      graph.frameNodes(sceneMembers(node.id).map((m) => m.id));
+      return;
+    }
+    ensureLayersFor([node.kind]);
+    graph.focusNode(node.id);
+  }
+
+  function goNode(id) {
+    const target = { kind: 'node', id };
+    panel.open(target);
+    focusTarget(target);
+  }
+
+  function goEdge(id) {
+    const target = { kind: 'edge', id };
+    panel.open(target);
+    focusTarget(target);
+  }
 
   // Toggling a layer changes which records take a lane row, so the layout
   // has to be recomputed rather than restyled -- turning labels on moves
   // every artist below them. Rebuilding the whole graph is the honest way
-  // to do that, and at this size it is imperceptible. The reader's camera
-  // and year are carried across so it doesn't feel like a reload.
+  // to do that, and at this size it is imperceptible. The reader's camera,
+  // year and selection are carried across so it doesn't feel like a reload.
   function build() {
     const carried = graph
-      ? { viewport: { ...graph.viewport }, year: graph.transport?.year() ?? null }
-      : { viewport: null, year: null };
+      ? { viewport: { ...graph.viewport }, year: graph.transport?.year() ?? null, selected: graph.selectedId() }
+      : { viewport: null, year: null, selected: null };
     graph?.destroy();
 
     graph = createGraph(appEl, data, {
@@ -49,8 +145,11 @@ async function main() {
       layers,
       initialViewport: carried.viewport,
       initialYear: carried.year,
-      onSelectNode: (node) => console.log('[select] node', node.id, node.name),
-      onSelectEdge: (edge) => console.log('[select] edge', edge.id, edge.from.id, '->', edge.to.id),
+      initialSelectedId: carried.selected,
+      rightInset: () => panel.coveredWidth(),
+      // The graph has already flown the camera; the panel only opens.
+      onSelectNode: (node) => panel.open({ kind: 'node', id: node.id }),
+      onSelectEdge: (edge) => panel.open({ kind: 'edge', id: edge.id }),
     });
 
     window.__graph = graph; // for manual/automated inspection during dev
@@ -68,7 +167,17 @@ async function main() {
     build();
   }
 
+  function applyRegister(next) {
+    register = next;
+    saveRegister(register);
+    createRegisterSelector(registersEl, registers, register, applyRegister);
+    panel.redraw();
+    legend.setRegister(register);
+  }
+
   createLayerToggles(layersEl, layers, applyLayers);
+  createRegisterSelector(registersEl, registers, register, applyRegister);
+  legend.setRegister(register);
   build();
 }
 

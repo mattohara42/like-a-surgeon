@@ -573,3 +573,93 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   Strata port": the detail panels, which the design prototype had and the
   shipped renderer does not, and which are the reason clicking a node
   currently only logs.
+
+## Added while planning M3 (docs/m3-architecture.md)
+
+- **A73.** The reading surface lives in a new `reading/` directory rather
+  than inside `render/`, and only `main.js` wires the two together. The
+  graph gains three small API additions (`focusNode`/`focusEdge`, a right
+  camera inset, `selectedId`) and never imports from `reading/`.
+- **A74.** Selecting a node whose layer is off, from a panel link or a
+  search result, turns that layer on and then focuses the node. The
+  alternative, a panel describing something the map refuses to show, is the
+  worse surprise. The toggle chip updates, so one click undoes it.
+- **A75.** Scene panels are reached from artist scene chips and from search.
+  The nebula stays unclickable, because making it a hit target would fight
+  with panning.
+- **A76.** Interface copy (tier explanations, panel headings, legend text)
+  is written in registers in `reading/copy.js` and follows the same writing
+  rules as the data. It also counts toward Q15's completeness test, so the
+  Kid register cannot appear with an untranslated interface around it.
+- **A77.** (Q16) The manifest gains two top-level keys, `generatedAt` (an
+  ISO date) and `version` (read from `package.json`). Both sit beside the
+  shard lists, and `tools/validate.js` ignores them. The date records when
+  the manifest was last regenerated, which in dev is every server start.
+  That is close enough for a "last updated" line, and a release bundle fixes
+  it at bundle time.
+- **A78.** (Q17) `trackPair.earlier.search` and `trackPair.later.search`
+  are optional. A string overrides the query, and `false` suppresses the
+  link. The validator rejects any other type as a hard error, since a
+  malformed value would silently draw a wrong link.
+
+## Added while building M3 step 1 (panels)
+
+- **A79.** The drawer stops above the transport bar rather than running to
+  the bottom of the screen, so the year readout and play button stay usable
+  while reading. Its bottom edge reuses `CONFIG.viewport.fitBottomInsetPx`,
+  the height the opening fit already reserves for the transport.
+- **A80.** Added `reading/dom.js`, a small element builder that is not in
+  the plan's file list. It is the one place that enforces the plan's
+  "textContent only, never innerHTML" rule for record text, and it holds the
+  tier swatch, which draws from the same `CONFIG.edge` values the map uses.
+- **A81.** The Teen register names the `asserted` tier "Our reading". The
+  Adult register keeps "Asserted". Same fact, simpler word: "asserted" is
+  exactly the vocabulary a 13-year-old does not have yet, and the tier's
+  explanation sits beside it in both registers.
+- **A82.** A scene's member list is the union of `scene.memberIds` and
+  every artist whose `scenes[]` names it, because the two are known to be
+  out of sync (BACKLOG). The reader should not lose a member to a data gap
+  the validator does not catch yet.
+- **A83.** Following a panel link moves the camera. Clicking the map opens
+  the panel. Back steps through the drawer's stack and moves the camera
+  with it. Closing the drawer clears the map highlight but leaves the
+  camera where it is.
+- **A84.** (Q18) The release is a folder, `dist/`, rather than extra files
+  beside the source: `dist/index.html`, `dist/data.js` (the data bundle,
+  which used to be `data/data.bundle.js`) and `dist/app.js` (the code).
+  One folder that opens from disk is easier to hand to someone than
+  instructions about which files matter. The code bundle wraps each module
+  in a function scope and runs them in ES module evaluation order. It
+  handles only the syntax this codebase uses and fails the build, with file
+  and line, on anything else. CI already runs the bundler, so that failure
+  shows up there. The source tree is never rewritten, and ES modules remain
+  the only way the code is written. This is the same trade A18 made for
+  data, extended to code, and it is the one place the project has a build
+  step. It exists only for the release copy.
+
+## Added while building M3 step 2 (legend and version stamp)
+
+- **A85.** The dataset version starts at `0.1.0` in `package.json`. There
+  was no earlier version to continue from, and a 0.x number says honestly
+  that the map is far from its M1 targets. Bump it by hand when the dataset
+  changes in a way worth announcing. Nothing bumps it automatically.
+- **A86.** The legend sits bottom-left, above the transport bar, where the
+  drawer never reaches. It opens expanded on a first visit, because the
+  tiers are part of what the map teaches (SPEC.md), and after that it
+  remembers the reader's choice. Collapsed, it still shows all three
+  swatches and the version stamp, so it is never truly hidden. Its text
+  follows the reading register.
+
+## Added when setting up the Netlify preview
+
+- **A87.** Matt asked for a web preview on Netlify. The site is
+  `like-a-surgeon` (like-a-surgeon.netlify.app), linked to this repo with a
+  deploy preview per PR, and `netlify.toml` tells it to run `node tools/bundle.js` and publish `dist/`:
+  the same offline build CI makes, served as static files. This is a
+  preview for checking M3 work, not the hosting path M6 owns, and it adds
+  no runtime network dependency, since `dist/` still makes no requests of
+  its own. A direct upload through the Netlify MCP tool was refused (403
+  from Netlify's upload relay, no reason given), which is why the preview
+  builds from the repo instead. That attempt also created an empty
+  `lineage-atlas` site, which is unused and can be deleted.
+

@@ -160,6 +160,42 @@ export const CONFIG = {
     storageKey: 'lineage.layers.v1',
   },
 
+  // The reading surface (docs/m3-architecture.md). Registers are offered in
+  // this order, and only the ones every reader-facing record carries appear
+  // at all (Q15), so `age7` stays listed here and stays hidden until the
+  // Track D Kid pass is complete.
+  reading: {
+    registers: [
+      { key: 'age7', label: 'Kid' },
+      { key: 'age13', label: 'Teen' },
+      { key: 'adult', label: 'Adult' },
+    ],
+    defaultRegister: 'age13',
+    storageKey: 'lineage.register.v1',
+  },
+
+  // The detail drawer. Overlays the map from the right (Q13), so the camera
+  // centres selections in whatever width the drawer leaves uncovered.
+  panel: {
+    widthPx: 430,
+    maxViewportFraction: 0.42,
+    slideMs: 520,
+    // How many steps back the drawer remembers. In memory only.
+    backStackMax: 30,
+    // Scene framing: the widest a scene may be zoomed to, and the screen
+    // padding kept around its members.
+    sceneMaxScale: 2,
+    sceneFramePaddingPx: 90,
+  },
+
+  // The confidence legend. Open on a first visit, because the tiers are
+  // part of what the map teaches; after that it remembers the reader's
+  // choice. Collapsed, it still shows all three swatches.
+  legend: {
+    defaultOpen: true,
+    storageKey: 'lineage.legend.v1',
+  },
+
   // The year cursor. Not a scrollbar with a graph attached: dragging it is
   // how the map performs its own history, and it is the first thing anyone
   // touches.

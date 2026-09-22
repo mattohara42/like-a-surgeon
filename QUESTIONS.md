@@ -8,6 +8,33 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Resolved
 
+- **Q18. The app does not run from `file://`, and never has.** Resolved:
+  **the recommendation, (a).** `npm run build` now writes `dist/`, where the
+  code is flattened into one classic script next to the data. Development
+  still serves unbundled ES modules. See **A84**.
+
+- **Q16. Where do the dataset version and last-updated date come from?**
+  Resolved: **the recommendation.** `tools/manifest.js` writes a
+  `generatedAt` date into the manifest it already regenerates on every run,
+  and a hand-bumped `version` comes from `package.json`. See **A77**.
+
+- **Q17. How should a track-pair side say what to search for?** Resolved:
+  **the recommendation.** Each side of `trackPair` gets an optional `search`
+  field. When it is absent, the query is artist plus title. A string
+  replaces the query, and `false` means no link is drawn. See **A78**.
+
+- **Q13. Where does the detail panel sit?** Resolved: **overlay drawer** on
+  the right, as in the Strata prototype. The graph does not reflow, and the
+  camera centres within the uncovered part of the screen.
+
+- **Q14. Which streaming services get outbound links?** Resolved: **YouTube
+  search only.** It is free and needs no account, which matters for the
+  primary reader.
+
+- **Q15. When does the Kid register appear in the selector?** Resolved:
+  **only when complete.** A register is offered only if every reader-facing
+  record carries it, so Kid stays hidden until the Track D pass finishes.
+
 - **Q12. Should the map draw a Kingston-to-Bronx edge at all?** Resolved:
   **yes, it should connect.** Drawn as `e-kingston-bronx`, from the
   `kingston-dub` scene to the `south-bronx` scene rather than through Kool

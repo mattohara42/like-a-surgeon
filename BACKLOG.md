@@ -82,6 +82,8 @@ correct response to a good idea arriving mid-milestone.
   and M3 has not been opened. `onSelectNode`/`onSelectEdge` still only log.
   This is the single biggest thing the port does not carry over, and the
   thing that made the prototype feel finished.
+  **Resolved in M3 step 1:** ported as `reading/`. See
+  `docs/m3-architecture.md` section 4.
 - **Focus dimming on hover.** The prototype dimmed the whole field to just
   the hovered node, its edges and its neighbours. Not ported: it needs a
   neighbour index and a render path that can dim culled-but-adjacent
@@ -128,6 +130,42 @@ correct response to a good idea arriving mid-milestone.
 
 (Claude Code: record code smells and architectural concerns here rather than
 fixing them inline.)
+
+- The map barely distinguishes `documented` from `consensus`: the only
+  difference is stroke width, 2px against 1.5px (`CONFIG.edge.strokeWidth`),
+  and at the map's opacity that half pixel does not read. The legend draws
+  from the same values, so it shows the problem plainly rather than hiding
+  it. `asserted` is fine, because it is dashed. The fix is a clearer
+  encoding, such as a wider gap in width, a second dash pattern, or
+  consensus drawn slightly fainter. That is a renderer decision, so it
+  belongs in the typography pass (M3 step 5) or with Matt, not in the legend.
+
+- The app has never run from `file://`: the ES module entry point is
+  blocked as cross-origin, and `index.html` does not load the data bundle.
+  Raised as **Q18** rather than fixed, because every fix touches the "no
+  build step" or "ES modules" constraint.
+  **Resolved:** `npm run build` writes `dist/`, which runs from disk. See
+  A84.
+- The transport opens at `layout.timeScale.yearEnd`, which includes the
+  axis's two margin years, so the year readout shows 2028 in 2026. It reads
+  as the map claiming to know the future. The cursor should probably clamp
+  to the current year. Not touched, since the transport is not M3 work.
+- `label.founders` holds plain names ("Juan Atkins") rather than ids, so the
+  label panel prints founders as text while the artist panel links the same
+  person. Resolving names to ids at render time would be guesswork. An id
+  convention for founders, like the one `keyProducers` uses, would fix it
+  properly.
+
+- The SessionStart hook cannot protect a session whose branch was created
+  from a commit older than the hook itself. This session's branch pointed
+  at PR #2's merge, which predates `.claude/`, so the hook never ran and
+  the checkout was 30-plus commits behind `main` with no warning. The
+  session nearly redid data batch 1. Fixed for this branch by
+  fast-forwarding to `main`. The durable fix is outside the repo: create
+  session branches from `main`'s head. Failing that, a line in `CLAUDE.md`
+  telling a session to run `git fetch origin main` and compare before
+  reading anything else would work even at an old commit, as long as the
+  commit is newer than that line.
 
 - Six of the seed's ten artists carry only one `signatureTracks` entry
   against `SCHEMA.md`'s 2-3 target (`tools/validate.js` warns on this now).

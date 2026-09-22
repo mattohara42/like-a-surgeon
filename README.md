@@ -22,7 +22,7 @@ beneath them, and a year cursor you can drag to watch the map arrive.
 | `data/artists/`, `data/machines/`, `data/scenes/`, `data/labels/`, `data/edges/`, `data/demos/`, `data/threads/` | The live, sharded dataset. One file per record. |
 | `tools/validate.js` | Checks the data tree. `npm run validate`. |
 | `tools/serve.js` | Dev static server, solves the `file://` fetch problem. `npm run dev`. |
-| `tools/bundle.js` | Release bundler, inlines all data into `data/data.bundle.js`. `npm run build`. |
+| `tools/bundle.js` | Release bundler. Writes `dist/`, which opens from disk with no server. `npm run build`. |
 | `tools/report.js` | Generates the M1 gate report into `docs/m1-gate-report.md`. `npm run report`. |
 | `index.html`, `main.js` | The app shell and entry point. |
 | `config.js` | Every tuning value in the project. No magic numbers in logic. |
@@ -36,7 +36,7 @@ beneath them, and a year cursor you can drag to watch the map arrive.
     npm run dev        # serves at localhost:8080
     npm run validate   # checks the data tree
     npm run report     # regenerates docs/m1-gate-report.md
-    npm run build      # writes data/data.bundle.js for the offline release
+    npm run build      # writes dist/, the offline release: open dist/index.html directly
 
 Drag the year cursor at the bottom, or press play. Scroll to zoom, drag to
 pan, click a node to fly to it.
