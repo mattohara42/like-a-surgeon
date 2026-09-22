@@ -8,6 +8,22 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Resolved
 
+- **Q10. Should `edge` carry a certainty note, or is the derived proxy
+  enough?** Resolved: **keep it derived.** No schema change. The ranking in
+  `tools/report.js` (confidence tier, plus flags read off the record) stays
+  the way "least sure about" is computed, and every flag that fires prints
+  next to its edge so the ranking can be argued with. Revisit if it is
+  visibly wrong about a specific edge. See **A52**.
+
+- **Q11. Does the M1 dataset target still stand?** Resolved: **yes, hold the
+  numbers.** 120 artists, 25 machines, 20 scenes, 30 labels, 350 edges, 5
+  threads, 60 cross-lineage edges, 30 edges with a demo. `BUILD_PLAN.md` is
+  unchanged and M1 stays open until the dataset reaches it. The practical
+  consequence: sessions from here are Track D data work, leading with
+  machines (2 of 25, and every M4 audio demo needs one), and no new feature
+  milestone opens until the targets are met. M2 shipping early does not
+  become a precedent. `npm run report` measures the distance each time.
+
 - **Q9. Keep or cut the King Tubby to Juan Atkins resemblance edge?**
   Resolved by me for now: **kept, renamed.** The edge (`asserted` tier, "no
   documented connection," framed explicitly as resemblance rather than

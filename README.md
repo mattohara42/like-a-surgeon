@@ -16,13 +16,14 @@ beneath them, and a year cursor you can drag to watch the map arrive.
 | `BUILD_PLAN.md` | Milestones and gates, plus the ungated data-expansion track. |
 | `BACKLOG.md` | Everything deliberately not being built yet. |
 | `ASSUMPTIONS.md` | Decisions made without asking. Append-only. |
-| `QUESTIONS.md` | Five open questions that need Matt's answers before M1. |
+| `QUESTIONS.md` | Open questions that need Matt's answers, and the resolved ones. |
 | `data/SCHEMA.md` | The data contract. |
 | `data/seed.json` | Frozen reference copy of the original ten-artist quality bar. No longer live data; see `data/artists/` etc. |
 | `data/artists/`, `data/machines/`, `data/scenes/`, `data/labels/`, `data/edges/`, `data/demos/`, `data/threads/` | The live, sharded dataset. One file per record. |
 | `tools/validate.js` | Checks the data tree. `npm run validate`. |
 | `tools/serve.js` | Dev static server, solves the `file://` fetch problem. `npm run dev`. |
 | `tools/bundle.js` | Release bundler, inlines all data into `data/data.bundle.js`. `npm run build`. |
+| `tools/report.js` | Generates the M1 gate report into `docs/m1-gate-report.md`. `npm run report`. |
 | `index.html`, `main.js` | The app shell and entry point. |
 | `config.js` | Every tuning value in the project. No magic numbers in logic. |
 | `render/` | The graph renderer: layout, substrate, nodes, edges, gradients, atmosphere, transport, viewport culling, semantic zoom. |
@@ -34,6 +35,7 @@ beneath them, and a year cursor you can drag to watch the map arrive.
 
     npm run dev        # serves at localhost:8080
     npm run validate   # checks the data tree
+    npm run report     # regenerates docs/m1-gate-report.md
     npm run build      # writes data/data.bundle.js for the offline release
 
 Drag the year cursor at the bottom, or press play. Scroll to zoom, drag to
