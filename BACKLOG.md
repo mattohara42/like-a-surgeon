@@ -67,6 +67,34 @@ correct response to a good idea arriving mid-milestone.
   `ariwa-sounds` scene is a natural addition once there's more than one
   artist to put in it.
 
+## Deferred from the Strata port
+
+- **Residual label collisions.** Packing gives each name room along the time
+  axis, but a label can still clip a marker in an adjacent row in the
+  crowded years (1976-79 rock, 1983-87 Chicago/Detroit). Zooming in clears
+  it. The real fix is label placement that alternates side and offset, which
+  belongs with M3's typography pass rather than in layout.
+- **Detail panels.** The prototype's reading panel (hook, register toggle,
+  signature tracks, evidence, navigable edge list) is not ported: it is M3,
+  and M3 has not been opened. `onSelectNode`/`onSelectEdge` still only log.
+  This is the single biggest thing the port does not carry over, and the
+  thing that made the prototype feel finished.
+- **Focus dimming on hover.** The prototype dimmed the whole field to just
+  the hovered node, its edges and its neighbours. Not ported: it needs a
+  neighbour index and a render path that can dim culled-but-adjacent
+  elements, which is real work rather than a style change.
+- **Spread-on-click.** Influence propagating outward hop by hop from a
+  clicked node. Wanted, and cheap once there is a neighbour index.
+- **Thread playback.** `data/threads/` is loaded and unused. The prototypes
+  played a thread as a camera tour; M5 owns this properly.
+- **Reduced motion.** `prefers-reduced-motion` now drops the dust layer,
+  the grain animation and the fade transitions. Node breathing and the edge
+  comets are still running under it: both are Web Animations started in JS
+  and need a matchMedia check, not a CSS rule.
+- **Beam overlap.** Two machines close together on the time axis put two
+  vertical shafts through the same space. Fine at two machines; wants
+  attention before the machine roster grows.
+
 ## Deferred from the visual pass
 
 - Viewport culling. The `design/` prototypes draw everything once with no

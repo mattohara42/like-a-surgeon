@@ -1,5 +1,18 @@
 # design/ — visual direction exploration
 
+> **Decided: 03 Strata.** Matt picked it, and it is ported into `render/`
+> and `config.js`. These three files stay as the record of what was
+> compared and why, and as a place to try the next visual question without
+> destabilising the app. They are frozen against the dataset snapshot they
+> were judged on; `npm run design:snapshot` refreshes it if you want to see
+> a direction against current data.
+>
+> What the port carries: the substrate and its beams, the luminous node
+> treatment, breathing, edge gradients and comets, the atmosphere, and the
+> transport. What it does not yet carry: the reading panel, focus dimming,
+> spread-on-click and thread playback. All four are in `BACKLOG.md` under
+> "Deferred from the Strata port".
+
 Three prototypes of the current dataset (32 artists, 2 machines, 36 edges,
 8 scenes), each answering "make it feel alive" a different way. Nothing here
 is app code. Pick one, and it gets ported into `render/`.
