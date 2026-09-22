@@ -6,6 +6,7 @@
     "dev": "node tools/serve.js",
     "build": "node tools/bundle.js",
     "validate": "node tools/validate.js",
+    "report": "node tools/report.js --out=docs/m1-gate-report.md",
     "design:snapshot": "node tools/design-snapshot.js"
   }
 }

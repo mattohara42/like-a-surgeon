@@ -17,3 +17,5 @@ jobs:
         run: node tools/validate.js
       - name: Build release bundle
         run: node tools/bundle.js
+      - name: Generate the gate report
+        run: node tools/report.js > /dev/null

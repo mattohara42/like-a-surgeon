@@ -374,3 +374,40 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   blocked, and a reader whose browser refuses to remember should still get
   a working map on the defaults. Only known keys with boolean values are
   read back, so a stale or hand-edited entry cannot invent a layer.
+- **A52.** "The twenty edges you are least sure about" (the M1 gate) is
+  computed, not stored. No field on `edge` records how sure the author was,
+  and adding one is a schema change I did not want to make unasked, so
+  `tools/report.js` derives a proxy: confidence tier sets a base score, then
+  named flags readable off the record add to it (evidence that says the
+  connection is not documented, evidence that calls a claim disputed or
+  widely repeated, hedging with probably/may have, evidence under 120
+  characters, a track pair naming no specific record or missing a year, a
+  pair whose chronology runs backwards). Every flag that fires is printed
+  next to its edge, so the ranking shows its working instead of asking to be
+  trusted. Ties break by id, which carries no meaning. Raised as **Q10** in
+  `QUESTIONS.md`, because a stored field would be more honest than a proxy
+  if the tier alone is not doing enough work.
+- **A53.** The report's sampling is seeded (mulberry32, default seed 1)
+  rather than genuinely random. "Twenty randomly sampled `whatToListenFor`
+  fields" has to be reviewable: the same seed against the same dataset draws
+  the same twenty, so a review comment can name one and the next run still
+  shows it. `--seed=N` draws fresh.
+- **A54.** `docs/m1-gate-report.md` is committed generated output, the same
+  way `data/manifest.json` is, so the gate review can happen in a pull
+  request rather than in a terminal nobody else can see. It carries a
+  generation date and goes stale the moment data lands; `npm run report`
+  rewrites it. The scoring constants live at the top of `tools/report.js`
+  rather than in `config.js`, following `tools/validate.js`: `config.js` is
+  the running app's tuning surface, and the tools do not import it.
+- **A55.** `tools/report.js` is a rewrite, not a new tool. A first version
+  landed with data batch 1 (tier-sorted least-sure edges, an unseeded
+  random `whatToListenFor` sample, counts left to the validator). Nothing
+  referenced it: no npm script, no README row, no CI step, and
+  `docs/m1-architecture.md` describes it as a thing to build later, so I
+  overwrote it before noticing it existed. The rewrite keeps both of its
+  sections and adds the counts, the distance-to-target table, Markdown
+  output to a committed file, seeded sampling, and the flag-based
+  uncertainty ranking. Its `--sample N` flag is gone, replaced by
+  `--edges=N` and `--tracks=N`, since the two sections want different
+  sizes. The tool is now wired into `package.json`, the README and CI, so
+  the next session finds it before rewriting it again.
