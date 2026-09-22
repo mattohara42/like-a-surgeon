@@ -120,7 +120,7 @@ Every decision made without asking. Append, do not rewrite.
   an incomplete M1, but `CLAUDE.md`'s working style says "lock design before
   implementing." Prototypes satisfy the second without breaking the first:
   they are throwaway, they import nothing, and nothing imports them.
-- **A28.** `design/_data.js` is a generated snapshot of `data/`, written by
+- **A28.** `design/data-snapshot.js` is a generated snapshot of `data/`, written by
   `tools/design-snapshot.js` as a classic script that sets `window.LINEAGE`.
   `file://` blocks `fetch` and ES module imports but not `<script src>`, so
   this is the only shape that lets a prototype open by double-click with no

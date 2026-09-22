@@ -1,4 +1,4 @@
-// Freezes the current data/ tree into design/_data.js, a plain (non-module)
+// Freezes the current data/ tree into design/data-snapshot.js, a plain (non-module)
 // script that sets window.LINEAGE.
 //
 // Why a snapshot rather than the real loader: the prototypes in design/ are
@@ -15,7 +15,7 @@ import { buildManifest } from './manifest.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dataDir = join(root, 'data');
-const outFile = join(root, 'design', '_data.js');
+const outFile = join(root, 'design', 'data-snapshot.js');
 
 const manifest = buildManifest(dataDir);
 const read = (shard, id) =>
@@ -47,4 +47,4 @@ writeFileSync(
     `window.LINEAGE = ${JSON.stringify(snapshot, null, 2)};\n`,
 );
 
-console.log(`design/_data.js written (${counts})`);
+console.log(`design/data-snapshot.js written (${counts})`);
