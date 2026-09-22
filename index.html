@@ -31,7 +31,7 @@
   .graph-svg:focus { outline: none; }
 
   .node { cursor: pointer; }
-  .node-label, .node-hook { pointer-events: none; user-select: none; }
+  .node-name, .node-hook { pointer-events: none; user-select: none; }
   .edge { cursor: pointer; }
   .band-label { pointer-events: none; user-select: none; letter-spacing: 0.18em; }
   .axis-label { pointer-events: none; user-select: none; font-family: var(--mono); }
@@ -41,7 +41,7 @@
   /* The year cursor has not reached this yet. Present, but clearly not
      here yet -- which is the whole point of being able to drag it. */
   .unborn { opacity: 0.085; }
-  .unborn .node-label, .unborn .node-hook { opacity: 0; }
+  .unborn .node-name, .unborn .node-hook { opacity: 0; }
   .node, .edge { transition: opacity 240ms ease; }
 
   /* Atmosphere. Fixed overlays that never pan, which is what sells the
@@ -107,6 +107,23 @@
     overflow: hidden;
   }
 
+  #layers {
+    position: fixed; top: 40px; left: 18px; z-index: 6;
+    display: flex; gap: 7px; flex-wrap: wrap;
+  }
+  .layer-toggle {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--dim); cursor: pointer;
+    background: rgba(140,170,220,0.05); border: 1px solid var(--hairline);
+    border-radius: 999px; padding: 5px 12px;
+    transition: color 200ms, border-color 200ms, background 200ms;
+  }
+  .layer-toggle:hover { color: var(--ink); border-color: rgba(150,180,235,0.34); }
+  .layer-toggle[aria-pressed="true"] {
+    color: #05070f; background: var(--ink); border-color: var(--ink);
+  }
+  .layer-toggle:focus-visible { outline: 1px solid rgba(150,180,235,0.7); outline-offset: 3px; }
+
   #status {
     position: fixed; top: 14px; left: 18px; z-index: 6;
     font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
@@ -133,6 +150,7 @@
   </svg>
   <div id="veil"></div>
   <div id="status">Loading&hellip;</div>
+  <div id="layers" role="group" aria-label="Which records to show"></div>
   <div id="transport"></div>
   <script type="module" src="main.js"></script>
 </body>

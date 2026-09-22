@@ -341,3 +341,36 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   that already existed. The hook installs nothing: this project has no
   dependencies, so telling a session the truth about where it is starting
   is the only useful thing a session start can do here.
+
+## Added making the record types toggleable
+
+- **A48.** Scenes, labels and machines each get a reader-facing toggle
+  rather than a fixed answer. This **replaces the decision half of A44**:
+  A44's reasoning (each type competing for attention, labels reachable
+  only through an artist) was right about the trade-off and wrong to
+  settle it once for everyone. A reader following one artist's influence
+  wants the map quiet; a reader asking who owned the masters wants the
+  labels on. Defaults stay as A44 had them, scenes and machines on and
+  labels off, so the map still opens calm.
+  Artists are deliberately not toggleable: a map with no artists on it is
+  not a view anyone is looking for.
+- **A49.** Each type keeps one representation, and the toggle controls
+  whether that type appears at all: scenes as atmosphere, labels as
+  markers in the lineage lanes, machines as the whole substrate (floor,
+  markers and beams). With machines off there is no floor rather than an
+  empty one, because the substrate is the machines' representation and not
+  scenery that happens to sit under the lanes.
+- **A50.** A toggle rebuilds the graph rather than restyling it. Labels
+  and machines take lane rows, so turning either on moves everything below
+  it; there is no honest way to do that without recomputing the layout.
+  The reader's camera and year are carried across the rebuild, and the
+  year is re-clamped because the axis itself moves (turning labels on
+  pulls it back to 1953, since Pye Records was founded before any artist
+  on the map started).
+- **A51.** Layer choices persist per reader in `localStorage`, under
+  `CONFIG.layers.storageKey`, matching the pattern `SPEC.md` already
+  specifies for the reading-level selector. Every access is wrapped:
+  `localStorage` can throw outright in private mode or with site data
+  blocked, and a reader whose browser refuses to remember should still get
+  a working map on the defaults. Only known keys with boolean values are
+  read back, so a stale or hand-edited entry cannot invent a layer.

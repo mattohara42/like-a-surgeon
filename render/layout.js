@@ -67,7 +67,7 @@ function packIntoRows(items) {
   return { rowOf, rowCount: Math.max(1, rowEnds.length) };
 }
 
-export function computeLayout(nodes) {
+export function computeLayout(nodes, { withSubstrate = true } = {}) {
   const positioned = nodes.filter((n) => n.startYear !== null);
   const years = positioned.flatMap((n) => [n.startYear, n.endYear]);
   const minYear = years.length ? Math.min(...years) : new Date().getFullYear() - 1;
@@ -105,9 +105,11 @@ export function computeLayout(nodes) {
   }
 
   // The floor. Machines sit partway down it so the receding rules read
-  // both behind and in front of them.
-  const horizonY = y + substrate.gap;
-  const machines = positioned.filter((n) => n.kind === 'machine');
+  // both behind and in front of them. With the machines layer off there is
+  // no floor at all rather than an empty one: the substrate is the machines'
+  // representation, not scenery that happens to sit under the lanes.
+  const machines = withSubstrate ? positioned.filter((n) => n.kind === 'machine') : [];
+  const horizonY = y + (withSubstrate ? substrate.gap : 0);
   const machinePack = packIntoRows(machines);
   const floorY = horizonY + substrate.depth * 0.56;
 
@@ -127,16 +129,20 @@ export function computeLayout(nodes) {
     minYear,
     maxYear,
     positions,
-    substrate: {
-      horizonY,
-      depth: substrate.depth,
-      floorY,
-      rowCount: machinePack.rowCount,
-      // Vanishing point, in content coordinates.
-      vanishX: timeScale.totalWidth / 2,
-    },
+    substrate: withSubstrate
+      ? {
+          horizonY,
+          depth: substrate.depth,
+          floorY,
+          rowCount: machinePack.rowCount,
+          // Vanishing point, in content coordinates.
+          vanishX: timeScale.totalWidth / 2,
+        }
+      : null,
     lanes,
     totalWidth: timeScale.totalWidth,
-    totalHeight: horizonY + substrate.depth + machinePack.rowCount * substrate.machineRowHeight,
+    totalHeight: withSubstrate
+      ? horizonY + substrate.depth + machinePack.rowCount * substrate.machineRowHeight
+      : y,
   };
 }

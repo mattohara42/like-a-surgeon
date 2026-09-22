@@ -82,7 +82,11 @@ export function createNodeElement(node, onSelect, onHover) {
     body.insertBefore(ticks, marker);
   }
 
-  const label = svgEl('text', { class: 'node-label' });
+  // `node-name`, not `node-label`: a label-kind node's group already
+  // carries `node-label` from `node-${node.kind}`, and the text element's
+  // `pointer-events: none` would then make every record label on the map
+  // unclickable.
+  const label = svgEl('text', { class: 'node-name' });
   const hook = svgEl('text', { class: 'node-hook' });
 
   g.append(hitArea, span, place, label, hook);
@@ -111,7 +115,7 @@ export function updateNodeElement(g, node, position, zoomLevel, scale, degreeFac
   const ring = g.querySelector('.node-ring');
   const marker = g.querySelector('.node-marker');
   const pip = g.querySelector('.node-pip');
-  const label = g.querySelector('.node-label');
+  const label = g.querySelector('.node-name');
   const hook = g.querySelector('.node-hook');
 
   // Shapes inside sit at the origin; this group carries the position so
