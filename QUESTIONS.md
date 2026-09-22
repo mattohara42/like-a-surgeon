@@ -4,23 +4,19 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
-- **Q16. Where do the dataset version and last-updated date come from?**
-  A20 puts them in the interface at M3, and nothing in the repo holds
-  either value yet. Recommended: `tools/manifest.js` writes a `generatedAt`
-  date into the manifest it already regenerates on every run, plus a
-  hand-bumped `version` read from `package.json`. The alternative is a git
-  date at bundle time, which is more truthful but makes the dev server shell
-  out to git. See `docs/m3-architecture.md` section 5.
-
-- **Q17. How should a track-pair side say what to search for?** About 17 of
-  the 122 track-pair sides are not records ("Black Ark productions",
-  "Warehouse-era DJ sets", "the scratch"), and some real ones carry notes in
-  the title ("The Bridge, produced for MC Shan"). Recommended: an optional
-  `search` field on each side. When it is absent, the query is artist plus
-  title, and `false` means no link is drawn. See
-  `docs/m3-architecture.md` section 7.
+(none)
 
 ## Resolved
+
+- **Q16. Where do the dataset version and last-updated date come from?**
+  Resolved: **the recommendation.** `tools/manifest.js` writes a
+  `generatedAt` date into the manifest it already regenerates on every run,
+  and a hand-bumped `version` comes from `package.json`. See **A77**.
+
+- **Q17. How should a track-pair side say what to search for?** Resolved:
+  **the recommendation.** Each side of `trackPair` gets an optional `search`
+  field. When it is absent, the query is artist plus title. A string
+  replaces the query, and `false` means no link is drawn. See **A78**.
 
 - **Q13. Where does the detail panel sit?** Resolved: **overlay drawer** on
   the right, as in the Strata prototype. The graph does not reflow, and the

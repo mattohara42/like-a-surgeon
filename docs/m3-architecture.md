@@ -149,7 +149,8 @@ with one register-aware sentence each. Collapsed, it stays a visible
 three-swatch key, so it is never truly hidden.
 
 The version stamp sits under the legend: dataset version and last-updated
-date (A20). There is no source for either yet. **Open, Q16.**
+date (A20). Per Q16, the date is the manifest's `generatedAt` and the
+version is `package.json`'s `version`, which the manifest carries.
 
 ## 6. Search
 
@@ -175,11 +176,14 @@ artist and title and nothing else. Links open in a new tab with
 "Listen", because a search does not promise the right recording. The app
 still makes no network request of its own.
 
-**Open, Q17.** Roughly 17 of the 122 track-pair sides are not records ("TB-303
+**Q17, resolved.** Roughly 17 of the 122 track-pair sides are not records ("TB-303
 as intended", "Black Ark productions", "Warehouse-era DJ sets", "the
 scratch"). Several real ones carry editorial notes in the title ("The Bridge,
 produced for MC Shan"). No heuristic can tell these apart, and a search link
-on "Warehouse-era DJ sets" sends a kid somewhere useless.
+on "Warehouse-era DJ sets" sends a kid somewhere useless. Each side of
+`trackPair` therefore takes an optional `search` field. When it is absent,
+the query is artist plus title. A string replaces the query, and `false`
+means no link is drawn.
 
 ## 8. Typography pass
 
@@ -205,7 +209,8 @@ Each step is one PR and one concern, and each is usable on its own:
    something.
 2. Legend and version stamp.
 3. Search.
-4. YouTube links (after Q17).
+4. YouTube links, with the `search` field backfilled on the non-record
+   sides.
 5. Typography pass.
 
 Verification per step is the same headless Chromium check M2 used: load
@@ -214,7 +219,7 @@ every kind, and confirm no console errors. The real gate is a person, so
 after step 5 I will write a one-page note on what to watch for when the
 13-year-old tries it. It will list the questions to hold back from asking him.
 
-## 10. Open questions for Matt
+## 10. Questions raised by this plan (both resolved)
 
 - **Q16. Where do the dataset version and last-updated date come from?**
   Recommended: `tools/manifest.js` already regenerates the manifest on every

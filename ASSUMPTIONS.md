@@ -591,4 +591,14 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   is written in registers in `reading/copy.js` and follows the same writing
   rules as the data. It also counts toward Q15's completeness test, so the
   Kid register cannot appear with an untranslated interface around it.
+- **A77.** (Q16) The manifest gains two top-level keys, `generatedAt` (an
+  ISO date) and `version` (read from `package.json`). Both sit beside the
+  shard lists, and `tools/validate.js` ignores them. The date records when
+  the manifest was last regenerated, which in dev is every server start.
+  That is close enough for a "last updated" line, and a release bundle fixes
+  it at bundle time.
+- **A78.** (Q17) `trackPair.earlier.search` and `trackPair.later.search`
+  are optional. A string overrides the query, and `false` suppresses the
+  link. The validator rejects any other type as a hard error, since a
+  malformed value would silently draw a wrong link.
 
