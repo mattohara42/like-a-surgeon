@@ -705,3 +705,27 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   rather than growing a second `search` field on another schema object
   without asking (BACKLOG).
 
+## Added while building Arrange by (Q19)
+
+- **A94.** An artist that names more than one scene or label goes in the
+  lane of its earliest one: by the artist's own `from` year for labels, and
+  by the scene's start year for scenes. No artist has two of either yet, so
+  nothing on the map depends on this rule today. It exists so the first one
+  that does has a defined place.
+- **A95.** In scene view, label markers (when the Labels layer is on) get a
+  lane of their own, titled "LABELS", rather than being filed under "Not in
+  a scene yet". That lane is for artists. A label does not belong to a
+  scene, so putting it there would state something false.
+- **A96.** Changing the arrangement re-fits the camera rather than
+  carrying the old view across, as a layer toggle does. The old coordinates
+  point at a different part of a different layout, so keeping them would
+  land the reader somewhere arbitrary.
+- **A97.** Lane titles moved from the band layer to a new titles layer
+  drawn above the edges and nodes. The first browser run found that an
+  edge's wide invisible hit area sat over a scene title and swallowed its
+  clicks. Lineage titles moved with them and look unchanged.
+- **A98.** Scene and label lane titles use ordinary letter-spacing, not the
+  wide tracking of the uppercase lineage titles, and sit just before the
+  lane's earliest member rather than at the axis origin. That keeps them
+  near the content when the reader is zoomed into the middle of the map.
+

@@ -8,6 +8,13 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Resolved
 
+- **Q19. Scenes are hard to click, labels get lost: re-lane the map by
+  scene or label?** Raised by Matt after trying the preview. Resolved:
+  **yes, as a separate "Arrange by" control** (Lineage, Scene, Label) rather
+  than tied to the layer toggles. Artists with no scene or label go in **one
+  lane at the bottom**, and it is **built next, before step 5**. See
+  `docs/m3-architecture.md` section 7a.
+
 - **Q18. The app does not run from `file://`, and never has.** Resolved:
   **the recommendation, (a).** `npm run build` now writes `dist/`, where the
   code is flattened into one classic script next to the data. Development

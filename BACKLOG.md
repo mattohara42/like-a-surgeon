@@ -131,6 +131,12 @@ correct response to a good idea arriving mid-milestone.
 (Claude Code: record code smells and architectural concerns here rather than
 fixing them inline.)
 
+- The expanded legend covers the left ends of the lowest lane titles in
+  every arrangement ("NOT IN A SCENE YET", "THE MACHINES", and the lineage
+  titles before it). A lane title drawn at the axis origin can also collide
+  with a member marker in the same years. Both are for the step 5
+  typography pass, which already owns label collisions.
+
 - `signatureTracks` titles mix the title with credit notes ("Big Fun (Inner
   City)", "The Bridge (produced for MC Shan)"), so the YouTube query built
   from them is looser than it could be. Either the same optional `search`

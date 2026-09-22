@@ -186,6 +186,38 @@ on "Warehouse-era DJ sets" sends a kid somewhere useless. Each side of
 the query is artist plus title. A string replaces the query, and `false`
 means no link is drawn.
 
+## 7a. Arrange by (added mid-M3, Q19)
+
+Scenes were hard to find and hard to click, and labels were lost among the
+artists. The reader can now re-lane the map by lineage (the default), by
+scene, or by label, using an "Arrange by" control that is separate from the
+layer toggles. Showing labels and grouping by labels are different questions.
+
+The time axis stays left to right and the layout stays lanes. Only the lane
+key changes. `render/arrange.js` builds a lane plan (the ordered lanes, plus
+which lane a node belongs to) from whatever records are loaded, and
+`computeLayout` packs rows inside whatever lanes it is given. Nodes keep their
+lineage colour in every arrangement, so a mixed scene reads as mixed. Edges
+follow the nodes and need no change.
+
+- **Scene view.** One lane per scene, ordered by start year. An artist goes in
+  the lane of its earliest authored scene. Label markers, when that layer is
+  on, get their own "Labels" lane.
+- **Label view.** One lane per label, ordered by founding year, with the label
+  marker at the head of its roster when that layer is on. An artist goes in
+  the lane of its earliest label. Choosing a label here frames its lane
+  instead of switching the Labels layer on.
+- **Ungrouped.** Artists with no authored scene or label share one lane at
+  the bottom ("Not in a scene yet", "No label on the map yet"). Nobody
+  disappears, and the gap in the data stays visible.
+- **Clickable lane titles.** A scene or label lane is titled with its name,
+  drawn near the lane's earliest member rather than at the axis origin, so it
+  stays close to the content. The title is a button that opens that scene's
+  or label's panel. This is what makes scenes clickable.
+
+Built before step 8 so the label-collision work happens once, on the final
+layout.
+
 ## 8. Typography pass
 
 Everything here uses system font stacks. We do not ship font files, which
