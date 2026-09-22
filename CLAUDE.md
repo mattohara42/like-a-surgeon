@@ -41,6 +41,10 @@ When you catch yourself wanting to add a feature mid-milestone, write it in
   (Note: `file://` blocks `fetch`. Data loads via a tiny dev server script for
   development, and the release path is a single-command bundling of JSON into a
   JS module. Solve this in M1, not later.)
+- The one exception to "no build step" is `npm run build`, which writes the
+  offline release to `dist/` and flattens code and data into classic scripts
+  because `file://` blocks module loads too (A18, A84). It exists for the
+  release copy only. Source stays ES modules, and dev never runs it.
 - SVG for the graph. Canvas only if profiling proves SVG cannot hold 60fps at
   500+ visible nodes, and only after raising it.
 - All tuning values live in one exported `CONFIG` object in `config.js`. No

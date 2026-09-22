@@ -135,6 +135,8 @@ fixing them inline.)
   blocked as cross-origin, and `index.html` does not load the data bundle.
   Raised as **Q18** rather than fixed, because every fix touches the "no
   build step" or "ES modules" constraint.
+  **Resolved:** `npm run build` writes `dist/`, which runs from disk. See
+  A84.
 - The transport opens at `layout.timeScale.yearEnd`, which includes the
   axis's two margin years, so the year readout shows 2028 in 2026. It reads
   as the map claiming to know the future. The cursor should probably clamp

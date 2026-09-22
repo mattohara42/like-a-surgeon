@@ -624,4 +624,16 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   the panel. Back steps through the drawer's stack and moves the camera
   with it. Closing the drawer clears the map highlight but leaves the
   camera where it is.
+- **A84.** (Q18) The release is a folder, `dist/`, rather than extra files
+  beside the source: `dist/index.html`, `dist/data.js` (the data bundle,
+  which used to be `data/data.bundle.js`) and `dist/app.js` (the code).
+  One folder that opens from disk is easier to hand to someone than
+  instructions about which files matter. The code bundle wraps each module
+  in a function scope and runs them in ES module evaluation order. It
+  handles only the syntax this codebase uses and fails the build, with file
+  and line, on anything else. CI already runs the bundler, so that failure
+  shows up there. The source tree is never rewritten, and ES modules remain
+  the only way the code is written. This is the same trade A18 made for
+  data, extended to code, and it is the one place the project has a build
+  step. It exists only for the release copy.
 

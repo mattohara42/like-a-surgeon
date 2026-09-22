@@ -1,7 +1,7 @@
 // Loads the sharded dataset and normalizes it into the shape the renderer
 // needs. Two data sources, picked automatically:
-//   - window.LINEAGE_DATA, set by the release bundle (data/data.bundle.js,
-//     a classic script per ASSUMPTIONS.md A18)
+//   - window.LINEAGE_DATA, set by the release bundle (dist/data.js, a
+//     classic script per ASSUMPTIONS.md A18 and A84)
 //   - dev mode: fetch data/manifest.json, then fetch every record it lists,
 //     served over http by tools/serve.js (solves the file:// fetch block)
 //
