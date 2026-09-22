@@ -163,7 +163,8 @@ structure would be premature.
 
 A four-digit query between the axis bounds becomes a year result: selecting
 it moves the transport cursor to that year and frames that slice of the
-axis. Cities return the nodes from that city, grouped. Arrow keys move
+axis. Places return the nodes from that place, grouped by the part of
+the place that matched (A89). Arrow keys move
 through results, Enter selects, Escape clears. `/` focuses the box, which is
 a courtesy for keyboards, and it is never the only way in, since touch comes
 later.

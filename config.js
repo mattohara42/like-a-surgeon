@@ -188,6 +188,18 @@ export const CONFIG = {
     sceneFramePaddingPx: 90,
   },
 
+  // Search (docs/m3-architecture.md section 6). A linear scan, no index:
+  // at the thousand-artist scale that is still well under a frame.
+  search: {
+    minQueryLength: 2,
+    maxNameResults: 8,
+    maxPlaceGroups: 3,
+    maxPerPlace: 6,
+    // Choosing a year result frames roughly this many years across the
+    // uncovered width of the map.
+    yearFrameSpanYears: 12,
+  },
+
   // The confidence legend. Open on a first visit, because the tiers are
   // part of what the map teaches; after that it remembers the reader's
   // choice. Collapsed, it still shows all three swatches.
