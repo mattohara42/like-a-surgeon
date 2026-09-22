@@ -1,0 +1,17 @@
+{
+  "id": "metroplex",
+  "name": "Metroplex",
+  "type": "label",
+  "lineage": "electronic",
+  "foundedYear": 1985,
+  "closedYear": null,
+  "city": "Detroit",
+  "founders": "Juan Atkins",
+  "ownershipStory": "Atkins founded Metroplex in 1985 to release his own Model 500 material after major labels showed no interest in Detroit's machine music. Unlike Trax in Chicago, Metroplex stayed artist-owned from the start, a structure Derrick May's Transmat and Kevin Saunderson's KMS both followed.",
+  "hook": "Detroit's first artist-owned techno label, started because nobody else would put the records out.",
+  "blurb": {
+    "age7": "Juan Atkins started his own record label, Metroplex, so he could release his own machine music.",
+    "age13": "Atkins founded Metroplex in 1985 after struggling to interest existing labels in Detroit's new electronic sound. Releasing his own music as Model 500, he set a pattern other Detroit techno artists followed: keep the label, and the masters, in the artist's own hands.",
+    "adult": "Metroplex is the founding document of Detroit techno as a self-published genre. Its artist-ownership model, unusual for dance music at the time, is one reason Detroit techno artists mostly avoided the rights disputes that plagued Chicago house labels like Trax."
+  }
+}

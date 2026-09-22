@@ -279,6 +279,7 @@
     machineLane: 4,
     nodeRadius: { min: 5.5, max: 11, perEdge: 1.6 },
     haloScale: 7.5,
+    clearance: { x: 168, y: 62 },   // keep-apart box, sized for the labels
     zoom: { min: 0.28, max: 3.4, step: 1.12 },
     comet: { pxPerSecond: 150, length: 26 },
     dust: { count: 460, parallax: 0.22, driftSeconds: 90 },
@@ -357,6 +358,37 @@
       );
     });
   });
+
+  // Nudge apart anything whose label would collide. Only y moves: x is the
+  // year and is not ours to fudge. Each node stays inside its own lane, so
+  // the lineage reading survives the shuffle. Needed once the roster passes
+  // roughly twenty nodes; the crowded years are where a map earns its keep.
+  function relax(list, centreOf, limit) {
+    const { x: needX, y: needY } = CONFIG.clearance;
+    for (let pass = 0; pass < 40; pass++) {
+      for (let i = 0; i < list.length; i++) {
+        for (let j = i + 1; j < list.length; j++) {
+          const p = list[i], q = list[j];
+          if (Math.abs(q.x - p.x) >= needX) continue;
+          const dy = q.y - p.y;
+          if (Math.abs(dy) >= needY) continue;
+          const push = (needY - Math.abs(dy)) / 2 + 1;
+          const s = dy >= 0 ? 1 : -1;
+          p.y -= s * push; q.y += s * push;
+        }
+      }
+      list.forEach(n => {
+        const mid = centreOf(n);
+        n.y = Math.max(mid - limit, Math.min(mid + limit, n.y));
+      });
+    }
+  }
+
+  lanes.forEach((list, l) => relax(
+    list,
+    () => l * CONFIG.laneHeight + CONFIG.laneHeight / 2,
+    CONFIG.laneHeight * 0.42,
+  ));
 
   // ---- svg scaffolding --------------------------------------------------
   const sky = document.getElementById('sky');

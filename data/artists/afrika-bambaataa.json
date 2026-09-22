@@ -19,7 +19,7 @@
     }
   ],
   "keyProducers": [
-    "Arthur Baker",
+    "arthur-baker",
     "John Robie"
   ],
   "hook": "A Bronx DJ who welded a German art-rock melody to a Japanese drum machine and started electro.",
@@ -33,6 +33,11 @@
       "title": "Planet Rock",
       "year": 1982,
       "whyThisOne": "Three lineages colliding in one twelve-inch single."
+    },
+    {
+      "title": "Looking for the Perfect Beat",
+      "year": 1982,
+      "whyThisOne": "Credited to Afrika Bambaataa and the Soulsonic Force, and proof that Planet Rock's electro template was a repeatable sound, not a one-off."
     }
   ]
 }

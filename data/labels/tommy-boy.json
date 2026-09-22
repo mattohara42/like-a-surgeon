@@ -1,0 +1,17 @@
+{
+  "id": "tommy-boy",
+  "name": "Tommy Boy Records",
+  "type": "label",
+  "lineage": "hiphop",
+  "foundedYear": 1981,
+  "closedYear": null,
+  "city": "New York",
+  "founders": "Tom Silverman",
+  "ownershipStory": "Silverman started Tommy Boy out of his New York apartment in 1981 with a small loan from his parents. Its first major hit, \"Planet Rock,\" effectively launched the label and the electro genre at once, and Tommy Boy went on to release early records by Queen Latifah, De La Soul, and Naughty by Nature before changing hands through Warner Music, then returning to Silverman's ownership in 2017.",
+  "hook": "A record label started in an apartment with a family loan, that ended up releasing \"Planet Rock.\"",
+  "blurb": {
+    "age7": "Tommy Boy Records was a small record label in New York that released \"Planet Rock,\" one of the most important electro songs ever made.",
+    "age13": "Tom Silverman started Tommy Boy in 1981 with money borrowed from his parents. Its breakthrough was \"Planet Rock\" the next year, and the label went on to release early hip-hop by De La Soul and Queen Latifah.",
+    "adult": "Tommy Boy is a useful case study in how small independents drove early hip-hop and electro: a $5,000 loan and one crossover single (\"Planet Rock\") were enough to establish a label that stayed commercially relevant across four decades and several ownership changes."
+  }
+}

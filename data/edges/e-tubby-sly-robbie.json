@@ -1,0 +1,31 @@
+{
+  "id": "e-tubby-sly-robbie",
+  "from": "king-tubby",
+  "to": "sly-and-robbie",
+  "type": "scene",
+  "confidence": "consensus",
+  "evidence": "Sly and Robbie came up in the same 1970s Kingston studio scene as King Tubby, working the same rhythm-as-raw-material logic dub established, though based mainly at Channel One rather than Tubby's own studio; no single documented session ties the two directly.",
+  "year": 1976,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "King Tubby",
+      "title": "King Tubby Meets Rockers Uptown",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Sly and Robbie",
+      "title": "Sinsemilla (Black Uhuru)",
+      "year": 1980
+    },
+    "whatToListenFor": "Tubby empties a finished mix out until the rhythm is nearly all that's left. Sly and Robbie build the rhythm that way from the start: drum and bass carrying the song, everything else arranged around them rather than the other way around."
+  },
+  "explanation": {
+    "age7": "King Tubby and the duo Sly and Robbie were both part of the same 1970s Kingston music scene, where the drums and bass became the most important part of a song.",
+    "age13": "Sly and Robbie worked mostly at a different studio than Tubby, but they were shaped by the same idea that was taking over Kingston at the time: build the song around the rhythm, not around the singer.",
+    "adult": "A scene-level claim rather than a documented collaboration: both acts are central to the same mid-1970s shift in Kingston studio practice toward rhythm-as-foundation, arrived at through overlapping but distinct studio lineages (Tubby's own desk versus the Channel One house band)."
+  },
+  "tags": [
+    "production"
+  ]
+}

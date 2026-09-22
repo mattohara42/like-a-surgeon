@@ -259,9 +259,10 @@
     substrate: { gap: 46, depth: 232, rows: 7, curve: 2.4, converge: 0.07 },
     nodeRadius: { min: 6, max: 12.5, perEdge: 1.7 },
     haloScale: 7,
+    clearance: { x: 168, y: 60 },   // keep-apart box, sized for the labels
     breath: { minMs: 4600, maxMs: 7800, amount: 0.09 },
     comet: { pxPerSecond: 155, length: 26 },
-    beam: { widthTop: 5, widthBottom: 26 },
+    beam: { widthTop: 4, widthBottom: 13 },
     spread: { hopMs: 320, maxHops: 4 },
     dust: { count: 480, parallax: 0.2 },
     nebulaParallax: 0.9,
@@ -339,6 +340,38 @@
       n.seed = hash(n.id);
     });
   });
+
+  // Nudge apart anything whose label would collide. Only y moves: x is the
+  // year and is not ours to fudge. Each node stays inside its own lane, so
+  // the lineage reading survives the shuffle. Needed once the roster passes
+  // roughly twenty nodes; the crowded years are where a map earns its keep.
+  function relax(list, centreOf, limit) {
+    const { x: needX, y: needY } = CONFIG.clearance;
+    for (let pass = 0; pass < 40; pass++) {
+      for (let i = 0; i < list.length; i++) {
+        for (let j = i + 1; j < list.length; j++) {
+          const p = list[i], q = list[j];
+          if (Math.abs(q.x - p.x) >= needX) continue;
+          const dy = q.y - p.y;
+          if (Math.abs(dy) >= needY) continue;
+          const push = (needY - Math.abs(dy)) / 2 + 1;
+          const s = dy >= 0 ? 1 : -1;
+          p.y -= s * push; q.y += s * push;
+        }
+      }
+      list.forEach(n => {
+        const mid = centreOf(n);
+        n.y = Math.max(mid - limit, Math.min(mid + limit, n.y));
+      });
+    }
+  }
+
+  lanes.forEach((list, l) => relax(
+    list,
+    () => l * CONFIG.laneHeight + CONFIG.laneHeight / 2,
+    CONFIG.laneHeight * 0.42,
+  ));
+
   machines.forEach((n, i) => {
     n.x = xOf(n.year);
     n.y = FLOOR_Y + (i % 2) * 34;
@@ -474,9 +507,9 @@
       // crosses the horizon, which is exactly what the claim says happened.
       const bid = 'beam' + i;
       const bg = el('linearGradient', { id: bid, gradientUnits: 'userSpaceOnUse', x1: 0, y1: e.b.y, x2: 0, y2: e.a.y });
-      bg.appendChild(el('stop', { offset: '0%', 'stop-color': cb, 'stop-opacity': 0.5 }));
-      bg.appendChild(el('stop', { offset: '55%', 'stop-color': ca, 'stop-opacity': 0.16 }));
-      bg.appendChild(el('stop', { offset: '100%', 'stop-color': ca, 'stop-opacity': 0.04 }));
+      bg.appendChild(el('stop', { offset: '0%', 'stop-color': cb, 'stop-opacity': 0.62 }));
+      bg.appendChild(el('stop', { offset: '45%', 'stop-color': ca, 'stop-opacity': 0.3 }));
+      bg.appendChild(el('stop', { offset: '100%', 'stop-color': ca, 'stop-opacity': 0.55 }));
       defs.appendChild(bg);
       const wT = CONFIG.beam.widthTop, wB = CONFIG.beam.widthBottom;
       const beam = el('path', {

@@ -1,0 +1,32 @@
+{
+  "id": "e-perry-sherwood",
+  "from": "lee-perry",
+  "to": "adrian-sherwood",
+  "type": "direct",
+  "confidence": "consensus",
+  "evidence": "Sherwood has described Jamaican dub production, including Perry's Black Ark work, as formative in numerous interviews across his career (Red Bull Music Academy, AllMusic, and others); no single documented meeting or collaboration between the two anchors the claim, so it sits at consensus rather than documented.",
+  "year": 1979,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Lee \"Scratch\" Perry",
+      "title": "Black Ark productions",
+      "year": 1976
+    },
+    "later": {
+      "artist": "African Head Charge",
+      "title": "My Life in a Hole in the Ground",
+      "year": 1981
+    },
+    "whatToListenFor": "Both records treat the mix itself as the instrument: sounds appear and vanish, echo is pushed to the point of distortion, and the 'song' is really a shifting arrangement rather than a fixed structure."
+  },
+  "explanation": {
+    "age7": "Adrian Sherwood learned dub studio tricks that were first developed by Jamaican producers like Lee Perry, and used them to make his own records in London.",
+    "age13": "On-U Sound applies the same studio-as-instrument approach Perry pioneered at the Black Ark, but with a different cast of musicians and a British post-punk audience.",
+    "adult": "This is a lineage-of-technique claim rather than a documented collaboration or citation, hence the consensus tier: widely accepted by critics and by Sherwood's own framing of his work, but not tied to one traceable event."
+  },
+  "tags": [
+    "production",
+    "technology"
+  ]
+}

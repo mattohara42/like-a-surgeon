@@ -1,0 +1,31 @@
+{
+  "id": "e-pil-gangoffour",
+  "from": "public-image-ltd",
+  "to": "gang-of-four",
+  "type": "scene",
+  "confidence": "consensus",
+  "evidence": "PiL and Gang of Four are both central to the 1978-79 UK post-punk moment's move away from punk's simple format, PiL toward dub space and Gang of Four toward funk-and-dub-influenced rhythm, without a documented instance of direct contact between the two acts.",
+  "year": 1979,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Public Image Ltd",
+      "title": "Public Image",
+      "year": 1978
+    },
+    "later": {
+      "artist": "Gang of Four",
+      "title": "At Home He's a Tourist",
+      "year": 1979
+    },
+    "whatToListenFor": "PiL empties the arrangement out around the bass. Gang of Four does something closer to the opposite: Andy Gill's guitar stabs into the gaps Dave Allen's bassline leaves, funk-tight rather than dub-spacious, but the same basic idea of building the song from the rhythm section first."
+  },
+  "explanation": {
+    "age7": "PiL and Gang of Four were both part of the same wave of bands after punk who wanted the bass and drums, not the guitar, to lead the song.",
+    "age13": "Both bands belong to the same 1978-79 post-punk moment and share a rhythm-first approach, developed independently rather than through direct contact.",
+    "adult": "Scene-level claim, same caveats as e-pil-joydivision: real shared moment and structural approach, no documented direct interaction."
+  },
+  "tags": [
+    "production"
+  ]
+}

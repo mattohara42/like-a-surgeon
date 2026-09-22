@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lineage</title>
+<style>
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: #05060a;
+    color: #e8e9ec;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    overflow: hidden;
+  }
+  #app {
+    position: fixed;
+    inset: 0;
+    /* A cheap starfield: two layers of repeating radial-gradient dots at
+       different scales/offsets, no images. Purely decorative, so it's CSS
+       here rather than a CONFIG value -- nothing in render/ reads it. */
+    background-color: #05060a;
+    background-image:
+      radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.35), transparent),
+      radial-gradient(1px 1px at 90px 120px, rgba(255,255,255,0.25), transparent),
+      radial-gradient(1.5px 1.5px at 160px 60px, rgba(255,255,255,0.3), transparent),
+      radial-gradient(1px 1px at 220px 180px, rgba(255,255,255,0.2), transparent),
+      radial-gradient(1px 1px at 50px 200px, rgba(255,255,255,0.3), transparent);
+    background-repeat: repeat;
+    background-size: 240px 240px;
+  }
+  .graph-svg {
+    display: block;
+    cursor: grab;
+    touch-action: none;
+  }
+  .graph-svg.dragging {
+    cursor: grabbing;
+  }
+  .graph-svg:focus {
+    outline: none;
+  }
+  .node {
+    cursor: pointer;
+  }
+  .node-label, .node-hook {
+    pointer-events: none;
+    user-select: none;
+  }
+  .edge {
+    cursor: pointer;
+  }
+  #status {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    font-size: 13px;
+    color: #9aa0a8;
+    pointer-events: none;
+  }
+  #status.error {
+    color: #e06c75;
+  }
+</style>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="status">Loading&hellip;</div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

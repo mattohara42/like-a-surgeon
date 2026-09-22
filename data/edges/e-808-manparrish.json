@@ -1,0 +1,32 @@
+{
+  "id": "e-808-manparrish",
+  "from": "tr-808",
+  "to": "man-parrish",
+  "type": "technological",
+  "confidence": "consensus",
+  "evidence": "Multiple music-history sources describe 'Hip Hop, Be Bop (Don't Stop)' as among the very first records built around a TR-808, released months before 'Planet Rock.' Which record actually came first is disputed between the two camps, so this is treated as a widely repeated claim rather than a settled fact.",
+  "year": 1982,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Roland",
+      "title": "TR-808 factory voices",
+      "year": 1980
+    },
+    "later": {
+      "artist": "Man Parrish",
+      "title": "Hip Hop, Be Bop (Don't Stop)",
+      "year": 1982
+    },
+    "whatToListenFor": "Almost the entire record is 808 and synthesizer, with the drum machine given none of the studio disguise a live band would demand. Compare the cowbell and clap to 'Planet Rock' and they are close to identical factory sounds."
+  },
+  "explanation": {
+    "age7": "This song used the same drum machine as 'Planet Rock,' maybe even a little earlier.",
+    "age13": "Both this record and 'Planet Rock' are often called the first to build a whole song around the 808, and nobody has settled which came first. Both are true in the sense that matters: the machine had arrived and two different scenes reached for it at once.",
+    "adult": "A useful teaching case for tiering: the 'first' claim is popular-history common knowledge repeated in liner notes and retrospectives on both sides, but it is not resolvable from primary sources here, so it earns consensus rather than documented, with the dispute stated plainly rather than picking a winner."
+  },
+  "demoId": "demo-808-voices",
+  "tags": [
+    "technology"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-knuckles-atkins",
+  "from": "frankie-knuckles",
+  "to": "juan-atkins",
+  "type": "scene",
+  "confidence": "consensus",
+  "evidence": "Chicago house and Detroit techno are widely described in music histories as parallel, mutually aware Midwest scenes that traded records and radio play through the mid-1980s, without a single documented direct meeting between Knuckles and Atkins anchoring the claim.",
+  "year": 1984,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Frankie Knuckles",
+      "title": "Warehouse-era DJ sets",
+      "year": 1982
+    },
+    "later": {
+      "artist": "Model 500 (Juan Atkins)",
+      "title": "No UFOs",
+      "year": 1985
+    },
+    "whatToListenFor": "Detroit techno's four-on-the-floor structure owes something to house records like Knuckles' sets reaching Detroit via radio and record pools; listen for how close the underlying drum pattern is, even as the two genres' moods diverge sharply."
+  },
+  "explanation": {
+    "age7": "Chicago house music and Detroit techno grew up around the same time, and DJs and producers in both cities heard each other's records.",
+    "age13": "Detroit and Chicago are close enough that records, radio shows, and club culture crossed between the two scenes regularly in the early-to-mid 1980s.",
+    "adult": "Consensus tier: the general cross-pollination between the two scenes is well established, but this edge does not claim a specific documented act of Knuckles influencing Atkins directly."
+  },
+  "tags": [
+    "technology"
+  ]
+}

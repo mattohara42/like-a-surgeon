@@ -1,0 +1,31 @@
+{
+  "id": "e-pistols-clash",
+  "from": "sex-pistols",
+  "to": "the-clash",
+  "type": "scene",
+  "confidence": "consensus",
+  "evidence": "The Sex Pistols and the Clash are the two foundational bands of the 1976-77 London punk scene, sharing bills (including the 100 Club Punk Festival, September 1976) and rival managers (Malcolm McLaren and Bernie Rhodes), though no single documented act of direct musical influence between the two anchors the claim beyond shared scene.",
+  "year": 1976,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Sex Pistols",
+      "title": "Anarchy in the U.K.",
+      "year": 1976
+    },
+    "later": {
+      "artist": "The Clash",
+      "title": "White Riot",
+      "year": 1977
+    },
+    "whatToListenFor": "Both are built from the same three-chord urgency, but listen to how directly \"White Riot\" addresses a specific real event (the 1976 Notting Hill Carnival riot) where \"Anarchy in the U.K.\" stays in the realm of general provocation."
+  },
+  "explanation": {
+    "age7": "The Sex Pistols and the Clash were the two most important punk bands in London at the same time, and they knew about each other.",
+    "age13": "The two bands played some of the same shows and had rival managers, part of the same small, competitive punk scene rather than one directly copying the other.",
+    "adult": "A scene-level claim rather than a documented act of direct influence: both bands drew on the same 1976 London punk moment independently as much as from each other."
+  },
+  "tags": [
+    "production"
+  ]
+}

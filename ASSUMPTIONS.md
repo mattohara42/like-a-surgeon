@@ -113,14 +113,152 @@ Every decision made without asking. Append, do not rewrite.
   (`scene.memberIds`, `edge.from`/`to`, `demoId`, thread steps) stay hard
   errors, since those are added alongside the nodes they connect.
 
+## Added during the M1 cleanup pass (backlog items resolved before Track D batch 1)
+
+- **A27.** The six seed artists short on `signatureTracks` (below `SCHEMA.md`'s
+  2-3 target) were backfilled to two entries each with real, verified tracks
+  rather than by inventing plausible-sounding ones. Every added title and
+  year was checked against web sources before being written in, per
+  `CLAUDE.md`'s "never invent a date" rule; this took real search effort
+  and is not a rubber-stamp fix.
+- **A28.** This pass originally authored the five scenes and eight labels
+  referenced by existing artists but never written. While that work was in
+  flight, data batches 1 and 2 merged into `main` and independently
+  authored the same records. Rather than reconcile two separately
+  researched versions field by field, `main`'s versions were kept wholesale
+  and this pass's own copies dropped; nothing here should be read as a
+  claim about their content. See those batches' own `BACKLOG.md` and
+  `ASSUMPTIONS.md` entries for how they were sourced.
+- **A29.** `data/edges/e-tubby-kraftwerk-nonedge.json` renamed to
+  `e-tubby-atkins-resemblance.json` (file and `id` both), since its old
+  name referenced Kraftwerk while its actual `from`/`to` are King Tubby and
+  Juan Atkins, a stale naming mismatch rather than a content problem. Its
+  content was kept substantively as-is (an honest `asserted`-tier edge that
+  explicitly states "no documented connection" and frames itself as
+  resemblance, not transmission) rather than removed, since it demonstrates
+  a real, defensible pattern this dataset needs: `BUILD_PLAN.md`'s M1 gate
+  itself asks Matt to review "the twenty edges you are least sure about,"
+  so having at least one clean example of that tier in place is useful, not
+  filler. Flagged as **Q9** in `QUESTIONS.md` in case Matt would rather cut
+  it than keep it.
+
+## Added while building M2 (docs/m2-architecture.md)
+
+- **A30.** Machines get their own dedicated band above the six lineage
+  lanes rather than sharing a lane with the lineage named in
+  `machine.lineage`. Resolves the "whether machines should share lanes with
+  artists or get their own band" open question `BACKLOG.md` had been
+  carrying since M1. `machine.lineage` still drives `edge.crossLineage`
+  computation, it just isn't what positions a machine vertically. This is
+  layout code, cheap to reverse if it reads wrong once there's more machine
+  data to look at.
+- **A31.** Node/edge position (x1/x2/y, i.e. where something sits on the
+  time axis) is left in content coordinates and scales with the viewport
+  transform on purpose. Every other visual property, marker radius, stroke
+  width, font size, hit-area size, dash length, is divided by the current
+  scale before being set, so it reads as a constant size on screen
+  regardless of zoom level. Found the hard way: the first version set all
+  of these in content-space units too, and they were multiplying with the
+  zoom transform on top of the already-tiered collapsed/mid/detail sizing,
+  blowing up to hundreds of screen pixels at high zoom and shrinking to
+  nothing at low zoom.
+
+## Added restyling M2 to Matt's "galaxy" direction
+
+Matt asked for a visual more like a 3D galaxy: colorful glowing planets
+sized by popularity, linked by trails, click one to zoom to another. That
+collides directly with `SPEC.md` ("Layout is a left-to-right time axis with
+horizontal lanes by lineage. Explicitly not force-directed.") and
+`CLAUDE.md`'s anti-goals ("No force-directed layout, it looks impressive
+and destroys chronological reading"), which exist because the project's
+success test depends on a reader seeing *when* things happened relative to
+each other. Raised this in chat before touching anything; Matt chose
+restyling the existing chronological layout as glowing planets/trails over
+a true 3D/force-directed rebuild, so the time axis and lineage lanes are
+unchanged, only the visual language changed.
+
+- **A32.** Node size ("planet size") is driven by graph connectedness
+  (in+out edge count for that node), not record sales. Matt's original
+  framing was "more popular artists that sold more records are larger,"
+  but no sales/certification data exists in the schema, and real sales
+  figures are exactly the kind of thing `CLAUDE.md`'s accuracy rules would
+  need serious sourcing discipline for (contested, patchy for older and
+  non-US/non-mainstream acts, which is a lot of this roster). Raised this
+  as a separate question; Matt chose connectedness. Radius scales with the
+  square root of degree (not degree directly), so visual area rather than
+  radius grows roughly linearly with connections, standard bubble-chart
+  practice. If real sales/certification data gets added to the schema
+  later, this is a one-function change in `render/graph.js`
+  (`computeDegreeFactors`), not a rearchitecture.
+- **A33.** Click-to-fly-to (`render/viewport.js`'s `flyTo`) animates the
+  pan/zoom transform to center and zoom in on whatever was clicked, rather
+  than jumping instantly, per Matt's "click on it to zoom to another planet
+  or cluster." Any user-initiated pan or zoom interrupts an in-flight
+  fly-to instead of fighting it, so grabbing the view mid-animation always
+  wins.
+- Glow (a blurred, larger, low-opacity copy of each node's/edge's own color
+  behind the crisp shape) uses two *shared* SVG filters, one for nodes and
+  one for edges, rather than one filter instance per element. Filters are
+  costly enough in SVG that per-element instances would have been a real
+  perf risk; a shared filter whose blur radius is updated once per frame
+  (same counter-scaling approach as everything else, see A31) costs two
+  attribute writes regardless of how many nodes/edges are on screen.
+  Re-measured the M2 perf gate after this restyle: `render()` averages
+  3.2ms (was 1.9ms pre-restyle), max 13.5ms, still 0/90 sampled frames over
+  the 16.7ms budget.
+
+## Added reconciling a second parallel Track D session against merged main
+
+A separate session (this one, working from an earlier `main`) independently
+researched and wrote 8 artists, 6 labels, and 2 scenes covering the same
+dub/electro/Detroit/Chicago ground the by-then-merged data batches 1 and 2
+had already covered, plus M2 on top of that. Two Claude sessions reaching
+the same real facts (the Belleville Three friendship, Arthur Baker's
+production credit, King Tubby mixing Augustus Pablo, Sly and Robbie's
+riddim economy, Frankie Knuckles at the Warehouse) independently, from
+separately-run research, reads as convergent validation of the underlying
+history, not as either session being sloppy; Matt's framing, on being told
+about the collision. Handling it as a design smell to fix would be the
+wrong lesson.
+
+- **A34.** Reconciliation kept `main`'s already-merged versions wholesale
+  for every artist/label/scene both sessions wrote (Derrick May, Kevin
+  Saunderson, Arthur Baker, Augustus Pablo, Sly and Robbie, Frankie
+  Knuckles; the Metroplex/Kling Klang/Tommy Boy/Trax/Transmat labels; the
+  Düsseldorf Electronic and Chicago House scenes), rather than
+  reconciling field-by-field, since both were independently sourced and
+  comparably rigorous on inspection (spot-checked `derrick-may.json`
+  side by side). This session's branch was rebuilt from scratch on top of
+  current `main`, keeping only what `main` didn't already have: **Man
+  Parrish** and **Mad Professor** as artists, **Ariwa** and **Rockers
+  International** as labels, and four connecting edges
+  (`e-808-manparrish`, `e-kraftwerk-may`, `e-perry-madprofessor`,
+  `e-tubby-madprofessor`).
+- **A35.** Dropped this session's `e-knuckles-phuture` edge (Frankie
+  Knuckles' Warehouse/Power Plant sets as the scene Phuture grew up in,
+  `consensus` tier) rather than add it alongside `main`'s already-merged
+  `e-hardy-phuture` (Ron Hardy's Music Box tape circulation of 'Acid
+  Tracks' before release, `documented` tier). Both claims are real, but
+  Hardy's is the more specific and better-sourced version of essentially
+  the same Chicago-house-scene-to-Phuture transmission; keeping both would
+  have padded the edge count with a strictly weaker duplicate rather than
+  adding real coverage.
+- **A36.** `main`'s `e-knuckles-atkins` and `e-hardy-phuture` already
+  establish real precedent for edge `type: "scene"` (a scene-level
+  cultural influence reaching a specific artist, `from` the influencing
+  figure `to` the influenced artist), which this session's own `BACKLOG.md`
+  entry had flagged as having no worked example anywhere in the dataset.
+  That flag is now stale; see the `BACKLOG.md` correction alongside this
+  entry. `edge: type: "label"` still has no example.
+
 ## Added during the visual direction pass
 
-- **A27.** Visual exploration lives in `design/` as standalone prototypes
+- **A37.** Visual exploration lives in `design/` as standalone prototypes
   rather than in a `src/`. `BUILD_PLAN.md` gates the renderer at M2 behind
   an incomplete M1, but `CLAUDE.md`'s working style says "lock design before
   implementing." Prototypes satisfy the second without breaking the first:
   they are throwaway, they import nothing, and nothing imports them.
-- **A28.** `design/data-snapshot.js` is a generated snapshot of `data/`, written by
+- **A38.** `design/data-snapshot.js` is a generated snapshot of `data/`, written by
   `tools/design-snapshot.js` as a classic script that sets `window.LINEAGE`.
   `file://` blocks `fetch` and ES module imports but not `<script src>`, so
   this is the only shape that lets a prototype open by double-click with no
@@ -130,13 +268,31 @@ Every decision made without asking. Append, do not rewrite.
   rather than gitignored: a prototype that needs `npm install` before it
   opens defeats the point of a prototype. It carries a "do not edit"
   header instead.
-- **A29.** Lineage colour is a separate system from the `palette` field on
+- **A39.** Lineage colour is a separate system from the `palette` field on
   scene records. Scene palettes drive the scene clouds in the prototypes;
   the four lineage colours (rock, dub, hip-hop, electronic) are invented in
   each prototype and chosen for hue separation on a dark ground. If a
   direction is picked, these move into `CONFIG` properly and should be
   checked against colour-vision deficiency before they ship.
-- **A30.** The prototypes place machines three different ways on purpose, to
-  settle `BACKLOG.md`'s open question by looking: own lane at the bottom
-  (01), mixed among artists with an angular form (02), and on a receding
-  floor beneath everything with light rising from it (03).
+- **A40.** The prototypes place machines three different ways on purpose:
+  own lane at the bottom (01), mixed among artists with an angular form
+  (02), and on a receding floor beneath everything with light rising from
+  it (03). **A30** had already settled this for `render/` (own band, above
+  the lanes) while this branch was cut from a stale `main`; that is now
+  four answers to one question, all resting on a two-machine sample. A30
+  itself says it is "cheap to reverse ... once there's more machine data",
+  so this is flagged for Matt rather than decided here.
+- **A41.** None of the prototypes import `render/`, and all three omit
+  label nodes and render scenes as atmosphere rather than as graph nodes,
+  where `render/` draws both as nodes in the lanes. Not a considered
+  disagreement at the time (this branch was cut before `render/` existed on
+  `main`), but it is a real fork and the README puts it to Matt as one.
+  Keeping the prototypes free of `render/` is deliberate: three variations
+  sharing one renderer would have produced three skins, not three
+  arguments.
+- **A42.** Node collision is resolved by moving `y` only, never `x`, and
+  clamping each node back inside its own lane. `x` is the year and fudging
+  it would corrupt the one axis the project cannot afford to lie about.
+  Needed once the roster passed roughly twenty nodes; the first version of
+  these prototypes was built against a 12-record snapshot where staggered
+  offsets were enough.

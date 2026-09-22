@@ -1,0 +1,38 @@
+{
+  "id": "mad-professor",
+  "name": "Mad Professor",
+  "sortName": "Mad Professor",
+  "type": "artist",
+  "lineage": "dub",
+  "activeFrom": 1979,
+  "activeTo": null,
+  "originCity": "Georgetown",
+  "originCountry": "Guyana",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "ariwa",
+      "from": 1979,
+      "to": null
+    }
+  ],
+  "keyProducers": [],
+  "hook": "A Guyanese electronics repairman in south London built his own mixing desk and carried Tubby-style dub into a second generation and a second country.",
+  "blurb": {
+    "age7": "He moved to London as a boy, built his own recording equipment, and used it to keep dub music going for a new generation.",
+    "age13": "Neil Fraser, known as Mad Professor, moved from Guyana to London at thirteen and worked repairing electronics before building his own mixing board. In 1979 he opened Ariwa, a four-track studio in his living room, and used it to continue the version-and-echo tradition King Tubby and Lee Perry had built in Kingston, now from London.",
+    "adult": "Mad Professor represents dub's diaspora phase: the technique migrating from Kingston to the UK's Jamaican community, continuing on self-built equipment rather than commercial studios, the same material condition that shaped the original Kingston scene. His work later crossed into non-reggae contexts, including a 1995 dub remix of Massive Attack's 'Protection,' carrying dub structure directly into trip-hop's toolkit."
+  },
+  "signatureTracks": [
+    {
+      "title": "Dub Me Crazy! The Beginning of a New Cult",
+      "year": 1982,
+      "whyThisOne": "The first release in Mad Professor's long-running Dub Me Crazy series, and the record that established Ariwa's house sound."
+    },
+    {
+      "title": "No Protection",
+      "year": 1995,
+      "whyThisOne": "A full dub remix of Massive Attack's 'Protection' album, carrying King Tubby's structural logic directly into 1990s trip-hop."
+    }
+  ]
+}
