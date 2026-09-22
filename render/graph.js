@@ -165,7 +165,17 @@ export function createGraph(container, data, callbacks = {}) {
     layers = CONFIG.layers.defaults,
     initialViewport = null,
     initialYear = null,
+    initialSelectedId = null,
+    // Screen px covered on the right by the reading drawer. A function
+    // because the drawer opens and closes; the camera centres selections
+    // in whatever width is left uncovered.
+    rightInset = () => 0,
   } = callbacks;
+
+  // The node or edge the reader is reading about, highlighted on the map.
+  // Carried across rebuilds by the caller, since a layer toggle recreates
+  // the whole graph.
+  let selectedId = initialSelectedId;
 
   // Which record types draw, from the reader's layer toggles. Scenes render
   // as atmosphere and so never take a lane row even when on; labels and
@@ -270,6 +280,11 @@ export function createGraph(container, data, callbacks = {}) {
   // thrashing), and the container's size doesn't change from panning or
   // zooming anyway.
   let containerRect = container.getBoundingClientRect();
+  const viewWidth = () => Math.max(1, containerRect.width - rightInset());
+
+  function flyToContent(contentX, contentY, scale) {
+    flyTo(vp, contentX, contentY, scale, viewWidth(), containerRect.height, timedRender);
+  }
 
   // Click-to-fly-to: center and zoom in on whatever was clicked, then tell
   // the caller what got selected. Runs against the render() driven directly
@@ -279,8 +294,58 @@ export function createGraph(container, data, callbacks = {}) {
     // Clicking something the cursor has not reached yet moves the cursor
     // to it. Flying to a node and leaving it dimmed would be absurd.
     transport?.ensureVisible(item.startYear ?? item.year);
+    selectedId = item.id;
     onSelect(item);
-    flyTo(vp, contentX, contentY, CONFIG.zoom.flyToScale, containerRect.width, containerRect.height, timedRender);
+    flyToContent(contentX, contentY, CONFIG.zoom.flyToScale);
+  }
+
+  // Programmatic selection, for panel links and (later) search. Same camera
+  // move and cursor rule as a click, without calling back into onSelect:
+  // the caller is the one that asked. Returns false when the target is not
+  // on the map (its layer is off, or it has no year to place it by).
+  function focusNode(id) {
+    const entry = positionedNodes.find((e) => e.node.id === id);
+    if (!entry) return false;
+    transport?.ensureVisible(entry.node.startYear);
+    selectedId = id;
+    flyToContent(entry.pos.x1, entry.pos.y, CONFIG.zoom.flyToScale);
+    return true;
+  }
+
+  function focusEdge(id) {
+    const entry = boundEdges.find((e) => e.edge.id === id);
+    if (!entry) return false;
+    transport?.ensureVisible(entry.edge.year);
+    selectedId = id;
+    const { x1, y1, x2, y2 } = entry.anchors;
+    flyToContent((x1 + x2) / 2, (y1 + y2) / 2, CONFIG.zoom.flyToScale);
+    return true;
+  }
+
+  // Frames a set of nodes, for a scene: scenes are atmosphere rather than
+  // markers, so "go to this scene" means "show me its members together".
+  function frameNodes(ids) {
+    const wanted = new Set(ids);
+    const entries = positionedNodes.filter((e) => wanted.has(e.node.id));
+    if (entries.length === 0) return false;
+    const xs = entries.map((e) => e.pos.x1);
+    const ys = entries.map((e) => e.pos.y);
+    const minX = Math.min(...xs);
+    const maxX = Math.max(...xs);
+    const minY = Math.min(...ys);
+    const maxY = Math.max(...ys);
+    const pad = CONFIG.panel.sceneFramePaddingPx;
+    const usableW = Math.max(1, viewWidth() - pad * 2);
+    const usableH = Math.max(1, containerRect.height - pad * 2 - CONFIG.viewport.fitBottomInsetPx);
+    const scale = Math.min(
+      CONFIG.panel.sceneMaxScale,
+      usableW / Math.max(1, maxX - minX),
+      usableH / Math.max(1, maxY - minY),
+    );
+    transport?.ensureVisible(Math.min(...entries.map((e) => e.node.startYear)));
+    selectedId = null;
+    flyToContent((minX + maxX) / 2, (minY + maxY) / 2, scale);
+    return true;
   }
 
   // Which shared gradients this edge draws with. Beams are coloured by the
@@ -347,9 +412,11 @@ export function createGraph(container, data, callbacks = {}) {
           nodeElements.set(node.id, created);
           updateNodeElement(created, node, pos, level, vp.scale, degreeFactor);
           created.classList.toggle('unborn', node.startYear > year);
+          created.classList.toggle('selected', node.id === selectedId);
         } else {
           updateNodeElement(el, node, pos, level, vp.scale, degreeFactor);
           el.classList.toggle('unborn', node.startYear > year);
+          el.classList.toggle('selected', node.id === selectedId);
         }
       } else if (el) {
         el.remove();
@@ -385,9 +452,11 @@ export function createGraph(container, data, callbacks = {}) {
           edgeElements.set(edge.id, created);
           updateEdgeElement(created, edge, anchors, vp.scale, gradientIdsFor(edge));
           created.classList.toggle('unborn', edge.year > year);
+          created.classList.toggle('selected', edge.id === selectedId);
         } else {
           updateEdgeElement(el, edge, anchors, vp.scale, gradientIdsFor(edge));
           el.classList.toggle('unborn', edge.year > year);
+          el.classList.toggle('selected', edge.id === selectedId);
         }
       } else if (el) {
         el.remove();
@@ -447,6 +516,14 @@ export function createGraph(container, data, callbacks = {}) {
     },
     transport,
     layers,
+    focusNode,
+    focusEdge,
+    frameNodes,
+    selectedId: () => selectedId,
+    clearSelection: () => {
+      selectedId = null;
+      scheduleRender();
+    },
     destroy: () => {
       resizeObserver.disconnect();
       transport?.stop();
