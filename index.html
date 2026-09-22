@@ -225,6 +225,30 @@
   .link-dir { text-transform: uppercase; letter-spacing: 0.16em; min-width: 42px; }
   .link-name { flex: 1 1 auto; }
 
+  /* ---- confidence legend (docs/m3-architecture.md, section 5) ------ */
+  #legend {
+    position: fixed; left: 18px; z-index: 7; max-width: 300px;
+    padding: 12px 14px 10px; border-radius: 10px;
+    background: rgba(6, 10, 22, 0.78); border: 1px solid var(--hairline);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  }
+  .legend-toggle {
+    display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 12px;
+    background: none; border: 0; padding: 0; cursor: pointer; color: var(--ink);
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+  }
+  .legend-toggle:focus-visible { outline: 1px solid rgba(150,180,235,0.7); outline-offset: 4px; }
+  .legend-caret { color: var(--dim); font-size: 14px; letter-spacing: 0; }
+  .legend-intro { font-size: 13px; line-height: 1.5; color: var(--body); margin: 10px 0 8px; }
+  .legend-row { margin: 8px 0 0; }
+  .legend-row .tier { font-size: 13px; }
+  .legend-explain { font-size: 12.5px; line-height: 1.45; color: var(--dim); margin: 3px 0 0 30px; }
+  .legend-compact { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 9px; font-size: 12px; }
+  .legend-stamp {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--dim);
+    margin: 10px 0 0; padding-top: 8px; border-top: 1px solid var(--hairline);
+  }
+
   #status {
     position: fixed; top: 14px; left: 18px; z-index: 6;
     font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
@@ -256,6 +280,7 @@
   <div id="registers" role="group"></div>
   <div id="transport"></div>
   <aside id="panel"></aside>
+  <div id="legend"></div>
   <script type="module" src="main.js"></script>
 </body>
 </html>

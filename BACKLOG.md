@@ -131,6 +131,15 @@ correct response to a good idea arriving mid-milestone.
 (Claude Code: record code smells and architectural concerns here rather than
 fixing them inline.)
 
+- The map barely distinguishes `documented` from `consensus`: the only
+  difference is stroke width, 2px against 1.5px (`CONFIG.edge.strokeWidth`),
+  and at the map's opacity that half pixel does not read. The legend draws
+  from the same values, so it shows the problem plainly rather than hiding
+  it. `asserted` is fine, because it is dashed. The fix is a clearer
+  encoding, such as a wider gap in width, a second dash pattern, or
+  consensus drawn slightly fainter. That is a renderer decision, so it
+  belongs in the typography pass (M3 step 5) or with Matt, not in the legend.
+
 - The app has never run from `file://`: the ES module entry point is
   blocked as cross-origin, and `index.html` does not load the data bundle.
   Raised as **Q18** rather than fixed, because every fix touches the "no

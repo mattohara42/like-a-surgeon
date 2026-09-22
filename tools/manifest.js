@@ -2,7 +2,7 @@
 // structure. Called by serve.js, validate.js, and bundle.js so all three
 // see the same file list. data/manifest.json is generated output; nothing
 // hand-edits it (see data/SCHEMA.md).
-import { readdirSync, writeFileSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 export const SHARD_TYPES = [
@@ -15,8 +15,20 @@ export const SHARD_TYPES = [
   'threads',
 ];
 
+// What the reader sees as the map's version stamp (A20, Q16, A77). The
+// version is bumped by hand in package.json when the dataset changes in a
+// way worth announcing. The date is when this manifest was generated: in
+// dev that is every server start, and in dist/ it is the build.
+function buildMeta(dataDir) {
+  const pkg = JSON.parse(readFileSync(join(dataDir, '..', 'package.json'), 'utf8'));
+  return {
+    version: pkg.version ?? null,
+    generatedAt: new Date().toISOString().slice(0, 10),
+  };
+}
+
 export function buildManifest(dataDir) {
-  const manifest = {};
+  const manifest = { meta: buildMeta(dataDir) };
   for (const shard of SHARD_TYPES) {
     const dir = join(dataDir, shard);
     let entries = [];

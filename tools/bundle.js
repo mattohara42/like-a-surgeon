@@ -38,7 +38,7 @@ const ENTRY_TAG = `<script type="module" src="${ENTRY}"></script>`;
 
 function bundleData() {
   const manifest = writeManifest(DATA_DIR);
-  const bundle = {};
+  const bundle = { meta: manifest.meta };
   let count = 0;
   for (const shard of SHARD_TYPES) {
     bundle[shard] = {};

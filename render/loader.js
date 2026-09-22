@@ -30,7 +30,7 @@ async function fetchJson(path) {
 
 async function loadFromDevServer() {
   const manifest = await fetchJson('data/manifest.json');
-  const bundle = {};
+  const bundle = { meta: manifest.meta };
   for (const shard of SHARD_TYPES) {
     bundle[shard] = {};
     const ids = manifest[shard] || [];
@@ -105,5 +105,6 @@ export async function loadGraphData() {
     edges,
     demos: bundle.demos ?? {},
     threads: bundle.threads ?? {},
+    meta: bundle.meta ?? {},
   };
 }

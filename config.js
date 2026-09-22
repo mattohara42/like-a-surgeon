@@ -188,6 +188,14 @@ export const CONFIG = {
     sceneFramePaddingPx: 90,
   },
 
+  // The confidence legend. Open on a first visit, because the tiers are
+  // part of what the map teaches; after that it remembers the reader's
+  // choice. Collapsed, it still shows all three swatches.
+  legend: {
+    defaultOpen: true,
+    storageKey: 'lineage.legend.v1',
+  },
+
   // The year cursor. Not a scrollbar with a graph attached: dragging it is
   // how the map performs its own history, and it is the first thing anyone
   // touches.

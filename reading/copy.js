@@ -33,6 +33,18 @@ export const COPY = {
     },
   },
 
+  // The permanent confidence legend (SPEC.md, docs/m3-architecture.md
+  // section 5) and the version stamp beneath it (A20).
+  legend: {
+    title: { age13: 'How sure are we?', adult: 'Confidence' },
+    intro: {
+      age13: 'Every line on the map is a claim that one thing changed another. How the line is drawn shows how sure we are.',
+      adult: 'Every edge is a claim of influence. Its stroke shows the strength of the evidence behind it.',
+    },
+    version: { age13: 'Map version', adult: 'Dataset version' },
+    updated: { age13: 'last updated', adult: 'last updated' },
+  },
+
   headings: {
     whatToListenFor: { age13: 'What to listen for', adult: 'What to listen for' },
     howWeKnow: { age13: 'How we know', adult: 'How we know' },

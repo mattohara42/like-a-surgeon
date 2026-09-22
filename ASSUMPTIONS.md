@@ -637,3 +637,16 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   data, extended to code, and it is the one place the project has a build
   step. It exists only for the release copy.
 
+## Added while building M3 step 2 (legend and version stamp)
+
+- **A85.** The dataset version starts at `0.1.0` in `package.json`. There
+  was no earlier version to continue from, and a 0.x number says honestly
+  that the map is far from its M1 targets. Bump it by hand when the dataset
+  changes in a way worth announcing. Nothing bumps it automatically.
+- **A86.** The legend sits bottom-left, above the transport bar, where the
+  drawer never reaches. It opens expanded on a first visit, because the
+  tiers are part of what the map teaches (SPEC.md), and after that it
+  remembers the reader's choice. Collapsed, it still shows all three
+  swatches and the version stamp, so it is never truly hidden. Its text
+  follows the reading register.
+
