@@ -177,7 +177,7 @@ artist and title and nothing else. Links open in a new tab with
 "Listen", because a search does not promise the right recording. The app
 still makes no network request of its own.
 
-**Q17, resolved.** Roughly 17 of the 122 track-pair sides are not records ("TB-303
+**Q17, resolved.** 50 of the 122 track-pair sides turned out not to be records (A92; the plan's first estimate was 17) ("TB-303
 as intended", "Black Ark productions", "Warehouse-era DJ sets", "the
 scratch"). Several real ones carry editorial notes in the title ("The Bridge,
 produced for MC Shan"). No heuristic can tell these apart, and a search link

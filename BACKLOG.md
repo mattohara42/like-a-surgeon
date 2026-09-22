@@ -131,6 +131,12 @@ correct response to a good idea arriving mid-milestone.
 (Claude Code: record code smells and architectural concerns here rather than
 fixing them inline.)
 
+- `signatureTracks` titles mix the title with credit notes ("Big Fun (Inner
+  City)", "The Bridge (produced for MC Shan)"), so the YouTube query built
+  from them is looser than it could be. Either the same optional `search`
+  field trackPair has (A78), or moving the credit into its own field, would
+  tighten it. A schema change, so it waits for a decision (A93).
+
 - The map barely distinguishes `documented` from `consensus`: the only
   difference is stroke width, 2px against 1.5px (`CONFIG.edge.strokeWidth`),
   and at the map's opacity that half pixel does not read. The legend draws

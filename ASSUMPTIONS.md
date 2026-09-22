@@ -686,3 +686,22 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   forward. Typing a year is a request to stand there, and a node click is
   not.
 
+## Added while building M3 step 4 (YouTube links)
+
+- **A92.** Q17 estimated "roughly 17 of 122" track-pair sides were not
+  records. That figure came from a keyword grep and badly undercounted.
+  Reading all 122 by hand found 50: DJ sets, machines "as sold", park jams,
+  practices, a piano piece nobody recorded, and "various versions". All 50
+  now carry `search: false`. Eight real records carry notes in the title or
+  artist ("The Bridge, produced for MC Shan", "Mr. Fingers (Larry Heard)")
+  and get an explicit query. The other 64 use the default. One call is a
+  judgement: Duke Bootee's side of `e-bootee-mellemel` ("The Message,
+  written and demoed") is a demo, not a release, so it gets no link. The
+  record it became is linked on the other side of the same edge.
+- **A93.** Artists' signature tracks get a YouTube link too, searching the
+  artist's name plus the title. Several titles carry credit notes ("Strings
+  of Life (Rhythim Is Rhythim)", "The Bridge (produced for MC Shan)"), which
+  make a looser query but still land on the record. They are left alone
+  rather than growing a second `search` field on another schema object
+  without asking (BACKLOG).
+

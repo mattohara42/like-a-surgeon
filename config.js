@@ -200,6 +200,12 @@ export const CONFIG = {
     yearFrameSpanYears: 12,
   },
 
+  // Outbound links (Q14): YouTube search only. The query is appended,
+  // URL-encoded.
+  links: {
+    youtubeSearchUrl: 'https://www.youtube.com/results?search_query=',
+  },
+
   // The confidence legend. Open on a first visit, because the tiers are
   // part of what the map teaches; after that it remembers the reader's
   // choice. Collapsed, it still shows all three swatches.

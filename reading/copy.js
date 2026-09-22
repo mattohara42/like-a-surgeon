@@ -60,6 +60,11 @@ export const COPY = {
     from: { age13: 'From', adult: 'From' },
   },
 
+  links: {
+    youtube: { age13: 'Search YouTube', adult: 'Search YouTube' },
+    newTab: { age13: 'opens in a new tab', adult: 'opens in a new tab' },
+  },
+
   headings: {
     whatToListenFor: { age13: 'What to listen for', adult: 'What to listen for' },
     howWeKnow: { age13: 'How we know', adult: 'How we know' },
