@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "node tools/serve.js",
     "build": "node tools/bundle.js",
-    "validate": "node tools/validate.js"
+    "validate": "node tools/validate.js",
+    "design:snapshot": "node tools/design-snapshot.js"
   }
 }

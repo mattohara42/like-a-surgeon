@@ -4,15 +4,49 @@
 
 export const CONFIG = {
   layout: {
-    pxPerYear: 18,
+    pxPerYear: 62,
     marginYears: 2,
-    laneHeight: 64,
-    laneGap: 12,
-    laneTopPadding: 40,
-    nodeRowHeight: 22,
-    machineBandHeight: 56,
-    machineBandGap: 16,
+    laneHeight: 96,
+    laneGap: 14,
+    laneTopPadding: 34,
+    nodeRowHeight: 56,
+    // Used to size a node's label footprint for row packing, so names get
+    // room along the time axis instead of stacking into a column.
+    //
+    // Labels are counter-scaled to a constant *screen* size, so their
+    // width in content units grows as you zoom out -- which means there is
+    // no single correct value here. These are sized for the opening fit
+    // (roughly half scale); zoom in past that and the gaps only get
+    // roomier.
+    labelCharPx: 14,
+    labelMinPx: 170,
     axisHeight: 32,
+    // Lanes with no nodes in them are skipped entirely rather than drawn
+    // empty. `colors.lineage` carries spines the dataset has not reached
+    // yet (funk, other); reserving vertical space for them pushes the
+    // populated lanes apart for no reading benefit.
+    dropEmptyLanes: true,
+    // Which node kinds get a marker in the graph. Scenes are drawn as
+    // atmosphere behind their members instead (atmosphere.js) and labels
+    // belong to the labels overlay, so neither takes a lane row here.
+    // One line to reverse -- see ASSUMPTIONS.md A44.
+    graphNodeKinds: ['artist', 'machine'],
+  },
+
+  // The machine substrate: a floor receding below the lineage lanes, with
+  // a machine's influence rising out of it as a shaft of light. Machines
+  // are the protagonist of large stretches of this history (SPEC.md), and
+  // this is that argument expressed as the shape of the page rather than a
+  // claim in a blurb. Supersedes the machine band above the lanes; see
+  // ASSUMPTIONS.md A43.
+  substrate: {
+    gap: 46,           // lanes bottom -> horizon
+    depth: 232,        // horizon -> front edge of the floor
+    rows: 7,           // receding horizontal rules
+    rowCurve: 2.4,     // >1 bunches rows toward the horizon
+    converge: 0.07,    // how close the verticals meet at the vanishing point
+    machineRowHeight: 34,
+    labelOffset: 30,
   },
 
   node: {
@@ -28,11 +62,14 @@ export const CONFIG = {
     // linearly with connections (standard bubble-chart practice, avoids a
     // node with 4x the edges looking 16x the area).
     degreeRadiusFactor: { min: 0.7, max: 2.4 },
-    glow: {
-      blurStdDev: 4,
-      radiusMultiplier: 2.2,
-      opacity: 0.55,
-    },
+    haloRadiusMultiplier: 5.5,
+    haloOpacity: 0.5,
+    ringGap: 5,
+    machineTicks: 12,
+    // Each node breathes at its own rate, seeded from its id so the rhythm
+    // is stable across reloads. They never sync up, which is the
+    // difference between a living thing and a loading spinner.
+    breath: { minMs: 4600, maxMs: 7800, amount: 0.09 },
   },
 
   edge: {
@@ -42,13 +79,36 @@ export const CONFIG = {
     opacity: 0.5,
     hoverOpacity: 0.95,
     crossLineageOpacity: 0.75,
+    crossLineageWidthFactor: 1.8,
     // How far the trail's curve control point bows off the straight line
     // between endpoints, as a fraction of the straight-line distance.
     curveBow: 0.12,
-    glow: {
-      blurStdDev: 2.5,
-      opacity: 0.5,
+    // The travelling light. This is the single thing that makes a still
+    // graph read as running rather than drawn.
+    comet: {
+      contentPxPerSecond: 150,
+      lengthFraction: 0.16,
+      opacity: 0.55,
+      crossLineageOpacity: 0.92,
+      // Cross-lineage edges get a second, wider comet in the *source*
+      // colour trailing the first. Reads as chromatic split, and makes a
+      // crossing identifiable without consulting a legend.
+      ghostWidthFactor: 2.4,
+      ghostOpacity: 0.2,
+      ghostDelayMs: 130,
     },
+  },
+
+  // A machine -> artist edge is drawn as a tapered shaft of light instead
+  // of a trail, rising off the floor and through the horizon.
+  beam: {
+    widthTop: 3,
+    widthBottom: 9,
+    // Kept low. The beam is atmosphere -- the fact of light coming off the
+    // floor -- while the trail drawn on top of it carries the actual
+    // claim. Turned up, it stops reading as light and starts reading as a
+    // solid wedge lying across the map.
+    stops: { near: 0.26, mid: 0.1, far: 0.2 },
   },
 
   zoom: {
@@ -58,9 +118,12 @@ export const CONFIG = {
     wheelSensitivity: 0.0015,
     // Semantic zoom levels: scale <= threshold selects that level.
     // Highest-threshold level with no match wins as the last (detail) level.
+    // Retuned for pxPerYear 62. These are ratios against the content
+    // scale, so they move whenever the time axis does; the opening fit
+    // must land inside `mid` or the map opens with no names on it.
     levels: [
-      { name: 'collapsed', maxScale: 0.6 },
-      { name: 'mid', maxScale: 2.2 },
+      { name: 'collapsed', maxScale: 0.34 },
+      { name: 'mid', maxScale: 1.4 },
       { name: 'detail', maxScale: Infinity },
     ],
     transitionMs: 180,
@@ -75,24 +138,54 @@ export const CONFIG = {
     // Extra px beyond the visible viewport to still render, so nodes don't
     // visibly pop in/out right at the edge of the screen while panning.
     cullMarginPx: 200,
+    // The opening view frames the years something actually happens in,
+    // not the full axis. `endYear` for anyone still active runs to the
+    // present, so fitting the whole axis would open on a mostly empty map.
+    // A map that starts too far out reads as decoration; one that starts
+    // close enough to read a name invites the first click.
+    fitPaddingPx: 70,
+    fitBottomInsetPx: 104,   // the transport bar
+    fitMaxScale: 1.1,
+  },
+
+  // The year cursor. Not a scrollbar with a graph attached: dragging it is
+  // how the map performs its own history, and it is the first thing anyone
+  // touches.
+  transport: {
+    msPerYear: 620,
+    stepYears: 1,
+    shiftStepYears: 5,
+    unbornOpacity: 0.085,
+    cursorWashWidth: 120,
+    cursorWashMaxContentPx: 220,
+  },
+
+  atmosphere: {
+    dust: { count: 480, parallax: 0.2, driftAmplitudePx: 8 },
+    nebula: { blurStdDev: 56, opacity: 0.15, parallax: 0.9, minRadiusPx: 160, paddingPx: 150 },
   },
 
   colors: {
     lineage: {
-      rock: '#c0392b',
-      electronic: '#2f6fd0',
-      hiphop: '#d99a2b',
-      dub: '#1f7a4d',
-      funk: '#8e44ad',
-      other: '#6b7280',
+      rock: '#ff6f55',
+      dub: '#3ddfa4',
+      hiphop: '#bd82ff',
+      electronic: '#5fa8ff',
+      funk: '#ffc46b',
+      other: '#8fa6c8',
     },
-    background: '#05060a',
-    laneLabel: '#9aa0a8',
-    axisLine: 'rgba(255,255,255,0.10)',
-    axisText: 'rgba(255,255,255,0.45)',
-    machineBandFill: 'rgba(255,255,255,0.035)',
-    machineBandLabel: '#c7cbd1',
-    edgeDefault: '#7d8590',
+    background: '#04060d',
+    ink: '#eaf0ff',
+    dim: '#7e8ca8',
+    laneLabel: '#8fa6c8',
+    axisLine: 'rgba(150,180,235,0.12)',
+    axisText: 'rgba(234,240,255,0.45)',
+    floorRule: 'rgba(120,160,225,0.18)',
+    floorFade: '#7fb4ff',
+    horizon: '#8cc0ff',
+    machineBandLabel: '#8fa6c8',
+    edgeDefault: '#8fa6c8',
+    cursor: '#eaf0ff',
   },
 
   perf: {

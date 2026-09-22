@@ -3,7 +3,9 @@
 An offline, browser-based atlas of how recorded popular music influenced itself,
 built to be explored by a curious 13-year-old.
 
-This folder is the design package. There is no code yet, on purpose.
+Open `index.html` through `npm run dev`. The graph renders the whole dataset
+on a left-to-right time axis with lineage lanes, machines on a receding floor
+beneath them, and a year cursor you can drag to watch the map arrive.
 
 ## What is here
 
@@ -21,6 +23,21 @@ This folder is the design package. There is no code yet, on purpose.
 | `tools/validate.js` | Checks the data tree. `npm run validate`. |
 | `tools/serve.js` | Dev static server, solves the `file://` fetch problem. `npm run dev`. |
 | `tools/bundle.js` | Release bundler, inlines all data into `data/data.bundle.js`. `npm run build`. |
+| `index.html`, `main.js` | The app shell and entry point. |
+| `config.js` | Every tuning value in the project. No magic numbers in logic. |
+| `render/` | The graph renderer: layout, substrate, nodes, edges, gradients, atmosphere, transport, viewport culling, semantic zoom. |
+| `design/` | Visual direction prototypes. `03-strata.html` is the one that shipped. |
+| `tools/design-snapshot.js` | Freezes `data/` for the `design/` prototypes. `npm run design:snapshot`. |
+| `.claude/hooks/session-start.sh` | Tells each session how far behind `origin/main` it is, and what else is in flight. |
+
+## Running it
+
+    npm run dev        # serves at localhost:8080
+    npm run validate   # checks the data tree
+    npm run build      # writes data/data.bundle.js for the offline release
+
+Drag the year cursor at the bottom, or press play. Scroll to zoom, drag to
+pan, click a node to fly to it.
 
 ## How to start with Claude Code
 

@@ -250,3 +250,94 @@ wrong lesson.
   entry had flagged as having no worked example anywhere in the dataset.
   That flag is now stale; see the `BACKLOG.md` correction alongside this
   entry. `edge: type: "label"` still has no example.
+
+## Added during the visual direction pass
+
+- **A37.** Visual exploration lives in `design/` as standalone prototypes
+  rather than in a `src/`. `BUILD_PLAN.md` gates the renderer at M2 behind
+  an incomplete M1, but `CLAUDE.md`'s working style says "lock design before
+  implementing." Prototypes satisfy the second without breaking the first:
+  they are throwaway, they import nothing, and nothing imports them.
+- **A38.** `design/data-snapshot.js` is a generated snapshot of `data/`, written by
+  `tools/design-snapshot.js` as a classic script that sets `window.LINEAGE`.
+  `file://` blocks `fetch` and ES module imports but not `<script src>`, so
+  this is the only shape that lets a prototype open by double-click with no
+  server. It is explicitly not an answer to the `file://` problem for the
+  real build, which stays with `tools/serve.js` and `tools/bundle.js` per
+  M1 step 4. Unlike the other generated files in **A23**, it is committed
+  rather than gitignored: a prototype that needs `npm install` before it
+  opens defeats the point of a prototype. It carries a "do not edit"
+  header instead.
+- **A39.** Lineage colour is a separate system from the `palette` field on
+  scene records. Scene palettes drive the scene clouds in the prototypes;
+  the four lineage colours (rock, dub, hip-hop, electronic) are invented in
+  each prototype and chosen for hue separation on a dark ground. If a
+  direction is picked, these move into `CONFIG` properly and should be
+  checked against colour-vision deficiency before they ship.
+- **A40.** The prototypes place machines three different ways on purpose:
+  own lane at the bottom (01), mixed among artists with an angular form
+  (02), and on a receding floor beneath everything with light rising from
+  it (03). **A30** had already settled this for `render/` (own band, above
+  the lanes) while this branch was cut from a stale `main`; that is now
+  four answers to one question, all resting on a two-machine sample. A30
+  itself says it is "cheap to reverse ... once there's more machine data",
+  so this is flagged for Matt rather than decided here.
+- **A41.** None of the prototypes import `render/`, and all three omit
+  label nodes and render scenes as atmosphere rather than as graph nodes,
+  where `render/` draws both as nodes in the lanes. Not a considered
+  disagreement at the time (this branch was cut before `render/` existed on
+  `main`), but it is a real fork and the README puts it to Matt as one.
+  Keeping the prototypes free of `render/` is deliberate: three variations
+  sharing one renderer would have produced three skins, not three
+  arguments.
+- **A42.** Node collision is resolved by moving `y` only, never `x`, and
+  clamping each node back inside its own lane. `x` is the year and fudging
+  it would corrupt the one axis the project cannot afford to lie about.
+  Needed once the roster passed roughly twenty nodes; the first version of
+  these prototypes was built against a 12-record snapshot where staggered
+  offsets were enough.
+
+## Added porting the Strata direction into render/
+
+Matt reviewed the three prototypes in `design/` and picked **03 Strata**.
+These cover what changed in `render/` to carry it, and what it supersedes.
+
+- **A43.** Machines move from a band *above* the lineage lanes to a floor
+  receding *below* them, drawn in real perspective, with a machine's
+  influence rising out of it as a vertical shaft of light. This
+  **supersedes A30**, which put them in a band above and said it was
+  "cheap to reverse if it reads wrong once there's more machine data to
+  look at." It still reads off two machines, so it is still cheap to
+  reverse: `CONFIG.substrate` and `render/substrate.js` are the whole of
+  it. What decided it is that the substrate makes `SPEC.md`'s
+  machine-as-protagonist claim structural rather than decorative.
+- **A44.** Scenes render as atmosphere (a blurred cloud from the
+  `palette.accent` the scene record already carries, behind its members)
+  rather than as graph markers, and labels are left to the labels overlay
+  planned for M5. Both previously drew as nodes in the lanes. This roughly
+  halves what competes for attention at a glance, and it is the one place
+  the port *removes* something a reader could previously click:
+  a label is now reachable only through an artist until that overlay
+  exists. Flagged to Matt rather than slipped in, and reversible by one
+  line, `CONFIG.layout.graphNodeKinds`.
+- **A45.** Row packing packs a node's **label footprint**, not its career
+  span. Packing career spans is what produced the vertical column of names
+  beside an unused time axis: `endYear` for anyone still active is the
+  current year, so every living artist overlapped every other one and each
+  lane needed one row per artist. The career span is still drawn, as the
+  faint orbital track. Footprint width is estimated from the name length
+  via `CONFIG.layout.labelCharPx`, sized for the opening zoom; labels are
+  counter-scaled to a constant screen size, so there is no single correct
+  value and this one is deliberately generous.
+- **A46.** The opening view frames the years something actually happens in
+  (first start year to last), not the full axis. Careers running to the
+  present stretch the axis to the current year, so fitting the whole thing
+  opens on a map that is mostly empty. The semantic zoom thresholds in
+  `CONFIG.zoom.levels` were retuned to match: the opening fit has to land
+  inside `mid` or the map opens with no names on it.
+- **A47.** `.claude/hooks/session-start.sh` reports how far behind
+  `origin/main` the checkout is and which branches are in flight. Added
+  because this branch was itself cut from a stale `main` and rebuilt work
+  that already existed. The hook installs nothing: this project has no
+  dependencies, so telling a session the truth about where it is starting
+  is the only useful thing a session start can do here.

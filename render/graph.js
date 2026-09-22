@@ -10,36 +10,30 @@ import { zoomLevelForScale } from './zoomLevels.js';
 import { attachPanZoomHandlers } from './interactions.js';
 import { svgEl, setAttrs } from './svg.js';
 import { createNodeElement, updateNodeElement, setNodeHovered } from './nodes.js';
-import { createEdgeElement, updateEdgeElement, setEdgeHovered } from './edges.js';
+import { createEdgeElement, updateEdgeElement, setEdgeHovered, isBeam } from './edges.js';
+import { createSubstrateDefs, drawSubstrate, updateSubstrateScale } from './substrate.js';
+import { createEdgeGradients, createHaloGradients, trailGradientId, beamGradientId, colorFor } from './gradients.js';
+import { createDustLayer, createNebulaDefs, drawNebulae } from './atmosphere.js';
+import { createCursorLayer, createCursorDefs, updateCursor, createTransport } from './transport.js';
 
 function clampYear(year, min, max) {
   return Math.min(max, Math.max(min, year));
 }
 
-// Shared glow filters, referenced by every node/edge via url(#id) rather
-// than one filter instance each -- SVG filters are relatively expensive,
-// and there's nothing per-node about the blur itself, only its current
-// (counter-scaled) radius, which is updated on the shared instance each
-// frame instead.
-function createGlowDefs() {
+// All shared defs in one place: gradients for edge trails, machine beams
+// and node halos, the nebula blur, and the cursor wash. Every one of these
+// is shared by id rather than instantiated per element -- viewport culling
+// creates and destroys elements constantly while panning, and per-element
+// defs would mean churning the <defs> subtree on every frame.
+function createDefs() {
   const defs = svgEl('defs');
-  const nodeFilter = svgEl('filter', {
-    id: 'node-glow-filter',
-    x: '-200%',
-    y: '-200%',
-    width: '500%',
-    height: '500%',
-  });
-  nodeFilter.appendChild(svgEl('feGaussianBlur', { class: 'node-glow-blur', stdDeviation: CONFIG.node.glow.blurStdDev }));
-  const edgeFilter = svgEl('filter', {
-    id: 'edge-glow-filter',
-    x: '-200%',
-    y: '-200%',
-    width: '500%',
-    height: '500%',
-  });
-  edgeFilter.appendChild(svgEl('feGaussianBlur', { class: 'edge-glow-blur', stdDeviation: CONFIG.edge.glow.blurStdDev }));
-  defs.append(nodeFilter, edgeFilter);
+  defs.append(
+    ...createEdgeGradients(),
+    ...createHaloGradients(),
+    ...createSubstrateDefs(),
+    ...createNebulaDefs(),
+    ...createCursorDefs(),
+  );
   return defs;
 }
 
@@ -95,37 +89,38 @@ function drawAxis(axisG, layout) {
 
 function drawBands(bandsG, layout) {
   const originX = layout.timeScale.toX(layout.timeScale.year0);
-  const mb = layout.machineBand;
-  bandsG.appendChild(
-    svgEl('rect', {
-      x: originX,
-      y: mb.y,
-      width: layout.totalWidth,
-      height: mb.height,
-      fill: CONFIG.colors.machineBandFill,
-    }),
-  );
-  const mbLabel = svgEl('text', {
-    class: 'band-label',
-    x: originX,
-    y: mb.y,
-    fill: CONFIG.colors.machineBandLabel,
-    'font-weight': 600,
-  });
-  mbLabel.textContent = 'MACHINES';
-  bandsG.appendChild(mbLabel);
 
   for (const lane of layout.lanes) {
+    bandsG.appendChild(
+      svgEl('rect', {
+        x: originX,
+        y: lane.y,
+        width: layout.totalWidth,
+        height: lane.height,
+        fill: colorFor(lane.lineage),
+        opacity: 0.024,
+      }),
+    );
     const label = svgEl('text', {
       class: 'band-label',
       x: originX,
       y: lane.y,
-      fill: CONFIG.colors.laneLabel,
+      fill: colorFor(lane.lineage),
       'font-weight': 600,
     });
     label.textContent = lane.lineage.toUpperCase();
     bandsG.appendChild(label);
   }
+
+  const floorLabel = svgEl('text', {
+    class: 'band-label',
+    x: originX,
+    y: layout.substrate.horizonY + CONFIG.substrate.labelOffset,
+    fill: CONFIG.colors.machineBandLabel,
+    'font-weight': 600,
+  });
+  floorLabel.textContent = 'THE MACHINES';
+  bandsG.appendChild(floorLabel);
 }
 
 // Re-applies counter-scaled font-size/stroke-width/offsets to the
@@ -161,38 +156,59 @@ function edgeAnchors(edge, layout) {
 }
 
 export function createGraph(container, data, callbacks = {}) {
-  const { onSelectNode = () => {}, onSelectEdge = () => {} } = callbacks;
+  const { onSelectNode = () => {}, onSelectEdge = () => {}, transportEl = null } = callbacks;
 
-  const layout = computeLayout(data.nodes);
+  // Scenes are drawn as atmosphere rather than as graph markers, and
+  // labels are left to the labels overlay (SPEC.md), so neither takes a
+  // lane row. CONFIG decides, so reversing this is one line -- see
+  // ASSUMPTIONS.md A44.
+  const graphNodes = data.nodes.filter((n) => CONFIG.layout.graphNodeKinds.includes(n.kind));
+  const sceneRecords = data.nodes.filter((n) => n.kind === 'scene').map((n) => n.raw);
+  const graphNodeIds = new Set(graphNodes.map((n) => n.id));
+  const graphEdges = data.edges.filter((e) => graphNodeIds.has(e.from.id) && graphNodeIds.has(e.to.id));
+
+  const layout = computeLayout(graphNodes);
   const vp = createViewportState();
 
+  const dust = createDustLayer(container);
+
   const root = svgEl('svg', { class: 'graph-svg', width: '100%', height: '100%' });
-  const defs = createGlowDefs();
+  const defs = createDefs();
   const viewportG = svgEl('g', { class: 'viewport' });
+  const nebulaG = svgEl('g', { class: 'nebula-layer' });
   const bandsG = svgEl('g', { class: 'bands-layer' });
+  const floorG = svgEl('g', { class: 'floor-layer' });
   const axisG = svgEl('g', { class: 'axis-layer' });
   const edgesG = svgEl('g', { class: 'edges-layer' });
   const nodesG = svgEl('g', { class: 'nodes-layer' });
-  viewportG.append(bandsG, axisG, edgesG, nodesG);
+  const cursorG = createCursorLayer(layout);
+  viewportG.append(nebulaG, bandsG, floorG, axisG, edgesG, nodesG, cursorG);
   root.append(defs, viewportG);
   container.appendChild(root);
 
   drawBands(bandsG, layout);
+  drawSubstrate(floorG, layout);
   drawAxis(axisG, layout);
+  drawNebulae(nebulaG, sceneRecords, layout);
 
-  const degreeFactorById = computeDegreeFactors(data.nodes, data.edges);
+  const degreeFactorById = computeDegreeFactors(graphNodes, graphEdges);
+
+  const transport = transportEl
+    ? createTransport(transportEl, layout, graphNodes, graphEdges, () => scheduleRender())
+    : null;
+  const currentYear = () => transport?.year() ?? layout.timeScale.yearEnd;
 
   // Node position and edge anchors are both static once computed (nodes
   // don't move, edge.year doesn't change), so both are precomputed once
   // here instead of being recalculated on every pan/zoom frame. Nodes are
   // also sorted by x1 so the per-frame scan can stop as soon as it passes
   // the visible range instead of always walking the full dataset.
-  const positionedNodes = data.nodes
+  const positionedNodes = graphNodes
     .map((node) => ({ node, pos: layout.positions.get(node.id) }))
     .filter((entry) => entry.pos)
     .sort((a, b) => a.pos.x1 - b.pos.x1);
 
-  const boundEdges = data.edges
+  const boundEdges = graphEdges
     .map((edge) => ({ edge, anchors: edgeAnchors(edge, layout) }))
     .filter((entry) => entry.anchors)
     .map((entry) => ({
@@ -211,6 +227,28 @@ export function createGraph(container, data, callbacks = {}) {
     return pos.x2 >= range.x1 && pos.x1 <= range.x2 && pos.y >= range.y1 - 40 && pos.y <= range.y2 + 40;
   }
 
+  // Frames the populated span (first start year to last) rather than the
+  // full axis, and leaves the transport bar room at the bottom.
+  function fitToContent(widthPx, heightPx) {
+    const starts = positionedNodes.map((e) => e.pos.x1);
+    if (starts.length === 0) return;
+    const { fitPaddingPx, fitBottomInsetPx, fitMaxScale } = CONFIG.viewport;
+    const pad = fitPaddingPx;
+    const usableW = Math.max(1, widthPx - pad * 2);
+    const usableH = Math.max(1, heightPx - pad * 2 - fitBottomInsetPx);
+    const contentW = Math.max(1, Math.max(...starts) - Math.min(...starts));
+    const contentH = Math.max(1, layout.totalHeight);
+
+    const scale = Math.min(
+      Math.min(usableW / contentW, usableH / contentH),
+      fitMaxScale,
+    );
+    vp.scale = Math.min(CONFIG.zoom.max, Math.max(CONFIG.zoom.min, scale));
+    const midX = (Math.min(...starts) + Math.max(...starts)) / 2;
+    vp.tx = widthPx / 2 - midX * vp.scale;
+    vp.ty = pad + Math.max(0, (usableH - contentH * vp.scale) / 2);
+  }
+
   // Cached and only refreshed on resize. Calling getBoundingClientRect()
   // inside render() would force a synchronous layout reflow on every single
   // pan/zoom frame right after mutating the SVG transform (classic layout
@@ -223,20 +261,40 @@ export function createGraph(container, data, callbacks = {}) {
   // by the animation's own rAF loop (not the debounced scheduleRender)
   // since flyTo already paces itself frame by frame.
   function selectAndFlyTo(item, contentX, contentY, onSelect) {
+    // Clicking something the cursor has not reached yet moves the cursor
+    // to it. Flying to a node and leaving it dimmed would be absurd.
+    transport?.ensureVisible(item.startYear ?? item.year);
     onSelect(item);
     flyTo(vp, contentX, contentY, CONFIG.zoom.flyToScale, containerRect.width, containerRect.height, timedRender);
+  }
+
+  // Which shared gradients this edge draws with. Beams are coloured by the
+  // lineage they rise into, trails run source colour to target colour.
+  function gradientIdsFor(edge) {
+    return {
+      trail: trailGradientId(edge.from.lineage, edge.to.lineage),
+      beam: beamGradientId(edge.to.lineage),
+      fromColor: colorFor(edge.from.lineage),
+      toColor: colorFor(edge.to.lineage),
+    };
   }
 
   function render() {
     viewportG.setAttribute('transform', transformString(vp));
     updateStaticLayerScale(axisG, bandsG, vp.scale);
-    // Glow blur radius is a UI adornment like everything else in
-    // nodes.js/edges.js: counter-scaled so it reads as a constant size on
-    // screen rather than blurring more at high zoom and vanishing at low
-    // zoom. One shared filter each, not per-element, so this is two
-    // attribute writes per frame regardless of how many nodes/edges render.
-    setAttrs(defs.querySelector('.node-glow-blur'), { stdDeviation: CONFIG.node.glow.blurStdDev / vp.scale });
-    setAttrs(defs.querySelector('.edge-glow-blur'), { stdDeviation: CONFIG.edge.glow.blurStdDev / vp.scale });
+    updateSubstrateScale(floorG, vp.scale);
+
+    // Scene clouds sit fractionally behind the graph plane. That offset is
+    // the only differential transform in the whole renderer, and it is
+    // safe precisely because a blurred cloud carries no position anyone
+    // reads off it. The floor and the beams that cross its horizon stay
+    // locked to the graph.
+    const drift = (1 - CONFIG.atmosphere.nebula.parallax) * vp.scale;
+    nebulaG.setAttribute('transform', `translate(${-vp.tx * (drift / vp.scale)},${-vp.ty * (drift / vp.scale)})`);
+
+    const year = currentYear();
+    updateCursor(cursorG, layout, year, vp.scale);
+
     const level = zoomLevelForScale(vp.scale);
     const range = visibleContentRange(vp, containerRect.width, containerRect.height);
 
@@ -273,8 +331,10 @@ export function createGraph(container, data, callbacks = {}) {
           nodesG.appendChild(created);
           nodeElements.set(node.id, created);
           updateNodeElement(created, node, pos, level, vp.scale, degreeFactor);
+          created.classList.toggle('unborn', node.startYear > year);
         } else {
           updateNodeElement(el, node, pos, level, vp.scale, degreeFactor);
+          el.classList.toggle('unborn', node.startYear > year);
         }
       } else if (el) {
         el.remove();
@@ -308,9 +368,11 @@ export function createGraph(container, data, callbacks = {}) {
           );
           edgesG.appendChild(created);
           edgeElements.set(edge.id, created);
-          updateEdgeElement(created, edge, anchors, vp.scale);
+          updateEdgeElement(created, edge, anchors, vp.scale, gradientIdsFor(edge));
+          created.classList.toggle('unborn', edge.year > year);
         } else {
-          updateEdgeElement(el, edge, anchors, vp.scale);
+          updateEdgeElement(el, edge, anchors, vp.scale, gradientIdsFor(edge));
+          el.classList.toggle('unborn', edge.year > year);
         }
       } else if (el) {
         el.remove();
@@ -339,15 +401,20 @@ export function createGraph(container, data, callbacks = {}) {
   attachPanZoomHandlers(root, vp, scheduleRender);
   new ResizeObserver(() => {
     containerRect = container.getBoundingClientRect();
+    dust.resize();
     scheduleRender();
   }).observe(container);
 
+  fitToContent(containerRect.width, containerRect.height);
+  dust.start(vp);
   timedRender();
 
   return {
     svg: root,
     layout,
     viewport: vp,
+    graphNodeCount: graphNodes.length,
+    graphEdgeCount: graphEdges.length,
     renderedNodeCount: () => nodeElements.size,
     renderedEdgeCount: () => edgeElements.size,
     // The M2 perf gate cares about render() itself fitting the 60fps
@@ -356,5 +423,11 @@ export function createGraph(container, data, callbacks = {}) {
     // from outside via rAF-to-rAF wall clock.
     lastRenderMs: () => lastRenderMs,
     rerender: scheduleRender,
+    fit: () => {
+      fitToContent(containerRect.width, containerRect.height);
+      scheduleRender();
+    },
+    transport,
+    destroy: () => dust.stop(),
   };
 }

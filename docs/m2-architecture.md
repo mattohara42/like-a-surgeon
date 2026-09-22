@@ -26,6 +26,15 @@ render/
 No build step, no framework: everything is a plain ES module loaded by
 `index.html`, served in dev by the M1 `tools/serve.js`.
 
+> **Superseded in part (Strata port).** Section 2's machine band no longer
+> matches the code: machines now sit on a receding floor *below* the lanes
+> rather than a band above them, and a machine's influence is drawn rising
+> out of it. See `ASSUMPTIONS.md` **A43**, `render/substrate.js`, and
+> `design/README.md` for why. The rest of this document, the row packing,
+> the counter-scaling rule, culling and semantic zoom, still holds, with
+> one change: rows pack a node's *label footprint*, not its career span
+> (**A45**).
+
 ## 2. Layout: lineage lanes plus a machine band
 
 `BUILD_PLAN.md`/A5 fix the shape (left-to-right time axis, lineage lanes).

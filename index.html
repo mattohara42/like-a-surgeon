@@ -4,68 +4,136 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lineage</title>
+<!-- Inline so the offline build has no external request to make, and so a
+     console check isn't permanently noisy with a favicon 404. -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2304060d'/%3E%3Ccircle cx='9' cy='20' r='3.5' fill='%233ddfa4'/%3E%3Ccircle cx='23' cy='11' r='3.5' fill='%23ff6f55'/%3E%3Cpath d='M9 20 Q16 20 23 11' stroke='%235fa8ff' stroke-width='1.6' fill='none'/%3E%3C/svg%3E" />
 <style>
+  :root {
+    --void: #04060d;
+    --ink: #eaf0ff;
+    --dim: #7e8ca8;
+    --hairline: rgba(150, 180, 235, 0.12);
+    --ui: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
   html, body {
-    margin: 0;
-    height: 100%;
-    background: #05060a;
-    color: #e8e9ec;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0; height: 100%;
+    background: var(--void); color: var(--ink);
+    font-family: var(--ui); overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  #app { position: fixed; inset: 0; background: var(--void); }
+  .dust-layer { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+
+  .graph-svg { display: block; position: relative; cursor: grab; touch-action: none; }
+  .graph-svg.dragging { cursor: grabbing; }
+  .graph-svg:focus { outline: none; }
+
+  .node { cursor: pointer; }
+  .node-label, .node-hook { pointer-events: none; user-select: none; }
+  .edge { cursor: pointer; }
+  .band-label { pointer-events: none; user-select: none; letter-spacing: 0.18em; }
+  .axis-label { pointer-events: none; user-select: none; font-family: var(--mono); }
+  .cursor-layer { pointer-events: none; }
+  .scene-nebula { pointer-events: none; }
+
+  /* The year cursor has not reached this yet. Present, but clearly not
+     here yet -- which is the whole point of being able to drag it. */
+  .unborn { opacity: 0.085; }
+  .unborn .node-label, .unborn .node-hook { opacity: 0; }
+  .node, .edge { transition: opacity 240ms ease; }
+
+  /* Atmosphere. Fixed overlays that never pan, which is what sells the
+     idea that you are looking into a volume rather than across a plane. */
+  #veil, #grain { position: fixed; inset: 0; pointer-events: none; }
+  #veil {
+    background:
+      radial-gradient(125% 85% at 50% 38%, transparent 30%, rgba(3,5,12,0.5) 72%, rgba(3,5,12,0.94) 100%),
+      linear-gradient(180deg, rgba(95,168,255,0.05), transparent 34%);
+  }
+  #grain {
+    inset: -50%; opacity: 0.3; mix-blend-mode: overlay;
+    animation: grain-jitter 0.75s steps(1) infinite;
+  }
+  @keyframes grain-jitter {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(-1.4%, 1%); }
+    50%  { transform: translate(1%, -1.4%); }
+    75%  { transform: translate(-1%, -1%); }
+  }
+
+  /* ---- transport ---------------------------------------------------- */
+  #transport {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 6;
+    padding: 18px 30px 22px; display: flex; align-items: center; gap: 20px;
+    background: linear-gradient(180deg, transparent, rgba(4,6,13,0.85) 42%);
+  }
+  #transport-play {
+    flex: 0 0 auto; width: 46px; height: 46px; border-radius: 50%;
+    border: 1px solid rgba(150,180,235,0.3); background: rgba(150,180,235,0.07);
+    color: var(--ink); cursor: pointer; font-size: 14px; line-height: 1;
+    display: grid; place-items: center;
+    transition: background 200ms, border-color 200ms;
+  }
+  #transport-play:hover { background: rgba(150,180,235,0.18); border-color: rgba(150,180,235,0.6); }
+  #transport-scrub { flex: 1 1 auto; position: relative; height: 46px; cursor: ew-resize; }
+  #transport-scrub:focus-visible { outline: 1px solid rgba(150,180,235,0.6); outline-offset: 4px; border-radius: 4px; }
+  #transport-scrub .track {
+    position: absolute; left: 0; right: 0; top: 50%; height: 2px;
+    background: var(--hairline); transform: translateY(-50%);
+  }
+  #transport-scrub .elapsed {
+    position: absolute; left: 0; top: 50%; height: 2px; transform: translateY(-50%);
+    background: linear-gradient(90deg, rgba(95,168,255,0.25), rgba(234,240,255,0.85));
+  }
+  #transport-scrub .pip {
+    position: absolute; top: 50%; width: 3px; height: 3px; border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #transport-scrub .head {
+    position: absolute; top: 50%; width: 13px; height: 13px; border-radius: 50%;
+    background: var(--ink); transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px 3px rgba(190,215,255,0.65);
+  }
+  #transport-year {
+    flex: 0 0 auto; font-family: var(--mono); font-size: 25px;
+    letter-spacing: 0.06em; min-width: 82px; text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  #transport-arrivals {
+    flex: 0 0 220px; font-size: 12px; line-height: 1.4; color: var(--dim);
+    display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
     overflow: hidden;
   }
-  #app {
-    position: fixed;
-    inset: 0;
-    /* A cheap starfield: two layers of repeating radial-gradient dots at
-       different scales/offsets, no images. Purely decorative, so it's CSS
-       here rather than a CONFIG value -- nothing in render/ reads it. */
-    background-color: #05060a;
-    background-image:
-      radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.35), transparent),
-      radial-gradient(1px 1px at 90px 120px, rgba(255,255,255,0.25), transparent),
-      radial-gradient(1.5px 1.5px at 160px 60px, rgba(255,255,255,0.3), transparent),
-      radial-gradient(1px 1px at 220px 180px, rgba(255,255,255,0.2), transparent),
-      radial-gradient(1px 1px at 50px 200px, rgba(255,255,255,0.3), transparent);
-    background-repeat: repeat;
-    background-size: 240px 240px;
-  }
-  .graph-svg {
-    display: block;
-    cursor: grab;
-    touch-action: none;
-  }
-  .graph-svg.dragging {
-    cursor: grabbing;
-  }
-  .graph-svg:focus {
-    outline: none;
-  }
-  .node {
-    cursor: pointer;
-  }
-  .node-label, .node-hook {
-    pointer-events: none;
-    user-select: none;
-  }
-  .edge {
-    cursor: pointer;
-  }
+
   #status {
-    position: fixed;
-    top: 12px;
-    left: 12px;
-    font-size: 13px;
-    color: #9aa0a8;
-    pointer-events: none;
+    position: fixed; top: 14px; left: 18px; z-index: 6;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--dim); pointer-events: none;
   }
-  #status.error {
-    color: #e06c75;
+  #status.error { color: #ff8f7a; text-transform: none; letter-spacing: 0; font-size: 13px; }
+
+  /* All motion here is decoration over a layout that is already complete
+     and readable. Someone who does not want it loses nothing. */
+  @media (prefers-reduced-motion: reduce) {
+    #grain { animation: none; }
+    .node, .edge { transition: none; }
+    .dust-layer { display: none; }
   }
 </style>
 </head>
 <body>
   <div id="app"></div>
+  <svg id="grain" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <filter id="grain-noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#grain-noise)" />
+  </svg>
+  <div id="veil"></div>
   <div id="status">Loading&hellip;</div>
+  <div id="transport"></div>
   <script type="module" src="main.js"></script>
 </body>
 </html>
