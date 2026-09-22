@@ -1,0 +1,31 @@
+{
+  "id": "e-sl1200-flash",
+  "from": "technics-sl-1200",
+  "to": "grandmaster-flash",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1975,
+  "crossLineage": true,
+  "evidence": "Flash's quick-mix theory and punch phrasing are described consistently across Bronx hip-hop oral histories and in his own accounts, and both techniques depend on a turntable that can be stopped, turned backwards by hand and released straight back to speed. The Technics SL-1200 line, introduced in 1972 and standardised for DJ use when the MK2 added a pitch fader in 1979, is the deck that behaviour was built on.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Technics",
+      "title": "SL-1200 as a domestic hi-fi turntable",
+      "year": 1972
+    },
+    "later": {
+      "artist": "Grandmaster Flash",
+      "title": "The Adventures of Grandmaster Flash on the Wheels of Steel",
+      "year": 1981
+    },
+    "whatToListenFor": "Listen for what never happens: the beat does not sag. The same few bars come round again and again dead in time, and in the gaps you can hear a record being hauled backwards and dropped back in exactly on the one. A belt-driven deck would lag on every restart and the whole thing would slide. Everything frantic on this record rests on the machine underneath it being rigid."
+  },
+  "explanation": {
+    "age7": "He needed a record player that could be stopped and started instantly, and this was the only one that could.",
+    "age13": "Holding one drum break going means grabbing the record, pushing it back to the start of the break and letting go, over and over, without the speed changing. Most turntables are pulled round by a rubber belt and cannot survive that or recover fast enough. The Technics had the motor directly under the platter, so it snapped back to speed the moment you let go. The technique is only possible because of how the motor was built.",
+    "adult": "The clearest enabling-technology edge on the map. Matsushita optimised for speed stability in a hi-fi context and, as a side effect, produced the only consumer deck whose torque and restart behaviour tolerate being played as a percussion instrument. Flash's contribution is the theory of what to do with it; the deck is what made the theory executable."
+  },
+  "tags": [
+    "technology"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "e-re201-tubby",
+  "from": "roland-re-201",
+  "to": "king-tubby",
+  "type": "technological",
+  "confidence": "consensus",
+  "year": 1976,
+  "crossLineage": true,
+  "evidence": "Space Echo units are routinely named in accounts of both Tubby's and Perry's studios, but descriptions of Tubby's signal chain vary between sources, and he built and modified units of his own as well as buying them. Held at consensus for that reason rather than upgraded to match the Perry edge.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Roland",
+      "title": "RE-201 Space Echo, as sold to guitarists",
+      "year": 1974
+    },
+    "later": {
+      "artist": "King Tubby",
+      "title": "Dub from the Roots",
+      "year": 1974
+    },
+    "whatToListenFor": "Compare the echo here with Perry's. Tubby's repeats are cleaner and more rhythmic, placed so they land where a drum would have landed, so the delay becomes part of the pattern rather than a haze over it. Same kind of box, opposite instinct: Perry lets it flood, Tubby uses it to keep time."
+  },
+  "explanation": {
+    "age7": "Tubby used an echo box too, but he kept the repeats neat and in time instead of letting them take over.",
+    "age13": "Tape echo was in both of the big dub studios, but the two engineers used it differently. Perry let the repeats run away into a roar. Tubby set them so they fell exactly where a drum beat would, which makes the echo part of the rhythm rather than a cloud around it. We are less certain about exactly which units Tubby owned, because accounts disagree and he built his own equipment.",
+    "adult": "Kept at consensus deliberately. The technique is beyond dispute and audible on the records; the specific inventory of Tubby's room is described inconsistently in the literature, and he fabricated and modified equipment himself. Tiering this the same as the Perry edge would make the graph look more authoritative than the sourcing supports."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

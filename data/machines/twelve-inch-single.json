@@ -1,0 +1,19 @@
+{
+  "id": "twelve-inch-single",
+  "name": "The 12-inch single",
+  "type": "machine",
+  "kind": "format",
+  "lineage": "funk",
+  "maker": null,
+  "releasedYear": 1976,
+  "discontinuedYear": null,
+  "originalPurpose": "Nothing. A 12-inch disc was a mastering blank and a studio convenience. Nobody set out to invent a format.",
+  "whatActuallyHappened": "Spreading one song across a disc that size means wider groove spacing, which means a louder and fuller cut, and it means room for a record that runs nine minutes instead of three. 'Ten Percent' by Double Exposure, issued by Salsoul in 1976 in a mix by Walter Gibbons that had won a remix contest among New York DJs, is generally cited as the first commercially sold 12-inch single. The format made the extended club mix something a person could buy, and in doing so it made the remixer one of the record's authors. The story that the first one was cut by accident, for want of a 7-inch blank, is widely repeated and the details of it vary between tellings.",
+  "priceStory": "More vinyl, more space per side, more expensive to press, and sold at a higher price than a 7-inch. DJs bought it regardless, because the alternative was a record that ran out after three minutes and sounded thin on a big system.",
+  "hook": "A mastering blank that became a format, and turned the person remixing a record into one of its authors.",
+  "blurb": {
+    "age7": "A bigger record with just one song on it, so the song could be longer and much louder.",
+    "age13": "A normal single is a small disc with a short song on each side. Give one song a full-sized disc and the grooves can be spaced further apart, which makes it louder and fuller, and there is room for it to run for nine minutes instead of three. That is what a club needs. It also meant the person who made the long version, the remixer, was now on the record, which is how remixing became a job.",
+    "adult": "A format change with an authorship consequence. Greater groove spacing permits higher cutting levels and extended running times, which together make the DJ-oriented extended mix commercially distributable. The remixer's shift from technician to credited author follows from the format rather than from any change in the music itself."
+  }
+}

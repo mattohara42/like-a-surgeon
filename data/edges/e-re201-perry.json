@@ -1,0 +1,32 @@
+{
+  "id": "e-re201-perry",
+  "from": "roland-re-201",
+  "to": "lee-perry",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1975,
+  "crossLineage": true,
+  "evidence": "The Roland Space Echo is named consistently in accounts of the Black Ark's signal chain, alongside the Mutron phaser, and Perry's use of runaway tape feedback as a live gesture rather than a fixed setting is described in numerous interviews and studio histories.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Roland",
+      "title": "RE-201 Space Echo, as sold to guitarists",
+      "year": 1974
+    },
+    "later": {
+      "artist": "Lee \"Scratch\" Perry",
+      "title": "Revolution Dub",
+      "year": 1975
+    },
+    "whatToListenFor": "Pick one snare hit and follow it. It repeats, and each repeat is slightly duller and slightly less in tune than the one before, because it is a tape loop wearing the sound down every pass. Then listen for the places where the repeats stop dying away and start feeding on themselves, piling up into a howl before somebody pulls them back. That is a hand on a knob, decided in the moment."
+  },
+  "explanation": {
+    "age7": "An echo box that repeats sounds, pushed so far that the repeats take over the whole record.",
+    "age13": "Inside the Space Echo is a loop of tape and three heads reading it, so a sound comes back several times, each copy a bit more worn than the last. Turn the feedback up far enough and the repeats feed themselves and build into a roar instead of fading. Perry used that as something you do at a particular moment, like hitting a drum, rather than a setting chosen before you start.",
+    "adult": "The RE-201 earns a node because its failure mode is musical and its controls are performable. Self-oscillation at high feedback, plus the pitch instability of a tape loop under load, give dub its smearing and its runaway bloom. Roland engineered for stability and reliability and shipped an instrument without meaning to."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

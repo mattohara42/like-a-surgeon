@@ -1,0 +1,33 @@
+{
+  "id": "e-dubplate-tubby",
+  "from": "dubplate",
+  "to": "king-tubby",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1972,
+  "crossLineage": false,
+  "evidence": "Sound system exclusivity, and the one-off acetate as the object that carries it, are documented throughout Jamaican music history. Commissioned unique mixes for named sound systems are described as the economic basis of the work done at Tubby's studio, not a side effect of it.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Jamaican sound systems",
+      "title": "one-off acetates cut as exclusives",
+      "year": 1950
+    },
+    "later": {
+      "artist": "King Tubby",
+      "title": "dub mixes cut for named sound systems",
+      "year": 1972
+    },
+    "whatToListenFor": "Listen for who the record is talking to. A sound system's name gets shouted over the top of the mix, or the singer greets a crew by name, and you realise the record is not addressed to you or to a radio audience. It was made for one crowd in one yard on one night, on a disc that would be worn out within a few months."
+  },
+  "explanation": {
+    "age7": "Records made as a single copy, for one sound system, so nobody else could play them.",
+    "age13": "Before pressing thousands of copies you would cut one soft disc and try it at a dance. Then people worked out that the one-copy part was the valuable bit: if only your sound system has a record, nobody can beat you with it. So engineers were paid to cut special versions all night, often with a crew's name shouted over the top. The discs wear out after fifty or a hundred plays, so it was all meant to be temporary.",
+    "adult": "The dubplate is the economic engine underneath dub as a practice: sound system competition created continuous paid demand for unique mixes, which funded the studio hours in which the techniques were developed. It also inverts the usual logic of recording, since the value of the object is its non-reproducibility and its physical decay is accepted rather than resisted."
+  },
+  "tags": [
+    "technology",
+    "production",
+    "labels"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "e-desk-tubby",
+  "from": "tubby-mci-console",
+  "to": "king-tubby",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1972,
+  "crossLineage": true,
+  "evidence": "Tubby's purchase of the mid-1960s twelve-into-four MCI console from Byron Lee's Dynamic Sounds, when that studio moved to sixteen tracks in 1972, is described across histories of Jamaican recording, as is the unusual range of its high-pass filter, roughly 70 Hz to 7.5 kHz, which is wider at the bottom than comparable circuits of the period.",
+  "trackPair": {
+    "earlier": {
+      "artist": "MCI",
+      "title": "a twelve-into-four studio console, as designed",
+      "year": 1965
+    },
+    "later": {
+      "artist": "King Tubby",
+      "title": "King Tubby Meets Rockers Uptown",
+      "year": 1976
+    },
+    "whatToListenFor": "Follow one thing: the filter. The whole track thins out from the bottom up, loses its body, hangs there sounding like a radio in another room, then floods back. That is one knob being turned by hand while the tape runs. Underneath it, notice that the singing is not mixed low, it is gone, and comes back for one word before disappearing again. Both are performances, not settings."
+  },
+  "explanation": {
+    "age7": "He bought an old mixing desk another studio had finished with and played it like an instrument.",
+    "age13": "A mixing desk is supposed to be set up once so a song sounds right, and then left. Tubby did the opposite: he moved the faders and the filter knob while the tape was running, so the song comes apart and reassembles as you listen. The desk was secondhand, sold off by a studio that had bought a better one, and it had a filter with an unusually wide sweep. Dub is what happened when somebody treated that equipment as something to play.",
+    "adult": "Dub's defining gestures are specific to this object: the fader group, the auxiliary sends and an unusually wide-range high-pass filter, all operated in real time. Tubby's background repairing electronics matters here too, since he modified what he owned rather than accepting it. The edge is technological rather than direct because the claim is about what the equipment made possible, not about who influenced whom."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}
