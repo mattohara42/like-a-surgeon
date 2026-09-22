@@ -653,12 +653,13 @@ These cover what changed in `render/` to carry it, and what it supersedes.
 ## Added when setting up the Netlify preview
 
 - **A87.** Matt asked for a web preview on Netlify. The site is
-  `lineage-atlas` (lineage-atlas.netlify.app), linked to this repo, and
-  `netlify.toml` tells it to run `node tools/bundle.js` and publish `dist/`:
+  `like-a-surgeon` (like-a-surgeon.netlify.app), linked to this repo with a
+  deploy preview per PR, and `netlify.toml` tells it to run `node tools/bundle.js` and publish `dist/`:
   the same offline build CI makes, served as static files. This is a
   preview for checking M3 work, not the hosting path M6 owns, and it adds
   no runtime network dependency, since `dist/` still makes no requests of
   its own. A direct upload through the Netlify MCP tool was refused (403
   from Netlify's upload relay, no reason given), which is why the preview
-  builds from the repo instead.
+  builds from the repo instead. That attempt also created an empty
+  `lineage-atlas` site, which is unused and can be deleted.
 
