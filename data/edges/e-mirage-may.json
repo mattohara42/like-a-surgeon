@@ -1,0 +1,32 @@
+{
+  "id": "e-mirage-may",
+  "from": "ensoniq-mirage",
+  "to": "derrick-may",
+  "type": "technological",
+  "confidence": "consensus",
+  "year": 1987,
+  "crossLineage": false,
+  "evidence": "The origin of 'Strings of Life' in a piano piece played at May's house by his friend Michael James, which May later sped up and cut into loops, is documented in May's own accounts. The specific sampler is named as the Ensoniq Mirage in gear histories of early Detroit techno rather than in a first-person statement, so this edge sits at consensus rather than documented.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Michael James",
+      "title": "a piano piece played at Derrick May's house",
+      "year": null
+    },
+    "later": {
+      "artist": "Rhythim Is Rhythim",
+      "title": "Strings of Life",
+      "year": 1987
+    },
+    "whatToListenFor": "The strings are not strings and the piano is not really a piano. Both are a couple of seconds of recorded sound being retriggered from a keyboard, which is why the chords all cut off at the same instant instead of decaying the way a real instrument would. Listen for the edges of those cuts. The record is exhilarating partly because it is so obviously assembled."
+  },
+  "explanation": {
+    "age7": "A friend played a piano tune at his house, and he chopped it into pieces and built a new song out of them.",
+    "age13": "Sampling means recording a sound and playing it back from a keyboard. The piano in 'Strings of Life' is not May playing: it is a recording of his friend Michael James playing something else entirely, sped up and cut into loops. May has always said so. A sampler cheap enough to own is what made that possible.",
+    "adult": "Useful on two counts. It is an honest authorship story that the artist told himself rather than one uncovered later, and it shows the compositional method that affordable eight-bit sampling produced: short fragments, hard edits, repetition as structure. Held at consensus because the machine is named in secondary sources rather than by May."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

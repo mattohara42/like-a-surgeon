@@ -211,3 +211,33 @@ fixing them inline.)
   list, or just checking `main` right before starting a batch rather than
   only at the start of a long session) so the next parallel collision costs
   less rework than this one did.
+- `machine.kind` has no value for an effect unit, a mixing desk, or a
+  turntable. The machines batch filed the Roland Space Echo under
+  `studio-technique` and both King Tubby's console and the Technics SL-1200
+  under `instrument` (see A58), which works but leans on an editorial
+  reading rather than on the schema. An `effect` kind, or a rename of
+  `studio-technique` to cover hardware processors explicitly, would make
+  this unambiguous. Schema change, so not done inline.
+- The lineage enum has no disco value, so the 12-inch single is filed under
+  `funk` (A57). Disco is load-bearing for house, for the remix as an
+  authored object, and for a large part of what the map will eventually
+  need to say about New York. Adding a value touches `SCHEMA.md`,
+  `tools/validate.js` and the renderer's lineage palette, so it needs a
+  decision rather than a quiet edit.
+- The link from Jamaican sound system practice to the Bronx has no node to
+  run through. DJ Kool Herc is the documented carrier, and he is not on the
+  map, so the machines batch did not draw a `dubplate` to `grandmaster-flash`
+  edge that it would otherwise have wanted. Herc is the obvious first
+  addition to any hip-hop batch.
+- Demos are now the furthest-behind gate metric after edges: 4 of 30 edges
+  carry a `demoId`, against 11 machines that could each plausibly have one.
+  The machines batch deliberately did not invent demo records, since
+  `data/demos/` is M4's contract and inventing params for an engine that
+  does not exist yet would be writing fiction. Worth planning the demo
+  roster against the machine roster before M4 opens.
+- The machines batch made the long-span-line problem above worse before
+  anyone fixes it. `dubplate` runs from 1950 to the present and the
+  melodica, the SL-1200, the 12-inch single and the Space Echo are all open
+  ended too, so the machine floor now carries several lines spanning most
+  of the axis. Formats and practices genuinely do not end, so this is
+  honest data hitting a styling gap rather than a data problem.

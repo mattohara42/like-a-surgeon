@@ -1,0 +1,31 @@
+{
+  "id": "e-melodica-pablo",
+  "from": "hohner-melodica",
+  "to": "augustus-pablo",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1972,
+  "crossLineage": true,
+  "evidence": "Pablo's adoption of the Hohner melodica, an instrument distributed through Jamaican schools as a teaching aid, is described across reggae histories and interviews. 'Java', voted the top instrumental of 1972 in Jamaica, is the record that established it as a lead voice rather than a novelty.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Hohner",
+      "title": "the Melodica, sold as a school instrument",
+      "year": 1958
+    },
+    "later": {
+      "artist": "Augustus Pablo",
+      "title": "Java",
+      "year": 1972
+    },
+    "whatToListenFor": "Listen to where each note starts and stops. There is no sustain to lean on, so every note has to be blown and then released, and you can hear him running out of breath and taking more. That is why a plastic school instrument sounds like a person rather than a keyboard. The tone itself is thin and reedy, almost weak, and playing it slowly in a minor key is what turns that weakness into the mood."
+  },
+  "explanation": {
+    "age7": "A cheap keyboard you blow into, the kind schools hand out, played slowly until it sounded sad and beautiful.",
+    "age13": "The melodica was made for classrooms. Pablo played one slowly, in minor keys, with heavy echo on it, and because you have to blow every note, the phrasing follows breathing rather than fingers. That is what makes it sound human. He called the result the Far East sound and built a whole run of records on it.",
+    "adult": "A corrective to the assumption that a new sound requires new technology. The melodica was fourteen years old and sold as an educational product. What changed was register, tempo, tuning and the signal chain it was placed in. Pablo's Far East sound is an argument about context rather than invention."
+  },
+  "tags": [
+    "technology"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-minimoog-kraftwerk",
+  "from": "minimoog",
+  "to": "kraftwerk",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1974,
+  "crossLineage": false,
+  "evidence": "Ralf Hutter's Minimoog is named in accounts of the Autobahn sessions as the source of the album's basslines, alongside Florian Schneider's ARP Odyssey and instruments built at Kling Klang and at Conny Plank's studio.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Moog Music",
+      "title": "Minimoog Model D",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Kraftwerk",
+      "title": "Autobahn",
+      "year": 1974
+    },
+    "whatToListenFor": "Listen to the bass and try to find a player in it. There is no fret noise, no finger on a string, no note arriving a fraction late because a hand had to move. Every note has the same attack as the one before. That evenness is not a limitation being worked around, it is the subject: a record about driving, played by something that does not get tired."
+  },
+  "explanation": {
+    "age7": "A synthesizer you could carry and play like a keyboard, used to make a bassline that never gets tired.",
+    "age13": "Before the Minimoog, a synthesizer was a wall of modules joined by cables and you needed to understand it before you could get a sound out. Moog wired the useful parts together permanently and put a keyboard on the front, so a musician could just buy one and play it. Kraftwerk used it for the bass on 'Autobahn', and the fact that every note is identical is the point rather than a problem.",
+    "adult": "Hardwiring the signal path traded the modular system's open-endedness for immediacy, and immediacy is what opened synthesis to musicians without technical training. Kraftwerk's use is the interesting case because they treated the machine's inhumanity as content rather than as something to disguise, which is the position most electronic music takes from here on."
+  },
+  "tags": [
+    "technology"
+  ]
+}

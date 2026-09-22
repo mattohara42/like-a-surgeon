@@ -1,0 +1,19 @@
+{
+  "id": "ensoniq-mirage",
+  "name": "Ensoniq Mirage",
+  "type": "machine",
+  "kind": "sampler",
+  "lineage": "electronic",
+  "maker": "Ensoniq",
+  "releasedYear": 1984,
+  "discontinuedYear": null,
+  "originalPurpose": "A sampling keyboard at a price a working musician could actually reach, at a moment when sampling otherwise meant a Fairlight and the cost of a house.",
+  "whatActuallyHappened": "It sold nearly eight thousand units in its first year, more than every other sampler on the market combined, and put recording-and-replaying sound into ordinary bedrooms. Its eight-bit sampling was noisy and its memory was tiny, neither of which turned out to matter. Derrick May built 'Strings of Life' on one, out of a piano part his friend Michael James had played at his house, sped up and cut into loops.",
+  "priceStory": "1,695 US dollars at launch, against five figures for the samplers it was competing with. The gap between those two numbers is the reason a Detroit teenager could own one.",
+  "hook": "The sampler that cost as much as a used car rather than as much as a house.",
+  "blurb": {
+    "age7": "A keyboard that could record any sound and let you play it back on the keys, cheap enough that ordinary people could buy one.",
+    "age13": "Sampling means recording a sound and then playing it back at different pitches from a keyboard. Until 1984 the machines that did it cost more than a house, so only famous studios had them. The Mirage cost about as much as a used car. It was noisy and could only hold a couple of seconds, and it still sold more in its first year than every other sampler put together, because being able to afford it mattered more than being good.",
+    "adult": "The Mirage is where sampling stops being an elite studio technique and becomes a common compositional method. Its technical limits, eight-bit resolution and very short memory, pushed users toward short loops and hard edits, which is a constraint the records of the following decade are audibly shaped by rather than in spite of."
+  }
+}

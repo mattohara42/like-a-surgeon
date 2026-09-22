@@ -1,0 +1,19 @@
+{
+  "id": "technics-sl-1200",
+  "name": "Technics SL-1200",
+  "type": "machine",
+  "kind": "instrument",
+  "lineage": "other",
+  "maker": "Matsushita Electric, under the Technics brand",
+  "releasedYear": 1972,
+  "discontinuedYear": null,
+  "originalPurpose": "A direct-drive turntable for the home hi-fi listener, sold on how accurately it held its speed.",
+  "whatActuallyHappened": "Direct drive means the motor turns the platter itself instead of pulling it with a rubber belt. That gives instant start, instant stop, and a platter you can hold, drag backwards and let go of without damaging anything. Nothing else on the market did that, and it was precisely what Bronx DJs needed to hold a four-bar drum break in place across two copies of a record. The MK2 of 1979 added a sliding pitch control and the deck stopped being hi-fi equipment: it became the standard instrument of DJing for the next thirty years. Panasonic ended production in 2010 and restarted it in 2016 after the demand refused to go away.",
+  "priceStory": "It was sold as a consumer hi-fi component rather than as professional equipment, which is the whole reason teenagers could get near it. The launch price is not recorded here. What matters is the shape of the cost: two decks and a mixer, bought slowly, against studio time nobody in the South Bronx was going to be given.",
+  "hook": "A living-room hi-fi deck whose motor happened to do the one thing hip-hop needed.",
+  "blurb": {
+    "age7": "A record player built so well that DJs could hold the record still, push it backwards, and let it go again without breaking it.",
+    "age13": "Most record players pull the platter with a rubber belt, so it takes a moment to get up to speed and you can wreck it by grabbing the record. This one had the motor underneath the platter driving it directly. It started instantly, stopped instantly, and did not care if you held it. That is the entire physical basis of DJing: without a deck that behaves like this, you cannot keep a drum break going across two copies of the same record.",
+    "adult": "The clearest case in the dataset of a consumer product being annexed by a use its makers did not plan for. Matsushita's engineers optimised for speed stability in a hi-fi context; the properties that flowed from that decision, high torque, instant start, tolerance of hand contact with the platter, are the enabling conditions for turntablism. The MK2's pitch fader, added in 1979 for broadcast and club use, completed it."
+  }
+}

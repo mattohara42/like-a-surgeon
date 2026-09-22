@@ -411,3 +411,49 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   `--edges=N` and `--tracks=N`, since the two sections want different
   sizes. The tool is now wired into `package.json`, the README and CI, so
   the next session finds it before rewriting it again.
+
+## Added during the machines batch
+
+- **A56.** `machine.lineage` means the world the machine was built for and
+  sold into, not the world that ended up using it. So the Technics SL-1200
+  (consumer hi-fi), King Tubby's MCI console (professional studio gear), the
+  Roland Space Echo (guitarists and studios) and the Hohner melodica (school
+  teaching aid) are all `other`, and their edges into dub and hip-hop come
+  out as genuinely cross-lineage. That is the honest reading of A22's
+  "editorial home lineage" and it makes `crossLineage` mean something on
+  machine edges: a machine crossing into a scene it was never aimed at is
+  the single most common story in this dataset.
+- **A57.** The 12-inch single is filed as `funk`. Disco has no value in the
+  lineage enum and funk is its nearest neighbour, which is a compromise
+  rather than a correct answer. Logged in `BACKLOG.md` under observed
+  problems: the enum may need a disco value, and that is a schema change
+  touching the validator and the lineage palette, not a data fix.
+- **A58.** `machine.kind` has no value for an effect unit, a mixing desk or
+  a turntable. The Space Echo is filed as `studio-technique`, since it is a
+  processor in a chain. King Tubby's console and the SL-1200 are filed as
+  `instrument`, on the grounds that this project's whole argument about both
+  is that they were played rather than configured. That reading is
+  defensible but it is a reading, and the missing `effect` kind is logged in
+  `BACKLOG.md`.
+- **A59.** A one-off machine has an acquisition date, not a release date.
+  `tubby-mci-console` carries `releasedYear: 1972`, the year the desk
+  reached Tubby, with its mid-1960s build date stated plainly in the record's
+  own `whatActuallyHappened`. A null would have been more literally correct
+  and would have made the node invisible, since the renderer places machines
+  on the time axis by `releasedYear` (see the `brunswick` label problem
+  already in `BACKLOG.md`).
+- **A60.** Likewise `dubplate` carries `releasedYear: 1950` as an explicit
+  placement anchor for a practice documented in Jamaica from the late 1940s
+  onward. The record says so in its own text rather than letting the number
+  pass as a fact. There is no year the dubplate came out.
+- **A61.** New records in this batch carry all three registers, `age7`
+  included, matching every record already in `data/`. `CLAUDE.md` defers the
+  Kid pass to Track D and requires only Teen and Adult, but every existing
+  record has all three, and writing two of three now would leave the Kid
+  pass with a ragged subset to find rather than a uniform dataset to rewrite.
+- **A62.** I had the wrong machine for "Strings of Life". From memory I was
+  going to author an E-mu Emulator II record and hang the edge off it;
+  checking first turned up the Ensoniq Mirage instead, and the Emulator II
+  never got written. Logged because the fact-check is the only reason the
+  error did not ship, and because it is a concrete argument for verifying
+  gear attributions rather than trusting recall on them.

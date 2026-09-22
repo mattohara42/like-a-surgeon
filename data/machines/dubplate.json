@@ -1,0 +1,19 @@
+{
+  "id": "dubplate",
+  "name": "The dubplate",
+  "type": "machine",
+  "kind": "format",
+  "lineage": "dub",
+  "maker": null,
+  "releasedYear": 1950,
+  "discontinuedYear": null,
+  "originalPurpose": "A test. Cut a mix onto a soft acetate disc, play it out on the sound system that night, and find out whether a crowd wants it before paying to press a thousand copies.",
+  "whatActuallyHappened": "Exclusivity turned the test into the point. A plate cut for one sound system and nobody else, often with the selector's name voiced over the top of the mix, was a weapon in a clash: the other crew physically could not play it. That demand is what kept engineers cutting one-off versions at all hours, and it is the economic reason dub mixing existed as paid work. Acetate is soft enough to mark with a fingernail and wears out after somewhere around fifty to a hundred plays, so the record is temporary by construction. Jamaican sound systems were cutting them from the late 1940s onward; the 1950 date on this record is an anchor for the practice, not a release date, because there is no year the dubplate came out.",
+  "priceStory": "One disc at a time, cheap enough to cut for a single night and worthless as stock, since nobody else can sell what only one crew is allowed to play. Its value was never in the object. It was in nobody else having it.",
+  "hook": "A record made in one copy, for one crowd, on a disc that wears out.",
+  "blurb": {
+    "age7": "A record made as a single copy, just for one sound system, that wore out after being played a few dozen times.",
+    "age13": "Before pressing thousands of copies, a producer would cut one soft disc and try it out at a dance. Then people realised the one-copy part was the good bit: if only your sound system has a record, nobody can compete with you playing it. Engineers started cutting special versions with the crew's name shouted over the top. The discs are soft and wear out after fifty or a hundred plays, so the whole thing is deliberately temporary.",
+    "adult": "The dubplate is the economic engine underneath dub as a practice. Sound system competition created continuous paid demand for unique mixes, which funded the studio time in which the mixing techniques were developed. It also inverts the usual logic of recording: the value of the object is its non-reproducibility, and its physical decay is accepted rather than fought."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "e-909-knuckles",
+  "from": "tr-909",
+  "to": "frankie-knuckles",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1984,
+  "crossLineage": false,
+  "evidence": "Knuckles said in interviews, including with Red Bull Music Academy, that his first drum machine was a TR-909 that reached him from Derrick May in Detroit in 1984, and that May came down to show him how to program it. Whether it was sold or given is told both ways, including by people present at the time.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Roland",
+      "title": "TR-909, as a rhythm composer for musicians",
+      "year": 1983
+    },
+    "later": {
+      "artist": "Frankie Knuckles",
+      "title": "Warehouse and Power Plant DJ sets",
+      "year": 1984
+    },
+    "whatToListenFor": "Do this as a comparison. Put on a Philadelphia disco record from 1976 and listen to the drums: a person playing, pushing slightly ahead in the chorus, dragging in the verse. Then put on a Chicago house record from 1986. The kick is in exactly the same place in every bar for seven minutes, and above it there is a short, bright, ringing open hi-hat that never varies either. That machine hi-hat, laid under records that were never built for it, is what a Warehouse night turned into."
+  },
+  "explanation": {
+    "age7": "Somebody gave him a drum machine, and he used it underneath old records to keep people dancing.",
+    "age13": "Knuckles got his first drum machine in 1984, a Roland 909 that came from Derrick May in Detroit. He used it live, playing a steady machine beat underneath disco and soul records, which kept the floor moving through the parts of a record where the drums thin out. House music starts in that gap between an old record and a drum machine holding it up.",
+    "adult": "The transfer is documented and the mechanism matters: the 909 entered Chicago as a DJ's tool for extending existing records, not as a studio instrument for making new ones. That sequence, live augmentation first and production second, is a large part of why house records are built the way they are. Accounts differ on whether May sold or gave him the machine, which is worth stating rather than smoothing over."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

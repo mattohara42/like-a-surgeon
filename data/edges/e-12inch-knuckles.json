@@ -1,0 +1,32 @@
+{
+  "id": "e-12inch-knuckles",
+  "from": "twelve-inch-single",
+  "to": "frankie-knuckles",
+  "type": "technological",
+  "confidence": "consensus",
+  "year": 1977,
+  "crossLineage": true,
+  "evidence": "The 12-inch single's arrival as a commercial format in 1976 and its rapid adoption by New York and Chicago club DJs is thoroughly documented. The narrower claim here, that the format shaped what Knuckles could do across a night at the Warehouse, is an inference from how the format and the room worked rather than a statement he made, so it is held at consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Double Exposure",
+      "title": "Ten Percent (Walter Gibbons mix)",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Frankie Knuckles",
+      "title": "Warehouse DJ sets",
+      "year": 1977
+    },
+    "whatToListenFor": "On the Gibbons mix, listen for the song being deliberately withheld. The drums and percussion go round for far longer than any radio edit would allow, the vocal you are waiting for keeps not arriving, and when the break comes back it comes back twice. That patience is what the extra space on the disc bought, and it is a DJ's sense of timing rather than a producer's."
+  },
+  "explanation": {
+    "age7": "Bigger records meant longer, louder songs, which is what a room full of dancing people needs.",
+    "age13": "Give one song a full-sized disc and the grooves can be spread out, which makes it louder, and there is room for it to run nine minutes instead of three. Clubs need that. It also meant the person who made the long version, the remixer, mattered as much as the band, which is how remixing became a job people had.",
+    "adult": "A format change with an authorship consequence. Wider groove spacing permits higher cutting levels and long running times, which makes the DJ-oriented extended mix commercially distributable, which in turn promotes the remixer from technician to credited author. Knuckles's specific debt to the format is inference rather than testimony, hence consensus."
+  },
+  "tags": [
+    "technology",
+    "labels"
+  ]
+}
