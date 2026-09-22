@@ -1,0 +1,10 @@
+# Preview hosting on Netlify (site: lineage-atlas). Builds the offline
+# release with the same command CI runs and publishes it as static files.
+# dist/ needs no server, so Netlify is only serving what file:// would.
+# See ASSUMPTIONS.md A84 and A87.
+[build]
+  command = "node tools/bundle.js"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
