@@ -4,7 +4,29 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
-(none)
+- **Q10. Should `edge` carry a certainty note, or is the derived proxy
+  enough?** `tools/report.js` ranks "the twenty edges I am least sure
+  about" from confidence tier plus flags read off the record (see **A52**).
+  It works, and on the current data it surfaces the right edges. But it is
+  inference about the writing, not a record of what the writer actually
+  thought. A one-line optional `edge.uncertainty` field would say it
+  directly: what specifically is shaky, in the author's words. The cost is
+  another field to write on every edge and the risk it gets left empty and
+  becomes noise. My instinct is to leave it derived until the ranking is
+  visibly wrong about something, but it is your call and the gate review is
+  the moment to make it.
+
+- **Q11. Does the M1 dataset target still stand?** The first gate report
+  makes the gap concrete: 32 of 120 artists, 36 of 350 edges, 2 of 25
+  machines, 8 of 60 cross-lineage edges, 4 of 30 edges with a demo. M2
+  shipped anyway, and the renderer is good, so the plan's "milestones are
+  gates" rule has already been bent once. Three honest options: hold the
+  numbers and spend the next several sessions almost entirely on data;
+  re-scope M1 to a number the project will actually reach before M3 (a
+  60-artist, 150-edge version of the same shape); or keep the targets as a
+  Track D destination and formally decouple them from the gate, which is
+  closer to what is already happening. Machines are the sharpest gap, since
+  M4's audio work is built on machine records and every demo needs one.
 
 ## Resolved
 
