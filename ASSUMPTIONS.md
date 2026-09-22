@@ -528,3 +528,48 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   without checking their shape. Both are fixed here; the validator gap is
   logged in `BACKLOG.md`, since `whyThisOne` is reader-facing text and a
   record can currently ship without it and pass clean.
+
+## Added on closing M1
+
+- **A71. Disco.** Matt asked for disco to be alluded to rather than added,
+  and for the map to be visibly embarrassed about this. Done, on the
+  following terms, because the embarrassment is not allowed to cost the
+  reader a fact.
+
+  The lineage enum gains no `disco` value. `twelve-inch-single` and
+  `sylvia-robinson` stay filed under `funk`, which is the nearest available
+  neighbour and is not the right answer. The records themselves go on
+  naming Salsoul, Walter Gibbons, the remix contest, the extended club mix
+  and the New York clubs in plain terms, because that material is
+  load-bearing for house and for the remixer becoming an author. Declining
+  to give something a label on the map is not a licence to stop describing
+  it.
+
+  So the embarrassment here is the map's and not disco's, and it is the
+  right feeling to have for a slightly different reason than the joke
+  usually implies. Disco's reputation was not lost in a fair fight. On 12
+  July 1979 a Chicago radio DJ blew up a crate of disco records between
+  games of a White Sox doubleheader and the crowd rioted; ushers reported
+  that people had also turned up with funk and R&B records to be destroyed.
+  Historians broadly read the backlash as a reaction to changing racial and
+  sexual rules in America, disco having come out of Black, Latino and queer
+  spaces before it reached the mainstream. Nile Rodgers of Chic has said
+  the footage looked to him like a book burning. Steve Dahl, who ran the
+  event, has consistently denied any racial or homophobic intent and says
+  it was about the music.
+
+  Which is to say the position "we would rather not get into disco" has a
+  lineage of its own, and it is not a flattering one. Filed under `funk`.
+  Moving on, briskly, whistling.
+
+- **A72. M1 closed.** Matt closed M1 in chat. The step-5 numeric targets
+  were unmet at closing and are not abandoned: they move to Track D as its
+  destination, which is where `BUILD_PLAN.md` always said data expansion
+  belongs, and `npm run report` keeps measuring the distance. This
+  supersedes **A67**, which read an earlier "M1 is good" as a quality
+  sign-off with the Q11 targets still gating. Closing M1 opens M3, the
+  reading surface, since M2 shipped ahead of its gate. The largest single
+  piece of M3 is already specified in `BACKLOG.md` under "Deferred from the
+  Strata port": the detail panels, which the design prototype had and the
+  shipped renderer does not, and which are the reason clicking a node
+  currently only logs.
