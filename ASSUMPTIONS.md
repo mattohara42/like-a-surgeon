@@ -457,3 +457,25 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   never got written. Logged because the fact-check is the only reason the
   error did not ship, and because it is a concrete argument for verifying
   gear attributions rather than trusting recall on them.
+- **A63.** The map does not draw a Kingston-to-Bronx edge through Kool Herc,
+  and that is a decision rather than an omission. `BACKLOG.md` had recorded
+  Herc as "the documented carrier" of Jamaican sound system practice into
+  the Bronx; researching him for this record falsified that. Herc has
+  answered the question both ways across decades of interviews, at times
+  rejecting any connection to toasting outright and naming James Brown and
+  the Last Poets as the source of rap's vocal style, at other times
+  describing his DJing as something he brought from Jamaica. Scholarship
+  splits the same way, with some reading the resemblance as shared
+  African-American and Caribbean DJ roots rather than transmission. An edge
+  would make the map assert, at best at `asserted` tier, a claim its own
+  subject rejects half the time. The contest is written into Herc's adult
+  register instead, where it can be stated as a contest. Raised as **Q12**
+  in `QUESTIONS.md`, because the dub-to-hip-hop crossing is load-bearing for
+  this project's thesis and the call is Matt's, not mine.
+- **A64.** While adding Herc to `south-bronx`'s `memberIds` I also added
+  `grandmaster-flash`, who declares the scene in his own record but was
+  missing from the scene's member list. That is the artist-declares-scene
+  versus scene-lists-member gap already recorded in `BACKLOG.md`. Fixed for
+  this one file because I was editing it anyway; the validator still has no
+  check in either direction, and the other scenes are still unreconciled, so
+  the backlog item stands.

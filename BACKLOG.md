@@ -229,6 +229,13 @@ fixing them inline.)
   map, so the machines batch did not draw a `dubplate` to `grandmaster-flash`
   edge that it would otherwise have wanted. Herc is the obvious first
   addition to any hip-hop batch.
+  **Corrected when Herc was added:** "documented carrier" was wrong, and I
+  wrote it from the same popular-history assumption the research then
+  undercut. Herc himself has rejected the toasting connection as often as
+  he has affirmed his Jamaican roots, and the scholarship is split. Herc is
+  now on the map and the crossing is still not drawn, deliberately. See
+  **A63** and **Q12**: whether this map should carry that edge at all is
+  now an open question for Matt rather than a gap waiting on a node.
 - Demos are now the furthest-behind gate metric after edges: 4 of 30 edges
   carry a `demoId`, against 11 machines that could each plausibly have one.
   The machines batch deliberately did not invent demo records, since
