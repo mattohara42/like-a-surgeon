@@ -206,6 +206,27 @@ export const CONFIG = {
     youtubeSearchUrl: 'https://www.youtube.com/results?search_query=',
   },
 
+  // "Arrange by" (Q19, docs/m3-architecture.md section 7a): which lanes the
+  // map is sorted into. Lane titles here are plain uppercase, like the
+  // lineage lane titles and "THE MACHINES".
+  arrange: {
+    options: [
+      { key: 'lineage', label: 'Lineage' },
+      { key: 'scene', label: 'Scene' },
+      { key: 'label', label: 'Label' },
+    ],
+    default: 'lineage',
+    storageKey: 'lineage.arrange.v1',
+    ungroupedTitles: { scene: 'NOT IN A SCENE YET', label: 'NO LABEL ON THE MAP YET' },
+    // Marker kinds that are not the grouping get a lane of their own.
+    kindLaneTitles: { label: 'LABELS' },
+    // Scene and label lane titles are buttons, so they are drawn larger
+    // than the lineage titles, and sit this far before the lane's first
+    // member (screen px, counter-scaled like every other label).
+    groupTitleFontSize: 14,
+    groupTitleLeadPx: 14,
+  },
+
   // The confidence legend. Open on a first visit, because the tiers are
   // part of what the map teaches; after that it remembers the reader's
   // choice. Collapsed, it still shows all three swatches.

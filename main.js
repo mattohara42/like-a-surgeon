@@ -10,6 +10,7 @@ import { CONFIG } from './config.js';
 import { loadGraphData } from './render/loader.js';
 import { createGraph } from './render/graph.js';
 import { loadLayers, saveLayers, createLayerToggles } from './render/layers.js';
+import { loadArrange, saveArrange, createArrangeControl } from './render/arrange.js';
 import { availableRegisters, loadRegister, saveRegister, createRegisterSelector } from './reading/registers.js';
 import { buildNeighbours } from './reading/neighbours.js';
 import { createPanel } from './reading/panel.js';
@@ -25,6 +26,7 @@ const registersEl = document.getElementById('registers');
 const panelEl = document.getElementById('panel');
 const legendEl = document.getElementById('legend');
 const searchEl = document.getElementById('search');
+const arrangeEl = document.getElementById('arrange');
 
 // Which layer toggle has to be on for a node of this kind to be drawn.
 // Artists are always drawn, and scenes are framed through their members.
@@ -69,9 +71,15 @@ async function main() {
       .sort((a, b) => (a.startYear ?? 0) - (b.startYear ?? 0));
   }
 
+  // A label's roster: the artists that name it.
+  function labelMembers(labelId) {
+    return data.nodes.filter((n) => n.kind === 'artist' && n.raw.labels?.some((l) => l.labelId === labelId));
+  }
+
   const registers = availableRegisters(data);
   let register = loadRegister(registers);
   let layers = loadLayers();
+  let arrange = loadArrange();
   let graph = null;
 
   const legend = createLegend(legendEl, data.meta);
@@ -121,6 +129,12 @@ async function main() {
       graph.frameNodes(sceneMembers(node.id).map((m) => m.id));
       return;
     }
+    // Arranged by label, a label is its lane: frame the roster rather than
+    // switching the Labels layer on underneath the reader.
+    if (node.kind === 'label' && arrange === 'label') {
+      graph.frameNodes([node.id, ...labelMembers(node.id).map((m) => m.id)]);
+      return;
+    }
     ensureLayersFor([node.kind]);
     graph.focusNode(node.id);
   }
@@ -151,6 +165,7 @@ async function main() {
     graph = createGraph(appEl, data, {
       transportEl: document.getElementById('transport'),
       layers,
+      arrange,
       initialViewport: carried.viewport,
       initialYear: carried.year,
       initialSelectedId: carried.selected,
@@ -158,6 +173,7 @@ async function main() {
       // The graph has already flown the camera; the panel only opens.
       onSelectNode: (node) => panel.open({ kind: 'node', id: node.id }),
       onSelectEdge: (edge) => panel.open({ kind: 'edge', id: edge.id }),
+      onSelectGroup: (id) => goNode(id),
     });
 
     window.__graph = graph; // for manual/automated inspection during dev
@@ -175,6 +191,19 @@ async function main() {
     build();
   }
 
+  // Re-laning moves every node, so like a layer toggle it rebuilds. The
+  // camera is not carried across: the old view's coordinates point at a
+  // different part of a different layout, so the map re-fits instead.
+  function applyArrange(next) {
+    if (next === arrange) return;
+    arrange = next;
+    saveArrange(arrange);
+    createArrangeControl(arrangeEl, arrange, applyArrange);
+    graph?.destroy();
+    graph = null;
+    build();
+  }
+
   function applyRegister(next) {
     register = next;
     saveRegister(register);
@@ -186,6 +215,7 @@ async function main() {
 
   createLayerToggles(layersEl, layers, applyLayers);
   createRegisterSelector(registersEl, registers, register, applyRegister);
+  createArrangeControl(arrangeEl, arrange, applyArrange);
   legend.setRegister(register);
   search.setRegister(register);
   build();

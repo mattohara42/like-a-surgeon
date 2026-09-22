@@ -11,7 +11,6 @@
 
 import { CONFIG } from '../config.js';
 
-const LINEAGE_ORDER = Object.keys(CONFIG.colors.lineage);
 
 function makeTimeScale(minYear, maxYear) {
   const { marginYears, pxPerYear } = CONFIG.layout;
@@ -67,7 +66,10 @@ function packIntoRows(items) {
   return { rowOf, rowCount: Math.max(1, rowEnds.length) };
 }
 
-export function computeLayout(nodes, { withSubstrate = true } = {}) {
+// `plan` (render/arrange.js) says which lanes exist, in what order, and
+// which lane each node belongs to. Lineage lanes are one plan among several
+// (Q19), so nothing here knows what a lane means.
+export function computeLayout(nodes, { withSubstrate = true, plan }) {
   const positioned = nodes.filter((n) => n.startYear !== null);
   const years = positioned.flatMap((n) => [n.startYear, n.endYear]);
   const minYear = years.length ? Math.min(...years) : new Date().getFullYear() - 1;
@@ -80,9 +82,17 @@ export function computeLayout(nodes, { withSubstrate = true } = {}) {
   const positions = new Map();
   let y = axisHeight;
 
+  const byLane = new Map();
+  for (const node of positioned) {
+    if (node.kind === 'machine') continue;
+    const key = plan.laneOf(node);
+    if (!byLane.has(key)) byLane.set(key, []);
+    byLane.get(key).push(node);
+  }
+
   const lanes = [];
-  for (const lineage of LINEAGE_ORDER) {
-    const laneNodes = positioned.filter((n) => n.kind !== 'machine' && n.lineage === lineage);
+  for (const spec of plan.lanes) {
+    const laneNodes = byLane.get(spec.key) ?? [];
     if (dropEmptyLanes && laneNodes.length === 0) continue;
 
     const pack = packIntoRows(laneNodes);
@@ -95,12 +105,15 @@ export function computeLayout(nodes, { withSubstrate = true } = {}) {
         x1: timeScale.toX(node.startYear),
         x2: timeScale.toX(node.endYear),
         y: laneTop + laneTopPadding / 2 + row * nodeRowHeight + nodeRowHeight / 2,
-        band: lineage,
+        band: spec.key,
         row,
       });
     }
 
-    lanes.push({ lineage, y: laneTop, height: contentHeight, rowCount: pack.rowCount });
+    // Where the lane's content starts on the time axis, so a group lane can
+    // title itself next to its earliest member rather than at the far left.
+    const firstX = Math.min(...laneNodes.map((n) => timeScale.toX(n.startYear)));
+    lanes.push({ ...spec, y: laneTop, height: contentHeight, rowCount: pack.rowCount, firstX });
     y += contentHeight + laneGap;
   }
 

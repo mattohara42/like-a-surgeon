@@ -5,6 +5,7 @@
 
 import { CONFIG } from '../config.js';
 import { computeLayout } from './layout.js';
+import { buildLanePlan } from './arrange.js';
 import { createViewportState, transformString, visibleContentRange, flyTo } from './viewport.js';
 import { zoomLevelForScale } from './zoomLevels.js';
 import { attachPanZoomHandlers } from './interactions.js';
@@ -87,7 +88,14 @@ function drawAxis(axisG, layout) {
   }
 }
 
-function drawBands(bandsG, layout) {
+// Lane bands and titles. A lane that stands for a scene or a label
+// (Arrange by, Q19) titles itself with that record's name, next to its
+// earliest member, and the title is a button that opens the record: this is
+// how scenes, which are otherwise only atmosphere, become clickable.
+// Band rectangles go in `bandsG`, under everything. Titles go in `titlesG`,
+// which sits above the edges and nodes: a lane title is a button, and under
+// the edges an edge's wide invisible hit area would swallow its clicks.
+function drawBands(bandsG, titlesG, layout, onSelectGroup) {
   const originX = layout.timeScale.toX(layout.timeScale.year0);
 
   for (const lane of layout.lanes) {
@@ -97,19 +105,33 @@ function drawBands(bandsG, layout) {
         y: lane.y,
         width: layout.totalWidth,
         height: lane.height,
-        fill: colorFor(lane.lineage),
+        fill: lane.color,
         opacity: 0.024,
       }),
     );
+    const isGroup = lane.groupId !== null;
     const label = svgEl('text', {
-      class: 'band-label',
-      x: originX,
+      class: isGroup ? 'band-label band-link' : 'band-label',
+      x: isGroup ? lane.firstX : originX,
       y: lane.y,
-      fill: colorFor(lane.lineage),
+      fill: lane.color,
       'font-weight': 600,
+      'text-anchor': isGroup ? 'end' : 'start',
     });
-    label.textContent = lane.lineage.toUpperCase();
-    bandsG.appendChild(label);
+    label.textContent = isGroup ? `${lane.title} ›` : lane.title;
+    if (isGroup) {
+      label.setAttribute('tabindex', '0');
+      label.setAttribute('role', 'button');
+      label.setAttribute('aria-label', `Open ${lane.title}`);
+      label.addEventListener('click', () => onSelectGroup(lane.groupId));
+      label.addEventListener('keydown', (e) => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        e.preventDefault();
+        e.stopPropagation();
+        onSelectGroup(lane.groupId);
+      });
+    }
+    titlesG.appendChild(label);
   }
 
   if (!layout.substrate) return;
@@ -122,12 +144,12 @@ function drawBands(bandsG, layout) {
     'font-weight': 600,
   });
   floorLabel.textContent = 'THE MACHINES';
-  bandsG.appendChild(floorLabel);
+  titlesG.appendChild(floorLabel);
 }
 
 // Re-applies counter-scaled font-size/stroke-width/offsets to the
 // once-drawn axis ticks, axis labels, and band labels.
-function updateStaticLayerScale(axisG, bandsG, scale) {
+function updateStaticLayerScale(axisG, titlesG, scale) {
   for (const tick of axisG.querySelectorAll('.axis-tick')) {
     tick.setAttribute('stroke-width', 1 / scale);
   }
@@ -136,10 +158,11 @@ function updateStaticLayerScale(axisG, bandsG, scale) {
     label.setAttribute('y', 14 / scale);
     label.setAttribute('dx', 4 / scale);
   }
-  for (const label of bandsG.querySelectorAll('.band-label')) {
-    label.setAttribute('font-size', 11 / scale);
-    label.setAttribute('dx', 4 / scale);
-    label.setAttribute('dy', 14 / scale);
+  for (const label of titlesG.querySelectorAll('.band-label')) {
+    const isGroup = label.classList.contains('band-link');
+    label.setAttribute('font-size', (isGroup ? CONFIG.arrange.groupTitleFontSize : 11) / scale);
+    label.setAttribute('dx', (isGroup ? -CONFIG.arrange.groupTitleLeadPx : 4) / scale);
+    label.setAttribute('dy', (isGroup ? 18 : 14) / scale);
   }
 }
 
@@ -161,6 +184,9 @@ export function createGraph(container, data, callbacks = {}) {
   const {
     onSelectNode = () => {},
     onSelectEdge = () => {},
+    // A scene or label lane title was chosen (Arrange by, Q19).
+    onSelectGroup = () => {},
+    arrange = CONFIG.arrange.default,
     transportEl = null,
     layers = CONFIG.layers.defaults,
     initialViewport = null,
@@ -191,7 +217,10 @@ export function createGraph(container, data, callbacks = {}) {
   const graphNodeIds = new Set(graphNodes.map((n) => n.id));
   const graphEdges = data.edges.filter((e) => graphNodeIds.has(e.from.id) && graphNodeIds.has(e.to.id));
 
-  const layout = computeLayout(graphNodes, { withSubstrate: layers.machines });
+  // Lanes come from every loaded record, not just the drawn ones, so a
+  // scene or label lane exists even while that layer is off.
+  const plan = buildLanePlan(arrange, data.nodes);
+  const layout = computeLayout(graphNodes, { withSubstrate: layers.machines, plan });
   const vp = createViewportState();
   if (initialViewport) Object.assign(vp, { tx: initialViewport.tx, ty: initialViewport.ty, scale: initialViewport.scale });
 
@@ -202,16 +231,17 @@ export function createGraph(container, data, callbacks = {}) {
   const viewportG = svgEl('g', { class: 'viewport' });
   const nebulaG = svgEl('g', { class: 'nebula-layer' });
   const bandsG = svgEl('g', { class: 'bands-layer' });
+  const titlesG = svgEl('g', { class: 'titles-layer' });
   const floorG = svgEl('g', { class: 'floor-layer' });
   const axisG = svgEl('g', { class: 'axis-layer' });
   const edgesG = svgEl('g', { class: 'edges-layer' });
   const nodesG = svgEl('g', { class: 'nodes-layer' });
   const cursorG = createCursorLayer(layout);
-  viewportG.append(nebulaG, bandsG, floorG, axisG, edgesG, nodesG, cursorG);
+  viewportG.append(nebulaG, bandsG, floorG, axisG, edgesG, nodesG, titlesG, cursorG);
   root.append(defs, viewportG);
   container.appendChild(root);
 
-  drawBands(bandsG, layout);
+  drawBands(bandsG, titlesG, layout, onSelectGroup);
   if (layout.substrate) drawSubstrate(floorG, layout);
   drawAxis(axisG, layout);
   drawNebulae(nebulaG, sceneRecords, layout);
@@ -373,7 +403,7 @@ export function createGraph(container, data, callbacks = {}) {
 
   function render() {
     viewportG.setAttribute('transform', transformString(vp));
-    updateStaticLayerScale(axisG, bandsG, vp.scale);
+    updateStaticLayerScale(axisG, titlesG, vp.scale);
     if (layout.substrate) updateSubstrateScale(floorG, vp.scale);
 
     // Scene clouds sit fractionally behind the graph plane. That offset is
@@ -532,6 +562,7 @@ export function createGraph(container, data, callbacks = {}) {
     focusEdge,
     frameNodes,
     focusYear,
+    arrange,
     yearBounds: () => ({ min: layout.timeScale.year0, max: layout.timeScale.yearEnd }),
     selectedId: () => selectedId,
     clearSelection: () => {
