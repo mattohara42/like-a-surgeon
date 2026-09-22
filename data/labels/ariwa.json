@@ -1,0 +1,19 @@
+{
+  "id": "ariwa",
+  "name": "Ariwa Sounds",
+  "type": "label",
+  "lineage": "dub",
+  "foundedYear": 1979,
+  "closedYear": null,
+  "city": "London",
+  "founders": [
+    "Mad Professor"
+  ],
+  "ownershipStory": "Neil Fraser, known as Mad Professor, built his own mixing board and opened a four-track studio in his south London living room in 1979, naming it Ariwa after a Nigerian word for sound. He has run it, and released his own and others' dub through it, ever since, making it one of the longest-running independently owned reggae studios and labels in Britain.",
+  "hook": "A London teenager who fixed radios for a living built his own mixing desk and started the UK's longest-running independent dub label.",
+  "blurb": {
+    "age7": "A man built his own recording studio at home in London and used it to make dub music for decades.",
+    "age13": "Mad Professor built his own mixing board and opened a tiny studio, Ariwa, in his south London living room in 1979. It is still going, and it made him one of dub's most important producers outside Jamaica.",
+    "adult": "Ariwa is the London counterpart to Tubby's Kingston workshop and Perry's Black Ark: another self-built studio-as-instrument, this one continuing the tradition into Britain's reggae diaspora and, later, into collaborations well outside reggae."
+  }
+}

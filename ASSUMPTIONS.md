@@ -206,3 +206,47 @@ unchanged, only the visual language changed.
   Re-measured the M2 perf gate after this restyle: `render()` averages
   3.2ms (was 1.9ms pre-restyle), max 13.5ms, still 0/90 sampled frames over
   the 16.7ms budget.
+
+## Added reconciling a second parallel Track D session against merged main
+
+A separate session (this one, working from an earlier `main`) independently
+researched and wrote 8 artists, 6 labels, and 2 scenes covering the same
+dub/electro/Detroit/Chicago ground the by-then-merged data batches 1 and 2
+had already covered, plus M2 on top of that. Two Claude sessions reaching
+the same real facts (the Belleville Three friendship, Arthur Baker's
+production credit, King Tubby mixing Augustus Pablo, Sly and Robbie's
+riddim economy, Frankie Knuckles at the Warehouse) independently, from
+separately-run research, reads as convergent validation of the underlying
+history, not as either session being sloppy; Matt's framing, on being told
+about the collision. Handling it as a design smell to fix would be the
+wrong lesson.
+
+- **A34.** Reconciliation kept `main`'s already-merged versions wholesale
+  for every artist/label/scene both sessions wrote (Derrick May, Kevin
+  Saunderson, Arthur Baker, Augustus Pablo, Sly and Robbie, Frankie
+  Knuckles; the Metroplex/Kling Klang/Tommy Boy/Trax/Transmat labels; the
+  Düsseldorf Electronic and Chicago House scenes), rather than
+  reconciling field-by-field, since both were independently sourced and
+  comparably rigorous on inspection (spot-checked `derrick-may.json`
+  side by side). This session's branch was rebuilt from scratch on top of
+  current `main`, keeping only what `main` didn't already have: **Man
+  Parrish** and **Mad Professor** as artists, **Ariwa** and **Rockers
+  International** as labels, and four connecting edges
+  (`e-808-manparrish`, `e-kraftwerk-may`, `e-perry-madprofessor`,
+  `e-tubby-madprofessor`).
+- **A35.** Dropped this session's `e-knuckles-phuture` edge (Frankie
+  Knuckles' Warehouse/Power Plant sets as the scene Phuture grew up in,
+  `consensus` tier) rather than add it alongside `main`'s already-merged
+  `e-hardy-phuture` (Ron Hardy's Music Box tape circulation of 'Acid
+  Tracks' before release, `documented` tier). Both claims are real, but
+  Hardy's is the more specific and better-sourced version of essentially
+  the same Chicago-house-scene-to-Phuture transmission; keeping both would
+  have padded the edge count with a strictly weaker duplicate rather than
+  adding real coverage.
+- **A36.** `main`'s `e-knuckles-atkins` and `e-hardy-phuture` already
+  establish real precedent for edge `type: "scene"` (a scene-level
+  cultural influence reaching a specific artist, `from` the influencing
+  figure `to` the influenced artist), which this session's own `BACKLOG.md`
+  entry had flagged as having no worked example anywhere in the dataset.
+  That flag is now stale; see the `BACKLOG.md` correction alongside this
+  entry. `edge: type: "label"` still has no example.

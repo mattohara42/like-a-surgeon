@@ -1,0 +1,32 @@
+{
+  "id": "e-tubby-madprofessor",
+  "from": "king-tubby",
+  "to": "mad-professor",
+  "type": "technological",
+  "confidence": "consensus",
+  "evidence": "Mad Professor is widely described in music journalism as continuing King Tubby's studio-built, desk-as-instrument approach to dub, including building his own mixing board as Tubby did, though he has not, in the sources checked here, named Tubby as a direct personal teacher.",
+  "year": 1979,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "King Tubby",
+      "title": "Home-built mixing desk, Waterhouse",
+      "year": 1968
+    },
+    "later": {
+      "artist": "Mad Professor",
+      "title": "Ariwa Sounds, home-built desk",
+      "year": 1979
+    },
+    "whatToListenFor": "Both men's records treat the mixing desk itself, not a mixed-down finished master, as the instrument being played live. The specific tools differ by a decade of electronics, but the gesture is the same."
+  },
+  "explanation": {
+    "age7": "Both men built their own mixing equipment at home and used it to make dub music their own way.",
+    "age13": "Tubby was an electronics repairman who modified his own desk. A decade later in London, Mad Professor, also trained in electronics, did the same thing and used it the same way.",
+    "adult": "Tiered as consensus, not documented, because the parallel is a strong and widely noted one rather than a specific sourced claim of direct instruction. Worth stating carefully rather than upgrading it, since the resemblance could partly be independent convergence on a shared material constraint: cheap secondhand electronics and a willingness to modify them."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}
