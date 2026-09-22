@@ -1,0 +1,23 @@
+{
+  "id": "kool-herc",
+  "name": "DJ Kool Herc",
+  "sortName": "Kool Herc, DJ",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1973,
+  "activeTo": null,
+  "originCity": "Kingston",
+  "originCountry": "Jamaica",
+  "scenes": [
+    "south-bronx"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Worked out that the few seconds dancers actually waited for could be made to last as long as he wanted, and built a form of music on that one idea.",
+  "blurb": {
+    "age7": "He noticed that dancers only really went for one short part of a record, so he bought two copies and played that part over and over.",
+    "age13": "Clive Campbell was born in Kingston and moved to the Bronx as a boy. At a back-to-school party his sister Cindy organised at 1520 Sedgwick Avenue on 11 August 1973, he did something simple and enormous: instead of playing a funk record through, he played the few seconds of drums that the dancers were waiting for, then cut to a second copy of the same record and played those seconds again. He called it the merry-go-round. The dancers who came alive during it got called break boys, b-boys. Almost everything in hip-hop starts from that decision, and he never released a record of his own.",
+    "adult": "Herc is the clearest case in the dataset of an artist whose importance has nothing to do with a discography. The merry-go-round isolates the break as the unit of composition, which is the premise sampling would later industrialise. His relationship to Jamaican sound system practice is genuinely contested and he has answered it both ways across decades of interviews: at times rejecting any connection to toasting outright, saying he could not play reggae to a Bronx crowd and naming James Brown and the Last Poets as the source of rap's vocal style, and at other times describing his DJing as something he brought with him from Jamaica. Scholars split the same way, some reading the resemblance as common African-American and Caribbean DJ roots rather than direct transmission. This map does not draw the Kingston-to-Bronx edge, because the person it would run through says it is not there."
+  },
+  "signatureTracks": []
+}

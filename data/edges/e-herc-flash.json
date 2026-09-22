@@ -1,0 +1,31 @@
+{
+  "id": "e-herc-flash",
+  "from": "kool-herc",
+  "to": "grandmaster-flash",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1975,
+  "crossLineage": false,
+  "evidence": "Flash has described watching Herc and identifying the weakness in the merry-go-round: Herc found the break by eye and by feel, so the joins were approximate. Flash's answer, cueing the second copy silently on headphones so the break could be dropped exactly on the beat, is the technique he named quick-mix theory, and he has credited Herc as the source of the idea it corrects throughout Bronx oral histories and in his own accounts.",
+  "trackPair": {
+    "earlier": {
+      "artist": "DJ Kool Herc",
+      "title": "park jams and rec-room parties, the merry-go-round",
+      "year": 1973
+    },
+    "later": {
+      "artist": "Grandmaster Flash",
+      "title": "The Adventures of Grandmaster Flash on the Wheels of Steel",
+      "year": 1981
+    },
+    "whatToListenFor": "Listen for precision, because that is the whole difference. Herc's idea is that the break repeats. Flash's contribution is that the repeat lands exactly where the next bar would have started, so the loop is seamless and you stop noticing there are two records. On 'Wheels of Steel' the joins are so tight that the record sounds composed rather than performed, which is the point Flash was chasing."
+  },
+  "explanation": {
+    "age7": "Herc had the idea of repeating the best bit. Flash worked out how to do it perfectly in time.",
+    "age13": "Herc played the drum break, then swung to a second copy and played it again, but he was finding the spot by eye and the joins were rough. Flash listened to the second record on headphones first, so he could drop it in exactly on the beat with nobody hearing him line it up. Same idea, made precise, and precision is what turned a party trick into a technique anyone could learn.",
+    "adult": "A textbook refinement edge: the successor keeps the predecessor's insight and fixes its execution. It is worth stating plainly that Flash's contribution is technical rather than conceptual. The break as the unit is Herc's; the ability to loop it cleanly, which is what makes it composable, is Flash's."
+  },
+  "tags": [
+    "technology"
+  ]
+}

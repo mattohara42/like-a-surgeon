@@ -1,0 +1,29 @@
+{
+  "id": "e-herc-bambaataa",
+  "from": "kool-herc",
+  "to": "afrika-bambaataa",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1975,
+  "crossLineage": false,
+  "evidence": "Bronx oral histories, including Jeff Chang's 'Can't Stop Won't Stop' and Fricke and Ahearn's 'Yes Yes Y'all', consistently place Herc first and describe Bambaataa and Flash as building on the park-jam model and the break-centred set he established. Bambaataa has named Herc in interviews as the DJ who set that template. Held at consensus because the claim rests on the shape of the oral-history record rather than on a single documented statement about what passed between the two men.",
+  "trackPair": {
+    "earlier": {
+      "artist": "DJ Kool Herc",
+      "title": "park jams and rec-room parties, the merry-go-round",
+      "year": 1973
+    },
+    "later": {
+      "artist": "Afrika Bambaataa",
+      "title": "Zulu Nation park jams",
+      "year": 1977
+    },
+    "whatToListenFor": "The format is inherited and the record selection is not. Both are playing breaks to a park, but Herc's crates are funk and soul, and Bambaataa's take the same logic somewhere deliberately strange: a rock record, a TV theme, a German electronic album. Listen for how little the technique has to change to absorb material that sounds nothing like the last thing."
+  },
+  "explanation": {
+    "age7": "Herc showed what a park party could be, and Bambaataa did it with much weirder records.",
+    "age13": "Bambaataa took Herc's format, the outdoor jam built around drum breaks, and pushed it by playing records nobody expected: rock, television themes, electronic music from Germany. The way of DJing stayed the same. What changed was how far he was willing to go for a break, and that openness is why hip-hop could absorb almost anything later on.",
+    "adult": "Held at consensus deliberately. Herc's priority in the Bronx is not seriously disputed and Bambaataa has acknowledged it, but the specific line of transmission between them is carried by oral history rather than by a documented exchange. The interesting content is the divergence: same technique, an entirely different theory of what counts as source material."
+  },
+  "tags": []
+}
