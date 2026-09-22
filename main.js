@@ -16,6 +16,7 @@ import { createPanel } from './reading/panel.js';
 import { renderNodePanel } from './reading/nodePanel.js';
 import { renderEdgePanel } from './reading/edgePanel.js';
 import { createLegend } from './reading/legend.js';
+import { createSearch } from './reading/search.js';
 
 const statusEl = document.getElementById('status');
 const appEl = document.getElementById('app');
@@ -23,6 +24,7 @@ const layersEl = document.getElementById('layers');
 const registersEl = document.getElementById('registers');
 const panelEl = document.getElementById('panel');
 const legendEl = document.getElementById('legend');
+const searchEl = document.getElementById('search');
 
 // Which layer toggle has to be on for a node of this kind to be drawn.
 // Artists are always drawn, and scenes are framed through their members.
@@ -73,6 +75,12 @@ async function main() {
   let graph = null;
 
   const legend = createLegend(legendEl, data.meta);
+  const search = createSearch(searchEl, {
+    nodes: data.nodes,
+    yearBounds: () => graph.yearBounds(),
+    onSelectNode: (id) => goNode(id),
+    onSelectYear: (year) => graph.focusYear(year),
+  });
 
   const panelContext = () => ({ register, nodesById, neighbours, sceneMembers, goNode, goEdge });
 
@@ -173,11 +181,13 @@ async function main() {
     createRegisterSelector(registersEl, registers, register, applyRegister);
     panel.redraw();
     legend.setRegister(register);
+    search.setRegister(register);
   }
 
   createLayerToggles(layersEl, layers, applyLayers);
   createRegisterSelector(registersEl, registers, register, applyRegister);
   legend.setRegister(register);
+  search.setRegister(register);
   build();
 }
 

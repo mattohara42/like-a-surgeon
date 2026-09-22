@@ -45,6 +45,21 @@ export const COPY = {
     updated: { age13: 'last updated', adult: 'last updated' },
   },
 
+  search: {
+    label: { age13: 'Search the map', adult: 'Search the map' },
+    placeholder: {
+      age13: 'Find a name, a city, or a year',
+      adult: 'Search names, places, years',
+    },
+    none: {
+      age13: 'Nothing on the map matches that yet.',
+      adult: 'No matches on the map yet.',
+    },
+    goToYear: { age13: 'Go to', adult: 'Go to' },
+    names: { age13: 'Names', adult: 'Names' },
+    from: { age13: 'From', adult: 'From' },
+  },
+
   headings: {
     whatToListenFor: { age13: 'What to listen for', adult: 'What to listen for' },
     howWeKnow: { age13: 'How we know', adult: 'How we know' },

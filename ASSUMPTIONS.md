@@ -663,3 +663,26 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   builds from the repo instead. That attempt also created an empty
   `lineage-atlas` site, which is unused and can be deleted.
 
+## Added while building M3 step 3 (search)
+
+- **A88.** The search box sits top centre, where people look for one first,
+  clear of the controls on the left and the drawer on the right. Its
+  placeholder and labels follow the reading register, like every other
+  piece of interface copy (A76).
+- **A89.** Place matches are grouped by the part of the place that matched,
+  not by the whole place string. Records spell places inconsistently: labels
+  carry a city but no country, and some artists name a neighbourhood
+  ("Waterhouse, Kingston"). Grouping by the full string split Detroit into
+  two groups and Kingston into three. Now "kingston" gives one "From
+  Kingston" group and "jamaica" gives one "From Jamaica" group. A record
+  whose name matches is listed under Names and not repeated under a place.
+- **A90.** Escape in the search box clears the search and does not close
+  the drawer, because the reader was stopping a search, not closing what
+  they were reading. Choosing a result clears the box, ready for the next
+  search. `/` focuses the box from anywhere that is not already a text
+  field.
+- **A91.** A year result moves the year cursor to that exact year, which
+  can move it backwards. Clicking a node only ever moves the cursor
+  forward. Typing a year is a request to stand there, and a node click is
+  not.
+

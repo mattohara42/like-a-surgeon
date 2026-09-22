@@ -322,6 +322,18 @@ export function createGraph(container, data, callbacks = {}) {
     return true;
   }
 
+  // Moves the year cursor to `year` and frames that stretch of the time
+  // axis, for a year typed into search. Vertically it centres the whole
+  // map, since a year is a slice through every lane at once.
+  function focusYear(year) {
+    const clamped = clampYear(year, layout.timeScale.year0, layout.timeScale.yearEnd);
+    transport?.setYear(clamped);
+    const spanPx = CONFIG.search.yearFrameSpanYears * CONFIG.layout.pxPerYear;
+    const scale = Math.min(CONFIG.zoom.flyToScale, viewWidth() / spanPx);
+    selectedId = null;
+    flyToContent(layout.timeScale.toX(clamped), layout.totalHeight / 2, scale);
+  }
+
   // Frames a set of nodes, for a scene: scenes are atmosphere rather than
   // markers, so "go to this scene" means "show me its members together".
   function frameNodes(ids) {
@@ -519,6 +531,8 @@ export function createGraph(container, data, callbacks = {}) {
     focusNode,
     focusEdge,
     frameNodes,
+    focusYear,
+    yearBounds: () => ({ min: layout.timeScale.year0, max: layout.timeScale.yearEnd }),
     selectedId: () => selectedId,
     clearSelection: () => {
       selectedId = null;
