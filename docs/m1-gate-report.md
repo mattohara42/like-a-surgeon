@@ -8,11 +8,11 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 32 | 120 | 27% |
+| artists | 33 | 120 | 28% |
 | machines | 11 | 25 | 44% |
 | scenes | 8 | 20 | 40% |
 | labels | 13 | 30 | 43% |
-| edges | 48 | 350 | 14% |
+| edges | 50 | 350 | 14% |
 | threads | 2 | 5 | 40% |
 | crossLineageEdges | 14 | 60 | 23% |
 | edgesWithDemo | 4 | 30 | 13% |
@@ -26,7 +26,7 @@ Every node type, since machines, scenes and labels carry a lineage too.
 | electronic | 24 |
 | rock | 19 |
 | dub | 11 |
-| hiphop | 5 |
+| hiphop | 6 |
 | other | 4 |
 | funk | 1 |
 
@@ -37,14 +37,14 @@ Artists alone:
 | electronic | 11 |
 | rock | 11 |
 | dub | 7 |
-| hiphop | 3 |
+| hiphop | 4 |
 
 ## Counts by edge type
 
 | edge type | count |
 |---|---:|
 | technological | 16 |
-| direct | 13 |
+| direct | 15 |
 | scene | 10 |
 | production | 5 |
 | reaction-against | 2 |
@@ -55,8 +55,8 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 28 |
-| consensus | 19 |
+| documented | 29 |
+| consensus | 20 |
 | asserted | 1 |
 
 ## The 20 edges to read hardest
@@ -179,7 +179,15 @@ Flags: consensus tier.
 
 Evidence: The 12-inch single's arrival as a commercial format in 1976 and its rapid adoption by New York and Chicago club DJs is thoroughly documented. The narrower claim here, that the format shaped what Knuckles could do across a night at the Warehouse, is an inference from how the format and the room worked rather than a statement he made, so it is held at consensus.
 
-### 15. `e-mirage-saunderson` (score 50)
+### 15. `e-herc-bambaataa` (score 50)
+
+DJ Kool Herc to Afrika Bambaataa, direct, consensus, 1975
+
+Flags: consensus tier.
+
+Evidence: Bronx oral histories, including Jeff Chang's 'Can't Stop Won't Stop' and Fricke and Ahearn's 'Yes Yes Y'all', consistently place Herc first and describe Bambaataa and Flash as building on the park-jam model and the break-centred set he established. Bambaataa has named Herc in interviews as the DJ who set that template. Held at consensus because the claim rests on the shape of the oral-history record rather than on a single documented statement about what passed between the two men.
+
+### 16. `e-mirage-saunderson` (score 50)
 
 Ensoniq Mirage to Kevin Saunderson, technological, consensus, 1988
 
@@ -187,7 +195,7 @@ Flags: consensus tier.
 
 Evidence: Histories of early Detroit techno equipment routinely name the Mirage as shared among Saunderson, May and Atkins in the mid-1980s. The sourcing is secondary rather than first-person, so this is consensus.
 
-### 16. `e-pil-joydivision` (score 50)
+### 17. `e-pil-joydivision` (score 50)
 
 Public Image Ltd to Joy Division, scene, consensus, 1979
 
@@ -195,7 +203,7 @@ Flags: consensus tier.
 
 Evidence: PiL and Joy Division are both foundational to the 1978-80 UK post-punk moment, both moving past punk's simple format toward bass-forward, atmospheric arrangements, though Joy Division's formation (after a 1976 Sex Pistols gig) and production (Martin Hannett) are independently documented without a specific citation of direct PiL influence.
 
-### 17. `e-re201-tubby` (score 50)
+### 18. `e-re201-tubby` (score 50)
 
 Roland RE-201 Space Echo to King Tubby, technological, consensus, 1976
 
@@ -203,7 +211,7 @@ Flags: consensus tier.
 
 Evidence: Space Echo units are routinely named in accounts of both Tubby's and Perry's studios, but descriptions of Tubby's signal chain vary between sources, and he built and modified units of his own as well as buying them. Held at consensus for that reason rather than upgraded to match the Perry edge.
 
-### 18. `e-tubby-gangoffour` (score 50)
+### 19. `e-tubby-gangoffour` (score 50)
 
 King Tubby to Gang of Four, direct, consensus, 1979
 
@@ -211,7 +219,7 @@ Flags: consensus tier.
 
 Evidence: Critics and reference sources consistently describe Gang of Four's 'Entertainment!' as drawing directly on dub reggae's bass-and-space structural approach alongside funk and punk, though no specific Gill or King interview naming King Tubby individually anchors the claim at documented tier.
 
-### 19. `e-tubby-madprofessor` (score 50)
+### 20. `e-tubby-madprofessor` (score 50)
 
 King Tubby to Mad Professor, technological, consensus, 1979
 
@@ -219,136 +227,128 @@ Flags: consensus tier.
 
 Evidence: Mad Professor is widely described in music journalism as continuing King Tubby's studio-built, desk-as-instrument approach to dub, including building his own mixing board as Tubby did, though he has not, in the sources checked here, named Tubby as a direct personal teacher.
 
-### 20. `e-tubby-pil` (score 50)
-
-King Tubby to Public Image Ltd, direct, consensus, 1979
-
-Flags: consensus tier.
-
-Evidence: Jah Wobble's formation as a bassist in London's sound system culture is well documented, and the dub structural logic of 'Metal Box' is near-universally identified by critics. What is not documented is a specific Tubby record named as the source, so this sits at consensus rather than documented.
-
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 48 edges that carry one.
+Drawn with seed 1 from the 50 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-kraftwerk-planetrock`
-
-Kraftwerk, "Trans-Europe Express" (1977) to Afrika Bambaataa & Soulsonic Force, "Planet Rock" (1982)
-
-Hum the Kraftwerk melody, then play 'Planet Rock'. It is the same line, faster and harder. Underneath, the rhythm is lifted from a different Kraftwerk track entirely, and the drum sounds come from an 808. Three separate sources welded into one record.
-
-### 2. `e-knuckles-jefferson`
-
-Frankie Knuckles, "Warehouse-era DJ sets" (1978) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
-
-Knuckles' sets built the audience and the vocabulary ('house music') that Jefferson's generation of producers was writing directly for by the time they started making records.
-
-### 3. `e-minimoog-kraftwerk`
-
-Moog Music, "Minimoog Model D" (1970) to Kraftwerk, "Autobahn" (1974)
-
-Listen to the bass and try to find a player in it. There is no fret noise, no finger on a string, no note arriving a fraction late because a hand had to move. Every note has the same attack as the one before. That evenness is not a limitation being worked around, it is the subject: a record about driving, played by something that does not get tired.
-
-### 4. `e-re201-perry`
-
-Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to Lee "Scratch" Perry, "Revolution Dub" (1975)
-
-Pick one snare hit and follow it. It repeats, and each repeat is slightly duller and slightly less in tune than the one before, because it is a tape loop wearing the sound down every pass. Then listen for the places where the repeats stop dying away and start feeding on themselves, piling up into a howl before somebody pulls them back. That is a hand on a knob, decided in the moment.
-
-### 5. `e-atkins-ur`
-
-Cybotron, "Clear" (1983) to Underground Resistance, "Death Star" (1992)
-
-Atkins' record is cool and controlled; UR's is aggressive and stripped of any pop concession. Same machine vocabulary, opposite emotional register and opposite stance toward the music industry.
-
-### 6. `e-tubby-pil`
-
-King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Public Image Ltd, "Careering" (1979)
-
-Both records put the bass where you would expect the voice and leave large holes elsewhere. In the Tubby track, instruments vanish and reappear. In the PiL track they never arrive in the first place. Same architecture, opposite method.
-
-### 7. `e-bowie-kraftwerk`
-
-Kraftwerk, "Autobahn" (1974) to David Bowie, "V-2 Schneider" (1977)
-
-Bowie's track doesn't sound much like "Autobahn" on the surface, it's built around a saxophone line, not synth arpeggios. The tribute is in the title and in both productions' shared interest in cold, motorik repetition underneath.
-
-### 8. `e-kinks-blur`
-
-The Kinks, "Waterloo Sunset" (1967) to Blur, "Parklife" (1994)
-
-Both zoom in on one small, specific English scene (a couple crossing a bridge; a man walking his dog in a park) rather than making a generalized statement, and both use a talky, almost-spoken vocal delivery over a fairly simple melody.
-
-### 9. `e-perry-madprofessor`
-
-Lee "Scratch" Perry, "Black Ark productions" (1976) to Lee "Scratch" Perry & Mad Professor, "Ariwa studio collaborations" (1987)
-
-Perry's original records are raw and cluttered on purpose. The Ariwa collaborations are cleaner and more controlled, Mad Professor's studio discipline audibly reining in Perry's chaos without erasing it.
-
-### 10. `e-tubby-atkins-resemblance`
-
-King Tubby, "various versions" (1976) to Juan Atkins, "No UFO's" (1985)
-
-Both treat the mixing desk as the instrument and the arrangement as something to be performed rather than fixed. This is a resemblance we are pointing out, not a line of transmission we can trace.
-
-### 11. `e-mirage-may`
+### 1. `e-mirage-may`
 
 Michael James, "a piano piece played at Derrick May's house" (null) to Rhythim Is Rhythim, "Strings of Life" (1987)
 
 The strings are not strings and the piano is not really a piano. Both are a couple of seconds of recorded sound being retriggered from a keyboard, which is why the chords all cut off at the same instant instead of decaying the way a real instrument would. Listen for the edges of those cuts. The record is exhilarating partly because it is so obviously assembled.
 
-### 12. `e-tubby-sly-robbie`
+### 2. `e-atkins-saunderson`
 
-King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Sly and Robbie, "Sinsemilla (Black Uhuru)" (1980)
+Model 500 (Juan Atkins), "No UFOs" (1985) to Inner City (Kevin Saunderson), "Big Fun" (1988)
 
-Tubby empties a finished mix out until the rhythm is nearly all that's left. Sly and Robbie build the rhythm that way from the start: drum and bass carrying the song, everything else arranged around them rather than the other way around.
+Atkins' record is stark and functional; Saunderson's has a full vocal and pop structure built on the same machine palette, showing how far the Belleville Three's shared starting point could stretch.
 
-### 13. `e-tubby-lee`
+### 3. `e-kraftwerk-may`
 
-King Tubby, "early dub plates for Duke Reid" (1968) to Bunny Lee productions, dubbed by King Tubby, "various" (1974)
+Kraftwerk, "Numbers" (1981) to Rhythim Is Rhythim, "Strings of Life" (1987)
 
-Lee's productions from the mid-1970s onward routinely exist in two forms: a vocal version, and a King Tubby dub cut sold or played separately. The dub cut is where the empty space and echo live.
+Kraftwerk's rhythm is rigid and repeats without variation. May keeps the rigidity in the drums but layers a string figure that swells and falls, funk phrasing riding on top of a Kraftwerk-style engine.
 
-### 14. `e-mirage-saunderson`
+### 4. `e-perry-madprofessor`
 
-Ensoniq, "Mirage, an eight-bit sampler at 1,695 dollars" (1984) to Inner City, "Big Fun" (1988)
+Lee "Scratch" Perry, "Black Ark productions" (1976) to Lee "Scratch" Perry & Mad Professor, "Ariwa studio collaborations" (1987)
 
-Listen to how the record is put together underneath the vocal: short stabs that all stop dead rather than ring out, repeating in the same place every bar. Then notice what the sampler let him do that the others could not, which is put a full sung performance on top of it. Detroit techno arriving on daytime radio starts here.
+Perry's original records are raw and cluttered on purpose. The Ariwa collaborations are cleaner and more controlled, Mad Professor's studio discipline audibly reining in Perry's chaos without erasing it.
 
-### 15. `e-kraftwerk-atkins`
+### 5. `e-tubby-pil`
 
-Kraftwerk, "Numbers" (1981) to Cybotron, "Clear" (1983)
+King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Public Image Ltd, "Careering" (1979)
 
-Both are built from short repeating electronic figures with no human looseness. The Detroit record has more funk in how the accents fall. Listen to where the emphasis lands in the bar. That small difference is the entire Atlantic crossing.
+Both records put the bass where you would expect the voice and leave large holes elsewhere. In the Tubby track, instruments vanish and reappear. In the PiL track they never arrive in the first place. Same architecture, opposite method.
 
-### 16. `e-stones-kinks`
+### 6. `e-desk-tubby`
 
-The Rolling Stones, "Come On" (1963) to The Kinks, "You Really Got Me" (1964)
+MCI, "a twelve-into-four studio console, as designed" (1965) to King Tubby, "King Tubby Meets Rockers Uptown" (1976)
 
-The Stones' early singles stay close to their American blues sources. The Kinks' 1964 breakthrough pushes past covering the blues into something rawer and more English; hear the difference in how much more compressed and torn the Kinks' guitar sound is.
+Follow one thing: the filter. The whole track thins out from the bottom up, loses its body, hangs there sounding like a radio in another room, then floods back. That is one knob being turned by hand while the tape runs. Underneath it, notice that the singing is not mixed low, it is gone, and comes back for one word before disappearing again. Both are performances, not settings.
 
-### 17. `e-808-planetrock`
+### 7. `e-minimoog-kraftwerk`
 
-Roland, "TR-808 factory voices" (1980) to Afrika Bambaataa & Soulsonic Force, "Planet Rock" (1982)
+Moog Music, "Minimoog Model D" (1970) to Kraftwerk, "Autobahn" (1974)
 
-The handclap and the cowbell are unmistakably the machine, straight out of the box with no attempt to hide it. The kick is tuned long so it functions as a bass note. Once you know those three sounds you will hear them in a thousand records after this one.
+Listen to the bass and try to find a player in it. There is no fret noise, no finger on a string, no note arriving a fraction late because a hand had to move. Every note has the same attack as the one before. That evenness is not a limitation being worked around, it is the subject: a record about driving, played by something that does not get tired.
 
-### 18. `e-knuckles-atkins`
+### 8. `e-kinks-who`
+
+The Kinks, "You Really Got Me" (1964) to The Who, "I Can't Explain" (1965)
+
+The same trick in both: a short chord shape shoved up the neck, no bass movement underneath, and the riff repeated with almost no variation. Then listen to the drums. The Kinks keep time. Keith Moon refuses to, and that difference is the whole future of the Who.
+
+### 9. `e-perry-clash-production`
+
+Lee "Scratch" Perry, "Black Ark productions" (1976) to The Clash, "Complete Control" (1977)
+
+Perry's own records are all space and echo. The Clash single is not, because the band and label largely mixed his approach back out. What survives is the treatment on the vocal and the size of the drum sound. This is a good example of an influence being audible in the negotiation rather than the result.
+
+### 10. `e-knuckles-jefferson`
+
+Frankie Knuckles, "Warehouse-era DJ sets" (1978) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
+
+Knuckles' sets built the audience and the vocabulary ('house music') that Jefferson's generation of producers was writing directly for by the time they started making records.
+
+### 11. `e-hardy-heard`
+
+Ron Hardy, "Music Box DJ sets" (1984) to Mr. Fingers (Larry Heard), "Can You Feel It" (1986)
+
+Heard's record is slower and softer than most of what Hardy played, which is itself part of the story: the Music Box could break a record that didn't sound like everything else in the room.
+
+### 12. `e-melodica-pablo`
+
+Hohner, "the Melodica, sold as a school instrument" (1958) to Augustus Pablo, "Java" (1972)
+
+Listen to where each note starts and stops. There is no sustain to lean on, so every note has to be blown and then released, and you can hear him running out of breath and taking more. That is why a plastic school instrument sounds like a person rather than a keyboard. The tone itself is thin and reedy, almost weak, and playing it slowly in a minor key is what turns that weakness into the mood.
+
+### 13. `e-bowie-kraftwerk`
+
+Kraftwerk, "Autobahn" (1974) to David Bowie, "V-2 Schneider" (1977)
+
+Bowie's track doesn't sound much like "Autobahn" on the surface, it's built around a saxophone line, not synth arpeggios. The tribute is in the title and in both productions' shared interest in cold, motorik repetition underneath.
+
+### 14. `e-re201-perry`
+
+Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to Lee "Scratch" Perry, "Revolution Dub" (1975)
+
+Pick one snare hit and follow it. It repeats, and each repeat is slightly duller and slightly less in tune than the one before, because it is a tape loop wearing the sound down every pass. Then listen for the places where the repeats stop dying away and start feeding on themselves, piling up into a howl before somebody pulls them back. That is a hand on a knob, decided in the moment.
+
+### 15. `e-knuckles-atkins`
 
 Frankie Knuckles, "Warehouse-era DJ sets" (1982) to Model 500 (Juan Atkins), "No UFOs" (1985)
 
 Detroit techno's four-on-the-floor structure owes something to house records like Knuckles' sets reaching Detroit via radio and record pools; listen for how close the underlying drum pattern is, even as the two genres' moods diverge sharply.
 
-### 19. `e-tubby-pablo`
+### 16. `e-sl1200-flash`
+
+Technics, "SL-1200 as a domestic hi-fi turntable" (1972) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
+
+Listen for what never happens: the beat does not sag. The same few bars come round again and again dead in time, and in the gaps you can hear a record being hauled backwards and dropped back in exactly on the one. A belt-driven deck would lag on every restart and the whole thing would slide. Everything frantic on this record rests on the machine underneath it being rigid.
+
+### 17. `e-stones-kinks`
+
+The Rolling Stones, "Come On" (1963) to The Kinks, "You Really Got Me" (1964)
+
+The Stones' early singles stay close to their American blues sources. The Kinks' 1964 breakthrough pushes past covering the blues into something rawer and more English; hear the difference in how much more compressed and torn the Kinks' guitar sound is.
+
+### 18. `e-tubby-sly-robbie`
+
+King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Sly and Robbie, "Sinsemilla (Black Uhuru)" (1980)
+
+Tubby empties a finished mix out until the rhythm is nearly all that's left. Sly and Robbie build the rhythm that way from the start: drum and bass carrying the song, everything else arranged around them rather than the other way around.
+
+### 19. `e-808-planetrock`
+
+Roland, "TR-808 factory voices" (1980) to Afrika Bambaataa & Soulsonic Force, "Planet Rock" (1982)
+
+The handclap and the cowbell are unmistakably the machine, straight out of the box with no attempt to hide it. The kick is tuned long so it functions as a bass note. Once you know those three sounds you will hear them in a thousand records after this one.
+
+### 20. `e-tubby-pablo`
 
 Augustus Pablo, "Java" (1972) to King Tubby / Augustus Pablo, "King Tubbys Meets Rockers Uptown" (1976)
 
 Pablo's melodica is the constant; what changes across his catalogue is how much of everything else Tubby lets vanish around it. On the 1976 record, whole bars drop to just melodica, echo, and a bass note.
-
-### 20. `e-hardy-heard`
-
-Ron Hardy, "Music Box DJ sets" (1984) to Mr. Fingers (Larry Heard), "Can You Feel It" (1986)
-
-Heard's record is slower and softer than most of what Hardy played, which is itself part of the story: the Music Box could break a record that didn't sound like everything else in the room.
