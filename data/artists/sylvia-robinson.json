@@ -1,0 +1,38 @@
+{
+  "id": "sylvia-robinson",
+  "name": "Sylvia Robinson",
+  "sortName": "Robinson, Sylvia",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1957,
+  "activeTo": 2011,
+  "originCity": "New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "sugar-hill",
+      "from": 1979,
+      "to": 1986
+    }
+  ],
+  "keyProducers": [],
+  "hook": "An R&B singer two decades into her career who decided rap could be sold on a record, assembled a group to do it, and was right.",
+  "blurb": {
+    "age7": "She had already been a pop singer for twenty years when she decided that the rapping at Bronx parties could be made into records, and she made the first hit one.",
+    "age13": "Sylvia Robinson had a hit in 1957 as half of Mickey and Sylvia, and another of her own in 1973, long before hip-hop existed. In 1979 she and her husband Joe started Sugar Hill Records and did something nobody had managed: they put rapping on a record people could buy. She did not sign an existing Bronx crew. She assembled a group on the spot and called them the Sugarhill Gang, and 'Rapper's Delight' sold over two million copies.",
+    "adult": "Robinson is the point where hip-hop becomes an industry, and the manner of it set the terms for what followed. The Sugarhill Gang were assembled rather than discovered, the backing was played by her house band rather than DJed, and the lyrics drew on phrases circulating in the Bronx whose originators were not credited. Chic's writers were added to the credits only after a legal threat over 'Good Times'. Her instinct about the commercial potential was correct and years ahead of the industry; what she built on top of it is also the first instance of the recurring pattern where the people who invented a form are not the ones who own the record."
+  },
+  "signatureTracks": [
+    {
+      "title": "Love Is Strange (as Mickey and Sylvia)",
+      "year": 1957,
+      "whyThisOne": "Twenty-two years before 'Rapper's Delight'. The person who invented the rap record was not a newcomer taking a flyer; she had already had a hit career and knew how the business worked."
+    },
+    {
+      "title": "Pillow Talk",
+      "year": 1973,
+      "whyThisOne": "Her own hit, six years before Sugar Hill. The money and the studio access it brought are part of why she was in a position to act on what she saw in the Bronx."
+    }
+  ]
+}

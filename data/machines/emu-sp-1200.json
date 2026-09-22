@@ -1,0 +1,19 @@
+{
+  "id": "emu-sp-1200",
+  "name": "E-mu SP-1200",
+  "type": "machine",
+  "kind": "sampler",
+  "lineage": "electronic",
+  "maker": "E-mu Systems",
+  "releasedYear": 1987,
+  "discontinuedYear": 1990,
+  "originalPurpose": "A sampling drum machine, designed by Dave Rossum, for anyone who wanted to sequence sampled drum sounds in one box.",
+  "whatActuallyHappened": "Ten seconds of sampling time in total, twelve-bit resolution, and a sample rate low enough to audibly degrade whatever went through it. Hip-hop producers took all three limits and made them the aesthetic: the grit the machine added was the reason to use it, and the ten-second ceiling forced the short loop as the unit of composition. It became the standard production tool of an era. A second production run followed in the nineties after it was discontinued.",
+  "priceStory": "Sources disagree on the launch price, giving figures between roughly 2,200 and 3,000 US dollars in 1987, so this record does not pick one. Either way it was a serious professional purchase rather than a cheap secondhand find, which makes it the opposite case to the 808 and the 909: this machine was expensive and got used anyway, because what it did could not be done another way.",
+  "hook": "Ten seconds of sampling time and a sound quality flaw that an entire genre decided was the point.",
+  "blurb": {
+    "age7": "A machine that could record ten seconds of sound in total. That tiny limit is why records made with it sound the way they do.",
+    "age13": "The SP-1200 could hold ten seconds of sound, full stop, and it recorded at a quality low enough to make everything a bit rough and crunchy. Both of those are limitations. Producers decided they were features: the roughness sounded good, and having only ten seconds forced you to find the one perfect bar and build everything from that. A whole era of hip-hop is the sound of people working inside those two limits.",
+    "adult": "The SP-1200 is the strongest case in the dataset for constraint as a compositional force. Twelve-bit resolution at a low sample rate imposes a specific distortion that producers sought rather than tolerated, and ten seconds of memory enforces the short loop. Unlike the 808 and the 909, its adoption had nothing to do with being cheap, which is a useful counterexample to this map's more common affordability story."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "e-sugarhill-mellemel",
+  "from": "sugar-hill",
+  "to": "melle-mel",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1982,
+  "crossLineage": false,
+  "evidence": "Sugar Hill's method, a house band rather than DJs, material chosen by the label, and acts assembled or directed rather than followed, determined the form 'The Message' took. The label's practices are documented across histories of the company and are audible on its catalogue.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Sugarhill Gang",
+      "title": "Rapper's Delight",
+      "year": 1979
+    },
+    "later": {
+      "artist": "Grandmaster Flash and the Furious Five",
+      "title": "The Message",
+      "year": 1982
+    },
+    "whatToListenFor": "Both records are played by the same house band rather than assembled from other people's records, and once you know that you can hear it: the music breathes, pushes and drags the way people do. Sugar Hill's rap records sound like funk records with rappers on them, because that is literally what they are. That house-band sound is a label decision, not an artist's."
+  },
+  "explanation": {
+    "age7": "The record company decided how its rap records were made, and that decision is why they sound the way they do.",
+    "age13": "Sugar Hill did not record DJs. It had a band replay the music in the studio, chose what got recorded, and put groups together when it needed one. So its records sound like a funk band with rappers over the top, which is nothing like what a Bronx party actually sounded like. 'The Message' exists in the shape it does because of how that company worked.",
+    "adult": "The dataset's first worked `label` edge, and it sets the direction convention: a label edge runs from the label to the artist and claims that the label's decisions changed the artist's output. Founding and roster relationships are not edges; those live in the label's `founders` field and the artist's `labels` field. See A69."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

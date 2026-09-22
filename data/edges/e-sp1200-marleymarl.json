@@ -1,0 +1,32 @@
+{
+  "id": "e-sp1200-marleymarl",
+  "from": "emu-sp-1200",
+  "to": "marley-marl",
+  "type": "technological",
+  "confidence": "consensus",
+  "year": 1987,
+  "crossLineage": true,
+  "evidence": "The SP-1200 is routinely named as Marl's sampler of choice in equipment histories of late-1980s hip-hop production, alongside the Akai MPC60. The sourcing is secondary rather than first-person, so this is held at consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "E-mu Systems",
+      "title": "SP-1200, ten seconds of sampling time",
+      "year": 1987
+    },
+    "later": {
+      "artist": "Marley Marl",
+      "title": "The Symphony, produced for the Juice Crew",
+      "year": 1988
+    },
+    "whatToListenFor": "Listen for the grain. Everything running through this machine picks up a slight crunch at the top end that was not in the source record, and producers wanted it. Then listen to how short the loops are: one or two bars, over and over. That is not a stylistic preference, it is ten seconds of memory deciding the structure of the song."
+  },
+  "explanation": {
+    "age7": "The machine could only hold ten seconds of sound, so everything had to be built from tiny pieces.",
+    "age13": "Once producers were taking sounds off records they needed a machine built for it. The SP-1200 held ten seconds total and made everything slightly crunchy. Both limits shaped the music: you had to find one perfect bar and loop it, and the crunch became part of what hip-hop was supposed to sound like.",
+    "adult": "The counterexample to this map's usual affordability story: the SP-1200 was expensive and was adopted anyway, because its specific degradation and its sequencing were not available elsewhere. Consensus tier, since the attribution to Marl personally rests on secondary equipment histories."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

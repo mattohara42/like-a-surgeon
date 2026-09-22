@@ -1,0 +1,32 @@
+{
+  "id": "e-808-marleymarl",
+  "from": "tr-808",
+  "to": "marley-marl",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1984,
+  "crossLineage": true,
+  "evidence": "Marl has described the 1984 session, working on a Captain Rock record, in which he was trying to capture a piece of a vocal and caught the snare drum with it by mistake, then noticed that the sampled snare sounded better than the drum machine's. He has told the story consistently in interviews and lectures. The sampler in use is not named in the sources consulted here, so this record does not name one.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Roland",
+      "title": "TR-808 snare, as synthesised",
+      "year": 1980
+    },
+    "later": {
+      "artist": "Marley Marl",
+      "title": "The Bridge, produced for MC Shan",
+      "year": 1986
+    },
+    "whatToListenFor": "Compare two snares. The 808's is a short burst of noise with a tuned ring under it, always identical, sitting cleanly in its own space. A snare lifted off a record brings the room with it: the drummer's touch, the tape compression, a trace of whatever else was playing at that instant. Listen for that smear of extra information. It is the sound of a recording rather than the sound of a circuit."
+  },
+  "explanation": {
+    "age7": "He realised a drum sound taken from an old record sounded better than the one his machine made.",
+    "age13": "Drum machines make their drum sounds electronically, so every hit is identical and clean. In 1984 Marl accidentally captured a snare off a record and heard something the machine could not do: a real drummer hitting a real drum in a real room, with all the mess that comes with. From then on the drums on a hip-hop record mostly came off other records rather than out of a circuit.",
+    "adult": "The edge runs from the 808 because the comparison is the content: Marl's insight is legible only against what the drum machine already offered. The shift from synthesised to sampled percussion changes what a drum sound contains, carrying a performance, a room and a recording chain rather than a set of parameters, and it sets up the copyright regime that followed once the provenance of those sounds became a legal question."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

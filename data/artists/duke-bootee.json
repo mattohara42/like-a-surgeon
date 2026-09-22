@@ -1,0 +1,33 @@
+{
+  "id": "duke-bootee",
+  "name": "Duke Bootee",
+  "sortName": "Bootee, Duke",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1980,
+  "activeTo": 2021,
+  "originCity": "New Jersey",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "sugar-hill",
+      "from": 1980,
+      "to": 1985
+    }
+  ],
+  "keyProducers": [],
+  "hook": "Wrote and largely performed the most important rap record of its era, which was released under a group name he was not in.",
+  "blurb": {
+    "age7": "He wrote a famous song about how hard life was in the city, but it came out under someone else's name.",
+    "age13": "Ed Fletcher, who called himself Duke Bootee, was a percussionist in Sugar Hill Records' house band. In 1980 he wrote a song about the daily grind of city life, set during a New York transit strike. It came out in 1982 as 'The Message' by Grandmaster Flash and the Furious Five. Flash had nothing to do with it. Of the Furious Five, only Melle Mel took part, and the rest of the voice on the record is Bootee's own. He is one of the most important writers in the music and one of the least known.",
+    "adult": "'The Message' is where rap's subject matter opens out from party and boast to conditions, and the authorship of it is a case study in how credit is assigned. Bootee wrote it and co-produced it with Clifton Chase, performs a large share of it, and the record carries the name of a group he was not a member of and of a DJ who was not in the room. State that plainly: it is fact rather than grievance, and it is the clearest illustration in the dataset of the gap between who makes a record and whose name is on it."
+  },
+  "signatureTracks": [
+    {
+      "title": "The Message (with Melle Mel)",
+      "year": 1982,
+      "whyThisOne": "Written by him, co-produced by him, largely performed by him, and released under the name of a group he was not a member of."
+    }
+  ]
+}

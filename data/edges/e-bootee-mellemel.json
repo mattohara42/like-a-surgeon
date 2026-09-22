@@ -1,0 +1,32 @@
+{
+  "id": "e-bootee-mellemel",
+  "from": "duke-bootee",
+  "to": "melle-mel",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1982,
+  "crossLineage": false,
+  "evidence": "Ed Fletcher, as Duke Bootee, wrote 'The Message' in 1980 around a New York transit strike, co-produced it with Clifton Chase, and performs a substantial part of it. Melle Mel wrote and delivered verses for it. The record was issued as Grandmaster Flash and the Furious Five, a group Bootee was not a member of, and Flash has said he had no involvement in the track.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Duke Bootee",
+      "title": "The Message, written and demoed",
+      "year": 1980
+    },
+    "later": {
+      "artist": "Grandmaster Flash and the Furious Five",
+      "title": "The Message",
+      "year": 1982
+    },
+    "whatToListenFor": "There are two rappers on this record and they do not sound alike. Bootee's delivery is even and conversational, closer to someone talking you through something. Mel's is heavier, slower, landing on the beat like a weight. The famous part, the last verse that turns the song from description into a life, is Mel. Knowing which voice is which changes how the record reads."
+  },
+  "explanation": {
+    "age7": "One man wrote the song and another man made the most famous part of it. The record came out under the name of a group neither of them was really in together.",
+    "age13": "Duke Bootee wrote 'The Message' in 1980 and recorded most of it himself. Melle Mel added verses. It was released as Grandmaster Flash and the Furious Five even though Flash was not involved and only one of the Five was. Both men made it what it is: Bootee built it, Mel gave it the delivery people remember.",
+    "adult": "The single best example in the dataset of the distance between authorship and credit. Everything here is documented and none of it is contested: Bootee wrote and largely performed it, Mel supplied the decisive verse, and the name on the sleeve describes an arrangement that did not happen. The edge runs Bootee to Mel because that is the real line of influence on the record; the group name is a marketing decision and is recorded as such rather than as a fact about who made the music."
+  },
+  "tags": [
+    "production",
+    "labels"
+  ]
+}

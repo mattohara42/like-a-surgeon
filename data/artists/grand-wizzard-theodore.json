@@ -1,0 +1,23 @@
+{
+  "id": "grand-wizzard-theodore",
+  "name": "Grand Wizzard Theodore",
+  "sortName": "Grand Wizzard Theodore",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1975,
+  "activeTo": null,
+  "originCity": "South Bronx, New York",
+  "originCountry": "USA",
+  "scenes": [
+    "south-bronx"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Stopped a record with his hand while his mother told him off, heard the noise it made, and turned an accident into a technique the world now recognises instantly.",
+  "blurb": {
+    "age7": "He was playing records too loud, held one still with his hand while his mum told him off, and heard a sound he decided to keep.",
+    "age13": "Theodore Livingston was twelve, playing records loudly in his bedroom, when his mother came in to tell him to turn it down. He kept his hand on the record while she talked, rubbing it back and forth, and heard the noise that makes. After she left he decided it was worth keeping, practised it, and brought it out at a party. That noise is the scratch, and it is now probably the single most recognisable sound in recorded music. Accounts differ on whether this was 1975 or 1977.",
+    "adult": "Scratching converts the turntable from a playback device into an instrument with an articulable attack, which is a categorical change rather than a stylistic one. It is worth noting how young he was and how domestic the setting: the technique was not developed in a studio or by anyone being paid, and its origin story is a boy being told off. Sources disagree on the year, most giving 1975 and some 1977."
+  },
+  "signatureTracks": []
+}
