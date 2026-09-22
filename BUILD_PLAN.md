@@ -39,6 +39,13 @@ confidence tier, plus the twenty edges you are least sure about, plus twenty
 randomly sampled `whatToListenFor` fields. Reading those twenty is the real
 quality check on the whole dataset.
 
+**Gate passed.** Matt reviewed `docs/m1-gate-report.md` and closed M1 in chat.
+The step-5 dataset targets were not met at closing (39 artists of 120, 61 edges
+of 350, 12 machines of 25) and they are not abandoned: they move to Track D as
+its destination, which is where the plan always said data expansion lives.
+`npm run report` keeps measuring the distance. Closing M1 opens M3, since M2
+shipped ahead of the gate.
+
 ---
 
 ## M2 — Graph renderer

@@ -227,6 +227,9 @@ fixing them inline.)
   need to say about New York. Adding a value touches `SCHEMA.md`,
   `tools/validate.js` and the renderer's lineage palette, so it needs a
   decision rather than a quiet edit.
+  **Decided: no.** The enum stays as it is and disco stays filed under
+  `funk`. See A71, which explains at some length why we would rather not
+  discuss this.
 - The link from Jamaican sound system practice to the Bronx has no node to
   run through. DJ Kool Herc is the documented carrier, and he is not on the
   map, so the machines batch did not draw a `dubplate` to `grandmaster-flash`
