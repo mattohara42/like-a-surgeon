@@ -112,3 +112,31 @@ Every decision made without asking. Append, do not rewrite.
   references that connect nodes rather than name a not-yet-written one
   (`scene.memberIds`, `edge.from`/`to`, `demoId`, thread steps) stay hard
   errors, since those are added alongside the nodes they connect.
+
+## Added during the visual direction pass
+
+- **A27.** Visual exploration lives in `design/` as standalone prototypes
+  rather than in a `src/`. `BUILD_PLAN.md` gates the renderer at M2 behind
+  an incomplete M1, but `CLAUDE.md`'s working style says "lock design before
+  implementing." Prototypes satisfy the second without breaking the first:
+  they are throwaway, they import nothing, and nothing imports them.
+- **A28.** `design/_data.js` is a generated snapshot of `data/`, written by
+  `tools/design-snapshot.js` as a classic script that sets `window.LINEAGE`.
+  `file://` blocks `fetch` and ES module imports but not `<script src>`, so
+  this is the only shape that lets a prototype open by double-click with no
+  server. It is explicitly not an answer to the `file://` problem for the
+  real build, which stays with `tools/serve.js` and `tools/bundle.js` per
+  M1 step 4. Unlike the other generated files in **A23**, it is committed
+  rather than gitignored: a prototype that needs `npm install` before it
+  opens defeats the point of a prototype. It carries a "do not edit"
+  header instead.
+- **A29.** Lineage colour is a separate system from the `palette` field on
+  scene records. Scene palettes drive the scene clouds in the prototypes;
+  the four lineage colours (rock, dub, hip-hop, electronic) are invented in
+  each prototype and chosen for hue separation on a dark ground. If a
+  direction is picked, these move into `CONFIG` properly and should be
+  checked against colour-vision deficiency before they ship.
+- **A30.** The prototypes place machines three different ways on purpose, to
+  settle `BACKLOG.md`'s open question by looking: own lane at the bottom
+  (01), mixed among artists with an angular form (02), and on a receding
+  floor beneath everything with light rising from it (03).

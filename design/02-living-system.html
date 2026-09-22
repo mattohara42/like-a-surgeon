@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lineage — Living System</title>
+<style>
+  :root {
+    --rock:       #e8613f;
+    --dub:        #2fb98a;
+    --electronic: #4f8fd6;
+    --hiphop:     #a96ad0;
+
+    --ground: #080a09;
+    --ink:    #ecebe4;
+    --dim:    #8b8f88;
+    --hairline: rgba(210, 220, 200, 0.10);
+
+    --ui: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, sans-serif;
+    --serif: ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--ground); color: var(--ink);
+    font-family: var(--ui); overflow: hidden; -webkit-font-smoothing: antialiased;
+  }
+
+  #stage { position: fixed; inset: 0; cursor: grab; }
+  #stage.dragging { cursor: grabbing; }
+  #grove { position: fixed; inset: 0; width: 100%; height: 100%; }
+
+  /* Ink diffusing behind everything. Slow enough that you notice it only
+     after you have stopped moving. */
+  #culture { position: fixed; inset: 0; pointer-events: none; overflow: hidden; }
+  .cell {
+    position: absolute; border-radius: 50%;
+    filter: blur(90px); opacity: 0.2; mix-blend-mode: screen;
+  }
+  #vig {
+    position: fixed; inset: 0; pointer-events: none;
+    background: radial-gradient(130% 100% at 50% 40%, transparent 30%, rgba(4,6,5,0.6) 75%, rgba(4,6,5,0.95) 100%);
+  }
+  #paper {
+    position: fixed; inset: -40%; pointer-events: none;
+    opacity: 0.4; mix-blend-mode: soft-light;
+  }
+
+  .lane-label {
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.24em;
+    text-transform: uppercase; opacity: 0.45;
+  }
+  .year-tick { font-family: var(--mono); font-size: 11px; fill: var(--dim); opacity: 0.4; }
+  .year-rule { stroke: var(--hairline); vector-effect: non-scaling-stroke; }
+
+  .strand { fill: none; vector-effect: non-scaling-stroke; stroke-linecap: round; }
+  .edge-hit { fill: none; stroke: transparent; stroke-width: 26; cursor: pointer; }
+  .node { cursor: pointer; }
+  .node-blob { transition: opacity 400ms ease; }
+  .node-name {
+    font-size: 13.5px; font-weight: 520; fill: var(--ink);
+    paint-order: stroke; stroke: rgba(8,10,9,0.9); stroke-width: 4.5px;
+    pointer-events: none;
+  }
+  .node-year { font-family: var(--mono); font-size: 10px; fill: var(--dim); pointer-events: none; }
+
+  #grove.focusing .fadeable { opacity: 0.08 !important; }
+  #grove.focusing .lit { opacity: 1 !important; }
+
+  /* A hop of the spreading signal. Fired with a stagger so influence
+     visibly travels outward one connection at a time. */
+  @keyframes bloom {
+    0%   { transform: scale(1);   opacity: 0.9; }
+    45%  { transform: scale(2.9); opacity: 0.35; }
+    100% { transform: scale(4.4); opacity: 0; }
+  }
+  .pulse { animation: bloom 1500ms cubic-bezier(.2,.7,.3,1) forwards; pointer-events: none; }
+
+  .hud { position: fixed; z-index: 5; }
+  #title { top: 26px; left: 30px; max-width: 310px; pointer-events: none; isolation: isolate; }
+  #title::before {
+    content: ''; position: absolute; inset: -34px -90px -26px -48px; z-index: -1;
+    background: radial-gradient(ellipse at 24% 42%, rgba(8,10,9,0.95), rgba(8,10,9,0.8) 42%, transparent 74%);
+  }
+  #title h1 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: 30px; }
+  #title p { margin: 6px 0 0; font-size: 12.5px; line-height: 1.55; color: var(--dim); }
+
+  #dock { bottom: 26px; left: 30px; display: flex; flex-direction: column; gap: 13px; }
+  .swatches { display: flex; gap: 15px; flex-wrap: wrap; }
+  .swatch {
+    display: flex; align-items: center; gap: 7px; background: none; border: 0; padding: 0;
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--dim); cursor: pointer;
+  }
+  .swatch:hover { color: var(--ink); }
+  .swatch .dot { width: 10px; height: 10px; border-radius: 40% 60% 55% 45%; }
+  .controls { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--dim);
+    background: rgba(220,230,210,0.04); border: 1px solid var(--hairline);
+    border-radius: 999px; padding: 6px 13px; cursor: pointer;
+    transition: color 200ms, border-color 200ms, background 200ms;
+  }
+  .chip:hover { color: var(--ink); border-color: rgba(210,220,200,0.3); }
+  .chip[aria-pressed="true"] { color: #0a0c0b; background: var(--ink); border-color: var(--ink); }
+
+  #threads { top: 26px; right: 30px; text-align: right; }
+  #threads h2 {
+    margin: 0 0 10px; font-family: var(--mono); font-size: 10px; font-weight: 500;
+    letter-spacing: 0.24em; text-transform: uppercase; color: var(--dim);
+  }
+  .thread-btn {
+    display: block; margin-left: auto; background: none; border: 0; cursor: pointer;
+    color: var(--ink); font-family: var(--serif); font-style: italic; font-size: 17px;
+    padding: 3px 0; opacity: 0.62; transition: opacity 200ms;
+  }
+  .thread-btn:hover, .thread-btn.running { opacity: 1; }
+
+  #panel {
+    position: fixed; top: 0; right: 0; bottom: 0; width: min(430px, 42vw); z-index: 10;
+    background: rgba(10, 13, 11, 0.86);
+    backdrop-filter: blur(20px) saturate(1.2); -webkit-backdrop-filter: blur(20px) saturate(1.2);
+    border-left: 1px solid var(--hairline);
+    transform: translateX(102%); transition: transform 560ms cubic-bezier(.16,1,.3,1);
+    overflow-y: auto; padding: 34px 34px 60px;
+  }
+  #panel.open { transform: none; }
+  #panel .kicker {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.26em;
+    text-transform: uppercase; margin-bottom: 14px;
+  }
+  #panel h2 { margin: 0 0 4px; font-family: var(--serif); font-weight: 400; font-size: 33px; line-height: 1.12; }
+  #panel .meta { font-family: var(--mono); font-size: 11px; color: var(--dim); margin-bottom: 22px; }
+  #panel .hook { font-family: var(--serif); font-size: 19px; line-height: 1.45; font-style: italic; margin: 0 0 24px; color: #d4d6cc; }
+  #panel p.body { font-size: 14.5px; line-height: 1.68; color: #bcc0b6; margin: 0 0 16px; }
+  #panel h3 {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--dim); font-weight: 500; margin: 30px 0 12px; padding-top: 16px;
+    border-top: 1px solid var(--hairline);
+  }
+  .track { margin-bottom: 14px; }
+  .track .t { font-size: 14.5px; }
+  .track .w { font-size: 13px; line-height: 1.55; color: var(--dim); margin-top: 3px; }
+  .conf {
+    display: inline-block; font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.18em;
+    text-transform: uppercase; padding: 3px 9px; border-radius: 999px; border: 1px solid currentColor;
+  }
+  .conf.documented { color: #7fcfa6; }
+  .conf.consensus  { color: #d9b46a; }
+  .conf.asserted   { color: #d98a6a; }
+  .link-row {
+    display: block; width: 100%; text-align: left; background: none; border: 0;
+    border-bottom: 1px solid var(--hairline); cursor: pointer; padding: 11px 0;
+    color: var(--ink); font-size: 14px; font-family: var(--ui);
+  }
+  .link-row:hover { color: #fff; }
+  .link-row .dir {
+    font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em;
+    color: var(--dim); text-transform: uppercase; margin-right: 9px;
+  }
+  #close { position: absolute; top: 22px; right: 26px; background: none; border: 0; color: var(--dim); font-size: 22px; cursor: pointer; }
+  #close:hover { color: var(--ink); }
+
+  #tip {
+    position: fixed; z-index: 9; pointer-events: none; opacity: 0;
+    transform: translate(-50%, -160%); transition: opacity 180ms ease;
+    background: rgba(10,13,11,0.92); border: 1px solid var(--hairline);
+    border-radius: 7px; padding: 8px 13px; max-width: 290px;
+    font-size: 12.5px; line-height: 1.45; color: #cfd2c7; backdrop-filter: blur(8px);
+  }
+  #tip.on { opacity: 1; }
+  #tip .n { display: block; font-weight: 600; margin-bottom: 3px; color: #fff; }
+</style>
+</head>
+<body>
+
+<div id="culture"></div>
+<div id="stage"><svg id="grove"></svg></div>
+<svg id="paper" xmlns="http://www.w3.org/2000/svg">
+  <filter id="fibre"><feTurbulence type="fractalNoise" baseFrequency="0.6 0.9" numOctaves="4" stitchTiles="stitch"/></filter>
+  <rect width="100%" height="100%" filter="url(#fibre)"/>
+</svg>
+<div id="vig"></div>
+
+<div class="hud" id="title">
+  <h1>Lineage</h1>
+  <p>Influence is not a line on a chart. It spreads. Click a name and watch how far it reaches.</p>
+</div>
+
+<div class="hud" id="threads"><h2>Routes in</h2></div>
+
+<div class="hud" id="dock">
+  <div class="swatches" id="swatches"></div>
+  <div class="controls">
+    <button class="chip" id="btn-cross" aria-pressed="false">Crossings only</button>
+    <button class="chip" id="btn-grow">Grow again</button>
+    <button class="chip" id="btn-reset">Reset view</button>
+  </div>
+</div>
+
+<aside id="panel"><button id="close" aria-label="Close">&times;</button><div id="panel-body"></div></aside>
+<div id="tip"></div>
+
+<script src="_data.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  const CONFIG = {
+    yearMin: 1960, yearMax: 1992,
+    pxPerYear: 104,
+    bandHeight: 196,
+    bandOrder: ['rock', 'dub', 'hiphop', 'electronic'],
+    settleSpread: 0.30,      // how far a node drifts off its band's centre line
+    nodeRadius: { min: 15, max: 30, perEdge: 4.2 },
+    blobPoints: 7,
+    blobWobble: 0.44,
+    clearance: { x: 158, y: 84 },   // keep-apart box, sized for the labels
+    breath: { minMs: 4200, maxMs: 7400, amount: 0.075 },
+    strands: { count: 4, amplitude: 13, samples: 28 },
+    growth: { perYearMs: 62, strandMs: 1500, nodeMs: 900 },
+    spread: { hopMs: 330, maxHops: 4 },
+    zoom: { min: 0.3, max: 3.2, step: 1.12 },
+    openZoom: 0.82,
+    labelFade: { hide: 0.44, show: 0.64 },
+    thread: { dwellMs: 2100, zoom: 1.2 },
+  };
+
+  const LINEAGE_COLOR = { rock: '#e8613f', dub: '#2fb98a', electronic: '#4f8fd6', hiphop: '#a96ad0' };
+  const LINEAGE_LABEL = { rock: 'Rock & guitar', dub: 'Jamaican dub', hiphop: 'Hip-hop', electronic: 'Electronic' };
+  const CONF_RANK = { documented: 1, consensus: 0.62, asserted: 0.36 };
+
+  const D = window.LINEAGE;
+  const SVGNS = 'http://www.w3.org/2000/svg';
+  const el = (n, a) => {
+    const e = document.createElementNS(SVGNS, n);
+    for (const k in (a || {})) e.setAttribute(k, a[k]);
+    return e;
+  };
+  const esc = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  // Deterministic noise, seeded from the record id, so a node's shape and
+  // breathing rhythm are stable across reloads. Randomness that changes on
+  // refresh would make the map feel arbitrary rather than alive.
+  function hash(str) {
+    let h = 2166136261;
+    for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
+    return h >>> 0;
+  }
+  function rng(seed) {
+    let a = seed >>> 0;
+    return () => {
+      a |= 0; a = (a + 0x6D2B79F5) | 0;
+      let t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  // ---- model ---------------------------------------------------------
+  const nodes = [];
+  D.artists.forEach(a => nodes.push({ id: a.id, name: a.name, kind: 'artist', lineage: a.lineage, year: a.activeFrom, rec: a }));
+  D.machines.forEach(m => nodes.push({ id: m.id, name: m.name, kind: 'machine', lineage: m.lineage, year: m.releasedYear, rec: m }));
+  const byId = new Map(nodes.map(n => [n.id, n]));
+  const edges = D.edges.filter(e => byId.has(e.from) && byId.has(e.to))
+    .map(e => ({ ...e, a: byId.get(e.from), b: byId.get(e.to) }));
+  nodes.forEach(n => { n.degree = 0; n.out = []; n.in = []; });
+  edges.forEach(e => { e.a.degree++; e.b.degree++; e.a.out.push(e); e.b.in.push(e); });
+
+  // ---- layout --------------------------------------------------------
+  // Same chronological spine as any other view of this data, but nodes
+  // settle off the centre line rather than snapping to a row. Bands still
+  // read as bands; the map stops looking like a spreadsheet.
+  const xOf = y => (y - CONFIG.yearMin) * CONFIG.pxPerYear;
+  const WORLD_W = xOf(CONFIG.yearMax);
+  const WORLD_H = CONFIG.bandOrder.length * CONFIG.bandHeight;
+
+  nodes.forEach(n => {
+    const bi = Math.max(0, CONFIG.bandOrder.indexOf(n.lineage));
+    const r = rng(hash(n.id));
+    n.x = xOf(n.year);
+    n.y = bi * CONFIG.bandHeight + CONFIG.bandHeight / 2
+        + (r() - 0.5) * CONFIG.bandHeight * CONFIG.settleSpread * 2;
+    n.r = Math.min(CONFIG.nodeRadius.max, CONFIG.nodeRadius.min + n.degree * CONFIG.nodeRadius.perEdge);
+    n.seed = hash(n.id);
+  });
+
+  // Nudge apart anything whose label would collide. Only y moves: x is the
+  // year and is not ours to fudge. Nodes stay inside their own band so the
+  // lineage reading survives the shuffle.
+  const bandOf = n => Math.max(0, CONFIG.bandOrder.indexOf(n.lineage));
+  for (let pass = 0; pass < 40; pass++) {
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const p = nodes[i], q = nodes[j];
+        const dx = Math.abs(q.x - p.x), dy = q.y - p.y;
+        if (dx >= CONFIG.clearance.x || Math.abs(dy) >= CONFIG.clearance.y) continue;
+        const push = (CONFIG.clearance.y - Math.abs(dy)) / 2 + 1;
+        const s = dy >= 0 ? 1 : -1;
+        p.y -= s * push; q.y += s * push;
+      }
+    }
+    nodes.forEach(n => {
+      const mid = bandOf(n) * CONFIG.bandHeight + CONFIG.bandHeight / 2;
+      const limit = CONFIG.bandHeight * 0.46;
+      n.y = Math.max(mid - limit, Math.min(mid + limit, n.y));
+    });
+  }
+
+  // ---- shapes ---------------------------------------------------------
+  // A closed Catmull-Rom through jittered points around a circle. Cheap, and
+  // it reads as a cell or a spore rather than a data point.
+  function smoothClosed(pts) {
+    let d = `M${pts[0][0].toFixed(2)},${pts[0][1].toFixed(2)}`;
+    const n = pts.length;
+    for (let i = 0; i < n; i++) {
+      const p0 = pts[(i - 1 + n) % n], p1 = pts[i], p2 = pts[(i + 1) % n], p3 = pts[(i + 2) % n];
+      d += ` C${(p1[0] + (p2[0] - p0[0]) / 6).toFixed(2)},${(p1[1] + (p2[1] - p0[1]) / 6).toFixed(2)}` +
+           ` ${(p2[0] - (p3[0] - p1[0]) / 6).toFixed(2)},${(p2[1] - (p3[1] - p1[1]) / 6).toFixed(2)}` +
+           ` ${p2[0].toFixed(2)},${p2[1].toFixed(2)}`;
+    }
+    return d + 'Z';
+  }
+  function blob(r, seed, wobble) {
+    const rand = rng(seed);
+    const pts = [];
+    for (let i = 0; i < CONFIG.blobPoints; i++) {
+      const a = (i / CONFIG.blobPoints) * Math.PI * 2;
+      const rr = r * (1 + (rand() - 0.5) * wobble);
+      pts.push([Math.cos(a) * rr, Math.sin(a) * rr]);
+    }
+    return smoothClosed(pts);
+  }
+  function smoothOpen(pts) {
+    let d = `M${pts[0][0].toFixed(2)},${pts[0][1].toFixed(2)}`;
+    for (let i = 0; i < pts.length - 1; i++) {
+      const p0 = pts[Math.max(0, i - 1)], p1 = pts[i], p2 = pts[i + 1], p3 = pts[Math.min(pts.length - 1, i + 2)];
+      d += ` C${(p1[0] + (p2[0] - p0[0]) / 6).toFixed(2)},${(p1[1] + (p2[1] - p0[1]) / 6).toFixed(2)}` +
+           ` ${(p2[0] - (p3[0] - p1[0]) / 6).toFixed(2)},${(p2[1] - (p3[1] - p1[1]) / 6).toFixed(2)}` +
+           ` ${p2[0].toFixed(2)},${p2[1].toFixed(2)}`;
+    }
+    return d;
+  }
+
+  // ---- svg ------------------------------------------------------------
+  const grove = document.getElementById('grove');
+  const defs = el('defs');
+  grove.appendChild(defs);
+  const L = {};
+  ['bands', 'grid', 'roots', 'nodes', 'pulses', 'labels'].forEach(k => {
+    L[k] = el('g'); grove.appendChild(L[k]);
+  });
+
+  for (let y = CONFIG.yearMin; y <= CONFIG.yearMax; y += 5) {
+    L.grid.appendChild(el('line', { class: 'year-rule', x1: xOf(y), y1: -60, x2: xOf(y), y2: WORLD_H + 50 }));
+    const t = el('text', { class: 'year-tick', x: xOf(y), y: -40, 'text-anchor': 'middle' });
+    t.textContent = y;
+    L.grid.appendChild(t);
+  }
+
+  const bandLabels = [];
+  CONFIG.bandOrder.forEach((lin, i) => {
+    const y0 = i * CONFIG.bandHeight;
+    const gid = 'band' + i;
+    const g = el('linearGradient', { id: gid, x1: '0', y1: '0', x2: '0', y2: '1' });
+    g.appendChild(el('stop', { offset: '0%', 'stop-color': LINEAGE_COLOR[lin], 'stop-opacity': 0 }));
+    g.appendChild(el('stop', { offset: '50%', 'stop-color': LINEAGE_COLOR[lin], 'stop-opacity': 0.055 }));
+    g.appendChild(el('stop', { offset: '100%', 'stop-color': LINEAGE_COLOR[lin], 'stop-opacity': 0 }));
+    defs.appendChild(g);
+    L.bands.appendChild(el('rect', { x: -500, y: y0, width: WORLD_W + 1100, height: CONFIG.bandHeight, fill: `url(#${gid})` }));
+    const t = el('text', { class: 'lane-label', y: y0 + CONFIG.bandHeight * 0.5, fill: LINEAGE_COLOR[lin] });
+    t.textContent = LINEAGE_LABEL[lin];
+    L.grid.appendChild(t);
+    bandLabels.push(t);
+  });
+
+  // ---- roots ------------------------------------------------------------
+  // Every edge is a bundle of filaments rather than a single stroke. They
+  // share a course and disagree about the detail, the way roots do.
+  const measure = el('path', { fill: 'none', stroke: 'none', 'pointer-events': 'none' });
+  grove.appendChild(measure);
+
+  function baseCurve(e) {
+    const { x: x1, y: y1 } = e.a, { x: x2, y: y2 } = e.b;
+    const dx = Math.max(80, Math.abs(x2 - x1) * 0.52);
+    return `M${x1},${y1} C${x1 + dx},${y1} ${x2 - dx},${y2} ${x2},${y2}`;
+  }
+
+  function strandPath(baseD, amp, seed) {
+    measure.setAttribute('d', baseD);
+    const total = measure.getTotalLength();
+    const rand = rng(seed);
+    const ph = rand() * Math.PI * 2;
+    const freq = 1.6 + rand() * 2.2;
+    const pts = [];
+    for (let i = 0; i <= CONFIG.strands.samples; i++) {
+      const t = i / CONFIG.strands.samples;
+      const p = measure.getPointAtLength(t * total);
+      const taper = Math.sin(t * Math.PI);           // pinned at both ends
+      const off = (Math.sin(t * Math.PI * freq + ph) * 0.7 + (rand() - 0.5) * 0.6) * amp * taper;
+      pts.push([p.x, p.y + off]);
+    }
+    return smoothOpen(pts);
+  }
+
+  edges.forEach((e, i) => {
+    const ca = LINEAGE_COLOR[e.a.lineage], cb = LINEAGE_COLOR[e.b.lineage];
+    const gid = 'rg' + i;
+    const grad = el('linearGradient', { id: gid, gradientUnits: 'userSpaceOnUse', x1: e.a.x, y1: e.a.y, x2: e.b.x, y2: e.b.y });
+    grad.appendChild(el('stop', { offset: '0%', 'stop-color': ca }));
+    grad.appendChild(el('stop', { offset: '100%', 'stop-color': cb }));
+    defs.appendChild(grad);
+
+    const baseD = baseCurve(e);
+    const conf = CONF_RANK[e.confidence] || 0.4;
+    const bundle = el('g', { class: 'fadeable' });
+    e.strands = [];
+
+    const count = e.crossLineage ? CONFIG.strands.count + 2 : CONFIG.strands.count;
+    for (let k = 0; k < count; k++) {
+      const amp = CONFIG.strands.amplitude * (0.25 + k / count);
+      const p = el('path', {
+        class: 'strand', d: strandPath(baseD, amp, hash(e.id + ':' + k)),
+        stroke: `url(#${gid})`,
+        'stroke-width': (k === 0 ? 1.9 : 0.75) * (e.crossLineage ? 1.5 : 1),
+      });
+      p.style.opacity = (k === 0 ? 0.62 : 0.24) * (0.45 + conf * 0.55);
+      if (e.confidence === 'asserted') p.setAttribute('stroke-dasharray', '2 6');
+      bundle.appendChild(p);
+      e.strands.push(p);
+    }
+
+    const hit = el('path', { class: 'edge-hit', d: baseD });
+    bundle.appendChild(hit);
+    L.roots.appendChild(bundle);
+    e.bundle = bundle;
+
+    hit.addEventListener('click', ev => { ev.stopPropagation(); openEdge(e); });
+    hit.addEventListener('mouseenter', () => showTip(e.a.name + ' → ' + e.b.name, e.explanation.age13));
+    hit.addEventListener('mouseleave', hideTip);
+  });
+
+  // ---- nodes --------------------------------------------------------------
+  nodes.forEach(n => {
+    const c = LINEAGE_COLOR[n.lineage] || '#9aa094';
+    const g = el('g', { class: 'node fadeable', transform: `translate(${n.x},${n.y})` });
+    const inner = el('g');                     // breathing happens here
+    g.appendChild(inner);
+
+    if (n.kind === 'machine') {
+      // Machines stay angular on purpose. In a field of cells, a made object
+      // should look made. This also answers BACKLOG's "do machines get their
+      // own band" question by saying no: they live among what they changed.
+      const s = n.r;
+      inner.appendChild(el('rect', { x: -s * 1.5, y: -s * 1.5, width: s * 3, height: s * 3, fill: c, opacity: 0.07, transform: 'rotate(45)' }));
+      inner.appendChild(el('rect', { x: -s, y: -s, width: s * 2, height: s * 2, fill: 'none', stroke: c, 'stroke-width': 1.4, opacity: 0.8, transform: 'rotate(45)' }));
+      inner.appendChild(el('rect', { x: -s * 0.38, y: -s * 0.38, width: s * 0.76, height: s * 0.76, fill: c }));
+    } else {
+      inner.appendChild(el('path', { class: 'node-blob', d: blob(n.r * 2.3, n.seed + 7, CONFIG.blobWobble * 1.4), fill: c, opacity: 0.08 }));
+      inner.appendChild(el('path', { class: 'node-blob', d: blob(n.r * 1.5, n.seed + 3, CONFIG.blobWobble * 1.15), fill: c, opacity: 0.17 }));
+      inner.appendChild(el('path', { class: 'node-blob', d: blob(n.r, n.seed, CONFIG.blobWobble), fill: c, opacity: 0.92 }));
+      inner.appendChild(el('path', { d: blob(n.r * 0.26, n.seed + 11, CONFIG.blobWobble * 0.8), fill: '#fff', opacity: 0.7 }));
+    }
+
+    // Each node breathes at its own rate. Together they never sync up, which
+    // is the difference between a living thing and a loading spinner.
+    const rand = rng(n.seed + 99);
+    inner.animate(
+      [{ transform: 'scale(1)' },
+       { transform: `scale(${1 + CONFIG.breath.amount})` },
+       { transform: 'scale(1)' }],
+      { duration: CONFIG.breath.minMs + rand() * (CONFIG.breath.maxMs - CONFIG.breath.minMs),
+        iterations: Infinity, easing: 'ease-in-out', delay: -rand() * 5000 }
+    );
+
+    const name = el('text', { class: 'node-name fadeable', 'text-anchor': 'middle', y: -n.r - 22, transform: `translate(${n.x},${n.y})` });
+    name.textContent = n.name;
+    const yr = el('text', { class: 'node-year fadeable', 'text-anchor': 'middle', y: n.r + 28, transform: `translate(${n.x},${n.y})` });
+    yr.textContent = n.year;
+
+    L.nodes.appendChild(g);
+    L.labels.appendChild(name);
+    L.labels.appendChild(yr);
+    n.els = { g, inner, name, yr };
+
+    g.addEventListener('mouseenter', () => { if (!pinned) focusNode(n); showTip(n.name, n.rec.hook); });
+    g.addEventListener('mouseleave', () => { if (!pinned) clearFocus(); hideTip(); });
+    g.addEventListener('click', ev => { ev.stopPropagation(); openNode(n); spread(n); });
+  });
+
+  // ---- spreading ----------------------------------------------------------
+  // Breadth-first from the clicked node, one hop per beat. This is the whole
+  // argument of the project rendered as motion: influence is not a single
+  // arrow, it is a thing that keeps going after you stop looking.
+  function spread(start) {
+    const seen = new Set([start.id]);
+    let front = [start], hop = 0;
+    while (front.length && hop <= CONFIG.spread.maxHops) {
+      const delay = hop * CONFIG.spread.hopMs;
+      front.forEach(n => setTimeout(() => ping(n), delay));
+      const next = [];
+      front.forEach(n => {
+        [...n.out, ...n.in].forEach(e => {
+          const o = e.a === n ? e.b : e.a;
+          if (seen.has(o.id)) return;
+          seen.add(o.id);
+          next.push(o);
+          setTimeout(() => travel(e, e.a === n), delay + 60);
+        });
+      });
+      front = next; hop++;
+    }
+  }
+
+  // The ring is parked at the origin of a translated group: a CSS transform
+  // on a positioned <circle> scales from the SVG origin, not from the circle.
+  function ping(n) {
+    const c = LINEAGE_COLOR[n.lineage] || '#9aa094';
+    const at = el('g', { transform: `translate(${n.x},${n.y})` });
+    at.appendChild(el('circle', { class: 'pulse', r: n.r, fill: 'none', stroke: c, 'stroke-width': 2.4 }));
+    L.pulses.appendChild(at);
+    setTimeout(() => at.remove(), 1600);
+  }
+
+  function travel(e, forward) {
+    const p = e.strands[0];
+    const len = p.getTotalLength();
+    const flash = el('path', {
+      d: p.getAttribute('d'), class: 'strand', fill: 'none',
+      stroke: LINEAGE_COLOR[(forward ? e.b : e.a).lineage],
+      'stroke-width': 3.4, 'stroke-dasharray': `${len * 0.22} ${len}`,
+    });
+    flash.style.opacity = 0.95;
+    L.pulses.appendChild(flash);
+    const from = forward ? len * 0.22 : -len;
+    const to = forward ? -len : len * 0.22;
+    flash.animate([{ strokeDashoffset: from, opacity: 0.95 }, { strokeDashoffset: to, opacity: 0 }],
+      { duration: 1100, easing: 'cubic-bezier(.3,.7,.4,1)' }).onfinish = () => flash.remove();
+  }
+
+  // ---- focus ---------------------------------------------------------------
+  let pinned = null;
+  function focusNode(n) {
+    grove.classList.add('focusing');
+    document.querySelectorAll('.lit').forEach(x => x.classList.remove('lit'));
+    const near = new Set([n.id]);
+    edges.forEach(e => {
+      if (e.a !== n && e.b !== n) return;
+      e.bundle.classList.add('lit');
+      near.add(e.a.id); near.add(e.b.id);
+    });
+    nodes.forEach(m => {
+      if (!near.has(m.id)) return;
+      m.els.g.classList.add('lit'); m.els.name.classList.add('lit'); m.els.yr.classList.add('lit');
+    });
+  }
+  function focusEdge(e) {
+    grove.classList.add('focusing');
+    document.querySelectorAll('.lit').forEach(x => x.classList.remove('lit'));
+    e.bundle.classList.add('lit');
+    [e.a, e.b].forEach(m => { m.els.g.classList.add('lit'); m.els.name.classList.add('lit'); m.els.yr.classList.add('lit'); });
+  }
+  function clearFocus() {
+    grove.classList.remove('focusing');
+    document.querySelectorAll('.lit').forEach(x => x.classList.remove('lit'));
+  }
+
+  // ---- panel -----------------------------------------------------------------
+  const panel = document.getElementById('panel');
+  const panelBody = document.getElementById('panel-body');
+  let register = 'age13';
+
+  const registerToggle = () => `<div class="controls" style="margin:22px 0 4px">
+    <button class="chip reg" data-reg="age13" aria-pressed="${register === 'age13'}">Teen</button>
+    <button class="chip reg" data-reg="adult" aria-pressed="${register === 'adult'}">Adult</button></div>`;
+
+  function wireRegister(redraw) {
+    panelBody.querySelectorAll('.reg').forEach(b =>
+      b.addEventListener('click', () => { register = b.dataset.reg; redraw(); }));
+  }
+
+  function openNode(n) {
+    pinned = n; focusNode(n);
+    const r = n.rec, c = LINEAGE_COLOR[n.lineage];
+    const mine = edges.filter(e => e.a === n || e.b === n);
+    const meta = n.kind === 'machine'
+      ? `${esc(r.maker)} &middot; ${r.releasedYear}–${r.discontinuedYear || 'now'}`
+      : `${esc(r.originCity)} &middot; ${r.activeFrom}–${r.activeTo || 'present'}`;
+    panelBody.innerHTML = `
+      <div class="kicker" style="color:${c}">${n.kind === 'machine' ? 'Machine' : 'Artist'} &middot; ${esc(LINEAGE_LABEL[n.lineage] || n.lineage)}</div>
+      <h2>${esc(r.name)}</h2><div class="meta">${meta}</div>
+      <p class="hook">${esc(r.hook)}</p>${registerToggle()}
+      <p class="body">${esc(r.blurb[register])}</p>
+      ${n.kind === 'machine' ? `<h3>What it was for</h3><p class="body">${esc(r.originalPurpose)}</p>
+        <h3>What actually happened</h3><p class="body">${esc(r.whatActuallyHappened)}</p>` : ''}
+      ${(r.signatureTracks || []).length ? `<h3>Listen to</h3>${r.signatureTracks.map(t =>
+        `<div class="track"><div class="t">${esc(t.title)} <span style="color:var(--dim)">${t.year}</span></div>
+         <div class="w">${esc(t.whyThisOne)}</div></div>`).join('')}` : ''}
+      ${mine.length ? `<h3>${mine.length} connection${mine.length > 1 ? 's' : ''}</h3>${mine.map(e =>
+        `<button class="link-row" data-edge="${edges.indexOf(e)}"><span class="dir">${e.a === n ? 'changed' : 'changed by'}</span>${esc(e.a === n ? e.b.name : e.a.name)}</button>`).join('')}` : ''}`;
+    wireRegister(() => openNode(n));
+    panelBody.querySelectorAll('[data-edge]').forEach(b =>
+      b.addEventListener('click', () => openEdge(edges[+b.dataset.edge])));
+    panel.classList.add('open');
+  }
+
+  function openEdge(e) {
+    pinned = e.a; focusEdge(e);
+    const tp = e.trackPair;
+    panelBody.innerHTML = `
+      <div class="kicker" style="color:${LINEAGE_COLOR[e.b.lineage]}">${e.crossLineage ? 'Crossing' : 'Connection'} &middot; ${esc(e.type)}</div>
+      <h2>${esc(e.a.name)} <span style="color:var(--dim)">→</span> ${esc(e.b.name)}</h2>
+      <div class="meta">${e.year} &nbsp; <span class="conf ${esc(e.confidence)}">${esc(e.confidence)}</span></div>
+      ${registerToggle()}<p class="hook">${esc(e.explanation[register])}</p>
+      ${tp ? `<h3>What to listen for</h3>
+        <div class="track"><div class="t">${esc(tp.earlier.artist)} &mdash; &ldquo;${esc(tp.earlier.title)}&rdquo; <span style="color:var(--dim)">${tp.earlier.year}</span></div></div>
+        <div class="track"><div class="t">${esc(tp.later.artist)} &mdash; &ldquo;${esc(tp.later.title)}&rdquo; <span style="color:var(--dim)">${tp.later.year}</span></div></div>
+        <p class="body">${esc(tp.whatToListenFor)}</p>` : ''}
+      <h3>How we know</h3><p class="body">${esc(e.evidence)}</p>
+      <h3>Either end</h3>
+      <button class="link-row" data-node="${e.a.id}"><span class="dir">from</span>${esc(e.a.name)}</button>
+      <button class="link-row" data-node="${e.b.id}"><span class="dir">to</span>${esc(e.b.name)}</button>`;
+    wireRegister(() => openEdge(e));
+    panelBody.querySelectorAll('[data-node]').forEach(b =>
+      b.addEventListener('click', () => { const n = byId.get(b.dataset.node); openNode(n); spread(n); }));
+    panel.classList.add('open');
+  }
+
+  function closePanel() { panel.classList.remove('open'); pinned = null; clearFocus(); }
+  document.getElementById('close').addEventListener('click', closePanel);
+
+  const tip = document.getElementById('tip');
+  function showTip(name, text) { tip.innerHTML = `<span class="n">${esc(name)}</span>${esc(text || '')}`; tip.classList.add('on'); }
+  function hideTip() { tip.classList.remove('on'); }
+  addEventListener('mousemove', ev => { tip.style.left = ev.clientX + 'px'; tip.style.top = ev.clientY + 'px'; });
+
+  // ---- camera --------------------------------------------------------------
+  const stage = document.getElementById('stage');
+  let view = { x: 0, y: 0, k: 1 };
+
+  function applyView() {
+    const base = `translate(${view.x},${view.y}) scale(${view.k})`;
+    ['bands', 'grid', 'roots', 'nodes', 'pulses', 'labels'].forEach(k => L[k].setAttribute('transform', base));
+    const stickX = (22 - view.x) / view.k;
+    bandLabels.forEach(t => t.setAttribute('x', stickX));
+    const { hide, show } = CONFIG.labelFade;
+    L.labels.style.opacity = Math.min(1, Math.max(0, (view.k - hide) / (show - hide)));
+  }
+
+  function fit() {
+    const xs = nodes.map(n => n.x);
+    view.k = CONFIG.openZoom;
+    view.x = innerWidth / 2 - ((Math.min(...xs) + Math.max(...xs)) / 2) * view.k;
+    view.y = innerHeight / 2 - (WORLD_H * 0.48) * view.k;
+    applyView();
+  }
+
+  let animHandle = null;
+  function glideTo(tx, ty, tk, ms) {
+    cancelAnimationFrame(animHandle);
+    const from = { ...view }, t0 = performance.now();
+    const ease = u => u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2;
+    (function step(now) {
+      const u = Math.min(1, (now - t0) / ms), e = ease(u);
+      view.x = from.x + (tx - from.x) * e;
+      view.y = from.y + (ty - from.y) * e;
+      view.k = from.k + (tk - from.k) * e;
+      applyView();
+      if (u < 1) animHandle = requestAnimationFrame(step);
+    })(t0);
+  }
+  const centreOn = (n, k) => {
+    const tk = k || view.k;
+    glideTo(innerWidth / 2 - n.x * tk, innerHeight / 2 - n.y * tk, tk, 900);
+  };
+
+  let drag = null;
+  stage.addEventListener('pointerdown', ev => {
+    drag = { x: ev.clientX, y: ev.clientY, vx: view.x, vy: view.y, moved: 0 };
+    stage.classList.add('dragging'); stage.setPointerCapture(ev.pointerId);
+  });
+  stage.addEventListener('pointermove', ev => {
+    if (!drag) return;
+    const dx = ev.clientX - drag.x, dy = ev.clientY - drag.y;
+    drag.moved += Math.abs(dx) + Math.abs(dy);
+    view.x = drag.vx + dx; view.y = drag.vy + dy; applyView();
+  });
+  stage.addEventListener('pointerup', ev => {
+    const wasClick = drag && drag.moved < 5;
+    drag = null; stage.classList.remove('dragging');
+    if (wasClick && ev.target.id === 'grove') closePanel();
+  });
+  stage.addEventListener('wheel', ev => {
+    ev.preventDefault();
+    const f = ev.deltaY < 0 ? CONFIG.zoom.step : 1 / CONFIG.zoom.step;
+    const nk = Math.min(CONFIG.zoom.max, Math.max(CONFIG.zoom.min, view.k * f));
+    const r = nk / view.k;
+    view.x = ev.clientX - (ev.clientX - view.x) * r;
+    view.y = ev.clientY - (ev.clientY - view.y) * r;
+    view.k = nk; applyView();
+  }, { passive: false });
+  addEventListener('keydown', ev => {
+    const s = ev.shiftKey ? 260 : 80;
+    if (ev.key === 'ArrowLeft') { view.x += s; applyView(); }
+    if (ev.key === 'ArrowRight') { view.x -= s; applyView(); }
+    if (ev.key === 'ArrowUp') { view.y += s; applyView(); }
+    if (ev.key === 'ArrowDown') { view.y -= s; applyView(); }
+    if (ev.key === 'Escape') closePanel();
+  });
+  addEventListener('resize', applyView);
+
+  // ---- growth -----------------------------------------------------------------
+  // The map assembles itself in chronological order on load. Thirteen-year-olds
+  // do not read legends; they watch something happen and then poke it.
+  function grow() {
+    const t0 = CONFIG.yearMin;
+    nodes.forEach(n => {
+      const delay = (n.year - t0) * CONFIG.growth.perYearMs;
+      n.els.g.style.opacity = 0;
+      n.els.g.animate([{ opacity: 0, transform: 'scale(0.2)' }, { opacity: 1, transform: 'scale(1)' }],
+        { duration: CONFIG.growth.nodeMs, delay, easing: 'cubic-bezier(.2,1.3,.4,1)', fill: 'backwards' })
+        .onfinish = () => { n.els.g.style.opacity = ''; };
+      [n.els.name, n.els.yr].forEach(t => {
+        t.style.opacity = 0;
+        t.animate([{ opacity: 0 }, { opacity: 1 }],
+          { duration: 700, delay: delay + 400, fill: 'backwards' }).onfinish = () => { t.style.opacity = ''; };
+      });
+    });
+    edges.forEach(e => {
+      const delay = (e.year - t0) * CONFIG.growth.perYearMs;
+      e.strands.forEach((p, k) => {
+        const len = p.getTotalLength();
+        p.animate(
+          [{ strokeDasharray: `${len} ${len}`, strokeDashoffset: len },
+           { strokeDasharray: `${len} ${len}`, strokeDashoffset: 0 }],
+          { duration: CONFIG.growth.strandMs, delay: delay + k * 110,
+            easing: 'cubic-bezier(.35,.1,.25,1)', fill: 'backwards' });
+      });
+    });
+  }
+
+  // ---- chrome -------------------------------------------------------------------
+  const swatches = document.getElementById('swatches');
+  CONFIG.bandOrder.forEach(lin => {
+    const b = document.createElement('button');
+    b.className = 'swatch';
+    b.innerHTML = `<span class="dot" style="background:${LINEAGE_COLOR[lin]}"></span>${LINEAGE_LABEL[lin]}`;
+    b.addEventListener('click', () => {
+      const first = nodes.filter(n => n.lineage === lin && n.kind === 'artist').sort((p, q) => p.year - q.year)[0];
+      if (first) { centreOn(first, 1.05); openNode(first); spread(first); }
+    });
+    swatches.appendChild(b);
+  });
+
+  const crossBtn = document.getElementById('btn-cross');
+  let crossOnly = false;
+  crossBtn.addEventListener('click', () => {
+    crossOnly = !crossOnly;
+    crossBtn.setAttribute('aria-pressed', crossOnly);
+    edges.forEach(e => { e.bundle.style.display = (crossOnly && !e.crossLineage) ? 'none' : ''; });
+  });
+  document.getElementById('btn-grow').addEventListener('click', () => { closePanel(); grow(); });
+  document.getElementById('btn-reset').addEventListener('click', () => { closePanel(); fit(); });
+
+  const threadBox = document.getElementById('threads');
+  let threadTimer = null;
+  D.threads.forEach(th => {
+    const b = document.createElement('button');
+    b.className = 'thread-btn';
+    b.textContent = th.title;
+    b.addEventListener('click', () => {
+      document.querySelectorAll('.thread-btn').forEach(x => x.classList.remove('running'));
+      b.classList.add('running');
+      playThread(th, () => b.classList.remove('running'));
+    });
+    threadBox.appendChild(b);
+  });
+
+  function playThread(th, done) {
+    clearTimeout(threadTimer);
+    const stops = th.steps.map(s => s.nodeId
+      ? { kind: 'node', it: byId.get(s.nodeId) }
+      : { kind: 'edge', it: edges.find(x => x.id === s.edgeId) }).filter(s => s.it);
+    let i = 0;
+    (function next() {
+      if (i >= stops.length) { done && done(); return; }
+      const s = stops[i++];
+      if (s.kind === 'node') { centreOn(s.it, CONFIG.thread.zoom); openNode(s.it); ping(s.it); }
+      else {
+        const mid = { x: (s.it.a.x + s.it.b.x) / 2, y: (s.it.a.y + s.it.b.y) / 2 };
+        glideTo(innerWidth / 2 - mid.x * CONFIG.thread.zoom, innerHeight / 2 - mid.y * CONFIG.thread.zoom, CONFIG.thread.zoom, 900);
+        openEdge(s.it); travel(s.it, true);
+      }
+      threadTimer = setTimeout(next, CONFIG.thread.dwellMs);
+    })();
+  }
+
+  // ---- culture medium -----------------------------------------------------------
+  const culture = document.getElementById('culture');
+  [['#1d5c46', 18, 12, 62], ['#5a3320', 70, 58, 54], ['#2a3d68', 40, 78, 70], ['#4a2a55', 84, 22, 48]]
+    .forEach(([colour, left, top, size], i) => {
+      const d = document.createElement('div');
+      d.className = 'cell';
+      d.style.cssText = `background:${colour};left:${left}%;top:${top}%;width:${size}vw;height:${size}vw;margin:-${size / 2}vw 0 0 -${size / 2}vw`;
+      culture.appendChild(d);
+      d.animate(
+        [{ transform: 'translate(0,0) scale(1)' },
+         { transform: `translate(${(i % 2 ? 1 : -1) * 9}vw, ${(i % 3 ? -1 : 1) * 7}vh) scale(1.24)` },
+         { transform: 'translate(0,0) scale(1)' }],
+        { duration: 54000 + i * 13000, iterations: Infinity, easing: 'ease-in-out', delay: -i * 9000 }
+      );
+    });
+
+  fit();
+  grow();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lineage — Strata</title>
+<style>
+  :root {
+    --rock:       #ff6f55;
+    --dub:        #3ddfa4;
+    --electronic: #5fa8ff;
+    --hiphop:     #bd82ff;
+
+    --void: #04060d;
+    --ink:  #eaf0ff;
+    --dim:  #7e8ca8;
+    --hairline: rgba(150, 180, 235, 0.12);
+
+    --ui: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, sans-serif;
+    --serif: ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--void); color: var(--ink); font-family: var(--ui);
+    overflow: hidden; -webkit-font-smoothing: antialiased;
+  }
+  #stage { position: fixed; inset: 0; cursor: grab; }
+  #stage.dragging { cursor: grabbing; }
+  #dust, #strata { position: fixed; inset: 0; width: 100%; height: 100%; }
+
+  #veil {
+    position: fixed; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(125% 85% at 50% 38%, transparent 30%, rgba(3,5,12,0.5) 72%, rgba(3,5,12,0.94) 100%),
+      linear-gradient(180deg, rgba(95,168,255,0.05), transparent 34%);
+  }
+  #grain {
+    position: fixed; inset: -50%; pointer-events: none;
+    opacity: 0.3; mix-blend-mode: overlay; animation: jitter 0.75s steps(1) infinite;
+  }
+  @keyframes jitter {
+    0% { transform: translate(0,0); } 25% { transform: translate(-1.4%,1%); }
+    50% { transform: translate(1%,-1.4%); } 75% { transform: translate(-1%,-1%); }
+  }
+
+  .lane-label {
+    font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.22em;
+    text-transform: uppercase; opacity: 0.55;
+  }
+  .year-tick { font-family: var(--mono); font-size: 11.5px; fill: var(--dim); }
+  .year-rule { stroke: var(--hairline); vector-effect: non-scaling-stroke; }
+  .floor-rule { stroke: rgba(120,160,225,0.18); vector-effect: non-scaling-stroke; fill: none; }
+
+  .edge-line { fill: none; stroke-linecap: round; vector-effect: non-scaling-stroke; transition: opacity 340ms ease; }
+  .edge-hit { fill: none; stroke: transparent; stroke-width: 22; cursor: pointer; }
+  .comet { fill: none; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+
+  .node { cursor: pointer; }
+  .node-halo { transition: opacity 400ms ease; }
+  .node-name {
+    font-size: 13px; font-weight: 550; fill: var(--ink);
+    paint-order: stroke; stroke: rgba(4,6,13,0.88); stroke-width: 4px; pointer-events: none;
+  }
+  .node-year { font-family: var(--mono); font-size: 10px; fill: var(--dim); pointer-events: none; }
+
+  /* Not yet arrived at the current year. Present but clearly not here yet,
+     which is the whole point of dragging the cursor. */
+  .unborn { opacity: 0.085 !important; }
+  .unborn .node-name, .unborn .node-year { opacity: 0 !important; }
+
+  #strata.focusing .fadeable { opacity: 0.07 !important; }
+  #strata.focusing .lit { opacity: 1 !important; }
+  #strata.focusing .lit-soft { opacity: 0.55 !important; }
+
+  @keyframes bloom {
+    0% { transform: scale(1); opacity: 0.85; }
+    100% { transform: scale(4.2); opacity: 0; }
+  }
+  .pulse { animation: bloom 1400ms cubic-bezier(.2,.7,.3,1) forwards; pointer-events: none; }
+
+  .hud { position: fixed; z-index: 5; }
+  #title { top: 26px; left: 30px; max-width: 300px; pointer-events: none; isolation: isolate; }
+  #title::before {
+    content: ''; position: absolute; inset: -34px -90px -26px -48px; z-index: -1;
+    background: radial-gradient(ellipse at 24% 42%, rgba(4,6,13,0.95), rgba(4,6,13,0.8) 42%, transparent 74%);
+  }
+  #title h1 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: 30px; }
+  #title p { margin: 6px 0 0; font-size: 12.5px; line-height: 1.55; color: var(--dim); }
+
+  #threads { top: 26px; right: 30px; text-align: right; }
+  #threads h2 {
+    margin: 0 0 10px; font-family: var(--mono); font-size: 10px; font-weight: 500;
+    letter-spacing: 0.24em; text-transform: uppercase; color: var(--dim);
+  }
+  .thread-btn {
+    display: block; margin-left: auto; background: none; border: 0; cursor: pointer;
+    color: var(--ink); font-family: var(--serif); font-style: italic; font-size: 17px;
+    padding: 3px 0; opacity: 0.62; transition: opacity 200ms;
+  }
+  .thread-btn:hover, .thread-btn.running { opacity: 1; text-shadow: 0 0 16px rgba(190,215,255,0.5); }
+
+  /* ---- the transport -------------------------------------------------- */
+  #transport {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 6;
+    padding: 18px 30px 22px;
+    background: linear-gradient(180deg, transparent, rgba(4,6,13,0.85) 42%);
+    display: flex; align-items: center; gap: 20px;
+  }
+  #play {
+    flex: 0 0 auto; width: 46px; height: 46px; border-radius: 50%;
+    border: 1px solid rgba(150,180,235,0.3); background: rgba(150,180,235,0.07);
+    color: var(--ink); cursor: pointer; font-size: 14px; line-height: 1;
+    display: grid; place-items: center; transition: background 200ms, border-color 200ms;
+  }
+  #play:hover { background: rgba(150,180,235,0.18); border-color: rgba(150,180,235,0.6); }
+  #scrub { flex: 1 1 auto; position: relative; height: 46px; cursor: ew-resize; }
+  #scrub .track {
+    position: absolute; left: 0; right: 0; top: 50%; height: 2px;
+    background: var(--hairline); transform: translateY(-50%);
+  }
+  #scrub .elapsed {
+    position: absolute; left: 0; top: 50%; height: 2px;
+    background: linear-gradient(90deg, rgba(95,168,255,0.25), rgba(234,240,255,0.85));
+    transform: translateY(-50%);
+  }
+  #scrub .pip {
+    position: absolute; top: 50%; width: 3px; height: 3px; border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #scrub .head {
+    position: absolute; top: 50%; width: 13px; height: 13px; border-radius: 50%;
+    background: var(--ink); transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px 3px rgba(190,215,255,0.65);
+  }
+  #nowYear {
+    flex: 0 0 auto; font-family: var(--mono); font-size: 25px;
+    letter-spacing: 0.06em; min-width: 82px; text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  #nowLabel {
+    flex: 0 0 200px; font-size: 12px; line-height: 1.4; color: var(--dim);
+  }
+
+  #dock { bottom: 96px; left: 30px; display: flex; flex-direction: column; gap: 12px; }
+  .swatches { display: flex; gap: 15px; flex-wrap: wrap; }
+  .swatch {
+    display: flex; align-items: center; gap: 7px; background: none; border: 0; padding: 0;
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--dim); cursor: pointer;
+  }
+  .swatch:hover { color: var(--ink); }
+  .swatch .dot { width: 9px; height: 9px; border-radius: 50%; box-shadow: 0 0 9px 2px currentColor; }
+  .controls { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--dim); background: rgba(140,170,220,0.05); border: 1px solid var(--hairline);
+    border-radius: 999px; padding: 6px 13px; cursor: pointer;
+    transition: color 200ms, border-color 200ms, background 200ms;
+  }
+  .chip:hover { color: var(--ink); border-color: rgba(150,180,235,0.34); }
+  .chip[aria-pressed="true"] { color: #05070f; background: var(--ink); border-color: var(--ink); }
+
+  #panel {
+    position: fixed; top: 0; right: 0; bottom: 0; width: min(430px, 42vw); z-index: 10;
+    background: rgba(6, 10, 22, 0.84);
+    backdrop-filter: blur(22px) saturate(1.3); -webkit-backdrop-filter: blur(22px) saturate(1.3);
+    border-left: 1px solid var(--hairline);
+    transform: translateX(102%); transition: transform 520ms cubic-bezier(.16,1,.3,1);
+    overflow-y: auto; padding: 34px 34px 110px;
+  }
+  #panel.open { transform: none; }
+  #panel .kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; margin-bottom: 14px; }
+  #panel h2 { margin: 0 0 4px; font-family: var(--serif); font-weight: 400; font-size: 33px; line-height: 1.12; }
+  #panel .meta { font-family: var(--mono); font-size: 11px; color: var(--dim); margin-bottom: 22px; }
+  #panel .hook { font-family: var(--serif); font-size: 19px; line-height: 1.45; font-style: italic; margin: 0 0 24px; color: #cfdcf5; }
+  #panel p.body { font-size: 14.5px; line-height: 1.68; color: #b9c6df; margin: 0 0 16px; }
+  #panel h3 {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--dim); font-weight: 500; margin: 30px 0 12px; padding-top: 16px; border-top: 1px solid var(--hairline);
+  }
+  .track { margin-bottom: 14px; }
+  .track .t { font-size: 14.5px; }
+  .track .w { font-size: 13px; line-height: 1.55; color: var(--dim); margin-top: 3px; }
+  .conf {
+    display: inline-block; font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.18em;
+    text-transform: uppercase; padding: 3px 9px; border-radius: 999px; border: 1px solid currentColor;
+  }
+  .conf.documented { color: #7ee0b0; } .conf.consensus { color: #f0c26a; } .conf.asserted { color: #f08f7a; }
+  .link-row {
+    display: block; width: 100%; text-align: left; background: none; border: 0;
+    border-bottom: 1px solid var(--hairline); cursor: pointer; padding: 11px 0;
+    color: var(--ink); font-size: 14px; font-family: var(--ui);
+  }
+  .link-row:hover { color: #fff; }
+  .link-row .dir { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em; color: var(--dim); text-transform: uppercase; margin-right: 9px; }
+  #close { position: absolute; top: 22px; right: 26px; background: none; border: 0; color: var(--dim); font-size: 22px; cursor: pointer; }
+  #close:hover { color: var(--ink); }
+
+  #tip {
+    position: fixed; z-index: 9; pointer-events: none; opacity: 0;
+    transform: translate(-50%, -160%); transition: opacity 180ms ease;
+    background: rgba(5,8,18,0.92); border: 1px solid var(--hairline); border-radius: 7px;
+    padding: 8px 13px; max-width: 290px; font-size: 12.5px; line-height: 1.45;
+    color: #cfdcf5; backdrop-filter: blur(9px);
+  }
+  #tip.on { opacity: 1; }
+  #tip .n { display: block; font-weight: 600; margin-bottom: 3px; color: #fff; }
+</style>
+</head>
+<body>
+
+<canvas id="dust"></canvas>
+<div id="stage"><svg id="strata"></svg></div>
+<svg id="grain" xmlns="http://www.w3.org/2000/svg">
+  <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter>
+  <rect width="100%" height="100%" filter="url(#noise)"/>
+</svg>
+<div id="veil"></div>
+
+<div class="hud" id="title">
+  <h1>Lineage</h1>
+  <p>Down there is the gear. Up here is what people did with it. Drag the year and watch it arrive.</p>
+</div>
+
+<div class="hud" id="threads"><h2>Routes in</h2></div>
+
+<div class="hud" id="dock">
+  <div class="swatches" id="swatches"></div>
+  <div class="controls">
+    <button class="chip" id="btn-cross" aria-pressed="false">Crossings only</button>
+    <button class="chip" id="btn-reset">Reset view</button>
+  </div>
+</div>
+
+<div id="transport">
+  <button id="play" aria-label="Play">&#9654;</button>
+  <div id="scrub">
+    <div class="track"></div><div class="elapsed"></div><div class="head"></div>
+  </div>
+  <div id="nowYear">1960</div>
+  <div id="nowLabel"></div>
+</div>
+
+<aside id="panel"><button id="close" aria-label="Close">&times;</button><div id="panel-body"></div></aside>
+<div id="tip"></div>
+
+<script src="_data.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  const CONFIG = {
+    yearMin: 1960, yearMax: 1992,
+    pxPerYear: 108,
+    laneHeight: 182,
+    laneOrder: ['rock', 'dub', 'hiphop', 'electronic'],
+    substrate: { gap: 46, depth: 232, rows: 7, curve: 2.4, converge: 0.07 },
+    nodeRadius: { min: 6, max: 12.5, perEdge: 1.7 },
+    haloScale: 7,
+    breath: { minMs: 4600, maxMs: 7800, amount: 0.09 },
+    comet: { pxPerSecond: 155, length: 26 },
+    beam: { widthTop: 5, widthBottom: 26 },
+    spread: { hopMs: 320, maxHops: 4 },
+    dust: { count: 480, parallax: 0.2 },
+    nebulaParallax: 0.9,
+    zoom: { min: 0.26, max: 3.2, step: 1.12 },
+    openZoom: 0.74,
+    labelFade: { hide: 0.4, show: 0.6 },
+    transport: { msPerYear: 620 },
+    thread: { dwellMs: 2100, zoom: 1.2 },
+  };
+
+  const LINEAGE_COLOR = { rock: '#ff6f55', dub: '#3ddfa4', electronic: '#5fa8ff', hiphop: '#bd82ff' };
+  const LINEAGE_LABEL = { rock: 'Rock & guitar', dub: 'Jamaican dub', hiphop: 'Hip-hop', electronic: 'Electronic' };
+  const CONF_RANK = { documented: 1, consensus: 0.62, asserted: 0.36 };
+
+  const D = window.LINEAGE;
+  const SVGNS = 'http://www.w3.org/2000/svg';
+  const el = (n, a) => {
+    const e = document.createElementNS(SVGNS, n);
+    for (const k in (a || {})) e.setAttribute(k, a[k]);
+    return e;
+  };
+  const esc = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  function hash(str) {
+    let h = 2166136261;
+    for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
+    return h >>> 0;
+  }
+  function rng(seed) {
+    let a = seed >>> 0;
+    return () => {
+      a |= 0; a = (a + 0x6D2B79F5) | 0;
+      let t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  // ---- model --------------------------------------------------------------
+  const nodes = [];
+  D.artists.forEach(a => nodes.push({ id: a.id, name: a.name, kind: 'artist', lineage: a.lineage, year: a.activeFrom, rec: a }));
+  D.machines.forEach(m => nodes.push({ id: m.id, name: m.name, kind: 'machine', lineage: m.lineage, year: m.releasedYear, rec: m }));
+  const byId = new Map(nodes.map(n => [n.id, n]));
+  const edges = D.edges.filter(e => byId.has(e.from) && byId.has(e.to))
+    .map(e => ({ ...e, a: byId.get(e.from), b: byId.get(e.to) }));
+  nodes.forEach(n => { n.degree = 0; });
+  edges.forEach(e => { e.a.degree++; e.b.degree++; });
+
+  // ---- layout -------------------------------------------------------------
+  // Two strata. Artists occupy lineage lanes on the upper plane. Machines sit
+  // on a receding floor below all of it, which is the thesis of the project
+  // made literal: the gear is underneath everything that happened on it.
+  const xOf = y => (y - CONFIG.yearMin) * CONFIG.pxPerYear;
+  const WORLD_W = xOf(CONFIG.yearMax);
+  const UPPER_H = CONFIG.laneOrder.length * CONFIG.laneHeight;
+  const HORIZON = UPPER_H + CONFIG.substrate.gap;
+  const FLOOR_Y = HORIZON + CONFIG.substrate.depth * 0.56;
+  const WORLD_H = HORIZON + CONFIG.substrate.depth;
+
+  const artists = nodes.filter(n => n.kind === 'artist');
+  const machines = nodes.filter(n => n.kind === 'machine');
+
+  const lanes = new Map();
+  artists.forEach(n => {
+    const l = Math.max(0, CONFIG.laneOrder.indexOf(n.lineage));
+    if (!lanes.has(l)) lanes.set(l, []);
+    lanes.get(l).push(n);
+  });
+  lanes.forEach((list, l) => {
+    list.sort((p, q) => p.year - q.year);
+    const mid = l * CONFIG.laneHeight + CONFIG.laneHeight / 2;
+    list.forEach((n, i) => {
+      n.x = xOf(n.year);
+      n.y = mid + ((i % 3) - 1) * CONFIG.laneHeight * 0.23;
+      n.r = Math.min(CONFIG.nodeRadius.max, CONFIG.nodeRadius.min + n.degree * CONFIG.nodeRadius.perEdge);
+      n.seed = hash(n.id);
+    });
+  });
+  machines.forEach((n, i) => {
+    n.x = xOf(n.year);
+    n.y = FLOOR_Y + (i % 2) * 34;
+    n.r = Math.min(CONFIG.nodeRadius.max, CONFIG.nodeRadius.min + n.degree * CONFIG.nodeRadius.perEdge);
+    n.seed = hash(n.id);
+  });
+
+  // ---- svg ----------------------------------------------------------------
+  const svg = document.getElementById('strata');
+  const defs = el('defs');
+  svg.appendChild(defs);
+  defs.appendChild((() => {
+    const f = el('filter', { id: 'nebula', x: '-60%', y: '-60%', width: '220%', height: '220%' });
+    f.appendChild(el('feGaussianBlur', { stdDeviation: 56 }));
+    return f;
+  })());
+
+  const haloFill = {};
+  Object.entries(LINEAGE_COLOR).forEach(([k, c]) => {
+    const g = el('radialGradient', { id: 'halo-' + k });
+    g.appendChild(el('stop', { offset: '0%', 'stop-color': c, 'stop-opacity': 0.6 }));
+    g.appendChild(el('stop', { offset: '52%', 'stop-color': c, 'stop-opacity': 0.16 }));
+    g.appendChild(el('stop', { offset: '100%', 'stop-color': c, 'stop-opacity': 0 }));
+    defs.appendChild(g);
+    haloFill[k] = `url(#halo-${k})`;
+  });
+
+  const LAYERS = ['bands', 'nebula', 'floor', 'grid', 'beams', 'edges', 'comets', 'nodes', 'pulses', 'labels', 'cursor'];
+  const L = {};
+  LAYERS.forEach(k => { L[k] = el('g'); svg.appendChild(L[k]); });
+
+  // ---- the receding floor -------------------------------------------------
+  // Depth from perspective alone: a bright horizon hairline, rows bunching
+  // toward it, and verticals converging on a vanishing point. No differential
+  // transform, so the beams that cross the horizon stay perfectly registered.
+  (function buildFloor() {
+    const { depth, rows, curve, converge } = CONFIG.substrate;
+    const vpx = WORLD_W / 2;
+
+    const shade = el('linearGradient', { id: 'floorShade', x1: '0', y1: '0', x2: '0', y2: '1' });
+    shade.appendChild(el('stop', { offset: '0%', 'stop-color': '#000', 'stop-opacity': 0.0 }));
+    shade.appendChild(el('stop', { offset: '100%', 'stop-color': '#000', 'stop-opacity': 0.5 }));
+    defs.appendChild(shade);
+    L.floor.appendChild(el('rect', { x: -3000, y: HORIZON, width: WORLD_W + 6000, height: depth + 300, fill: 'url(#floorShade)' }));
+
+    const fade = el('linearGradient', { id: 'floorFade', x1: '0', y1: '0', x2: '0', y2: '1' });
+    fade.appendChild(el('stop', { offset: '0%', 'stop-color': '#7fb4ff', 'stop-opacity': 0 }));
+    fade.appendChild(el('stop', { offset: '100%', 'stop-color': '#7fb4ff', 'stop-opacity': 0.34 }));
+    defs.appendChild(fade);
+
+    for (let y = CONFIG.yearMin; y <= CONFIG.yearMax; y += 2) {
+      const x = xOf(y);
+      L.floor.appendChild(el('line', {
+        x1: vpx + (x - vpx) * converge, y1: HORIZON,
+        x2: x, y2: HORIZON + depth,
+        stroke: 'url(#floorFade)', 'stroke-width': 1, 'vector-effect': 'non-scaling-stroke',
+      }));
+    }
+    for (let i = 1; i <= rows; i++) {
+      const t = i / rows;
+      const y = HORIZON + depth * Math.pow(t, curve);
+      const w = 260 + 2100 * t;
+      const r = el('line', { class: 'floor-rule', x1: -w, y1: y, x2: WORLD_W + w, y2: y });
+      r.style.opacity = 0.05 + t * 0.3;
+      L.floor.appendChild(r);
+    }
+    const hz = el('line', { x1: -3000, y1: HORIZON, x2: WORLD_W + 3000, y2: HORIZON, stroke: '#8cc0ff', 'stroke-width': 1, 'vector-effect': 'non-scaling-stroke' });
+    hz.style.opacity = 0.42;
+    L.floor.appendChild(hz);
+  })();
+
+  // ---- grid, lanes, scene clouds -------------------------------------------
+  for (let y = CONFIG.yearMin; y <= CONFIG.yearMax; y++) {
+    if (y % 5) continue;
+    L.grid.appendChild(el('line', { class: 'year-rule', x1: xOf(y), y1: -66, x2: xOf(y), y2: HORIZON }));
+    const t = el('text', { class: 'year-tick', x: xOf(y), y: -44, 'text-anchor': 'middle' });
+    t.textContent = y;
+    t.style.opacity = y % 10 ? 0.4 : 0.85;
+    L.grid.appendChild(t);
+  }
+
+  const laneLabels = [];
+  function addLane(index, text, colour) {
+    const y0 = index * CONFIG.laneHeight;
+    L.bands.appendChild(el('rect', { x: -600, y: y0, width: WORLD_W + 1200, height: CONFIG.laneHeight, fill: colour, opacity: 0.024 }));
+    L.bands.appendChild(el('line', { class: 'year-rule', x1: -600, y1: y0, x2: WORLD_W + 600, y2: y0 }));
+    const t = el('text', { class: 'lane-label', y: y0 + CONFIG.laneHeight * 0.5, fill: colour });
+    t.textContent = text;
+    L.grid.appendChild(t);
+    laneLabels.push(t);
+  }
+  CONFIG.laneOrder.forEach((lin, i) => addLane(i, LINEAGE_LABEL[lin], LINEAGE_COLOR[lin]));
+  const floorLabel = el('text', { class: 'lane-label', y: HORIZON + 30, fill: '#8fa6c8' });
+  floorLabel.textContent = 'The machines';
+  L.grid.appendChild(floorLabel);
+  laneLabels.push(floorLabel);
+
+  D.scenes.forEach(s => {
+    const members = (s.memberIds || []).map(id => byId.get(id)).filter(Boolean);
+    if (!members.length) return;
+    const cx = members.reduce((a, n) => a + n.x, 0) / members.length;
+    const cy = members.reduce((a, n) => a + n.y, 0) / members.length;
+    const rx = Math.max(160, Math.max(...members.map(n => Math.abs(n.x - cx))) + 150);
+    L.nebula.appendChild(el('ellipse', {
+      cx, cy, rx, ry: CONFIG.laneHeight * 0.66,
+      fill: (s.palette && s.palette.accent) || '#5fa8ff', filter: 'url(#nebula)', opacity: 0.15,
+    }));
+  });
+
+  // ---- edges and beams -------------------------------------------------------
+  function edgePath(e) {
+    const { x: x1, y: y1 } = e.a, { x: x2, y: y2 } = e.b;
+    const dx = Math.max(70, Math.abs(x2 - x1) * 0.55);
+    return `M${x1},${y1} C${x1 + dx},${y1} ${x2 - dx},${y2} ${x2},${y2}`;
+  }
+
+  edges.forEach((e, i) => {
+    const ca = LINEAGE_COLOR[e.a.lineage] || '#8fa6c8';
+    const cb = LINEAGE_COLOR[e.b.lineage] || '#8fa6c8';
+    const conf = CONF_RANK[e.confidence] || 0.4;
+    e.fromMachine = e.a.kind === 'machine';
+
+    const gid = 'eg' + i;
+    const grad = el('linearGradient', { id: gid, gradientUnits: 'userSpaceOnUse', x1: e.a.x, y1: e.a.y, x2: e.b.x, y2: e.b.y });
+    grad.appendChild(el('stop', { offset: '0%', 'stop-color': ca }));
+    grad.appendChild(el('stop', { offset: '100%', 'stop-color': cb }));
+    defs.appendChild(grad);
+
+    e.els = {};
+
+    if (e.fromMachine) {
+      // A machine's influence rises out of the floor as a shaft of light. It
+      // crosses the horizon, which is exactly what the claim says happened.
+      const bid = 'beam' + i;
+      const bg = el('linearGradient', { id: bid, gradientUnits: 'userSpaceOnUse', x1: 0, y1: e.b.y, x2: 0, y2: e.a.y });
+      bg.appendChild(el('stop', { offset: '0%', 'stop-color': cb, 'stop-opacity': 0.5 }));
+      bg.appendChild(el('stop', { offset: '55%', 'stop-color': ca, 'stop-opacity': 0.16 }));
+      bg.appendChild(el('stop', { offset: '100%', 'stop-color': ca, 'stop-opacity': 0.04 }));
+      defs.appendChild(bg);
+      const wT = CONFIG.beam.widthTop, wB = CONFIG.beam.widthBottom;
+      const beam = el('path', {
+        class: 'fadeable',
+        d: `M${e.b.x - wT},${e.b.y} L${e.b.x + wT},${e.b.y} L${e.a.x + wB},${e.a.y} L${e.a.x - wB},${e.a.y} Z`,
+        fill: `url(#${bid})`,
+      });
+      L.beams.appendChild(beam);
+      e.els.beam = beam;
+    }
+
+    const d = edgePath(e);
+    const line = el('path', {
+      class: 'edge-line fadeable', d, stroke: `url(#${gid})`,
+      'stroke-width': e.crossLineage ? 2 : 1.15,
+    });
+    line.style.opacity = 0.15 + conf * 0.35;
+    if (e.confidence === 'asserted') line.setAttribute('stroke-dasharray', '3 7');
+    const hit = el('path', { class: 'edge-hit', d });
+    L.edges.appendChild(line); L.edges.appendChild(hit);
+    e.els.line = line; e.els.hit = hit;
+
+    const len = line.getTotalLength();
+    e.length = len;
+    const comet = el('path', {
+      class: 'comet fadeable', d, stroke: cb,
+      'stroke-width': e.crossLineage ? 2.9 : 1.8,
+      'stroke-dasharray': `${CONFIG.comet.length} ${len}`,
+    });
+    comet.style.opacity = e.crossLineage ? 0.92 : 0.46;
+    L.comets.appendChild(comet);
+    e.els.comet = comet;
+    e.cometAnim = comet.animate(
+      [{ strokeDashoffset: CONFIG.comet.length }, { strokeDashoffset: -len }],
+      { duration: ((len + CONFIG.comet.length) / CONFIG.comet.pxPerSecond) * 1000,
+        iterations: Infinity, easing: 'linear', delay: -i * 870 });
+
+    if (e.crossLineage) {
+      const ghost = el('path', {
+        class: 'comet fadeable', d, stroke: ca, 'stroke-width': 5,
+        'stroke-dasharray': `${CONFIG.comet.length * 1.4} ${len}`,
+      });
+      ghost.style.opacity = 0.19;
+      L.comets.insertBefore(ghost, comet);
+      e.els.ghost = ghost;
+      ghost.animate([{ strokeDashoffset: CONFIG.comet.length }, { strokeDashoffset: -len }],
+        { duration: ((len + CONFIG.comet.length) / CONFIG.comet.pxPerSecond) * 1000,
+          iterations: Infinity, easing: 'linear', delay: -i * 870 + 130 });
+    }
+
+    hit.addEventListener('click', ev => { ev.stopPropagation(); openEdge(e); });
+    hit.addEventListener('mouseenter', () => showTip(e.a.name + ' → ' + e.b.name, e.explanation.age13));
+    hit.addEventListener('mouseleave', hideTip);
+  });
+
+  // ---- nodes -----------------------------------------------------------------
+  nodes.forEach(n => {
+    const c = LINEAGE_COLOR[n.lineage] || '#8fa6c8';
+    const g = el('g', { class: 'node fadeable', transform: `translate(${n.x},${n.y})` });
+    const inner = el('g');
+    g.appendChild(inner);
+
+    const halo = el('circle', { class: 'node-halo', r: n.r * CONFIG.haloScale, fill: haloFill[n.lineage] || haloFill.electronic });
+    halo.style.opacity = 0.5;
+    inner.appendChild(halo);
+
+    if (n.kind === 'machine') {
+      inner.appendChild(el('circle', { r: n.r + 7, fill: 'none', stroke: c, 'stroke-width': 1, opacity: 0.55 }));
+      for (let t = 0; t < 12; t++) {
+        const ang = (t / 12) * Math.PI * 2;
+        const tk = el('line', {
+          x1: Math.cos(ang) * (n.r + 8), y1: Math.sin(ang) * (n.r + 8),
+          x2: Math.cos(ang) * (n.r + 12), y2: Math.sin(ang) * (n.r + 12),
+          stroke: c, 'stroke-width': 1.1,
+        });
+        tk.style.opacity = 0.45;
+        inner.appendChild(tk);
+      }
+      inner.appendChild(el('rect', { x: -n.r * 0.7, y: -n.r * 0.7, width: n.r * 1.4, height: n.r * 1.4, rx: 1.5, fill: c }));
+    } else {
+      inner.appendChild(el('circle', { r: n.r + 5, fill: 'none', stroke: c, 'stroke-width': 0.9, opacity: 0.38 }));
+      inner.appendChild(el('circle', { r: n.r, fill: c }));
+      inner.appendChild(el('circle', { r: n.r * 0.4, fill: '#fff', opacity: 0.85 }));
+    }
+
+    const rand = rng(n.seed + 41);
+    inner.animate(
+      [{ transform: 'scale(1)' }, { transform: `scale(${1 + CONFIG.breath.amount})` }, { transform: 'scale(1)' }],
+      { duration: CONFIG.breath.minMs + rand() * (CONFIG.breath.maxMs - CONFIG.breath.minMs),
+        iterations: Infinity, easing: 'ease-in-out', delay: -rand() * 6000 });
+
+    const name = el('text', { class: 'node-name', 'text-anchor': 'middle', y: -n.r - 17, transform: `translate(${n.x},${n.y})` });
+    name.textContent = n.name;
+    const yr = el('text', { class: 'node-year', 'text-anchor': 'middle', y: n.r + 21, transform: `translate(${n.x},${n.y})` });
+    yr.textContent = n.year;
+
+    L.nodes.appendChild(g);
+    L.labels.appendChild(name); L.labels.appendChild(yr);
+    n.els = { g, inner, halo, name, yr };
+
+    g.addEventListener('mouseenter', () => { if (!pinned) focusNode(n); showTip(n.name, n.rec.hook); });
+    g.addEventListener('mouseleave', () => { if (!pinned) clearFocus(); hideTip(); });
+    g.addEventListener('click', ev => { ev.stopPropagation(); openNode(n); spread(n); });
+  });
+
+  // ---- the year cursor ---------------------------------------------------------
+  // Not a scrollbar with a graph attached. Moving it is how the map performs
+  // its own history, and it is the first thing anyone touches.
+  const cursorLine = el('line', { x1: 0, y1: -80, x2: 0, y2: WORLD_H, stroke: '#eaf0ff', 'stroke-width': 1.4, opacity: 0.55 });
+  cursorLine.setAttribute('vector-effect', 'non-scaling-stroke');
+  const cursorGlowId = 'cursorGlow';
+  const cg = el('linearGradient', { id: cursorGlowId, x1: '0', y1: '0', x2: '1', y2: '0' });
+  cg.appendChild(el('stop', { offset: '0%', 'stop-color': '#eaf0ff', 'stop-opacity': 0 }));
+  cg.appendChild(el('stop', { offset: '100%', 'stop-color': '#eaf0ff', 'stop-opacity': 0.13 }));
+  defs.appendChild(cg);
+  const cursorWash = el('rect', { x: -120, y: -80, width: 120, height: WORLD_H + 80, fill: `url(#${cursorGlowId})` });
+  const cursorBox = el('g');
+  cursorBox.appendChild(cursorWash);
+  cursorBox.appendChild(cursorLine);
+  L.cursor.appendChild(cursorBox);
+
+  let now = CONFIG.yearMax;
+
+  function setNow(year, opts) {
+    now = Math.max(CONFIG.yearMin, Math.min(CONFIG.yearMax, Math.round(year)));
+    cursorBox.setAttribute('transform', `translate(${xOf(now)},0)`);
+    nodes.forEach(n => {
+      const here = n.year <= now;
+      n.els.g.classList.toggle('unborn', !here);
+      n.els.name.classList.toggle('unborn', !here);
+      n.els.yr.classList.toggle('unborn', !here);
+      if (here && n.year === now && opts && opts.flare) ping(n);
+    });
+    edges.forEach(e => {
+      const here = e.year <= now;
+      [e.els.line, e.els.comet, e.els.ghost, e.els.beam].forEach(x => {
+        if (x) x.classList.toggle('unborn', !here);
+      });
+      if (here && e.year === now && opts && opts.flare) flash(e);
+    });
+    document.getElementById('nowYear').textContent = now;
+    const frac = (now - CONFIG.yearMin) / (CONFIG.yearMax - CONFIG.yearMin);
+    scrubHead.style.left = elapsed.style.width = (frac * 100) + '%';
+    const arrivals = nodes.filter(n => n.year === now).map(n => n.name)
+      .concat(edges.filter(e => e.year === now).map(e => `${e.a.name} → ${e.b.name}`));
+    document.getElementById('nowLabel').textContent = arrivals.length ? arrivals.join(' · ') : '';
+  }
+
+  // ---- reactions -----------------------------------------------------------------
+  function ping(n) {
+    const at = el('g', { transform: `translate(${n.x},${n.y})` });
+    at.appendChild(el('circle', { class: 'pulse', r: n.r, fill: 'none', stroke: LINEAGE_COLOR[n.lineage] || '#8fa6c8', 'stroke-width': 2.2 }));
+    L.pulses.appendChild(at);
+    setTimeout(() => at.remove(), 1500);
+  }
+
+  function flash(e, backwards) {
+    const len = e.length;
+    const p = el('path', {
+      class: 'comet', d: e.els.line.getAttribute('d'),
+      stroke: LINEAGE_COLOR[(backwards ? e.a : e.b).lineage] || '#eaf0ff',
+      'stroke-width': 3.4, 'stroke-dasharray': `${len * 0.2} ${len}`,
+    });
+    L.pulses.appendChild(p);
+    const from = backwards ? -len : len * 0.2;
+    const to = backwards ? len * 0.2 : -len;
+    p.animate([{ strokeDashoffset: from, opacity: 1 }, { strokeDashoffset: to, opacity: 0 }],
+      { duration: 1000, easing: 'cubic-bezier(.3,.7,.4,1)' }).onfinish = () => p.remove();
+  }
+
+  function spread(start) {
+    const seen = new Set([start.id]);
+    let front = [start], hop = 0;
+    while (front.length && hop <= CONFIG.spread.maxHops) {
+      const delay = hop * CONFIG.spread.hopMs;
+      front.forEach(n => setTimeout(() => ping(n), delay));
+      const next = [];
+      front.forEach(n => edges.forEach(e => {
+        if (e.a !== n && e.b !== n) return;
+        const o = e.a === n ? e.b : e.a;
+        if (seen.has(o.id)) return;
+        seen.add(o.id); next.push(o);
+        setTimeout(() => flash(e, e.b === n), delay + 60);
+      }));
+      front = next; hop++;
+    }
+  }
+
+  // ---- focus ------------------------------------------------------------------------
+  let pinned = null;
+  const allEls = e => [e.els.line, e.els.comet, e.els.ghost, e.els.beam].filter(Boolean);
+
+  function focusNode(n) {
+    svg.classList.add('focusing');
+    document.querySelectorAll('.lit, .lit-soft').forEach(x => x.classList.remove('lit', 'lit-soft'));
+    const near = new Set([n.id]);
+    edges.forEach(e => {
+      if (e.a !== n && e.b !== n) return;
+      allEls(e).forEach(x => x.classList.add(x === e.els.ghost || x === e.els.beam ? 'lit-soft' : 'lit'));
+      near.add(e.a.id); near.add(e.b.id);
+    });
+    nodes.forEach(m => {
+      if (!near.has(m.id)) return;
+      const cls = m === n ? 'lit' : 'lit-soft';
+      m.els.g.classList.add(cls); m.els.name.classList.add(cls); m.els.yr.classList.add(cls);
+    });
+  }
+  function focusEdge(e) {
+    svg.classList.add('focusing');
+    document.querySelectorAll('.lit, .lit-soft').forEach(x => x.classList.remove('lit', 'lit-soft'));
+    allEls(e).forEach(x => x.classList.add(x === e.els.ghost || x === e.els.beam ? 'lit-soft' : 'lit'));
+    [e.a, e.b].forEach(m => { m.els.g.classList.add('lit'); m.els.name.classList.add('lit'); m.els.yr.classList.add('lit'); });
+  }
+  function clearFocus() {
+    svg.classList.remove('focusing');
+    document.querySelectorAll('.lit, .lit-soft').forEach(x => x.classList.remove('lit', 'lit-soft'));
+  }
+
+  // ---- panel --------------------------------------------------------------------------
+  const panel = document.getElementById('panel');
+  const panelBody = document.getElementById('panel-body');
+  let register = 'age13';
+  const registerToggle = () => `<div class="controls" style="margin:22px 0 4px">
+    <button class="chip reg" data-reg="age13" aria-pressed="${register === 'age13'}">Teen</button>
+    <button class="chip reg" data-reg="adult" aria-pressed="${register === 'adult'}">Adult</button></div>`;
+  const wireRegister = redraw => panelBody.querySelectorAll('.reg').forEach(b =>
+    b.addEventListener('click', () => { register = b.dataset.reg; redraw(); }));
+
+  function openNode(n) {
+    pinned = n; focusNode(n);
+    if (n.year > now) setNow(n.year);
+    const r = n.rec, c = LINEAGE_COLOR[n.lineage];
+    const mine = edges.filter(e => e.a === n || e.b === n);
+    const meta = n.kind === 'machine'
+      ? `${esc(r.maker)} &middot; ${r.releasedYear}–${r.discontinuedYear || 'now'}`
+      : `${esc(r.originCity)} &middot; ${r.activeFrom}–${r.activeTo || 'present'}`;
+    panelBody.innerHTML = `
+      <div class="kicker" style="color:${c}">${n.kind === 'machine' ? 'Machine' : 'Artist'} &middot; ${esc(LINEAGE_LABEL[n.lineage] || n.lineage)}</div>
+      <h2>${esc(r.name)}</h2><div class="meta">${meta}</div>
+      <p class="hook">${esc(r.hook)}</p>${registerToggle()}
+      <p class="body">${esc(r.blurb[register])}</p>
+      ${n.kind === 'machine' ? `<h3>What it was for</h3><p class="body">${esc(r.originalPurpose)}</p>
+        <h3>What actually happened</h3><p class="body">${esc(r.whatActuallyHappened)}</p>
+        ${r.priceStory ? `<h3>What it cost</h3><p class="body">${esc(r.priceStory)}</p>` : ''}` : ''}
+      ${(r.signatureTracks || []).length ? `<h3>Listen to</h3>${r.signatureTracks.map(t =>
+        `<div class="track"><div class="t">${esc(t.title)} <span style="color:var(--dim)">${t.year}</span></div>
+         <div class="w">${esc(t.whyThisOne)}</div></div>`).join('')}` : ''}
+      ${mine.length ? `<h3>${mine.length} connection${mine.length > 1 ? 's' : ''}</h3>${mine.map(e =>
+        `<button class="link-row" data-edge="${edges.indexOf(e)}"><span class="dir">${e.a === n ? 'changed' : 'changed by'}</span>${esc(e.a === n ? e.b.name : e.a.name)}</button>`).join('')}` : ''}`;
+    wireRegister(() => openNode(n));
+    panelBody.querySelectorAll('[data-edge]').forEach(b =>
+      b.addEventListener('click', () => openEdge(edges[+b.dataset.edge])));
+    panel.classList.add('open');
+  }
+
+  function openEdge(e) {
+    pinned = e.a; focusEdge(e);
+    if (e.year > now) setNow(e.year);
+    const tp = e.trackPair;
+    panelBody.innerHTML = `
+      <div class="kicker" style="color:${LINEAGE_COLOR[e.b.lineage]}">${e.crossLineage ? 'Crossing' : 'Connection'} &middot; ${esc(e.type)}</div>
+      <h2>${esc(e.a.name)} <span style="color:var(--dim)">→</span> ${esc(e.b.name)}</h2>
+      <div class="meta">${e.year} &nbsp; <span class="conf ${esc(e.confidence)}">${esc(e.confidence)}</span></div>
+      ${registerToggle()}<p class="hook">${esc(e.explanation[register])}</p>
+      ${tp ? `<h3>What to listen for</h3>
+        <div class="track"><div class="t">${esc(tp.earlier.artist)} &mdash; &ldquo;${esc(tp.earlier.title)}&rdquo; <span style="color:var(--dim)">${tp.earlier.year}</span></div></div>
+        <div class="track"><div class="t">${esc(tp.later.artist)} &mdash; &ldquo;${esc(tp.later.title)}&rdquo; <span style="color:var(--dim)">${tp.later.year}</span></div></div>
+        <p class="body">${esc(tp.whatToListenFor)}</p>` : ''}
+      <h3>How we know</h3><p class="body">${esc(e.evidence)}</p>
+      <h3>Either end</h3>
+      <button class="link-row" data-node="${e.a.id}"><span class="dir">from</span>${esc(e.a.name)}</button>
+      <button class="link-row" data-node="${e.b.id}"><span class="dir">to</span>${esc(e.b.name)}</button>`;
+    wireRegister(() => openEdge(e));
+    panelBody.querySelectorAll('[data-node]').forEach(b =>
+      b.addEventListener('click', () => { const n = byId.get(b.dataset.node); openNode(n); spread(n); }));
+    panel.classList.add('open');
+  }
+
+  function closePanel() { panel.classList.remove('open'); pinned = null; clearFocus(); }
+  document.getElementById('close').addEventListener('click', closePanel);
+
+  const tip = document.getElementById('tip');
+  function showTip(name, text) { tip.innerHTML = `<span class="n">${esc(name)}</span>${esc(text || '')}`; tip.classList.add('on'); }
+  function hideTip() { tip.classList.remove('on'); }
+  addEventListener('mousemove', ev => { tip.style.left = ev.clientX + 'px'; tip.style.top = ev.clientY + 'px'; });
+
+  // ---- camera -----------------------------------------------------------------------------
+  const stage = document.getElementById('stage');
+  let view = { x: 0, y: 0, k: 1 };
+  let mouse = { x: 0, y: 0 };
+
+  function applyView() {
+    const base = `translate(${view.x},${view.y}) scale(${view.k})`;
+    ['bands', 'floor', 'grid', 'beams', 'edges', 'comets', 'nodes', 'pulses', 'labels', 'cursor']
+      .forEach(k => L[k].setAttribute('transform', base));
+    const px = (mouse.x - innerWidth / 2) * 0.02;
+    const py = (mouse.y - innerHeight / 2) * 0.02;
+    L.nebula.setAttribute('transform',
+      `translate(${view.x * CONFIG.nebulaParallax - px},${view.y * CONFIG.nebulaParallax - py}) scale(${view.k})`);
+    const stickX = (22 - view.x) / view.k;
+    laneLabels.forEach(t => t.setAttribute('x', stickX));
+    const { hide, show } = CONFIG.labelFade;
+    L.labels.style.opacity = Math.min(1, Math.max(0, (view.k - hide) / (show - hide)));
+  }
+
+  function fit() {
+    const xs = nodes.map(n => n.x);
+    view.k = CONFIG.openZoom;
+    view.x = innerWidth / 2 - ((Math.min(...xs) + Math.max(...xs)) / 2) * view.k;
+    view.y = (innerHeight - 120) / 2 - (WORLD_H * 0.44) * view.k;
+    applyView();
+  }
+
+  let animHandle = null;
+  function glideTo(tx, ty, tk, ms) {
+    cancelAnimationFrame(animHandle);
+    const from = { ...view }, t0 = performance.now();
+    const ease = u => u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2;
+    (function step(nowT) {
+      const u = Math.min(1, (nowT - t0) / ms), e = ease(u);
+      view.x = from.x + (tx - from.x) * e;
+      view.y = from.y + (ty - from.y) * e;
+      view.k = from.k + (tk - from.k) * e;
+      applyView();
+      if (u < 1) animHandle = requestAnimationFrame(step);
+    })(t0);
+  }
+  const centreOn = (n, k) => {
+    const tk = k || view.k;
+    glideTo(innerWidth / 2 - n.x * tk, (innerHeight - 120) / 2 - n.y * tk, tk, 900);
+  };
+
+  let drag = null;
+  stage.addEventListener('pointerdown', ev => {
+    drag = { x: ev.clientX, y: ev.clientY, vx: view.x, vy: view.y, moved: 0 };
+    stage.classList.add('dragging'); stage.setPointerCapture(ev.pointerId);
+  });
+  stage.addEventListener('pointermove', ev => {
+    mouse = { x: ev.clientX, y: ev.clientY };
+    if (!drag) { applyView(); return; }
+    const dx = ev.clientX - drag.x, dy = ev.clientY - drag.y;
+    drag.moved += Math.abs(dx) + Math.abs(dy);
+    view.x = drag.vx + dx; view.y = drag.vy + dy; applyView();
+  });
+  stage.addEventListener('pointerup', ev => {
+    const wasClick = drag && drag.moved < 5;
+    drag = null; stage.classList.remove('dragging');
+    if (wasClick && ev.target.id === 'strata') closePanel();
+  });
+  stage.addEventListener('wheel', ev => {
+    ev.preventDefault();
+    const f = ev.deltaY < 0 ? CONFIG.zoom.step : 1 / CONFIG.zoom.step;
+    const nk = Math.min(CONFIG.zoom.max, Math.max(CONFIG.zoom.min, view.k * f));
+    const r = nk / view.k;
+    view.x = ev.clientX - (ev.clientX - view.x) * r;
+    view.y = ev.clientY - (ev.clientY - view.y) * r;
+    view.k = nk; applyView();
+  }, { passive: false });
+
+  addEventListener('keydown', ev => {
+    if (ev.key === 'ArrowLeft' || ev.key === 'ArrowRight') {
+      const step = (ev.shiftKey ? 5 : 1) * (ev.key === 'ArrowLeft' ? -1 : 1);
+      stop(); setNow(now + step, { flare: true });
+      return;
+    }
+    const s = ev.shiftKey ? 260 : 80;
+    if (ev.key === 'ArrowUp') { view.y += s; applyView(); }
+    if (ev.key === 'ArrowDown') { view.y -= s; applyView(); }
+    if (ev.key === ' ') { ev.preventDefault(); toggle(); }
+    if (ev.key === 'Escape') closePanel();
+  });
+  addEventListener('resize', () => { sizeDust(); applyView(); });
+
+  // ---- transport ---------------------------------------------------------------------------
+  const scrub = document.getElementById('scrub');
+  const scrubHead = scrub.querySelector('.head');
+  const elapsed = scrub.querySelector('.elapsed');
+  const playBtn = document.getElementById('play');
+
+  // Pips mark the years something actually arrives, so the transport reads as
+  // a score rather than an empty slider.
+  const pipYears = new Map();
+  nodes.forEach(n => pipYears.set(n.year, LINEAGE_COLOR[n.lineage] || '#8fa6c8'));
+  edges.forEach(e => { if (!pipYears.has(e.year)) pipYears.set(e.year, '#8fa6c8'); });
+  pipYears.forEach((colour, year) => {
+    const pip = document.createElement('div');
+    pip.className = 'pip';
+    pip.style.left = ((year - CONFIG.yearMin) / (CONFIG.yearMax - CONFIG.yearMin) * 100) + '%';
+    pip.style.background = colour;
+    pip.style.boxShadow = `0 0 7px 1px ${colour}`;
+    scrub.appendChild(pip);
+  });
+
+  function yearFromClientX(cx) {
+    const box = scrub.getBoundingClientRect();
+    const f = Math.max(0, Math.min(1, (cx - box.left) / box.width));
+    return CONFIG.yearMin + f * (CONFIG.yearMax - CONFIG.yearMin);
+  }
+  let scrubbing = false;
+  scrub.addEventListener('pointerdown', ev => {
+    scrubbing = true; stop(); scrub.setPointerCapture(ev.pointerId);
+    setNow(yearFromClientX(ev.clientX), { flare: true });
+  });
+  scrub.addEventListener('pointermove', ev => { if (scrubbing) setNow(yearFromClientX(ev.clientX), { flare: true }); });
+  scrub.addEventListener('pointerup', () => { scrubbing = false; });
+
+  let timer = null;
+  function play() {
+    if (timer) return;
+    if (now >= CONFIG.yearMax) setNow(CONFIG.yearMin);
+    playBtn.innerHTML = '&#10073;&#10073;';
+    timer = setInterval(() => {
+      if (now >= CONFIG.yearMax) { stop(); return; }
+      setNow(now + 1, { flare: true });
+    }, CONFIG.transport.msPerYear);
+  }
+  function stop() { clearInterval(timer); timer = null; playBtn.innerHTML = '&#9654;'; }
+  const toggle = () => (timer ? stop() : play());
+  playBtn.addEventListener('click', toggle);
+
+  // ---- chrome ------------------------------------------------------------------------------------
+  const swatches = document.getElementById('swatches');
+  CONFIG.laneOrder.forEach(lin => {
+    const b = document.createElement('button');
+    b.className = 'swatch';
+    b.innerHTML = `<span class="dot" style="background:${LINEAGE_COLOR[lin]};color:${LINEAGE_COLOR[lin]}"></span>${LINEAGE_LABEL[lin]}`;
+    b.addEventListener('click', () => {
+      const first = artists.filter(n => n.lineage === lin).sort((p, q) => p.year - q.year)[0];
+      if (first) { centreOn(first, 1.0); openNode(first); spread(first); }
+    });
+    swatches.appendChild(b);
+  });
+
+  const crossBtn = document.getElementById('btn-cross');
+  let crossOnly = false;
+  crossBtn.addEventListener('click', () => {
+    crossOnly = !crossOnly;
+    crossBtn.setAttribute('aria-pressed', crossOnly);
+    edges.forEach(e => allEls(e).forEach(x => { x.style.display = (crossOnly && !e.crossLineage) ? 'none' : ''; }));
+  });
+  document.getElementById('btn-reset').addEventListener('click', () => { stop(); closePanel(); setNow(CONFIG.yearMax); fit(); });
+
+  const threadBox = document.getElementById('threads');
+  let threadTimer = null;
+  D.threads.forEach(th => {
+    const b = document.createElement('button');
+    b.className = 'thread-btn';
+    b.textContent = th.title;
+    b.addEventListener('click', () => {
+      document.querySelectorAll('.thread-btn').forEach(x => x.classList.remove('running'));
+      b.classList.add('running');
+      playThread(th, () => b.classList.remove('running'));
+    });
+    threadBox.appendChild(b);
+  });
+
+  function playThread(th, done) {
+    clearTimeout(threadTimer); stop();
+    const stops = th.steps.map(s => s.nodeId
+      ? { kind: 'node', it: byId.get(s.nodeId) }
+      : { kind: 'edge', it: edges.find(x => x.id === s.edgeId) }).filter(s => s.it);
+    let i = 0;
+    (function next() {
+      if (i >= stops.length) { done && done(); return; }
+      const s = stops[i++];
+      if (s.kind === 'node') { centreOn(s.it, CONFIG.thread.zoom); openNode(s.it); ping(s.it); }
+      else {
+        const mid = { x: (s.it.a.x + s.it.b.x) / 2, y: (s.it.a.y + s.it.b.y) / 2 };
+        glideTo(innerWidth / 2 - mid.x * CONFIG.thread.zoom, (innerHeight - 120) / 2 - mid.y * CONFIG.thread.zoom, CONFIG.thread.zoom, 900);
+        openEdge(s.it); flash(s.it);
+      }
+      threadTimer = setTimeout(next, CONFIG.thread.dwellMs);
+    })();
+  }
+
+  // ---- dust -------------------------------------------------------------------------------------------
+  const dustC = document.getElementById('dust');
+  const dctx = dustC.getContext('2d');
+  let motes = [];
+  function sizeDust() {
+    const dpr = Math.min(2, devicePixelRatio || 1);
+    dustC.width = innerWidth * dpr; dustC.height = innerHeight * dpr;
+    dctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    motes = Array.from({ length: CONFIG.dust.count }, () => ({
+      x: Math.random() * innerWidth, y: Math.random() * innerHeight,
+      z: 0.25 + Math.random() * 0.75, p: Math.random() * Math.PI * 2,
+    }));
+  }
+  sizeDust();
+  (function drawDust(t) {
+    dctx.clearRect(0, 0, innerWidth, innerHeight);
+    const ox = view.x * CONFIG.dust.parallax, oy = view.y * CONFIG.dust.parallax;
+    for (const m of motes) {
+      const x = ((m.x + ox * m.z) % innerWidth + innerWidth) % innerWidth;
+      const y = ((m.y + oy * m.z + Math.sin(t / 4000 + m.p) * 8) % innerHeight + innerHeight) % innerHeight;
+      const a = (0.09 + 0.3 * m.z) * (0.6 + 0.4 * Math.sin(t / 1500 + m.p * 3));
+      dctx.fillStyle = `rgba(175,205,255,${a.toFixed(3)})`;
+      dctx.fillRect(x, y, m.z < 0.6 ? 1 : 1.6, m.z < 0.6 ? 1 : 1.6);
+    }
+    requestAnimationFrame(drawDust);
+  })(0);
+
+  fit();
+  setNow(CONFIG.yearMax);
+})();
+</script>
+</body>
+</html>

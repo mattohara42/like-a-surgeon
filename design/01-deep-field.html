@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lineage — Deep Field</title>
+<style>
+  :root {
+    --rock:        #ff6b5a;
+    --dub:         #43e0a8;
+    --electronic:  #5aa9ff;
+    --hiphop:      #c77dff;
+
+    --void-0: #03050c;
+    --void-1: #070b18;
+    --ink:    #e8eefc;
+    --dim:    #7c8aa8;
+
+    --panel-bg: rgba(7, 11, 24, 0.82);
+    --hairline: rgba(150, 180, 230, 0.13);
+
+    --ui: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, sans-serif;
+    --serif: ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--void-0);
+    color: var(--ink);
+    font-family: var(--ui);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #stage { position: fixed; inset: 0; cursor: grab; }
+  #stage.dragging { cursor: grabbing; }
+
+  /* ---- the field itself ---------------------------------------------- */
+  #dust { position: fixed; inset: 0; width: 100%; height: 100%; }
+  #sky  { position: fixed; inset: 0; width: 100%; height: 100%; }
+
+  /* Fixed atmospheric overlays. These never pan, which is what sells the
+     idea that you are looking *into* a volume rather than across a plane. */
+  #veil {
+    position: fixed; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(120% 90% at 50% 45%, transparent 35%, rgba(2,4,10,0.55) 78%, rgba(2,4,10,0.92) 100%),
+      linear-gradient(180deg, rgba(90,169,255,0.05), transparent 30%, transparent 70%, rgba(199,125,255,0.04));
+  }
+  #grain {
+    position: fixed; inset: -50%; pointer-events: none;
+    opacity: 0.32; mix-blend-mode: overlay;
+    animation: jitter 0.7s steps(1) infinite;
+  }
+  @keyframes jitter {
+    0%   { transform: translate(0,0); }
+    25%  { transform: translate(-1.5%, 1%); }
+    50%  { transform: translate(1%, -1.5%); }
+    75%  { transform: translate(-1%, -1%); }
+  }
+
+  /* ---- graph elements ------------------------------------------------ */
+  .lane-label {
+    font-family: var(--mono); font-size: 13px; letter-spacing: 0.22em;
+    text-transform: uppercase; fill: var(--dim); opacity: 0.62;
+  }
+  .year-tick {
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em;
+    fill: var(--dim);
+  }
+  .decade {
+    font-family: var(--serif); font-size: 104px; font-style: italic;
+    fill: #9fb6e0; opacity: 0.045; text-anchor: middle;
+  }
+  .year-rule { stroke: var(--hairline); stroke-width: 1; vector-effect: non-scaling-stroke; }
+  .year-rule.decade-rule { stroke: rgba(150,180,230,0.26); }
+
+  .edge-line {
+    fill: none; stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+    transition: opacity 340ms ease, stroke-width 340ms ease;
+  }
+  .edge-hit { fill: none; stroke: transparent; stroke-width: 22; cursor: pointer; }
+  .comet { fill: none; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+
+  .node { cursor: pointer; }
+  .node-halo  { transition: opacity 400ms ease, r 400ms cubic-bezier(.2,.8,.2,1); }
+  .node-ring  { fill: none; vector-effect: non-scaling-stroke; transition: opacity 340ms ease; }
+  .node-core  { transition: r 400ms cubic-bezier(.2,.8,.2,1); }
+  .node-name {
+    font-size: 13px; font-weight: 550; letter-spacing: 0.01em;
+    fill: var(--ink); paint-order: stroke; stroke: rgba(3,5,12,0.85); stroke-width: 4px;
+    pointer-events: none; transition: opacity 300ms ease;
+  }
+  .node-year {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em;
+    fill: var(--dim); pointer-events: none; transition: opacity 300ms ease;
+  }
+
+  /* Focus state: the field dims and only the lit path stays. */
+  #sky.focusing .fadeable { opacity: 0.07 !important; }
+  #sky.focusing .lit      { opacity: 1 !important; }
+  #sky.focusing .lit-soft { opacity: 0.6 !important; }
+
+  /* ---- chrome -------------------------------------------------------- */
+  .hud { position: fixed; z-index: 5; }
+
+  #title { top: 26px; left: 30px; max-width: 320px; pointer-events: none; isolation: isolate; }
+  #title::before {
+    content: ''; position: absolute; inset: -34px -90px -26px -48px; z-index: -1;
+    background: radial-gradient(ellipse at 24% 42%, rgba(3,5,12,0.95), rgba(3,5,12,0.8) 42%, transparent 74%);
+  }
+  #title h1 {
+    margin: 0; font-family: var(--serif); font-weight: 400; font-size: 30px;
+    letter-spacing: -0.015em;
+  }
+  #title p {
+    margin: 6px 0 0; font-size: 12.5px; line-height: 1.5; color: var(--dim);
+  }
+
+  #legend {
+    bottom: 26px; left: 30px; display: flex; flex-direction: column; gap: 14px;
+  }
+  .swatches { display: flex; gap: 16px; flex-wrap: wrap; }
+  .swatch {
+    display: flex; align-items: center; gap: 7px;
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--dim);
+    background: none; border: 0; padding: 0; cursor: pointer;
+  }
+  .swatch:hover { color: var(--ink); }
+  .swatch .dot {
+    width: 9px; height: 9px; border-radius: 50%;
+    box-shadow: 0 0 9px 2px currentColor;
+  }
+
+  .controls { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--dim);
+    background: rgba(140,170,220,0.05); border: 1px solid var(--hairline);
+    border-radius: 999px; padding: 6px 13px; cursor: pointer;
+    transition: color 200ms, border-color 200ms, background 200ms;
+  }
+  .chip:hover { color: var(--ink); border-color: rgba(150,180,230,0.34); }
+  .chip[aria-pressed="true"] {
+    color: #05070f; background: var(--ink); border-color: var(--ink);
+  }
+
+  #threads { top: 26px; right: 30px; text-align: right; }
+  #threads h2 {
+    margin: 0 0 10px; font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.24em; text-transform: uppercase; color: var(--dim); font-weight: 500;
+  }
+  .thread-btn {
+    display: block; margin-left: auto; background: none; border: 0; cursor: pointer;
+    color: var(--ink); font-family: var(--serif); font-size: 17px; font-style: italic;
+    padding: 3px 0; opacity: 0.66; transition: opacity 200ms;
+  }
+  .thread-btn:hover, .thread-btn.running { opacity: 1; }
+  .thread-btn.running { text-shadow: 0 0 18px rgba(200,220,255,0.6); }
+
+  /* ---- reading panel -------------------------------------------------- */
+  #panel {
+    position: fixed; top: 0; right: 0; bottom: 0; width: min(430px, 42vw);
+    z-index: 10; background: var(--panel-bg);
+    backdrop-filter: blur(22px) saturate(1.3);
+    -webkit-backdrop-filter: blur(22px) saturate(1.3);
+    border-left: 1px solid var(--hairline);
+    transform: translateX(102%); transition: transform 520ms cubic-bezier(.16,1,.3,1);
+    overflow-y: auto; padding: 34px 34px 60px;
+  }
+  #panel.open { transform: none; }
+  #panel .kicker {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.26em;
+    text-transform: uppercase; margin-bottom: 14px;
+  }
+  #panel h2 {
+    margin: 0 0 4px; font-family: var(--serif); font-weight: 400;
+    font-size: 33px; line-height: 1.12; letter-spacing: -0.02em;
+  }
+  #panel .meta {
+    font-family: var(--mono); font-size: 11px; color: var(--dim);
+    letter-spacing: 0.06em; margin-bottom: 22px;
+  }
+  #panel .hook {
+    font-family: var(--serif); font-size: 19px; line-height: 1.45;
+    font-style: italic; margin: 0 0 24px; color: #cfdcf5;
+  }
+  #panel p.body { font-size: 14.5px; line-height: 1.68; color: #b9c6df; margin: 0 0 16px; }
+  #panel h3 {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--dim); font-weight: 500;
+    margin: 30px 0 12px; padding-top: 16px; border-top: 1px solid var(--hairline);
+  }
+  .track { margin-bottom: 14px; }
+  .track .t { font-size: 14.5px; }
+  .track .w { font-size: 13px; line-height: 1.55; color: var(--dim); margin-top: 3px; }
+  .conf {
+    display: inline-block; font-family: var(--mono); font-size: 9.5px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 3px 9px; border-radius: 999px; border: 1px solid currentColor;
+  }
+  .conf.documented { color: #7ee0b0; }
+  .conf.consensus  { color: #f0c26a; }
+  .conf.asserted   { color: #f08f7a; }
+  .link-row {
+    display: block; width: 100%; text-align: left; background: none;
+    border: 0; border-bottom: 1px solid var(--hairline); cursor: pointer;
+    padding: 11px 0; color: var(--ink); font-size: 14px; font-family: var(--ui);
+  }
+  .link-row:hover { color: #fff; }
+  .link-row .dir {
+    font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em;
+    color: var(--dim); text-transform: uppercase; margin-right: 9px;
+  }
+  #close {
+    position: absolute; top: 22px; right: 26px; background: none; border: 0;
+    color: var(--dim); font-size: 22px; cursor: pointer; line-height: 1;
+  }
+  #close:hover { color: var(--ink); }
+
+  #tip {
+    position: fixed; z-index: 9; pointer-events: none; opacity: 0;
+    transform: translate(-50%, -160%); transition: opacity 180ms ease;
+    background: rgba(5,8,18,0.9); border: 1px solid var(--hairline);
+    border-radius: 7px; padding: 8px 13px; max-width: 290px;
+    font-size: 12.5px; line-height: 1.45; color: #cfdcf5;
+    backdrop-filter: blur(9px);
+  }
+  #tip.on { opacity: 1; }
+  #tip .n { display: block; font-weight: 600; margin-bottom: 3px; color: #fff; }
+</style>
+</head>
+<body>
+
+<canvas id="dust"></canvas>
+<div id="stage"><svg id="sky"></svg></div>
+
+<svg id="grain" xmlns="http://www.w3.org/2000/svg">
+  <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="3" stitchTiles="stitch"/></filter>
+  <rect width="100%" height="100%" filter="url(#noise)"/>
+</svg>
+<div id="veil"></div>
+
+<div class="hud" id="title">
+  <h1>Lineage</h1>
+  <p>Every line is a claim that someone's music changed because of someone else's. Drag to move, scroll to zoom, click anything.</p>
+</div>
+
+<div class="hud" id="threads">
+  <h2>Routes in</h2>
+</div>
+
+<div class="hud" id="legend">
+  <div class="swatches" id="swatches"></div>
+  <div class="controls">
+    <button class="chip" id="btn-cross" aria-pressed="false">Crossings only</button>
+    <button class="chip" id="btn-reset">Reset view</button>
+  </div>
+</div>
+
+<aside id="panel"><button id="close" aria-label="Close">&times;</button><div id="panel-body"></div></aside>
+<div id="tip"></div>
+
+<script src="_data.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  // Every tuning number lives here. In the real build this becomes config.js.
+  const CONFIG = {
+    yearMin: 1960, yearMax: 1992,
+    pxPerYear: 104,
+    laneHeight: 188,
+    laneOrder: ['rock', 'dub', 'hiphop', 'electronic'],
+    machineLane: 4,
+    nodeRadius: { min: 5.5, max: 11, perEdge: 1.6 },
+    haloScale: 7.5,
+    zoom: { min: 0.28, max: 3.4, step: 1.12 },
+    comet: { pxPerSecond: 150, length: 26 },
+    dust: { count: 460, parallax: 0.22, driftSeconds: 90 },
+    nebulaParallax: 0.88,
+    thread: { dwellMs: 2100, zoom: 1.25 },
+    openZoom: 0.82,
+    labelFade: { hide: 0.42, show: 0.62 },
+  };
+
+  const LINEAGE_COLOR = {
+    rock: '#ff6b5a', dub: '#43e0a8', electronic: '#5aa9ff', hiphop: '#c77dff',
+  };
+  const LINEAGE_LABEL = {
+    rock: 'Rock & guitar', dub: 'Jamaican dub', hiphop: 'Hip-hop', electronic: 'Electronic',
+  };
+  const CONF_RANK = { documented: 1, consensus: 0.62, asserted: 0.36 };
+
+  const D = window.LINEAGE;
+  const SVGNS = 'http://www.w3.org/2000/svg';
+  const el = (n, a) => {
+    const e = document.createElementNS(SVGNS, n);
+    for (const k in (a || {})) e.setAttribute(k, a[k]);
+    return e;
+  };
+
+  // ---- model -----------------------------------------------------------
+  const nodes = [];
+  D.artists.forEach(a => nodes.push({
+    id: a.id, name: a.name, kind: 'artist', lineage: a.lineage,
+    year: a.activeFrom, rec: a,
+  }));
+  D.machines.forEach(m => nodes.push({
+    id: m.id, name: m.name, kind: 'machine', lineage: m.lineage,
+    year: m.releasedYear, rec: m,
+  }));
+
+  const byId = new Map(nodes.map(n => [n.id, n]));
+  const edges = D.edges
+    .filter(e => byId.has(e.from) && byId.has(e.to))
+    .map(e => ({ ...e, a: byId.get(e.from), b: byId.get(e.to) }));
+
+  nodes.forEach(n => { n.degree = 0; });
+  edges.forEach(e => { e.a.degree++; e.b.degree++; });
+
+  // ---- layout ----------------------------------------------------------
+  // x is time, y is lineage lane. Deliberately not force-directed: reading
+  // left to right is the whole point (SPEC, "Visual identity").
+  const xOf = y => (y - CONFIG.yearMin) * CONFIG.pxPerYear;
+  const WORLD_W = xOf(CONFIG.yearMax);
+  const WORLD_H = (CONFIG.machineLane + 1) * CONFIG.laneHeight;
+
+  function laneOf(n) {
+    if (n.kind === 'machine') return CONFIG.machineLane;
+    const i = CONFIG.laneOrder.indexOf(n.lineage);
+    return i < 0 ? CONFIG.laneOrder.length : i;
+  }
+
+  // Spread nodes vertically inside their lane so nothing collides, keeping
+  // the ordering stable and year-driven rather than random.
+  const lanes = new Map();
+  nodes.forEach(n => {
+    const l = laneOf(n);
+    if (!lanes.has(l)) lanes.set(l, []);
+    lanes.get(l).push(n);
+  });
+  lanes.forEach((list, l) => {
+    list.sort((p, q) => p.year - q.year);
+    const mid = l * CONFIG.laneHeight + CONFIG.laneHeight / 2;
+    list.forEach((n, i) => {
+      n.x = xOf(n.year);
+      const swing = (i % 3) - 1;              // -1, 0, 1, repeating
+      n.y = mid + swing * (CONFIG.laneHeight * 0.21);
+      n.r = Math.min(
+        CONFIG.nodeRadius.max,
+        CONFIG.nodeRadius.min + n.degree * CONFIG.nodeRadius.perEdge
+      );
+    });
+  });
+
+  // ---- svg scaffolding --------------------------------------------------
+  const sky = document.getElementById('sky');
+  const defs = el('defs');
+  sky.appendChild(defs);
+
+  // A blur used for the scene nebulae. Applied to a tiny number of shapes
+  // on a layer that never needs to be sharp.
+  defs.appendChild((() => {
+    const f = el('filter', { id: 'nebula', x: '-60%', y: '-60%', width: '220%', height: '220%' });
+    f.appendChild(el('feGaussianBlur', { stdDeviation: 58 }));
+    return f;
+  })());
+
+  function radial(id, color, inner, outer) {
+    const g = el('radialGradient', { id });
+    g.appendChild(el('stop', { offset: '0%',   'stop-color': color, 'stop-opacity': inner }));
+    g.appendChild(el('stop', { offset: '55%',  'stop-color': color, 'stop-opacity': inner * 0.26 }));
+    g.appendChild(el('stop', { offset: '100%', 'stop-color': color, 'stop-opacity': outer }));
+    defs.appendChild(g);
+    return `url(#${id})`;
+  }
+  const haloFill = {};
+  Object.entries(LINEAGE_COLOR).forEach(([k, c]) => {
+    haloFill[k] = radial('halo-' + k, c, 0.62, 0);
+  });
+
+  const L = {};
+  ['bands', 'nebula', 'grid', 'edges', 'comets', 'nodes', 'labels'].forEach(name => {
+    L[name] = el('g', { class: 'layer', 'data-layer': name });
+    sky.appendChild(L[name]);
+  });
+
+  // ---- grid and lanes ---------------------------------------------------
+  for (let y = CONFIG.yearMin; y <= CONFIG.yearMax; y++) {
+    const isDecade = y % 10 === 0;
+    if (!isDecade && y % 5 !== 0) continue;
+    L.grid.appendChild(el('line', {
+      class: 'year-rule' + (isDecade ? ' decade-rule' : ''),
+      x1: xOf(y), y1: -70, x2: xOf(y), y2: WORLD_H + 40,
+    }));
+    if (isDecade) {
+      const t = el('text', { class: 'decade', x: xOf(y) + CONFIG.pxPerYear * 5, y: WORLD_H * 0.52 });
+      t.textContent = y + 's';
+      L.grid.appendChild(t);
+    }
+    const tick = el('text', {
+      class: 'year-tick', x: xOf(y), y: -52, 'text-anchor': 'middle',
+    });
+    tick.textContent = y;
+    tick.style.opacity = isDecade ? 0.8 : 0.34;
+    L.grid.appendChild(tick);
+  }
+
+  // Lane bands. Barely-there colour is enough to say "this horizontal strip
+  // is one lineage" without competing with anything that carries a fact.
+  const laneLabels = [];
+  function addLane(index, text, colour) {
+    const y0 = index * CONFIG.laneHeight;
+    L.bands.appendChild(el('rect', {
+      x: -400, y: y0, width: WORLD_W + 900, height: CONFIG.laneHeight,
+      fill: colour, opacity: 0.026,
+    }));
+    L.bands.appendChild(el('line', {
+      class: 'year-rule', x1: -400, y1: y0, x2: WORLD_W + 500, y2: y0,
+    }));
+    const t = el('text', { class: 'lane-label', y: y0 + CONFIG.laneHeight * 0.5 });
+    t.textContent = text;
+    t.setAttribute('fill', colour);
+    L.grid.appendChild(t);
+    laneLabels.push(t);
+  }
+  CONFIG.laneOrder.forEach((lin, i) => addLane(i, LINEAGE_LABEL[lin], LINEAGE_COLOR[lin]));
+  addLane(CONFIG.machineLane, 'The machines', '#8fa6c8');
+
+  // ---- scene nebulae ----------------------------------------------------
+  // Each scene becomes a coloured cloud sitting behind its members, using the
+  // palette already carried in the scene records.
+  D.scenes.forEach(s => {
+    const members = (s.memberIds || []).map(id => byId.get(id)).filter(Boolean);
+    if (!members.length) return;
+    const cx = members.reduce((a, n) => a + n.x, 0) / members.length;
+    const cy = members.reduce((a, n) => a + n.y, 0) / members.length;
+    const spread = Math.max(150, Math.max(...members.map(n => Math.abs(n.x - cx))) + 140);
+    const c = el('ellipse', {
+      cx, cy, rx: spread, ry: CONFIG.laneHeight * 0.62,
+      fill: (s.palette && s.palette.accent) || '#5aa9ff',
+      filter: 'url(#nebula)', opacity: 0.13,
+    });
+    L.nebula.appendChild(c);
+  });
+
+  // ---- edges ------------------------------------------------------------
+  // A shallow S-curve. Horizontal control points keep the eye reading
+  // left-to-right even when the line jumps three lanes.
+  function edgePath(e) {
+    const x1 = e.a.x, y1 = e.a.y, x2 = e.b.x, y2 = e.b.y;
+    const dx = Math.max(70, Math.abs(x2 - x1) * 0.55);
+    if (Math.abs(x2 - x1) < 26 && Math.abs(y2 - y1) < 26) {
+      return `M${x1},${y1} C${x1 + 90},${y1 - 80} ${x2 + 90},${y2 + 80} ${x2},${y2}`;
+    }
+    return `M${x1},${y1} C${x1 + dx},${y1} ${x2 - dx},${y2} ${x2},${y2}`;
+  }
+
+  edges.forEach((e, i) => {
+    const ca = LINEAGE_COLOR[e.a.lineage] || '#8fa6c8';
+    const cb = LINEAGE_COLOR[e.b.lineage] || '#8fa6c8';
+    const gid = 'eg' + i;
+    const grad = el('linearGradient', {
+      id: gid, gradientUnits: 'userSpaceOnUse',
+      x1: e.a.x, y1: e.a.y, x2: e.b.x, y2: e.b.y,
+    });
+    grad.appendChild(el('stop', { offset: '0%', 'stop-color': ca }));
+    grad.appendChild(el('stop', { offset: '100%', 'stop-color': cb }));
+    defs.appendChild(grad);
+
+    const d = edgePath(e);
+    const conf = CONF_RANK[e.confidence] || 0.4;
+
+    const line = el('path', {
+      class: 'edge-line fadeable', d,
+      stroke: `url(#${gid})`,
+      'stroke-width': e.crossLineage ? 2.1 : 1.2,
+    });
+    line.style.opacity = 0.16 + conf * 0.36;
+    if (e.confidence === 'asserted') line.setAttribute('stroke-dasharray', '3 7');
+
+    const hit = el('path', { class: 'edge-hit', d });
+
+    L.edges.appendChild(line);
+    L.edges.appendChild(hit);
+    e.els = { line, hit };
+
+    // The comet. This is the "influence travelling" reading, and it is the
+    // single thing that makes a still graph feel like it is running.
+    const len = line.getTotalLength();
+    const comet = el('path', {
+      class: 'comet fadeable', d, stroke: cb,
+      'stroke-width': e.crossLineage ? 3 : 1.9,
+      'stroke-dasharray': `${CONFIG.comet.length} ${len}`,
+    });
+    comet.style.opacity = e.crossLineage ? 0.95 : 0.5;
+    L.comets.appendChild(comet);
+    e.els.comet = comet;
+    comet.animate(
+      [{ strokeDashoffset: CONFIG.comet.length }, { strokeDashoffset: -len }],
+      { duration: ((len + CONFIG.comet.length) / CONFIG.comet.pxPerSecond) * 1000,
+        iterations: Infinity, easing: 'linear', delay: -i * 900 }
+    );
+
+    if (e.crossLineage) {
+      // Crossings get a second, offset comet in the source colour. Read as
+      // chromatic split; it makes the cross-lineage edges unmistakable.
+      const ghost = el('path', {
+        class: 'comet fadeable', d, stroke: ca, 'stroke-width': 5,
+        'stroke-dasharray': `${CONFIG.comet.length * 1.4} ${len}`,
+      });
+      ghost.style.opacity = 0.2;
+      L.comets.insertBefore(ghost, comet);
+      e.els.ghost = ghost;
+      ghost.animate(
+        [{ strokeDashoffset: CONFIG.comet.length }, { strokeDashoffset: -len }],
+        { duration: ((len + CONFIG.comet.length) / CONFIG.comet.pxPerSecond) * 1000,
+          iterations: Infinity, easing: 'linear', delay: -i * 900 + 120 }
+      );
+    }
+
+    hit.addEventListener('click', ev => { ev.stopPropagation(); openEdge(e); });
+    hit.addEventListener('mouseenter', () => showTip(e.a.name + ' → ' + e.b.name, e.explanation.age13));
+    hit.addEventListener('mouseleave', hideTip);
+  });
+
+  // ---- nodes -------------------------------------------------------------
+  nodes.forEach(n => {
+    const c = LINEAGE_COLOR[n.lineage] || '#8fa6c8';
+    const g = el('g', { class: 'node fadeable', transform: `translate(${n.x},${n.y})` });
+
+    const halo = el('circle', { class: 'node-halo', r: n.r * CONFIG.haloScale, fill: haloFill[n.lineage] || haloFill.electronic });
+    halo.style.opacity = 0.55;
+    g.appendChild(halo);
+
+    if (n.kind === 'machine') {
+      // Machines read as dials, not stars. They are objects, not people.
+      const ring = el('circle', { class: 'node-ring', r: n.r + 6, stroke: c, 'stroke-width': 1 });
+      ring.style.opacity = 0.65;
+      g.appendChild(ring);
+      for (let t = 0; t < 12; t++) {
+        const ang = (t / 12) * Math.PI * 2;
+        const r1 = n.r + 7, r2 = n.r + 11;
+        const tick = el('line', {
+          x1: Math.cos(ang) * r1, y1: Math.sin(ang) * r1,
+          x2: Math.cos(ang) * r2, y2: Math.sin(ang) * r2,
+          stroke: c, 'stroke-width': 1.1,
+        });
+        tick.style.opacity = 0.5;
+        g.appendChild(tick);
+      }
+      g.appendChild(el('rect', {
+        class: 'node-core', x: -n.r * 0.72, y: -n.r * 0.72,
+        width: n.r * 1.44, height: n.r * 1.44, rx: 1.5, fill: c,
+      }));
+    } else {
+      const ring = el('circle', { class: 'node-ring', r: n.r + 5, stroke: c, 'stroke-width': 0.9 });
+      ring.style.opacity = 0.4;
+      g.appendChild(ring);
+      g.appendChild(el('circle', { class: 'node-core', r: n.r, fill: c }));
+      g.appendChild(el('circle', { r: n.r * 0.42, fill: '#fff', opacity: 0.85 }));
+    }
+
+    const name = el('text', { class: 'node-name', x: 0, y: -n.r - 16, 'text-anchor': 'middle' });
+    name.textContent = n.name;
+    const yr = el('text', { class: 'node-year', x: 0, y: n.r + 20, 'text-anchor': 'middle' });
+    yr.textContent = n.year;
+
+    L.nodes.appendChild(g);
+    L.labels.appendChild(name);
+    L.labels.appendChild(yr);
+    name.setAttribute('transform', `translate(${n.x},${n.y})`);
+    yr.setAttribute('transform', `translate(${n.x},${n.y})`);
+    n.els = { g, halo, name, yr };
+    name.classList.add('fadeable');
+    yr.classList.add('fadeable');
+
+    g.addEventListener('mouseenter', () => { focusNode(n); showTip(n.name, n.rec.hook); });
+    g.addEventListener('mouseleave', () => { if (!pinned) clearFocus(); hideTip(); });
+    g.addEventListener('click', ev => { ev.stopPropagation(); openNode(n); });
+  });
+
+  // ---- focus -------------------------------------------------------------
+  let pinned = null;
+
+  function neighboursOf(n) {
+    const near = new Set([n.id]);
+    const lines = [];
+    edges.forEach(e => {
+      if (e.a === n || e.b === n) {
+        lines.push(e);
+        near.add(e.a.id); near.add(e.b.id);
+      }
+    });
+    return { near, lines };
+  }
+
+  function focusNode(n) {
+    const { near, lines } = neighboursOf(n);
+    sky.classList.add('focusing');
+    document.querySelectorAll('.lit, .lit-soft').forEach(x => x.classList.remove('lit', 'lit-soft'));
+    nodes.forEach(m => {
+      if (!near.has(m.id)) return;
+      const cls = m === n ? 'lit' : 'lit-soft';
+      m.els.g.classList.add(cls);
+      m.els.name.classList.add(cls);
+      m.els.yr.classList.add(cls);
+    });
+    lines.forEach(e => {
+      e.els.line.classList.add('lit');
+      e.els.comet.classList.add('lit');
+      if (e.els.ghost) e.els.ghost.classList.add('lit-soft');
+    });
+    n.els.halo.setAttribute('r', n.r * CONFIG.haloScale * 1.6);
+  }
+
+  function focusEdge(e) {
+    sky.classList.add('focusing');
+    document.querySelectorAll('.lit, .lit-soft').forEach(x => x.classList.remove('lit', 'lit-soft'));
+    [e.a, e.b].forEach(m => {
+      m.els.g.classList.add('lit');
+      m.els.name.classList.add('lit');
+      m.els.yr.classList.add('lit');
+    });
+    e.els.line.classList.add('lit');
+    e.els.comet.classList.add('lit');
+    if (e.els.ghost) e.els.ghost.classList.add('lit-soft');
+  }
+
+  function clearFocus() {
+    sky.classList.remove('focusing');
+    document.querySelectorAll('.lit, .lit-soft').forEach(x => x.classList.remove('lit', 'lit-soft'));
+    nodes.forEach(n => n.els.halo.setAttribute('r', n.r * CONFIG.haloScale));
+  }
+
+  // ---- reading panel -----------------------------------------------------
+  const panel = document.getElementById('panel');
+  const panelBody = document.getElementById('panel-body');
+  let register = 'age13';
+
+  const esc = s => String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  function registerToggle() {
+    return `<div class="controls" style="margin:22px 0 4px">
+      <button class="chip reg" data-reg="age13" aria-pressed="${register === 'age13'}">Teen</button>
+      <button class="chip reg" data-reg="adult" aria-pressed="${register === 'adult'}">Adult</button>
+    </div>`;
+  }
+
+  function wireRegister(redraw) {
+    panelBody.querySelectorAll('.reg').forEach(b => {
+      b.addEventListener('click', () => { register = b.dataset.reg; redraw(); });
+    });
+  }
+
+  function openNode(n) {
+    pinned = n;
+    focusNode(n);
+    const r = n.rec;
+    const c = LINEAGE_COLOR[n.lineage] || '#8fa6c8';
+    const mine = edges.filter(e => e.a === n || e.b === n);
+    const meta = n.kind === 'machine'
+      ? `${esc(r.maker)} &middot; ${r.releasedYear}–${r.discontinuedYear || 'now'} &middot; ${esc(r.kind)}`
+      : `${esc(r.originCity)} &middot; ${r.activeFrom}–${r.activeTo || 'present'}`;
+
+    panelBody.innerHTML = `
+      <div class="kicker" style="color:${c}">${n.kind === 'machine' ? 'Machine' : 'Artist'} &middot; ${esc(LINEAGE_LABEL[n.lineage] || n.lineage)}</div>
+      <h2>${esc(r.name)}</h2>
+      <div class="meta">${meta}</div>
+      <p class="hook">${esc(r.hook)}</p>
+      ${registerToggle()}
+      <p class="body">${esc(r.blurb[register])}</p>
+      ${n.kind === 'machine' ? `
+        <h3>What it was for</h3><p class="body">${esc(r.originalPurpose)}</p>
+        <h3>What actually happened</h3><p class="body">${esc(r.whatActuallyHappened)}</p>` : ''}
+      ${(r.signatureTracks || []).length ? `<h3>Listen to</h3>${r.signatureTracks.map(t => `
+        <div class="track"><div class="t">${esc(t.title)} <span style="color:var(--dim)">${t.year}</span></div>
+        <div class="w">${esc(t.whyThisOne)}</div></div>`).join('')}` : ''}
+      ${mine.length ? `<h3>${mine.length} connection${mine.length > 1 ? 's' : ''}</h3>${mine.map((e, i) => `
+        <button class="link-row" data-edge="${edges.indexOf(e)}">
+          <span class="dir">${e.a === n ? 'changed' : 'changed by'}</span>${esc(e.a === n ? e.b.name : e.a.name)}
+        </button>`).join('')}` : ''}
+    `;
+    wireRegister(() => openNode(n));
+    panelBody.querySelectorAll('[data-edge]').forEach(b => {
+      b.addEventListener('click', () => openEdge(edges[+b.dataset.edge]));
+    });
+    panel.classList.add('open');
+  }
+
+  function openEdge(e) {
+    pinned = e.a;
+    focusEdge(e);
+    const tp = e.trackPair;
+    panelBody.innerHTML = `
+      <div class="kicker" style="color:${LINEAGE_COLOR[e.b.lineage]}">
+        ${e.crossLineage ? 'Crossing' : 'Connection'} &middot; ${esc(e.type)}
+      </div>
+      <h2>${esc(e.a.name)} <span style="color:var(--dim)">→</span> ${esc(e.b.name)}</h2>
+      <div class="meta">${e.year} &nbsp; <span class="conf ${esc(e.confidence)}">${esc(e.confidence)}</span></div>
+      ${registerToggle()}
+      <p class="hook">${esc(e.explanation[register])}</p>
+      ${tp ? `
+        <h3>What to listen for</h3>
+        <div class="track"><div class="t">${esc(tp.earlier.artist)} &mdash; &ldquo;${esc(tp.earlier.title)}&rdquo; <span style="color:var(--dim)">${tp.earlier.year}</span></div></div>
+        <div class="track"><div class="t">${esc(tp.later.artist)} &mdash; &ldquo;${esc(tp.later.title)}&rdquo; <span style="color:var(--dim)">${tp.later.year}</span></div></div>
+        <p class="body">${esc(tp.whatToListenFor)}</p>` : ''}
+      <h3>How we know</h3>
+      <p class="body">${esc(e.evidence)}</p>
+      <h3>Either end</h3>
+      <button class="link-row" data-node="${e.a.id}"><span class="dir">from</span>${esc(e.a.name)}</button>
+      <button class="link-row" data-node="${e.b.id}"><span class="dir">to</span>${esc(e.b.name)}</button>
+    `;
+    wireRegister(() => openEdge(e));
+    panelBody.querySelectorAll('[data-node]').forEach(b => {
+      b.addEventListener('click', () => openNode(byId.get(b.dataset.node)));
+    });
+    panel.classList.add('open');
+  }
+
+  function closePanel() { panel.classList.remove('open'); pinned = null; clearFocus(); }
+  document.getElementById('close').addEventListener('click', closePanel);
+
+  // ---- tooltip -----------------------------------------------------------
+  const tip = document.getElementById('tip');
+  function showTip(name, text) {
+    tip.innerHTML = `<span class="n">${esc(name)}</span>${esc(text || '')}`;
+    tip.classList.add('on');
+  }
+  function hideTip() { tip.classList.remove('on'); }
+  addEventListener('mousemove', ev => {
+    tip.style.left = ev.clientX + 'px';
+    tip.style.top = ev.clientY + 'px';
+  });
+
+  // ---- camera ------------------------------------------------------------
+  const stage = document.getElementById('stage');
+  let view = { x: 0, y: 0, k: 1 };
+  let mouse = { x: 0, y: 0 };
+
+  function applyView() {
+    const base = `translate(${view.x},${view.y}) scale(${view.k})`;
+    L.bands.setAttribute('transform', base);
+    L.grid.setAttribute('transform', base);
+    L.edges.setAttribute('transform', base);
+    L.comets.setAttribute('transform', base);
+    L.nodes.setAttribute('transform', base);
+    L.labels.setAttribute('transform', base);
+    // The nebulae sit slightly behind the graph plane. Their offset from the
+    // pointer is what gives the field parallax without desynchronising
+    // anything that carries meaning.
+    const px = (mouse.x - innerWidth / 2) * 0.018;
+    const py = (mouse.y - innerHeight / 2) * 0.018;
+    L.nebula.setAttribute('transform',
+      `translate(${view.x * CONFIG.nebulaParallax - px},${view.y * CONFIG.nebulaParallax - py}) scale(${view.k})`);
+    // Lane names stay pinned to the left edge however far you pan, so you
+    // never lose track of which strip of the map you are reading.
+    const stickX = (22 - view.x) / view.k;
+    laneLabels.forEach(t => t.setAttribute('x', stickX));
+    // Labels thin out only when you pull well back, so the field reads as
+    // light first at a distance but is readable the moment you arrive.
+    const { hide, show } = CONFIG.labelFade;
+    L.labels.style.opacity = Math.min(1, Math.max(0, (view.k - hide) / (show - hide)));
+  }
+
+  // Open at reading distance on the middle of the data rather than fitting
+  // the whole span. A map that starts too far out reads as decoration; one
+  // that starts close enough to read a name invites the first click.
+  function fit() {
+    const xs = nodes.map(n => n.x);
+    const cx = (Math.min(...xs) + Math.max(...xs)) / 2;
+    const cy = WORLD_H * 0.46;
+    view.k = CONFIG.openZoom;
+    view.x = innerWidth / 2 - cx * view.k;
+    view.y = innerHeight / 2 - cy * view.k;
+    applyView();
+  }
+
+  let animHandle = null;
+  function glideTo(tx, ty, tk, ms) {
+    cancelAnimationFrame(animHandle);
+    const from = { ...view }, t0 = performance.now();
+    const ease = u => u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2;
+    (function step(now) {
+      const u = Math.min(1, (now - t0) / ms), e = ease(u);
+      view.x = from.x + (tx - from.x) * e;
+      view.y = from.y + (ty - from.y) * e;
+      view.k = from.k + (tk - from.k) * e;
+      applyView();
+      if (u < 1) animHandle = requestAnimationFrame(step);
+    })(t0);
+  }
+
+  function centreOn(n, k) {
+    const tk = k || view.k;
+    glideTo(innerWidth / 2 - n.x * tk, innerHeight / 2 - n.y * tk, tk, 900);
+  }
+
+  let drag = null;
+  stage.addEventListener('pointerdown', ev => {
+    drag = { x: ev.clientX, y: ev.clientY, vx: view.x, vy: view.y, moved: 0 };
+    stage.classList.add('dragging');
+    stage.setPointerCapture(ev.pointerId);
+  });
+  stage.addEventListener('pointermove', ev => {
+    mouse = { x: ev.clientX, y: ev.clientY };
+    if (!drag) { applyView(); return; }
+    const dx = ev.clientX - drag.x, dy = ev.clientY - drag.y;
+    drag.moved += Math.abs(dx) + Math.abs(dy);
+    view.x = drag.vx + dx;
+    view.y = drag.vy + dy;
+    applyView();
+  });
+  stage.addEventListener('pointerup', ev => {
+    const wasClick = drag && drag.moved < 5;
+    drag = null;
+    stage.classList.remove('dragging');
+    if (wasClick && ev.target.id === 'sky') closePanel();
+  });
+
+  stage.addEventListener('wheel', ev => {
+    ev.preventDefault();
+    const f = ev.deltaY < 0 ? CONFIG.zoom.step : 1 / CONFIG.zoom.step;
+    const nk = Math.min(CONFIG.zoom.max, Math.max(CONFIG.zoom.min, view.k * f));
+    const r = nk / view.k;
+    view.x = ev.clientX - (ev.clientX - view.x) * r;
+    view.y = ev.clientY - (ev.clientY - view.y) * r;
+    view.k = nk;
+    applyView();
+  }, { passive: false });
+
+  addEventListener('keydown', ev => {
+    const s = ev.shiftKey ? 260 : 80;
+    if (ev.key === 'ArrowLeft')  { view.x += s; applyView(); }
+    if (ev.key === 'ArrowRight') { view.x -= s; applyView(); }
+    if (ev.key === 'ArrowUp')    { view.y += s; applyView(); }
+    if (ev.key === 'ArrowDown')  { view.y -= s; applyView(); }
+    if (ev.key === 'Escape')     closePanel();
+  });
+  addEventListener('resize', () => { sizeDust(); applyView(); });
+
+  // ---- chrome wiring -------------------------------------------------------
+  const swatches = document.getElementById('swatches');
+  CONFIG.laneOrder.forEach(lin => {
+    const b = document.createElement('button');
+    b.className = 'swatch';
+    b.innerHTML = `<span class="dot" style="background:${LINEAGE_COLOR[lin]};color:${LINEAGE_COLOR[lin]}"></span>${LINEAGE_LABEL[lin]}`;
+    b.addEventListener('click', () => {
+      const first = nodes.filter(n => n.lineage === lin && n.kind === 'artist')
+        .sort((p, q) => p.year - q.year)[0];
+      if (first) { centreOn(first, 1.1); openNode(first); }
+    });
+    swatches.appendChild(b);
+  });
+
+  const crossBtn = document.getElementById('btn-cross');
+  let crossOnly = false;
+  crossBtn.addEventListener('click', () => {
+    crossOnly = !crossOnly;
+    crossBtn.setAttribute('aria-pressed', crossOnly);
+    edges.forEach(e => {
+      const hide = crossOnly && !e.crossLineage;
+      [e.els.line, e.els.comet, e.els.ghost].forEach(x => {
+        if (x) x.style.display = hide ? 'none' : '';
+      });
+    });
+  });
+  document.getElementById('btn-reset').addEventListener('click', () => { closePanel(); fit(); });
+
+  // ---- threads -------------------------------------------------------------
+  // A thread is a hand-authored route. Playing one is the clearest answer to
+  // "where do I start" on a map that is eventually a thousand nodes wide.
+  const threadBox = document.getElementById('threads');
+  let threadTimer = null;
+
+  D.threads.forEach(th => {
+    const b = document.createElement('button');
+    b.className = 'thread-btn';
+    b.textContent = th.title;
+    b.addEventListener('click', () => {
+      document.querySelectorAll('.thread-btn').forEach(x => x.classList.remove('running'));
+      b.classList.add('running');
+      playThread(th, () => b.classList.remove('running'));
+    });
+    threadBox.appendChild(b);
+  });
+
+  function playThread(th, done) {
+    clearTimeout(threadTimer);
+    const stops = th.steps.map(s => {
+      if (s.nodeId) return { kind: 'node', it: byId.get(s.nodeId) };
+      const e = edges.find(x => x.id === s.edgeId);
+      return e ? { kind: 'edge', it: e } : null;
+    }).filter(s => s && s.it);
+
+    let i = 0;
+    (function next() {
+      if (i >= stops.length) { done && done(); return; }
+      const s = stops[i++];
+      if (s.kind === 'node') { centreOn(s.it, CONFIG.thread.zoom); openNode(s.it); }
+      else {
+        const mid = { x: (s.it.a.x + s.it.b.x) / 2, y: (s.it.a.y + s.it.b.y) / 2 };
+        glideTo(innerWidth / 2 - mid.x * CONFIG.thread.zoom,
+                innerHeight / 2 - mid.y * CONFIG.thread.zoom, CONFIG.thread.zoom, 900);
+        openEdge(s.it);
+      }
+      threadTimer = setTimeout(next, CONFIG.thread.dwellMs);
+    })();
+  }
+
+  // ---- dust ----------------------------------------------------------------
+  // Canvas rather than SVG: hundreds of one-pixel sprites are the one thing
+  // SVG genuinely handles badly, and nothing here is interactive.
+  const dust = document.getElementById('dust');
+  const dctx = dust.getContext('2d');
+  let motes = [];
+
+  function sizeDust() {
+    const dpr = Math.min(2, devicePixelRatio || 1);
+    dust.width = innerWidth * dpr;
+    dust.height = innerHeight * dpr;
+    dctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    motes = Array.from({ length: CONFIG.dust.count }, () => ({
+      x: Math.random() * innerWidth,
+      y: Math.random() * innerHeight,
+      z: 0.25 + Math.random() * 0.75,
+      p: Math.random() * Math.PI * 2,
+    }));
+  }
+  sizeDust();
+
+  (function drawDust(t) {
+    dctx.clearRect(0, 0, innerWidth, innerHeight);
+    const ox = view.x * CONFIG.dust.parallax;
+    const oy = view.y * CONFIG.dust.parallax;
+    for (const m of motes) {
+      const x = ((m.x + ox * m.z) % innerWidth + innerWidth) % innerWidth;
+      const y = ((m.y + oy * m.z + Math.sin(t / 4200 + m.p) * 9) % innerHeight + innerHeight) % innerHeight;
+      const a = (0.1 + 0.32 * m.z) * (0.62 + 0.38 * Math.sin(t / 1500 + m.p * 3));
+      dctx.fillStyle = `rgba(178,205,255,${a.toFixed(3)})`;
+      dctx.fillRect(x, y, m.z < 0.6 ? 1 : 1.6, m.z < 0.6 ? 1 : 1.6);
+    }
+    requestAnimationFrame(drawDust);
+  })(0);
+
+  fit();
+})();
+</script>
+</body>
+</html>

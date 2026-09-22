@@ -31,8 +31,28 @@ correct response to a good idea arriving mid-milestone.
   edges) without breaking left-to-right chronology.
 - How to represent a scene that has no single city.
 - Whether machines should share lanes with artists or get their own band.
+  `design/` now prototypes three answers to this; pick one there.
 - Whether historically important but indefensible artists need a data flag, or
   whether careful `hook` writing is sufficient. Starting with writing only.
+
+## Deferred from the visual pass
+
+- Viewport culling. The `design/` prototypes draw everything once with no
+  culling, which is fine at twelve nodes and wrong at five hundred. M2's
+  brief already requires culling "from the first commit"; this is a note
+  that the prototypes do not demonstrate it.
+- Semantic zoom (Continent / Country / Street) with collapse-and-expand
+  animation. The prototypes only fade labels by zoom level. The real
+  three-level collapse is M2 work and is the largest unproven piece of
+  `SPEC.md`'s interaction model.
+- Scene hero cards composed from `palette` + `motif`. The prototypes use
+  `palette` for atmospheric colour only and ignore `motif` entirely. The
+  motif vocabulary (op-art grids, sound system stacks, sequencer step grids,
+  turntable circles) is still completely undrawn.
+- Colour-vision-deficiency check on the proposed lineage palette. See A29.
+- Reduced-motion handling. All three prototypes animate continuously and
+  none of them respect `prefers-reduced-motion`. Whichever direction wins
+  needs a still version that loses no information.
 
 ## Observed problems
 
