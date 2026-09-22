@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "Lee \"Scratch\" Perry",
       "title": "Black Ark productions",
-      "year": 1976
+      "year": 1976,
+      "search": false
     },
     "later": {
       "artist": "African Head Charge",

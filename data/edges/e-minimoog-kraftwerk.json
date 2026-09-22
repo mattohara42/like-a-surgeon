@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "Moog Music",
       "title": "Minimoog Model D",
-      "year": 1970
+      "year": 1970,
+      "search": false
     },
     "later": {
       "artist": "Kraftwerk",

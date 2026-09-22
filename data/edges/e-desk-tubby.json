@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "MCI",
       "title": "a twelve-into-four studio console, as designed",
-      "year": 1965
+      "year": 1965,
+      "search": false
     },
     "later": {
       "artist": "King Tubby",

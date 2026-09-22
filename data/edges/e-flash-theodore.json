@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "Grandmaster Flash",
       "title": "quick-mix theory at Bronx jams",
-      "year": 1975
+      "year": 1975,
+      "search": false
     },
     "later": {
       "artist": "Grand Wizzard Theodore",
       "title": "the scratch",
-      "year": 1975
+      "year": 1975,
+      "search": false
     },
     "whatToListenFor": "Flash's technique is about making the join invisible: you should not hear the second record arrive. Theodore's does the opposite and makes the hand audible on purpose. Listen for that inversion, because it is the moment the turntable stops pretending to be a playback device and starts admitting it is being operated."
   },

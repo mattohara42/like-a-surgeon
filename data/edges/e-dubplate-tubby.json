@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "Jamaican sound systems",
       "title": "one-off acetates cut as exclusives",
-      "year": 1950
+      "year": 1950,
+      "search": false
     },
     "later": {
       "artist": "King Tubby",
       "title": "dub mixes cut for named sound systems",
-      "year": 1972
+      "year": 1972,
+      "search": false
     },
     "whatToListenFor": "Listen for who the record is talking to. A sound system's name gets shouted over the top of the mix, or the singer greets a crew by name, and you realise the record is not addressed to you or to a radio audience. It was made for one crowd in one yard on one night, on a disc that would be worn out within a few months."
   },

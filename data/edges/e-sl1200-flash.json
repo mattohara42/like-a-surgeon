@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "Technics",
       "title": "SL-1200 as a domestic hi-fi turntable",
-      "year": 1972
+      "year": 1972,
+      "search": false
     },
     "later": {
       "artist": "Grandmaster Flash",

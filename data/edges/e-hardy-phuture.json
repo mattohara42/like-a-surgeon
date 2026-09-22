@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "Ron Hardy",
       "title": "Music Box DJ sets",
-      "year": 1986
+      "year": 1986,
+      "search": false
     },
     "later": {
       "artist": "Phuture",

@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "Roland",
       "title": "TR-808 snare, as synthesised",
-      "year": 1980
+      "year": 1980,
+      "search": false
     },
     "later": {
       "artist": "Marley Marl",
       "title": "The Bridge, produced for MC Shan",
-      "year": 1986
+      "year": 1986,
+      "search": "MC Shan The Bridge"
     },
     "whatToListenFor": "Compare two snares. The 808's is a short burst of noise with a tuned ring under it, always identical, sitting cleanly in its own space. A snare lifted off a record brings the room with it: the drummer's touch, the tape compression, a trace of whatever else was playing at that instant. Listen for that smear of extra information. It is the sound of a recording rather than the sound of a circuit."
   },

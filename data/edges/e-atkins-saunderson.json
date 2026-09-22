@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "Model 500 (Juan Atkins)",
       "title": "No UFOs",
-      "year": 1985
+      "year": 1985,
+      "search": "Model 500 No UFOs"
     },
     "later": {
       "artist": "Inner City (Kevin Saunderson)",
       "title": "Big Fun",
-      "year": 1988
+      "year": 1988,
+      "search": "Inner City Big Fun"
     },
     "whatToListenFor": "Atkins' record is stark and functional; Saunderson's has a full vocal and pop structure built on the same machine palette, showing how far the Belleville Three's shared starting point could stretch."
   },

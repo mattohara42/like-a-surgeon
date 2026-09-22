@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "King Tubby",
       "title": "Home-built mixing desk, Waterhouse",
-      "year": 1968
+      "year": 1968,
+      "search": false
     },
     "later": {
       "artist": "Mad Professor",
       "title": "Ariwa Sounds, home-built desk",
-      "year": 1979
+      "year": 1979,
+      "search": false
     },
     "whatToListenFor": "Both men's records treat the mixing desk itself, not a mixed-down finished master, as the instrument being played live. The specific tools differ by a decade of electronics, but the gesture is the same."
   },

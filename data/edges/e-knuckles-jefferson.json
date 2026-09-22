@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "Frankie Knuckles",
       "title": "Warehouse-era DJ sets",
-      "year": 1978
+      "year": 1978,
+      "search": false
     },
     "later": {
       "artist": "Marshall Jefferson",

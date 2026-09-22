@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "Lee \"Scratch\" Perry",
       "title": "Black Ark productions",
-      "year": 1976
+      "year": 1976,
+      "search": false
     },
     "later": {
       "artist": "Lee \"Scratch\" Perry & Mad Professor",
       "title": "Ariwa studio collaborations",
-      "year": 1987
+      "year": 1987,
+      "search": false
     },
     "whatToListenFor": "Perry's original records are raw and cluttered on purpose. The Ariwa collaborations are cleaner and more controlled, Mad Professor's studio discipline audibly reining in Perry's chaos without erasing it."
   },

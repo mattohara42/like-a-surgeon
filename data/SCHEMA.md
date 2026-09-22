@@ -123,11 +123,17 @@ crossLineage    boolean, stored for filtering. Must equal (from node's
                 lineage !== to node's lineage), resolving from/to through
                 whichever node type they name. The validator checks this;
                 a mismatch is a hard error.
-trackPair       { earlier: {artist, title, year},
-                  later:   {artist, title, year},
+trackPair       { earlier: {artist, title, year, search?},
+                  later:   {artist, title, year, search?},
                   whatToListenFor }
                 whatToListenFor is the highest-value text in the dataset.
                 Be specific about the sound. No mush.
+                search (optional, Q17): what the reader's YouTube search
+                link looks for. Absent: "artist title". A string: that
+                query instead, for titles carrying notes ("The Bridge,
+                produced for MC Shan" -> "MC Shan The Bridge"). false: no
+                link, for a side that is not a record (a DJ set, a machine
+                as sold, a practice). The validator rejects anything else.
 explanation     three registers
 demoId          optional
 tags            ["production","labels","politics","technology"] for overlays

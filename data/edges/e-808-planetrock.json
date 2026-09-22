@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "Roland",
       "title": "TR-808 factory voices",
-      "year": 1980
+      "year": 1980,
+      "search": false
     },
     "later": {
       "artist": "Afrika Bambaataa & Soulsonic Force",

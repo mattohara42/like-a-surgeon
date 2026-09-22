@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "Duke Bootee",
       "title": "The Message, written and demoed",
-      "year": 1980
+      "year": 1980,
+      "search": false
     },
     "later": {
       "artist": "Grandmaster Flash and the Furious Five",

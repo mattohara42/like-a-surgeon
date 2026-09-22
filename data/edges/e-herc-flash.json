@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "DJ Kool Herc",
       "title": "park jams and rec-room parties, the merry-go-round",
-      "year": 1973
+      "year": 1973,
+      "search": false
     },
     "later": {
       "artist": "Grandmaster Flash",

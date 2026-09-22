@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "Grandmaster Flash",
       "title": "Bronx jams with the Furious Five",
-      "year": 1977
+      "year": 1977,
+      "search": false
     },
     "later": {
       "artist": "Grandmaster Flash and the Furious Five",

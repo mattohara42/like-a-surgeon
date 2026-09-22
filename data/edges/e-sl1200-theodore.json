@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "Technics",
       "title": "SL-1200 as a domestic hi-fi turntable",
-      "year": 1972
+      "year": 1972,
+      "search": false
     },
     "later": {
       "artist": "Grand Wizzard Theodore",
       "title": "the scratch",
-      "year": 1975
+      "year": 1975,
+      "search": false
     },
     "whatToListenFor": "Listen to the pitch of a scratch. It bends down as the hand slows the record and snaps back up the instant it is released, and the snap is the motor recovering almost immediately. On a belt-driven deck that recovery is a slow sag, which is a different and much less usable sound. The character of the scratch is partly the character of the motor."
   },

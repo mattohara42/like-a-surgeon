@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "Derrick May",
       "title": "Detroit, working on a pair of TR-909s",
-      "year": 1983
+      "year": 1983,
+      "search": false
     },
     "later": {
       "artist": "Frankie Knuckles",
       "title": "Warehouse and Power Plant DJ sets",
-      "year": 1984
+      "year": 1984,
+      "search": false
     },
     "whatToListenFor": "Listen to a Detroit record and a Chicago record from the same couple of years and find the shared object. Same kick, same ringing open hi-hat, one machine's voice in two cities. What differs is the instinct: Detroit leaves space around the machine and lets it sound like a machine, Chicago buries it under a soul vocal and a piano and asks it to carry a party."
   },
