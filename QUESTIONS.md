@@ -4,9 +4,35 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
-(none)
+- **Q16. Where do the dataset version and last-updated date come from?**
+  A20 puts them in the interface at M3, and nothing in the repo holds
+  either value yet. Recommended: `tools/manifest.js` writes a `generatedAt`
+  date into the manifest it already regenerates on every run, plus a
+  hand-bumped `version` read from `package.json`. The alternative is a git
+  date at bundle time, which is more truthful but makes the dev server shell
+  out to git. See `docs/m3-architecture.md` section 5.
+
+- **Q17. How should a track-pair side say what to search for?** About 17 of
+  the 122 track-pair sides are not records ("Black Ark productions",
+  "Warehouse-era DJ sets", "the scratch"), and some real ones carry notes in
+  the title ("The Bridge, produced for MC Shan"). Recommended: an optional
+  `search` field on each side. When it is absent, the query is artist plus
+  title, and `false` means no link is drawn. See
+  `docs/m3-architecture.md` section 7.
 
 ## Resolved
+
+- **Q13. Where does the detail panel sit?** Resolved: **overlay drawer** on
+  the right, as in the Strata prototype. The graph does not reflow, and the
+  camera centres within the uncovered part of the screen.
+
+- **Q14. Which streaming services get outbound links?** Resolved: **YouTube
+  search only.** It is free and needs no account, which matters for the
+  primary reader.
+
+- **Q15. When does the Kid register appear in the selector?** Resolved:
+  **only when complete.** A register is offered only if every reader-facing
+  record carries it, so Kid stays hidden until the Track D pass finishes.
 
 - **Q12. Should the map draw a Kingston-to-Bronx edge at all?** Resolved:
   **yes, it should connect.** Drawn as `e-kingston-bronx`, from the

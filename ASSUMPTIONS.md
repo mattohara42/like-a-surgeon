@@ -573,3 +573,22 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   Strata port": the detail panels, which the design prototype had and the
   shipped renderer does not, and which are the reason clicking a node
   currently only logs.
+
+## Added while planning M3 (docs/m3-architecture.md)
+
+- **A73.** The reading surface lives in a new `reading/` directory rather
+  than inside `render/`, and only `main.js` wires the two together. The
+  graph gains three small API additions (`focusNode`/`focusEdge`, a right
+  camera inset, `selectedId`) and never imports from `reading/`.
+- **A74.** Selecting a node whose layer is off, from a panel link or a
+  search result, turns that layer on and then focuses the node. The
+  alternative, a panel describing something the map refuses to show, is the
+  worse surprise. The toggle chip updates, so one click undoes it.
+- **A75.** Scene panels are reached from artist scene chips and from search.
+  The nebula stays unclickable, because making it a hit target would fight
+  with panning.
+- **A76.** Interface copy (tier explanations, panel headings, legend text)
+  is written in registers in `reading/copy.js` and follows the same writing
+  rules as the data. It also counts toward Q15's completeness test, so the
+  Kid register cannot appear with an untranslated interface around it.
+

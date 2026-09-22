@@ -129,6 +129,17 @@ correct response to a good idea arriving mid-milestone.
 (Claude Code: record code smells and architectural concerns here rather than
 fixing them inline.)
 
+- The SessionStart hook cannot protect a session whose branch was created
+  from a commit older than the hook itself. This session's branch pointed
+  at PR #2's merge, which predates `.claude/`, so the hook never ran and
+  the checkout was 30-plus commits behind `main` with no warning. The
+  session nearly redid data batch 1. Fixed for this branch by
+  fast-forwarding to `main`. The durable fix is outside the repo: create
+  session branches from `main`'s head. Failing that, a line in `CLAUDE.md`
+  telling a session to run `git fetch origin main` and compare before
+  reading anything else would work even at an old commit, as long as the
+  commit is newer than that line.
+
 - Six of the seed's ten artists carry only one `signatureTracks` entry
   against `SCHEMA.md`'s 2-3 target (`tools/validate.js` warns on this now).
   The seed was meant to be the quality bar, so this is worth a pass before
