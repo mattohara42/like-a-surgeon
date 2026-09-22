@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "Ensoniq",
       "title": "Mirage, an eight-bit sampler at 1,695 dollars",
-      "year": 1984
+      "year": 1984,
+      "search": false
     },
     "later": {
       "artist": "Inner City",

@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "Frankie Knuckles",
       "title": "Warehouse-era DJ sets",
-      "year": 1982
+      "year": 1982,
+      "search": false
     },
     "later": {
       "artist": "Model 500 (Juan Atkins)",
       "title": "No UFOs",
-      "year": 1985
+      "year": 1985,
+      "search": "Model 500 No UFOs"
     },
     "whatToListenFor": "Detroit techno's four-on-the-floor structure owes something to house records like Knuckles' sets reaching Detroit via radio and record pools; listen for how close the underlying drum pattern is, even as the two genres' moods diverge sharply."
   },

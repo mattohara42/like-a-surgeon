@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "Roland",
       "title": "RE-201 Space Echo, as sold to guitarists",
-      "year": 1974
+      "year": 1974,
+      "search": false
     },
     "later": {
       "artist": "Lee \"Scratch\" Perry",

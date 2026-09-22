@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "Grandmaster Flash",
       "title": "early Bronx park-jam sets",
-      "year": 1975
+      "year": 1975,
+      "search": false
     },
     "later": {
       "artist": "Afrika Bambaataa",
       "title": "early Bronx park-jam sets",
-      "year": 1976
+      "year": 1976,
+      "search": false
     },
     "whatToListenFor": "No single record captures this; the comparison is between two DJs building sound systems and crews in the same neighborhood at the same time, out of the same breakbeat culture."
   },

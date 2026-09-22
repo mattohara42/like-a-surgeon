@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "E-mu Systems",
       "title": "SP-1200, ten seconds of sampling time",
-      "year": 1987
+      "year": 1987,
+      "search": false
     },
     "later": {
       "artist": "Marley Marl",
       "title": "The Symphony, produced for the Juice Crew",
-      "year": 1988
+      "year": 1988,
+      "search": "Marley Marl The Symphony"
     },
     "whatToListenFor": "Listen for the grain. Everything running through this machine picks up a slight crunch at the top end that was not in the source record, and producers wanted it. Then listen to how short the loops are: one or two bars, over and over. That is not a stylistic preference, it is ten seconds of memory deciding the structure of the song."
   },

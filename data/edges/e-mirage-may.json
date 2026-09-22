@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "Michael James",
       "title": "a piano piece played at Derrick May's house",
-      "year": null
+      "year": null,
+      "search": false
     },
     "later": {
       "artist": "Rhythim Is Rhythim",

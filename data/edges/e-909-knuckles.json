@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "Roland",
       "title": "TR-909, as a rhythm composer for musicians",
-      "year": 1983
+      "year": 1983,
+      "search": false
     },
     "later": {
       "artist": "Frankie Knuckles",
       "title": "Warehouse and Power Plant DJ sets",
-      "year": 1984
+      "year": 1984,
+      "search": false
     },
     "whatToListenFor": "Do this as a comparison. Put on a Philadelphia disco record from 1976 and listen to the drums: a person playing, pushing slightly ahead in the chorus, dragging in the verse. Then put on a Chicago house record from 1986. The kick is in exactly the same place in every bar for seven minutes, and above it there is a short, bright, ringing open hi-hat that never varies either. That machine hi-hat, laid under records that were never built for it, is what a Warehouse night turned into."
   },

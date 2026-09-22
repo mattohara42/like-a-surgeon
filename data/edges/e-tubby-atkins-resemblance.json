@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "King Tubby",
       "title": "various versions",
-      "year": 1976
+      "year": 1976,
+      "search": false
     },
     "later": {
       "artist": "Juan Atkins",

@@ -6,8 +6,9 @@ import { CONFIG } from '../config.js';
 import { COPY, EDGE_TYPE_LABELS } from './copy.js';
 import { h, tierSwatch } from './dom.js';
 import { pick } from './registers.js';
+import { trackPairQuery, youtubeLink } from './links.js';
 
-function trackLine(side) {
+function trackLine(side, register) {
   if (!side) return null;
   return h(
     'div',
@@ -19,6 +20,7 @@ function trackLine(side) {
       `“${side.title}”`,
       side.year ? h('span', { class: 'year' }, ` ${side.year}`) : null,
     ),
+    youtubeLink(trackPairQuery(side), register),
   );
 }
 
@@ -58,8 +60,8 @@ export function renderEdgePanel(edge, ctx) {
     tp
       ? [
           heading('whatToListenFor'),
-          trackLine(tp.earlier),
-          trackLine(tp.later),
+          trackLine(tp.earlier, reg),
+          trackLine(tp.later, reg),
           tp.whatToListenFor ? h('p', { class: 'listen' }, tp.whatToListenFor) : null,
         ]
       : null,

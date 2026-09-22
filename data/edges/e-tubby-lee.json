@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "King Tubby",
       "title": "early dub plates for Duke Reid",
-      "year": 1968
+      "year": 1968,
+      "search": false
     },
     "later": {
       "artist": "Bunny Lee productions, dubbed by King Tubby",
       "title": "various",
-      "year": 1974
+      "year": 1974,
+      "search": false
     },
     "whatToListenFor": "Lee's productions from the mid-1970s onward routinely exist in two forms: a vocal version, and a King Tubby dub cut sold or played separately. The dub cut is where the empty space and echo live."
   },

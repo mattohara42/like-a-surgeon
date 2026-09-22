@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "DJ Kool Herc",
       "title": "the back-to-school jam at 1520 Sedgwick Avenue",
-      "year": 1973
+      "year": 1973,
+      "search": false
     },
     "later": {
       "artist": "Coke La Rock",
       "title": "shout-outs over Herc's records at Bronx parties",
-      "year": 1973
+      "year": 1973,
+      "search": false
     },
     "whatToListenFor": "Nothing was recorded, so listen forward instead. Take any rap record and strip out the rhyme, the meter and the subject, and what is left underneath is a person naming friends in the room over somebody else's drums. That residue is what La Rock was doing, and it is the part that never went away."
   },

@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "Ron Hardy",
       "title": "Music Box DJ sets",
-      "year": 1984
+      "year": 1984,
+      "search": false
     },
     "later": {
       "artist": "Mr. Fingers (Larry Heard)",
       "title": "Can You Feel It",
-      "year": 1986
+      "year": 1986,
+      "search": "Mr. Fingers Can You Feel It"
     },
     "whatToListenFor": "Heard's record is slower and softer than most of what Hardy played, which is itself part of the story: the Music Box could break a record that didn't sound like everything else in the room."
   },

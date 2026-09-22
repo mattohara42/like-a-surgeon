@@ -8,6 +8,7 @@ import { CONFIG } from '../config.js';
 import { COPY, KIND_LABELS, LINEAGE_LABELS, EDGE_TYPE_LABELS } from './copy.js';
 import { h, tierSwatch } from './dom.js';
 import { pick } from './registers.js';
+import { youtubeLink } from './links.js';
 
 export function yearSpan(from, to) {
   return `${from ?? '?'}–${to ?? 'now'}`;
@@ -82,6 +83,7 @@ function artistSections(r, ctx) {
               { class: 'track' },
               h('div', { class: 't' }, `“${t.title}”`, t.year ? h('span', { class: 'year' }, ` ${t.year}`) : null),
               para(t.whyThisOne, 'w'),
+              youtubeLink(`${r.name} ${t.title}`, reg),
             ),
           ),
         ]

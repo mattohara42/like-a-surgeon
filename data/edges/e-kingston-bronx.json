@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "Kingston sound systems",
       "title": "street dances and sound clashes",
-      "year": 1968
+      "year": 1968,
+      "search": false
     },
     "later": {
       "artist": "DJ Kool Herc",
       "title": "the back-to-school jam at 1520 Sedgwick Avenue",
-      "year": 1973
+      "year": 1973,
+      "search": false
     },
     "whatToListenFor": "Listen for what crossed and what did not. The shape is the same in both places: a crowd outdoors, one person choosing records, another one talking over them, a system loud enough to be the event itself. The records are not the same at all. Put on what a Kingston sound was playing in 1970 and what Herc was playing in 1973 and they share almost nothing, because Bronx crowds would not take reggae and he switched to funk and soul. The method travelled. The music did not."
   },

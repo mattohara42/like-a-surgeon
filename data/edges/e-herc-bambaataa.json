@@ -11,12 +11,14 @@
     "earlier": {
       "artist": "DJ Kool Herc",
       "title": "park jams and rec-room parties, the merry-go-round",
-      "year": 1973
+      "year": 1973,
+      "search": false
     },
     "later": {
       "artist": "Afrika Bambaataa",
       "title": "Zulu Nation park jams",
-      "year": 1977
+      "year": 1977,
+      "search": false
     },
     "whatToListenFor": "The format is inherited and the record selection is not. Both are playing breaks to a park, but Herc's crates are funk and soul, and Bambaataa's take the same logic somewhere deliberately strange: a rock record, a TV theme, a German electronic album. Listen for how little the technique has to change to absorb material that sounds nothing like the last thing."
   },

@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "Coke La Rock",
       "title": "shout-outs over Herc's records at Bronx parties",
-      "year": 1973
+      "year": 1973,
+      "search": false
     },
     "later": {
       "artist": "The Sugarhill Gang",

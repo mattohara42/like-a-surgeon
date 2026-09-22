@@ -243,6 +243,16 @@ for (const [id, edge] of records.edges) {
     fail(`${where}: illegal confidence tier "${edge.confidence}"`);
   }
   checkDemoId(where, edge.demoId);
+  // trackPair side `search` (Q17, A78): absent means "artist title", a
+  // non-empty string replaces the query, false means no link. Anything else
+  // would quietly draw a wrong link, so it is a hard error.
+  for (const side of ['earlier', 'later']) {
+    const search = edge.trackPair?.[side]?.search;
+    if (search === undefined || search === false) continue;
+    if (typeof search !== 'string' || !search.trim()) {
+      fail(`${where}: trackPair.${side}.search must be a non-empty string or false, got ${JSON.stringify(search)}`);
+    }
+  }
   if (fromNode && toNode && typeof edge.crossLineage === 'boolean') {
     const expected = fromNode.lineage !== toNode.lineage;
     if (edge.crossLineage !== expected) {
