@@ -437,3 +437,14 @@ fixing them inline.)
 - Dr. Dre and G-funk: N.W.A is now on the map, so the BACKLOG note about
   the West Coast waiting on Parliament-Funkadelic now blocks only Dre's
   post-1991 work.
+
+- The transport's year readout ends at 2028. `layout.timeScale.yearEnd` is
+  the latest year in the data plus `CONFIG.layout.marginYears` (2), and
+  anyone still active runs to the present, so the cursor's resting year is
+  two years in the future. The margin is right for drawing room. The
+  cursor's maximum probably wants to clamp to the current year instead.
+  Seen while taking the social preview screenshot.
+
+- At 1280x800 in the lineage arrangement, the "ROCK" lane title draws
+  under the reading-level toggle, so "ADULT" and "ROCK" overlap. Lane
+  titles give way to node names (A106) but not to the fixed controls.
