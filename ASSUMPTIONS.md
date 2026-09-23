@@ -1111,3 +1111,34 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   name is given anywhere in the repo. When the SQUELCH 303 worklet is
   ported in M4 (A8), its own license has to allow relicensing under MIT,
   or it keeps its original license in its own file.
+
+
+## Added during the source verification pass
+
+Matt opened the container's network to Wikipedia (en, de, fr, pt, ja),
+Wikidata, MusicBrainz, the Discogs API, archive.org and World Radio
+History, and asked for everything already on the map to be checked
+against them. SecondHandSongs is reachable but waits for an API key.
+`docs/sources.md` records what each source is good for and the rate
+limits. The pass started with a bulk diff of every node against Wikidata
+and every track year against MusicBrainz, then read the articles behind
+each disagreement.
+
+- **A155. Deaths after the records were written.** The Wikidata diff
+  showed two deaths the map did not know about. Afrika Bambaataa died in
+  April 2026, so his `activeTo` is now 2026 and both registers say so.
+  Sly Dunbar died in January 2026. Sly and Robbie's `activeTo` stays 2021,
+  when Robbie Shakespeare died and the partnership ended, but neither
+  register had ever said why the span stops there. Both deaths are now in
+  the text. Sources: the English Wikipedia articles on each man, which
+  give place and cause.
+- **A156. Bambaataa's record now states the abuse allegations.** The
+  record was written from the seed before the Q2 resolution and never
+  mentioned them. Under Q2 they belong in the adult register as fact,
+  because they are a documented part of why his standing changed: the
+  2016 accusations, his denial, his resignation from the Universal Zulu
+  Nation and its later apology, and the 2025 default judgment in a Child
+  Victims Act suit. The teen register carries the same facts in shorter
+  words, since registers never differ in facts (Q3). `data/seed.json`
+  still has the old text. It is the ruler, not the dataset, so I left it
+  alone.

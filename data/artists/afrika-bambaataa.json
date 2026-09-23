@@ -5,7 +5,7 @@
   "type": "artist",
   "lineage": "hiphop",
   "activeFrom": 1977,
-  "activeTo": null,
+  "activeTo": 2026,
   "originCity": "South Bronx, New York",
   "originCountry": "USA",
   "scenes": [
@@ -25,8 +25,8 @@
   "hook": "A Bronx DJ who welded a German art-rock melody to a Japanese drum machine and started electro.",
   "blurb": {
     "age7": "He mixed a German band's song with a drum machine and made a brand new kind of music.",
-    "age13": "Bambaataa was famous for playing records nobody expected at block parties, including rock, and European electronic music. In 1982 he and producer Arthur Baker built 'Planet Rock' out of a Kraftwerk melody, a Kraftwerk rhythm, and a Roland TR-808. Kraftwerk's publishers were not pleased and it ended in a settlement. The track invented electro and pushed the 808 into the center of Black American music for the next forty years.",
-    "adult": "'Planet Rock' is the single densest crossing point in this dataset. It joins the German electronic lineage, the Bronx sound system lineage, and the Japanese drum machine lineage in one record, and its legal aftermath is also a clean teaching case about sampling, interpolation, and who owns a melody."
+    "age13": "Bambaataa was famous for playing records nobody expected at block parties, including rock, and European electronic music. In 1982 he and producer Arthur Baker built 'Planet Rock' out of a Kraftwerk melody, a Kraftwerk rhythm, and a Roland TR-808. Kraftwerk's publishers were not pleased and it ended in a settlement. The track invented electro and pushed the 808 into the center of Black American music for the next forty years. In 2016 several men said Bambaataa had sexually abused them when they were boys. He denied it, and he stepped down as head of the Universal Zulu Nation, the hip-hop organisation he had founded. In 2025 a New York court ruled against him in one of those abuse cases after he did not respond to it. He died in April 2026.",
+    "adult": "'Planet Rock' is the single densest crossing point in this dataset. It joins the German electronic lineage, the Bronx sound system lineage, and the Japanese drum machine lineage in one record, and its legal aftermath is also a clean teaching case about sampling, interpolation, and who owns a melody. From April 2016 several men accused Bambaataa of sexually abusing them when they were boys, the earliest account dating from 1980. He denied the accusations, resigned as head of the Universal Zulu Nation in May 2016, and the organisation later apologised to the accusers for how it had responded. In May 2025 a New York court entered a default judgment against him in a civil suit brought under the state's Child Victims Act, after he failed to respond or appear. He died of prostate cancer in April 2026. That is part of the record here."
   },
   "signatureTracks": [
     {
