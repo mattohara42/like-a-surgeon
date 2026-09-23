@@ -1263,3 +1263,25 @@ each disagreement.
   Hill, 1982) is credited to Melle Mel and Duke Bootee on every Discogs
   listing. That clears his validator warning and closes the BACKLOG note
   that his catalogue needed real research.
+- **A167. Dates in documented evidence, spot-checked.** Wikipedia
+  confirms these as written: Czukay studying with Stockhausen 1963 to
+  1966, Phaedra recorded at the Manor in November 1973 on a Moog bought
+  with the Virgin advance, Hendrix arriving in London on 24 September
+  1966, Derbyshire joining the Workshop in April 1962, Stockhausen in
+  Paris from January 1952 and his Konkrete Etüde that December, Davis's
+  drums through the H910 on Low, McCartney on the 'Strawberry Fields'
+  Mellotron, Dilla's MPC3000 at the Smithsonian, and Phuture passing
+  early versions of 'Acid Tracks' to Ron Hardy. Two small disagreements
+  are left as they are and noted here. Wikipedia has Knuckles buying
+  his first drum machine from Derrick May "around 1983", where
+  e-may-knuckles says 1984. It also has Tubby opening his studio in
+  1971 with the mixer from Dynamic, where e-desk-tubby and the console
+  record say 1972. Both are approximate on both sides, and changing
+  either would mean choosing one secondary source over another.
+- **A168. Sugar Hill's end.** Discogs gives 1985 for the shutdown, and
+  our record says 1986. Wikipedia gives a Chapter 11 filing in November
+  1985 and the Robinsons' fraud suit against MCA in November 1986,
+  settled in 1990, with no single closing date. `closedYear` stays 1986,
+  and the ownership story now gives the bankruptcy and the settlement.
+  Discogs confirms Metroplex (1985), Transmat (1986), KMS (1987), Tommy
+  Boy (1981) and Factory (1978 to 1992) as the records have them.
