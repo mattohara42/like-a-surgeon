@@ -1,0 +1,39 @@
+{
+  "id": "the-beatles",
+  "name": "The Beatles",
+  "sortName": "Beatles, The",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1960,
+  "activeTo": 1970,
+  "originCity": "Liverpool",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "George Martin"
+  ],
+  "hook": "The band that turned the recording studio into an instrument, handed the Rolling Stones a hit, and then was sampled by the Beastie Boys without asking.",
+  "blurb": {
+    "age7": "A band from Liverpool who became the most famous band in the world. They used the studio to invent new sounds.",
+    "age13": "John Lennon, Paul McCartney, George Harrison and Ringo Starr came from Liverpool and became the most famous band in the world in the 1960s. They started as a beat group playing American rock and roll. By the mid-1960s, with their producer George Martin, they were using the studio itself to make sounds nobody had heard: tape played backwards, loops, orchestras, and new machines like the Mellotron, which McCartney played on 'Strawberry Fields Forever'. In 1963 Lennon and McCartney finished a song in front of the Rolling Stones and gave it to them. It became the Stones' first top-20 hit. The Beatles split in 1970.",
+    "adult": "On this map the Beatles matter less as the most famous band of the century than as the band that made the studio a compositional tool. Their tape loops and machine textures are an ancestor of sampling, which makes it fitting that the Beastie Boys sampled Abbey Road for Paul's Boutique. The Beatles' side is reported to have pursued legal action over it. Their catalogue has been among the hardest in popular music to clear for samples, which is why so few hip-hop records use it."
+  },
+  "signatureTracks": [
+    {
+      "title": "Tomorrow Never Knows",
+      "year": 1966,
+      "whyThisOne": "Tape loops and a processed voice: the studio as instrument."
+    },
+    {
+      "title": "Strawberry Fields Forever",
+      "year": 1967,
+      "whyThisOne": "McCartney's Mellotron flute intro."
+    },
+    {
+      "title": "The End",
+      "year": 1969,
+      "whyThisOne": "From Abbey Road, later sampled on Paul's Boutique."
+    }
+  ]
+}

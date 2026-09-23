@@ -1,0 +1,32 @@
+{
+  "id": "e-mellotron-beatles",
+  "from": "mellotron",
+  "to": "the-beatles",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1967,
+  "crossLineage": true,
+  "evidence": "Paul McCartney played the Mellotron introduction to 'Strawberry Fields Forever' (1967), using the flute tape bank. The instrument's flute sound was made from recordings of alto and soprano flutes, which accounts for its slightly odd tuning in chords.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Mellotron",
+      "title": "flute tape bank, as sold",
+      "year": 1963,
+      "search": false
+    },
+    "later": {
+      "artist": "The Beatles",
+      "title": "Strawberry Fields Forever",
+      "year": 1967
+    },
+    "whatToListenFor": "Listen to the opening seconds: a flute that isn't quite a flute. Each key on a Mellotron plays a strip of tape with a real flute note recorded on it, so the sound wobbles slightly and every note stops after about eight seconds. McCartney's chords sound a little out of tune with themselves because the flute recordings don't quite match. That wobble is a recording of a recording, playing back as an instrument."
+  },
+  "explanation": {
+    "age7": "The strange flute at the start of 'Strawberry Fields Forever' comes from a machine that plays recordings on tape.",
+    "age13": "The Mellotron is a keyboard where each key plays a short tape of a real instrument. Paul McCartney used its flute sound for the start of 'Strawberry Fields Forever'. Because it's playing tapes, the sound wobbles and sounds a bit ghostly, and that's part of what makes the song feel dreamlike.",
+    "adult": "A pre-sampling sampler in everything but name (see A109 for why it's filed as `instrument`), used by the band this map treats as the studio-as-instrument ancestor of hip-hop production."
+  },
+  "tags": [
+    "technology"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "e-stones-verve",
+  "from": "rolling-stones",
+  "to": "the-verve",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1997,
+  "crossLineage": false,
+  "evidence": "'Bitter Sweet Symphony' (1997) samples the Andrew Loog Oldham Orchestra's orchestral version of the Jagger and Richards song 'The Last Time' (1965). The sample was not fully cleared. After a dispute with ABKCO, the song's publisher, Richard Ashcroft signed away his rights and royalties. In 2019 Jagger and Richards assigned their songwriter royalties for the song to Ashcroft, but not the publishing.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Rolling Stones",
+      "title": "The Last Time",
+      "year": 1965
+    },
+    "later": {
+      "artist": "The Verve",
+      "title": "Bitter Sweet Symphony",
+      "year": 1997
+    },
+    "whatToListenFor": "Start with the Stones' 'The Last Time': a jangly guitar riff and a pop song. Then play 'Bitter Sweet Symphony'. The loop isn't from the Stones' record at all but from an orchestral version made by their former manager, a few bars of strings repeating. Listen for the Stones' tune hidden inside the strings. That hidden tune cost the Verve the song for twenty years."
+  },
+  "explanation": {
+    "age7": "The Verve's biggest song used a piece of music based on a Rolling Stones song, and they lost the money from it for twenty years.",
+    "age13": "'Bitter Sweet Symphony' is built on a string part from an orchestral version of the Stones' song 'The Last Time'. The Verve had permission for some of it but used more, and the company that owned the Stones' old songs took the royalties. In 2019 Mick Jagger and Keith Richards gave the songwriting money back to Richard Ashcroft.",
+    "adult": "The rock-side twin of e-osullivan-bizmarkie: a sample only partly cleared, and a publisher with the leverage to take the whole song. The edge runs from the Stones as writers of the song. The sampled recording itself was Oldham's orchestral arrangement."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

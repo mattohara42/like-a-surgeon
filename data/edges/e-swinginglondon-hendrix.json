@@ -1,0 +1,31 @@
+{
+  "id": "e-swinginglondon-hendrix",
+  "from": "swinging-london",
+  "to": "jimi-hendrix",
+  "type": "scene",
+  "confidence": "documented",
+  "year": 1966,
+  "crossLineage": false,
+  "evidence": "Chas Chandler, bassist of the Animals, brought Hendrix to London in September 1966 to launch him. The Jimi Hendrix Experience was formed there with two British musicians, and it broke in Britain before America. That is documented in standard histories and Chandler's accounts.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Who",
+      "title": "My Generation",
+      "year": 1965
+    },
+    "later": {
+      "artist": "The Jimi Hendrix Experience",
+      "title": "Purple Haze",
+      "year": 1967
+    },
+    "whatToListenFor": "London in 1965 was already playing loud: listen to the feedback and the smashed chords at the end of 'My Generation'. Then play 'Purple Haze' a year and a half later. An American who arrived in that scene took the same noise, the fuzz and the feedback, and made it melodic, with the distortion carrying the tune instead of wrecking it. The scene gave him an audience ready for that."
+  },
+  "explanation": {
+    "age7": "Jimi Hendrix moved to London, and that's where he first became famous.",
+    "age13": "In 1966 Hendrix was an unknown backing guitarist in America. Chas Chandler brought him to London, where bands like the Who were already playing loud and experimenting with feedback. London audiences and musicians went wild for him, and within months he had hits in Britain.",
+    "adult": "A scene-to-artist edge: the scene is the causal agent, since London offered the infrastructure (clubs, press, a guitar culture primed for noise) that America hadn't. Scene edges on this map usually join two artists, and this is the second to start at a scene node, after e-kingston-bronx."
+  },
+  "tags": [
+    "production"
+  ]
+}

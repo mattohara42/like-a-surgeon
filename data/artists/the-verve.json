@@ -1,0 +1,32 @@
+{
+  "id": "the-verve",
+  "name": "The Verve",
+  "sortName": "Verve, The",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1990,
+  "activeTo": 2009,
+  "originCity": "Wigan",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A British band whose biggest song was built on an orchestral sample of a Rolling Stones song, and who lost its royalties for twenty years.",
+  "blurb": {
+    "age7": "A British band whose most famous song used a piece of music that belonged to someone else. It took twenty years to get the money back.",
+    "age13": "The Verve came from Wigan in the north of England, led by the singer Richard Ashcroft. Their 1997 song 'Bitter Sweet Symphony' is built on a looped string part taken from an orchestral version of the Rolling Stones' 1965 song 'The Last Time'. The Verve had a licence for part of it, but the Stones' old manager's company said they had used more than agreed. Ashcroft lost the songwriting credit and the royalties. In 2019 Mick Jagger and Keith Richards gave their share of the songwriting royalties back to him.",
+    "adult": "'Bitter Sweet Symphony' is the rock-side counterpart to Grand Upright: a sample only partly cleared, a publisher (ABKCO, founded by Allen Klein) with the leverage to take the whole song, and a band that signed away its rights. The 2019 settlement returned the songwriter royalties to Ashcroft but not the publishing. The sampled recording wasn't the Stones' own, but an orchestral version produced by their former manager Andrew Loog Oldham, which is why the ownership was so tangled."
+  },
+  "signatureTracks": [
+    {
+      "title": "Bitter Sweet Symphony",
+      "year": 1997,
+      "whyThisOne": "Built on the Andrew Oldham Orchestra's version of 'The Last Time'."
+    },
+    {
+      "title": "The Drugs Don't Work",
+      "year": 1997,
+      "whyThisOne": "Their UK number one from the same album."
+    }
+  ]
+}

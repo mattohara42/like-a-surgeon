@@ -8,13 +8,13 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 76 | 120 | 63% |
+| artists | 80 | 120 | 67% |
 | machines | 29 | 25 | met |
 | scenes | 8 | 20 | 40% |
 | labels | 16 | 30 | 53% |
-| edges | 118 | 350 | 34% |
+| edges | 125 | 350 | 36% |
 | threads | 2 | 5 | 40% |
-| crossLineageEdges | 55 | 60 | 92% |
+| crossLineageEdges | 59 | 60 | 98% |
 | edgesWithDemo | 4 | 30 | 13% |
 
 ## Counts by lineage
@@ -25,7 +25,7 @@ Every node type, since machines, scenes and labels carry a lineage too.
 |---|---:|
 | hiphop | 37 |
 | electronic | 33 |
-| rock | 21 |
+| rock | 25 |
 | other | 20 |
 | dub | 11 |
 | funk | 7 |
@@ -35,8 +35,8 @@ Artists alone:
 | lineage | count |
 |---|---:|
 | hiphop | 32 |
+| rock | 16 |
 | electronic | 12 |
-| rock | 12 |
 | dub | 7 |
 | other | 7 |
 | funk | 6 |
@@ -45,11 +45,11 @@ Artists alone:
 
 | edge type | count |
 |---|---:|
-| technological | 39 |
-| direct | 27 |
+| technological | 40 |
+| direct | 28 |
 | production | 19 |
-| sample | 15 |
-| scene | 11 |
+| sample | 19 |
+| scene | 12 |
 | label | 3 |
 | reaction-against | 2 |
 | cover | 1 |
@@ -59,7 +59,7 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 82 |
+| documented | 89 |
 | consensus | 35 |
 | asserted | 1 |
 
@@ -233,126 +233,126 @@ Evidence: Herc and Grandmaster Flash are widely documented as using 'Apache' as 
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 118 edges that carry one.
+Drawn with seed 1 from the 125 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-flash-theodore`
-
-Grandmaster Flash, "quick-mix theory at Bronx jams" (1975) to Grand Wizzard Theodore, "the scratch" (1975)
-
-Flash's technique is about making the join invisible: you should not hear the second record arrive. Theodore's does the opposite and makes the hand audible on purpose. Listen for that inversion, because it is the moment the turntable stops pretending to be a playback device and starts admitting it is being operated.
-
-### 2. `e-osullivan-bizmarkie`
-
-Gilbert O'Sullivan, "Alone Again (Naturally)" (1972) to Biz Markie, "Alone Again" (1991)
-
-Listen to O'Sullivan's piano, then to Biz's loop of it. It's only a few bars, repeated, and still instantly recognisable. That's the whole case in one sound: a sample carries its author with it. The Cold Chillin' edge covers the label's decision, and this edge is the sound that decision was about.
-
-### 3. `e-herc-bambaataa`
-
-DJ Kool Herc, "park jams and rec-room parties, the merry-go-round" (1973) to Afrika Bambaataa, "Zulu Nation park jams" (1977)
-
-The format is inherited and the record selection is not. Both are playing breaks to a park, but Herc's crates are funk and soul, and Bambaataa's take the same logic somewhere deliberately strange: a rock record, a TV theme, a German electronic album. Listen for how little the technique has to change to absorb material that sounds nothing like the last thing.
-
-### 4. `e-hardy-jefferson`
+### 1. `e-hardy-jefferson`
 
 Ron Hardy, "Music Box DJ sets" (1983) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
 
 Jefferson's piano hook is the part everyone remembers, but the mix, the sequencing and drum programming Hardy shaped, is what makes it a dancefloor record rather than just a song.
 
-### 5. `e-rubin-rundmc`
+### 2. `e-juno60-heard`
 
-Aerosmith, "Walk This Way" (1975) to Run-D.M.C., "Walk This Way (with Aerosmith)" (1986)
+Roland, "Juno-60" (1982) to Mr. Fingers, "Can You Feel It" (1986)
 
-Start with the first seconds of each. Aerosmith's opens on a drummer's short, dry break, then the guitar riff. Run-D.M.C.'s opens on that same break, then Jam Master Jay cutting the guitar riff back and forth on a turntable, the way a DJ had been using the record at parties for years. Then the real guitar and Steven Tyler's voice arrive and sit next to the rapping. You are hearing a rock record the way hip-hop had always used it, as material, before its band walks in and joins.
+Listen to the chords floating above the bassline. They have no hard front edge: each one arrives softly and hangs in the air, and they sound wide, as if coming from both sides at once. That softness and width are the kind of sound the Juno's built-in chorus was designed to make. The whole record was built from a synth, a drum machine and two cassette decks.
 
-### 6. `e-sugarhill-mellemel`
+### 3. `e-dubplate-tubby`
 
-The Sugarhill Gang, "Rapper's Delight" (1979) to Grandmaster Flash and the Furious Five, "The Message" (1982)
+Jamaican sound systems, "one-off acetates cut as exclusives" (1950) to King Tubby, "dub mixes cut for named sound systems" (1972)
 
-Both records are played by the same house band rather than assembled from other people's records, and once you know that you can hear it: the music breathes, pushes and drags the way people do. Sugar Hill's rap records sound like funk records with rappers on them, because that is literally what they are. That house-band sound is a label decision, not an artist's.
+Listen for who the record is talking to. A sound system's name gets shouted over the top of the mix, or the singer greets a crew by name, and you realise the record is not addressed to you or to a radio audience. It was made for one crowd in one yard on one night, on a disc that would be worn out within a few months.
 
-### 7. `e-sl1200-flash`
+### 4. `e-peterock-nas`
 
-Technics, "SL-1200 as a domestic hi-fi turntable" (1972) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
+Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992) to Nas, "The World Is Yours" (1994)
 
-Listen for what never happens: the beat does not sag. The same few bars come round again and again dead in time, and in the gaps you can hear a record being hauled backwards and dropped back in exactly on the one. A belt-driven deck would lag on every restart and the whole thing would slide. Everything frantic on this record rests on the machine underneath it being rigid.
+Two years apart and the same idea from Pete Rock: a soft jazz phrase looped under heavy drums, turned melancholy. On 'T.R.O.Y.' it's a saxophone. On 'The World Is Yours' it's a gentle piano from an Ahmad Jamal record. Listen for how the piano keeps circling while Nas talks about ambition, the sweetness of the loop working against the hardness of the words.
 
-### 8. `e-tubby-sly-robbie`
+### 5. `e-sl1200-theodore`
+
+Technics, "SL-1200 as a domestic hi-fi turntable" (1972) to Grand Wizzard Theodore, "the scratch" (1975)
+
+Listen to the pitch of a scratch. It bends down as the hand slows the record and snaps back up the instant it is released, and the snap is the motor recovering almost immediately. On a belt-driven deck that recovery is a slow sag, which is a different and much less usable sound. The character of the scratch is partly the character of the motor.
+
+### 6. `e-mellotron-beatles`
+
+Mellotron, "flute tape bank, as sold" (1963) to The Beatles, "Strawberry Fields Forever" (1967)
+
+Listen to the opening seconds: a flute that isn't quite a flute. Each key on a Mellotron plays a strip of tape with a real flute note recorded on it, so the sound wobbles slightly and every note stops after about eight seconds. McCartney's chords sound a little out of tune with themselves because the flute recordings don't quite match. That wobble is a recording of a recording, playing back as an instrument.
+
+### 7. `e-tubby-pablo`
+
+Augustus Pablo, "Java" (1972) to King Tubby / Augustus Pablo, "King Tubbys Meets Rockers Uptown" (1976)
+
+Pablo's melodica is the constant; what changes across his catalogue is how much of everything else Tubby lets vanish around it. On the 1976 record, whole bars drop to just melodica, echo, and a bass note.
+
+### 8. `e-perry-clash-cover`
+
+Junior Murvin, "Police and Thieves" (1976) to The Clash, "Police and Thieves" (1977)
+
+Murvin's version floats. The guitar chops on the offbeat and there is air around everything. The Clash version takes the same song and puts a hard downstroke guitar on it, but keeps the length, which on a 1977 punk album is an obvious act of allegiance. Listen to where the guitar lands relative to the drum in each.
+
+### 9. `e-tubby-sly-robbie`
 
 King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Sly and Robbie, "Sinsemilla (Black Uhuru)" (1980)
 
 Tubby empties a finished mix out until the rhythm is nearly all that's left. Sly and Robbie build the rhythm that way from the start: drum and bass carrying the song, everything else arranged around them rather than the other way around.
 
-### 9. `e-stylophone-bowie`
+### 10. `e-premier-nas`
 
-Dubreq, "Stylophone" (1968) to David Bowie, "Space Oddity" (1969)
+Gang Starr, "Mass Appeal" (1994) to Nas, "N.Y. State of Mind" (1994)
 
-Listen in the gaps between the sung lines for a thin, reedy, buzzing melody. It plays one note at a time, with no chords and no warmth. It is exactly the sound of the toy, and it is placed at the centre of a record about a man alone in space. The cheapness is part of what makes it sound lonely.
+Premier made both in the same year, and his hands are audible in both: short, hard, tightly trimmed drums, and a small fragment looped until it becomes a mood. On 'Mass Appeal' the fragment is a thin, repeating figure that sounds almost like elevator music, a joke that fits a song mocking rap made for the charts. On 'N.Y. State of Mind' it's a dark, minor-key piano figure sitting low under the drums. Same method, opposite weather.
 
-### 10. `e-flash-mellemel`
+### 11. `e-honeydrippers-marleymarl`
 
-Grandmaster Flash, "Bronx jams with the Furious Five" (1977) to Grandmaster Flash and the Furious Five, "Superrappin'" (1979)
+The Honey Drippers, "Impeach the President" (1973) to MC Shan, "The Bridge (produced by Marley Marl)" (1986)
 
-Listen to how the five MCs hand lines to each other, finishing each other's bars and coming in together on the last word. That is choreography built for a live room where the DJ is the main event and the MCs work around him, and you can hear it surviving intact onto a record where there is no room and no crowd.
+The song opens on its drums alone for a few bars: a bouncy kick, a snare with a bright crack, and an open hi-hat that breathes between hits. Then play 'The Bridge'. Marl has lifted that kick and snare and set them against the steady tick of a drum machine's hi-hat. Listen for the two sources side by side: the real drum carrying a room and a tape hiss, the machine's hat perfectly even.
 
-### 11. `e-hardy-phuture`
+### 12. `e-perry-madprofessor`
 
-Ron Hardy, "Music Box DJ sets" (1986) to Phuture, "Acid Tracks" (1987)
+Lee "Scratch" Perry, "Black Ark productions" (1976) to Lee "Scratch" Perry & Mad Professor, "Ariwa studio collaborations" (1987)
 
-'Acid Tracks' was reportedly played at the Music Box on cassette for months before release; Hardy's sets are part of why a twelve-minute record built from one squelching filter sweep had an audience ready for it.
+Perry's original records are raw and cluttered on purpose. The Ariwa collaborations are cleaner and more controlled, Mad Professor's studio discipline audibly reining in Perry's chaos without erasing it.
 
-### 12. `e-dilla-madlib`
+### 13. `e-sugarhill-mellemel`
+
+The Sugarhill Gang, "Rapper's Delight" (1979) to Grandmaster Flash and the Furious Five, "The Message" (1982)
+
+Both records are played by the same house band rather than assembled from other people's records, and once you know that you can hear it: the music breathes, pushes and drags the way people do. Sugar Hill's rap records sound like funk records with rappers on them, because that is literally what they are. That house-band sound is a label decision, not an artist's.
+
+### 14. `e-dilla-madlib`
 
 Slum Village, "Fall in Love" (2000) to Jaylib, "Champion Sound (album)" (2003)
 
 On Champion Sound you can hear two producers side by side on one album, since each raps over the other's beats. Listen for the difference: Dilla's tracks have his leaning, off-grid drums and warm, filtered loops, as on 'Fall in Love'. Madlib's are dustier and more collaged, with odder samples and rougher edges. It's a conversation between two ways of sampling, conducted by post.
 
-### 13. `e-atkins-ur`
+### 15. `e-winstons-nwa`
 
-Cybotron, "Clear" (1983) to Underground Resistance, "Death Star" (1992)
+The Winstons, "Amen, Brother" (1969) to N.W.A, "Straight Outta Compton" (1988)
 
-Atkins' record is cool and controlled; UR's is aggressive and stripped of any pop concession. Same machine vocabulary, opposite emotional register and opposite stance toward the music industry.
+Find the six seconds near the middle of 'Amen, Brother' where the band stops and Gregory Coleman plays alone. Listen for the last bars, where the snare shifts off its pattern and lands late. That hitch is what everyone recognises. Then hear it in 'Straight Outta Compton', looped hard under Ice Cube's opening verse. It has the same hitch in the snare, now with the urgency of the whole track riding on it.
 
-### 14. `e-dilla-roots`
+### 16. `e-peterock-dilla`
+
+Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992) to Slum Village, "Fall in Love" (2000)
+
+Both build the beat from a soft, melancholy sample of an older jazz record, filtered warm, with the drums rather than the melody carrying the energy. That much Dilla took from Pete Rock. Now listen to the timing. On 'T.R.O.Y.' the drums sit where you expect them. On 'Fall in Love' the kicks land early or late against the loop, so the beat seems to lean. That lean is where the student stopped copying the teacher.
+
+### 17. `e-dilla-roots`
 
 Slum Village, "Fall in Love" (2000) to The Roots, "Things Fall Apart (album)" (1999)
 
 Put a programmed Dilla beat next to Questlove playing live. In 'Fall in Love' the kicks land early or late against the loop and the beat seems to lean. On the slower tracks of Things Fall Apart, listen to Questlove's kick and snare: played by hand, but placed a fraction behind where a metronome would put them, so the groove drags lazily. A drummer is copying a machine that was being used against its own settings.
 
-### 15. `e-dmx-rundmc`
+### 18. `e-dmx-rundmc`
 
 Orange Krush, "Action" (1982) to Run-D.M.C., "Sucker M.C.'s" (1983)
 
 On 'Action' the beat is played by a drummer inside a band, with bass, keys and a singer around it. On 'Sucker M.C.'s' the same pattern comes back out of a drum machine and everything else is gone. There is no bassline and no melody. Listen for how much reverb sits on the snare, so each hit booms out into the empty space, and for the two voices passing lines back and forth where a band used to be. The emptiness is the arrangement.
 
-### 16. `e-h910-bowie`
+### 19. `e-zeppelin-beastieboys`
 
-Eventide, "H910 Harmonizer" (1975) to David Bowie, "Breaking Glass" (1977)
+Led Zeppelin, "When the Levee Breaks" (1971) to Beastie Boys, "Rhymin & Stealin" (1986)
 
-Listen only to the snare drum. Each hit is followed by a fast smear that drops in pitch, a thud that seems to fall away underneath itself. The Harmonizer shifted each echo down and fed it back in, so every repeat went lower than the last. On a normal record the snare is the most solid thing in the mix. Here it sounds like it is collapsing.
+Listen to how huge Bonham's drums sound at the start of 'When the Levee Breaks': slow and heavy, with a long echo after every hit, because they were recorded at the bottom of a stairwell with microphones high above. Then hear that same beat looped under the Beastie Boys, even heavier and scratched up. The room around the drums comes along with them, which is why this beat sounds bigger than any drum machine.
 
-### 17. `e-desk-tubby`
+### 20. `e-swinginglondon-hendrix`
 
-MCI, "a twelve-into-four studio console, as designed" (1965) to King Tubby, "King Tubby Meets Rockers Uptown" (1976)
+The Who, "My Generation" (1965) to The Jimi Hendrix Experience, "Purple Haze" (1967)
 
-Follow one thing: the filter. The whole track thins out from the bottom up, loses its body, hangs there sounding like a radio in another room, then floods back. That is one knob being turned by hand while the tape runs. Underneath it, notice that the singing is not mixed low, it is gone, and comes back for one word before disappearing again. Both are performances, not settings.
-
-### 18. `e-simmons-sly`
-
-Simmons, "SDS-V electronic drums" (1981) to Black Uhuru, "Anthem" (1983)
-
-Listen to the drum fills. In places, instead of the round thud of a drum skin, a tom comes out as a short electronic zap that swoops down in pitch. Underneath it, the groove is still Sly's: the kick and snare placed with a reggae drummer's sense of where the beat should sit. The machine sound, played by a human, is the combination to hear.
-
-### 19. `e-pil-gangoffour`
-
-Public Image Ltd, "Public Image" (1978) to Gang of Four, "At Home He's a Tourist" (1979)
-
-PiL empties the arrangement out around the bass. Gang of Four does something closer to the opposite: Andy Gill's guitar stabs into the gaps Dave Allen's bassline leaves, funk-tight rather than dub-spacious, but the same basic idea of building the song from the rhythm section first.
-
-### 20. `e-rubin-llcoolj`
-
-T La Rock and Jazzy Jay, "It's Yours" (1984) to LL Cool J, "I Can't Live Without My Radio" (1985)
-
-Listen for what is missing on both. 'It's Yours', the first rap record Rubin made, is built around a drum machine and a DJ's scratches. A year later 'I Can't Live Without My Radio' pushes the same idea further: the kick drum is enormous and nothing competes with it. There is almost no melody, only the drum machine, LL's voice and scratches dropped in between lines. That is what the album credit 'reduced by Rick Rubin' means in sound.
+London in 1965 was already playing loud: listen to the feedback and the smashed chords at the end of 'My Generation'. Then play 'Purple Haze' a year and a half later. An American who arrived in that scene took the same noise, the fuzz and the feedback, and made it melodic, with the distortion carrying the tune instead of wrecking it. The scene gave him an audience ready for that.
