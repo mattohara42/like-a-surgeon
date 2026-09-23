@@ -1,0 +1,33 @@
+{
+  "id": "e-mpc3000-dilla",
+  "from": "akai-mpc3000",
+  "to": "j-dilla",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 2000,
+  "crossLineage": true,
+  "evidence": "Dilla's own Akai MPC3000 Limited Edition (one of 2,000 made in 2000) was donated by his mother, Maureen Yancey, to the Smithsonian's National Museum of African American History and Culture in 2014 (object 2014.139.1). Collaborators have described him as working largely with quantisation switched off. That working description is secondhand, while the instrument itself is documented.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Akai",
+      "title": "MPC3000, sequencer with quantise",
+      "year": 1994,
+      "search": false
+    },
+    "later": {
+      "artist": "Slum Village",
+      "title": "Fall in Love",
+      "year": 2000
+    },
+    "whatToListenFor": "A quantise setting moves every drum hit onto the nearest point of a grid, so a beat stays perfectly even. Listen to 'Fall in Love' with that in mind. The kick drums do not land where a grid would put them: some come early, some late. The beat seems to stagger and yet it grooves, because the unevenness repeats. That is a person refusing the machine's correction on the machine itself."
+  },
+  "explanation": {
+    "age7": "J Dilla made beats on this machine and turned off the setting that makes every drum hit land exactly on time.",
+    "age13": "Samplers like the MPC3000 can snap every drum hit exactly onto the beat. J Dilla usually switched that off and placed hits a bit early or a bit late by feel. His drums sound like they are leaning or tripping, but they still groove. Musicians who played real drums started copying it. His own MPC3000 is now in the Smithsonian museum in Washington.",
+    "adult": "The canonical case on this map of a user working against a machine's intended behaviour, alongside the 303 and Phuture. The MPC's quantise was designed to make programmed rhythm correct, and Dilla's rejection of it produced a rhythmic language that then moved back into live playing (the drummers of the Soulquarians circle are the usual example). Documented for the instrument, and the unquantised method is described by those who worked with him."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

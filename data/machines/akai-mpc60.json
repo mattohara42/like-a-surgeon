@@ -1,0 +1,19 @@
+{
+  "id": "akai-mpc60",
+  "name": "Akai MPC60",
+  "type": "machine",
+  "kind": "sampler",
+  "lineage": "electronic",
+  "maker": "Akai, designed by Roger Linn",
+  "releasedYear": 1988,
+  "discontinuedYear": null,
+  "originalPurpose": "A MIDI Production Center: a sampler, drum machine and sequencer in one box, designed by Roger Linn (who had built the LM-1 and LinnDrum) for Akai, and sold as a complete production studio.",
+  "whatActuallyHappened": "Sixteen rubber pads you hit with your fingers, sampling at twelve bits, and a timing feel that producers found looser and more human than rival sequencers. It became a standard tool of 1990s hip-hop production alongside the SP-1200, and DJ Premier built Gang Starr's later records on one, triggering sounds held in a separate Akai sampler.",
+  "priceStory": "Launched at about 5,000 US dollars in 1988, even more than the SP-1200. Like that machine, it spread because of what it did rather than what it cost. A cheaper MPC60-II with the same insides followed in 1991.",
+  "hook": "Sixteen pads and a sequencer that made a sampler into something you could play with your fingers, like an instrument.",
+  "blurb": {
+    "age7": "A box with sixteen square pads. Each pad plays a sound, so you can tap out a beat with your fingers.",
+    "age13": "The MPC60 put a sampler, a drum machine and a recorder for patterns into one box, with sixteen rubber pads on top. You loaded sounds onto the pads and played them with your fingertips, like drumming on a table. Roger Linn, who had already designed famous drum machines, built it for Akai in 1988. It cost about 5,000 dollars. Producers loved how the timing felt: a bit loose, closer to a real drummer than a strict machine.",
+    "adult": "The MPC60's lasting contribution is an interface: the four-by-four pad grid that is still the default control surface for beat-making. Its sequencer's timing and swing behaviour are widely credited with giving programmed beats a less rigid feel, though that claim is mostly made in retrospect by producers and gear histories rather than measured. The end of production is not sourced here, and the null end year is a gap rather than a claim that it is still made (see Q20)."
+  }
+}

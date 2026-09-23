@@ -1,0 +1,46 @@
+{
+  "id": "biz-markie",
+  "name": "Biz Markie",
+  "sortName": "Markie, Biz",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1985,
+  "activeTo": 2021,
+  "originCity": "Long Island, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "cold-chillin",
+      "from": 1988,
+      "to": 1993
+    }
+  ],
+  "keyProducers": [
+    "marley-marl",
+    "Cutmaster Cool V"
+  ],
+  "hook": "A human beatbox and comic rapper whose unlicensed sample lost the court case that ended hip-hop's free-sampling era.",
+  "blurb": {
+    "age7": "A funny rapper who could make drum sounds with his mouth. He got in trouble in court for using part of someone else's song without permission.",
+    "age13": "Marcel Hall was born in Harlem and grew up on Long Island. As Biz Markie he was part of the Juice Crew around Marley Marl, and his first record, in 1986, showed off his beatboxing: drum sounds made with his mouth. 'Just a Friend' in 1989 was a big hit. In 1991 his album I Need a Haircut used a looped piece of Gilbert O'Sullivan's song 'Alone Again (Naturally)'. O'Sullivan had refused permission. He sued and won, the album was taken out of the shops, and hip-hop producers have had to get permission for samples ever since. Biz named his next album All Samples Cleared! He died in 2021.",
+    "adult": "Grand Upright Music v. Warner Bros. Records (1991) turned on a request for a licence that was made, refused and ignored. The judgment treated unlicensed sampling as plain infringement, referred the matter for possible criminal prosecution, and ordered the album withdrawn. Biz's response was to title the 1993 follow-up All Samples Cleared!, which is itself a document of the new regime. His career is otherwise a reminder that the Juice Crew made room for comedy and human beatboxing alongside its hardest records. He died in July 2021, aged 57."
+  },
+  "signatureTracks": [
+    {
+      "title": "Make the Music with Your Mouth, Biz",
+      "year": 1986,
+      "whyThisOne": "His debut, produced by Marley Marl, with the beatbox as part of the track."
+    },
+    {
+      "title": "Just a Friend",
+      "year": 1989,
+      "whyThisOne": "His biggest hit, sung deliberately off key over a piano loop."
+    },
+    {
+      "title": "Alone Again",
+      "year": 1991,
+      "whyThisOne": "The track built on Gilbert O'Sullivan's piano that lost in court and changed the economics of sampling."
+    }
+  ]
+}

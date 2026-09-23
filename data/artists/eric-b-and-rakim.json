@@ -1,0 +1,34 @@
+{
+  "id": "eric-b-and-rakim",
+  "name": "Eric B. & Rakim",
+  "sortName": "Eric B. & Rakim",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1986,
+  "activeTo": 1992,
+  "originCity": "Long Island and Queens, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "marley-marl"
+  ],
+  "hook": "Rakim's calm, internally rhymed flow reset what rapping could sound like, over beats whose authorship is still argued about.",
+  "blurb": {
+    "age7": "A DJ and a rapper. The rapper, Rakim, rhymed in a calm, clever way that made other rappers sound like they were shouting.",
+    "age13": "Eric Barrier (Eric B.) was a DJ from Queens and William Griffin (Rakim) was a rapper from Wyandanch, Long Island. Their first single, 'Eric B. Is President', came out in 1986. Before Rakim, most rappers shouted in simple rhymes at the end of each line. Rakim rapped quietly and packed rhymes into the middle of lines too, and a lot of rappers changed their style after hearing him. Who made their first beats is still argued about: the records were made at Marley Marl's home studio, and the two men tell different stories about who did what.",
+    "adult": "Rakim's internal rhyme and unhurried delivery are widely treated as a turning point in rap technique, and that claim belongs to consensus rather than to any single source. The production of the early records is genuinely disputed. The album Paid in Full (1987) credits production to Eric B. & Rakim, with Marley Marl credited only for a remix of 'My Melody'. Marl has said he produced 'Eric B. Is President' and 'My Melody', and has publicly demonstrated how he built the first. Eric B. has said he brought the records to Marl's house and paid him as an engineer, not a producer. Both accounts agree the work happened in Marl's room with his equipment."
+  },
+  "signatureTracks": [
+    {
+      "title": "Eric B. Is President",
+      "year": 1986,
+      "whyThisOne": "Their debut, made at Marley Marl's house, with authorship of the beat still in dispute."
+    },
+    {
+      "title": "Paid in Full",
+      "year": 1987,
+      "whyThisOne": "Rakim's unhurried flow at full strength, and the title track of their first album."
+    }
+  ]
+}

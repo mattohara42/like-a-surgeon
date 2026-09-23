@@ -1,0 +1,32 @@
+{
+  "id": "e-marleymarl-ericbrakim",
+  "from": "marley-marl",
+  "to": "eric-b-and-rakim",
+  "type": "production",
+  "confidence": "consensus",
+  "year": 1986,
+  "crossLineage": false,
+  "evidence": "Disputed. Both parties agree 'Eric B. Is President' was made at Marley Marl's home studio in Queensbridge. Marl has said he produced it and 'My Melody', and has demonstrated on video how he built the first beat. Eric B. has said he brought the records to Marl and paid him as an engineer, not a producer. The album Paid in Full credits production to Eric B. & Rakim, with Marl credited only for a remix of 'My Melody'. The edge claims only that Marl's room, equipment and hands shaped the record, which neither account denies. Who authored the beat is left open.",
+  "trackPair": {
+    "earlier": {
+      "artist": "MC Shan",
+      "title": "The Bridge (produced by Marley Marl)",
+      "year": 1986,
+      "search": "MC Shan The Bridge"
+    },
+    "later": {
+      "artist": "Eric B. & Rakim",
+      "title": "Eric B. Is President",
+      "year": 1986
+    },
+    "whatToListenFor": "Play them back to back and compare the drums. Both are built on hard, sampled breaks cut into short, repeating loops, with a heavy low end and very little else, which is the Queensbridge room sound of 1986. Then listen to the voice on top. MC Shan is loud and pushing forward. Rakim is calm, slightly behind the beat, and packs rhymes into the middle of his lines. Same kind of beat, and a completely different way of rapping on it."
+  },
+  "explanation": {
+    "age7": "Eric B. & Rakim's first record was made at Marley Marl's house. People still argue about who made the beat.",
+    "age13": "'Eric B. Is President' was recorded at Marley Marl's home studio in 1986. Marley Marl says he made the beat. Eric B. says he brought the records and paid Marl to engineer, like hiring someone to work the equipment. The album credits say Eric B. & Rakim produced it. What nobody disputes is where it was made and whose machines were used, and you can hear that it sounds like Marl's other records from that year.",
+    "adult": "A standing example of a production credit dispute in hip-hop, where engineer, producer and DJ roles blurred and the distinction carried real money in publishing. The tier is consensus rather than documented because the edge's substance depends on how much Marl contributed, which the only two first-hand witnesses describe differently. The dispute is itself content: sampling made the question 'who made this?' harder to answer at exactly the moment it became more valuable."
+  },
+  "tags": [
+    "production"
+  ]
+}

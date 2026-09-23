@@ -1,0 +1,32 @@
+{
+  "id": "e-rubin-llcoolj",
+  "from": "rick-rubin",
+  "to": "ll-cool-j",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1985,
+  "crossLineage": true,
+  "evidence": "LL Cool J's debut album Radio (Def Jam and Columbia, 1985) was produced by Rubin, recorded at Chung King Studios in New York, and credits him on the back cover as having 'reduced' rather than produced it. LL's first single 'I Need a Beat' (1984) was also a Rubin production.",
+  "trackPair": {
+    "earlier": {
+      "artist": "T La Rock and Jazzy Jay",
+      "title": "It's Yours",
+      "year": 1984
+    },
+    "later": {
+      "artist": "LL Cool J",
+      "title": "I Can't Live Without My Radio",
+      "year": 1985
+    },
+    "whatToListenFor": "Listen for what is missing on both. 'It's Yours', the first rap record Rubin made, is built around a drum machine and a DJ's scratches. A year later 'I Can't Live Without My Radio' pushes the same idea further: the kick drum is enormous and nothing competes with it. There is almost no melody, only the drum machine, LL's voice and scratches dropped in between lines. That is what the album credit 'reduced by Rick Rubin' means in sound."
+  },
+  "explanation": {
+    "age7": "Rick Rubin made LL Cool J's first album. He kept only the loudest parts: big drums, a voice and scratching.",
+    "age13": "LL Cool J was sixteen when Rubin produced his first single. For the first album, Radio, Rubin kept stripping things away until only a booming drum machine, LL's voice and scratching were left. The album cover even says 'reduced by Rick Rubin' instead of 'produced'. It sold half a million copies in about five months.",
+    "adult": "Rubin's 'reduction' arrives two years after Larry Smith's stripped Run-D.M.C. records and pushes the same idea further, with a punk producer's ear for impact. It is also Def Jam's commercial foundation: 'I Need a Beat' helped win the Columbia distribution deal that Radio was released through."
+  },
+  "tags": [
+    "production",
+    "labels"
+  ]
+}

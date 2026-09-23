@@ -1,0 +1,32 @@
+{
+  "id": "e-kraftwerk-dilla",
+  "from": "kraftwerk",
+  "to": "j-dilla",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 2001,
+  "crossLineage": true,
+  "evidence": "The record itself is the evidence: 'B.B.E. (Big Booty Express)' on Welcome 2 Detroit (BBE, 2001), credited to Jay Dee, interpolates the vocal hook of Kraftwerk's 'Trans-Europe Express' and is otherwise an original composition. Its framing as a tribute to Detroit's absorption of Kraftwerk is the label's and critics' reading and is not documented from Dilla himself.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Kraftwerk",
+      "title": "Trans-Europe Express",
+      "year": 1977
+    },
+    "later": {
+      "artist": "Jay Dee",
+      "title": "B.B.E. (Big Booty Express)",
+      "year": 2001,
+      "search": "Jay Dee Big Booty Express"
+    },
+    "whatToListenFor": "Listen to how Kraftwerk say the title: flat, chanted, treated voices over a clanking rhythm meant to sound like a train. Then listen to how Dilla's track keeps the shape and rhythm of that chant and swaps the words, so the hook is instantly familiar and slightly ridiculous. Underneath, the music is his, not a sample of theirs. It is a Detroit hip-hop producer quoting the record Detroit's techno producers learned from."
+  },
+  "explanation": {
+    "age7": "J Dilla made a song that borrows Kraftwerk's famous train chant and changes the words.",
+    "age13": "Kraftwerk's 'Trans-Europe Express' was a big influence on Detroit, where DJs played it and techno producers learned from it. J Dilla grew up in Detroit, and on his 2001 album he borrowed its chanted hook, changing the words to 'Big Booty Express'. The rest of the music he made himself. It is a joke and a salute to his city's musical history at the same time.",
+    "adult": "Cross-lineage, and the one edge on this map so far that connects Detroit hip-hop to the Kraftwerk-to-techno lineage it grew up next to (see e-kraftwerk-atkins and e-kraftwerk-may). It is documented as a borrowing because the record carries it. The broader claim that Dilla's rhythm owes anything to Detroit techno is not made here, because nothing consulted supports it."
+  },
+  "tags": [
+    "production"
+  ]
+}

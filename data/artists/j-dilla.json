@@ -1,0 +1,37 @@
+{
+  "id": "j-dilla",
+  "name": "J Dilla",
+  "sortName": "Dilla, J",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1992,
+  "activeTo": 2006,
+  "originCity": "Detroit, Michigan",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A Detroit producer who switched off his sampler's timing correction and taught musicians a new way to feel rhythm.",
+  "blurb": {
+    "age7": "A producer from Detroit who made drum beats that feel wobbly on purpose. Lots of musicians copied his feel.",
+    "age13": "James Yancey grew up in Detroit. Pete Rock was his hero. As Jay Dee and later J Dilla, he produced for Slum Village, A Tribe Called Quest, The Pharcyde, Common and Erykah Badu. His drums do not land exactly on the beat: some hits come a bit early, some a bit late, so the rhythm seems to lean. Drummers started learning to play like his machine. He was ill for years with a rare blood disease and lupus, and died in 2006, three days after his album Donuts came out.",
+    "adult": "Dilla's significance is rhythmic. Working on the Akai MPC3000 with quantisation largely off, he layered parts with different, deliberately inconsistent timing, and the result, which Dan Charnas's biography calls Dilla Time, crossed back from programmed music into live playing. He is a Detroit figure in the full sense: his 2001 album Welcome 2 Detroit rewrote Kraftwerk's 'Trans-Europe Express' hook as a tribute to the city's absorption of European electronic music. He died in February 2006 aged 32. Donuts was mostly made in hospital, and his MPC3000 and Minimoog Voyager are now in the Smithsonian."
+  },
+  "signatureTracks": [
+    {
+      "title": "Runnin' (The Pharcyde)",
+      "year": 1995,
+      "whyThisOne": "An early production that made his name outside Detroit, built on a Stan Getz bossa nova record."
+    },
+    {
+      "title": "Fall in Love (Slum Village)",
+      "year": 2000,
+      "whyThisOne": "The loose, lagging drum feel at its most influential."
+    },
+    {
+      "title": "Don't Cry",
+      "year": 2006,
+      "whyThisOne": "From Donuts, released days before he died, largely made in hospital."
+    }
+  ]
+}

@@ -125,7 +125,8 @@ Suggested batch order after M1:
 7. Long tail, forever.
 
 Progress: batches so far have covered dub, electro and Detroit, the UK
-rock spine, and the founding Bronx generation. Batch 5 is half done. Machines reached 25 in PR #23, and labels are
+rock spine, the founding Bronx generation, and a first pass at 80s and
+90s hip-hop production. Batch 5 is half done. Machines reached 25 in PR #23, and labels are
 still short. `npm run report` has the current distance on every target.
 
 ## Definition of done for any milestone

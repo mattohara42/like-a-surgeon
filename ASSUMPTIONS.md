@@ -846,3 +846,68 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   producing 'Space Oddity'. The single was produced by Gus Dudgeon, and
   none of this batch's records repeats the error. Logged as another case,
   after A62, where a confident secondary source was wrong about a credit.
+
+
+## Added during the hip-hop production batch (Track D, batch 2 of the suggested order)
+
+- **A118. Scope.** Eight artists, three machines, one label and thirteen
+  edges, centred on New York production from 1983 to 2001: Run-D.M.C.,
+  Rick Rubin, LL Cool J, Biz Markie, Eric B. & Rakim, Pete Rock, J Dilla
+  and DJ Premier, with the Oberheim DMX, the Akai MPC60 and MPC3000, and
+  Cold Chillin'. The rule from A107 applied: nothing arrives as an
+  orphan, so every new node has at least one sourced edge. That rule is
+  why Public Enemy, De La Soul, Mantronix and the West Coast are in
+  `BACKLOG.md` and not here. The batch is deliberately smaller than the
+  template's twenty artists so that every sound description could be
+  checked against what I actually know of the records.
+- **A119. Machines.** All three are `electronic` under A108, as samplers
+  and drum machines sold to studios in general. The DMX is
+  `drum-machine`, the two MPCs are `sampler`. The DMX end year (1984)
+  comes from one secondary archive and is flagged in its record. The MPC
+  end years are null because I could not source them (Q20).
+- **A120. Rick Rubin is filed `rock`.** This follows A68's logic for
+  Sylvia Robinson, applied the other way: his home is the New York
+  hardcore scene he came from (his band Hose was Def Jam's first release),
+  and what he carried into rap, the volume, the stripped arrangements, the
+  rock guitar, is the substance of his effect. It makes his two edges into
+  hip-hop cross-lineage. If Matt reads Rubin as a hip-hop producer first,
+  it is a one-field change and both edges flip automatically.
+- **A121. The Cold Chillin' label edge.** Under A69 a label edge must
+  claim the label's decision changed the artist's output. Here the court
+  record states that a licence was sought and refused and the label
+  released the record anyway, and Biz Markie's next album is titled after
+  the consequence. That is the strongest label edge on the map so far.
+  The judgment's famous opening line is described, not quoted, per the
+  accuracy rules, even though it is a matter of public record.
+- **A122. The Eric B. & Rakim production dispute is carried, not
+  resolved.** The edge from Marley Marl claims only what both men agree
+  on, that the record was made in Marl's room on his equipment, and is
+  held at `consensus`. The artist record and the edge set out both
+  accounts and the album credit without choosing between them.
+- **A123. Tier ratio.** Nine of the thirteen edges are `documented` and
+  four `consensus`, which is richer in `documented` than METHOD.md's
+  healthy ratio and so worth Matt's scrutiny. Each documented edge rests
+  on something checkable: a sleeve credit (Rubin twice, Marl twice), a
+  court opinion (Cold Chillin'), archived radio broadcasts (Marl to Pete
+  Rock), a producer's own account of his instrument in the pattern of
+  e-ms10-atkins (SP-1200 to Pete Rock), a museum object
+  (MPC3000 to Dilla), and the record itself (Kraftwerk to Dilla). In
+  each case the evidence field limits the claim to what that source
+  shows, and the parts it does not show (Rubin's idea for 'Walk This
+  Way', the unquantised method, Dilla's intent with Kraftwerk) are named
+  as secondhand.
+- **A124. Two claims I cut rather than soften.** A `whatToListenFor`
+  draft for 'Mama Said Knock You Out' described its intro structure, and
+  one for 'Runnin'' described its drum timing. On rereading I could not
+  stand behind either from memory, so the first sentence went and the
+  second edge now pairs with 'Fall in Love', a record whose off-grid
+  kicks I am more confident describing. Matt should still listen to that
+  pair before trusting it, since it is the least checked sound
+  description in the batch. The Sound on Sound
+  profile behind e-mpc60-premier was blocked by the network proxy and
+  is cited through search summaries only, which is part of why that
+  edge is `consensus`.
+- **A125. Biz Markie's `originCity`** is Long Island, where he grew up,
+  and the blurb says he was born in Harlem. This follows neither side of
+  the unsettled `originCity` convention in `BACKLOG.md` on purpose: it
+  records both facts in the text until the convention is decided.
