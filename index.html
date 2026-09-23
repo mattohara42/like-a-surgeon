@@ -167,7 +167,7 @@
   .panel-back, .panel-close {
     background: none; border: 0; color: var(--dim); cursor: pointer; font-family: var(--ui);
   }
-  .panel-back { font-size: 13px; padding: 4px 0; }
+  .panel-back { font-size: var(--t-control); padding: 4px 0; }
   .panel-close { font-size: 24px; line-height: 1; padding: 0 4px; margin-left: auto; }
   .panel-back:hover, .panel-close:hover { color: var(--ink); }
   .panel-back:focus-visible, .panel-close:focus-visible, .chip:focus-visible, .link-row:focus-visible {
@@ -175,41 +175,41 @@
   }
 
   .panel-body .kicker {
-    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.22em;
+    font-family: var(--mono); font-size: var(--t-kicker); letter-spacing: 0.22em;
     text-transform: uppercase; margin-bottom: 12px;
   }
   .panel-body h2 {
     margin: 0 0 6px; font-family: var(--serif); font-weight: 400;
-    font-size: 30px; line-height: 1.15;
+    font-size: var(--t-title); line-height: 1.15;
   }
   .panel-body h2:focus { outline: none; }
   .panel-body h2 .arrow { color: var(--dim); }
   .panel-body .meta {
-    font-family: var(--mono); font-size: 11.5px; color: var(--dim); margin-bottom: 20px;
+    font-family: var(--mono); font-size: var(--t-meta); color: var(--dim); margin-bottom: 20px;
     display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
   }
   .panel-body .hook {
-    font-family: var(--serif); font-size: 19px; line-height: 1.45; font-style: italic;
+    font-family: var(--serif); font-size: var(--t-hook); line-height: var(--lh-hook); font-style: italic;
     color: #d3def3; margin: 0 0 18px;
   }
-  .panel-body p.body { font-size: 15.5px; line-height: 1.65; color: var(--body); margin: 0 0 14px; }
-  .panel-body p.note { font-size: 14px; line-height: 1.55; color: var(--dim); margin: 0 0 12px; }
+  .panel-body p.body { font-size: var(--t-body); line-height: var(--lh-body); color: var(--body); margin: 0 0 14px; }
+  .panel-body p.note { font-size: var(--t-note); line-height: var(--lh-note); color: var(--dim); margin: 0 0 12px; }
   .panel-body p.listen {
-    font-family: var(--serif); font-size: 18px; line-height: 1.55; color: var(--ink);
+    font-family: var(--serif); font-size: var(--t-listen); line-height: var(--lh-listen); color: var(--ink);
     margin: 14px 0 6px; padding-left: 14px; border-left: 2px solid rgba(150,180,235,0.35);
   }
   .panel-body h3 {
-    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase;
+    font-family: var(--mono); font-size: var(--t-heading); letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--dim); font-weight: 500; margin: 28px 0 12px; padding-top: 16px;
     border-top: 1px solid var(--hairline);
   }
   .track { margin-bottom: 10px; }
-  .track .t { font-size: 15.5px; color: var(--ink); }
-  .track .year { color: var(--dim); font-family: var(--mono); font-size: 12px; }
-  .track p.w { font-size: 14px; line-height: 1.55; color: var(--dim); margin: 3px 0 0; }
+  .track .t { font-size: var(--t-track); color: var(--ink); }
+  .track .year { color: var(--dim); font-family: var(--mono); font-size: var(--t-meta); }
+  .track p.w { font-size: var(--t-note); line-height: var(--lh-note); color: var(--dim); margin: 3px 0 0; }
 
   .search-link {
-    display: inline-block; margin-top: 4px; font-family: var(--mono); font-size: 11px;
+    display: inline-block; margin-top: 4px; font-family: var(--mono); font-size: var(--t-link);
     letter-spacing: 0.06em; color: #9fc2ff; text-decoration: none;
     border-bottom: 1px solid rgba(159,194,255,0.35);
   }
@@ -218,11 +218,11 @@
 
   .tier { display: inline-flex; align-items: center; gap: 6px; color: var(--ink); }
   .tier-swatch { width: 24px; height: 6px; color: var(--ink); flex: 0 0 auto; }
-  .tier-explain .tier { font-size: 13px; margin-bottom: 6px; }
+  .tier-explain .tier { font-size: var(--t-control); margin-bottom: 6px; }
 
   .chips { display: flex; gap: 7px; flex-wrap: wrap; }
   .chip {
-    font-family: var(--ui); font-size: 13px; color: var(--ink);
+    font-family: var(--ui); font-size: var(--t-chip); color: var(--ink);
     background: rgba(140,170,220,0.06); border: 1px solid var(--hairline);
     border-radius: 999px; padding: 5px 12px; cursor: pointer;
     transition: border-color 200ms, background 200ms;
@@ -234,11 +234,11 @@
   .link-row {
     display: flex; width: 100%; justify-content: space-between; align-items: baseline; gap: 12px;
     text-align: left; background: none; border: 0; border-bottom: 1px solid var(--hairline);
-    cursor: pointer; padding: 10px 0; color: var(--ink); font-size: 15px; font-family: var(--ui);
+    cursor: pointer; padding: 10px 0; color: var(--ink); font-size: var(--t-row); font-family: var(--ui);
   }
   .link-row:hover .link-name { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
   .link-meta, .link-dir {
-    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; color: var(--dim);
+    font-family: var(--mono); font-size: var(--t-kicker); letter-spacing: 0.08em; color: var(--dim);
     display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
   }
   .link-dir { text-transform: uppercase; letter-spacing: 0.16em; min-width: 42px; }
@@ -292,10 +292,10 @@
   }
   .legend-toggle:focus-visible { outline: 1px solid rgba(150,180,235,0.7); outline-offset: 4px; }
   .legend-caret { color: var(--dim); font-size: 14px; letter-spacing: 0; }
-  .legend-intro { font-size: 13px; line-height: 1.5; color: var(--body); margin: 10px 0 8px; }
+  .legend-intro { font-size: var(--t-legend); line-height: 1.5; color: var(--body); margin: 10px 0 8px; }
   .legend-row { margin: 8px 0 0; }
   .legend-row .tier { font-size: 13px; }
-  .legend-explain { font-size: 12.5px; line-height: 1.45; color: var(--dim); margin: 3px 0 0 30px; }
+  .legend-explain { font-size: var(--t-legend-note); line-height: 1.45; color: var(--dim); margin: 3px 0 0 30px; }
   .legend-compact { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 9px; font-size: 12px; }
   .legend-stamp {
     font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--dim);

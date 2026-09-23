@@ -110,13 +110,17 @@ function drawBands(bandsG, titlesG, layout, onSelectGroup) {
       }),
     );
     const isGroup = lane.groupId !== null;
+    // Scene and label views title every lane next to its earliest member.
+    // At the axis origin a title could sit on top of a marker from the
+    // same years, and it was the part the legend covered.
+    const atContent = lane.titleAtContent;
     const label = svgEl('text', {
-      class: isGroup ? 'band-label band-link' : 'band-label',
-      x: isGroup ? lane.firstX : originX,
+      class: ['band-label', isGroup && 'band-link', atContent && 'band-at-content'].filter(Boolean).join(' '),
+      x: atContent ? lane.firstX : originX,
       y: lane.y,
       fill: lane.color,
       'font-weight': 600,
-      'text-anchor': isGroup ? 'end' : 'start',
+      'text-anchor': atContent ? 'end' : 'start',
     });
     label.textContent = isGroup ? `${lane.title} ›` : lane.title;
     if (isGroup) {
@@ -160,8 +164,9 @@ function updateStaticLayerScale(axisG, titlesG, scale) {
   }
   for (const label of titlesG.querySelectorAll('.band-label')) {
     const isGroup = label.classList.contains('band-link');
+    const atContent = label.classList.contains('band-at-content');
     label.setAttribute('font-size', (isGroup ? CONFIG.arrange.groupTitleFontSize : 11) / scale);
-    label.setAttribute('dx', (isGroup ? -CONFIG.arrange.groupTitleLeadPx : 4) / scale);
+    label.setAttribute('dx', (atContent ? -CONFIG.arrange.groupTitleLeadPx : 4) / scale);
     label.setAttribute('dy', (isGroup ? 18 : 14) / scale);
   }
 }
@@ -196,6 +201,10 @@ export function createGraph(container, data, callbacks = {}) {
     // because the drawer opens and closes; the camera centres selections
     // in whatever width is left uncovered.
     rightInset = () => 0,
+    // Screen px on the left that the opening view keeps clear, for the
+    // legend. Only the fit uses it: once the reader pans, the legend is an
+    // overlay like any other.
+    leftInset = () => 0,
   } = callbacks;
 
   // The node or edge the reader is reading about, highlighted on the map.
@@ -277,6 +286,61 @@ export function createGraph(container, data, callbacks = {}) {
 
   const nodeElements = new Map();
   const edgeElements = new Map();
+  const positionById = new Map(positionedNodes.map((e) => [e.node.id, e.pos]));
+
+  // Label placement (M3 step 5). Names and hooks are drawn at a constant
+  // screen size while the nodes under them move closer together as the
+  // reader zooms out, so in crowded years they overprint. Each frame, labels
+  // are placed in priority order (the selected node, then by connectedness,
+  // then earliest) and any label that would overlap one already placed is
+  // hidden until the reader zooms in far enough for it to fit. Names are all
+  // placed before any hook, so a long hook never costs a name its place.
+  // O(visible labels squared), which stays well under a millisecond at the
+  // few hundred labels a screen can show.
+  function placeLabels(level) {
+    if (level === 'collapsed') return;
+    const { labelFontSize, hookFontSize, labelCharWidthEm, labelPadPx, labelMaxChars, hookMaxChars } = CONFIG.node;
+    const entries = [];
+    for (const [id, el] of nodeElements) {
+      const pos = positionById.get(id);
+      const node = el.__node;
+      if (!pos || !node) continue;
+      const sx = pos.x1 * vp.scale + vp.tx;
+      const sy = pos.y * vp.scale + vp.ty;
+      const r = (CONFIG.node.radius[level] ?? CONFIG.node.radius.mid) * (degreeFactorById.get(id) ?? 1);
+      entries.push({ id, el, node, sx, sy, r, degree: degreeFactorById.get(id) ?? 0 });
+    }
+    entries.sort((a, b) =>
+      (b.id === selectedId) - (a.id === selectedId) ||
+      b.degree - a.degree ||
+      (a.node.startYear ?? 0) - (b.node.startYear ?? 0));
+
+    const placed = [];
+    const fits = (box) => !placed.some((p) => box.x0 < p.x1 && box.x1 > p.x0 && box.y0 < p.y1 && box.y1 > p.y0);
+    const boxAround = (cx, baselineY, chars, fontSize) => {
+      const halfW = (chars * fontSize * labelCharWidthEm) / 2 + labelPadPx;
+      return { x0: cx - halfW, x1: cx + halfW, y0: baselineY - fontSize - labelPadPx, y1: baselineY + labelPadPx };
+    };
+
+    for (const e of entries) {
+      const name = e.el.querySelector('.node-name');
+      const chars = Math.min(labelMaxChars, e.node.name.length);
+      const box = boxAround(e.sx, e.sy - e.r - CONFIG.node.labelGapPx, chars, labelFontSize);
+      const ok = fits(box);
+      if (ok) placed.push(box);
+      name.style.visibility = ok ? '' : 'hidden';
+    }
+    if (level !== 'detail') return;
+    for (const e of entries) {
+      const hook = e.el.querySelector('.node-hook');
+      if (!e.node.hook) continue;
+      const chars = Math.min(hookMaxChars, e.node.hook.length);
+      const box = boxAround(e.sx, e.sy + e.r + CONFIG.node.hookGapPx, chars, hookFontSize);
+      const ok = fits(box);
+      if (ok) placed.push(box);
+      hook.style.visibility = ok ? '' : 'hidden';
+    }
+  }
 
   function nodeVisible(pos, range) {
     return pos.x2 >= range.x1 && pos.x1 <= range.x2 && pos.y >= range.y1 - 40 && pos.y <= range.y2 + 40;
@@ -289,18 +353,19 @@ export function createGraph(container, data, callbacks = {}) {
     if (starts.length === 0) return;
     const { fitPaddingPx, fitBottomInsetPx, fitMaxScale } = CONFIG.viewport;
     const pad = fitPaddingPx;
-    const usableW = Math.max(1, widthPx - pad * 2);
+    const left = leftInset();
+    const usableW = Math.max(1, widthPx - left - pad * 2);
     const usableH = Math.max(1, heightPx - pad * 2 - fitBottomInsetPx);
     const contentW = Math.max(1, Math.max(...starts) - Math.min(...starts));
     const contentH = Math.max(1, layout.totalHeight);
 
-    const scale = Math.min(
-      Math.min(usableW / contentW, usableH / contentH),
-      fitMaxScale,
+    const scale = Math.max(
+      CONFIG.viewport.fitMinScale,
+      Math.min(Math.min(usableW / contentW, usableH / contentH), fitMaxScale),
     );
     vp.scale = Math.min(CONFIG.zoom.max, Math.max(CONFIG.zoom.min, scale));
     const midX = (Math.min(...starts) + Math.max(...starts)) / 2;
-    vp.tx = widthPx / 2 - midX * vp.scale;
+    vp.tx = left + (widthPx - left) / 2 - midX * vp.scale;
     vp.ty = pad + Math.max(0, (usableH - contentH * vp.scale) / 2);
   }
 
@@ -465,6 +530,8 @@ export function createGraph(container, data, callbacks = {}) {
         nodeElements.delete(node.id);
       }
     }
+
+    placeLabels(level);
 
     let pastEdgeRange = false;
     for (const { edge, anchors, minX, maxX, minY, maxY } of boundEdges) {
