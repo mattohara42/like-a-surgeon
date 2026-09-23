@@ -95,8 +95,22 @@ function drawAxis(axisG, layout) {
 // Band rectangles go in `bandsG`, under everything. Titles go in `titlesG`,
 // which sits above the edges and nodes: a lane title is a button, and under
 // the edges an edge's wide invisible hit area would swallow its clicks.
+//
+// Returns where each title sits, so label placement can keep node names
+// clear of titles without measuring text in the DOM every frame.
 function drawBands(bandsG, titlesG, layout, onSelectGroup) {
   const originX = layout.timeScale.toX(layout.timeScale.year0);
+  const titleSpecs = [];
+  const spec = (x, y, text, { isGroup = false, atContent = false } = {}) => ({
+    x,
+    y,
+    chars: text.length,
+    anchorEnd: atContent,
+    fontPx: isGroup ? CONFIG.arrange.groupTitleFontSize : 11,
+    dxPx: atContent ? -CONFIG.arrange.groupTitleLeadPx : 4,
+    dyPx: isGroup ? 18 : 14,
+    trackingEm: isGroup ? CONFIG.arrange.titleTrackingEm.group : CONFIG.arrange.titleTrackingEm.lane,
+  });
 
   for (const lane of layout.lanes) {
     bandsG.appendChild(
@@ -123,6 +137,7 @@ function drawBands(bandsG, titlesG, layout, onSelectGroup) {
       'text-anchor': atContent ? 'end' : 'start',
     });
     label.textContent = isGroup ? `${lane.title} ›` : lane.title;
+    titleSpecs.push(spec(atContent ? lane.firstX : originX, lane.y, label.textContent, { isGroup, atContent }));
     if (isGroup) {
       label.setAttribute('tabindex', '0');
       label.setAttribute('role', 'button');
@@ -138,7 +153,7 @@ function drawBands(bandsG, titlesG, layout, onSelectGroup) {
     titlesG.appendChild(label);
   }
 
-  if (!layout.substrate) return;
+  if (!layout.substrate) return titleSpecs;
 
   const floorLabel = svgEl('text', {
     class: 'band-label',
@@ -149,6 +164,8 @@ function drawBands(bandsG, titlesG, layout, onSelectGroup) {
   });
   floorLabel.textContent = 'THE MACHINES';
   titlesG.appendChild(floorLabel);
+  titleSpecs.push(spec(originX, layout.substrate.horizonY + CONFIG.substrate.labelOffset, floorLabel.textContent));
+  return titleSpecs;
 }
 
 // Re-applies counter-scaled font-size/stroke-width/offsets to the
@@ -245,12 +262,15 @@ export function createGraph(container, data, callbacks = {}) {
   const axisG = svgEl('g', { class: 'axis-layer' });
   const edgesG = svgEl('g', { class: 'edges-layer' });
   const nodesG = svgEl('g', { class: 'nodes-layer' });
+  // Every node's name and hook, above all the markers so no dot paints over
+  // a name, and below the lane titles.
+  const labelsG = svgEl('g', { class: 'labels-layer' });
   const cursorG = createCursorLayer(layout);
-  viewportG.append(nebulaG, bandsG, floorG, axisG, edgesG, nodesG, titlesG, cursorG);
+  viewportG.append(nebulaG, bandsG, floorG, axisG, edgesG, nodesG, labelsG, titlesG, cursorG);
   root.append(defs, viewportG);
   container.appendChild(root);
 
-  drawBands(bandsG, titlesG, layout, onSelectGroup);
+  const titleSpecs = drawBands(bandsG, titlesG, layout, onSelectGroup);
   if (layout.substrate) drawSubstrate(floorG, layout);
   drawAxis(axisG, layout);
   drawNebulae(nebulaG, sceneRecords, layout);
@@ -315,7 +335,14 @@ export function createGraph(container, data, callbacks = {}) {
       b.degree - a.degree ||
       (a.node.startYear ?? 0) - (b.node.startYear ?? 0));
 
-    const placed = [];
+    // Lane titles are placed first and never give way: a node name that
+    // would print over one waits for more room instead.
+    const placed = titleSpecs.map((t) => {
+      const width = t.chars * t.fontPx * (labelCharWidthEm + t.trackingEm);
+      const x = t.x * vp.scale + vp.tx + t.dxPx;
+      const baseline = t.y * vp.scale + vp.ty + t.dyPx;
+      return { x0: t.anchorEnd ? x - width : x, x1: t.anchorEnd ? x : x + width, y0: baseline - t.fontPx, y1: baseline + labelPadPx };
+    });
     const fits = (box) => !placed.some((p) => box.x0 < p.x1 && box.x1 > p.x0 && box.y0 < p.y1 && box.y1 > p.y0);
     const boxAround = (cx, baselineY, chars, fontSize) => {
       const halfW = (chars * fontSize * labelCharWidthEm) / 2 + labelPadPx;
@@ -323,7 +350,7 @@ export function createGraph(container, data, callbacks = {}) {
     };
 
     for (const e of entries) {
-      const name = e.el.querySelector('.node-name');
+      const name = e.el.__labels.querySelector('.node-name');
       const chars = Math.min(labelMaxChars, e.node.name.length);
       const box = boxAround(e.sx, e.sy - e.r - CONFIG.node.labelGapPx, chars, labelFontSize);
       const ok = fits(box);
@@ -332,7 +359,7 @@ export function createGraph(container, data, callbacks = {}) {
     }
     if (level !== 'detail') return;
     for (const e of entries) {
-      const hook = e.el.querySelector('.node-hook');
+      const hook = e.el.__labels.querySelector('.node-hook');
       if (!e.node.hook) continue;
       const chars = Math.min(hookMaxChars, e.node.hook.length);
       const box = boxAround(e.sx, e.sy + e.r + CONFIG.node.hookGapPx, chars, hookFontSize);
@@ -492,15 +519,27 @@ export function createGraph(container, data, callbacks = {}) {
     // remove a leftover element from before the viewport moved -- an
     // unconditional break here would leak stale DOM nodes for anything
     // that scrolls out of view on this side.
+    // A node is two elements now: its marker group and its labels group
+    // in the labels layer. Both carry the state classes, so the "not yet"
+    // fade and the selection highlight reach the name as well as the dot.
+    const removeNode = (id, el) => {
+      el.remove();
+      el.__labels.remove();
+      nodeElements.delete(id);
+    };
+    const setNodeState = (el, unborn, selected) => {
+      for (const target of [el, el.__labels]) {
+        target.classList.toggle('unborn', unborn);
+        target.classList.toggle('selected', selected);
+      }
+    };
+
     let pastRange = false;
     for (const { node, pos } of positionedNodes) {
       if (!pastRange && pos.x1 > range.x2) pastRange = true;
       const el = nodeElements.get(node.id);
       if (pastRange) {
-        if (el) {
-          el.remove();
-          nodeElements.delete(node.id);
-        }
+        if (el) removeNode(node.id, el);
         continue;
       }
       const visible = nodeVisible(pos, range);
@@ -516,18 +555,16 @@ export function createGraph(container, data, callbacks = {}) {
             },
           );
           nodesG.appendChild(created);
+          labelsG.appendChild(created.__labels);
           nodeElements.set(node.id, created);
           updateNodeElement(created, node, pos, level, vp.scale, degreeFactor);
-          created.classList.toggle('unborn', node.startYear > year);
-          created.classList.toggle('selected', node.id === selectedId);
+          setNodeState(created, node.startYear > year, node.id === selectedId);
         } else {
           updateNodeElement(el, node, pos, level, vp.scale, degreeFactor);
-          el.classList.toggle('unborn', node.startYear > year);
-          el.classList.toggle('selected', node.id === selectedId);
+          setNodeState(el, node.startYear > year, node.id === selectedId);
         }
       } else if (el) {
-        el.remove();
-        nodeElements.delete(node.id);
+        removeNode(node.id, el);
       }
     }
 

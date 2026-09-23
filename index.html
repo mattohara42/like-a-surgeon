@@ -45,7 +45,7 @@
      here yet -- which is the whole point of being able to drag it. */
   .unborn { opacity: 0.085; }
   .unborn .node-name, .unborn .node-hook { opacity: 0; }
-  .node, .edge { transition: opacity 240ms ease; }
+  .node, .node-labels, .edge { transition: opacity 240ms ease; }
 
   /* Atmosphere. Fixed overlays that never pan, which is what sells the
      idea that you are looking into a volume rather than across a plane. */
@@ -149,7 +149,7 @@
 
   /* What the reader is reading about stays marked on the map. */
   .node.selected .node-ring { stroke: var(--ink); stroke-opacity: 0.95; }
-  .node.selected .node-name { fill: #fff; }
+  .node-labels.selected .node-name { fill: #fff; }
   .edge.selected .edge-line { stroke-opacity: 1; }
 
   /* ---- the reading drawer (docs/m3-architecture.md, section 4) ------- */
@@ -314,7 +314,7 @@
   @media (prefers-reduced-motion: reduce) {
     #grain { animation: none; }
     #panel { transition: none; }
-    .node, .edge { transition: none; }
+    .node, .node-labels, .edge { transition: none; }
     .dust-layer { display: none; }
   }
 </style>

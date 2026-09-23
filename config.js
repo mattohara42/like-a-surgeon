@@ -264,6 +264,10 @@ export const CONFIG = {
     // member (screen px, counter-scaled like every other label).
     groupTitleFontSize: 14,
     groupTitleLeadPx: 14,
+    // Letter-spacing of lane titles, mirroring `.band-label` and
+    // `.band-link` in index.html, so label placement can size a title
+    // without measuring the DOM on every frame.
+    titleTrackingEm: { lane: 0.18, group: 0.02 },
   },
 
   // The confidence legend. Open on a first visit, because the tiers are
