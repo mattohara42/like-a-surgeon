@@ -4,7 +4,21 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
-(none)
+- **Q20. A null end year means three different things.** On machines,
+  `discontinuedYear: null` currently means "still made" (the Mellotron),
+  "one-off, no production run" (Tubby's console, the slashed Elpico) and
+  "I could not find it" (six machines in the second machines batch, see
+  A111). The loader draws all three to the present, and the panel prints
+  "1978–now", so the Korg MS-10 reads as a synth still on sale. The
+  same ambiguity exists on `artist.activeTo`, `scene.yearTo` and
+  `label.closedYear`, just less often. Options:
+  (a) **Recommended.** Add one optional field to every node,
+  `endUnknown: true`. Null plus that flag draws the span fading out after
+  the start year and prints "1978–?". Null alone keeps meaning
+  "ongoing". Small change: schema, validator, loader, panel.
+  (b) Allow the string `"unknown"` as a year value. Fewer fields, but every
+  consumer of a year field then has to handle a non-number.
+  (c) Leave it and accept the misreading until Track D sources the years.
 
 ## Resolved
 

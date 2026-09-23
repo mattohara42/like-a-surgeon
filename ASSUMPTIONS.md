@@ -781,3 +781,68 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   in `CONFIG.arrange.titleTrackingEm` mirrors the stylesheet and must change
   with it.
 
+
+## Added during the second machines batch (Track D, machines to 25)
+
+- **A107.** Selection rule: a machine got in only if it had a sourced
+  connection to an artist already on the map, so none of the thirteen
+  arrives as an orphan. That rule shaped the list more than importance did.
+  The Akai MPC60, the Casio MT-40 behind 'Under Mi Sleng Teng', the Roland
+  TR-707 and the LinnDrum all matter more than a slashed Elpico amp, and
+  none of them touches anyone on the map yet. They are logged in
+  `BACKLOG.md` as the next machines, to add alongside the artists who
+  carry them.
+- **A108.** Lineage follows A56 (the world a machine was sold into). Only
+  the Marshall JTM45 is `rock`, because it was built at the request of
+  London rock guitarists in Jim Marshall's shop. The fuzz pedal, the
+  Mellotron, the Stylophone, the Harmonizer, the AMS delay, the TEAC, the
+  Mu-Tron and the Simmons kit were sold to musicians or studios in
+  general, so they are `other`. The Fairlight, the Juno-60 and the MS-10
+  are `electronic`, like the existing synths and samplers.
+- **A109.** `kind` extends A58. Both amplifiers are `instrument`, as are
+  the Mellotron and the Simmons kit, since each is played by hand. Effects
+  (fuzz, phaser, pitch shifter, digital delay) and the TEAC multitrack are
+  `studio-technique`, alongside the Space Echo. The Mellotron is
+  functionally a sampler, but it plays a fixed tape library the owner did
+  not record, so `sampler` would overstate it. The missing `effect` kind
+  in `BACKLOG.md` now covers four records, and amplifiers would want one
+  too.
+- **A110.** `davies-elpico-amp` is a one-off, handled the way A59 handled
+  Tubby's console: `releasedYear` 1964 is the year of the razor blade, and
+  the record says so. `discontinuedYear` is null to match
+  `tubby-mci-console`, which draws it to the present. See Q20.
+- **A111.** End years. Sourced: Juno-60 1984, JTM45 1966, H910 1988 (the
+  year Eventide sold its last units). Stylophone 1975 is the end of the
+  original run, with the 2007 revival stated in the record. Simmons SDS-V
+  1983 is the year its successors arrived, which is the best available
+  proxy and not a documented end date. The Mellotron is null because new
+  ones are made today. The Fuzz-Tone, AMS DMX 15-80, Korg MS-10, TEAC
+  A-3340, Mu-Tron Bi-Phase and Fairlight CMI are null because I could not
+  source an end year, and the schema cannot tell that apart from "still
+  made". Raised as Q20.
+- **A112.** Two release years had conflicting sources. The Mu-Tron Bi-Phase
+  is dated 1975: its designer describes a prototype in 1974, and one source
+  calls 1974 the release. The TEAC A-3340 is dated 1972, where sources say
+  1972 or 1973.
+- **A113.** Two of the fifteen edges are `consensus`: AMS to Joy Division
+  and Mu-Tron to Lee Perry. In both, the device is well attested, but no
+  session record ties it to a specific sound, and for the Mu-Tron the
+  model name varies between sources. The MS-10 to Juan Atkins edge is
+  `documented`, but it claims only what Atkins has said: he learned on
+  the instrument. It does not claim the MS-10 is audible on 'Alleys of
+  Your Mind', and the record and edge say so.
+- **A114.** `e-909-heard` is a new edge on an existing machine. The source
+  for the Juno-60 purchase names the TR-909 in the same breath, and
+  leaving it out would have made the Juno look like the whole story.
+- **A115.** Tony Visconti's often-quoted remark about the Harmonizer is
+  described in prose rather than quoted. The quotation is real, but it is
+  profane, and describing it loses nothing for the reader.
+- **A116.** The Stylophone record does not name its 1960s television
+  spokesman. That is left out because it has nothing to do with why the
+  machine is on the map, not to avoid the subject. If the dataset ever
+  covers him as a performer, his convictions belong in that record's
+  adult register as fact.
+- **A117.** A web search result for this batch credited Tony Visconti with
+  producing 'Space Oddity'. The single was produced by Gus Dudgeon, and
+  none of this batch's records repeats the error. Logged as another case,
+  after A62, where a confident secondary source was wrong about a credit.
