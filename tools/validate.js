@@ -90,6 +90,14 @@ const REQUIRED_FIELDS = {
   threads: ['id', 'title', 'subtitle', 'intro', 'steps', 'outro'],
 };
 
+// The end-year field per node shard, for the endUnknown check (Q20).
+const END_FIELDS = {
+  artists: 'activeTo',
+  machines: 'discontinuedYear',
+  scenes: 'yearTo',
+  labels: 'closedYear',
+};
+
 const errors = [];
 const warnings = [];
 function fail(msg) { errors.push(msg); }
@@ -173,6 +181,20 @@ for (const shard of SHARD_TYPES) {
     }
     if (shard === 'machines' && record.kind !== undefined && !MACHINE_KINDS.includes(record.kind)) {
       fail(`${where}: illegal machine kind "${record.kind}"`);
+    }
+
+    // Q20: `endUnknown: true` separates "the end is unsourced" from a plain
+    // null end, which means "still going". It only makes sense beside a
+    // null end year.
+    if ('endUnknown' in record) {
+      const endField = END_FIELDS[shard];
+      if (!endField) {
+        fail(`${where}: endUnknown is only allowed on artists, machines, scenes and labels`);
+      } else if (record.endUnknown !== true) {
+        fail(`${where}: endUnknown must be true when present (omit it otherwise)`);
+      } else if (record[endField] !== null) {
+        fail(`${where}: endUnknown is set but ${endField} is ${record[endField]}, not null`);
+      }
     }
   }
 }

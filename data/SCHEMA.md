@@ -15,6 +15,15 @@ Artist, machine, scene, and label ids share one namespace, since an edge's
 `from`/`to` can be any of the four with no type tag. A label named the same
 as an existing artist is a collision, checked globally by the validator.
 
+Every node's end year (`activeTo`, `discontinuedYear`, `yearTo`,
+`closedYear`) can be null, and null means **still going**. When the end
+is unknown rather than ongoing, add `"endUnknown": true` beside the null
+(Q20). The map then draws the span a few years past the start and fades
+it out, and the panel prints "1978–?" instead of "1978–now". The
+validator rejects `endUnknown` on a record whose end year is set, and
+rejects any value other than `true`. Leave the flag out entirely when it
+doesn't apply.
+
 All prose fields come in registers:
 `{ "age7": "...", "age13": "...", "adult": "..." }`
 
@@ -36,7 +45,9 @@ sortName
 type          "artist"
 lineage       "rock" | "electronic" | "hiphop" | "dub" | "funk" | "other"
 activeFrom    year
-activeTo      year or null
+activeTo      year or null (null = still active)
+endUnknown    optional, true when activeTo is null because the end is
+              unsourced, not because the artist is still active (Q20)
 originCity
 originCountry
 scenes        [scene ids]
@@ -60,6 +71,7 @@ lineage       "rock" | "electronic" | "hiphop" | "dub" | "funk" | "other"
               the machine's home lineage, for crossLineage checks on edges
               that touch it
 maker, releasedYear, discontinuedYear
+endUnknown    optional, see above
 originalPurpose   what it was sold as doing
 whatActuallyHappened
 priceStory    what it cost new, what it cost secondhand, why that mattered

@@ -26,6 +26,12 @@ export const CONFIG = {
     // yet (funk, other); reserving vertical space for them pushes the
     // populated lanes apart for no reading benefit.
     dropEmptyLanes: true,
+    // A record whose end is unknown (`endUnknown: true`, Q20) draws its
+    // span this many years past its start and fades it out, rather than
+    // running it to the present as if it were still going. Long enough to
+    // read as a span at the opening zoom, short enough not to claim a
+    // decade we can't source.
+    unknownEndFadeYears: 8,
   },
 
   // The machine substrate: a floor receding below the lineage lanes, with

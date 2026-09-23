@@ -50,6 +50,8 @@ function breathe(el, id) {
   );
 }
 
+const spanFadeId = (id) => `span-fade-${id}`;
+
 export function createNodeElement(node, onSelect, onHover) {
   const g = svgEl('g', { class: `node node-${node.kind}`, 'data-node-id': node.id });
   // Label placement in graph.js reads the name and hook lengths from here.
@@ -100,6 +102,24 @@ export function createNodeElement(node, onSelect, onHover) {
   g.__labels = labels;
 
   g.append(hitArea, span, place);
+
+  // An unknown end (Q20) fades the span out instead of stopping it dead,
+  // so it reads as "we don't know when" rather than "it ended here". The
+  // gradient is per node and in user space: a bounding-box gradient on a
+  // horizontal line has a zero-height box and renders nothing. Only a
+  // handful of records carry the flag, and the gradient is created and
+  // culled with its node.
+  if (node.endUnknown) {
+    const fade = svgEl('linearGradient', { id: spanFadeId(node.id), gradientUnits: 'userSpaceOnUse' });
+    fade.append(
+      svgEl('stop', { offset: '0%', 'stop-opacity': 1 }),
+      svgEl('stop', { offset: '100%', 'stop-opacity': 0 }),
+    );
+    const defs = svgEl('defs');
+    defs.appendChild(fade);
+    g.insertBefore(defs, span);
+  }
+
   breathe(body, node.id);
 
   g.addEventListener('click', () => onSelect(node));
@@ -143,12 +163,17 @@ export function updateNodeElement(g, node, position, zoomLevel, scale, degreeFac
 
   // A faint "orbital track" for the active-year span rather than a bold
   // Gantt bar -- the marker should read as the dominant shape.
+  if (node.endUnknown) {
+    const fade = g.querySelector('linearGradient');
+    setAttrs(fade, { x1: position.x1, y1: position.y, x2: position.x2, y2: position.y });
+    for (const stop of fade.children) stop.setAttribute('stop-color', color);
+  }
   setAttrs(span, {
     x1: position.x1,
     y1: position.y,
     x2: position.x2,
     y2: position.y,
-    stroke: color,
+    stroke: node.endUnknown ? `url(#${spanFadeId(node.id)})` : color,
     'stroke-width': strokeWidth,
     'stroke-opacity': isMachine ? 0.5 : 0.22,
     'stroke-dasharray': isMachine ? 'none' : `${1 / scale},${3 / scale}`,

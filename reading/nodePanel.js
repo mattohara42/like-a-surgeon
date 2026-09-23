@@ -10,8 +10,10 @@ import { h, tierSwatch } from './dom.js';
 import { pick } from './registers.js';
 import { youtubeLink } from './links.js';
 
-export function yearSpan(from, to) {
-  return `${from ?? '?'}–${to ?? 'now'}`;
+// A null end means "still going" unless the record says the end is
+// unknown (Q20), which prints as a question mark instead of "now".
+export function yearSpan(from, to, endUnknown = false) {
+  return `${from ?? '?'}–${to ?? (endUnknown ? '?' : 'now')}`;
 }
 
 function heading(key, register) {
@@ -26,13 +28,13 @@ function metaLine(node) {
   const r = node.raw;
   switch (node.kind) {
     case 'artist':
-      return [[r.originCity, r.originCountry].filter(Boolean).join(', '), yearSpan(r.activeFrom, r.activeTo)];
+      return [[r.originCity, r.originCountry].filter(Boolean).join(', '), yearSpan(r.activeFrom, r.activeTo, r.endUnknown)];
     case 'machine':
-      return [r.maker, yearSpan(r.releasedYear, r.discontinuedYear)];
+      return [r.maker, yearSpan(r.releasedYear, r.discontinuedYear, r.endUnknown)];
     case 'scene':
-      return [[r.city, r.country].filter(Boolean).join(', '), yearSpan(r.yearFrom, r.yearTo)];
+      return [[r.city, r.country].filter(Boolean).join(', '), yearSpan(r.yearFrom, r.yearTo, r.endUnknown)];
     case 'label':
-      return [r.city, yearSpan(r.foundedYear, r.closedYear)];
+      return [r.city, yearSpan(r.foundedYear, r.closedYear, r.endUnknown)];
     default:
       return [];
   }

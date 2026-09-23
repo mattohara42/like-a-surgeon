@@ -8,6 +8,8 @@
 // Never assumes the roster size: node/edge counts come entirely from what
 // the manifest or bundle actually contains.
 
+import { CONFIG } from '../config.js';
+
 const SHARD_TYPES = ['artists', 'machines', 'scenes', 'labels', 'edges', 'demos', 'threads'];
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -15,6 +17,9 @@ const CURRENT_YEAR = new Date().getFullYear();
 // Per-kind field mapping to a common {startYear, endYear} shape used by
 // layout. `endYear: null` on the record (still active/open) maps to the
 // current year so the node's span reaches the present on the time axis.
+// `endUnknown: true` alongside a null end means the end is unsourced, not
+// ongoing (Q20): the span stops a fixed distance past the start and is
+// drawn fading out.
 const YEAR_FIELDS = {
   artist: ['activeFrom', 'activeTo'],
   machine: ['releasedYear', 'discontinuedYear'],
@@ -46,7 +51,13 @@ function normalizeNode(kind, record) {
   const [startField, endField] = YEAR_FIELDS[kind];
   const startYear = record[startField] ?? null;
   const rawEnd = record[endField];
-  const endYear = rawEnd === null || rawEnd === undefined ? CURRENT_YEAR : rawEnd;
+  const endUnknown = record.endUnknown === true && (rawEnd === null || rawEnd === undefined);
+  let endYear = rawEnd;
+  if (endUnknown) {
+    endYear = Math.min(CURRENT_YEAR, (startYear ?? CURRENT_YEAR) + CONFIG.layout.unknownEndFadeYears);
+  } else if (rawEnd === null || rawEnd === undefined) {
+    endYear = CURRENT_YEAR;
+  }
   return {
     id: record.id,
     kind,
@@ -55,7 +66,8 @@ function normalizeNode(kind, record) {
     hook: record.hook ?? '',
     startYear,
     endYear,
-    open: rawEnd === null || rawEnd === undefined,
+    open: !endUnknown && (rawEnd === null || rawEnd === undefined),
+    endUnknown,
     raw: record,
   };
 }
