@@ -1,0 +1,32 @@
+{
+  "id": "e-tubby-princejammy",
+  "from": "king-tubby",
+  "to": "prince-jammy",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1979,
+  "crossLineage": false,
+  "evidence": "Prince Jammy joined King Tubby's studio in 1976 and was mixing most of the rhythms passing through it by 1977, before releasing his own dub album, 'Kamikazi Dub', in 1979 while still working out of Tubby's studio. Documented across multiple reggae biography sources (AllMusic, King Jammy Legacy, Enkis Music).",
+  "trackPair": {
+    "earlier": {
+      "artist": "King Tubby",
+      "title": "Home-built mixing desk, Waterhouse",
+      "year": 1968,
+      "search": false
+    },
+    "later": {
+      "artist": "Prince Jammy",
+      "title": "Kamikazi Dub",
+      "year": 1979
+    },
+    "whatToListenFor": "'Kamikazi Dub' is credited to Jammy alone, but it is built with Tubby's own studio and Tubby's mixing vocabulary, spring reverb, tape delay, sudden drop-outs, on musicians including Sly and Robbie and Augustus Pablo. Listen for the same desk-as-instrument approach as the earlier King Tubby and Scientist edges, from a third engineer Tubby trained."
+  },
+  "explanation": {
+    "age13": "Prince Jammy learned to mix records by working at King Tubby's studio starting in 1976. By 1979 he had made his own dub album there, still using Tubby's equipment and techniques, before eventually starting his own studio.",
+    "adult": "The third documented case on this map of King Tubby training an engineer who went on to a major solo career of his own, alongside Mad Professor's parallel (independently derived) desk-building and Scientist's direct apprenticeship. Jammy's later, more consequential break from analogue technique entirely, his 1985 production of 'Under Mi Sleng Teng' on a cheap digital keyboard, happened after he had left Tubby's studio and is not part of this particular claim; it is not yet its own edge, since the Casio MT-40 has no machine record on the map (BACKLOG)."
+  },
+  "tags": [
+    "production",
+    "technology"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "e-bootsycollins-parliamentfunkadelic",
+  "from": "bootsy-collins",
+  "to": "parliament-funkadelic",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1972,
+  "crossLineage": false,
+  "evidence": "Collins and his brother Catfish, along with fellow J.B.'s member Frankie 'Kash' Waddy, joined Funkadelic in 1972 after leaving James Brown's band. Bootsy played bass on Funkadelic's mid-1970s albums and rejoined Clinton's Parliament for 'Up for the Down Stroke' (1974), co-writing its title track (widely documented, including in Collins's own memoir and interviews cited by Rolling Stone and NPR).",
+  "trackPair": {
+    "earlier": {
+      "artist": "The J.B.'s",
+      "title": "The Grunt",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Parliament",
+      "title": "Up for the Down Stroke",
+      "year": 1974
+    },
+    "whatToListenFor": "'The Grunt' is a J.B.'s instrumental built around a tight, repeating bass figure with almost no ornamentation. 'Up for the Down Stroke', four years and one J.B.'s walkout later, keeps that same repeating-figure discipline but stretches it, adds Bernie Worrell's synthesizer, and lets Collins's bass talk back to the vocals instead of just holding time."
+  },
+  "explanation": {
+    "age13": "After leaving James Brown's band, Bootsy Collins joined George Clinton's Funkadelic, then helped write Parliament's first big hit for Casablanca Records, 'Up for the Down Stroke', two years later.",
+    "adult": "Collins carried James Brown's disciplined rhythm-section approach directly into Clinton's more experimental, synthesizer-heavy P-Funk sound, and 'Up for the Down Stroke' is usually cited as the record where that combination first became commercially undeniable."
+  },
+  "tags": [
+    "production"
+  ]
+}

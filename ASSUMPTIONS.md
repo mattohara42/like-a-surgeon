@@ -1455,3 +1455,57 @@ each disagreement.
   gaps, so nothing was built. Flagged to Matt; his answer was to drop it
   and keep the anti-goal as written, rather than pursue a synthesized/
   generated alternative.
+
+## Track D: funk/dub data batch 1
+
+- **A180. Funk and dub, batch 1: six artists, four labels, nine edges.**
+  Matt asked to prioritize Track D and, given the choice, picked funk
+  and dub, the two thinnest lineages by far (`npm run report` had them
+  at 6 and 7 artists respectively, against hip-hop's 32). Added:
+  Parliament-Funkadelic, Bootsy Collins and Curtis Mayfield (funk);
+  U-Roy, Scientist and Prince Jammy (dub); Casablanca and Curtom
+  (funk labels); Studio One and Treasure Isle (dub labels). All facts
+  were checked against multiple sources with WebSearch rather than
+  written from training data alone, given the accuracy rules' bar on
+  invented dates, credits and quotations; specific verified facts and
+  their sources are in each record's `evidence`/`ownershipStory` fields
+  rather than repeated here. `npm run validate` passes clean (0 errors,
+  same category of pre-existing warnings only); `npm run report` moves
+  funk from 7 to 12 total records and dub from 11 to 16.
+- **A181. Two label founding/closing years carry `endUnknown` rather
+  than a guessed date.** Studio One's post-2004 (Dodd's death)
+  operating status, and Treasure Isle's status after Sonia Pottinger
+  bought it in 1974, are not clearly established in the sources checked.
+  Both get `closedYear: null, endUnknown: true` rather than a null read
+  as "still going" (the ordinary meaning per SCHEMA.md) or an invented
+  closure year.
+  Treasure Isle's `foundedYear` (1962) is the one specific year sourcing
+  converged on, against looser "late 1950s" accounts of when Duke Reid's
+  broader liquor-store-and-sound-system business began; Studio One's
+  founding (1954) is the record label's start, distinct from the 1963
+  opening of its own Brentford Road studio, which the label's
+  `ownershipStory` states separately rather than conflating the two
+  dates.
+- **A182. Did not attribute 'Atomic Dog' to Parliament-Funkadelic.**
+  It's the P-Funk universe's most sampled track and the obvious choice
+  for a crossLineage sample edge into hip-hop, but it was released in
+  1982 as a George Clinton solo record, after Parliament and Funkadelic
+  had already dissolved as legal entities (1981), not under either band
+  name. Crediting it to the `parliament-funkadelic` node would be an
+  invented credit under CLAUDE.md's accuracy rules 2 and 3. Used
+  Funkadelic's 'Get Off Your Ass and Jam' (1975), correctly band-credited
+  and sampled on Public Enemy's 'Bring the Noise' (1988), for
+  `e-parliamentfunkadelic-publicenemy` instead. George Clinton's solo
+  catalogue, including 'Atomic Dog', waits on a `george-clinton` artist
+  node of its own; logged in BACKLOG rather than added here, since a
+  hip-hop-adjacent solo artist was out of this batch's funk/dub scope.
+- **A183. `kingston-dub`'s scene window (1968-1980) and its new
+  members.** U-Roy (1970 breakout), Scientist (joins Tubby's as a
+  teenager mid-1970s) and Prince Jammy (joins Tubby's 1976) all fall
+  inside the existing scene's year range, so all three were added to
+  its `memberIds` alongside King Tubby and Lee Perry, and each artist
+  record lists the scene back. Prince Jammy's 1985 'Under Mi Sleng
+  Teng', the record usually cited as ending the era the scene
+  describes, falls after the scene's own end year and is described in
+  his artist record without being pulled into the scene's membership
+  window.

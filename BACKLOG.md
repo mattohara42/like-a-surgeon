@@ -454,6 +454,24 @@ fixing them inline.)
 - Dr. Dre and G-funk: N.W.A is now on the map, so the BACKLOG note about
   the West Coast waiting on Parliament-Funkadelic now blocks only Dre's
   post-1991 work.
+  **Partly closed:** Parliament-Funkadelic is now on the map (funk/dub
+  batch 1, A180), with a sample edge to Public Enemy's 'Bring the Noise'
+  rather than to N.W.A, since the specific sample sourced was Public
+  Enemy's. Dre's post-1991 solo work, and the 'Atomic Dog' credit itself
+  (a George Clinton solo release, not band-credited, so it needs its own
+  artist node rather than attaching to Parliament-Funkadelic), are still
+  waiting.
+- The Casio MT-40's "rock" preset, programmed by Casio employee Okuda
+  Hiroko, is the entire backing track of Wayne Smith's 'Under Mi Sleng
+  Teng' (1985, produced by Prince Jammy), the record that began reggae's
+  digital era and is one of the most re-recorded riddims in the genre's
+  history. It's exactly the kind of machine-as-protagonist story
+  CLAUDE.md's audio section is built around, on the model of the TR-808
+  and the Roland TB-303 already on the map, but adding it was out of
+  scope for a session focused on funk/dub artists and labels (A180). The
+  MT-40 has no machine record yet; `e-tubby-princejammy`'s adult text
+  flags the gap rather than inventing an edge to a machine that isn't
+  there.
 
 - The transport's year readout ends at 2028. `layout.timeScale.yearEnd` is
   the latest year in the data plus `CONFIG.layout.marginYears` (2), and

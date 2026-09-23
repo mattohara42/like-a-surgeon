@@ -1,0 +1,31 @@
+{
+  "id": "e-parliamentfunkadelic-publicenemy",
+  "from": "parliament-funkadelic",
+  "to": "public-enemy",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1988,
+  "crossLineage": true,
+  "evidence": "Public Enemy's 'Bring the Noise' (1988) samples Funkadelic's 'Get Off Your Ass and Jam' (1975), as documented on WhoSampled and in liner/production breakdowns of 'It Takes a Nation of Millions to Hold Us Back'. The Bomb Squad drew on Parliament-Funkadelic material across multiple Public Enemy records of the period.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Funkadelic",
+      "title": "Get Off Your Ass and Jam",
+      "year": 1975
+    },
+    "later": {
+      "artist": "Public Enemy",
+      "title": "Bring the Noise",
+      "year": 1988
+    },
+    "whatToListenFor": "Funkadelic's original is a loose, live-sounding jam built to fill a dance floor. The Bomb Squad chops it into a hard, repeating stab buried under sirens, scratches and Chuck D's vocal, the same move e-jamesbrown-publicenemy describes with 'Funky Drummer': the source record's groove becomes raw material for something faster, louder and more urgent."
+  },
+  "explanation": {
+    "age7": "Public Enemy's producers took a piece of a Funkadelic song from 1975 and built a much louder, faster rap song out of it years later.",
+    "age13": "'Bring the Noise' (1988) samples Funkadelic's 'Get Off Your Ass and Jam' (1975). The Bomb Squad, Public Enemy's production team, treated P-Funk's records the same way they treated James Brown's: as raw material for a dense, aggressive new sound.",
+    "adult": "P-Funk's catalogue, alongside James Brown's, is one of the two largest funk sources for the Bomb Squad's production style, and 'Bring the Noise' is one of several Public Enemy records built partly from Parliament-Funkadelic material. This is the sample lineage N.W.A's entry on this map (BACKLOG) anticipated once Parliament-Funkadelic went on the map, though it runs through Public Enemy rather than Dre's later, still-unmapped solo production."
+  },
+  "tags": [
+    "production"
+  ]
+}
