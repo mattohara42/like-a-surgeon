@@ -194,6 +194,13 @@ fixing them inline.)
   axis's two margin years, so the year readout shows 2028 in 2026. It reads
   as the map claiming to know the future. The cursor should probably clamp
   to the current year. Not touched, since the transport is not M3 work.
+- At 1280x800 the bottom lineage lane (`other`) draws under the timeline
+  transport, so Schaeffer, Stockhausen, Oram, Ahmad Jamal and their labels
+  sit behind the play bar and are hard to read or click. The outré
+  electronic batch made it more visible by adding six nodes to that lane.
+  Either the lane stack should reserve the transport's height, or the
+  transport should not overlap the plot. Not touched, since it's layout
+  work outside Track D.
 - `label.founders` holds plain names ("Juan Atkins") rather than ids, so the
   label panel prints founders as text while the artist panel links the same
   person. Resolving names to ids at render time would be guesswork. An id

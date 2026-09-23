@@ -1034,3 +1034,72 @@ These cover what changed in `render/` to carry it, and what it supersedes.
 - **A144. The Beatles' legal action over Paul's Boutique is reported, not
   resolved.** Sources say their side pursued it. I couldn't source the
   outcome, so the records say "reported" and stop there.
+
+
+## Added during the outré electronic batch (Track D batch 3)
+
+- **A145. Why this batch, and why now.** Q21 finished, and Matt said to
+  keep going without naming a subject. I took the next unstarted entry in
+  BUILD_PLAN's Track D order: musique concrète, the Radiophonic Workshop,
+  krautrock and early IDM. Matt said he will add sources soon, so every
+  record here was written from standard histories checked with web
+  searches, and each edge's `evidence` says what it rests on. Nothing is
+  footnoted to a page. When Matt's sources arrive they should be checked
+  against A146 to A152 first, because those are where I made a choice.
+- **A146. The roster.** Schaeffer, Stockhausen, Oram, Derbyshire, Wendy
+  Carlos, Can, Neu!, Conny Plank, Tangerine Dream, Brian Eno, Aphex Twin
+  and Autechre, plus the Moog modular, two scenes (Paris musique concrète,
+  the BBC Radiophonic Workshop) and Warp. Every new node has at least one
+  edge, and most edges join the new material to something already on the
+  map (Kraftwerk, Bowie, the Beatles, PiL, Detroit techno). IDM got a
+  label, not a scene, because Warp's framing is the documented thing and
+  "IDM" as a scene name is disputed by the people in it. Krautrock also
+  got no scene node, since the existing Düsseldorf scene covers Neu! and
+  a wider "krautrock" node would be a journalist's category.
+- **A147. End years are deaths where the stopping point isn't sourced.**
+  Schaeffer (1995) and Oram (2003) use their death years, and the adult
+  text says so. Derbyshire uses 1975, when accounts say she stopped
+  making music. Can uses 1979, when the band stopped working regularly,
+  with reunions mentioned in the text. Neu! uses 1975, the last of the
+  three original albums, which ignores the 1980s sessions released in
+  1995. Stockhausen's start (1952) is his first tape piece, not his first
+  composition. Conny Plank's start (1969) and Autechre's (1987) are
+  approximations.
+- **A148. Lineages.** Schaeffer, Stockhausen, Oram, Derbyshire and both
+  new scenes are `other`, since none of them sits in a pop lineage and
+  inventing an "art music" lineage would be a schema change. Can and Eno
+  are `rock`, since that's where they played and were heard. Neu! is
+  `electronic`, matching Kraftwerk and the Düsseldorf scene, though their
+  records are guitar and drums. That's the most arguable call in the
+  batch, and it makes e-kraftwerk-neu same-lineage.
+- **A149. Two edges are consensus because the specific claim outruns the
+  documentation.** e-stockhausen-beatles: the Beatles' interest is
+  documented, but the Hymnen to 'Revolution 9' pairing is Ian MacDonald's
+  critical reading, and Yoko Ono's own avant-garde background is an
+  equally good route. e-can-pil: Lydon played Can on Capital Radio in
+  July 1977, but the debt of Metal Box to Can in particular is critical
+  consensus.
+- **A150. Scene-sourced edges where the method, not a person, travelled.**
+  e-musiqueconcrete-oram runs from the Paris scene because Oram's direct
+  contact with Schaeffer isn't sourced. e-radiophonic-derbyshire runs
+  from the Workshop because the institution's equipment and rules made
+  both the record and the lack of credit. e-detroittechno-warp runs from
+  the scene to the label because the founders cite imported Detroit
+  records in general. Its later track is LFO's 'LFO', and LFO are not on
+  the map yet.
+- **A151. Wendy Carlos is named as Wendy Carlos throughout.** Her early
+  pressings carried her former name. The adult text says so without
+  printing it. That matches how she's credited on reissues.
+- **A152. Stockhausen's 2001 remarks are stated, not judged.** The adult
+  register records that his comments about the September 11 attacks were
+  widely reported, that concerts were cancelled, and that he said he had
+  been misreported. Same approach as A138. Aphex Twin's own contradictory
+  stories about his gear and past are flagged, and the text doesn't
+  repeat any of them as fact.
+- **A153. Small edits to existing records.** David Bowie's
+  `keyProducers` now points at the new `brian-eno` id instead of the plain
+  name, which clears one validator warning. Neu! is added to the
+  Düsseldorf scene's `memberIds`. That scene still has no edge, so its
+  orphan warning stays. The two new scenes use a new motif key,
+  `tape-reel`. Nothing renders motifs yet, so this is only a name for the
+  card designer.
