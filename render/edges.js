@@ -87,6 +87,11 @@ function beamPath(anchors, scale) {
   );
 }
 
+function tierAdjustedOpacity(edge) {
+  const base = edge.crossLineage ? CONFIG.edge.crossLineageOpacity : CONFIG.edge.opacity;
+  return base * (CONFIG.edge.tierOpacity[edge.confidence] ?? 1);
+}
+
 export function isBeam(edge) {
   return edge.from.kind === 'machine' && edge.to.kind !== 'machine';
 }
@@ -146,7 +151,7 @@ export function updateEdgeElement(g, edge, anchors, scale, gradientIds) {
   const widthFactor = edge.crossLineage ? CONFIG.edge.crossLineageWidthFactor : 1;
   const baseWidth =
     ((CONFIG.edge.strokeWidth[edge.confidence] ?? CONFIG.edge.strokeWidth.consensus) * widthFactor) / scale;
-  const baseOpacity = edge.crossLineage ? CONFIG.edge.crossLineageOpacity : CONFIG.edge.opacity;
+  const baseOpacity = tierAdjustedOpacity(edge);
 
   const line = g.querySelector('.edge-line');
   setAttrs(line, {
@@ -154,6 +159,8 @@ export function updateEdgeElement(g, edge, anchors, scale, gradientIds) {
     stroke: `url(#${gradientIds.trail})`,
     'stroke-width': baseWidth,
     'stroke-dasharray': scaleDasharray(CONFIG.edge.dashArray[edge.confidence] ?? 'none', scale),
+    // Round caps turn the asserted tier's short dashes into dots.
+    'stroke-linecap': 'round',
     'stroke-opacity': baseOpacity,
   });
 
@@ -197,6 +204,5 @@ export function setEdgeHovered(g, edge, hovered) {
   g.classList.toggle('edge-hovered', hovered);
   const line = g.querySelector('.edge-line');
   if (!line) return;
-  const baseOpacity = edge.crossLineage ? CONFIG.edge.crossLineageOpacity : CONFIG.edge.opacity;
-  line.setAttribute('stroke-opacity', hovered ? CONFIG.edge.hoverOpacity : baseOpacity);
+  line.setAttribute('stroke-opacity', hovered ? CONFIG.edge.hoverOpacity : tierAdjustedOpacity(edge));
 }

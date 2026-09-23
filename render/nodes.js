@@ -52,6 +52,8 @@ function breathe(el, id) {
 
 export function createNodeElement(node, onSelect, onHover) {
   const g = svgEl('g', { class: `node node-${node.kind}`, 'data-node-id': node.id });
+  // Label placement in graph.js reads the name and hook lengths from here.
+  g.__node = node;
 
   // Invisible, generously sized hit area: the visible shapes (a thin line,
   // a small circle, text) don't cover enough of the node's on-screen
@@ -193,7 +195,7 @@ export function updateNodeElement(g, node, position, zoomLevel, scale, degreeFac
   if (showLabel) {
     setAttrs(label, {
       x: position.x1,
-      y: position.y - radius - 9 / scale,
+      y: position.y - radius - CONFIG.node.labelGapPx / scale,
       'text-anchor': 'middle',
       'font-size': CONFIG.node.labelFontSize / scale,
       fill: CONFIG.colors.ink,
@@ -209,7 +211,7 @@ export function updateNodeElement(g, node, position, zoomLevel, scale, degreeFac
   if (showHook) {
     setAttrs(hook, {
       x: position.x1,
-      y: position.y + radius + 14 / scale,
+      y: position.y + radius + CONFIG.node.hookGapPx / scale,
       'text-anchor': 'middle',
       'font-size': CONFIG.node.hookFontSize / scale,
       fill: CONFIG.colors.dim,
@@ -218,7 +220,7 @@ export function updateNodeElement(g, node, position, zoomLevel, scale, degreeFac
       'stroke-width': 3 / scale,
       'stroke-linejoin': 'round',
     });
-    hook.textContent = truncate(node.hook, 60);
+    hook.textContent = truncate(node.hook, CONFIG.node.hookMaxChars);
   }
 }
 

@@ -25,6 +25,7 @@ function lineagePlan() {
       title: lineage.toUpperCase(),
       color: lineageColor(lineage),
       groupId: null,
+      titleAtContent: false,
     })),
     laneOf: (node) => node.lineage,
   };
@@ -71,7 +72,7 @@ function groupPlan(kind, allNodes) {
         groupId: null,
       })),
       { key: UNGROUPED, title: CONFIG.arrange.ungroupedTitles[kind], color: CONFIG.colors.laneLabel, groupId: null },
-    ],
+    ].map((lane) => ({ ...lane, titleAtContent: true })),
     laneOf,
   };
 }

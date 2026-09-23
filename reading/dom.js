@@ -47,6 +47,8 @@ export function tierSwatch(confidence) {
     stroke: 'currentColor',
     'stroke-width': width,
     'stroke-dasharray': dash,
+    'stroke-linecap': 'round',
+    'stroke-opacity': CONFIG.edge.tierOpacity[confidence] ?? 1,
   })) line.setAttribute(k, v);
   svg.appendChild(line);
   return svg;

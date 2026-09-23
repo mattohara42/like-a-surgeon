@@ -729,3 +729,44 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   lane's earliest member rather than at the axis origin. That keeps them
   near the content when the reader is zoomed into the middle of the map.
 
+## Added while building M3 step 5 (typography and legibility)
+
+- **A99.** The three confidence tiers now differ on two channels instead of
+  half a pixel of width. Documented is solid at 2.6px and full strength.
+  Consensus is solid at 1.4px and 55% of the opacity. Asserted is dotted. The
+  legend swatches read the same values, including opacity, so they cannot
+  drift from the map. This changes how the map looks everywhere, so it is
+  the step-5 change most worth Matt's eye.
+- **A100.** Label collisions are handled by placement, not by alternating
+  label side and offset as the plan said. Alternating only moves the
+  problem: a row whose labels sit below meets the next row's labels sitting
+  above. Each frame now places names in priority order (the selected node,
+  then by connectedness, then earliest) and hides a name that would overlap
+  one already placed, until zooming in makes room. Hooks go after all
+  names. Measured: zero overlaps at every zoom level tested, and 0.9ms for
+  the slowest render over 30 pan frames. Labels still ignore other nodes'
+  markers (BACKLOG).
+- **A101.** The opening view keeps the legend's width clear on the left.
+  Doing that at 1280px first pushed the fit to scale 0.34, the `collapsed`
+  zoom level, and the map opened with no names on it. The fit now has a
+  floor (`CONFIG.viewport.fitMinScale`, 0.36) just inside the level where
+  names show. Names win over perfect clearance: at 1280x800 the leftmost
+  marker lands at x=357 against the legend's right edge at 318.
+- **A102.** Contrast was measured, not assumed, against the drawer's actual
+  background: ink 17.3:1, body 12.6:1, hook 14.6:1, links 11.0:1, and the
+  dimmest text 5.8:1. All pass WCAG AA, so no colour changed.
+- **A103.** The plan asked for a 60 to 70 character measure. At the drawer's
+  430px width and the new 16px body size, the measure is about 48
+  characters. That is inside the comfortable range but short of the target.
+  Widening the drawer enough to reach 60 would cover more than 40% of a
+  1280px map, so the width stays and the shortfall is recorded here instead.
+- **A104.** The reading surface's type sizes and line heights live in
+  `CONFIG.type`, and `reading/type.js` publishes them as CSS custom
+  properties (`--t-*`, `--lh-*`). The stylesheet keeps its selectors and
+  colours but holds no sizes for the panel or legend. Reading text has a
+  16px floor. Secondary notes are 15px, and the monospaced kickers and
+  headings stay small because they are labels, not text to read.
+- **A105.** In scene and label views, every lane is titled next to its
+  earliest member, including "NOT IN A SCENE YET" and "LABELS". At the axis
+  origin, one of those titles printed on top of a 1950s marker.
+

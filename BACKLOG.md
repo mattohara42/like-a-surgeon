@@ -77,6 +77,8 @@ correct response to a good idea arriving mid-milestone.
   crowded years (1976-79 rock, 1983-87 Chicago/Detroit). Zooming in clears
   it. The real fix is label placement that alternates side and offset, which
   belongs with M3's typography pass rather than in layout.
+  **Resolved in M3 step 5** by label placement rather than alternation. See
+  A100.
 - **Detail panels.** The prototype's reading panel (hook, register toggle,
   signature tracks, evidence, navigable edge list) is not ported: it is M3,
   and M3 has not been opened. `onSelectNode`/`onSelectEdge` still only log.
@@ -131,11 +133,23 @@ correct response to a good idea arriving mid-milestone.
 (Claude Code: record code smells and architectural concerns here rather than
 fixing them inline.)
 
+- Node labels are placed so they never overlap each other (A100), but they
+  can still run under a neighbouring node's marker: each node's group
+  paints its own label, and a later node paints over it. "Bunny 'Striker'
+  Lee" under King Tubby is the visible case. The fix is to draw every name
+  and hook in one labels layer above all the markers, the same move A97 made
+  for lane titles. It touches the node drawing code, so it gets its own
+  change. The machine floor has the same issue between "The dubplate" and
+  the "THE MACHINES" title.
+
 - The expanded legend covers the left ends of the lowest lane titles in
   every arrangement ("NOT IN A SCENE YET", "THE MACHINES", and the lineage
   titles before it). A lane title drawn at the axis origin can also collide
   with a member marker in the same years. Both are for the step 5
   typography pass, which already owns label collisions.
+  **Mostly resolved in M3 step 5:** lane titles in scene and label views sit
+  beside their content, and the opening view keeps the legend's width clear
+  (A101, A105). Once the reader pans, the legend is an ordinary overlay.
 
 - `signatureTracks` titles mix the title with credit notes ("Big Fun (Inner
   City)", "The Bridge (produced for MC Shan)"), so the YouTube query built
@@ -151,6 +165,7 @@ fixing them inline.)
   encoding, such as a wider gap in width, a second dash pattern, or
   consensus drawn slightly fainter. That is a renderer decision, so it
   belongs in the typography pass (M3 step 5) or with Matt, not in the legend.
+  **Resolved in M3 step 5:** each tier now differs on two channels. See A99.
 
 - The app has never run from `file://`: the ES module entry point is
   blocked as cross-origin, and `index.html` does not load the data bundle.

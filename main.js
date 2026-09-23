@@ -18,6 +18,7 @@ import { renderNodePanel } from './reading/nodePanel.js';
 import { renderEdgePanel } from './reading/edgePanel.js';
 import { createLegend } from './reading/legend.js';
 import { createSearch } from './reading/search.js';
+import { applyTypeScale } from './reading/type.js';
 
 const statusEl = document.getElementById('status');
 const appEl = document.getElementById('app');
@@ -38,6 +39,7 @@ function setStatus(text, isError = false) {
 }
 
 async function main() {
+  applyTypeScale();
   let data;
   try {
     data = await loadGraphData();
@@ -170,6 +172,8 @@ async function main() {
       initialYear: carried.year,
       initialSelectedId: carried.selected,
       rightInset: () => panel.coveredWidth(),
+      // The opening view starts clear of the legend (M3 step 5).
+      leftInset: () => legendEl.offsetLeft + legendEl.offsetWidth,
       // The graph has already flown the camera; the panel only opens.
       onSelectNode: (node) => panel.open({ kind: 'node', id: node.id }),
       onSelectEdge: (edge) => panel.open({ kind: 'edge', id: edge.id }),

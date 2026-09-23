@@ -51,6 +51,15 @@ export const CONFIG = {
     labelFontSize: 11,
     hookFontSize: 10,
     labelMaxChars: 28,
+    hookMaxChars: 60,
+    // Screen px between a marker and its name above it / its hook below it.
+    labelGapPx: 9,
+    hookGapPx: 14,
+    // Label placement (graph.js placeLabels): an average glyph is about this
+    // wide in ems for the system sans the map uses, and each label keeps
+    // this much clear space around it.
+    labelCharWidthEm: 0.58,
+    labelPadPx: 2,
     // "Planet size" by graph connectedness (in+out edge count), not record
     // sales -- see ASSUMPTIONS.md. Multiplies the per-zoom-level base
     // radius above; sqrt of degree so area, not radius, scales roughly
@@ -68,8 +77,16 @@ export const CONFIG = {
   },
 
   edge: {
-    strokeWidth: { documented: 2, consensus: 1.5, asserted: 1 },
-    dashArray: { documented: 'none', consensus: 'none', asserted: '4,3' },
+    // The three confidence tiers must be told apart at a glance, because
+    // telling "someone said so" from "critics agree" from "our reading" is
+    // part of what the map teaches (SPEC.md). Width alone did not do it:
+    // 2px against 1.5px was invisible at map opacity (BACKLOG). So each
+    // tier differs on two channels: documented is solid and full strength,
+    // consensus is thinner and fainter, and asserted is dotted.
+    strokeWidth: { documented: 2.6, consensus: 1.4, asserted: 1.6 },
+    dashArray: { documented: 'none', consensus: 'none', asserted: '0.5,4' },
+    // Multiplies the line's base opacity (and the legend swatch's).
+    tierOpacity: { documented: 1, consensus: 0.55, asserted: 0.9 },
     hitAreaWidth: 14,
     opacity: 0.5,
     hoverOpacity: 0.95,
@@ -141,6 +158,11 @@ export const CONFIG = {
     fitPaddingPx: 70,
     fitBottomInsetPx: 104,   // the transport bar
     fitMaxScale: 1.1,
+    // The opening view never fits so far out that it lands in the
+    // `collapsed` zoom level, where names are hidden. Reserving room for the
+    // legend (M3 step 5) pushed a 1280px fit to exactly that edge, and a map
+    // that opens with no names on it invites nobody. Just inside `mid`.
+    fitMinScale: 0.36,
   },
 
   // Which record types are drawn, and how each one is drawn when it is.
@@ -172,6 +194,23 @@ export const CONFIG = {
     ],
     defaultRegister: 'age13',
     storageKey: 'lineage.register.v1',
+  },
+
+  // Type scale for the reading surface (M3 step 5). Applied as CSS custom
+  // properties (--t-*, --lh-*) by reading/type.js, so the stylesheet holds
+  // no sizes of its own for the panel and legend. Reading text has a 16px
+  // floor for the primary reader. Secondary notes sit one step down, and
+  // the monospaced kickers and headings are labels rather than text to read.
+  type: {
+    size: {
+      kicker: 10.5, heading: 10.5, meta: 11.5, link: 11.5,
+      control: 13, chip: 13.5,
+      note: 15, row: 15.5,
+      body: 16, track: 16,
+      listen: 18.5, hook: 19, title: 30,
+      legend: 13, 'legend-note': 12.5,
+    },
+    lineHeight: { body: 1.62, note: 1.55, listen: 1.55, hook: 1.45 },
   },
 
   // The detail drawer. Overlays the map from the right (Q13), so the camera

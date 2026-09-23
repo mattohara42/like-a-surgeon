@@ -228,8 +228,8 @@ avoids both a licensing question and a network request. The pass covers:
 - A 16px body-size floor in the panel and a measure of about 60 to 70
   characters.
 - Contrast checked against the dark ground.
-- The label-collision fix deferred from the Strata port, alternating label
-  side and offset in the crowded years.
+- The label-collision fix deferred from the Strata port. Built as priority
+  placement rather than the alternation first planned here (A100).
 
 All sizes go in `CONFIG.type`.
 
