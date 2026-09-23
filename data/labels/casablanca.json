@@ -1,0 +1,19 @@
+{
+  "id": "casablanca",
+  "name": "Casablanca Records",
+  "type": "label",
+  "lineage": "funk",
+  "foundedYear": 1973,
+  "closedYear": 1986,
+  "city": "Los Angeles",
+  "founders": [
+    "Neil Bogart"
+  ],
+  "ownershipStory": "Neil Bogart founded Casablanca in 1973 after leaving Buddah Records, and built it into one of the most extravagant labels of the 1970s, known for spending heavily on its artists' live shows and promotion, including Parliament's Mothership stage prop, funded on Bogart's word alone. PolyGram bought a 50% stake and then the rest of the company by 1980, pushed Bogart out over the spending and accounting practices that had made the label famous, and ran it at reduced scale before folding it into Mercury Records in 1986.",
+  "hook": "The label that bought a funk band a spaceship, then got bought out itself for spending like one.",
+  "blurb": {
+    "age7": "Casablanca was a record label known for spending huge amounts of money on its artists' shows, including buying Parliament a giant fake spaceship for their concerts.",
+    "age13": "Neil Bogart started Casablanca Records in 1973 and made it famous for spending big on its artists, including paying for Parliament's spaceship stage prop. The bigger company PolyGram eventually bought Casablanca, pushed Bogart out over the spending, and shut the label down in 1986.",
+    "adult": "Casablanca's business model, bet heavily on an act's image and stage show rather than just its records, produced one of the most memorable stage productions in funk history and also the overspending that ended the label's independence within a decade of its founding."
+  }
+}

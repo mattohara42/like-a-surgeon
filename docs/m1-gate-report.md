@@ -8,13 +8,13 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 92 | 120 | 77% |
+| artists | 98 | 120 | 82% |
 | machines | 30 | 25 | met |
 | scenes | 10 | 20 | 50% |
-| labels | 17 | 30 | 57% |
-| edges | 153 | 350 | 44% |
+| labels | 21 | 30 | 70% |
+| edges | 162 | 350 | 46% |
 | threads | 2 | 5 | 40% |
-| crossLineageEdges | 64 | 60 | met |
+| crossLineageEdges | 65 | 60 | met |
 | edgesWithDemo | 4 | 30 | 13% |
 
 ## Counts by lineage
@@ -27,8 +27,8 @@ Every node type, since machines, scenes and labels carry a lineage too.
 | hiphop | 37 |
 | rock | 27 |
 | other | 26 |
-| dub | 11 |
-| funk | 7 |
+| dub | 16 |
+| funk | 12 |
 
 Artists alone:
 
@@ -38,19 +38,19 @@ Artists alone:
 | electronic | 18 |
 | rock | 18 |
 | other | 11 |
-| dub | 7 |
-| funk | 6 |
+| dub | 10 |
+| funk | 9 |
 
 ## Counts by edge type
 
 | edge type | count |
 |---|---:|
 | technological | 43 |
-| direct | 36 |
-| production | 21 |
-| sample | 19 |
+| direct | 38 |
+| production | 23 |
+| sample | 20 |
+| label | 17 |
 | scene | 17 |
-| label | 13 |
 | reaction-against | 2 |
 | cover | 1 |
 | rediscovery | 1 |
@@ -59,8 +59,8 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 99 |
-| consensus | 53 |
+| documented | 107 |
+| consensus | 54 |
 | asserted | 1 |
 
 ## The 20 edges to read hardest
@@ -233,126 +233,126 @@ Evidence: John Lydon played Can on his guest programme on Capital Radio on 16 Ju
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 153 edges that carry one.
+Drawn with seed 1 from the 162 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-sade-mfdoom`
+### 1. `e-sl1200-theodore`
 
-Sade, "Kiss of Life" (1992) to MF DOOM, "Doomsday" (1999)
+Technics, "SL-1200 as a domestic hi-fi turntable" (1972) to Grand Wizzard Theodore, "the scratch" (1975)
 
-'Kiss of Life' is warm and slow, with soft keyboards, a gentle bass and Sade's calm voice. DOOM loops a piece of that warmth and puts his flat, deadpan voice over it. Listen for the contrast: a love song's smoothness under a rapper describing coming back from the worst years of his life.
+Listen to the pitch of a scratch. It bends down as the hand slows the record and snaps back up the instant it is released, and the snap is the motor recovering almost immediately. On a belt-driven deck that recovery is a slow sag, which is a different and much less usable sound. The character of the scratch is partly the character of the motor.
 
-### 2. `e-ruffhouse-goats`
+### 2. `e-bootsycollins-parliamentfunkadelic`
 
-Cypress Hill, "How I Could Just Kill a Man" (1991) to The Goats, "Tricks of the Shade (album)" (1992)
+The J.B.'s, "The Grunt" (1970) to Parliament, "Up for the Down Stroke" (1974)
 
-Ruffhouse's first two rap records, a year apart and from the same studio, went opposite ways. Cypress Hill's is built from samples, murky and looped. Tricks of the Shade is backed by a live band, with horns and piano played by musicians, under three voices trading political verses and sketches. Listen for players rather than loops, and for how much the label let a debut album sprawl: twenty-five tracks, with a story running through them.
+'The Grunt' is a J.B.'s instrumental built around a tight, repeating bass figure with almost no ornamentation. 'Up for the Down Stroke', four years and one J.B.'s walkout later, keeps that same repeating-figure discipline but stretches it, adds Bernie Worrell's synthesizer, and lets Collins's bass talk back to the vocals instead of just holding time.
 
-### 3. `e-tommyboy-bambaataa`
+### 3. `e-tubby-sly-robbie`
+
+King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Sly and Robbie, "Sinsemilla (Black Uhuru)" (1980)
+
+Tubby empties a finished mix out until the rhythm is nearly all that's left. Sly and Robbie build the rhythm that way from the start: drum and bass carrying the song, everything else arranged around them rather than the other way around.
+
+### 4. `e-tommyboy-bambaataa`
 
 Afrika Bambaataa & the Soulsonic Force, "Zulu Nation Throwdown" (1980) to Afrika Bambaataa and the Soulsonic Force, "Planet Rock" (1982)
 
 Two records by the same crew on two labels. The Winley single is rap over a band track arranged for them, the sound most rap records had after 'Rapper's Delight'. 'Planet Rock' is what happened when the new label paired Bambaataa with a producer: his record collection, Kraftwerk included, rebuilt in a studio around a drum machine. Listen for whose taste is running the record.
 
-### 4. `e-peterock-nas`
+### 5. `e-tribe-dilla`
 
-Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992) to Nas, "The World Is Yours" (1994)
+A Tribe Called Quest, "Electric Relaxation" (1993) to Janet Jackson, "Got 'til It's Gone (produced by The Ummah)" (1997)
 
-Two years apart and the same idea from Pete Rock: a soft jazz phrase looped under heavy drums, turned melancholy. On 'T.R.O.Y.' it's a saxophone. On 'The World Is Yours' it's a gentle piano from an Ahmad Jamal record. Listen for how the piano keeps circling while Nas talks about ambition, the sweetness of the loop working against the hardness of the words.
+'Electric Relaxation' loops a warm keyboard figure from a Ronnie Foster record under soft drums, mellow and unhurried. 'Got 'til It's Gone' keeps that mood and takes it to pop radio. It loops Joni Mitchell's own voice and guitar from 'Big Yellow Taxi', with Q-Tip rapping and Janet Jackson singing softly over the top. Listen for how soft the drums are and how far back they sit, so the sample and the voices carry the song.
 
-### 5. `e-honeydrippers-marleymarl`
+### 6. `e-dilla-madlib`
+
+Slum Village, "Fall in Love" (2000) to Jaylib, "Champion Sound (album)" (2003)
+
+On Champion Sound you can hear two producers side by side on one album, since each raps over the other's beats. Listen for the difference: Dilla's tracks have his leaning, off-grid drums and warm, filtered loops, as on 'Fall in Love'. Madlib's are dustier and more collaged, with odder samples and rougher edges. It's a conversation between two ways of sampling, conducted by post.
+
+### 7. `e-bootee-mellemel`
+
+Duke Bootee, "The Message, written and demoed" (1980) to Grandmaster Flash and the Furious Five, "The Message" (1982)
+
+There are two rappers on this record and they do not sound alike. Bootee's delivery is even and conversational, closer to someone talking you through something. Mel's is heavier, slower, landing on the beat like a weight. The famous part, the last verse that turns the song from description into a life, is Mel. Knowing which voice is which changes how the record reads.
+
+### 8. `e-jamesbrown-bootsycollins`
+
+James Brown, "Sex Machine" (1970) to Bootsy's Rubber Band, "Bootzilla" (1978)
+
+On 'Sex Machine', Collins is eighteen and playing inside Brown's discipline: the bass holds the groove down and stays out of the way. Eight years later on his own record, the same bass instinct has become the whole show, elastic, cartoonish and grinning, with a wah pedal doing to the tone what the J.B.'s taught him to do to the rhythm.
+
+### 9. `e-pil-joydivision`
+
+Public Image Ltd, "Public Image" (1978) to Joy Division, "Transmission" (1979)
+
+Both push the bass into the lead role a guitar or vocal would normally hold, leaving space around it rather than filling every bar, even though the two basslines sound nothing alike.
+
+### 10. `e-cobham-soulsofmischief`
+
+Billy Cobham, "Heather" (1974) to Souls of Mischief, "93 'til Infinity" (1993)
+
+Start with 'Heather': slow, almost drifting, a lazy bassline and a marimba floating over it. Then play '93 'til Infinity'. A-Plus sped up that bassline and marimba so they bounce instead of float, put his own drums under them, and brought the horns in from the same record. Listen for how the same notes change mood with speed alone, from a daydream to a head-nod.
+
+### 11. `e-rubin-beastieboys`
+
+LL Cool J, "I Can't Live Without My Radio" (1985) to Beastie Boys, "No Sleep till Brooklyn" (1986)
+
+Same producer, a year apart. On LL's record Rubin cut everything down to a booming drum machine and a voice. On 'No Sleep till Brooklyn' he keeps the booming drums and adds the other thing he loved: heavy metal guitar, riffs he played himself and a solo from Slayer's Kerry King. Listen for the moment the solo tears through. Rap and metal on one track, from a producer making Slayer's album in the same period.
+
+### 12. `e-honeydrippers-marleymarl`
 
 The Honey Drippers, "Impeach the President" (1973) to MC Shan, "The Bridge (produced by Marley Marl)" (1986)
 
 The song opens on its drums alone for a few bars: a bouncy kick, a snare with a bright crack, and an open hi-hat that breathes between hits. Then play 'The Bridge'. Marl has lifted that kick and snare and set them against the steady tick of a drum machine's hi-hat. Listen for the two sources side by side: the real drum carrying a room and a tape hiss, the machine's hat perfectly even.
 
-### 6. `e-madlib-mfdoom`
+### 13. `e-marshall-who`
 
-MF DOOM, "Doomsday" (1999) to Madvillain, "Accordion" (2004)
+Marshall, "JTM45, and the 100-watt version built for Townshend" (1965) to The Who, "My Generation" (1965)
 
-On 'Doomsday' DOOM produces himself, looping a smooth, sweet phrase from Sade's 'Kiss of Life' under his flat, unhurried voice. On 'Accordion' Madlib gives him something stranger: a wheezing, reedy loop that sounds like an accordion but was played on a cheap electric chord organ. Listen for how the rougher, odder beat pushes DOOM's rhyming, dense chains of internal rhyme packed into a short verse over one repeating figure.
+Skip to the last stretch of the song, where it stops behaving like a song. The guitar howls with feedback, notes hang on far longer than a string alone would let them, and the drums crash around underneath. Feedback like that needs a guitar held near a very loud amplifier. The Who built their live show on that volume, and this record brings it into the studio.
 
-### 7. `e-elpico-kinks`
+### 14. `e-808-manparrish`
 
-Dave Davies, "Elpico amplifier with a slashed speaker" (1964) to The Kinks, "You Really Got Me" (1964)
+Roland, "TR-808 factory voices" (1980) to Man Parrish, "Hip Hop, Be Bop (Don't Stop)" (1982)
 
-The riff is two chords, a step apart, played over and over. Listen to the edges of each chord rather than the notes: a papery rattle and crackle rides on top of it, loudest as each chord dies away. That is a torn speaker cone flapping. When the song lifts the riff higher, the grit comes along with it. Nothing in the chain was built to sound like that.
+Almost the entire record is 808 and synthesizer, with the drum machine given none of the studio disguise a live band would demand. Compare the cowbell and clap to 'Planet Rock' and they are close to identical factory sounds.
 
-### 8. `e-re201-tubby`
+### 15. `e-trax-chicagohouse`
 
-Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to King Tubby, "Dub from the Roots" (1974)
+Frankie Knuckles, "Warehouse DJ sets" (1982) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
 
-Compare the echo here with Perry's. Tubby's repeats are cleaner and more rhythmic, placed so they land where a drum would have landed, so the delay becomes part of the pattern rather than a haze over it. Same kind of box, opposite instinct: Perry lets it flood, Tubby uses it to keep time.
+Before labels like Trax, this music was mostly heard in the clubs, on DJs' edits and tapes. 'Move Your Body' is the same music as a product you could buy, pressed at the label owner's own plant. Listen to an original Trax pressing if you ever get the chance, and for the surface noise: the cheap, recycled vinyl was part of the sound people bought.
 
-### 9. `e-swinginglondon-hendrix`
-
-The Who, "My Generation" (1965) to The Jimi Hendrix Experience, "Purple Haze" (1967)
-
-London in 1965 was already playing loud: listen to the feedback and the smashed chords at the end of 'My Generation'. Then play 'Purple Haze' a year and a half later. An American who arrived in that scene took the same noise, the fuzz and the feedback, and made it melodic, with the distortion carrying the tune instead of wrecking it. The scene gave him an audience ready for that.
-
-### 10. `e-hardy-heard`
-
-Ron Hardy, "Music Box DJ sets" (1984) to Mr. Fingers (Larry Heard), "Can You Feel It" (1986)
-
-Heard's record is slower and softer than most of what Hardy played, which is itself part of the story: the Music Box could break a record that didn't sound like everything else in the room.
-
-### 11. `e-sugarhill-mellemel`
-
-The Sugarhill Gang, "Rapper's Delight" (1979) to Grandmaster Flash and the Furious Five, "The Message" (1982)
-
-Both records are played by the same house band rather than assembled from other people's records, and once you know that you can hear it: the music breathes, pushes and drags the way people do. Sugar Hill's rap records sound like funk records with rappers on them, because that is literally what they are. That house-band sound is a label decision, not an artist's.
-
-### 12. `e-perry-sherwood`
+### 16. `e-perry-sherwood`
 
 Lee "Scratch" Perry, "Black Ark productions" (1976) to African Head Charge, "My Life in a Hole in the Ground" (1981)
 
 Both records treat the mix itself as the instrument: sounds appear and vanish, echo is pushed to the point of distortion, and the 'song' is really a shifting arrangement rather than a fixed structure.
 
-### 13. `e-rubin-rundmc`
+### 17. `e-beatles-beastieboys`
 
-Aerosmith, "Walk This Way" (1975) to Run-D.M.C., "Walk This Way (with Aerosmith)" (1986)
+The Beatles, "The End" (1969) to Beastie Boys, "The Sounds of Science" (1989)
 
-Start with the first seconds of each. Aerosmith's opens on a drummer's short, dry break, then the guitar riff. Run-D.M.C.'s opens on that same break, then Jam Master Jay cutting the guitar riff back and forth on a turntable, the way a DJ had been using the record at parties for years. Then the real guitar and Steven Tyler's voice arrive and sit next to the rapping. You are hearing a rock record the way hip-hop had always used it, as material, before its band walks in and joins.
+'The End' is the Beatles' farewell on Abbey Road: Ringo's short drum solo, then three guitarists trading solos. On 'The Sounds of Science' the Beastie Boys and the Dust Brothers cut pieces of it, and of Sgt. Pepper, into a collage that switches sections abruptly. Listen for Beatles guitar and drums arriving in fragments and then vanishing. It's a band famous for studio experiments, taken apart by a studio experiment of their own.
 
-### 14. `e-simmons-sly`
+### 18. `e-stones-verve`
 
-Simmons, "SDS-V electronic drums" (1981) to Black Uhuru, "Anthem" (1983)
+The Rolling Stones, "The Last Time" (1965) to The Verve, "Bitter Sweet Symphony" (1997)
 
-Listen to the drum fills. In places, instead of the round thud of a drum skin, a tom comes out as a short electronic zap that swoops down in pitch. Underneath it, the groove is still Sly's: the kick and snare placed with a reggae drummer's sense of where the beat should sit. The machine sound, played by a human, is the combination to hear.
+Start with the Stones' 'The Last Time': a jangly guitar riff and a pop song. Then play 'Bitter Sweet Symphony'. The loop isn't from the Stones' record at all but from an orchestral version made by their former manager, a few bars of strings repeating. Listen for the Stones' tune hidden inside the strings. That hidden tune cost the Verve the song for twenty years.
 
-### 15. `e-bongoband-herc`
+### 19. `e-hardy-phuture`
 
-Incredible Bongo Band, "Apache" (1973) to The Sugarhill Gang, "Apache" (1981)
+Ron Hardy, "Music Box DJ sets" (1986) to Phuture, "Acid Tracks" (1987)
 
-In the 1973 record, wait for the long passage where the melody drops away and bongos and drums play on their own. It runs far longer than most breaks, which is exactly why a DJ with two copies could stretch it out. Then play the Sugarhill Gang's 1981 'Apache', where a studio band replays the groove under rapping and chants. Listen for how the break has become the song.
+'Acid Tracks' was reportedly played at the Music Box on cassette for months before release; Hardy's sets are part of why a twelve-minute record built from one squelching filter sweep had an audience ready for it.
 
-### 16. `e-eps16-rza`
+### 20. `e-chicagohouse-may`
 
-Ensoniq, "EPS-16 Plus, sixteen-bit keyboard sampler" (1990) to Wu-Tang Clan, "C.R.E.A.M." (1993)
+Frankie Knuckles, "Warehouse DJ sets" (1982) to Rhythim Is Rhythim, "Strings of Life" (1987)
 
-Listen to the length of the loop. The piano phrase in 'C.R.E.A.M.' runs for bars, a whole musical sentence repeating, which the SP-1200's ten seconds made hard. The sound is also cleaner at the top, without the SP's crunch, though RZA kept it dusty and dark. That's the machine allowing the long, sad phrase to become the song's whole mood.
-
-### 17. `e-tubby-atkins-resemblance`
-
-King Tubby, "various versions" (1976) to Juan Atkins, "No UFO's" (1985)
-
-Both treat the mixing desk as the instrument and the arrangement as something to be performed rather than fixed. This is a resemblance we are pointing out, not a line of transmission we can trace.
-
-### 18. `e-marleymarl-lotug`
-
-Marley Marl featuring MC Shan, "Marley Marl Scratch" (1985) to Lords of the Underground, "Lord Jazz Hit Me One Time (Make It Funky)" (1993)
-
-Here the producer samples himself. 'Marley Marl Scratch' is one of his first records, from before sampling drums was his method. Eight years later a piece of it turns up inside a Lords of the Underground track he produced. Listen for the older record returning as material, and for how it's become a sound source inside a bigger, busier 1993 production built around the group's DJ.
-
-### 19. `e-plank-kraftwerk`
-
-Kraftwerk, "Ralf und Florian" (1973) to Kraftwerk, "Autobahn" (1974)
-
-On 'Ralf und Florian' the sounds are still loose, with drifting organ, flute and electronic percussion. On 'Autobahn' they lock into place: a steady synthesized bass, a clean electronic rhythm, and car sounds sweeping across the stereo field. Listen for the passing cars and the Doppler swoosh, which are recordings placed in space, and for how exact every sound's position is. That clarity is engineering as much as composition.
-
-### 20. `e-marleymarl-llcoolj`
-
-LL Cool J, "I Can't Live Without My Radio" (1985) to LL Cool J, "Mama Said Knock You Out" (1990)
-
-Same rapper, same label, five years apart, and a different source for the drums. On 'Radio' they are drum machine hits, clean and identical each time. On 'Mama Said Knock You Out' the beat is built from pieces of older recordings, so the drums carry grit and room sound, and the loop has a live, rolling weight the machine never had.
+There is no record of what May heard in those clubs, so the earlier side is the rooms themselves. 'Strings of Life' is made for a room like them: no singer, no verse or chorus, piano chords cut into loops and pushed along by a drum machine. Listen for a track that expects a DJ and a crowd to supply everything a song usually has.

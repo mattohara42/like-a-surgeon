@@ -1,0 +1,45 @@
+{
+  "id": "parliament-funkadelic",
+  "name": "Parliament-Funkadelic",
+  "sortName": "Parliament-Funkadelic",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1968,
+  "activeTo": 1981,
+  "originCity": "Plainfield, New Jersey",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "casablanca",
+      "from": 1974,
+      "to": 1981
+    }
+  ],
+  "keyProducers": [
+    "George Clinton"
+  ],
+  "hook": "George Clinton ran the same musicians as two bands under two names and two contracts, so no single label dispute could ever shut the music down.",
+  "blurb": {
+    "age7": "George Clinton led a huge band that used two different names, Parliament and Funkadelic, so they could keep making music even after a record deal went wrong. Their shows were famous for a giant spaceship that landed on the stage.",
+    "age13": "George Clinton's doo-wop group, the Parliaments, got stuck in a contract dispute with their label in 1968, so Clinton started recording the same musicians under a new name, Funkadelic, to keep working. By 1970 he had the rights back to the old name too, and ran Parliament and Funkadelic side by side, on different labels, with the same band underneath. Casablanca Records signed Parliament in 1974 and spent heavily on their live show, including a hundred-foot spaceship, the Mothership, that landed onstage. Legal tangles over the many names forced Clinton to dissolve both bands in 1981.",
+    "adult": "The two-name structure began as a defensive move, a way to keep recording while the Parliaments' contract with Revilot was in dispute, and hardened into two distinct brands under Clinton's control: Parliament's horn-driven, vocal-group funk against Funkadelic's psychedelic, guitar-led version of the same musicians. The arrangement produced the sample-ready riffs, chants and basslines that became hip-hop's second-largest sample source after James Brown's band, and its costumed, mythologized stage show, bankrolled by Casablanca founder Neil Bogart, is one of the most extravagant marketing bets any label made on a Black funk act in the 1970s."
+  },
+  "signatureTracks": [
+    {
+      "title": "Mothership Connection (Star Child)",
+      "year": 1975,
+      "whyThisOne": "The title track of the album that gave the Mothership stage show its name."
+    },
+    {
+      "title": "Get Off Your Ass and Jam",
+      "year": 1975,
+      "whyThisOne": "Credited to Funkadelic; sampled by Public Enemy on 'Bring the Noise' thirteen years later."
+    },
+    {
+      "title": "One Nation Under a Groove",
+      "year": 1978,
+      "whyThisOne": "The title track of Funkadelic's best-selling album, and the closest the group got to a mission statement."
+    }
+  ]
+}

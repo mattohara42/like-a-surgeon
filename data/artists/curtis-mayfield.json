@@ -1,0 +1,38 @@
+{
+  "id": "curtis-mayfield",
+  "name": "Curtis Mayfield",
+  "sortName": "Mayfield, Curtis",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1958,
+  "activeTo": 1999,
+  "originCity": "Chicago, Illinois",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "curtom",
+      "from": 1968,
+      "to": 1980
+    }
+  ],
+  "keyProducers": [],
+  "hook": "Started his own label to own his own masters, then years after an accident left him paralyzed, finished an album by singing a line at a time from his back.",
+  "blurb": {
+    "age7": "Curtis Mayfield wrote and sang hopeful songs about being proud of who you are. He started his own record label so he could control his own music, and after an accident left him unable to move most of his body, he kept making records anyway.",
+    "age13": "Curtis Mayfield began recording with the Impressions in 1958, and by the late 1960s was writing directly about Black pride and civil rights on songs like 'People Get Ready' and 'Choice of Colors'. In 1968 he and manager Eddie Thomas started Curtom Records so Mayfield could own his own recordings rather than sign them away, a move several other artists on this map also made. In 1990, a lighting rig fell on him during an outdoor concert and left him paralyzed from the neck down. He kept recording anyway, lying on his back and singing a line at a time so engineers could piece the vocal together, and finished the album 'New World Order' in 1996.",
+    "adult": "Mayfield's founding of Curtom in 1968 belongs to this dataset's recurring pattern of Black artists moving to control their own masters rather than accept a standard contract, alongside Ariwa, Rockers International, and Kling Klang. His catalogue, especially the 1972 'Super Fly' soundtrack, is among the most heavily sampled sources in hip-hop production. His 1990 paralysis and the recording method he adopted afterward are stated here as fact rather than as an inspirational gloss: he needed breathing support to sustain a vocal line, and what once took minutes took hours."
+  },
+  "signatureTracks": [
+    {
+      "title": "People Get Ready (The Impressions)",
+      "year": 1965,
+      "whyThisOne": "A civil-rights-era gospel-soul anthem, still one of the most covered songs of the period."
+    },
+    {
+      "title": "Freddie's Dead",
+      "year": 1972,
+      "whyThisOne": "From the 'Super Fly' soundtrack, and one of the most sampled Mayfield recordings in hip-hop."
+    }
+  ]
+}

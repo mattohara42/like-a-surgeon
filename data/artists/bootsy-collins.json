@@ -1,0 +1,39 @@
+{
+  "id": "bootsy-collins",
+  "name": "Bootsy Collins",
+  "sortName": "Collins, Bootsy",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1970,
+  "activeTo": null,
+  "originCity": "Cincinnati, Ohio",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "George Clinton"
+  ],
+  "hook": "Left James Brown's band over a pay dispute at eighteen, then became the bassist whose sound defined George Clinton's mothership.",
+  "blurb": {
+    "age7": "Bootsy Collins played bass for James Brown when he was a teenager, then joined George Clinton's band and helped invent a new, playful, space-themed sound.",
+    "age13": "Bootsy Collins was eighteen when he and his brother Catfish joined James Brown's band in March 1970, right after most of Brown's musicians walked out in a pay dispute. Bootsy played bass on 'Sex Machine' and other hits before he and the rest of the new lineup, the J.B.'s, left over money problems of their own. George Clinton brought the Collins brothers into Funkadelic in 1972, and Bootsy rejoined Clinton's Parliament for 1974's 'Up for the Down Stroke', where his booming, playful bass became one of the most recognisable sounds in funk.",
+    "adult": "Collins's path through this dataset's two largest funk institutions inside four years, hired into James Brown's band after a walkout over pay and leaving the J.B.'s over the same issue before landing with Clinton, makes him a direct thread between the two acts. His bass playing on Parliament and Funkadelic's mid-1970s records, elastic and syncopated and treated as a lead voice rather than a supporting one, is one of the most sampled and imitated bass styles in the genre."
+  },
+  "signatureTracks": [
+    {
+      "title": "Sex Machine (James Brown)",
+      "year": 1970,
+      "whyThisOne": "Recorded within weeks of joining Brown's band, with Collins eighteen years old."
+    },
+    {
+      "title": "Up for the Down Stroke (Parliament)",
+      "year": 1974,
+      "whyThisOne": "Parliament's first Casablanca single and first chart hit, co-written by Collins."
+    },
+    {
+      "title": "Bootzilla (Bootsy's Rubber Band)",
+      "year": 1978,
+      "whyThisOne": "A number-one R&B single under his own name, introducing his 'rhinestone rock-star doll' alter ego."
+    }
+  ]
+}

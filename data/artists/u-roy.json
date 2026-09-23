@@ -1,0 +1,40 @@
+{
+  "id": "u-roy",
+  "name": "U-Roy",
+  "sortName": "U-Roy",
+  "type": "artist",
+  "lineage": "dub",
+  "activeFrom": 1970,
+  "activeTo": 2021,
+  "originCity": "Kingston",
+  "originCountry": "Jamaica",
+  "scenes": [
+    "kingston-dub"
+  ],
+  "labels": [
+    {
+      "labelId": "treasure-isle",
+      "from": 1970,
+      "to": 1975
+    }
+  ],
+  "keyProducers": [],
+  "hook": "Talked over other people's rhythm tracks until three of his singles held the top three spots on Jamaica's charts at once, and the sound engineers call toasting was born.",
+  "blurb": {
+    "age7": "U-Roy talked and chanted over other people's songs instead of just singing new words to them. That style, called toasting, is one of the roots of rapping.",
+    "age13": "Ewart Beckford, known as U-Roy, was already known on Kingston sound systems for talking over records when the singer John Holt introduced him to producer Duke Reid in 1970. His first singles for Reid's Treasure Isle label, 'Wake the Town', 'Rule the Nation' and 'Wear You to the Ball', all reused existing rocksteady rhythm tracks with U-Roy talking, chanting and ad-libbing over the top rather than singing a fixed lyric. For twelve weeks in early 1970 the three singles held the top three spots on both of Jamaica's radio charts at once, and other DJs quickly copied the style, called toasting.",
+    "adult": "U-Roy did not invent toasting, but his 1970 Treasure Isle singles moved it from the dancehall MC's live performance into the recording studio as a commercial format, at the same historical moment Kingston's dub engineers were learning to strip records down to drum and bass. The two innovations, an MC talking over a rhythm and a producer remixing that same rhythm into new records, are usually told as separate stories in this dataset's sources, but they came out of the same sound systems within a few years of each other."
+  },
+  "signatureTracks": [
+    {
+      "title": "Wake the Town",
+      "year": 1970,
+      "whyThisOne": "His first single for Duke Reid, and the record usually credited with taking toasting into the studio."
+    },
+    {
+      "title": "Rule the Nation",
+      "year": 1970,
+      "whyThisOne": "One of three U-Roy singles holding the top three chart spots simultaneously in early 1970."
+    }
+  ]
+}
