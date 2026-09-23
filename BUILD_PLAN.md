@@ -126,7 +126,8 @@ Suggested batch order after M1:
 
 Progress: batches so far have covered dub, electro and Detroit, the UK
 rock spine, the founding Bronx generation, 80s hip-hop production, and
-the 90s groups and their producers (Q21 has the next two batches). Batch 5 is half done. Machines reached 25 in PR #23, and labels are
+all three Q21 batches (90s groups and producers, the most-sampled breaks,
+classic rock), and batch 3, outré electronic, in a first pass. Batch 5 is half done. Machines reached 25 in PR #23, and labels are
 still short. `npm run report` has the current distance on every target.
 
 ## Definition of done for any milestone

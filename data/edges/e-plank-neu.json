@@ -1,0 +1,32 @@
+{
+  "id": "e-plank-neu",
+  "from": "conny-plank",
+  "to": "neu",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1972,
+  "crossLineage": false,
+  "evidence": "Plank produced and engineered Neu! (recorded December 1971 at Star Studio, Hamburg, released 1972), Neu! 2 (1973) and Neu! '75. Credited on all three sleeves.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Kraftwerk",
+      "title": "Kraftwerk (as engineered by Conny Plank)",
+      "year": 1970,
+      "search": "Kraftwerk Ruckzuck"
+    },
+    "later": {
+      "artist": "Neu!",
+      "title": "Neu!",
+      "year": 1972
+    },
+    "whatToListenFor": "The first Neu! album was made in four nights. Listen past the beat to the space around it. Sounds pan and fade, guitars are treated until they drone, and water and noise wash between tracks. Plank's hand is in how much room each sound gets and in how the tape is treated. The same sense of a studio being played shows in the Kraftwerk records he recorded just before."
+  },
+  "explanation": {
+    "age7": "Conny Plank recorded Neu!'s albums and helped make their sound.",
+    "age13": "Conny Plank was the producer for all three Neu! albums. He had just recorded Kraftwerk's first records too. He let the band experiment in the studio, and helped them turn a short, cheap session into a record that is still influential fifty years later.",
+    "adult": "A producer edge under Q21. Plank links Kraftwerk, Neu!, Cluster and Harmonia, and so draws much of what's called krautrock through one room. A 'follow the producer' view would light him up."
+  },
+  "tags": [
+    "production"
+  ]
+}

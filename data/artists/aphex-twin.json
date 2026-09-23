@@ -1,0 +1,38 @@
+{
+  "id": "aphex-twin",
+  "name": "Aphex Twin",
+  "sortName": "Aphex Twin",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1985,
+  "activeTo": null,
+  "originCity": "Cornwall",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "warp",
+      "from": 1992,
+      "to": null
+    }
+  ],
+  "keyProducers": [],
+  "hook": "Home-made techno from Cornwall, begun as a teenager, that Warp packaged for listening rather than dancing.",
+  "blurb": {
+    "age7": "Richard D. James made electronic music in his bedroom as a boy. Later he made some of the most famous electronic records in the world.",
+    "age13": "Richard D. James grew up in Cornwall and started recording on cassette around 1985, when he was about 13. His first album, Selected Ambient Works 85–92, came out in 1992 on a Belgian label and collected those early tracks. That same year Warp put one of his tracks, as The Dice Man, first on its Artificial Intelligence compilation. He then signed to Warp, first as Polygon Window and then as Aphex Twin.",
+    "adult": "Aphex Twin's early work is often described as made on modified or home-built equipment. James has told contradictory stories about his gear and his past, so claims about it are held loosely here. The 1985 start year is from the album's own title, which dates the earliest recordings to then. His label edge runs from Warp, whose framing of this music as home listening shaped how it was heard."
+  },
+  "signatureTracks": [
+    {
+      "title": "Xtal",
+      "year": 1992,
+      "whyThisOne": "Opens Selected Ambient Works 85–92. A soft, looped techno track made at home."
+    },
+    {
+      "title": "Polygon Window",
+      "year": 1992,
+      "whyThisOne": "As The Dice Man, the first track on Warp's Artificial Intelligence."
+    }
+  ]
+}

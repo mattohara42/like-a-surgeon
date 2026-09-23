@@ -1,0 +1,34 @@
+{
+  "id": "karlheinz-stockhausen",
+  "name": "Karlheinz Stockhausen",
+  "sortName": "Stockhausen, Karlheinz",
+  "type": "artist",
+  "lineage": "other",
+  "activeFrom": 1952,
+  "activeTo": 2007,
+  "originCity": "Cologne",
+  "originCountry": "West Germany",
+  "scenes": [
+    "paris-musique-concrete"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "The composer whose tape and electronic pieces reached rock through two routes: his own students, who founded Can, and the Beatles, who put his face on a record sleeve.",
+  "blurb": {
+    "age7": "A German composer who made music with tape machines and electronic sounds. Rock bands listened to him and copied his ideas.",
+    "age13": "Stockhausen went to Paris in 1952 and made his first tape piece in Schaeffer's studio. Back in Cologne he worked at the radio station's electronic studio, where he made Gesang der Jünglinge, a boy's singing voice cut up and mixed with electronic tones. He also taught. Two of his students in Cologne in the mid-1960s, Holger Czukay and Irmin Schmidt, went on to start Can. The Beatles listened to his records too, and his face is on the cover of Sgt. Pepper.",
+    "adult": "Stockhausen is here for reach rather than for his concert works as such. He sits between the two founding European studios, Schaeffer's in Paris and the WDR studio in Cologne, and his influence on popular music travels through documented teaching (Czukay studied with him from 1963 to 1966, Schmidt attended his Cologne courses in 1964 and 1965) and through the Beatles' well-documented interest. His remarks about the 11 September 2001 attacks, made in a press conference in Hamburg in 2001, were widely reported and led to concerts being cancelled. He said afterwards that he had been misreported. That's recorded here as part of his public history and not as a judgement of the music."
+  },
+  "signatureTracks": [
+    {
+      "title": "Gesang der Jünglinge",
+      "year": 1956,
+      "whyThisOne": "A child's voice cut into syllables and mixed with pure electronic tones. The Cologne studio's best-known piece."
+    },
+    {
+      "title": "Hymnen",
+      "year": 1967,
+      "whyThisOne": "National anthems from around the world, heard through shortwave radio noise and tape. The critic Ian MacDonald suggested it as a model for the Beatles' 'Revolution 9'."
+    }
+  ]
+}

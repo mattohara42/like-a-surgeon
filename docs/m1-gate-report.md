@@ -8,13 +8,13 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 80 | 120 | 67% |
-| machines | 29 | 25 | met |
-| scenes | 8 | 20 | 40% |
-| labels | 16 | 30 | 53% |
-| edges | 125 | 350 | 36% |
+| artists | 92 | 120 | 77% |
+| machines | 30 | 25 | met |
+| scenes | 10 | 20 | 50% |
+| labels | 17 | 30 | 57% |
+| edges | 141 | 350 | 40% |
 | threads | 2 | 5 | 40% |
-| crossLineageEdges | 59 | 60 | 98% |
+| crossLineageEdges | 62 | 60 | met |
 | edgesWithDemo | 4 | 30 | 13% |
 
 ## Counts by lineage
@@ -23,10 +23,10 @@ Every node type, since machines, scenes and labels carry a lineage too.
 
 | lineage | count |
 |---|---:|
+| electronic | 41 |
 | hiphop | 37 |
-| electronic | 33 |
-| rock | 25 |
-| other | 20 |
+| rock | 27 |
+| other | 26 |
 | dub | 11 |
 | funk | 7 |
 
@@ -35,22 +35,22 @@ Artists alone:
 | lineage | count |
 |---|---:|
 | hiphop | 32 |
-| rock | 16 |
-| electronic | 12 |
+| electronic | 18 |
+| rock | 18 |
+| other | 11 |
 | dub | 7 |
-| other | 7 |
 | funk | 6 |
 
 ## Counts by edge type
 
 | edge type | count |
 |---|---:|
-| technological | 40 |
-| direct | 28 |
-| production | 19 |
+| technological | 43 |
+| direct | 36 |
+| production | 21 |
 | sample | 19 |
-| scene | 12 |
-| label | 3 |
+| scene | 13 |
+| label | 5 |
 | reaction-against | 2 |
 | cover | 1 |
 | rediscovery | 1 |
@@ -59,8 +59,8 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 89 |
-| consensus | 35 |
+| documented | 101 |
+| consensus | 39 |
 | asserted | 1 |
 
 ## The 20 edges to read hardest
@@ -233,126 +233,126 @@ Evidence: Herc and Grandmaster Flash are widely documented as using 'Apache' as 
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 125 edges that carry one.
+Drawn with seed 1 from the 141 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-hardy-jefferson`
+### 1. `e-foster-tribe`
 
-Ron Hardy, "Music Box DJ sets" (1983) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
+Ronnie Foster, "Mystic Brew" (1972) to A Tribe Called Quest, "Electric Relaxation" (1993)
 
-Jefferson's piano hook is the part everyone remembers, but the mix, the sequencing and drum programming Hardy shaped, is what makes it a dancefloor record rather than just a song.
+Listen for the melancholy keyboard phrase in 'Mystic Brew', then hear Tribe loop it. The phrase that drifts in the original becomes a steady cycle, with soft drums sitting quietly under it. It's so relaxed that Q-Tip and Phife seem to be talking over it rather than rapping on top of it. The mood of a 1972 jazz record becomes the whole identity of the song.
 
-### 2. `e-juno60-heard`
+### 2. `e-beatles-rollingstones`
 
-Roland, "Juno-60" (1982) to Mr. Fingers, "Can You Feel It" (1986)
+The Beatles, "I Wanna Be Your Man" (1963) to The Rolling Stones, "I Wanna Be Your Man" (1963)
 
-Listen to the chords floating above the bassline. They have no hard front edge: each one arrives softly and hangs in the air, and they sound wide, as if coming from both sides at once. That softness and width are the kind of sound the Juno's built-in chorus was designed to make. The whole record was built from a synth, a drum machine and two cassette decks.
+The same song by two bands in the same year. The Beatles' version, sung by Ringo, bounces along as cheerful beat music. The Stones' is rougher and faster, with Brian Jones's slide guitar wailing over it. Listen for how the Stones turn a Beatles pop song into something closer to the American R&B they were copying.
 
-### 3. `e-dubplate-tubby`
+### 3. `e-hendrix-cypresshill`
 
-Jamaican sound systems, "one-off acetates cut as exclusives" (1950) to King Tubby, "dub mixes cut for named sound systems" (1972)
+The Jimi Hendrix Experience, "Are You Experienced?" (1967) to Cypress Hill, "How I Could Just Kill a Man" (1991)
 
-Listen for who the record is talking to. A sound system's name gets shouted over the top of the mix, or the singer greets a crew by name, and you realise the record is not addressed to you or to a radio audience. It was made for one crowd in one yard on one night, on a disc that would be worn out within a few months.
+'Are You Experienced?' is full of sounds played backwards on tape: guitar and drums that swell up and cut off where they'd normally ring out. Muggs lifts a short guitar lick from it and loops it under B-Real's high voice and his own murky drums. Listen for Hendrix's guitar turned into a repeating pattern, a piece of 1967 psychedelia working as a hook in a 1991 rap single.
 
-### 4. `e-peterock-nas`
+### 4. `e-mutron-perry`
 
-Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992) to Nas, "The World Is Yours" (1994)
+Musitronics, "Mu-Tron Bi-Phase" (1975) to The Congos, "Heart of the Congos" (1977)
 
-Two years apart and the same idea from Pete Rock: a soft jazz phrase looped under heavy drums, turned melancholy. On 'T.R.O.Y.' it's a saxophone. On 'The World Is Yours' it's a gentle piano from an Ahmad Jamal record. Listen for how the piano keeps circling while Nas talks about ambition, the sweetness of the loop working against the hardness of the words.
+Put on the album and follow the cymbals and hi-hats. At points they begin to swirl, a hollow whoosh like a jet passing overhead, rising and falling at a speed that drifts instead of repeating evenly. That is the phaser, and the uneven speed is a hand on the control rather than a setting.
 
-### 5. `e-sl1200-theodore`
+### 5. `e-pistols-pil`
 
-Technics, "SL-1200 as a domestic hi-fi turntable" (1972) to Grand Wizzard Theodore, "the scratch" (1975)
+Sex Pistols, "Anarchy in the U.K." (1976) to Public Image Ltd, "Public Image" (1978)
 
-Listen to the pitch of a scratch. It bends down as the hand slows the record and snaps back up the instant it is released, and the snap is the motor recovering almost immediately. On a belt-driven deck that recovery is a slow sag, which is a different and much less usable sound. The character of the scratch is partly the character of the motor.
+Same singer, opposite record. "Anarchy" is a three-chord shout. "Public Image" opens with a huge, un-punk guitar chime, and Lydon sings about his own manufactured persona rather than trying to provoke the audience.
 
-### 6. `e-mellotron-beatles`
+### 6. `e-rza-wutang`
 
-Mellotron, "flute tape bank, as sold" (1963) to The Beatles, "Strawberry Fields Forever" (1967)
+Wu-Tang Clan, "Protect Ya Neck" (1992) to Wu-Tang Clan, "C.R.E.A.M." (1993)
 
-Listen to the opening seconds: a flute that isn't quite a flute. Each key on a Mellotron plays a strip of tape with a real flute note recorded on it, so the sound wobbles slightly and every note stops after about eight seconds. McCartney's chords sound a little out of tune with themselves because the flute recordings don't quite match. That wobble is a recording of a recording, playing back as an instrument.
+'Protect Ya Neck' opens on kung fu film dialogue and then runs eight rappers back to back over a raw, clattering loop. It sounds almost homemade, and it was self-released. 'C.R.E.A.M.', a year later, slows everything down: a sad, looping soul piano from a Charmels record, with space around each verse. Listen for RZA moving from chaos to melancholy with the same dusty texture holding both together.
 
-### 7. `e-tubby-pablo`
+### 7. `e-tomscott-peterock`
 
-Augustus Pablo, "Java" (1972) to King Tubby / Augustus Pablo, "King Tubbys Meets Rockers Uptown" (1976)
+Tom Scott and the California Dreamers, "Today" (1967) to Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992)
 
-Pablo's melodica is the constant; what changes across his catalogue is how much of everything else Tubby lets vanish around it. On the 1976 record, whole bars drop to just melodica, echo, and a bass note.
+Wait for Scott's saxophone solo in 'Today', then listen to 'T.R.O.Y.'. Pete Rock has taken pieces of that solo and turned them into a short, repeating horn line, the melody everyone remembers. A soft 1967 version of a Jefferson Airplane song has become a memorial for a friend who died. The notes are Scott's. The grief is Pete Rock's.
 
-### 8. `e-perry-clash-cover`
+### 8. `e-radiophonic-derbyshire`
 
-Junior Murvin, "Police and Thieves" (1976) to The Clash, "Police and Thieves" (1977)
+BBC Radiophonic Workshop, "early radio sound work" (1958) to Delia Derbyshire, "Doctor Who theme" (1963)
 
-Murvin's version floats. The guitar chops on the offbeat and there is air around everything. The Clash version takes the same song and puts a hard downstroke guitar on it, but keeps the length, which on a 1977 punk album is an obvious act of allegiance. Listen to where the guitar lands relative to the drum in each.
+Start with the bassline: a plucked string, recorded, then copied and cut so that every note is the same length and attack. Over it, the melody slides between notes, made from oscillators with the pitch swept by hand. There's no keyboard anywhere. Each note was a separate piece of tape, and the swoop you hear is someone turning a dial while the tape ran. Listen for how clean and mechanical the bass sounds next to how wild the tune is.
 
-### 9. `e-tubby-sly-robbie`
+### 9. `e-moog-tangerinedream`
 
-King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Sly and Robbie, "Sinsemilla (Black Uhuru)" (1980)
+R. A. Moog Co., "Moog modular synthesizer with 960 sequencer" (1965) to Tangerine Dream, "Phaedra" (1974)
 
-Tubby empties a finished mix out until the rhythm is nearly all that's left. Sly and Robbie build the rhythm that way from the start: drum and bass carrying the song, everything else arranged around them rather than the other way around.
+Wait for the pulse. A short row of bass notes repeats, bubbling, while its brightness slowly opens and closes as someone turns a filter knob. Nobody is playing those notes. The sequencer is. The musicians play over it: drifting Mellotron, echoing synth lines. Listen for the loop slightly changing pitch and tone over minutes, which is the hand on the knob, and for how long it keeps going without ever settling into a song.
 
-### 10. `e-premier-nas`
+### 10. `e-pil-joydivision`
 
-Gang Starr, "Mass Appeal" (1994) to Nas, "N.Y. State of Mind" (1994)
+Public Image Ltd, "Public Image" (1978) to Joy Division, "Transmission" (1979)
 
-Premier made both in the same year, and his hands are audible in both: short, hard, tightly trimmed drums, and a small fragment looped until it becomes a mood. On 'Mass Appeal' the fragment is a thin, repeating figure that sounds almost like elevator music, a joke that fits a song mocking rap made for the charts. On 'N.Y. State of Mind' it's a dark, minor-key piano figure sitting low under the drums. Same method, opposite weather.
+Both push the bass into the lead role a guitar or vocal would normally hold, leaving space around it rather than filling every bar, even though the two basslines sound nothing alike.
 
-### 11. `e-honeydrippers-marleymarl`
+### 11. `e-perry-clash-production`
 
-The Honey Drippers, "Impeach the President" (1973) to MC Shan, "The Bridge (produced by Marley Marl)" (1986)
+Lee "Scratch" Perry, "Black Ark productions" (1976) to The Clash, "Complete Control" (1977)
 
-The song opens on its drums alone for a few bars: a bouncy kick, a snare with a bright crack, and an open hi-hat that breathes between hits. Then play 'The Bridge'. Marl has lifted that kick and snare and set them against the steady tick of a drum machine's hi-hat. Listen for the two sources side by side: the real drum carrying a room and a tape hiss, the machine's hat perfectly even.
+Perry's own records are all space and echo. The Clash single is not, because the band and label largely mixed his approach back out. What survives is the treatment on the vocal and the size of the drum sound. This is a good example of an influence being audible in the negotiation rather than the result.
 
-### 12. `e-perry-madprofessor`
+### 12. `e-mpc60-premier`
 
-Lee "Scratch" Perry, "Black Ark productions" (1976) to Lee "Scratch" Perry & Mad Professor, "Ariwa studio collaborations" (1987)
+Akai, "MPC60, sixteen pads and a sequencer" (1988) to Gang Starr, "Moment of Truth" (1998)
 
-Perry's original records are raw and cluttered on purpose. The Ariwa collaborations are cleaner and more controlled, Mad Professor's studio discipline audibly reining in Perry's chaos without erasing it.
+Listen to the drums. Each hit is a single, short, tightly trimmed sound, a kick, a snare, a hat, played from the pads rather than looped as a chunk of someone else's drummer. That is why they sound so punchy and separate. Then listen to the sample on top. It has been cut into small pieces and replayed in a new order, so you hear a phrase you almost recognise that never quite goes where the original did.
 
-### 13. `e-sugarhill-mellemel`
+### 13. `e-marleymarl-peterock`
 
-The Sugarhill Gang, "Rapper's Delight" (1979) to Grandmaster Flash and the Furious Five, "The Message" (1982)
+Marley Marl, "The Symphony, produced for the Juice Crew" (1988) to Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992)
 
-Both records are played by the same house band rather than assembled from other people's records, and once you know that you can hear it: the music breathes, pushes and drags the way people do. Sugar Hill's rap records sound like funk records with rappers on them, because that is literally what they are. That house-band sound is a label decision, not an artist's.
+Both are built on one short loop running under the vocals, and both keep the drums heavy and forward. Then listen to what Pete Rock added to Marl's approach. On 'The Symphony' the loop is hard and the drums dominate, leaving four MCs to fight over it. On 'T.R.O.Y.' the loop is a saxophone phrase from a Tom Scott jazz record, over a bassline that sounds rounded and dark. It is the same way of building a beat, turned warm and mournful.
 
-### 14. `e-dilla-madlib`
+### 14. `e-kraftwerk-planetrock`
 
-Slum Village, "Fall in Love" (2000) to Jaylib, "Champion Sound (album)" (2003)
+Kraftwerk, "Trans-Europe Express" (1977) to Afrika Bambaataa & Soulsonic Force, "Planet Rock" (1982)
 
-On Champion Sound you can hear two producers side by side on one album, since each raps over the other's beats. Listen for the difference: Dilla's tracks have his leaning, off-grid drums and warm, filtered loops, as on 'Fall in Love'. Madlib's are dustier and more collaged, with odder samples and rougher edges. It's a conversation between two ways of sampling, conducted by post.
+Hum the Kraftwerk melody, then play 'Planet Rock'. It is the same line, faster and harder. Underneath, the rhythm is lifted from a different Kraftwerk track entirely, and the drum sounds come from an 808. Three separate sources welded into one record.
 
-### 15. `e-winstons-nwa`
+### 15. `e-kraftwerk-may`
 
-The Winstons, "Amen, Brother" (1969) to N.W.A, "Straight Outta Compton" (1988)
+Kraftwerk, "Numbers" (1981) to Rhythim Is Rhythim, "Strings of Life" (1987)
 
-Find the six seconds near the middle of 'Amen, Brother' where the band stops and Gregory Coleman plays alone. Listen for the last bars, where the snare shifts off its pattern and lands late. That hitch is what everyone recognises. Then hear it in 'Straight Outta Compton', looped hard under Ice Cube's opening verse. It has the same hitch in the snare, now with the urgency of the whole track riding on it.
+Kraftwerk's rhythm is rigid and repeats without variation. May keeps the rigidity in the drums but layers a string figure that swells and falls, funk phrasing riding on top of a Kraftwerk-style engine.
 
-### 16. `e-peterock-dilla`
+### 16. `e-herc-cokelarock`
 
-Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992) to Slum Village, "Fall in Love" (2000)
+DJ Kool Herc, "the back-to-school jam at 1520 Sedgwick Avenue" (1973) to Coke La Rock, "shout-outs over Herc's records at Bronx parties" (1973)
 
-Both build the beat from a soft, melancholy sample of an older jazz record, filtered warm, with the drums rather than the melody carrying the energy. That much Dilla took from Pete Rock. Now listen to the timing. On 'T.R.O.Y.' the drums sit where you expect them. On 'Fall in Love' the kicks land early or late against the loop, so the beat seems to lean. That lean is where the student stopped copying the teacher.
+Nothing was recorded, so listen forward instead. Take any rap record and strip out the rhyme, the meter and the subject, and what is left underneath is a person naming friends in the room over somebody else's drums. That residue is what La Rock was doing, and it is the part that never went away.
 
-### 17. `e-dilla-roots`
+### 17. `e-schaeffer-stockhausen`
 
-Slum Village, "Fall in Love" (2000) to The Roots, "Things Fall Apart (album)" (1999)
+Pierre Schaeffer, "Étude aux chemins de fer" (1948) to Karlheinz Stockhausen, "Konkrete Etüde" (1952)
 
-Put a programmed Dilla beat next to Questlove playing live. In 'Fall in Love' the kicks land early or late against the loop and the beat seems to lean. On the slower tracks of Things Fall Apart, listen to Questlove's kick and snare: played by hand, but placed a fraction behind where a metronome would put them, so the groove drags lazily. A drummer is copying a machine that was being used against its own settings.
+Schaeffer's piece is built from what the microphone caught: engine chuffs, whistles, wheels on joins, looped until they swing. Stockhausen's study is three minutes long and sounds far more controlled. He recorded short, struck sounds and cut them into precise lengths on tape, so the piece is about duration and order rather than about trains. Listen for the same razor-blade method used by two different minds: one looking for rhythm in noise, the other imposing a plan on it.
 
-### 18. `e-dmx-rundmc`
+### 18. `e-303-phuture`
 
-Orange Krush, "Action" (1982) to Run-D.M.C., "Sucker M.C.'s" (1983)
+Roland, "TB-303 as intended" (1981) to Phuture, "Acid Tracks" (1987)
 
-On 'Action' the beat is played by a drummer inside a band, with bass, keys and a singer around it. On 'Sucker M.C.'s' the same pattern comes back out of a drum machine and everything else is gone. There is no bassline and no melody. Listen for how much reverb sits on the snare, so each hit booms out into the empty space, and for the two voices passing lines back and forth where a band used to be. The emptiness is the arrangement.
+The pattern of notes barely changes for twelve minutes. Everything that moves is the filter, opening and closing, and the resonance screaming at the top. Listen for the slide between notes, which is the machine doing a thing a bass player would do, badly, and brilliantly.
 
-### 19. `e-zeppelin-beastieboys`
+### 19. `e-hardy-heard`
 
-Led Zeppelin, "When the Levee Breaks" (1971) to Beastie Boys, "Rhymin & Stealin" (1986)
+Ron Hardy, "Music Box DJ sets" (1984) to Mr. Fingers (Larry Heard), "Can You Feel It" (1986)
 
-Listen to how huge Bonham's drums sound at the start of 'When the Levee Breaks': slow and heavy, with a long echo after every hit, because they were recorded at the bottom of a stairwell with microphones high above. Then hear that same beat looped under the Beastie Boys, even heavier and scratched up. The room around the drums comes along with them, which is why this beat sounds bigger than any drum machine.
+Heard's record is slower and softer than most of what Hardy played, which is itself part of the story: the Music Box could break a record that didn't sound like everything else in the room.
 
-### 20. `e-swinginglondon-hendrix`
+### 20. `e-teac-perry`
 
-The Who, "My Generation" (1965) to The Jimi Hendrix Experience, "Purple Haze" (1967)
+TEAC, "A-3340 four-track recorder" (1972) to Junior Murvin, "Police and Thieves" (1976)
 
-London in 1965 was already playing loud: listen to the feedback and the smashed chords at the end of 'My Generation'. Then play 'Purple Haze' a year and a half later. An American who arrived in that scene took the same noise, the fuzz and the feedback, and made it melodic, with the distortion carrying the tune instead of wrecking it. The scene gave him an audience ready for that.
+Listen to the rhythm under Murvin's high voice. It is dense and slightly blurred, as if heard through gauze. Drums, percussion and guitar melt into one texture instead of standing apart. Each time Perry combined finished parts onto one track to make room for more, another layer of hiss and softness went on. The haze is what four tracks cost, spent on purpose.

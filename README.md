@@ -24,9 +24,10 @@ pull request gets its own Netlify preview.
   three batches followed PR #24's 80s hip-hop: the 90s groups and their
   producers, the most-sampled breaks with their artists as hubs, and
   classic rock (the Beatles, Led Zeppelin, Hendrix, the Verve), most of it
-  joined to hip-hop through samples. The rest are still short: 80 of 120
-  artists, 125 of 350 edges, 8 of 20 scenes, 16 of 30 labels, 2 of 5
-  threads, 4 of 30 edges with a demo.
+  joined to hip-hop through samples. Then outré electronic: musique
+  concrète, the Radiophonic Workshop, Can and Neu!, Eno, and early Warp.
+  The rest are still short: 92 of 120 artists, 141 of 350 edges, 10 of 20
+  scenes, 17 of 30 labels, 2 of 5 threads, 4 of 30 edges with a demo.
 - **Open question:** Q20 in `QUESTIONS.md`. A null end year can't
   currently tell "still made" from "unknown", so some machines read as
   still on sale.

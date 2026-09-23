@@ -1,0 +1,34 @@
+{
+  "id": "e-radiophonic-derbyshire",
+  "from": "bbc-radiophonic-workshop",
+  "to": "delia-derbyshire",
+  "type": "scene",
+  "confidence": "documented",
+  "year": 1963,
+  "crossLineage": false,
+  "evidence": "Derbyshire joined the Radiophonic Workshop in April 1962 and realised Ron Grainer's Doctor Who theme there in 1963. Recorded in BBC histories of the Workshop and in the Derbyshire archive held at the University of Manchester.",
+  "trackPair": {
+    "earlier": {
+      "artist": "BBC Radiophonic Workshop",
+      "title": "early radio sound work",
+      "year": 1958,
+      "search": false
+    },
+    "later": {
+      "artist": "Delia Derbyshire",
+      "title": "Doctor Who theme",
+      "year": 1963,
+      "search": "Delia Derbyshire Doctor Who theme 1963"
+    },
+    "whatToListenFor": "Start with the bassline: a plucked string, recorded, then copied and cut so that every note is the same length and attack. Over it, the melody slides between notes, made from oscillators with the pitch swept by hand. There's no keyboard anywhere. Each note was a separate piece of tape, and the swoop you hear is someone turning a dial while the tape ran. Listen for how clean and mechanical the bass sounds next to how wild the tune is."
+  },
+  "explanation": {
+    "age7": "Delia Derbyshire worked at the BBC's sound studio and made the Doctor Who music there.",
+    "age13": "The Workshop gave Derbyshire tape machines, oscillators and the job. Grainer's score gave her a tune. She built the sound note by note on tape. Grainer is said to have been amazed and to have asked for her to be credited, and the BBC refused because its staff weren't credited.",
+    "adult": "A scene edge because the institution, its equipment and its rules made both the record and the injustice around it. The story of Grainer asking for a co-credit is widely repeated and appears in BBC histories, but its detail varies between tellings, so it's reported rather than asserted."
+  },
+  "tags": [
+    "technology",
+    "labels"
+  ]
+}

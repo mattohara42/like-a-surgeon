@@ -1,0 +1,32 @@
+{
+  "id": "bbc-radiophonic-workshop",
+  "name": "BBC Radiophonic Workshop",
+  "type": "scene",
+  "lineage": "other",
+  "yearFrom": 1958,
+  "yearTo": 1998,
+  "city": "London",
+  "country": "UK",
+  "hook": "A BBC department in a former roller-skating rink that put electronic music into British homes years before bands could afford it.",
+  "blurb": {
+    "age7": "The BBC had a special room where people made strange sounds and music for radio and TV shows.",
+    "age13": "The BBC opened the Radiophonic Workshop in 1958 at its Maida Vale studios, to make sounds for radio plays. It was set up by Daphne Oram and Desmond Briscoe, using old tape machines and oscillators. In 1963 Delia Derbyshire made the Doctor Who theme there. For a lot of British children, that was the first electronic music they ever heard.",
+    "adult": "The Workshop is the licence-fee route into electronic music. It was a public broadcaster's service department, making effects and signature tunes to order, and it was often not allowed to call its output music. Staff went uncredited for years. The reach was enormous anyway, because everything it made was broadcast. It closed in 1998."
+  },
+  "geopolitics": "Funded by the licence fee, so there was no commercial pressure and no commercial credit either. BBC rules kept staff anonymous. Equipment was surplus and improvised because nothing commercial existed to buy.",
+  "whatWasNew": "Electronic and tape sound used every day for a mass audience, as sound effects and signature tunes rather than as concert art.",
+  "production": "Tape machines, oscillators, a plucked-string sound source and hand-cut splices in the early years. Synthesizers like the EMS VCS3 arrived from about 1970.",
+  "labels": "BBC Records issued collections from the late 1960s. The main output was broadcast, not sold.",
+  "politics": "A long argument inside the BBC over whether this was music, and over who deserved credit. Oram left partly over the first question. Derbyshire's lack of credit is the best-known case of the second.",
+  "memberIds": [
+    "daphne-oram",
+    "delia-derbyshire"
+  ],
+  "palette": {
+    "ink": "#0e1414",
+    "paper": "#dfe8e6",
+    "accent": "#1f8a7a",
+    "accent2": "#7a8a88"
+  },
+  "motif": "tape-reel"
+}

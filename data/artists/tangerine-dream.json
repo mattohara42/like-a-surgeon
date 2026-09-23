@@ -1,0 +1,38 @@
+{
+  "id": "tangerine-dream",
+  "name": "Tangerine Dream",
+  "sortName": "Tangerine Dream",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1967,
+  "activeTo": null,
+  "originCity": "West Berlin",
+  "originCountry": "West Germany",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "virgin",
+      "from": 1973,
+      "to": 1979
+    }
+  ],
+  "keyProducers": [],
+  "hook": "A West Berlin band who made the step sequencer, a machine that plays a pattern by itself, into the lead instrument.",
+  "blurb": {
+    "age7": "A band from Berlin who used a machine that plays notes over and over by itself, while they played on top.",
+    "age13": "Edgar Froese started Tangerine Dream in West Berlin in 1967. In 1973 Christopher Franke bought a Moog modular synthesizer with money from their new deal with Virgin Records. It had a sequencer, a unit that plays a row of notes in a loop without anyone touching the keys. On Phaedra, released in 1974, that pulsing loop is the backbone of the music. It sold well across Europe and made Virgin a lot of money.",
+    "adult": "Phaedra is often called the first sequencer album. That claim is loose. Sequencers were in use before it. It's safer to say it made the sequencer the centre of a hit record. The band's sequenced pulse runs forward into a lot of electronic music, and into film scoring through their own soundtracks from the late 1970s. Froese died in 2015, and the band continues without him."
+  },
+  "signatureTracks": [
+    {
+      "title": "Phaedra",
+      "year": 1974,
+      "whyThisOne": "The Moog sequencer's pulse, in a hit record, for the first time."
+    },
+    {
+      "title": "Rubycon",
+      "year": 1975,
+      "whyThisOne": "The same approach, longer and darker."
+    }
+  ]
+}
