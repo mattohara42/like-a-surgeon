@@ -20,6 +20,15 @@ pull request gets its own Netlify preview.
   #21). The gate is still open: it passes when Matt's 13-year-old uses the
   map without instruction and gets somewhere. `docs/m3-gate-notes.md` is the
   guide for that session.
+- **Track D (data):** machines reached their 25 target in PR #23. The
+  rest are still short: 39 of 120 artists, 76 of 350 edges, 8 of 20
+  scenes, 14 of 30 labels, 2 of 5 threads, 4 of 30 edges with a demo.
+  The suggested next batch is 80s and 90s hip-hop production, which also
+  brings in the artists that the next machines (MPC60, TR-707, LinnDrum)
+  need to connect to. See the end of `BACKLOG.md`.
+- **Open question:** Q20 in `QUESTIONS.md`. A null end year can't
+  currently tell "still made" from "unknown", so some machines read as
+  still on sale.
 - **Next:** M4, the audio engine, once the M3 gate is passed.
 
 ## What is here

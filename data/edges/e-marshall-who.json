@@ -1,0 +1,32 @@
+{
+  "id": "e-marshall-who",
+  "from": "marshall-jtm45",
+  "to": "the-who",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1965,
+  "crossLineage": false,
+  "evidence": "Marshall's company histories and histories of the band both record Pete Townshend as a regular at Jim Marshall's Hanwell shop and as the player who asked for a 100-watt amplifier in 1965, which Marshall built as a doubled JTM45. Which amplifier was used on any particular studio recording is a separate question, and this edge does not answer it.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Marshall",
+      "title": "JTM45, and the 100-watt version built for Townshend",
+      "year": 1965,
+      "search": false
+    },
+    "later": {
+      "artist": "The Who",
+      "title": "My Generation",
+      "year": 1965
+    },
+    "whatToListenFor": "Skip to the last stretch of the song, where it stops behaving like a song. The guitar howls with feedback, notes hang on far longer than a string alone would let them, and the drums crash around underneath. Feedback like that needs a guitar held near a very loud amplifier. The Who built their live show on that volume, and this record brings it into the studio."
+  },
+  "explanation": {
+    "age7": "The Who wanted louder amplifiers, so a shop owner built them, and their music got louder and wilder.",
+    "age13": "Pete Townshend kept going into Jim Marshall's shop asking for more volume. Marshall kept building louder amplifiers until he made a 100-watt one for him. That volume let the Who play with feedback, the howl a guitar makes when it is close to a very loud speaker, and they turned it into part of the music.",
+    "adult": "The influence runs both ways here, which is part of why it is interesting. The band's demands shaped the product, and the product shaped what the band could do on stage. The edge is drawn from machine to band because the map follows how the sound changed, and the stack changed what a rock concert physically was."
+  },
+  "tags": [
+    "technology"
+  ]
+}

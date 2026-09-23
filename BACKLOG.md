@@ -292,6 +292,10 @@ fixing them inline.)
   reading rather than on the schema. An `effect` kind, or a rename of
   `studio-technique` to cover hardware processors explicitly, would make
   this unambiguous. Schema change, so not done inline.
+  **Update, second machines batch:** the gap now covers the Fuzz-Tone,
+  the Harmonizer, the AMS delay and the Mu-Tron as well, and two
+  guitar amplifiers are filed as `instrument` for want of anything better
+  (A109). An `effect` kind and an `amplifier` kind would cover all of them.
 - The lineage enum has no disco value, so the 12-inch single is filed under
   `funk` (A57). Disco is load-bearing for house, for the remix as an
   authored object, and for a large part of what the map will eventually
@@ -355,3 +359,14 @@ fixing them inline.)
   two to three. Rather than pad it with a record I could not verify, it
   stands at one and warns. His catalogue outside 'The Message' needs real
   research rather than a guess.
+- The second machines batch brought the machine floor to 25, and the
+  opening view now hides several machine names in 1963 to 1985 because
+  the label placement (A100) has no room for them. Nothing overlaps, but
+  a reader has to zoom to find the Fuzz-Tone or the Mu-Tron. Machines are
+  unbounded like everything else, so the floor will need a second row or
+  lane-style packing well before 50 machines.
+- Machines worth adding once their artists are on the map (A107): the
+  Akai MPC60 (late-80s hip-hop production), the Casio MT-40 with King
+  Jammy and Wayne Smith's 'Under Mi Sleng Teng', the Roland TR-707 and
+  TR-606, and the LinnDrum. Each needs an artist before it can connect,
+  so they belong with the batches that add those artists.

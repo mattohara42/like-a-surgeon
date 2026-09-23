@@ -1,0 +1,19 @@
+{
+  "type": "machine",
+  "id": "teac-a-3340",
+  "name": "TEAC A-3340 four-track",
+  "kind": "studio-technique",
+  "lineage": "other",
+  "maker": "TEAC",
+  "releasedYear": 1972,
+  "discontinuedYear": null,
+  "originalPurpose": "A quarter-inch reel-to-reel tape recorder with four tracks, sold to home users and semi-professionals. Its Simul-Sync feature let you record one track while listening to the others in time, so one person could build up a recording part by part.",
+  "whatActuallyHappened": "Lee 'Scratch' Perry built the Black Ark, his studio in his back yard in Kingston, around one. Four tracks was very few for a professional studio, so Perry recorded parts, mixed them together onto one track, then recorded more on the freed-up space, over and over. Each pass added hiss and blur. The thick, murky, layered sound of Black Ark records comes partly from that process of packing too much into too little tape.",
+  "priceStory": "Home-studio equipment, the kind of machine found in schools and youth clubs rather than major studios. Perry made some of the most admired records of the decade on gear that a professional engineer would have called inadequate.",
+  "hook": "A home tape recorder with only four tracks, on which the Black Ark was built.",
+  "blurb": {
+    "age7": "A tape recorder for home use. Lee Perry made famous records on it in a studio in his back yard.",
+    "age13": "Big studios had sixteen or twenty-four tracks to record on. This machine had four. Lee Perry built his studio, the Black Ark, in his back yard around one. To fit in all the parts, he kept recording some instruments, squashing them together onto one track, and then recording more. Every time he did that the sound got a bit hazier. That haze is part of why his records sound like nobody else's.",
+    "adult": "Track bouncing on a four-track costs generational loss every time, and Perry's production turned that loss into texture. The equipment list at the Black Ark is attested by Perry and by those who worked there, though accounts of exactly which models were in use at which date vary. The TEAC's place is the constraint it imposed, which forced decisions a larger console would never have required."
+  }
+}

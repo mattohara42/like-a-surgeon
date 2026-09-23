@@ -1,0 +1,19 @@
+{
+  "type": "machine",
+  "id": "marshall-jtm45",
+  "name": "Marshall JTM45",
+  "kind": "instrument",
+  "lineage": "rock",
+  "maker": "Marshall",
+  "releasedYear": 1963,
+  "discontinuedYear": 1966,
+  "originalPurpose": "A British-built alternative to the Fender amplifiers that London guitarists wanted and could not easily afford. Jim Marshall ran a music shop in Hanwell, west London, where young players including Pete Townshend kept telling him what they needed. The first design followed Fender's Bassman closely.",
+  "whatActuallyHappened": "The shop's customers wanted louder, and kept wanting louder. In 1965 Townshend asked for a 100-watt amplifier, and Marshall answered with a doubled-up JTM45 that became the forerunner of the 100-watt Marshall. Stacked on tall speaker cabinets, it became the Marshall stack, the wall of amplifiers behind a rock band that everyone now recognises. The JTM45 itself was replaced by newer models in 1966.",
+  "priceStory": "Cheaper than an imported American Fender, and sold from a shop the players already hung around in. That closeness mattered as much as the price: the musicians asking for more volume were the same people standing at the counter.",
+  "hook": "A shop owner built what his customers asked for, and they kept asking for it louder.",
+  "blurb": {
+    "age7": "Guitar amplifiers made by a shop owner in London because young guitarists kept asking him for louder ones.",
+    "age13": "Jim Marshall had a music shop in west London, and young guitarists like Pete Townshend of the Who hung out there. American amplifiers were expensive, so Marshall started building his own. The guitarists kept asking for more volume, so he kept making them louder. Stack the loud ones on top of big speaker boxes and you get the Marshall stack, the wall behind almost every rock band since.",
+    "adult": "The JTM45 is less an invention than a feedback loop between a retailer and his customers. Its circuit borrowed heavily from Fender. What mattered was that it put that power in British hands at a British price, and that Marshall kept raising the output in response to specific players. Townshend's request for 100 watts is well documented in Marshall's own history, and the stack that followed changed what a rock band's live sound was expected to be."
+  }
+}

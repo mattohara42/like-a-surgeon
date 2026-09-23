@@ -1,0 +1,19 @@
+{
+  "type": "machine",
+  "id": "dubreq-stylophone",
+  "name": "Stylophone",
+  "kind": "synth",
+  "lineage": "other",
+  "maker": "Dubreq",
+  "releasedYear": 1968,
+  "discontinuedYear": 1975,
+  "originalPurpose": "A pocket-sized electronic instrument for children, invented by Brian Jarvis in 1967 and made in London. You touch a metal pen to a printed metal keyboard to play one note at a time, with a thin buzzing tone.",
+  "whatActuallyHappened": "It sold in the millions as a toy, promoted heavily on British television. It was also, technically, a small synthesizer, and David Bowie got one early. He built 'Space Oddity' around its sound in 1969, which put a children's gadget on one of the most famous records of the decade. The original run ended in 1975, and Dubreq revived it in 2007.",
+  "priceStory": "Sold by mail order for under nine pounds, around three million units in the original run. Cheap for a musical instrument, expensive for a toy, and the first electronic instrument most British children of the era ever held.",
+  "hook": "A buzzing electronic toy that ended up on a record about an astronaut lost in space.",
+  "blurb": {
+    "age7": "A tiny toy keyboard you play with a metal pen. David Bowie used one on a famous song about a spaceman.",
+    "age13": "It is a little electronic keyboard made of metal, played by touching it with a pen on a wire. It was sold as a toy and millions of kids got one. David Bowie was sent one early, and he wrote 'Space Oddity' around its thin, buzzing sound. A toy made the sound of a man floating alone in space.",
+    "adult": "The Stylophone matters here as proof that the cheapest electronic instrument on the market could carry a major record, several years before synthesizers were ordinary in pop. It is a single-oscillator, stylus-played device of very limited range, and Bowie's use of it is documented by his longtime producer Tony Visconti and by his estate. He returned to it on later records, which suggests he heard more in it than novelty."
+  }
+}

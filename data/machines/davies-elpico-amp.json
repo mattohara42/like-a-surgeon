@@ -1,0 +1,19 @@
+{
+  "type": "machine",
+  "id": "davies-elpico-amp",
+  "name": "Dave Davies's slashed Elpico amp",
+  "kind": "instrument",
+  "lineage": "other",
+  "maker": "Elpico",
+  "releasedYear": 1964,
+  "discontinuedYear": null,
+  "originalPurpose": "A small, inexpensive British amplifier, the kind a teenager in a new band could afford. Nothing about it was designed to distort.",
+  "whatActuallyHappened": "In the summer of 1964 Dave Davies of the Kinks, then seventeen, got tired of how clean his guitar sounded. He took a single-edged razor blade to the amp's speaker cone and cut slits in it from the centre outward, leaving it shredded but still in one piece. The damaged speaker rattled and tore every note, and he fed that into a larger Vox amplifier to make it loud. That sound is the guitar on 'You Really Got Me'. This record is placed in 1964, the year of the cut, because it is one amplifier and one act rather than a product line.",
+  "priceStory": "Cheap, which is the point. Nobody slashes an expensive amplifier. The Kinks were a young band from north London without money for gear, and the sound that is often called the start of heavy rock came from damaging the one they had.",
+  "hook": "One cheap amplifier, one razor blade, and the distorted power chord arrives.",
+  "blurb": {
+    "age7": "A guitarist cut holes in his amplifier's speaker with a razor blade to make his guitar sound rough, and it worked.",
+    "age13": "Dave Davies was seventeen and hated how clean his guitar sounded. So he cut slits in the speaker of his small amplifier with a razor blade. The torn speaker made every chord buzz and crunch, and that is the sound of 'You Really Got Me'. Lots of heavier rock guitar that came later started from this idea: make the guitar sound damaged on purpose.",
+    "adult": "Davies's own account of the slashed speaker has been consistent across decades of interviews and demonstrations. The distortion came from mechanical damage, not circuitry, which puts it in a different category from the fuzz box: the Kinks did not buy the sound, they vandalised their way to it. Claims that heavy metal and punk begin here are the kind of lineage talk that simplifies, but the power chord as a distorted, sustaining wall does have a clear early document in this record."
+  }
+}

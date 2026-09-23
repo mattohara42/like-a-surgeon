@@ -124,6 +124,10 @@ Suggested batch order after M1:
    text is stable and proven with a real reader.
 7. Long tail, forever.
 
+Progress: batches so far have covered dub, electro and Detroit, the UK
+rock spine, and the founding Bronx generation. Batch 5 is half done. Machines reached 25 in PR #23, and labels are
+still short. `npm run report` has the current distance on every target.
+
 ## Definition of done for any milestone
 
 Validator passes. No console errors. `CONFIG` holds every tuning value.

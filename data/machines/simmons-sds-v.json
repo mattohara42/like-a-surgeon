@@ -1,0 +1,19 @@
+{
+  "type": "machine",
+  "id": "simmons-sds-v",
+  "name": "Simmons SDS-V",
+  "kind": "instrument",
+  "lineage": "other",
+  "maker": "Simmons",
+  "releasedYear": 1981,
+  "discontinuedYear": 1983,
+  "originalPurpose": "An early fully electronic drum kit from Simmons in St Albans, England. You hit hexagonal pads with ordinary sticks, and a rack of analogue circuits produced the drum sounds.",
+  "whatActuallyHappened": "Its pitch-bending electronic toms became one of the signature sounds of 1980s pop. In reggae, Sly Dunbar was one of very few drummers who welcomed the new machines when most Jamaican drummers were wary of them. He used Simmons drums on Black Uhuru's 'Anthem', and his early use of electronic drums pointed toward the fully computerised dancehall that followed. Simmons replaced the SDS-V with newer models in 1983.",
+  "priceStory": "Expensive new, and aimed at professional drummers. The pads were made of very hard plastic, which drummers complained hurt their wrists. For a Kingston rhythm section, the cost and the novelty are part of why Sly's adoption stood out.",
+  "hook": "Hexagonal electronic drums that a Jamaican drummer took up while most others were still suspicious of them.",
+  "blurb": {
+    "age7": "Electronic drums with six-sided pads. A famous reggae drummer, Sly Dunbar, was one of the first to use them.",
+    "age13": "You play them with sticks like normal drums, but the sound comes from electronics, and the toms can swoop down in pitch like a laser. Lots of 1980s pop used them. In Jamaica most drummers did not trust drum machines, but Sly Dunbar was curious about them. He used Simmons drums on Black Uhuru's album 'Anthem', and his interest helped point reggae toward the computer-made dancehall music that came next.",
+    "adult": "Dunbar has said in interviews, including a Red Bull Music Academy lecture, that most Jamaican drummers were afraid of drum machines while he found them fascinating, and that he used Simmons drums on 'Anthem'. The claim that his experiments presaged dancehall's digital turn is a reasonable reading of the chronology rather than a documented causal chain, and the map treats it that way."
+  }
+}

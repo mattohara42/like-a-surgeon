@@ -1,0 +1,19 @@
+{
+  "type": "machine",
+  "id": "eventide-h910",
+  "name": "Eventide H910 Harmonizer",
+  "kind": "studio-technique",
+  "lineage": "other",
+  "maker": "Eventide",
+  "releasedYear": 1975,
+  "discontinuedYear": 1988,
+  "originalPurpose": "The first commercially available digital pitch shifter, designed by Tony Agnello. Studios bought it to change the pitch of a sound without changing its speed, which had never been possible before: speed up a tape and the voice goes higher, slow it and the voice goes lower.",
+  "whatActuallyHappened": "Producers treated it as a way to make sounds nobody had heard. On David Bowie's 'Low', Tony Visconti fed the snare drum through it with the pitch set to drop and the feedback turned up, so each hit fell downward in pitch as it echoed. It became standard studio equipment for doubling vocals and thickening guitars, and later Eventide units descend from it.",
+  "priceStory": "About 1,600 US dollars in 1975. A professional studio purchase, well beyond an individual musician, which is why its first famous uses are on records made by established artists in well-equipped rooms.",
+  "hook": "A box that could change pitch without changing time, and made a snare drum fall downhill.",
+  "blurb": {
+    "age7": "A machine that can make a sound higher or lower without making it faster or slower. On one album it made the drums sound like they were falling.",
+    "age13": "Before this, the only way to make a sound higher was to play it faster, like a chipmunk voice. The Harmonizer was a computer that could change pitch and leave the speed alone. On David Bowie's album 'Low', the producer set it so the snare drum's echo dropped in pitch every time it repeated. The drums sound like they are falling down stairs.",
+    "adult": "The H910's significance is that it separated pitch from time, which analogue tape could not do. Visconti's account of the 'Low' snare, pitch set downward with regeneration high so each repeat shifts further, is documented in his interviews and in histories of the H910. The artefacts of early digital pitch shifting, glitches at the splice points, were part of what made it sound new rather than faults to be hidden."
+  }
+}

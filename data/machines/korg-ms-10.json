@@ -1,0 +1,19 @@
+{
+  "type": "machine",
+  "id": "korg-ms-10",
+  "name": "Korg MS-10",
+  "kind": "synth",
+  "lineage": "electronic",
+  "maker": "Korg",
+  "releasedYear": 1978,
+  "discontinuedYear": null,
+  "originalPurpose": "A small, affordable monophonic synthesizer: one oscillator, one note at a time, and a panel of patch points for rerouting the sound. Korg sold it as an entry-level instrument.",
+  "whatActuallyHappened": "In Detroit, a teenage Juan Atkins talked his grandmother into buying him one for Christmas. He spent his high-school years learning synthesis on it, recording to cassette decks, and has described that period as the most productive of his whole career. What he learned on it went into Cybotron, and from Cybotron into techno.",
+  "priceStory": "About 450 US dollars in 1978, which put it within reach of a family willing to spend on a teenager. That is the whole story: a real synthesizer arriving in a Black Detroit household, in the hands of a kid, years before synths were cheap.",
+  "hook": "A starter synthesizer that a Detroit teenager learned the future on.",
+  "blurb": {
+    "age7": "A small synthesizer that a boy in Detroit got for Christmas. He grew up to help invent techno.",
+    "age13": "It is a simple synthesizer that plays one note at a time. Juan Atkins got one as a Christmas present when he was about fifteen, from his grandmother. He spent years in his room figuring out how to make sounds with it and recording them onto cassettes. He has said that was the most productive time of his life. A few years later he and Rick Davis started Cybotron.",
+    "adult": "The MS-10's place here rests on Atkins's own repeated account of learning on it, not on a claim that it can be heard on any particular Cybotron release. It stands for a pattern the map returns to often: a modest, affordable machine reaching the right person early, and the learning mattering more than the instrument's capabilities."
+  }
+}

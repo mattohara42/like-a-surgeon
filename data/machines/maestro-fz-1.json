@@ -1,0 +1,19 @@
+{
+  "type": "machine",
+  "id": "maestro-fz-1",
+  "name": "Maestro FZ-1 Fuzz-Tone",
+  "kind": "studio-technique",
+  "lineage": "other",
+  "maker": "Gibson (Maestro brand)",
+  "releasedYear": 1962,
+  "discontinuedYear": null,
+  "originalPurpose": "A box that made a guitar sound broken on purpose. Nashville engineer Glenn Snoddy heard a bass part come out torn and buzzing on a 1961 Marty Robbins session, traced it to faulty studio equipment, and built a circuit with Revis Hobbs that did the same thing on demand. They sold the design to Gibson, which put it on the market as a novelty tone for guitarists.",
+  "whatActuallyHappened": "Almost nobody wanted it at first. Gibson shipped a first batch of about five thousand in 1962 and, by the usual account, sold very few more until 1965. Then Keith Richards used one on '(I Can't Get No) Satisfaction', the record went to number one, and fuzz became something every guitarist had to have an opinion about. Garage and psychedelic bands spent the next few years making it a basic colour of rock guitar.",
+  "priceStory": "About 40 US dollars in 1962, cheap enough to be an impulse purchase. Price was never the obstacle. The obstacle was that nobody had yet heard a reason to want a guitar that sounded wrong, and one hit record supplied it.",
+  "hook": "A studio fault turned into a product, which flopped until one riff made it the sound of rock guitar.",
+  "blurb": {
+    "age7": "A little box that makes a guitar sound fuzzy and buzzy. Nobody bought it until the Rolling Stones used it on a giant hit.",
+    "age13": "It started as a mistake. A piece of studio equipment broke during a country session and the bass came out fuzzy, and two engineers built a box that made that fuzz on purpose. Gibson sold it and hardly anyone bought it. Three years later Keith Richards used one on 'Satisfaction', and suddenly every band wanted that sound.",
+    "adult": "The Fuzz-Tone is a clean example of a sound whose value was invisible until a record demonstrated it. The circuit sat unwanted for three years. In 1965 the device was the same and the context was new: a riff that made distortion sound intended. Accounts of how few units sold between 1962 and 1965 vary, but they agree the market was close to dead until 'Satisfaction'."
+  }
+}
