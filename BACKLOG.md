@@ -32,6 +32,17 @@ correct response to a good idea arriving mid-milestone.
   build it with the same evidence discipline as every other edge, not as
   an exception to it.
 
+- **Follow the producer (Q21).** Select a producer and see everything
+  they touched lit up across the map, or an "Arrange by producer" lane
+  option beside Lineage, Scene and Label. The data for it is `production`
+  edges from producer nodes, which the hip-hop batches are adding now.
+  Deferred until the M3 gate passes, per Matt's call on Q21.
+- **Record nodes (Q21).** If the sampled-artist-as-hub approach stops
+  working (for example a single record sampled by fifty acts crowds its
+  artist's node), a `record` node type would let the break itself be the
+  hub. It's a schema, validator, layout and panel change, so it's
+  deferred until the data shows it's needed.
+
 ## Deferred data
 
 - Jazz, which touches everything and would triple the graph.
@@ -387,6 +398,23 @@ fixing them inline.)
   G-funk), which needs Parliament-Funkadelic on the map first. Def Jam
   as a label node also waits: every causal claim about it found so far
   is really Rubin's, and A69 keeps roster relationships out of edges.
+  **Partly closed** by the Q21 batch 1, which added the Beastie Boys and
+  much of the 90s. Public Enemy, De La Soul, Mantronix, Big Daddy Kane
+  and the West Coast are still waiting.
 - The batch added two more null end years of the "could not find it"
   kind that Q20 is about: `akai-mpc60` and `akai-mpc3000`. Both will read
   as still on sale until Q20 is answered.
+- Sampled-artist hubs the Q21 batch 1 records already point at, ready
+  for batch 2: Sly and the Family Stone ('Life', in 'Insane in the
+  Brain'), The Charmels ('C.R.E.A.M.'), Ahmad Jamal ('The World Is
+  Yours'), Sade ('Doomsday'), Joni Mitchell ('Got 'til It's Gone'),
+  Ronnie Foster ('Electric Relaxation'), Michael Jackson ('It Ain't Hard
+  to Tell') and Daedelus ('Accordion'). Each is named in a track pair
+  now, and each becomes a `sample` edge once its artist is a node.
+- Producers held as plain names until a second act needs them (A127):
+  Q-Tip, K-Def, A-Plus, the Dust Brothers, Joe Nicolo, Questlove, and
+  Paul C, Large Professor's teacher, who also engineered for Ultramagnetic
+  MCs.
+- Stones Throw is the label behind Donuts, Champion Sound and
+  Madvillainy, and is not on the map yet. It needs a causal label edge
+  under A69, not just a roster.

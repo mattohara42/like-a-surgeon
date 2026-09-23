@@ -1,0 +1,32 @@
+{
+  "id": "e-tribe-dilla",
+  "from": "a-tribe-called-quest",
+  "to": "j-dilla",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1995,
+  "crossLineage": false,
+  "evidence": "The Ummah, a production team of Q-Tip, Ali Shaheed Muhammad and Jay Dee, is credited on A Tribe Called Quest's Beats, Rhymes and Life (1996) and The Love Movement (1998), and on Janet Jackson's 'Got 'til It's Gone' (1997). Accounts of the team's origin say Amp Fiddler introduced Jay Dee to Q-Tip at Lollapalooza in 1994 and Q-Tip invited him in. The credits are documented. The origin story is consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "A Tribe Called Quest",
+      "title": "Electric Relaxation",
+      "year": 1993
+    },
+    "later": {
+      "artist": "Janet Jackson",
+      "title": "Got 'til It's Gone (produced by The Ummah)",
+      "year": 1997,
+      "search": "Janet Jackson Got til Its Gone"
+    },
+    "whatToListenFor": "'Electric Relaxation' loops a warm keyboard figure from a Ronnie Foster record under soft drums, mellow and unhurried. 'Got 'til It's Gone' keeps that mood and takes it to pop radio. It loops Joni Mitchell's own voice and guitar from 'Big Yellow Taxi', with Q-Tip rapping and Janet Jackson singing softly over the top. Listen for how soft the drums are and how far back they sit, so the sample and the voices carry the song."
+  },
+  "explanation": {
+    "age7": "Q-Tip brought J Dilla into his production team. They made music for Tribe and even for Janet Jackson.",
+    "age13": "In 1994 Q-Tip met a young Detroit producer called Jay Dee and invited him to join his production team, The Ummah. Together they made music for A Tribe Called Quest and for other artists, including Janet Jackson's 1997 hit 'Got 'til It's Gone', which uses a piece of a Joni Mitchell song. This was how Jay Dee's work first reached millions of people.",
+    "adult": "The route by which J Dilla's work reached a national audience. The edge runs from the group because The Ummah was Tribe's production arm, and the Joni Mitchell sample makes Mitchell a candidate hub for the sampling batch (Q21)."
+  },
+  "tags": [
+    "production"
+  ]
+}

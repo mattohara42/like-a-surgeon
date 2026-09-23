@@ -1,0 +1,31 @@
+{
+  "id": "e-premier-nas",
+  "from": "dj-premier",
+  "to": "nas",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1994,
+  "crossLineage": false,
+  "evidence": "Illmatic (Columbia, 1994) credits DJ Premier with producing 'N.Y. State of Mind', 'Memory Lane (Sittin' in da Park)' and 'Represent'.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Gang Starr",
+      "title": "Mass Appeal",
+      "year": 1994
+    },
+    "later": {
+      "artist": "Nas",
+      "title": "N.Y. State of Mind",
+      "year": 1994
+    },
+    "whatToListenFor": "Premier made both in the same year, and his hands are audible in both: short, hard, tightly trimmed drums, and a small fragment looped until it becomes a mood. On 'Mass Appeal' the fragment is a thin, repeating figure that sounds almost like elevator music, a joke that fits a song mocking rap made for the charts. On 'N.Y. State of Mind' it's a dark, minor-key piano figure sitting low under the drums. Same method, opposite weather."
+  },
+  "explanation": {
+    "age7": "DJ Premier made beats for Nas's first album, including its opening song.",
+    "age13": "DJ Premier produced three songs on Illmatic, including 'N.Y. State of Mind', the first real song on the album. He used his usual method: hard, short drums and a tiny piece of an old record looped over and over, this time something dark and moody to match Nas's story about growing up in Queensbridge.",
+    "adult": "One of three producer edges into Illmatic, which together show the 'producer as dimension' that Q21 asks the map to make visible. Premier's style carries across artists: Gang Starr and Nas share his drum sound even when the samples change completely."
+  },
+  "tags": [
+    "production"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "a-tribe-called-quest",
+  "name": "A Tribe Called Quest",
+  "sortName": "Tribe Called Quest, A",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1985,
+  "activeTo": 2017,
+  "originCity": "St. Albans, Queens, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Q-Tip",
+    "Ali Shaheed Muhammad",
+    "j-dilla"
+  ],
+  "hook": "A Queens group that built rap on jazz records and low end, and whose leader brought J Dilla into the wider world.",
+  "blurb": {
+    "age7": "A rap group from Queens who made music from old jazz records. Their songs sound calm and friendly.",
+    "age13": "Q-Tip, Phife Dawg, Ali Shaheed Muhammad and Jarobi White came from St. Albans, Queens. They were part of the Native Tongues, a group of friendly, thoughtful rap acts. Their second album, The Low End Theory, in 1991, was built on jazz records and deep bass, and the jazz bassist Ron Carter played on it. Q-Tip learned sampling partly from Large Professor. In the mid-1990s Q-Tip brought a young Detroit producer, Jay Dee, into their production team, The Ummah. Phife Dawg died in 2016, and their last album came out that year.",
+    "adult": "Tribe's importance runs on two tracks. Their records made the jazz sample a mainstream sound in rap, and Q-Tip's production team, The Ummah (Q-Tip, Ali Shaheed Muhammad and Jay Dee), was the route by which J Dilla's work reached a national audience. Q-Tip met Jay Dee in 1994, introduced by the Detroit musician Amp Fiddler, and invited him into the team. The group's last album, We Got It from Here... Thank You 4 Your Service, was released in November 2016, eight months after Phife Dawg died."
+  },
+  "signatureTracks": [
+    {
+      "title": "Check the Rhime",
+      "year": 1991,
+      "whyThisOne": "The Low End Theory's best-known single."
+    },
+    {
+      "title": "Electric Relaxation",
+      "year": 1993,
+      "whyThisOne": "Built on a Ronnie Foster keyboard loop, soft and unhurried."
+    },
+    {
+      "title": "Find a Way",
+      "year": 1998,
+      "whyThisOne": "From their fifth album, produced with The Ummah, Jay Dee included."
+    }
+  ]
+}

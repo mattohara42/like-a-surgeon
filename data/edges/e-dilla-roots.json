@@ -1,0 +1,32 @@
+{
+  "id": "e-dilla-roots",
+  "from": "j-dilla",
+  "to": "the-roots",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1996,
+  "crossLineage": false,
+  "evidence": "Questlove has described in interviews and lectures being floored the first time he heard a Jay Dee beat, and starting to play a loose, deliberately off-grid feel modelled on Dilla's programming, which accounts date to a 1996 House of Blues performance. He was a vocal champion of Dilla within the Soulquarians circle. First-person, but gathered here through secondary retellings, so consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Slum Village",
+      "title": "Fall in Love",
+      "year": 2000
+    },
+    "later": {
+      "artist": "The Roots",
+      "title": "Things Fall Apart (album)",
+      "year": 1999,
+      "search": "The Roots Things Fall Apart"
+    },
+    "whatToListenFor": "Put a programmed Dilla beat next to Questlove playing live. In 'Fall in Love' the kicks land early or late against the loop and the beat seems to lean. On the slower tracks of Things Fall Apart, listen to Questlove's kick and snare: played by hand, but placed a fraction behind where a metronome would put them, so the groove drags lazily. A drummer is copying a machine that was being used against its own settings."
+  },
+  "explanation": {
+    "age7": "The Roots' drummer, Questlove, learned to play drums the wobbly way J Dilla made his beats.",
+    "age13": "Questlove, the drummer of The Roots, was amazed by J Dilla's beats, where drum hits land a little early or late on purpose. He started playing that way himself, by hand, on a real drum kit. So a feel invented on a sampler moved into live bands, and lots of drummers learned it after him.",
+    "adult": "An edge where influence runs from programmed music into live performance, the reverse of this map's usual direction (drummer to sampler). It supports the claim on the MPC3000 record that Dilla's timing crossed into live playing."
+  },
+  "tags": [
+    "production"
+  ]
+}

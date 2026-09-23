@@ -1,0 +1,34 @@
+{
+  "id": "souls-of-mischief",
+  "name": "Souls of Mischief",
+  "sortName": "Souls of Mischief",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1991,
+  "activeTo": null,
+  "originCity": "Oakland, California",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "A-Plus"
+  ],
+  "hook": "Four East Oakland teenagers whose one perfect single, built on a jazz-fusion drummer's record, became the sound of 1993.",
+  "blurb": {
+    "age7": "Four friends from Oakland who were teenagers when they made a famous rap song called '93 'til Infinity'.",
+    "age13": "A-Plus, Opio, Phesto and Tajai grew up in East Oakland and were part of Hieroglyphics, a group of rappers that also included Del the Funky Homosapien. In 1993, while still teenagers, they released '93 'til Infinity'. A-Plus built the beat from a 1974 record called 'Heather' by the drummer Billy Cobham, speeding up its slow bassline and marimba and adding his own drums. It's a relaxed, looping song about hanging out, and people still play it thirty years later.",
+    "adult": "Souls of Mischief show the jazz-sample sound travelling west and staying distinct from the gangsta rap that dominated California rap commercially in 1993. The single's reputation has grown rather than faded: it placed fifth on Rolling Stone's 2023 list of the greatest West Coast hip-hop songs. Its beat is the first sample edge on this map where the source is a jazz-fusion record, which opens the sampled-artist hub pattern (Q21)."
+  },
+  "signatureTracks": [
+    {
+      "title": "93 'til Infinity",
+      "year": 1993,
+      "whyThisOne": "The single, built on Billy Cobham's 'Heather'."
+    },
+    {
+      "title": "That's When Ya Lost",
+      "year": 1993,
+      "whyThisOne": "The other single from their debut album, sharper and faster."
+    }
+  ]
+}

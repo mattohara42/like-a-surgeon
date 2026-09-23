@@ -1,0 +1,32 @@
+{
+  "id": "billy-cobham",
+  "name": "Billy Cobham",
+  "sortName": "Cobham, Billy",
+  "type": "artist",
+  "lineage": "other",
+  "activeFrom": 1968,
+  "activeTo": null,
+  "originCity": "New York, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A jazz-fusion drummer whose slow 1974 track 'Heather' became one of the most-loved loops in 90s rap.",
+  "blurb": {
+    "age7": "A jazz drummer. A slow song he made in 1974 was later used in a famous rap song.",
+    "age13": "Billy Cobham was born in Panama in 1944 and grew up in New York. He became famous as the drummer in the Mahavishnu Orchestra, a band that mixed jazz and loud rock, and then made his own albums. One of them, Crosswinds (1974), has a slow, drifting song called 'Heather'. Nineteen years later the Oakland producer A-Plus sped it up and turned it into '93 'til Infinity' for Souls of Mischief.",
+    "adult": "Cobham is on the map as a sampled source rather than for his own lineage. He's the first of the sampled-artist hubs agreed in Q21, where each use of his records is a sample edge. His own place in jazz-rock fusion, as the drummer of the Mahavishnu Orchestra, belongs to a jazz lineage the map has deferred (BACKLOG, Deferred data)."
+  },
+  "signatureTracks": [
+    {
+      "title": "Heather",
+      "year": 1974,
+      "whyThisOne": "From Crosswinds. Slow, drifting, and later the basis of '93 'til Infinity'."
+    },
+    {
+      "title": "Stratus",
+      "year": 1973,
+      "whyThisOne": "His best-known track as a leader, and a much-sampled one."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-largepro-nas",
+  "from": "large-professor",
+  "to": "nas",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1991,
+  "crossLineage": false,
+  "evidence": "Nas's first appearance on record is his verse on Main Source's 'Live at the Barbeque' (1991), on the album Breaking Atoms, which Large Professor produced. Illmatic (Columbia, 1994) credits Large Professor with producing 'It Ain't Hard to Tell', 'Halftime' and 'One Time 4 Your Mind'. His role in discovering and mentoring Nas is described consistently in profiles of both men.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Main Source",
+      "title": "Live at the Barbeque",
+      "year": 1991
+    },
+    "later": {
+      "artist": "Nas",
+      "title": "It Ain't Hard to Tell",
+      "year": 1994
+    },
+    "whatToListenFor": "On 'Live at the Barbeque' Nas is one voice in a posse cut, a teenager fitting a short, dense verse between older rappers. Three years later the same producer builds 'It Ain't Hard to Tell' for him alone, looping the soft keyboard riff from Michael Jackson's 'Human Nature' under him. Listen for how much room is left around the voice now. The beat is light and bright so that nothing competes with the rapping, which is a producer framing someone he found."
+  },
+  "explanation": {
+    "age7": "Large Professor put Nas on a record for the first time, then made beats for his first album.",
+    "age13": "Nas was seventeen when Large Professor gave him a verse on a Main Source song in 1991. Three years later Large Professor produced three songs on Nas's first album, Illmatic. One of them, 'It Ain't Hard to Tell', uses a piece of Michael Jackson's 'Human Nature'.",
+    "adult": "A discovery edge as well as a credit. It's documented on both counts: the 1991 verse is on record, and the 1994 production credits are on the album."
+  },
+  "tags": [
+    "production"
+  ]
+}

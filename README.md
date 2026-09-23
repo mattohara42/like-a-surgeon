@@ -20,13 +20,12 @@ pull request gets its own Netlify preview.
   #21). The gate is still open: it passes when Matt's 13-year-old uses the
   map without instruction and gets somewhere. `docs/m3-gate-notes.md` is the
   guide for that session.
-- **Track D (data):** machines reached their 25 target in PR #23, and
-  the hip-hop production batch (Run-D.M.C. through J Dilla, with the
-  Oberheim DMX, both Linn-designed MPCs and Cold Chillin') followed. The
-  rest are still short: 47 of 120 artists, 89 of 350 edges, 8 of 20
-  scenes, 15 of 30 labels, 2 of 5 threads, 4 of 30 edges with a demo.
-  `BACKLOG.md` lists what that batch left out, starting with Public
-  Enemy and De La Soul.
+- **Track D (data):** machines reached their 25 target in PR #23. Two
+  hip-hop batches followed: 80s production (PR #24), then 90s groups and
+  their producers (Q21, batch 1 of 3). The next two Q21 batches are the
+  most-sampled breaks and their artists, then classic rock. The rest are
+  still short: 62 of 120 artists, 104 of 350 edges, 8 of 20 scenes, 16
+  of 30 labels, 2 of 5 threads, 4 of 30 edges with a demo.
 - **Open question:** Q20 in `QUESTIONS.md`. A null end year can't
   currently tell "still made" from "unknown", so some machines read as
   still on sale.

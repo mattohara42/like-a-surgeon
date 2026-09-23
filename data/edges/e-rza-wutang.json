@@ -1,0 +1,31 @@
+{
+  "id": "e-rza-wutang",
+  "from": "rza",
+  "to": "wu-tang-clan",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1993,
+  "crossLineage": false,
+  "evidence": "RZA is credited as producer of nearly all of Enter the Wu-Tang (36 Chambers) (Loud and RCA, 1993), and of the self-released 1992 single 'Protect Ya Neck'.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Wu-Tang Clan",
+      "title": "Protect Ya Neck",
+      "year": 1992
+    },
+    "later": {
+      "artist": "Wu-Tang Clan",
+      "title": "C.R.E.A.M.",
+      "year": 1993
+    },
+    "whatToListenFor": "'Protect Ya Neck' opens on kung fu film dialogue and then runs eight rappers back to back over a raw, clattering loop. It sounds almost homemade, and it was self-released. 'C.R.E.A.M.', a year later, slows everything down: a sad, looping soul piano from a Charmels record, with space around each verse. Listen for RZA moving from chaos to melancholy with the same dusty texture holding both together."
+  },
+  "explanation": {
+    "age7": "RZA made the beats for the Wu-Tang Clan's first songs.",
+    "age13": "RZA produced almost all of the Wu-Tang Clan's first album. Their first single, 'Protect Ya Neck', is rough and crowded, with eight rappers taking turns. 'C.R.E.A.M.' is slow and sad, built on an old soul piano. Both have a dusty, grainy sound that became the Wu-Tang style.",
+    "adult": "The central producer edge of the Wu-Tang project. RZA's business plan and his production were one strategy (see the Wu-Tang record)."
+  },
+  "tags": [
+    "production"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-peterock-nas",
+  "from": "pete-rock",
+  "to": "nas",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1994,
+  "crossLineage": false,
+  "evidence": "Illmatic (Columbia, 1994) credits Pete Rock with producing 'The World Is Yours'. The track samples Ahmad Jamal's 'I Love Music'.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Pete Rock and CL Smooth",
+      "title": "They Reminisce Over You (T.R.O.Y.)",
+      "year": 1992
+    },
+    "later": {
+      "artist": "Nas",
+      "title": "The World Is Yours",
+      "year": 1994
+    },
+    "whatToListenFor": "Two years apart and the same idea from Pete Rock: a soft jazz phrase looped under heavy drums, turned melancholy. On 'T.R.O.Y.' it's a saxophone. On 'The World Is Yours' it's a gentle piano from an Ahmad Jamal record. Listen for how the piano keeps circling while Nas talks about ambition, the sweetness of the loop working against the hardness of the words."
+  },
+  "explanation": {
+    "age7": "Pete Rock made a beat for Nas's first album, using a piece of jazz piano.",
+    "age13": "Pete Rock produced 'The World Is Yours' on Nas's first album. Like his own hit 'T.R.O.Y.', it loops a soft jazz sound, this time a piano from a record by Ahmad Jamal, over strong drums.",
+    "adult": "The third producer edge into Illmatic. It shows Pete Rock's jazz-sample signature carrying from his own group to another artist's record."
+  },
+  "tags": [
+    "production"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "beastie-boys",
+  "name": "Beastie Boys",
+  "sortName": "Beastie Boys",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1981,
+  "activeTo": 2012,
+  "originCity": "New York, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "rick-rubin",
+    "Dust Brothers"
+  ],
+  "hook": "A New York hardcore punk band turned rap group, whose first album was the first rap album to top the US album chart and whose second was a landmark of sampling.",
+  "blurb": {
+    "age7": "Three friends from New York who started in a punk band and then became one of the most famous rap groups ever.",
+    "age13": "Adam Yauch (MCA), Mike Diamond (Mike D) and Adam Horovitz (Ad-Rock) started as a hardcore punk band in New York in 1981. Rick Rubin, who came from the same punk scene, helped them switch to rap. Their first album, Licensed to Ill (1986), was the first rap album to reach number one on the US album chart. Their second, Paul's Boutique (1989), was built from hundreds of samples and sold badly at first, but is now seen as one of the great sampling records. The group ended when Adam Yauch died in 2012.",
+    "adult": "The Beastie Boys are filed under hip-hop, because their defining work is inside the form, even though they came from hardcore punk, the same scene as Rubin (A120). Licensed to Ill's frat-boy persona and its sexism were things the group later repudiated in their own lyrics and in public statements. Paul's Boutique, produced with the Dust Brothers, is the densest sampling record of its moment, made two years before the Grand Upright ruling (see e-coldchillin-bizmarkie) would have made that density ruinously expensive to clear."
+  },
+  "signatureTracks": [
+    {
+      "title": "No Sleep till Brooklyn",
+      "year": 1986,
+      "whyThisOne": "Rap over metal guitar, with a solo by Slayer's Kerry King."
+    },
+    {
+      "title": "Shake Your Rump",
+      "year": 1989,
+      "whyThisOne": "From Paul's Boutique, a collage of samples in almost every bar."
+    },
+    {
+      "title": "Sabotage",
+      "year": 1994,
+      "whyThisOne": "Back on their own instruments, after the sampling era."
+    }
+  ]
+}

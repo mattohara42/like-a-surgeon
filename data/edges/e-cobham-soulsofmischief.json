@@ -1,0 +1,31 @@
+{
+  "id": "e-cobham-soulsofmischief",
+  "from": "billy-cobham",
+  "to": "souls-of-mischief",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1993,
+  "crossLineage": true,
+  "evidence": "'93 'til Infinity' (Jive, 1993), produced by A-Plus, samples Billy Cobham's 'Heather' from Crosswinds (1974), as recorded on the song's sample credits and discussed in accounts of the track's making.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Billy Cobham",
+      "title": "Heather",
+      "year": 1974
+    },
+    "later": {
+      "artist": "Souls of Mischief",
+      "title": "93 'til Infinity",
+      "year": 1993
+    },
+    "whatToListenFor": "Start with 'Heather': slow, almost drifting, a lazy bassline and a marimba floating over it. Then play '93 'til Infinity'. A-Plus sped up that bassline and marimba so they bounce instead of float, put his own drums under them, and brought the horns in from the same record. Listen for how the same notes change mood with speed alone, from a daydream to a head-nod."
+  },
+  "explanation": {
+    "age7": "A rap song was built from a slow jazz song, played faster.",
+    "age13": "Billy Cobham, a jazz drummer, recorded a slow song called 'Heather' in 1974. In 1993, A-Plus of Souls of Mischief took its bassline and marimba, sped them up, and added new drums. That became '93 'til Infinity', one of the best-loved rap songs of the decade.",
+    "adult": "The first sample edge under Q21's hub model. Cross-lineage by design, since sampling is where hip-hop meets every other lineage on this map. Future uses of Cobham's records add edges to this same node."
+  },
+  "tags": [
+    "production"
+  ]
+}

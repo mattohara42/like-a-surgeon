@@ -1,0 +1,33 @@
+{
+  "id": "e-eps16-rza",
+  "from": "ensoniq-eps-16-plus",
+  "to": "rza",
+  "type": "technological",
+  "confidence": "consensus",
+  "year": 1993,
+  "crossLineage": true,
+  "evidence": "RZA has said he acquired an EPS-16 Plus, began making two- and four-bar loops on it, traded in his SP-1200 for it, and later sold it to True Master. Equipment histories name it as the machine behind several tracks on 36 Chambers, including 'C.R.E.A.M.'. Gathered through secondary sources, so consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Ensoniq",
+      "title": "EPS-16 Plus, sixteen-bit keyboard sampler",
+      "year": 1990,
+      "search": false
+    },
+    "later": {
+      "artist": "Wu-Tang Clan",
+      "title": "C.R.E.A.M.",
+      "year": 1993
+    },
+    "whatToListenFor": "Listen to the length of the loop. The piano phrase in 'C.R.E.A.M.' runs for bars, a whole musical sentence repeating, which the SP-1200's ten seconds made hard. The sound is also cleaner at the top, without the SP's crunch, though RZA kept it dusty and dark. That's the machine allowing the long, sad phrase to become the song's whole mood."
+  },
+  "explanation": {
+    "age7": "RZA made Wu-Tang beats on this keyboard sampler. It could hold longer pieces of music than his old machine.",
+    "age13": "RZA swapped his SP-1200 for an Ensoniq EPS-16 Plus, a keyboard that could sample longer and clearer. That let him loop whole musical phrases, like the sad piano on 'C.R.E.A.M.', instead of short chopped bits.",
+    "adult": "A contrast edge to the SP-1200 records on the map. More memory and sixteen-bit sound changed the unit of composition from the fragment to the phrase."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}
