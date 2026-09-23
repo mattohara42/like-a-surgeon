@@ -1509,3 +1509,65 @@ each disagreement.
   describes, falls after the scene's own end year and is described in
   his artist record without being pulled into the scene's membership
   window.
+
+## Track D: orphan-closing batch (Transmat, KMS, Rockers International)
+
+- **A184. Three orphan labels, three artists, six edges.** BACKLOG named
+  the specific non-founder artist each orphan label was waiting on
+  (A177). Added Carl Craig (Transmat), Chez Damier (KMS), and Hugh
+  Mundell (Rockers International), each with the label edge BACKLOG
+  called for plus a second, person-to-person edge to an artist already
+  on the map (Derrick May, Kevin Saunderson, Augustus Pablo
+  respectively), so each new node lands inside the main connected
+  component rather than forming its own small island. `npm run
+  report`'s node/edge counts don't show connectivity, so this was
+  checked separately with a script walking `data/edges/` as an
+  undirected graph. Before: 159 nodes in 18 components (one 120-node
+  main component, 12 islands of 2-5 nodes, 5 single-node orphans).
+  After: 162 nodes in 15 components (main component grown to 126, the
+  same 12 mid-size islands untouched, 2 single-node orphans remaining,
+  Kling Klang and Brunswick per A177). All facts checked with WebSearch
+  against multiple sources per record (Wikipedia, Discogs release data,
+  and outlet profiles for each artist; specific citations are in each record's
+  `evidence` field rather than repeated here). `npm run validate`
+  passes clean (0 errors, 48 warnings, down from 51: the three orphan-
+  label warnings clear, no new warning categories introduced).
+- **A185. KMS: picked Chez Damier over MK.** BACKLOG offered either.
+  Chez Damier's KMS connection is the more specific, better-sourced
+  claim: he worked A&R for Kevin Saunderson at the label and released
+  his own single there ('Can You Feel It', 1992, confirmed on Discogs),
+  where MK's early KMS-era work is described consistently across
+  sources only in general terms ('crafting deep house for KMS from age
+  17') without a specific KMS-credited release surfacing in the sources
+  checked. MK remains a valid future addition on his own terms (his
+  later remix and production career is extensively documented) but
+  wasn't needed to close this particular orphan.
+- **A186. Rockers International: picked Hugh Mundell over Jacob Miller.**
+  Both are directly and heavily sourced (Wikipedia biographies for
+  both, corroborated by Discogs and contemporary reviews). Mundell's
+  entire catalogue ran through Pablo and Rockers specifically, a
+  cleaner single-label claim; Miller's catalogue was split across
+  Inner Circle's other labels as well as Pablo's productions, which
+  would have made the label edge's evidence field carry more caveats.
+  Jacob Miller remains a strong future addition; nothing here rules
+  him out.
+- **A187. Chez Damier's `activeTo` left as `null` rather than a guessed
+  end date.** Sources describe his active career from the Music
+  Institute (1988) through Prescription Records (founded 1993) in
+  detail, but none of the sources checked state or imply he has
+  stopped recording or performing, and electronic-music figures of his
+  generation routinely remain active well past their commercially
+  documented peak. Per SCHEMA.md, `null` means "still going" by
+  default; there is no positive evidence of an end to justify
+  `endUnknown` either; if he has in fact stopped, this should be
+  corrected with a source rather than guessed here.
+- **A188. `e-kevinsaunderson-chezdamier` held at `consensus`, distinct
+  from the `documented` `e-kms-chezdamier` label edge.** The label
+  edge documents an institutional fact (A&R role, then a KMS release)
+  that multiple sources state plainly. The person-to-person edge tries
+  to name what Saunderson's mentorship specifically changed in
+  Damier's own music, which no source checked states directly; it
+  rests on the two men's proximity (the Music Institute's shared DJ
+  booth, then the A&R relationship) rather than a specific claim, so
+  it sits one tier lower, the same distinction A69's label-vs-artist
+  edges draw elsewhere in this dataset.

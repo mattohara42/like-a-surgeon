@@ -1,0 +1,31 @@
+{
+  "id": "e-kms-chezdamier",
+  "from": "kms",
+  "to": "chez-damier",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1992,
+  "crossLineage": false,
+  "evidence": "Chez Damier worked A&R for Kevin Saunderson's KMS Records during its early years and released his own single, 'Can You Feel It,' on the label in 1992. Documented in fabric London's KMS retrospective, Discogs' release data for 'Can You Feel It,' and KMS's own label record on this map, which already names Damier among the artists the label developed.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Kevin Saunderson (Inner City)",
+      "title": "Big Fun",
+      "year": 1988
+    },
+    "later": {
+      "artist": "Chez Damier",
+      "title": "Can You Feel It",
+      "year": 1992
+    },
+    "whatToListenFor": "'Big Fun' is KMS's commercial peak, pop-facing house built to cross over. 'Can You Feel It,' made by the label's own A&R four years later, is rawer and more interior, closer to the deep house Damier and Ron Trent would build Prescription Records around the next year."
+  },
+  "explanation": {
+    "age13": "Chez Damier worked for Kevin Saunderson's label, KMS, helping find and sign artists, and put out his own record there in 1992 before starting his own label the following year.",
+    "adult": "KMS gave Damier a working studio and a release outlet the same way Transmat did for Carl Craig, but from inside the label's operation rather than as an outside signing: his A&R role put him in the room for the label's decisions before he made one of his own records there."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

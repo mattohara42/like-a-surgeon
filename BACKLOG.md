@@ -506,15 +506,13 @@ fixing them inline.)
   it wants Matt's view. It fits the one-file-per-record rule, since the
   ID lives in the record itself.
 
-- Five nodes are still orphans after the orphans batch (A177). Each waits
-  for a specific artist, not for more research. **Transmat** connects when
-  Carl Craig (released as Psyche on Transmat) or another non-founder
-  Transmat artist is on the map. **KMS** connects with MK or Chez Damier.
-  **Rockers International** connects with Hugh Mundell or Jacob Miller,
-  whose records Pablo produced for it. **Kling Klang** (the label) may never
-  have an A69 edge, since it only ever released Kraftwerk. The Düsseldorf
-  scene record now carries the studio's effect (e-dusseldorf-kraftwerk).
-  **Brunswick** was only Decca's imprint for Shel Talmy's lease deal, and
-  its honest edge probably runs through Talmy if he becomes a node. It
-  may be better merged into a note on the Who than kept as a label node.
+- Two nodes are still orphans after the orphans batch (A177) and the orphan-
+  closing batch (A184). **Transmat**, **KMS**, and **Rockers International**
+  are closed: Carl Craig, Chez Damier, and Hugh Mundell respectively. **Kling
+  Klang** (the label) may never have an A69 edge, since it only ever released
+  Kraftwerk. The Düsseldorf scene record now carries the studio's effect
+  (e-dusseldorf-kraftwerk). **Brunswick** was only Decca's imprint for Shel
+  Talmy's lease deal, and its honest edge probably runs through Talmy if he
+  becomes a node. It may be better merged into a note on the Who than kept
+  as a label node.
 

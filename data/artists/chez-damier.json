@@ -1,0 +1,40 @@
+{
+  "id": "chez-damier",
+  "name": "Chez Damier",
+  "sortName": "Damier, Chez",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1988,
+  "activeTo": null,
+  "originCity": "Chicago, Illinois",
+  "originCountry": "USA",
+  "scenes": [
+    "detroit-techno"
+  ],
+  "labels": [
+    {
+      "labelId": "kms",
+      "from": 1988,
+      "to": 1993
+    }
+  ],
+  "keyProducers": [],
+  "hook": "A Chicago dancer at the Warehouse who moved to Detroit, co-ran the club where the two scenes' DJs shared a booth, and worked Kevin Saunderson's A&R desk before starting his own label.",
+  "blurb": {
+    "age7": "Chez Damier danced to Frankie Knuckles' music as a kid in Chicago, then moved to Detroit and helped run a club and a record label before starting his own.",
+    "age13": "Chez Damier grew up dancing at Frankie Knuckles' Warehouse in Chicago, then moved to Detroit in the 1980s. In 1988 he co-owned the Music Institute, a short-lived club where Detroit techno and Chicago house DJs, including Derrick May and Kevin Saunderson, played the same room. He also worked A&R for Saunderson's label KMS, releasing his own record 'Can You Feel It' there in 1992, before co-founding Prescription Records with Ron Trent in 1993.",
+    "adult": "Damier is one of the clearest bridge figures between Chicago house and Detroit techno on this map: a Chicago dancer who relocated and became, for eighteen months, co-owner of the one club where both cities' DJs shared a booth. His run at KMS, first as Saunderson's A&R, then as a released artist with 'Can You Feel It' (1992), sits ahead of Prescription Records, the label he and Ron Trent started in 1993 that helped define 1990s deep house."
+  },
+  "signatureTracks": [
+    {
+      "title": "Can You Feel It",
+      "year": 1992,
+      "whyThisOne": "His KMS release, made while working A&R for Kevin Saunderson's label."
+    },
+    {
+      "title": "Sometimes I Feel Like (with Ron Trent)",
+      "year": 1994,
+      "whyThisOne": "A Prescription Records single, the label Damier and Trent started the year after he left KMS."
+    }
+  ]
+}
