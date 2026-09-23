@@ -1,0 +1,32 @@
+{
+  "id": "e-beatles-rollingstones",
+  "from": "the-beatles",
+  "to": "rolling-stones",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1963,
+  "crossLineage": false,
+  "evidence": "'I Wanna Be Your Man' was written mainly by Paul McCartney and finished by McCartney and John Lennon at a Rolling Stones session in London in 1963, after they met the Stones' manager Andrew Loog Oldham and heard the band needed a single. The Stones released it on 1 November 1963. It was their first UK top-20 hit.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Beatles",
+      "title": "I Wanna Be Your Man",
+      "year": 1963
+    },
+    "later": {
+      "artist": "The Rolling Stones",
+      "title": "I Wanna Be Your Man",
+      "year": 1963,
+      "search": "Rolling Stones I Wanna Be Your Man 1963"
+    },
+    "whatToListenFor": "The same song by two bands in the same year. The Beatles' version, sung by Ringo, bounces along as cheerful beat music. The Stones' is rougher and faster, with Brian Jones's slide guitar wailing over it. Listen for how the Stones turn a Beatles pop song into something closer to the American R&B they were copying."
+  },
+  "explanation": {
+    "age7": "The Beatles wrote a song for the Rolling Stones, and it became the Stones' first big hit.",
+    "age13": "In 1963 the Rolling Stones needed a single. Lennon and McCartney came to their session and finished a song they'd started, 'I Wanna Be Your Man', right there. The Stones' rough, slide-guitar version was their first top-20 hit, and the Beatles released their own version too.",
+    "adult": "An edge against the popular story of a Beatles-versus-Stones rivalry. In 1963 the two bands were close enough that one handed the other its breakthrough. It also shows the London and Liverpool beat scenes feeding each other."
+  },
+  "tags": [
+    "production"
+  ]
+}

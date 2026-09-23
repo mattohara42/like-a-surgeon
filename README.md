@@ -20,12 +20,13 @@ pull request gets its own Netlify preview.
   #21). The gate is still open: it passes when Matt's 13-year-old uses the
   map without instruction and gets somewhere. `docs/m3-gate-notes.md` is the
   guide for that session.
-- **Track D (data):** machines reached their 25 target in PR #23. Three
-  hip-hop batches followed: 80s production (PR #24), 90s groups and
-  their producers, and the most-sampled breaks with their artists as
-  hubs (Q21 batches 1 and 2). Classic rock is the last Q21 batch. The
-  rest are still short: 76 of 120 artists, 118 of 350 edges, 8 of 20
-  scenes, 16 of 30 labels, 2 of 5 threads, 4 of 30 edges with a demo.
+- **Track D (data):** machines reached their 25 target in PR #23. Q21's
+  three batches followed PR #24's 80s hip-hop: the 90s groups and their
+  producers, the most-sampled breaks with their artists as hubs, and
+  classic rock (the Beatles, Led Zeppelin, Hendrix, the Verve), most of it
+  joined to hip-hop through samples. The rest are still short: 80 of 120
+  artists, 125 of 350 edges, 8 of 20 scenes, 16 of 30 labels, 2 of 5
+  threads, 4 of 30 edges with a demo.
 - **Open question:** Q20 in `QUESTIONS.md`. A null end year can't
   currently tell "still made" from "unknown", so some machines read as
   still on sale.

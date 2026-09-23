@@ -1,0 +1,34 @@
+{
+  "id": "led-zeppelin",
+  "name": "Led Zeppelin",
+  "sortName": "Led Zeppelin",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1968,
+  "activeTo": 1980,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Jimmy Page"
+  ],
+  "hook": "A band that borrowed heavily from American blues, lost or settled several cases over it, and whose drummer's sound became one of hip-hop's great breaks.",
+  "blurb": {
+    "age7": "A loud rock band from England. Their drummer's huge sound was later used in rap songs.",
+    "age13": "Jimmy Page, Robert Plant, John Paul Jones and John Bonham formed Led Zeppelin in London in 1968. Their music was loud and heavy, built on American blues songs. On 'When the Levee Breaks' (1971) Bonham's drums were recorded at the bottom of a stairwell in an old house called Headley Grange, with the microphones far above, so they sound enormous and echoing. In 1986 the Beastie Boys looped those drums for 'Rhymin & Stealin'. The band ended in 1980 when Bonham died.",
+    "adult": "Zeppelin is the sampling story from both sides. They drew heavily on American blues records and were repeatedly challenged over it: Willie Dixon's claim over 'Whole Lotta Love' was settled out of court in 1987, and a claim over 'Dazed and Confused' was settled in 2012. The long-running 'Stairway to Heaven' case was decided in the band's favour, and the verdict was upheld on appeal in 2020. Then hip-hop producers sampled Bonham's drums, most famously from 'When the Levee Breaks', itself a reworking of a 1929 blues by Kansas Joe McCoy and Memphis Minnie. Page's own accounts are the source for the stairwell recording."
+  },
+  "signatureTracks": [
+    {
+      "title": "When the Levee Breaks",
+      "year": 1971,
+      "whyThisOne": "Bonham's drums from the Headley Grange stairwell."
+    },
+    {
+      "title": "Whole Lotta Love",
+      "year": 1969,
+      "whyThisOne": "The riff, and the song settled with Willie Dixon in 1987."
+    }
+  ]
+}
