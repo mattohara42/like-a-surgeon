@@ -141,6 +141,8 @@ fixing them inline.)
   for lane titles. It touches the node drawing code, so it gets its own
   change. The machine floor has the same issue between "The dubplate" and
   the "THE MACHINES" title.
+  **Resolved:** names and hooks now draw in one labels layer above every
+  marker, and placement gives way to lane titles. See A106.
 
 - The expanded legend covers the left ends of the lowest lane titles in
   every arrangement ("NOT IN A SCENE YET", "THE MACHINES", and the lineage

@@ -91,7 +91,15 @@ export function createNodeElement(node, onSelect, onHover) {
   const label = svgEl('text', { class: 'node-name' });
   const hook = svgEl('text', { class: 'node-hook' });
 
-  g.append(hitArea, span, place, label, hook);
+  // The name and hook live in their own group, which graph.js mounts in a
+  // labels layer above every marker. Inside the node's group, any node drawn
+  // later painted its dot over this one's name. `g.__labels` is the handle;
+  // the caller mounts it and removes it alongside `g`.
+  const labels = svgEl('g', { class: 'node-labels', 'data-node-id': node.id });
+  labels.append(label, hook);
+  g.__labels = labels;
+
+  g.append(hitArea, span, place);
   breathe(body, node.id);
 
   g.addEventListener('click', () => onSelect(node));
@@ -117,8 +125,8 @@ export function updateNodeElement(g, node, position, zoomLevel, scale, degreeFac
   const ring = g.querySelector('.node-ring');
   const marker = g.querySelector('.node-marker');
   const pip = g.querySelector('.node-pip');
-  const label = g.querySelector('.node-name');
-  const hook = g.querySelector('.node-hook');
+  const label = g.__labels.querySelector('.node-name');
+  const hook = g.__labels.querySelector('.node-hook');
 
   // Shapes inside sit at the origin; this group carries the position so
   // the breathing scale inside it stays about the node's own centre.
