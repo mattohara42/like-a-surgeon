@@ -50,6 +50,7 @@ pull request gets its own Netlify preview.
 | `tools/serve.js` | Dev static server, solves the `file://` fetch problem. `npm run dev`. |
 | `tools/bundle.js` | Release bundler. Writes `dist/`, which opens from disk with no server. `npm run build`. |
 | `tools/report.js` | Generates the M1 gate report into `docs/m1-gate-report.md`. `npm run report`. |
+| `tools/crosscheck.js` | Checks the data against Wikidata and MusicBrainz and lists disagreements in `docs/crosscheck-report.md`. Dev only, and the only tool that uses the network. `npm run crosscheck`. |
 | `index.html`, `main.js` | The app shell and entry point. |
 | `config.js` | Every tuning value in the project. No magic numbers in logic. |
 | `render/` | The graph renderer: layout, lane plans (`arrange.js`), substrate, nodes, edges, gradients, atmosphere, transport, viewport culling, semantic zoom, label placement. |
@@ -65,6 +66,7 @@ pull request gets its own Netlify preview.
     npm run dev        # serves at localhost:8080
     npm run validate   # checks the data tree
     npm run report     # regenerates docs/m1-gate-report.md
+    npm run crosscheck # checks the data against outside sources (needs network)
     npm run build      # writes dist/, the offline release: open dist/index.html directly
 
 Scroll to zoom, drag to pan, and drag the year cursor or press play. Click a

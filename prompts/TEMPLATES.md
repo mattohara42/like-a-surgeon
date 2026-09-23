@@ -14,7 +14,8 @@
 > people. No invented credits. Honest tiers. `whatToListenFor` specific enough
 > that it could not describe a different pair of records.
 >
-> Run the validator, then produce docs/batch-0N-report.md in the same format as
+> Run the validator, then `node tools/crosscheck.js --ids=<the new record ids>`
+> and settle anything it lists (see docs/sources.md). Then produce docs/batch-0N-report.md in the same format as
 > batch 1: counts and tier ratio, five least confident edges, twenty randomly
 > sampled `whatToListenFor` fields verbatim, and anything left null.
 >

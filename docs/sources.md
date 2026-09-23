@@ -43,13 +43,34 @@ already suspect rather than for finding one.
 we do not have. It is the right source for `cover` edges and for who
 recorded a song first, once the key arrives.
 
+## Running the checks again
+
+`npm run crosscheck` does the mechanical part of the first pass: it
+matches every node to its Wikipedia article and Wikidata item, checks
+deaths and dates, checks every track year against MusicBrainz, and flags
+track pairs that run backwards. It writes `docs/crosscheck-report.md`.
+After a batch, `node tools/crosscheck.js --ids=a,b,c` checks just the new
+records and the edges touching them. Responses are cached in
+`.crosscheck/` for a week. A cold full run takes about fifteen minutes,
+mostly MusicBrainz at one request a second.
+
+The report is a list of places to look. Its "MusicBrainz dates a track
+earlier" section is the strong signal. The "earliest match is later"
+section is mostly MusicBrainz data gaps (reggae and early electronic
+music are thinly dated there) and composition-versus-release years.
+
 ## Rate limits, learned the hard way
 
 The container shares an egress IP, so limits are hit sooner than the
 published numbers suggest.
 
 - **Wikimedia (all Wikipedias and Wikidata)** throttles with HTTP 429 and a
-  `Retry-After` header. Individual search requests got blocked within a
+  `Retry-After` header, and **blocks** with HTTP 403 under its robot
+  policy. The first verification pass got this container's shared IP
+  blocked after a few hundred requests over several hours, even with a
+  descriptive User-Agent and Retry-After honoured (A174). A 403 means stop:
+  `tools/crosscheck.js` stops asking a host the moment it answers 403. Budget Wikimedia
+  requests as if they were scarce, because from a shared IP they are. Individual search requests got blocked within a
   minute. Batch instead: `prop=pageprops` takes 50 titles per request, and
   one SPARQL query can cover every node at once.
 - **Wikidata Query Service** was limited to one request a minute during the

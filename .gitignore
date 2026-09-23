@@ -6,3 +6,6 @@ data/manifest.json
 
 # The offline release, written by tools/bundle.js (A84).
 dist/
+
+# Cached source responses for tools/crosscheck.js. Safe to delete.
+.crosscheck/
