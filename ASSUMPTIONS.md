@@ -769,4 +769,15 @@ These cover what changed in `render/` to carry it, and what it supersedes.
 - **A105.** In scene and label views, every lane is titled next to its
   earliest member, including "NOT IN A SCENE YET" and "LABELS". At the axis
   origin, one of those titles printed on top of a 1950s marker.
+- **A106.** Node names and hooks moved out of each node's group into a
+  single labels layer between the markers and the lane titles, so no dot
+  paints over a name. Each node is now two elements (marker group and
+  labels group). Both carry the "not yet" and "selected" classes, and both
+  are created and removed together. Label placement also treats every lane
+  title, "THE MACHINES" included, as a fixed obstacle, so a name that would
+  print over a title waits for room instead. Title boxes are computed from
+  their known position, font size and letter-spacing, not measured in the
+  DOM, which would force a layout pass on every pan frame. The letter-spacing
+  in `CONFIG.arrange.titleTrackingEm` mirrors the stylesheet and must change
+  with it.
 
