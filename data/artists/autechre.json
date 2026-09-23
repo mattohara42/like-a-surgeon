@@ -1,0 +1,38 @@
+{
+  "id": "autechre",
+  "name": "Autechre",
+  "sortName": "Autechre",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1987,
+  "activeTo": null,
+  "originCity": "Rochdale",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "warp",
+      "from": 1992,
+      "to": null
+    }
+  ],
+  "keyProducers": [],
+  "hook": "Two friends from Rochdale who started by cutting up hip-hop and electro on a cassette deck and became Warp's furthest-out act.",
+  "blurb": {
+    "age7": "Two friends made cut-up tapes of their favourite electro and rap records. Then they started making their own electronic music.",
+    "age13": "Rob Brown and Sean Booth grew up near Manchester in the 1980s, listening to electro, hip-hop and acid house. They made cassette mixes together, pausing and restarting the tape to cut records into new shapes, copying producers like Mantronix. In 1992 Warp put two of their tracks on Artificial Intelligence, and their first album, Incunabula, came out on Warp in 1993.",
+    "adult": "Autechre's origin in hip-hop editing is well documented in their own interviews, with Booth naming Mantronix's edit-heavy production as a major influence. That makes them a quiet cross-lineage link on this map. The later records grow steadily more abstract and more algorithmic. The start year, 1987, is an approximation for when the pair began working together."
+  },
+  "signatureTracks": [
+    {
+      "title": "Crystel",
+      "year": 1992,
+      "whyThisOne": "From Artificial Intelligence. Soft melody over an electro beat."
+    },
+    {
+      "title": "Bike",
+      "year": 1993,
+      "whyThisOne": "From Incunabula. Slow, sad and melodic, before the music went abstract."
+    }
+  ]
+}

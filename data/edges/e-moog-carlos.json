@@ -1,0 +1,33 @@
+{
+  "id": "e-moog-carlos",
+  "from": "moog-modular",
+  "to": "wendy-carlos",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1968,
+  "crossLineage": false,
+  "evidence": "Switched-On Bach (Columbia, October 1968) was realised on a Moog modular, credited on the sleeve. Carlos's work with Robert Moog on module design is recorded in Moog histories and in Carlos's own published notes on the album.",
+  "trackPair": {
+    "earlier": {
+      "artist": "R. A. Moog Co.",
+      "title": "Moog modular synthesizer",
+      "year": 1965,
+      "search": false
+    },
+    "later": {
+      "artist": "Wendy Carlos",
+      "title": "Brandenburg Concerto No. 3 (Switched-On Bach)",
+      "year": 1968,
+      "search": "Wendy Carlos Switched-On Bach Brandenburg 3"
+    },
+    "whatToListenFor": "Listen for the attack of each note. A harpsichord or a violin has its own way of starting a sound. Here each line has a different electronic tone that Carlos set up by hand, then recorded one part at a time, because the machine played only one note at once. The parts are perfectly in time and slightly too clean. That buzzing, reedy brightness was the first synthesizer sound most listeners in 1968 had ever heard."
+  },
+  "explanation": {
+    "age7": "Wendy Carlos used a Moog synthesizer to play Bach, and that record made the synthesizer famous.",
+    "age13": "The Moog could only play one note at a time, so Carlos recorded every part of the Bach separately and stacked them on tape. It took months. The album sold enormously and made record companies believe a synthesizer could sell records.",
+    "adult": "The machine had existed for three years before this record. The edge is about the moment it stopped being lab equipment in the public mind, which is a reception fact, well documented in sales and in the flood of Moog records that followed."
+  },
+  "tags": [
+    "technology"
+  ]
+}

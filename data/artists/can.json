@@ -1,0 +1,32 @@
+{
+  "id": "can",
+  "name": "Can",
+  "sortName": "Can",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1968,
+  "activeTo": 1979,
+  "originCity": "Cologne",
+  "originCountry": "West Germany",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Four musicians, two of them Stockhausen's students, who jammed for hours and then edited the tape into records.",
+  "blurb": {
+    "age7": "A band from Germany who played long songs, taped everything, and then cut the tape into the best bits.",
+    "age13": "Can started in Cologne in 1968. Holger Czukay on bass and Irmin Schmidt on keyboards had both studied with the composer Karlheinz Stockhausen. With Jaki Liebezeit on drums and Michael Karoli on guitar, they recorded long improvised sessions and then edited them on tape, the way Stockhausen's studio worked, until they had a record. Liebezeit played one pattern for many minutes without changing it. Later, punk and post-punk musicians in Britain loved the band.",
+    "adult": "Can's method was taken straight from the tape studio. Czukay was as much an editor as a bassist, and the band treated recording as composition rather than documentation. The end year is 1979, when the band stopped working together regularly. There were reunions afterwards. Their influence on British post-punk is well attested through the musicians' own record choices, John Lydon's above all."
+  },
+  "signatureTracks": [
+    {
+      "title": "Halleluhwah",
+      "year": 1971,
+      "whyThisOne": "Eighteen minutes on one drum pattern, from Tago Mago. The groove other bands copied."
+    },
+    {
+      "title": "Aumgn",
+      "year": 1971,
+      "whyThisOne": "Also Tago Mago. No beat for long stretches, voices stretched into drones: the Cologne studio inside a rock band."
+    }
+  ]
+}

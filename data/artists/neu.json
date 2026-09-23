@@ -1,0 +1,36 @@
+{
+  "id": "neu",
+  "name": "Neu!",
+  "sortName": "Neu!",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1971,
+  "activeTo": 1975,
+  "originCity": "Düsseldorf",
+  "originCountry": "West Germany",
+  "scenes": [
+    "dusseldorf-kling-klang"
+  ],
+  "labels": [],
+  "keyProducers": [
+    "conny-plank"
+  ],
+  "hook": "Two musicians who left Kraftwerk in 1971 and made the steady, forward-driving beat that rock would call motorik.",
+  "blurb": {
+    "age7": "Two men from Kraftwerk started their own band. Their drummer played one steady beat that goes on and on, like driving down a road.",
+    "age13": "Michael Rother and Klaus Dinger both played in Kraftwerk in 1971, then left and started Neu! in Düsseldorf. Dinger's drumming was a steady beat that never changes and never stops, and Rother layered guitars over it. They made three albums between 1972 and 1975 with the producer Conny Plank. David Bowie was a fan and named his song 'Heroes' after their track 'Hero'.",
+    "adult": "Critics named the beat motorik. Dinger preferred his own name for it, the Apache beat. Neu! sold modestly at the time and the influence came later, through Bowie's Berlin records and then through post-punk and indie bands for decades. The band's lineage is electronic on this map, though the records are guitar and drums. That follows their position in the Düsseldorf scene, next to Kraftwerk, rather than their instruments. The end year is 1975, the last of the three original albums."
+  },
+  "signatureTracks": [
+    {
+      "title": "Hallogallo",
+      "year": 1972,
+      "whyThisOne": "Ten minutes of one beat, the first statement of motorik."
+    },
+    {
+      "title": "Hero",
+      "year": 1975,
+      "whyThisOne": "Dinger's shouted vocal over the same beat, faster and angrier. The song Bowie's 'Heroes' is named after."
+    }
+  ]
+}

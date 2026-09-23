@@ -1,0 +1,31 @@
+{
+  "id": "e-kraftwerk-neu",
+  "from": "kraftwerk",
+  "to": "neu",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1971,
+  "crossLineage": false,
+  "evidence": "Michael Rother and Klaus Dinger both played in Kraftwerk in 1971, in a line-up with Florian Schneider while Ralf Hütter was briefly away, and left to form Neu! that year. Recorded in both bands' histories and in Rother's many interviews.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Kraftwerk",
+      "title": "Ruckzuck",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Neu!",
+      "title": "Hallogallo",
+      "year": 1972
+    },
+    "whatToListenFor": "'Ruckzuck' is the early Kraftwerk: a flute riff, echoing, over drums that speed up and hit hard. There is already a hunger for forward motion in it. 'Hallogallo' keeps only that part. Dinger plays one straight, even beat for ten minutes and never fills or breaks it, while Rother's guitars stack into a shimmer on top. Listen for how the drums stop being decoration and become the road the music drives on."
+  },
+  "explanation": {
+    "age7": "Two men played in Kraftwerk for a while, then left and made their own band called Neu!.",
+    "age13": "In 1971 Klaus Dinger and Michael Rother were in Kraftwerk for a few months. They left and made the first Neu! album before the end of the year. Kraftwerk and Neu! then went in different directions from the same starting point: Kraftwerk towards machines, Neu! towards a human drummer playing like one.",
+    "adult": "By his own later account, Dinger drummed on side two of Kraftwerk's first album (1970), before the 1971 line-up, so the connection is earlier than the Neu! formation alone. The two bands' shared producer, Conny Plank, is the other thread between them."
+  },
+  "tags": [
+    "production"
+  ]
+}

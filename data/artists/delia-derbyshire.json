@@ -1,0 +1,34 @@
+{
+  "id": "delia-derbyshire",
+  "name": "Delia Derbyshire",
+  "sortName": "Derbyshire, Delia",
+  "type": "artist",
+  "lineage": "other",
+  "activeFrom": 1962,
+  "activeTo": 1975,
+  "originCity": "Coventry",
+  "originCountry": "UK",
+  "scenes": [
+    "bbc-radiophonic-workshop"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "She turned a one-page score into the Doctor Who theme in 1963, note by note on tape, with no synthesizer and no keyboard.",
+  "blurb": {
+    "age7": "Delia Derbyshire made the Doctor Who music by cutting and sticking together tiny pieces of tape, one sound at a time.",
+    "age13": "Ron Grainer wrote the Doctor Who theme on paper. Delia Derbyshire, who joined the BBC Radiophonic Workshop in 1962, turned it into sound. There was no synthesizer. She recorded single notes from oscillators and a plucked string, changed their speed to change their pitch, and cut and joined the tape by hand. The bassline is a plucked string. The swooping tune is oscillators. Grainer was credited as composer and she was not credited at all for years.",
+    "adult": "The Doctor Who theme is the first electronic signature tune on television, and it reached millions of homes a decade before synthesizers reached most bands. BBC practice didn't credit Workshop staff on screen, which is why Derbyshire's name took decades to attach to the work. She left the BBC in 1973 and had largely stopped making music by 1975. A large archive of her tapes, found after her death in 2001, has since changed how her output is understood."
+  },
+  "signatureTracks": [
+    {
+      "title": "Doctor Who theme",
+      "year": 1963,
+      "whyThisOne": "Grainer's tune, Derbyshire's sound. Every note was assembled on tape."
+    },
+    {
+      "title": "The Dreams",
+      "year": 1964,
+      "whyThisOne": "From the Inventions for Radio series with Barry Bermange. People describing their dreams, set to electronic sound."
+    }
+  ]
+}

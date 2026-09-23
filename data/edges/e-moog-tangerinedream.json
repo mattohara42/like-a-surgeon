@@ -1,0 +1,32 @@
+{
+  "id": "e-moog-tangerinedream",
+  "from": "moog-modular",
+  "to": "tangerine-dream",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1974,
+  "crossLineage": false,
+  "evidence": "Christopher Franke bought a Moog modular, with its sequencer, in 1973. Phaedra, recorded at the Manor that November and released by Virgin in February 1974, is documented in the band's own history and in Sound on Sound's history of the band's equipment as their first sequencer-driven record.",
+  "trackPair": {
+    "earlier": {
+      "artist": "R. A. Moog Co.",
+      "title": "Moog modular synthesizer with 960 sequencer",
+      "year": 1965,
+      "search": false
+    },
+    "later": {
+      "artist": "Tangerine Dream",
+      "title": "Phaedra",
+      "year": 1974
+    },
+    "whatToListenFor": "Wait for the pulse. A short row of bass notes repeats, bubbling, while its brightness slowly opens and closes as someone turns a filter knob. Nobody is playing those notes. The sequencer is. The musicians play over it: drifting Mellotron, echoing synth lines. Listen for the loop slightly changing pitch and tone over minutes, which is the hand on the knob, and for how long it keeps going without ever settling into a song."
+  },
+  "explanation": {
+    "age7": "A machine played the same notes over and over by itself, and Tangerine Dream made music around it.",
+    "age13": "A sequencer is a unit that plays a short row of notes in a loop, over and over, without anyone touching the keys. Tangerine Dream's Moog had one, and on Phaedra that pulsing loop runs through the whole record while the band plays around it. It became the sound of a lot of electronic music afterwards.",
+    "adult": "Phaedra is often called the first commercial album to feature a sequencer. That is disputed, so the edge claims less: it's the record that put the sequencer's pulse at the centre of a hit. Everything later on this map that is driven by a machine playing a pattern, from the 808 to the 303, is a relative of this sound."
+  },
+  "tags": [
+    "technology"
+  ]
+}

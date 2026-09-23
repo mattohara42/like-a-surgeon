@@ -1,0 +1,19 @@
+{
+  "type": "machine",
+  "id": "moog-modular",
+  "name": "Moog modular synthesizer",
+  "kind": "synth",
+  "lineage": "electronic",
+  "maker": "R. A. Moog Co.",
+  "releasedYear": 1965,
+  "discontinuedYear": 1981,
+  "originalPurpose": "A set of separate electronic modules, each doing one job (making a tone, filtering it, shaping how loud it is over time), joined by patch cables. It was sold to universities, studios and composers as a laboratory for sound, not as an instrument for a band.",
+  "whatActuallyHappened": "Switched-On Bach in 1968 turned it into a public sensation and a record-company idea. It went into film, advertising, progressive rock and, with its sequencer, into the pulsing loops of Tangerine Dream. Its fixed, simplified descendant, the Minimoog, took the sound onto stages. The modular line ended in 1981. Moog has reissued some of the systems since 2014.",
+  "priceStory": "Complete systems ran to thousands of dollars. A 1969 price list put a large system at just under 8,000 dollars, more than a family car. Owners were institutions, studios and a few successful musicians, which is why the early records are rare and the players few.",
+  "hook": "The wall of modules and cables that brought the synthesizer out of the laboratory and onto a best-selling record.",
+  "blurb": {
+    "age7": "A big synthesizer made of many boxes joined by wires. You plug the wires in different ways to make different sounds.",
+    "age13": "Robert Moog built a synthesizer in pieces. One box makes a tone, another changes its brightness, another makes it swell and fade, and you connect them with cables. It was expensive and complicated and it could only play one note at a time. Wendy Carlos made a hit record of Bach on one in 1968, and after that everyone wanted to hear what it could do.",
+    "adult": "The modular's open signal path was its strength and its barrier. Almost any sound was possible, but only for someone who understood voltage control. Two things carried it out of the lab: a hit record that made it commercial, and the sequencer module, which let a pattern play itself. Both appear on this map as edges."
+  }
+}

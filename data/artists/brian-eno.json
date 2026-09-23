@@ -1,0 +1,32 @@
+{
+  "id": "brian-eno",
+  "name": "Brian Eno",
+  "sortName": "Eno, Brian",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1971,
+  "activeTo": null,
+  "originCity": "Woodbridge, Suffolk",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A non-musician by his own description who used the synthesizer and the tape recorder to invent ambient music and to rebuild how Bowie made records.",
+  "blurb": {
+    "age7": "Brian Eno twisted sounds with knobs and tape machines. He made calm, slow music and helped other musicians make strange records.",
+    "age13": "Brian Eno joined Roxy Music in 1971, where he treated the band's sound through an EMS VCS3 synthesizer. After leaving in 1973 he made his own records, including slow, quiet music made with tape loops that he called ambient. In 1976 and 1977 he worked with David Bowie on Low and 'Heroes'. He went on to produce Talking Heads and U2.",
+    "adult": "Eno's contribution is method more than sound: tape loops that run at different lengths so the music never repeats exactly, systems that make music with little input, and the Oblique Strategies cards he made with Peter Schmidt. His Bowie role is often misstated. Tony Visconti co-produced the Berlin albums with Bowie. Eno was collaborator and co-writer. He recorded with Harmonia, Michael Rother's band, in 1976 just before Low, which ties the German scene to Bowie's albums directly."
+  },
+  "signatureTracks": [
+    {
+      "title": "Discreet Music",
+      "year": 1975,
+      "whyThisOne": "Two tape machines and a synthesizer set up to keep playing on their own."
+    },
+    {
+      "title": "Ambient 1: Music for Airports",
+      "year": 1978,
+      "whyThisOne": "The first album to call itself ambient music."
+    }
+  ]
+}

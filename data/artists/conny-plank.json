@@ -1,0 +1,32 @@
+{
+  "id": "conny-plank",
+  "name": "Conny Plank",
+  "sortName": "Plank, Conny",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1969,
+  "activeTo": 1987,
+  "originCity": "Hütschenhausen",
+  "originCountry": "West Germany",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "The engineer and producer who recorded early Kraftwerk, all three Neu! albums, and half of what the world now calls krautrock.",
+  "blurb": {
+    "age7": "Conny Plank recorded lots of German bands in his studio on a farm. He helped them find new sounds.",
+    "age13": "Conny Plank was a recording engineer and producer. He recorded Kraftwerk's first albums and engineered Autobahn in 1974, some of it at his new farmhouse studio near Cologne. He produced all three Neu! albums and worked with Cluster, Harmonia and later Ultravox and Eurythmics. He treated the studio itself as an instrument, and bands came to him because he let them try things no one else would.",
+    "adult": "A producer node under Q21's rule, carried by production edges. His work with Kraftwerk ended after Autobahn, which the band produced themselves with Plank credited as engineer. His studio at Wolperath became a destination for British and American acts in the 1980s. He died in 1987."
+  },
+  "signatureTracks": [
+    {
+      "title": "Autobahn (as engineer)",
+      "year": 1974,
+      "whyThisOne": "The record where Kraftwerk's sound arrives. Plank recorded it and co-produced the title track."
+    },
+    {
+      "title": "Neu! (as producer)",
+      "year": 1972,
+      "whyThisOne": "Four nights in a Hamburg studio in December 1971."
+    }
+  ]
+}

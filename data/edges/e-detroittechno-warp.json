@@ -1,0 +1,31 @@
+{
+  "id": "e-detroittechno-warp",
+  "from": "detroit-techno",
+  "to": "warp",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1989,
+  "crossLineage": false,
+  "evidence": "Beckett and Mitchell worked at the FON record shop in Sheffield, where imported Detroit techno and Chicago house were sold, and have described that stock as the reason they started the label (Beckett's Red Bull Music Academy lecture, and Warp's own history). The Artificial Intelligence series is regularly described by critics as nodding to Detroit.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Model 500",
+      "title": "No UFO's",
+      "year": 1985
+    },
+    "later": {
+      "artist": "LFO",
+      "title": "LFO",
+      "year": 1990
+    },
+    "whatToListenFor": "'No UFO's' is Juan Atkins's drum machine funk: crisp claps, a synth riff, a cool vocoder voice. 'LFO' strips that down further and moves the weight into the bass. Listen for the sub-bass notes that were built to shake a club system. They were so low that home stereos struggled with them. Over the top are a few pure bleeps, the sound that named the whole Sheffield style. The Detroit idea is there, machines with no apology, rebuilt for a northern English city's clubs."
+  },
+  "explanation": {
+    "age7": "People in Sheffield heard techno records from Detroit and started their own label to make music like it.",
+    "age13": "Warp started in a Sheffield record shop that sold imported records from Detroit and Chicago. The people working there wanted to make electronic music of their own, so they started a label. Its early hits, like LFO's, took the Detroit idea and made the bass much deeper.",
+    "adult": "Detroit techno's biggest early market was in Europe, and this is one of the routes. Sheffield had its own deindustrialisation to match Detroit's, and the steel city's version of machine music is on Warp's early catalogue. LFO are not yet on the map, so the track pair carries them by name only."
+  },
+  "tags": [
+    "labels"
+  ]
+}
