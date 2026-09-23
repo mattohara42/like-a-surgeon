@@ -1210,3 +1210,33 @@ each disagreement.
   our edge ('Back in the U.S.S.R.' included, only the Sgt. Pepper
   reprise). The evidence now claims only the three that both listings
   share, and says the listings differ on the rest.
+- **A163. Sleeve credits checked on the documented production edges.**
+  The documented edges that cite an album or single credit were compared
+  with the Discogs release credits and the credits sections of the
+  Wikipedia articles. These matched: Pete Rock, DJ Premier and Large
+  Professor on Illmatic, Rubin on Radio, Raising Hell and Licensed to
+  Ill, Marley Marl on Mama Said Knock You Out and Make the Music with
+  Your Mouth, Biz, Muggs on Cypress Hill, RZA on 36 Chambers, Perry on
+  'Complete Control', Plank on Neu! (producer) and Autobahn (engineer),
+  Madlib on Madvillainy, Tubby on King Tubbys Meets Rockers Uptown,
+  Nicolo on Tricks of the Shade, the Ummah on Beats, Rhymes and Life,
+  Eno on Low, and Wakeman on 'Space Oddity'. Three did not:
+  - **'Planet Rock'.** Four records called John Robie an engineer and a
+    co-producer. The liner-note credits (Wikipedia, and the label as
+    transcribed on Discogs) make Baker the producer and mixer, and Robie
+    a co-writer and synthesizer player, credited on the label as Planet
+    Patrol. The same credits put Baker, not Robie, on the Fairlight, so
+    e-fairlight-planetrock's evidence is corrected too. The seed still
+    lists Robie in Bambaataa's `keyProducers`. I left that alone, since
+    he shaped the record even though he was not credited as producer.
+  - **Here Come the Lords.** The edge said Marl had sole or shared
+    production on every track. Both the CD's track credits and
+    Wikipedia give K-Def five or six tracks on his own, so the claim is
+    now "most of the album". The two sources disagree about 'Funky
+    Child' (Marl with K-Def, or K-Def alone). The edge and the track's
+    `whyThisOne` now say so rather than choosing.
+  - **Breaking Atoms** is credited to Main Source as producers, made
+    mainly by Large Professor. The edge had said Large Professor
+    produced it.
+  None of these changes a tier. Each edge still rests on a credit. The
+  credit just says slightly less than we had claimed.
