@@ -380,6 +380,9 @@ fixing them inline.)
   two to three. Rather than pad it with a record I could not verify, it
   stands at one and warns. His catalogue outside 'The Message' needs real
   research rather than a guess.
+  **Closed** in the source verification pass: 'Message II (Survival)'
+  (Sugar Hill, 1982), credited to Melle Mel and Duke Bootee in every
+  Discogs listing, is his second entry.
 - The second machines batch brought the machine floor to 25, and the
   opening view now hides several machine names in 1963 to 1985 because
   the label placement (A100) has no room for them. Nothing overlaps, but
