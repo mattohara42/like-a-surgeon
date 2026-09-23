@@ -1,0 +1,20 @@
+{
+  "id": "ruffhouse",
+  "name": "Ruffhouse Records",
+  "type": "label",
+  "lineage": "hiphop",
+  "foundedYear": 1989,
+  "closedYear": null,
+  "city": "Philadelphia",
+  "founders": [
+    "Chris Schwartz",
+    "Joe Nicolo"
+  ],
+  "ownershipStory": "Started in 1989 by Chris Schwartz and the producer and engineer Joe 'The Butcher' Nicolo, out of Nicolo's Studio 4 in Philadelphia, with Columbia Records as distributor. Its first big success was Cypress Hill's 1991 debut, and it went on to release the Fugees and Lauryn Hill. The end of the label is not sourced here, so the closing year is left empty.",
+  "hook": "A Philadelphia label run out of a recording studio, whose owners produced records themselves.",
+  "blurb": {
+    "age7": "A record company in Philadelphia that started inside a recording studio. It released Cypress Hill and the Fugees.",
+    "age13": "Ruffhouse began in 1989 inside Studio 4, Joe Nicolo's recording studio in Philadelphia. Nicolo was an engineer and producer, so the label's owner was often in the room making the records. Columbia, a much bigger company, distributed them. Ruffhouse released Cypress Hill's first album in 1991, The Goats in 1992, and later the Fugees and Lauryn Hill.",
+    "adult": "Ruffhouse is a studio-first label: the recording room and the company were the same place, and a founder was a working producer. That is the basis of its one edge here, to The Goats, whose album Nicolo co-produced at Studio 4. Its distribution through Columbia also shows the usual 1990s arrangement, where an independent found the acts and a major paid for them to reach shops."
+  }
+}

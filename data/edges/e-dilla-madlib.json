@@ -1,0 +1,32 @@
+{
+  "id": "e-dilla-madlib",
+  "from": "j-dilla",
+  "to": "madlib",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 2003,
+  "crossLineage": false,
+  "evidence": "Champion Sound (Stones Throw, 2003), by Jaylib, was made by J Dilla and Madlib in separate cities, each rapping over the other's beats and exchanging material between Detroit and Los Angeles. That the collaboration reflects Madlib's regard for Dilla as a producer is widely stated in retrospectives. That part is consensus, while the collaboration itself is on record.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Slum Village",
+      "title": "Fall in Love",
+      "year": 2000
+    },
+    "later": {
+      "artist": "Jaylib",
+      "title": "Champion Sound (album)",
+      "year": 2003,
+      "search": "Jaylib Champion Sound"
+    },
+    "whatToListenFor": "On Champion Sound you can hear two producers side by side on one album, since each raps over the other's beats. Listen for the difference: Dilla's tracks have his leaning, off-grid drums and warm, filtered loops, as on 'Fall in Love'. Madlib's are dustier and more collaged, with odder samples and rougher edges. It's a conversation between two ways of sampling, conducted by post."
+  },
+  "explanation": {
+    "age7": "J Dilla and Madlib made an album together without being in the same room.",
+    "age13": "J Dilla lived in Detroit and Madlib lived in Los Angeles. For their album Champion Sound they sent each other beats and rapped over each other's music. Listening to it, you can compare the two: Dilla's drums lean and swing, Madlib's sound dustier and stranger.",
+    "adult": "A peer-to-peer edge between two producers, linking Detroit's rhythmic innovation with the West Coast's crate-digging on the same label that would release Madvillainy and Donuts."
+  },
+  "tags": [
+    "production"
+  ]
+}

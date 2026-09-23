@@ -1,0 +1,32 @@
+{
+  "id": "madlib",
+  "name": "Madlib",
+  "sortName": "Madlib",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1993,
+  "activeTo": null,
+  "originCity": "Oxnard, California",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A California producer who made most of Madvillainy in a Brazilian hotel room on a small sampler, and who traded beats by post with J Dilla.",
+  "blurb": {
+    "age7": "A producer from California who makes beats from dusty old records. He made a famous album with MF DOOM.",
+    "age13": "Otis Jackson Jr. grew up in Oxnard, California, the son of musicians. As Madlib he makes beats from obscure records: jazz, soul, Brazilian music, film soundtracks. He made most of the music for Madvillainy, his 2004 album with MF DOOM, on a trip to Brazil, in his hotel room, using a small Boss SP-303 sampler, a turntable and a tape deck. With J Dilla he made the album Champion Sound as Jaylib, each of them rapping over the other's beats in different cities.",
+    "adult": "Madlib is the clearest example on the map of the producer as the author of a record, and of minimal gear making major records. Madvillainy's instrumentals came off a portable sampler in a hotel room. His collaborations with J Dilla (Jaylib, 2003) and MF DOOM (Madvillain, 2004), both on Stones Throw, link Detroit's rhythmic innovation to the West Coast's crate-digging."
+  },
+  "signatureTracks": [
+    {
+      "title": "Accordion (Madvillain)",
+      "year": 2004,
+      "whyThisOne": "An organ loop from Daedelus's 'Experience', under DOOM."
+    },
+    {
+      "title": "Champion Sound (Jaylib)",
+      "year": 2003,
+      "whyThisOne": "With J Dilla, made by post between Los Angeles and Detroit."
+    }
+  ]
+}

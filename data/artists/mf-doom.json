@@ -1,0 +1,39 @@
+{
+  "id": "mf-doom",
+  "name": "MF DOOM",
+  "sortName": "DOOM, MF",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1989,
+  "activeTo": 2020,
+  "originCity": "Long Beach, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "madlib"
+  ],
+  "hook": "A rapper who lost his brother and his record deal in the same year, came back years later behind a metal mask, and became one of the most imitated lyricists in rap.",
+  "blurb": {
+    "age7": "A rapper who always wore a metal mask. He used clever, twisting rhymes.",
+    "age13": "Daniel Dumile was born in London and grew up on Long Island, New York. As Zev Love X he rapped in the group KMD with his younger brother, DJ Subroc. In 1993 Subroc was hit by a car and killed, and soon after their label, Elektra, refused to release their album because of its cover art. Dumile disappeared for years. He came back in the late 1990s wearing a metal mask, calling himself MF DOOM, and released Operation: Doomsday in 1999. In 2004 he made Madvillainy with the producer Madlib. He died on 31 October 2020, and his family announced it on 31 December.",
+    "adult": "DOOM's rhyme style, dense internal rhyme with long chains of slant rhymes and jokes, delivered in a flat, unhurried voice, is one of the most influential of the 2000s. He was also his own producer on much of his work, looping soul and cartoon samples. Madvillainy, with Madlib, is the record most often cited. Its unfinished demos were stolen and leaked fourteen months before release, and Stones Throw officially reissued that leak in 2025."
+  },
+  "signatureTracks": [
+    {
+      "title": "Doomsday",
+      "year": 1999,
+      "whyThisOne": "His self-produced comeback, over a loop of Sade's 'Kiss of Life'."
+    },
+    {
+      "title": "Accordion (Madvillain)",
+      "year": 2004,
+      "whyThisOne": "With Madlib, over a wheezing organ loop."
+    },
+    {
+      "title": "Rhymes Like Dimes",
+      "year": 1999,
+      "whyThisOne": "From Operation: Doomsday, the masked return at full strength."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-marleymarl-lotug",
+  "from": "marley-marl",
+  "to": "lords-of-the-underground",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1993,
+  "crossLineage": false,
+  "evidence": "Here Come the Lords (Pendulum and Elektra, 1993) credits Marley Marl with sole or shared production on every track and with mixing all of them, frequently with K-Def. 'Funky Child' was produced by Marl and K-Def at Marl's House of Hits. A track on the album samples Marl's own 1985 record 'Marley Marl Scratch'.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Marley Marl featuring MC Shan",
+      "title": "Marley Marl Scratch",
+      "year": 1985
+    },
+    "later": {
+      "artist": "Lords of the Underground",
+      "title": "Lord Jazz Hit Me One Time (Make It Funky)",
+      "year": 1993
+    },
+    "whatToListenFor": "Here the producer samples himself. 'Marley Marl Scratch' is one of his first records, from before sampling drums was his method. Eight years later a piece of it turns up inside a Lords of the Underground track he produced. Listen for the older record returning as material, and for how it's become a sound source inside a bigger, busier 1993 production built around the group's DJ."
+  },
+  "explanation": {
+    "age7": "Marley Marl made beats for Lords of the Underground, and even used a piece of one of his own old songs.",
+    "age13": "Lords of the Underground recorded their first album at Marley Marl's studio. He produced or co-produced every song, often with his student K-Def. On one track they used a piece of a record Marl made back in 1985, so his old music became part of the new.",
+    "adult": "The edge shows the producer's lineage continuing (Marl to K-Def) and the producer's own catalogue becoming sample material. The last is a small, clear case of the self-referencing that sampling made possible."
+  },
+  "tags": [
+    "production"
+  ]
+}

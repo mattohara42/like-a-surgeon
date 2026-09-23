@@ -1,0 +1,32 @@
+{
+  "id": "dj-muggs",
+  "name": "DJ Muggs",
+  "sortName": "Muggs, DJ",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1988,
+  "activeTo": null,
+  "originCity": "Queens, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Cypress Hill's producer, who also made 'Jump Around', and whose murky loops and squeals defined a strand of 90s West Coast rap.",
+  "blurb": {
+    "age7": "The producer of Cypress Hill. He also made the beat for 'Jump Around', a song still played at sports games.",
+    "age13": "Lawrence Muggerud grew up in Queens and moved to Los Angeles as a teenager. As DJ Muggs he produced Cypress Hill's records, starting with their 1991 debut. In 1992 he produced 'Jump Around' for House of Pain, which is still blasted at sports events. His beats sound hazy and slowed down, often with a strange high squeal on top. He later made albums of other rappers over his beats under the name Soul Assassins.",
+    "adult": "Muggs is the clearest example on the map so far of a producer whose signature sound travels between groups: the pitched squeal is the hook of both 'Jump Around' and 'Insane in the Brain'. His claim that the 'Insane in the Brain' squeal is a pitched blues guitar, against the widespread belief that it is a horse sample, is recorded on the Cypress Hill record. His Soul Assassins albums put the producer's name on the cover, a step toward the producer as the author of the record."
+  },
+  "signatureTracks": [
+    {
+      "title": "Jump Around (House of Pain)",
+      "year": 1992,
+      "whyThisOne": "Built around a piercing squeal. Still a stadium anthem."
+    },
+    {
+      "title": "Insane in the Brain (Cypress Hill)",
+      "year": 1993,
+      "whyThisOne": "The squeal again, with a disputed origin."
+    }
+  ]
+}

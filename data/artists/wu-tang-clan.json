@@ -1,0 +1,34 @@
+{
+  "id": "wu-tang-clan",
+  "name": "Wu-Tang Clan",
+  "sortName": "Wu-Tang Clan",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1992,
+  "activeTo": null,
+  "originCity": "Staten Island, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "rza"
+  ],
+  "hook": "Nine rappers from Staten Island, one producer, kung fu films, and a record deal that let every member sign somewhere else.",
+  "blurb": {
+    "age7": "Nine rappers from Staten Island in New York. They loved kung fu films and put pieces of them in their songs.",
+    "age13": "The Wu-Tang Clan came together in 1992 on Staten Island: RZA, GZA, Ol' Dirty Bastard, Method Man, Raekwon, Ghostface Killah, Inspectah Deck, U-God and Masta Killa. RZA made the beats. Their songs mixed dialogue from old kung fu films with dark, dusty loops. Their first album, Enter the Wu-Tang (36 Chambers), came out in 1993. RZA made a deal with their label, Loud Records, that let each member sign solo deals with other companies, so within a few years Wu-Tang members were on almost every major label.",
+    "adult": "The Wu-Tang Clan are as important for their business model as for their sound. RZA's condition, which most labels refused and Loud's Steve Rifkind accepted, made each member a free agent for solo work while the group stayed together. That spread the group's sound, and RZA's production, across the industry. Ol' Dirty Bastard died in 2004."
+  },
+  "signatureTracks": [
+    {
+      "title": "Protect Ya Neck",
+      "year": 1992,
+      "whyThisOne": "Their self-released first single: eight rappers in a row and kung fu film dialogue."
+    },
+    {
+      "title": "C.R.E.A.M.",
+      "year": 1993,
+      "whyThisOne": "A slow, sad soul-piano loop, and their biggest single."
+    }
+  ]
+}

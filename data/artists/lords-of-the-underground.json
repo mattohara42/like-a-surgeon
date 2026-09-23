@@ -1,0 +1,35 @@
+{
+  "id": "lords-of-the-underground",
+  "name": "Lords of the Underground",
+  "sortName": "Lords of the Underground",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1990,
+  "activeTo": null,
+  "originCity": "Newark, New Jersey",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "marley-marl",
+    "K-Def"
+  ],
+  "hook": "A Newark trio who met at college and brought Marley Marl back into the centre of New York rap in 1993.",
+  "blurb": {
+    "age7": "Three friends who met at college and made loud, energetic rap songs with the producer Marley Marl.",
+    "age13": "Mr. Funke and DoItAll from Newark, New Jersey, and DJ Lord Jazz from Cleveland met while they were students at Shaw University in North Carolina. A friend introduced them to Marley Marl, who invited them to record at his studio, the House of Hits. Their 1993 album Here Come the Lords was produced by Marl with his student K-Def, and had five singles in the charts, including 'Chief Rocka' and 'Funky Child'.",
+    "adult": "Here Come the Lords is a late Marley Marl production, made after his Juice Crew peak, and it passes the method to the next producer. Marl produced or co-produced every song and mixed them all, often with K-Def, who produced 'Chief Rocka' on his own. One of its tracks samples Marl's own 1985 record, 'Marley Marl Scratch', so the producer's catalogue is folded back into the new work."
+  },
+  "signatureTracks": [
+    {
+      "title": "Funky Child",
+      "year": 1993,
+      "whyThisOne": "Produced by Marley Marl and K-Def at Marl's House of Hits."
+    },
+    {
+      "title": "Chief Rocka",
+      "year": 1993,
+      "whyThisOne": "K-Def's production, and the group's biggest single."
+    }
+  ]
+}
