@@ -1007,3 +1007,30 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   Bongo Band (1974) and Sly and the Family Stone (1983). Those end years
   are approximate. The Bongo Band's city is Los Angeles, the base of its
   organiser Michael Viner. Where the sessions happened isn't sourced.
+
+
+## Added during the classic rock batch (Q21, batch 3 of 3)
+
+- **A140. Roster.** The Beatles, Led Zeppelin and Jimi Hendrix, as Matt
+  asked, plus The Verve, who carry the rock side's biggest sampling
+  lawsuit. The Rolling Stones were already on the map and gain two
+  edges, one in and one out. Every edge joins classic rock to something
+  already on the map. Most of them run into the hip-hop from the earlier
+  Q21 batches, which was the point of doing rock last.
+- **A141. Hendrix's edge comes from a scene.** He is anchored by
+  `e-swinginglondon-hendrix`, from the scene node, because London, not
+  any one London artist, made him. He's added to the scene's `memberIds`
+  and the scene gets its first edge, clearing its orphan warning. The
+  scene's end year (1967) comfortably covers his arrival in 1966.
+- **A142. Zeppelin's borrowing is stated as sampling lore, not as
+  judgment.** The adult register lists the Dixon settlement (1987), the
+  'Dazed and Confused' settlement (2012) and the 'Stairway' verdict in
+  the band's favour (upheld 2020) as fact, next to their being sampled.
+  It doesn't editorialise either way.
+- **A143. The Verve edge runs from the Rolling Stones even though the
+  sampled recording is Andrew Loog Oldham's orchestral version.** The
+  dispute was over the Jagger and Richards song, owned through ABKCO,
+  and Oldham isn't a node. The edge text says so.
+- **A144. The Beatles' legal action over Paul's Boutique is reported, not
+  resolved.** Sources say their side pursued it. I couldn't source the
+  outcome, so the records say "reported" and stop there.
