@@ -1,0 +1,31 @@
+{
+  "id": "e-bongoband-herc",
+  "from": "incredible-bongo-band",
+  "to": "kool-herc",
+  "type": "rediscovery",
+  "confidence": "consensus",
+  "year": 1974,
+  "crossLineage": true,
+  "evidence": "Herc and Grandmaster Flash are widely documented as using 'Apache' as a breakbeat in their sets from the mid-1970s. A 2006 New York Times article by Will Hermes reported Herc describing it as hip-hop's national anthem. Dating the first use to a specific year rests on retellings, so consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Incredible Bongo Band",
+      "title": "Apache",
+      "year": 1973
+    },
+    "later": {
+      "artist": "The Sugarhill Gang",
+      "title": "Apache",
+      "year": 1981
+    },
+    "whatToListenFor": "In the 1973 record, wait for the long passage where the melody drops away and bongos and drums play on their own. It runs far longer than most breaks, which is exactly why a DJ with two copies could stretch it out. Then play the Sugarhill Gang's 1981 'Apache', where a studio band replays the groove under rapping and chants. Listen for how the break has become the song."
+  },
+  "explanation": {
+    "age7": "A song that wasn't popular became a favourite of the first hip-hop DJs because of its long drum part.",
+    "age13": "The Incredible Bongo Band's 'Apache' didn't sell in 1973. But it had a long section of just bongos and drums, and Kool Herc found that if he played it from two copies, switching between them, he could keep the drum part going as long as the dancers wanted. It became one of the first great hip-hop records, years before anyone rapped on it.",
+    "adult": "A rediscovery edge: the record entered hip-hop through DJ practice, not sampling, so the later side is a replayed version rather than a sampled one. It ties the Q21 hub model back to the turntable techniques on e-sl1200-flash and Herc's record."
+  },
+  "tags": [
+    "technology"
+  ]
+}

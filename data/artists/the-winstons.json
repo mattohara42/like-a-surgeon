@@ -1,0 +1,32 @@
+{
+  "id": "the-winstons",
+  "name": "The Winstons",
+  "sortName": "Winstons, The",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1969,
+  "activeTo": 1970,
+  "originCity": "Washington, D.C.",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A Washington soul band whose drummer's six-second solo on a B-side became the most famous drum break in the world.",
+  "blurb": {
+    "age7": "A soul band. Their drummer played a very short drum solo that other musicians have copied thousands of times.",
+    "age13": "The Winstons were a soul band from Washington, D.C. Their 1969 hit 'Color Him Father' won a Grammy for its writer, the saxophonist Richard Spencer. On the other side of the single was 'Amen, Brother', where the drummer Gregory Coleman plays a drum solo about six seconds long. Hip-hop producers sampled it, then in the 1990s British jungle and drum and bass producers chopped it up and sped it up until it was the sound of a whole genre. It's called the Amen break. Spencer never got paid for any of it. In 2015 two British DJs raised about 24,000 pounds for him online.",
+    "adult": "The Amen break is the defining case of a sample outgrowing its source. Spencer, who held the copyright, received no royalties from its thousands of uses, and the 2015 fundraiser was a goodwill gesture, not a settlement. Coleman, who played it, is reported to have died in 2006 without recognition. The break's life in jungle and drum and bass is a major cross-lineage story that this map doesn't carry yet (BACKLOG)."
+  },
+  "signatureTracks": [
+    {
+      "title": "Amen, Brother",
+      "year": 1969,
+      "whyThisOne": "The B-side with the six-second break."
+    },
+    {
+      "title": "Color Him Father",
+      "year": 1969,
+      "whyThisOne": "The A-side and the hit, which won Richard Spencer a Grammy."
+    }
+  ]
+}

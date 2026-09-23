@@ -1,0 +1,27 @@
+{
+  "id": "tom-scott",
+  "name": "Tom Scott",
+  "sortName": "Scott, Tom",
+  "type": "artist",
+  "lineage": "other",
+  "activeFrom": 1967,
+  "activeTo": null,
+  "originCity": "Los Angeles, California",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A jazz saxophonist who recorded his first album as a teenager, and whose solo became the horn line of 'T.R.O.Y.'.",
+  "blurb": {
+    "age7": "A saxophone player. A few notes from one of his songs became the most famous part of 'T.R.O.Y.'.",
+    "age13": "Tom Scott is a saxophonist from Los Angeles. He recorded his first album, The Honeysuckle Breeze, for the jazz label Impulse! in 1967, when he was a teenager. One track, 'Today', is his version of a Jefferson Airplane song. In 1992 Pete Rock took parts of its saxophone solo and made them the main melody of 'They Reminisce Over You (T.R.O.Y.)'. Scott went on to a long career as a session and jazz-fusion player.",
+    "adult": "Scott is on the map as a sample hub (Q21), and 'Today' shows how far a sample can travel: a rock song, covered as easy-listening jazz, then cut into a hip-hop memorial for a dead friend."
+  },
+  "signatureTracks": [
+    {
+      "title": "Today",
+      "year": 1967,
+      "whyThisOne": "From The Honeysuckle Breeze. The saxophone in 'T.R.O.Y.'."
+    }
+  ]
+}

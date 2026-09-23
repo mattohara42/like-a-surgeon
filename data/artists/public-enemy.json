@@ -1,0 +1,35 @@
+{
+  "id": "public-enemy",
+  "name": "Public Enemy",
+  "sortName": "Public Enemy",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1985,
+  "activeTo": null,
+  "originCity": "Long Island, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "The Bomb Squad",
+    "Hank Shocklee"
+  ],
+  "hook": "A political rap group whose production team built walls of dozens of samples, the sound the 1991 ruling made nearly impossible to afford.",
+  "blurb": {
+    "age7": "A rap group who made loud, angry songs about racism in America, built from lots of pieces of other records.",
+    "age13": "Chuck D (Carlton Ridenhour), Flavor Flav, Terminator X and Professor Griff came together around Adelphi University on Long Island in the mid-1980s and signed to Def Jam. Their production team, the Bomb Squad (Hank Shocklee, Keith Shocklee and Eric Sadler), built beats out of dozens of samples layered on top of each other, loud and chaotic on purpose. 'Fight the Power' (1989), made for Spike Lee's film Do the Right Thing, mixes more than a dozen sources, including James Brown's 'Funky Drummer'. Their songs argued directly against racism and police violence.",
+    "adult": "Public Enemy's records are the high point of dense, uncleared sample collage. After Grand Upright (1991) that density became legally and financially impractical, and the Bomb Squad's method is the clearest casualty of the ruling. In 1989 Professor Griff made antisemitic remarks in a Washington Times interview. They caused a public crisis for the group, and he left it for a time. That is part of the group's record and is stated here as fact."
+  },
+  "signatureTracks": [
+    {
+      "title": "Rebel Without a Pause",
+      "year": 1987,
+      "whyThisOne": "The Bomb Squad's noise at full intensity."
+    },
+    {
+      "title": "Fight the Power",
+      "year": 1989,
+      "whyThisOne": "Made for Do the Right Thing, with more than a dozen samples layered."
+    }
+  ]
+}

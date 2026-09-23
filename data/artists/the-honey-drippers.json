@@ -1,0 +1,29 @@
+{
+  "id": "the-honey-drippers",
+  "name": "The Honey Drippers",
+  "sortName": "Honey Drippers, The",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1973,
+  "activeTo": null,
+  "originCity": "New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Roy C"
+  ],
+  "hook": "A funk band whose 1973 protest single against Nixon opened with a drum break that Marley Marl built 'The Bridge' on.",
+  "blurb": {
+    "age7": "A funk band that made a song about a president in 1973. Its drum beat was later used in hundreds of rap songs.",
+    "age13": "Roy C, a soul singer and producer whose full name is Roy Charles Hammond, wrote 'Impeach the President' in 1973, during the Watergate scandal that led to Richard Nixon resigning. He recorded it with a band called the Honey Drippers. The song starts with the drums on their own for a few bars. In 1986 Marley Marl took the kick and snare from those bars to build MC Shan's 'The Bridge', and after that hundreds of other producers sampled them too.",
+    "adult": "The Honey Drippers are a sample hub whose source record was itself political: a protest single about Nixon that became, stripped of its words, one of the load-bearing drum breaks of hip-hop. Accounts credit 'The Bridge' as among the first hip-hop records built on a reconfigured sampled break, and the song has been sampled on around 800 documented tracks. The band's end year isn't sourced."
+  },
+  "signatureTracks": [
+    {
+      "title": "Impeach the President",
+      "year": 1973,
+      "whyThisOne": "The Watergate protest single, and its opening drum break."
+    }
+  ]
+}
