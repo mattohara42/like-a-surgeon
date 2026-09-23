@@ -1201,3 +1201,12 @@ each disagreement.
   listing, and archive.org's file downloads are blocked from the
   container (see `docs/sources.md`). The record's end year of 1984 is
   still from one secondary source, and Wikipedia only says "mid-1980s".
+- **A162. A144's Beatles question, half answered.** Wikipedia's Paul's
+  Boutique article traces the legal action to Mike D, who told Vibe the
+  Beatles' side filed preliminary legal papers. It gives no outcome, and
+  neither does anything else I could reach, so the records still say
+  "reported". The edge's evidence now names the source. The same article
+  lists the Beatles samples on 'The Sounds of Science' differently from
+  our edge ('Back in the U.S.S.R.' included, only the Sgt. Pepper
+  reprise). The evidence now claims only the three that both listings
+  share, and says the listings differ on the rest.
