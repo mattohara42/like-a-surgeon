@@ -6,7 +6,7 @@
   "confidence": "documented",
   "year": 1997,
   "crossLineage": false,
-  "evidence": "'Bitter Sweet Symphony' (1997) samples the Andrew Loog Oldham Orchestra's orchestral version of the Jagger and Richards song 'The Last Time' (1965). The sample was not fully cleared. After a dispute with ABKCO, the song's publisher, Richard Ashcroft signed away his rights and royalties. In 2019 Jagger and Richards assigned their songwriter royalties for the song to Ashcroft, but not the publishing.",
+  "evidence": "'Bitter Sweet Symphony' (1997) samples the Andrew Loog Oldham Orchestra's orchestral version of the Jagger and Richards song 'The Last Time' (1965). The sample was not fully cleared. After a dispute with ABKCO, the song's publisher, Richard Ashcroft signed away his rights and royalties. In April 2019 ABKCO, Jagger and Richards agreed to return the song's royalties and songwriting credit to Ashcroft, who announced it that May (Wikipedia's article on the song).",
   "trackPair": {
     "earlier": {
       "artist": "The Rolling Stones",
@@ -22,7 +22,7 @@
   },
   "explanation": {
     "age7": "The Verve's biggest song used a piece of music based on a Rolling Stones song, and they lost the money from it for twenty years.",
-    "age13": "'Bitter Sweet Symphony' is built on a string part from an orchestral version of the Stones' song 'The Last Time'. The Verve had permission for some of it but used more, and the company that owned the Stones' old songs took the royalties. In 2019 Mick Jagger and Keith Richards gave the songwriting money back to Richard Ashcroft.",
+    "age13": "'Bitter Sweet Symphony' is built on a string part from an orchestral version of the Stones' song 'The Last Time'. The Verve had permission for some of it but used more, and the company that owned the Stones' old songs took the royalties. In 2019 Mick Jagger and Keith Richards gave the songwriting credit and the money back to Richard Ashcroft.",
     "adult": "The rock-side twin of e-osullivan-bizmarkie: a sample only partly cleared, and a publisher with the leverage to take the whole song. The edge runs from the Stones as writers of the song. The sampled recording itself was Oldham's orchestral arrangement."
   },
   "tags": [

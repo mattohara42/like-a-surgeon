@@ -1240,3 +1240,26 @@ each disagreement.
     produced it.
   None of these changes a tier. Each edge still rests on a credit. The
   credit just says slightly less than we had claimed.
+- **A164. Sample edges checked against the song articles.** Wikipedia's
+  articles on the sampling records confirm the sampled source for
+  'C.R.E.A.M.' (the Charmels), '93 'til Infinity' (Cobham's 'Heather'),
+  'Electric Relaxation' ('Mystic Brew'), 'Mama Said Knock You Out'
+  ('Funky Drummer'), 'Insane in the Brain' (Sly's 'Life'), 'T.R.O.Y.'
+  (Tom Scott's 'Today', which is itself a Jefferson Airplane cover),
+  'Fight the Power' ('Funky Drummer'), 'Alone Again' (the Grand Upright
+  opinion) and 'Bitter Sweet Symphony'. The rest had no sample list in
+  the article text I could read. They keep their existing citations,
+  and nothing contradicted them.
+- **A165. The Verve records overstated what 2019 left out.** The edge
+  and the artist record both said the 2019 settlement returned
+  Ashcroft's royalties "but not the publishing". Wikipedia's article
+  says ABKCO, Jagger and Richards agreed in April 2019 to return both
+  the royalties and the songwriting credit. I found nothing for the
+  publishing claim, so it's gone, and the returned credit is added.
+  The same article dates the Oldham recording to 1965 in one place and
+  1966 in another. The edge keeps 1965, the year of the Stones'
+  original, which is the date it gives.
+- **A166. Duke Bootee's second track.** 'Message II (Survival)' (Sugar
+  Hill, 1982) is credited to Melle Mel and Duke Bootee on every Discogs
+  listing. That clears his validator warning and closes the BACKLOG note
+  that his catalogue needed real research.
