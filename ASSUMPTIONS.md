@@ -1509,3 +1509,98 @@ each disagreement.
   describes, falls after the scene's own end year and is described in
   his artist record without being pulled into the scene's membership
   window.
+
+## Track D: orphan-closing batch (Transmat, KMS, Rockers International)
+
+- **A184. Three orphan labels, three artists, six edges.** BACKLOG named
+  the specific non-founder artist each orphan label was waiting on
+  (A177). Added Carl Craig (Transmat), Chez Damier (KMS), and Hugh
+  Mundell (Rockers International), each with the label edge BACKLOG
+  called for plus a second, person-to-person edge to an artist already
+  on the map (Derrick May, Kevin Saunderson, Augustus Pablo
+  respectively), so each new node lands inside the main connected
+  component rather than forming its own small island. `npm run
+  report`'s node/edge counts don't show connectivity, so this was
+  checked separately with a script walking `data/edges/` as an
+  undirected graph. Before: 159 nodes in 18 components (one 120-node
+  main component, 12 islands of 2-5 nodes, 5 single-node orphans).
+  After: 162 nodes in 15 components (main component grown to 126, the
+  same 12 mid-size islands untouched, 2 single-node orphans remaining,
+  Kling Klang and Brunswick per A177). All facts checked with WebSearch
+  against multiple sources per record (Wikipedia, Discogs release data,
+  and outlet profiles for each artist; specific citations are in each record's
+  `evidence` field rather than repeated here). `npm run validate`
+  passes clean (0 errors, 48 warnings, down from 51: the three orphan-
+  label warnings clear, no new warning categories introduced).
+- **A185. KMS: picked Chez Damier over MK.** BACKLOG offered either.
+  Chez Damier's KMS connection is the more specific, better-sourced
+  claim: he worked A&R for Kevin Saunderson at the label and released
+  his own single there ('Can You Feel It', 1992, confirmed on Discogs),
+  where MK's early KMS-era work is described consistently across
+  sources only in general terms ('crafting deep house for KMS from age
+  17') without a specific KMS-credited release surfacing in the sources
+  checked. MK remains a valid future addition on his own terms (his
+  later remix and production career is extensively documented) but
+  wasn't needed to close this particular orphan.
+- **A186. Rockers International: picked Hugh Mundell over Jacob Miller.**
+  Both are directly and heavily sourced (Wikipedia biographies for
+  both, corroborated by Discogs and contemporary reviews). Mundell's
+  entire catalogue ran through Pablo and Rockers specifically, a
+  cleaner single-label claim; Miller's catalogue was split across
+  Inner Circle's other labels as well as Pablo's productions, which
+  would have made the label edge's evidence field carry more caveats.
+  Jacob Miller remains a strong future addition; nothing here rules
+  him out.
+- **A187. Chez Damier's `activeTo` left as `null` rather than a guessed
+  end date.** Sources describe his active career from the Music
+  Institute (1988) through Prescription Records (founded 1993) in
+  detail, but none of the sources checked state or imply he has
+  stopped recording or performing, and electronic-music figures of his
+  generation routinely remain active well past their commercially
+  documented peak. Per SCHEMA.md, `null` means "still going" by
+  default; there is no positive evidence of an end to justify
+  `endUnknown` either; if he has in fact stopped, this should be
+  corrected with a source rather than guessed here.
+- **A188. `e-kevinsaunderson-chezdamier` held at `consensus`, distinct
+  from the `documented` `e-kms-chezdamier` label edge.** The label
+  edge documents an institutional fact (A&R role, then a KMS release)
+  that multiple sources state plainly. The person-to-person edge tries
+  to name what Saunderson's mentorship specifically changed in
+  Damier's own music, which no source checked states directly; it
+  rests on the two men's proximity (the Music Institute's shared DJ
+  booth, then the A&R relationship) rather than a specific claim, so
+  it sits one tier lower, the same distinction A69's label-vs-artist
+  edges draw elsewhere in this dataset.
+
+## Track D: bridge edges (no new nodes, three islands merged)
+
+- **A189. Three more islands merged into the main component, with no
+  new artists.** Re-ran the connectivity script from A184 after that
+  batch and found the pattern wasn't unique to orphan labels: several
+  scene and label nodes carry edges only to each other, in their own
+  small island, even though the artists who belong to them (via
+  `scenes`/`memberIds`, not a graph edge) sit in the main component.
+  `detroit-techno`/`warp`/`aphex-twin`/`autechre` (4 nodes),
+  `south-bronx`/`kingston-dub`/`studio-one` (3 nodes), and
+  `ensoniq-eps-16-plus`/`rza`/`the-charmels`/`wu-tang-clan` (4 nodes)
+  were each one edge away from the main graph. Added exactly one
+  bridging edge per island rather than new nodes: `e-kraftwerk-warp`
+  (documented: the 'Artificial Intelligence' compilation's cover
+  depicts Kraftwerk's 'Autobahn' on the android's turntable, a sleeve
+  fact rather than an interview quote), `e-bronx-theclash` (documented:
+  'The Magnificent Seven', recorded April 1980, directly credited to
+  the Clash's exposure to Grandmaster Flash and the Sugarhill Gang on
+  the ground in New York), and `e-publicenemy-rza` (consensus: RZA's
+  production widely described as adapting the Bomb Squad's cut-up
+  technique toward a sparser end, but no first-person RZA quote naming
+  Public Enemy specifically was found in the sources checked). Main
+  component: 126 to 137 nodes, 15 components to 12. `npm run validate`
+  stays clean at 0 errors, 48 warnings (unchanged, since none of these
+  three islands carried an orphan warning to begin with, only their
+  now-fixed disconnection from the main graph). Left `moog-modular`/
+  `tangerine-dream`/`virgin`/`wendy-carlos` and the `cypress-hill`
+  cluster alone: a candidate bridge for the Moog island (George
+  Harrison's Moog use on Beatles records) didn't hold up under a
+  second search, which credited the Melody Maker comparison to Wendy
+  Carlos rather than a stated influence, and no substitute was checked
+  carefully enough to add before running out of session time.

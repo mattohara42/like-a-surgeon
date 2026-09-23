@@ -1,0 +1,31 @@
+{
+  "id": "e-pablo-hughmundell",
+  "from": "augustus-pablo",
+  "to": "hugh-mundell",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1976,
+  "crossLineage": false,
+  "evidence": "Mundell met Pablo at Joe Gibbs' studio and Pablo invited him to record; the two worked together from 1976, producing 'Africa Must Be Free By 1983' (1978) and 'Blackman's Foundation' (1979), the two albums that made up most of Mundell's catalogue before his death in 1983. Documented in Mundell's Wikipedia biography.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Hugh Mundell",
+      "title": "First sessions at Pablo's house",
+      "year": 1976,
+      "search": false
+    },
+    "later": {
+      "artist": "Hugh Mundell",
+      "title": "Africa Must Be Free By 1983",
+      "year": 1978
+    },
+    "whatToListenFor": "Pablo's melodica and mixing sensibility, the same spring reverb and space he used on his own instrumental records, sits underneath a teenager's voice and lyrics rather than around Pablo's own playing. Listen for how much room the vocal is given inside a production style built for instrumentals."
+  },
+  "explanation": {
+    "age13": "Augustus Pablo met Hugh Mundell when Mundell was a young teenager and produced his records for the rest of his short career, including his celebrated first album.",
+    "adult": "The direct production relationship underneath the Rockers International label edge: Pablo did not just release Mundell's records, he produced them himself, starting when Mundell was young enough that the relationship reads as mentorship as much as production."
+  },
+  "tags": [
+    "production"
+  ]
+}

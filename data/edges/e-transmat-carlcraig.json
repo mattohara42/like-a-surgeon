@@ -1,0 +1,31 @@
+{
+  "id": "e-transmat-carlcraig",
+  "from": "transmat",
+  "to": "carl-craig",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1989,
+  "crossLineage": false,
+  "evidence": "Transmat released Carl Craig's debut single, 'Elements,' under the alias Psyche in 1989, while Craig was working as Derrick May's assistant at the label; the early Transmat-era material was later collected on the compilation 'Elements 1989-1990.' Documented in Craig's Wikipedia biography, the Wikipedia article on the compilation, and Transmat's own label record on this map.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Derrick May (Rhythim Is Rhythim)",
+      "title": "Strings of Life",
+      "year": 1987
+    },
+    "later": {
+      "artist": "Psyche (Carl Craig)",
+      "title": "Elements",
+      "year": 1989
+    },
+    "whatToListenFor": "'Strings of Life' is techno reaching for euphoria in broad daylight. 'Elements,' made two years later inside the same label, is quieter and more interior, described by reissue notes as 'swooning electro-jazz.' Same label, same machine palette, a different temperament entirely."
+  },
+  "explanation": {
+    "age13": "Derrick May's label Transmat put out Carl Craig's first record in 1989, while Craig was working there as May's assistant. It sounded like techno, but softer and jazzier than May's own records.",
+    "adult": "Transmat is the through-line this dataset's own label record already names between first-wave and second-wave Detroit techno: May's decision to bring Craig on as an assistant and put out his early work gave a teenager a functioning studio and a release outlet before he had a catalogue of his own, ahead of Craig founding Planet E in 1991."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

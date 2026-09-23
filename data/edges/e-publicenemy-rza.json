@@ -1,0 +1,30 @@
+{
+  "id": "e-publicenemy-rza",
+  "from": "public-enemy",
+  "to": "rza",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1993,
+  "crossLineage": false,
+  "evidence": "Critics and hip-hop production histories consistently describe RZA's dense, lo-fi Wu-Tang sound as built on the Bomb Squad's cut-up sampling technique, adapted toward a grittier, more minimalist end using an Ensoniq sampler rather than the Bomb Squad's own dozens-of-samples-per-track density. Described this way in retrospectives (Mixdown Magazine, general hip-hop production histories); no specific first-person RZA statement naming the Bomb Squad was consulted, so this sits at consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Public Enemy",
+      "title": "Bring the Noise",
+      "year": 1988
+    },
+    "later": {
+      "artist": "Wu-Tang Clan",
+      "title": "Protect Ya Neck",
+      "year": 1993
+    },
+    "whatToListenFor": "'Bring the Noise' stacks dense layers of sirens, horn stabs and vocal snatches on top of each other, chaotic on purpose. 'Protect Ya Neck' takes the same cut-up instinct and strips it back to one or two grimy loops, murky and minimal rather than maximal, RZA's own turn on the same technique."
+  },
+  "explanation": {
+    "age13": "The Bomb Squad, Public Enemy's production team, built beats out of many chopped-up samples layered on top of each other. RZA learned from that method but used far fewer samples, aiming for something darker and rawer instead.",
+    "adult": "This is the sampling-aesthetic lineage this dataset traces from the Bomb Squad's maximalism to RZA's minimalism: both build records almost entirely from other records cut into pieces, but where the Bomb Squad piles samples on for density and noise, RZA strips down to one or two loops for atmosphere and menace."
+  },
+  "tags": [
+    "production"
+  ]
+}
