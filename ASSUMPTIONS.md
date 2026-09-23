@@ -1103,3 +1103,11 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   orphan warning stays. The two new scenes use a new motif key,
   `tape-reel`. Nothing renders motifs yet, so this is only a name for the
   card designer.
+- **A154. Two licenses: MIT for code, CC BY-SA 4.0 for the dataset.** Matt
+  asked for a license and left the choice to Claude. Code and data have
+  different reuse needs. MIT keeps the code easy to borrow. The data is
+  the hand-researched part, so share-alike keeps improved copies open. The
+  copyright line names `mattohara42`, the GitHub account, because no legal
+  name is given anywhere in the repo. When the SQUELCH 303 worklet is
+  ported in M4 (A8), its own license has to allow relicensing under MIT,
+  or it keeps its original license in its own file.
