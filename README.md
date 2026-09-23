@@ -3,9 +3,24 @@
 An offline, browser-based atlas of how recorded popular music influenced itself,
 built to be explored by a curious 13-year-old.
 
-Open `index.html` through `npm run dev`. The graph renders the whole dataset
-on a left-to-right time axis with lineage lanes, machines on a receding floor
-beneath them, and a year cursor you can drag to watch the map arrive.
+The map lays the whole dataset on a left-to-right time axis, with lanes by
+lineage, scene or label, machines on a receding floor beneath, and a year
+cursor you can drag to watch it arrive. Click anything to read about it.
+
+The latest `main` is live at https://like-a-surgeon.netlify.app, and every
+pull request gets its own Netlify preview.
+
+## Where things stand
+
+- **M1 (data layer):** closed. The dataset targets moved to Track D, which
+  keeps growing (`npm run report` measures the distance).
+- **M2 (graph renderer):** shipped.
+- **M3 (reading surface):** built. Panels, reading levels, legend, search,
+  YouTube links, Arrange by, and the typography pass are all in (PRs #16 to
+  #21). The gate is still open: it passes when Matt's 13-year-old uses the
+  map without instruction and gets somewhere. `docs/m3-gate-notes.md` is the
+  guide for that session.
+- **Next:** M4, the audio engine, once the M3 gate is passed.
 
 ## What is here
 
@@ -26,7 +41,10 @@ beneath them, and a year cursor you can drag to watch the map arrive.
 | `tools/report.js` | Generates the M1 gate report into `docs/m1-gate-report.md`. `npm run report`. |
 | `index.html`, `main.js` | The app shell and entry point. |
 | `config.js` | Every tuning value in the project. No magic numbers in logic. |
-| `render/` | The graph renderer: layout, substrate, nodes, edges, gradients, atmosphere, transport, viewport culling, semantic zoom. |
+| `render/` | The graph renderer: layout, lane plans (`arrange.js`), substrate, nodes, edges, gradients, atmosphere, transport, viewport culling, semantic zoom, label placement. |
+| `reading/` | The reading surface: the drawer and its node and edge panels, reading levels, legend and version stamp, search, YouTube links, interface copy in registers, the type scale. |
+| `docs/` | Milestone designs (`m1-`, `m2-`, `m3-architecture.md`), the M1 gate report, and the M3 gate notes. |
+| `netlify.toml` | Builds `dist/` for the Netlify site and its PR previews. |
 | `design/` | Visual direction prototypes. `03-strata.html` is the one that shipped. |
 | `tools/design-snapshot.js` | Freezes `data/` for the `design/` prototypes. `npm run design:snapshot`. |
 | `.claude/hooks/session-start.sh` | Tells each session how far behind `origin/main` it is, and what else is in flight. |
@@ -38,38 +56,20 @@ beneath them, and a year cursor you can drag to watch the map arrive.
     npm run report     # regenerates docs/m1-gate-report.md
     npm run build      # writes dist/, the offline release: open dist/index.html directly
 
-Drag the year cursor at the bottom, or press play. Scroll to zoom, drag to
-pan, click a node to fly to it.
+Scroll to zoom, drag to pan, and drag the year cursor or press play. Click a
+dot or a line to open its panel, and follow the links in the panel sideways.
+Press `/` to search by name, place or year. The top-left controls switch
+the layers, the reading level (Teen, Adult) and the arrangement (Lineage,
+Scene, Label). The legend bottom-left explains how sure each line is.
 
-## How to start with Claude Code
+## Working with Claude Code
 
-1. Answer `QUESTIONS.md` in the file. Five questions, ten minutes.
-2. Read `data/seed.json`, specifically the `whatToListenFor` fields and the
-   `evidence` fields. If those read well to you, the project will read well.
-   If they read like filler, fix two of them by hand so there is a standard to
-   point at.
-3. `git init`, commit the whole folder as the design package.
-4. Open Claude Code in the folder and send the kickoff message below.
-
-### Kickoff message
-
-> Read CLAUDE.md, SPEC.md, BUILD_PLAN.md, and data/SCHEMA.md before doing
-> anything. Then read data/seed.json carefully, because it is the quality bar
-> for everything you will write.
->
-> You are starting M1. Do not write any UI code, any renderer, or any scratch
-> visualization. M1 is the data layer and nothing else.
->
-> Start by proposing the sharded file layout and the manifest format, and by
-> solving the file:// fetch problem with a stdlib-only dev server and a bundling
-> step. Show me that plan before you build it.
->
-> Then expand the dataset toward the M1 targets in BUILD_PLAN.md, in batches of
-> about twenty artists with their edges, pausing after each batch so I can read
-> a sample. Lead with the dub, electro, Detroit, and Chicago material.
->
-> The single thing I will judge you on is the quality of edge.evidence and
-> trackPair.whatToListenFor. Never invent a quotation. Tier confidence honestly.
+Each session starts by reading `CLAUDE.md`, and the SessionStart hook reports
+whether the checkout is behind `main`. Work goes through a pull request per
+concern. Every decision made without asking goes in `ASSUMPTIONS.md`, and
+every question for Matt goes in `QUESTIONS.md`. The prompts that drove M1 are
+kept in `prompts/`, and the original kickoff message is preserved there
+(`prompts/README.md`).
 
 ## The one rule that protects this project
 
