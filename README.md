@@ -82,6 +82,13 @@ every question for Matt goes in `QUESTIONS.md`. The prompts that drove M1 are
 kept in `prompts/`, and the original kickoff message is preserved there
 (`prompts/README.md`).
 
+## License
+
+The code is under the MIT License (`LICENSE`). The dataset in `data/`, the
+records and the writing in them, is under Creative Commons
+Attribution-ShareAlike 4.0 (`data/LICENSE`). Anyone can reuse and adapt the
+data if they credit Lineage and share their version under the same terms.
+
 ## The one rule that protects this project
 
 The dataset is unbounded. The build is milestoned.
