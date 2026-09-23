@@ -3,10 +3,10 @@
   "from": "sugar-hill",
   "to": "melle-mel",
   "type": "label",
-  "confidence": "documented",
+  "confidence": "consensus",
   "year": 1982,
   "crossLineage": false,
-  "evidence": "Sugar Hill's method, a house band rather than DJs, material chosen by the label, and acts assembled or directed rather than followed, determined the form 'The Message' took. The label's practices are documented across histories of the company and are audible on its catalogue.",
+  "evidence": "Sugar Hill's method, a house band rather than DJs, material chosen by the label, and acts assembled or directed rather than followed, determined the form 'The Message' took. The label's practices are described across histories of the company and are audible on its catalogue. Held at consensus because no first-hand source is named here (Q22).",
   "trackPair": {
     "earlier": {
       "artist": "The Sugarhill Gang",

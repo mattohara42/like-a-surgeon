@@ -3,10 +3,10 @@
   "from": "technics-sl-1200",
   "to": "grandmaster-flash",
   "type": "technological",
-  "confidence": "documented",
+  "confidence": "consensus",
   "year": 1975,
   "crossLineage": true,
-  "evidence": "Flash's quick-mix theory and punch phrasing are described consistently across Bronx hip-hop oral histories and in his own accounts, and both techniques depend on a turntable that can be stopped, turned backwards by hand and released straight back to speed. The Technics SL-1200 line, introduced in 1972 and standardised for DJ use when the MK2 added a pitch fader in 1979, is the deck that behaviour was built on.",
+  "evidence": "Flash's quick-mix theory and punch phrasing are described consistently across Bronx hip-hop oral histories and in his own accounts, and both techniques depend on a turntable that can be stopped, turned backwards by hand and released straight back to speed. The Technics SL-1200 line, introduced in 1972 and standardised for DJ use when the MK2 added a pitch fader in 1979, is the deck that behaviour was built on. Held at consensus because no first-hand source is named here (Q22).",
   "trackPair": {
     "earlier": {
       "artist": "Technics",

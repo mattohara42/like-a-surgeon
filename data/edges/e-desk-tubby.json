@@ -3,10 +3,10 @@
   "from": "tubby-mci-console",
   "to": "king-tubby",
   "type": "technological",
-  "confidence": "documented",
+  "confidence": "consensus",
   "year": 1972,
   "crossLineage": true,
-  "evidence": "Tubby's purchase of the mid-1960s twelve-into-four MCI console from Byron Lee's Dynamic Sounds, when that studio moved to sixteen tracks in 1972, is described across histories of Jamaican recording, as is the unusual range of its high-pass filter, roughly 70 Hz to 7.5 kHz, which is wider at the bottom than comparable circuits of the period.",
+  "evidence": "Tubby's purchase of the mid-1960s twelve-into-four MCI console from Byron Lee's Dynamic Sounds, when that studio moved to sixteen tracks in 1972, is described across histories of Jamaican recording, as is the unusual range of its high-pass filter, roughly 70 Hz to 7.5 kHz, which is wider at the bottom than comparable circuits of the period. Held at consensus because no first-hand source is named here (Q22).",
   "trackPair": {
     "earlier": {
       "artist": "MCI",

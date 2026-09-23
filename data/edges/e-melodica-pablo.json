@@ -3,10 +3,10 @@
   "from": "hohner-melodica",
   "to": "augustus-pablo",
   "type": "technological",
-  "confidence": "documented",
+  "confidence": "consensus",
   "year": 1972,
   "crossLineage": true,
-  "evidence": "Pablo's adoption of the Hohner melodica, an instrument distributed through Jamaican schools as a teaching aid, is described across reggae histories and interviews. 'Java', voted the top instrumental of 1972 in Jamaica, is the record that established it as a lead voice rather than a novelty.",
+  "evidence": "Pablo's adoption of the Hohner melodica, an instrument distributed through Jamaican schools as a teaching aid, is described across reggae histories and interviews. 'Java', voted the top instrumental of 1972 in Jamaica, is the record that established it as a lead voice rather than a novelty. Held at consensus because no first-hand source is named here (Q22).",
   "trackPair": {
     "earlier": {
       "artist": "Hohner",

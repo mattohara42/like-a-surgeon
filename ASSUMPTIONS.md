@@ -1308,3 +1308,13 @@ each disagreement.
   one `cover` edge was checked only through Wikipedia. Wayback copies
   and archive.org files could not be read (see `docs/sources.md`), so
   the Sound on Sound profile A124 wanted is still unread.
+- **A171. Q22 applied: eight edges move to `consensus`.** Matt took the
+  recommendation. e-dubplate-tubby, e-melodica-pablo, e-re201-perry,
+  e-sl1200-flash, e-herc-cokelarock, e-desk-tubby, e-sugarhill-mellemel
+  and e-robinson-mellemel are now `consensus`, and each evidence field
+  ends by saying why. Where the text itself called the claim
+  "documented", the word was changed so the prose and the tier agree.
+  Nothing else in these edges changed. Any of them goes back to
+  `documented` when a session finds the interview or document that
+  shows it. The tier count is now 93 documented, 47 consensus and 1
+  asserted.

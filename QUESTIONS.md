@@ -4,26 +4,6 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
-- **Q22. Should `documented` edges that cite only "histories" drop to
-  `consensus`?** Raised by the source verification pass. 101 of 141
-  edges are `documented`, against the roughly one quarter METHOD.md calls
-  healthy. Most of them earn it: a sleeve credit, a court opinion, or the
-  person's own interview account, and the credits I could check against
-  Discogs held up (A163). But eight rest only on the literature agreeing,
-  with no first-hand source named in the evidence: e-dubplate-tubby,
-  e-melodica-pablo, e-re201-perry, e-sl1200-flash, e-herc-cokelarock,
-  e-desk-tubby, e-sugarhill-mellemel and e-robinson-mellemel. By
-  METHOD.md's own definitions that is what `consensus` means. Options:
-  (a) **Recommended.** Move those eight to `consensus` now, and move any
-  of them back when a session finds the interview or document. It's
-  eight one-field edits, and it makes the tier mean one thing.
-  (b) Keep them and spend a session looking for first-hand sources for
-  each, now that the sources are reachable. Better if it works, but some
-  of it (Kingston sound-system practice, Bronx park jams) may never have
-  been written down by the people involved.
-  (c) Leave the tiers alone. Accept that `documented` currently means
-  "documented, or very widely agreed".
-
 - **Q20. A null end year means three different things.** On machines,
   `discontinuedYear: null` currently means "still made" (the Mellotron),
   "one-off, no production run" (Tubby's console, the slashed Elpico) and
@@ -47,6 +27,27 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   looks like it will resolve itself.
 
 ## Resolved
+
+- **Q22. Should `documented` edges that cite only "histories" drop to
+  `consensus`?** Resolved: **the recommendation, (a).** Raised by the source verification pass. 101 of 141
+  edges are `documented`, against the roughly one quarter METHOD.md calls
+  healthy. Most of them earn it: a sleeve credit, a court opinion, or the
+  person's own interview account, and the credits I could check against
+  Discogs held up (A163). But eight rest only on the literature agreeing,
+  with no first-hand source named in the evidence: e-dubplate-tubby,
+  e-melodica-pablo, e-re201-perry, e-sl1200-flash, e-herc-cokelarock,
+  e-desk-tubby, e-sugarhill-mellemel and e-robinson-mellemel. By
+  METHOD.md's own definitions that is what `consensus` means. Options:
+  (a) **Recommended.** Move those eight to `consensus` now, and move any
+  of them back when a session finds the interview or document. It's
+  eight one-field edits, and it makes the tier mean one thing.
+  (b) Keep them and spend a session looking for first-hand sources for
+  each, now that the sources are reachable. Better if it works, but some
+  of it (Kingston sound-system practice, Bronx park jams) may never have
+  been written down by the people involved.
+  (c) Leave the tiers alone. Accept that `documented` currently means
+  "documented, or very widely agreed".
+  See **A171**.
 
 - **Q21. Going deep on hip-hop: producers, sampling lore, and order.**
   Raised by Matt after PR #24, asking for The Roots, The Goats, Souls of

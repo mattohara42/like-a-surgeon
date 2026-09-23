@@ -59,8 +59,8 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 101 |
-| consensus | 39 |
+| documented | 93 |
+| consensus | 47 |
 | asserted | 1 |
 
 ## The 20 edges to read hardest
