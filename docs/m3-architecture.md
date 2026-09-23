@@ -1,5 +1,12 @@
 # M3 architecture: the reading surface
 
+> **Status: built.** Every step below shipped: steps 1 and 2 and the
+> offline-release fix (Q18) in #16, search in #17, YouTube links in #18,
+> Arrange by (section 7a) in #19, the typography pass in #20, and names
+> drawn above markers in #21. Where the build departed from this plan, the
+> section says so and names the ASSUMPTIONS entry. The M3 gate is a person,
+> not a PR: see `docs/m3-gate-notes.md`.
+
 Plan for review before any M3 code, following the M1 and M2 pattern. M3 is
 the milestone where Lineage stops being a picture of a map and becomes
 something a person can read. The gate is the hardest one so far: Matt's
@@ -235,7 +242,8 @@ All sizes go in `CONFIG.type`.
 
 ## 9. Order of work
 
-Each step is one PR and one concern, and each is usable on its own:
+Each step is one PR and one concern, and each is usable on its own. All
+five shipped, in this order, with Arrange by inserted before step 5:
 
 1. `neighbours.js`, `registers.js`, the graph API additions, and the drawer
    with node and edge panels. This is the step that makes clicking do
@@ -251,6 +259,7 @@ under `tools/serve.js` and under the bundle from `file://`, open a panel of
 every kind, and confirm no console errors. The real gate is a person, so
 after step 5 I will write a one-page note on what to watch for when the
 13-year-old tries it. It will list the questions to hold back from asking him.
+That note is `docs/m3-gate-notes.md`.
 
 ## 10. Questions raised by this plan (both resolved)
 

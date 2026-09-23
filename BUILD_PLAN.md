@@ -57,6 +57,10 @@ dataset at 60fps or raise the problem.
 
 **Gate:** performance at 2x the M1 dataset size, simulated by duplication.
 
+**Shipped ahead of its gate** (A72). The 2x check was run headless, where
+`render()` averaged 1.9ms against a 16.7ms budget. A spot check in a real
+browser is still logged in BACKLOG.
+
 ---
 
 ## M3 — Reading surface
@@ -68,6 +72,11 @@ the data rather than hardcoding two.
 Confidence legend. Search. Outbound streaming-search links. Typography pass.
 
 **Gate:** Matt's 13-year-old uses it without instruction and gets somewhere.
+
+**Build complete, gate open.** Every step in `docs/m3-architecture.md`
+shipped in PRs #16 to #21, plus Arrange by (Q19), which Matt asked for
+mid-milestone. `docs/m3-gate-notes.md` covers how to run the gate session.
+M4 does not open until the gate is passed.
 
 ---
 

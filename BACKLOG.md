@@ -89,9 +89,13 @@ correct response to a good idea arriving mid-milestone.
 - **Focus dimming on hover.** The prototype dimmed the whole field to just
   the hovered node, its edges and its neighbours. Not ported: it needs a
   neighbour index and a render path that can dim culled-but-adjacent
-  elements, which is real work rather than a style change.
+  elements, which is real work rather than a style change. The neighbour
+  index now exists (see Spread-on-click). The render path does not.
 - **Spread-on-click.** Influence propagating outward hop by hop from a
   clicked node. Wanted, and cheap once there is a neighbour index.
+  **Update:** the index exists now (`reading/neighbours.js`, M3 step 1). It
+  would need moving or re-exporting for `render/` to use it, since the
+  graph never imports from `reading/` (A73).
 - **Thread playback.** `data/threads/` is loaded and unused. The prototypes
   played a thread as a camera tour; M5 owns this properly.
 - **Reduced motion.** `prefers-reduced-motion` now drops the dust layer,
