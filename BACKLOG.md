@@ -355,6 +355,9 @@ fixing them inline.)
   strong enough to justify the edge under the A69 convention, and adding
   them without one would have produced two more orphan labels. Worth
   revisiting with the artists who make the claim land.
+  **Half closed:** Cold Chillin' arrived with the hip-hop production
+  batch, carried by the Biz Markie sampling case (A121). Enjoy Records is
+  still waiting.
 - `duke-bootee` carries one `signatureTracks` entry against the schema's
   two to three. Rather than pad it with a record I could not verify, it
   stands at one and warns. His catalogue outside 'The Message' needs real
@@ -370,3 +373,20 @@ fixing them inline.)
   Jammy and Wayne Smith's 'Under Mi Sleng Teng', the Roland TR-707 and
   TR-606, and the LinnDrum. Each needs an artist before it can connect,
   so they belong with the batches that add those artists.
+  **Partly closed:** the MPC60 arrived with the hip-hop production
+  batch, along with the Oberheim DMX and the MPC3000 (A119). The MT-40,
+  TR-707, TR-606 and LinnDrum are still waiting on artists.
+- The hip-hop production batch left out artists it should have had
+  (A118), to keep the batch small enough to check line by line: Public
+  Enemy and the Bomb Squad, whose dense collage is the clearest casualty
+  of the 1991 ruling, but for whom no sourced edge to a node already on
+  the map turned up;
+  De La Soul and Prince Paul, which would give `tommy-boy` its first edge
+  and bring in the Turtles sampling suit; Mantronix; Big Daddy Kane and
+  the rest of the Juice Crew; and the whole West Coast (N.W.A, Dr. Dre,
+  G-funk), which needs Parliament-Funkadelic on the map first. Def Jam
+  as a label node also waits: every causal claim about it found so far
+  is really Rubin's, and A69 keeps roster relationships out of edges.
+- The batch added two more null end years of the "could not find it"
+  kind that Q20 is about: `akai-mpc60` and `akai-mpc3000`. Both will read
+  as still on sale until Q20 is answered.
