@@ -13,5 +13,13 @@
     "age7": "CBS was a record label that started in America and came to Britain, and it released records by the Clash.",
     "age13": "CBS entered Britain in the mid-1960s by buying a small label and renaming it, and by 1977 it was big enough to sign the Clash, a deal that sat uneasily with punk's independent spirit.",
     "adult": "CBS UK's growth from an acquired independent into a major label mirrors the wider consolidation of the UK record industry across this period, and the Clash's major-label deal is one of punk's clearest tests of how much the movement's anti-corporate stance could survive contact with a band that wanted to reach a mass audience."
-  }
+  },
+  "songsAboutLabel": [
+    {
+      "artist": "the-clash",
+      "title": "Complete Control",
+      "year": 1977,
+      "note": "Written after CBS released the earlier single 'Remote Control' without the band's consent, and aimed squarely at the label and their own management for making decisions about the group's music behind their backs."
+    }
+  ]
 }

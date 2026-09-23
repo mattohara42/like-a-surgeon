@@ -73,21 +73,31 @@ export function connectionRow(edge, other, ctx) {
   );
 }
 
+// Shared by an artist's signature tracks and a label's songs-about-it list:
+// a title, an optional year, a line of prose, and a YouTube search link.
+function trackRow(title, year, note, ytQuery, reg, lead = null) {
+  return h(
+    'div',
+    { class: 'track' },
+    h(
+      'div',
+      { class: 't' },
+      lead,
+      `“${title}”`,
+      year ? h('span', { class: 'year' }, ` ${year}`) : null,
+    ),
+    para(note, 'w'),
+    youtubeLink(ytQuery, reg),
+  );
+}
+
 function artistSections(r, ctx) {
   const reg = ctx.register;
   return [
     r.signatureTracks?.length
       ? [
           heading('listenTo', reg),
-          r.signatureTracks.map((t) =>
-            h(
-              'div',
-              { class: 'track' },
-              h('div', { class: 't' }, `“${t.title}”`, t.year ? h('span', { class: 'year' }, ` ${t.year}`) : null),
-              para(t.whyThisOne, 'w'),
-              youtubeLink(`${r.name} ${t.title}`, reg),
-            ),
-          ),
+          r.signatureTracks.map((t) => trackRow(t.title, t.year, t.whyThisOne, `${r.name} ${t.title}`, reg)),
         ]
       : null,
     r.scenes?.length ? [heading('scenes', reg), chipRow(r.scenes.map((id) => nodeRef(id, null, ctx)))] : null,
@@ -138,6 +148,19 @@ function labelSections(r, ctx) {
   return [
     founders.length ? [heading('founders', reg), para(founders.join(', '))] : null,
     r.ownershipStory ? [heading('ownership', reg), para(r.ownershipStory)] : null,
+    r.songsAboutLabel?.length
+      ? [
+          heading('songsAboutLabel', reg),
+          r.songsAboutLabel.map((s) => {
+            const artistNode = ctx.nodesById.get(s.artist);
+            const artistName = artistNode ? artistNode.name : s.artist;
+            return trackRow(s.title, s.year, s.note, `${artistName} ${s.title}`, reg, [
+              nodeRef(s.artist, s.artist, ctx),
+              ' — ',
+            ]);
+          }),
+        ]
+      : null,
   ];
 }
 
