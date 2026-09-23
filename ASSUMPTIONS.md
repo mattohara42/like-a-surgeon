@@ -1318,3 +1318,28 @@ each disagreement.
   `documented` when a session finds the interview or document that
   shows it. The tier count is now 93 documented, 47 consensus and 1
   asserted.
+- **A172. Q20 applied: `endUnknown`.** Matt took the recommendation. Any
+  artist, machine, scene or label may carry `"endUnknown": true` beside
+  a null end year. Null alone still means "still going". With the flag,
+  the loader ends the span `CONFIG.layout.unknownEndFadeYears` (8) years
+  after the start, capped at the current year. The span is drawn with a
+  per-node user-space gradient fading to nothing (a bounding-box
+  gradient on a horizontal line has zero height and draws nothing), and
+  the panel prints "1978–?". The validator rejects the flag beside a
+  set end year, and rejects any value but `true`. Edges clamp to the
+  shortened span the same way they clamp to any ended node, so an edge
+  later than the fade anchors at its end. That's the behaviour the
+  sampled hubs with proxy end years already have.
+  Twelve records carry the flag. Nine are machines whose production end
+  no source settles: the MPC60, MPC3000, AMS DMX 15-80, Ensoniq Mirage,
+  Fairlight CMI, Korg MS-10, Maestro Fuzz-Tone, Mu-Tron Bi-Phase and TEAC
+  A-3340. Two are the "one-off" case Q20 named, the Elpico amp and
+  Tubby's MCI console. Both are product models whose production end is
+  unknown, so "–?" is true of them and "–now" was not. The twelfth is The
+  Honey Drippers, a 1970s band with no sourced end. Left as ongoing: the
+  Mellotron, SL-1200, melodica, dubplate and twelve-inch single (all
+  still made), every living artist and working band, and Rockers
+  International, which I can't show has closed. The MPC60 and MPC3000
+  texts now say the map shows their end as unknown. Sly and the Family
+  Stone's text no longer calls its 1983 end an approximation, which A159
+  had found to be sourced but not fixed in the prose.

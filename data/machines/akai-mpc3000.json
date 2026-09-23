@@ -7,6 +7,7 @@
   "maker": "Akai, designed by Roger Linn",
   "releasedYear": 1994,
   "discontinuedYear": null,
+  "endUnknown": true,
   "originalPurpose": "The successor to the MPC60 and the last Akai MPC Roger Linn designed: stereo sixteen-bit sampling, a resonant filter, and the same pad-and-sequencer workflow.",
   "whatActuallyHappened": "In Detroit, J Dilla made it the instrument of a new sense of time. Instead of letting the machine snap each hit onto the grid, he left the timing as he played it, with the kicks and snares landing slightly early or late. His own unit, a limited edition from 2000, is now in the collection of the Smithsonian's National Museum of African American History and Culture.",
   "priceStory": "No launch price is sourced here. It sold as a professional studio tool, like the MPC60 before it.",
@@ -14,6 +15,6 @@
   "blurb": {
     "age7": "A sampler with pads, like the MPC60 but newer. J Dilla used one, and it is now in a museum in Washington.",
     "age13": "The MPC3000 came out in 1994. Like the MPC60 it had sixteen pads, but it recorded sound more clearly and had a filter that could make sounds darker or brighter. Machines like this have a setting that fixes your timing, moving every drum hit exactly onto the beat. J Dilla usually turned it off. His drums land a little early or a little late, and the beat seems to lean and stumble while still grooving. His own MPC3000 is now kept by the Smithsonian.",
-    "adult": "The MPC3000 matters here less for its specifications than as the instrument on which J Dilla worked out an alternative to quantised time, the default the sequencer era had made invisible. Those around him describe him working largely without quantisation, and the effect spread from his productions into live drumming and neo-soul. Neither the launch price nor the end of production is sourced here, and the null end year is a gap (see Q20)."
+    "adult": "The MPC3000 matters here less for its specifications than as the instrument on which J Dilla worked out an alternative to quantised time, the default the sequencer era had made invisible. Those around him describe him working largely without quantisation, and the effect spread from his productions into live drumming and neo-soul. Neither the launch price nor the end of production is sourced here, so the map shows its end as unknown."
   }
 }

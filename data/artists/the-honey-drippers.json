@@ -6,6 +6,7 @@
   "lineage": "funk",
   "activeFrom": 1973,
   "activeTo": null,
+  "endUnknown": true,
   "originCity": "New York",
   "originCountry": "USA",
   "scenes": [],

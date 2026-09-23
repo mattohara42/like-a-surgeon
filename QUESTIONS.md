@@ -4,7 +4,11 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
-- **Q20. A null end year means three different things.** On machines,
+None right now.
+
+## Resolved
+
+- **Q20. A null end year means three different things.** Resolved: **the recommendation, (a).** See **A172**. On machines,
   `discontinuedYear: null` currently means "still made" (the Mellotron),
   "one-off, no production run" (Tubby's console, the slashed Elpico) and
   "I could not find it" (six machines in the second machines batch, see
@@ -25,8 +29,6 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   Fairlight, MS-10, Mirage, Mu-Tron and Fuzz-Tone stay unknown after
   checking the English, German and French Wikipedias, so (c) no longer
   looks like it will resolve itself.
-
-## Resolved
 
 - **Q22. Should `documented` edges that cite only "histories" drop to
   `consensus`?** Resolved: **the recommendation, (a).** Raised by the source verification pass. 101 of 141

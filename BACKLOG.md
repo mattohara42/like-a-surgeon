@@ -414,6 +414,8 @@ fixing them inline.)
 - The batch added two more null end years of the "could not find it"
   kind that Q20 is about: `akai-mpc60` and `akai-mpc3000`. Both will read
   as still on sale until Q20 is answered.
+  **Closed** by Q20 (A172): both now carry `endUnknown` and draw as
+  fading spans ending in "?".
 - Sampled-artist hubs the Q21 batch 1 records already point at, ready
   for batch 2: Sly and the Family Stone ('Life', in 'Insane in the
   Brain'), The Charmels ('C.R.E.A.M.'), Ahmad Jamal ('The World Is
