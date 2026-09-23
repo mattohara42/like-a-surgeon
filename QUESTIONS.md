@@ -22,6 +22,24 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Resolved
 
+- **Q21. Going deep on hip-hop: producers, sampling lore, and order.**
+  Raised by Matt after PR #24, asking for The Roots, The Goats, Souls of
+  Mischief, Lords of the Underground, Cypress Hill, Beastie Boys, Wu-Tang,
+  MF DOOM and more, producers as a dimension (Premier, Large Professor,
+  DJ Muggs), the records sampled over and over, and classic rock
+  (Zeppelin, Hendrix, Beatles, Stones). Resolved in three parts:
+  (a) **Producers are data first.** They stay artist nodes, with a
+  `production` edge to each act they shaped. No schema or interface
+  change now. A "follow the producer" view waits in `BACKLOG.md` for the
+  M3 gate.
+  (b) **The sampled artist is the hub.** A heavily sampled record lives
+  as its artist's node (James Brown, The Winstons, Led Zeppelin), and
+  each use is a `sample` edge naming the record in its track pair. No
+  record node type for now.
+  (c) **Three batches, one PR each:** the 90s groups and their producers,
+  then the most-sampled breaks and their artists, then classic rock,
+  which then gets its sample edges into the hip-hop from the first batch.
+
 - **Q19. Scenes are hard to click, labels get lost: re-lane the map by
   scene or label?** Raised by Matt after trying the preview. Resolved:
   **yes, as a separate "Arrange by" control** (Lineage, Scene, Label) rather

@@ -911,3 +911,49 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   and the blurb says he was born in Harlem. This follows neither side of
   the unsettled `originCity` convention in `BACKLOG.md` on purpose: it
   records both facts in the text until the convention is decided.
+
+
+## Added during the 90s hip-hop and producers batch (Q21, batch 1 of 3)
+
+- **A126. Roster.** All eight groups Matt named (The Roots, The Goats,
+  Souls of Mischief, Lords of the Underground, Cypress Hill, Beastie
+  Boys, Wu-Tang Clan, MF DOOM), plus the producers who connect them:
+  Large Professor, DJ Muggs, RZA and Madlib. Nas and A Tribe Called
+  Quest came in because they are where those producers meet (Illmatic
+  gathers Large Professor, Premier and Pete Rock, and Tribe is how
+  Large Professor's teaching and J Dilla's career connect). Billy Cobham
+  is the first sampled-artist hub (Q21b), since he is the only honest
+  anchor for Souls of Mischief.
+- **A127. Producers get their own node only when they have more than one
+  edge's worth of reach.** Large Professor, Muggs, RZA and Madlib do.
+  Q-Tip, K-Def, A-Plus, the Dust Brothers, Joe Nicolo and Questlove
+  stay as plain names in `keyProducers` for now, which is why the
+  validator warns about them. Any of them becomes a node the moment a
+  second act needs an edge from them.
+- **A128. The Goats' anchor is their label.** No source consulted claims
+  an influence edge to or from The Goats and anything on the map. The
+  Roots comparison is about who did live-band rap first, not who learned
+  from whom, so it stays in prose. The edge is Ruffhouse to The Goats,
+  because the label's co-founder co-produced the album in the studio the
+  label grew out of. That fits A69.
+- **A129. End years.** The Goats' `activeTo` is 1994, the year of their
+  last album. That stands in for a break-up date I couldn't source. The
+  EPS-16 Plus ends in 1992 when the ASR-10 replaced it, which is a proxy
+  like the Simmons in A111. Ruffhouse's closing year is null because it
+  isn't sourced (Q20). Billy Cobham's `activeFrom` of 1968 is his late-60s
+  start as a professional drummer, and is approximate.
+- **A130. Two sample origins are disputed, and both disputes are kept.**
+  The 'Insane in the Brain' squeal is widely said to be a horse, while
+  Muggs says it's a pitched blues guitar. The 'Accordion' loop is not an
+  accordion: Daedelus played it on an electric chord organ. Both go in as
+  lore, with each side stated.
+- **A131. Tier ratio.** Eleven of fifteen edges are `documented`, all on
+  album credits or sample credits. The four `consensus` edges are the
+  teaching and influence claims (Large Professor to Tribe, Dilla to The
+  Roots, Dilla to Madlib) and RZA's EPS-16 Plus, where the only sources
+  I found retell someone else's account.
+- **A132. Conduct and deaths are stated as fact.** The Beastie Boys'
+  later repudiation of Licensed to Ill's sexism, Subroc's death and
+  Elektra shelving KMD's album, Phife Dawg's and Ol' Dirty Bastard's
+  deaths, and DOOM's death with its delayed announcement are each given
+  once, plainly, in the registers where they belong.
