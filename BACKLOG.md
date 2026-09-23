@@ -452,13 +452,14 @@ fixing them inline.)
   under the reading-level toggle, so "ADULT" and "ROCK" overlap. Lane
   titles give way to node names (A106) but not to the fixed controls.
 
-- `tools/validate.js` does not check that a track pair's `earlier.year`
-  is no later than its `later.year`. Two edges shipped with the order
-  inverted (e-baker-bambaataa, e-dilla-roots, see A158 and A169), and
-  both were found only by the source verification pass. It's a one-line
-  warning in the validator. It should probably warn rather than error,
-  since a pair can legitimately date the earlier side by circulation
-  rather than release, as e-dilla-roots now does.
+- An inverted track pair (the earlier record dated after the later one)
+  is flagged by `tools/report.js` but not by `tools/validate.js`, so it
+  only surfaces at gate review. e-dilla-roots sat in the report flagged
+  that way until the source verification pass fixed it (A169).
+  e-baker-bambaataa was worse: a wrong year (1982 for a 1984 record) made
+  the pair look fine to both tools (A158). A validator warning would
+  catch the first kind at authoring time. Nothing but source checking
+  catches the second.
 - The source verification pass (A155 onward) was run from throwaway
   scripts: a Wikidata diff of every node, a MusicBrainz year check of
   every track, and Discogs credit checks. They could live in `tools/`

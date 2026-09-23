@@ -95,15 +95,7 @@ Flags: consensus tier; evidence says the connection is not documented; evidence 
 
 Evidence: Music critics have repeatedly and specifically compared Jarvis Cocker's wit and observational persona to Ray Davies (one widely repeated framing casts Pulp as "the Kinks" to Blur and Oasis's Beatles and Stones), and Cocker has cited 1960s British Invasion acts among his formative listening, though without the same first-person specificity as the Albarn/Kinks edge.
 
-### 4. `e-dilla-roots` (score 75)
-
-J Dilla to The Roots, direct, consensus, 1996
-
-Flags: consensus tier; track pair runs backwards (2000 after 1999).
-
-Evidence: Questlove has described in interviews and lectures being floored the first time he heard a Jay Dee beat, and starting to play a loose, deliberately off-grid feel modelled on Dilla's programming, which accounts date to a 1996 House of Blues performance. He was a vocal champion of Dilla within the Soulquarians circle. First-person, but gathered here through secondary retellings, so consensus.
-
-### 5. `e-ams-joydivision` (score 65)
+### 4. `e-ams-joydivision` (score 65)
 
 AMS DMX 15-80 to Joy Division, technological, consensus, 1979
 
@@ -111,7 +103,7 @@ Flags: consensus tier; later track names no specific record ("Unknown Pleasures"
 
 Evidence: Band members, including drummer Stephen Morris, have described Martin Hannett's insistence on recording each drum in isolation so that he could treat each one separately. Accounts of the 'Unknown Pleasures' sessions name the AMS DMX 15-80 as his favourite device and say he owned several. No session log ties a specific setting to a specific sound, which is why this edge sits at consensus.
 
-### 6. `e-atkins-ur` (score 65)
+### 5. `e-atkins-ur` (score 65)
 
 Juan Atkins to Underground Resistance, reaction-against, consensus, 1989
 
@@ -119,7 +111,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Underground Resistance's anti-major-label, anti-commercial stance is widely described by critics and by Mike Banks himself as a reaction to the increasing commercialization of Detroit techno's first wave, without a specific documented statement naming Atkins individually.
 
-### 7. `e-dmx-rundmc` (score 65)
+### 6. `e-dmx-rundmc` (score 65)
 
 Oberheim DMX to Run-D.M.C., technological, consensus, 1983
 
@@ -127,7 +119,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Secondary accounts of Larry Smith's work (a Cuepoint profile of Smith, and standard histories of the single) agree that 'It's Like That' and 'Sucker M.C.'s' were programmed on an Oberheim DMX, and that Smith rebuilt the drum pattern from Orange Krush's 'Action', played by drummer Trevor Gale, reusing it on several later Run-D.M.C. tracks. No first-person account from Smith was consulted, so this is held at consensus.
 
-### 8. `e-flash-bambaataa` (score 65)
+### 7. `e-flash-bambaataa` (score 65)
 
 Grandmaster Flash to Afrika Bambaataa, scene, consensus, 1976
 
@@ -135,7 +127,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Flash and Bambaataa are consistently described together in Bronx hip-hop oral histories (e.g. Jeff Chang's 'Can't Stop Won't Stop', Fricke and Ahearn's 'Yes Yes Y'all') as the two most prominent DJ/crew leaders of the mid-1970s Bronx park-jam scene, mutually aware and sometimes rival, without a single documented direct collaboration.
 
-### 9. `e-knuckles-atkins` (score 65)
+### 8. `e-knuckles-atkins` (score 65)
 
 Frankie Knuckles to Juan Atkins, scene, consensus, 1984
 
@@ -143,7 +135,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Chicago house and Detroit techno are widely described in music histories as parallel, mutually aware Midwest scenes that traded records and radio play through the mid-1980s, without a single documented direct meeting between Knuckles and Atkins anchoring the claim.
 
-### 10. `e-knuckles-jefferson` (score 65)
+### 9. `e-knuckles-jefferson` (score 65)
 
 Frankie Knuckles to Marshall Jefferson, scene, consensus, 1983
 
@@ -151,7 +143,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Knuckles' Warehouse residency (from 1977) predates and is widely credited with establishing the Chicago club culture Jefferson entered in the early 1980s, though no specific documented meeting between the two anchors this individual claim.
 
-### 11. `e-marleymarl-ericbrakim` (score 65)
+### 10. `e-marleymarl-ericbrakim` (score 65)
 
 Marley Marl to Eric B. & Rakim, production, consensus, 1986
 
@@ -159,7 +151,7 @@ Flags: consensus tier; evidence calls the claim disputed.
 
 Evidence: Disputed. Both parties agree 'Eric B. Is President' was made at Marley Marl's home studio in Queensbridge. Marl has said he produced it and 'My Melody', and has demonstrated on video how he built the first beat. Eric B. has said he brought the records to Marl and paid him as an engineer, not a producer. The album Paid in Full credits production to Eric B. & Rakim, with Marl credited only for a remix of 'My Melody'. The edge claims only that Marl's room, equipment and hands shaped the record, which neither account denies. Who authored the beat is left open.
 
-### 12. `e-perry-sherwood` (score 65)
+### 11. `e-perry-sherwood` (score 65)
 
 Lee "Scratch" Perry to Adrian Sherwood, direct, consensus, 1979
 
@@ -167,7 +159,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Sherwood has described Jamaican dub production, including Perry's Black Ark work, as formative in numerous interviews across his career (Red Bull Music Academy, AllMusic, and others); no single documented meeting or collaboration between the two anchors the claim, so it sits at consensus rather than documented.
 
-### 13. `e-peterock-dilla` (score 65)
+### 12. `e-peterock-dilla` (score 65)
 
 Pete Rock to J Dilla, direct, consensus, 2000
 
@@ -175,7 +167,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Dan Charnas's biography Dilla Time (2022), based on interviews with Dilla's family and collaborators, describes Pete Rock as the young producer's idol, and describes Dilla calling Pete Rock for inspiration when he was stuck. Pete Rock's influence on Dilla's early work is widely stated in retrospectives. No first-person statement from Dilla was consulted, so this is held at consensus.
 
-### 14. `e-pil-gangoffour` (score 65)
+### 13. `e-pil-gangoffour` (score 65)
 
 Public Image Ltd to Gang of Four, scene, consensus, 1979
 
@@ -183,7 +175,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: PiL and Gang of Four are both central to the 1978-79 UK post-punk moment's move away from punk's simple format, PiL toward dub space and Gang of Four toward funk-and-dub-influenced rhythm, without a documented instance of direct contact between the two acts.
 
-### 15. `e-pistols-clash` (score 65)
+### 14. `e-pistols-clash` (score 65)
 
 Sex Pistols to The Clash, scene, consensus, 1976
 
@@ -191,7 +183,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: The Sex Pistols and the Clash are the two foundational bands of the 1976-77 London punk scene, sharing bills (including the 100 Club Punk Festival, September 1976) and rival managers (Malcolm McLaren and Bernie Rhodes), though no single documented act of direct musical influence between the two anchors the claim beyond shared scene.
 
-### 16. `e-stones-kinks` (score 65)
+### 15. `e-stones-kinks` (score 65)
 
 The Rolling Stones to The Kinks, scene, consensus, 1964
 
@@ -199,7 +191,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: The Rolling Stones and the Kinks are widely treated in British music history as the two key contemporaneous British R&B chart rivals of the early-to-mid 1960s, both signed within about a year of each other and drawing on the same American blues and R&B catalogue, without a documented instance of one directly shaping the other's specific records.
 
-### 17. `e-tubby-sly-robbie` (score 65)
+### 16. `e-tubby-sly-robbie` (score 65)
 
 King Tubby to Sly and Robbie, scene, consensus, 1976
 
@@ -207,7 +199,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Sly and Robbie came up in the same 1970s Kingston studio scene as King Tubby, working the same rhythm-as-raw-material logic dub established, though based mainly at Channel One rather than Tubby's own studio; no single documented session ties the two directly.
 
-### 18. `e-mirage-may` (score 60)
+### 17. `e-mirage-may` (score 60)
 
 Ensoniq Mirage to Derrick May, technological, consensus, 1987
 
@@ -215,7 +207,7 @@ Flags: consensus tier; earlier track has no year.
 
 Evidence: The origin of 'Strings of Life' in a piano piece played at May's house by his friend Michael James, which May later sped up and cut into loops, is documented in May's own accounts. The specific sampler is named as the Ensoniq Mirage in gear histories of early Detroit techno rather than in a first-person statement, so this edge sits at consensus rather than documented.
 
-### 19. `e-12inch-knuckles` (score 50)
+### 18. `e-12inch-knuckles` (score 50)
 
 The 12-inch single to Frankie Knuckles, technological, consensus, 1977
 
@@ -223,13 +215,21 @@ Flags: consensus tier.
 
 Evidence: The 12-inch single's arrival as a commercial format in 1976 and its rapid adoption by New York and Chicago club DJs is thoroughly documented. The narrower claim here, that the format shaped what Knuckles could do across a night at the Warehouse, is an inference from how the format and the room worked rather than a statement he made, so it is held at consensus.
 
-### 20. `e-bongoband-herc` (score 50)
+### 19. `e-bongoband-herc` (score 50)
 
 Incredible Bongo Band to DJ Kool Herc, rediscovery, consensus, 1974
 
 Flags: consensus tier.
 
 Evidence: Herc and Grandmaster Flash are widely documented as using 'Apache' as a breakbeat in their sets from the mid-1970s. A 2006 New York Times article by Will Hermes reported Herc describing it as hip-hop's national anthem. Dating the first use to a specific year rests on retellings, so consensus.
+
+### 20. `e-can-pil` (score 50)
+
+Can to Public Image Ltd, direct, consensus, 1979
+
+Flags: consensus tier.
+
+Evidence: John Lydon played Can on his guest programme on Capital Radio on 16 July 1977, alongside dub and other records, and has named them as a favourite in interviews. Accounts of Metal Box routinely give Can, with dub, as a model for the band's long, bass-led pieces. Jah Wobble has also cited Czukay and Liebezeit.
 
 ## 20 sampled `whatToListenFor` fields
 
