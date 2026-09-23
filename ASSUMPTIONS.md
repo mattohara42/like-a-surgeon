@@ -1426,3 +1426,32 @@ each disagreement.
   founder or roster relationships A69 excludes: Transmat, KMS, the Kling
   Klang label, Rockers International and Brunswick. BACKLOG lists what
   each is waiting for.
+- **A178. New optional label field: `songsAboutLabel`.** Matt asked for a
+  side note on artists who write songs about record labels themselves,
+  scoped (per his choice) to a per-label field rather than a prose aside
+  or a curated thread: `[ { artist, title, year, note } ]`, rendered as
+  a new panel section following the same track-row pattern as an
+  artist's `signatureTracks`. `artist` follows the `keyProducers`
+  convention (A-many): an id when the artist is on the map, so the panel
+  links to their page, plain text otherwise. `note` is prose describing
+  the connection, never a lyric quotation, both because CLAUDE.md's
+  accuracy rule 1 bars invented quotations and because lyrics are
+  themselves copyrighted, which the project's stance on album art and
+  audio already treats as something to route around rather than ship.
+  Seeded one example on `cbs-uk`: the Clash's 'Complete Control', which
+  A176 already establishes as `documented` evidence for `e-cbsuk-clash`
+  ("Complete Control" is its own evidence, per that entry), so this
+  reuses an already-vetted fact rather than introducing a new claim.
+  Population of this field across the rest of the label roster is left
+  to Track D rather than invented here, in line with the accuracy rules;
+  the request to Matt for a scope check on this and album art is closed
+  by his answer, so it isn't repeated in QUESTIONS.md.
+- **A179. No mechanism for real album art, and none is planned.** Matt
+  asked whether the project could show album covers without hitting API
+  rate limits. It can't, and not for a rate-limit reason: CLAUDE.md's
+  anti-goals rule out album art outright ("No album art... Not one"),
+  and the no-runtime-network-calls constraint rules out fetching it at
+  all, rate limits aside. Both are hard constraints, not implementation
+  gaps, so nothing was built. Flagged to Matt; his answer was to drop it
+  and keep the anti-goal as written, rather than pursue a synthesized/
+  generated alternative.

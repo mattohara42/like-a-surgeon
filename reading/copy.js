@@ -81,6 +81,7 @@ export const COPY = {
     whatItCost: { age13: 'What it cost', adult: 'Price history' },
     founders: { age13: 'Started by', adult: 'Founders' },
     ownership: { age13: 'Who owned it', adult: 'Ownership' },
+    songsAboutLabel: { age13: 'Songs about the label', adult: 'Songs about the label' },
     geopolitics: { age13: 'The conditions', adult: 'The conditions' },
     whatWasNew: { age13: 'What was new', adult: 'What was new' },
     production: { age13: 'How it was made', adult: 'Production' },

@@ -207,6 +207,18 @@ fixing them inline.)
   convention for founders, like the one `keyProducers` uses, would fix it
   properly.
 
+- `keyProducers` already uses an id convention, but existing entries were
+  not all updated when the producer later got their own artist record:
+  `the-clash.json` lists `keyProducers: ["Lee \"Scratch\" Perry", ...]`
+  as a plain name, even though `lee-perry.json` exists and would resolve
+  and link if the entry read `"lee-perry"` instead. `tools/validate.js`
+  correctly warns on this ("may be a plain name") rather than erroring,
+  since it can't tell a genuinely off-map name from a stale one, but a
+  pass that diffed `keyProducers` values against `records.artists` ids
+  by rough name match, and flagged the near-misses for a human to confirm,
+  would catch cases like this one. Not fixed here since it is pre-existing
+  data outside this session's task.
+
 - The SessionStart hook cannot protect a session whose branch was created
   from a commit older than the hook itself. This session's branch pointed
   at PR #2's merge, which predates `.claude/`, so the hook never ran and

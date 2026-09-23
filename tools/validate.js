@@ -231,6 +231,18 @@ for (const [id, artist] of records.artists) {
   }
 }
 
+// label references: songsAboutLabel[].artist follows the same convention as
+// artist.keyProducers above (an id when the artist is on the map, a plain
+// name otherwise), so an unresolved value is a warning, not an error.
+for (const [id, label] of records.labels) {
+  const where = `labels/${id}.json`;
+  for (const song of label.songsAboutLabel || []) {
+    if (!records.artists.has(song.artist)) {
+      warn(`${where}: songsAboutLabel entry "${song.title}" artist "${song.artist}" does not resolve to an artist id (may be a plain name)`);
+    }
+  }
+}
+
 // scene references
 for (const [id, scene] of records.scenes) {
   const where = `scenes/${id}.json`;

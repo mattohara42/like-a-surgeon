@@ -114,6 +114,16 @@ lineage       "rock" | "electronic" | "hiphop" | "dub" | "funk" | "other"
 foundedYear, closedYear, city, founders
 ownershipStory  who owned it, who it was sold to, what happened to the artists
 hook, blurb
+songsAboutLabel   optional, [ { artist, title, year, note } ]
+                  Songs whose actual subject is the label itself (a contract
+                  dispute, an unauthorised release, the label's owners), not
+                  just records the label put out. `artist` is that artist's
+                  id when they are already on the map (same convention as
+                  artist.keyProducers), so the panel can link to their page;
+                  a plain name otherwise, shown as text. `note` is prose
+                  describing the connection, not a lyric quotation
+                  (CLAUDE.md accuracy rule 1 bars invented quotations, and
+                  song lyrics are copyrighted besides).
 ```
 
 ## edge
