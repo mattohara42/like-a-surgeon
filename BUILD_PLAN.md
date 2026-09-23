@@ -128,10 +128,12 @@ Progress: batches so far have covered dub, electro and Detroit, the UK
 rock spine, the founding Bronx generation, 80s hip-hop production, and
 all three Q21 batches (90s groups and producers, the most-sampled breaks,
 classic rock), batch 3 (outré electronic) in a first pass, a funk/dub
-batch (A180), and an orphan-closing batch that connected Transmat, KMS
-and Rockers International to the main graph (A184). Batch 5 is half
-done. Machines reached 25 in PR #23, and labels are still short.
-`npm run report` has the current distance on every target.
+batch (A180), an orphan-closing batch that connected Transmat, KMS
+and Rockers International to the main graph (A184), and a bridge-edge
+pass that merged three more scene/label islands without adding new
+nodes (A189). Batch 5 is half done. Machines reached 25 in PR #23, and
+labels are still short. `npm run report` has the current distance on
+every target.
 
 ## Definition of done for any milestone
 

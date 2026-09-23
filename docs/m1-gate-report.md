@@ -12,9 +12,9 @@ Regenerate with `npm run report`. This report describes the dataset only;
 | machines | 30 | 25 | met |
 | scenes | 10 | 20 | 50% |
 | labels | 21 | 30 | 70% |
-| edges | 168 | 350 | 48% |
+| edges | 171 | 350 | 49% |
 | threads | 2 | 5 | 40% |
-| crossLineageEdges | 65 | 60 | met |
+| crossLineageEdges | 66 | 60 | met |
 | edgesWithDemo | 4 | 30 | 13% |
 
 ## Counts by lineage
@@ -46,11 +46,11 @@ Artists alone:
 | edge type | count |
 |---|---:|
 | technological | 43 |
-| direct | 40 |
+| direct | 42 |
 | production | 24 |
 | label | 20 |
 | sample | 20 |
-| scene | 17 |
+| scene | 18 |
 | reaction-against | 2 |
 | cover | 1 |
 | rediscovery | 1 |
@@ -59,8 +59,8 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 112 |
-| consensus | 55 |
+| documented | 114 |
+| consensus | 56 |
 | asserted | 1 |
 
 ## The 20 edges to read hardest
@@ -191,7 +191,15 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: The Sex Pistols and the Clash are the two foundational bands of the 1976-77 London punk scene, sharing bills (including the 100 Club Punk Festival, September 1976) and rival managers (Malcolm McLaren and Bernie Rhodes), though no single documented act of direct musical influence between the two anchors the claim beyond shared scene.
 
-### 16. `e-stones-kinks` (score 65)
+### 16. `e-publicenemy-rza` (score 65)
+
+Public Enemy to RZA, direct, consensus, 1993
+
+Flags: consensus tier; evidence says the connection is not documented.
+
+Evidence: Critics and hip-hop production histories consistently describe RZA's dense, lo-fi Wu-Tang sound as built on the Bomb Squad's cut-up sampling technique, adapted toward a grittier, more minimalist end using an Ensoniq sampler rather than the Bomb Squad's own dozens-of-samples-per-track density. Described this way in retrospectives (Mixdown Magazine, general hip-hop production histories); no specific first-person RZA statement naming the Bomb Squad was consulted, so this sits at consensus.
+
+### 17. `e-stones-kinks` (score 65)
 
 The Rolling Stones to The Kinks, scene, consensus, 1964
 
@@ -199,7 +207,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: The Rolling Stones and the Kinks are widely treated in British music history as the two key contemporaneous British R&B chart rivals of the early-to-mid 1960s, both signed within about a year of each other and drawing on the same American blues and R&B catalogue, without a documented instance of one directly shaping the other's specific records.
 
-### 17. `e-tubby-sly-robbie` (score 65)
+### 18. `e-tubby-sly-robbie` (score 65)
 
 King Tubby to Sly and Robbie, scene, consensus, 1976
 
@@ -207,7 +215,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Sly and Robbie came up in the same 1970s Kingston studio scene as King Tubby, working the same rhythm-as-raw-material logic dub established, though based mainly at Channel One rather than Tubby's own studio; no single documented session ties the two directly.
 
-### 18. `e-mirage-may` (score 60)
+### 19. `e-mirage-may` (score 60)
 
 Ensoniq Mirage to Derrick May, technological, consensus, 1987
 
@@ -215,7 +223,7 @@ Flags: consensus tier; earlier track has no year.
 
 Evidence: The origin of 'Strings of Life' in a piano piece played at May's house by his friend Michael James, which May later sped up and cut into loops, is documented in May's own accounts. The specific sampler is named as the Ensoniq Mirage in gear histories of early Detroit techno rather than in a first-person statement, so this edge sits at consensus rather than documented.
 
-### 19. `e-12inch-knuckles` (score 50)
+### 20. `e-12inch-knuckles` (score 50)
 
 The 12-inch single to Frankie Knuckles, technological, consensus, 1977
 
@@ -223,136 +231,128 @@ Flags: consensus tier.
 
 Evidence: The 12-inch single's arrival as a commercial format in 1976 and its rapid adoption by New York and Chicago club DJs is thoroughly documented. The narrower claim here, that the format shaped what Knuckles could do across a night at the Warehouse, is an inference from how the format and the room worked rather than a statement he made, so it is held at consensus.
 
-### 20. `e-bongoband-herc` (score 50)
-
-Incredible Bongo Band to DJ Kool Herc, rediscovery, consensus, 1974
-
-Flags: consensus tier.
-
-Evidence: Herc and Grandmaster Flash are widely documented as using 'Apache' as a breakbeat in their sets from the mid-1970s. A 2006 New York Times article by Will Hermes reported Herc describing it as hip-hop's national anthem. Dating the first use to a specific year rests on retellings, so consensus.
-
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 168 edges that carry one.
+Drawn with seed 1 from the 171 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-beatles-rollingstones`
-
-The Beatles, "I Wanna Be Your Man" (1963) to The Rolling Stones, "I Wanna Be Your Man" (1963)
-
-The same song by two bands in the same year. The Beatles' version, sung by Ringo, bounces along as cheerful beat music. The Stones' is rougher and faster, with Brian Jones's slide guitar wailing over it. Listen for how the Stones turn a Beatles pop song into something closer to the American R&B they were copying.
-
-### 2. `e-factory-joydivision`
-
-Joy Division, "An Ideal for Living (EP)" (1978) to Joy Division, "Unknown Pleasures (album)" (1979)
-
-The 1978 EP is the band on their own, paying for it themselves: fast, plain and close to the punk gig that started them. A year later, with the label's money and the label's producer, the same four players sound like they are in a much larger, colder room. Listen to the drums and the space around them on Unknown Pleasures. The separation and the echoes come from Hannett's desk, not from the band, and that sound is the label's contribution.
-
-### 3. `e-radiophonic-derbyshire`
-
-BBC Radiophonic Workshop, "early radio sound work" (1958) to Delia Derbyshire, "Doctor Who theme" (1963)
-
-Start with the bassline: a plucked string, recorded, then copied and cut so that every note is the same length and attack. Over it, the melody slides between notes, made from oscillators with the pitch swept by hand. There's no keyboard anywhere. Each note was a separate piece of tape, and the swoop you hear is someone turning a dial while the tape ran. Listen for how clean and mechanical the bass sounds next to how wild the tune is.
-
-### 4. `e-ms10-atkins`
-
-Korg, "MS-10" (1978) to Cybotron, "Alleys of Your Mind" (1981)
-
-This is the record the years of learning led to, not a record made on the MS-10. Listen to how much of its character sits in the tone of each synthesized sound rather than in the tune. The notes themselves are simple. The interest is in how each one is shaped: bright or dull, clipped or held. That is the ear of someone who spent years alone with one synthesizer, turning knobs.
-
-### 5. `e-jamesbrown-bootsycollins`
-
-James Brown, "Sex Machine" (1970) to Bootsy's Rubber Band, "Bootzilla" (1978)
-
-On 'Sex Machine', Collins is eighteen and playing inside Brown's discipline: the bass holds the groove down and stays out of the way. Eight years later on his own record, the same bass instinct has become the whole show, elastic, cartoonish and grinning, with a wah pedal doing to the tone what the J.B.'s taught him to do to the rhythm.
-
-### 6. `e-808-marleymarl`
-
-Roland, "TR-808 snare, as synthesised" (1980) to Marley Marl, "The Bridge, produced for MC Shan" (1986)
-
-Compare two snares. The 808's is a short burst of noise with a tuned ring under it, always identical, sitting cleanly in its own space. A snare lifted off a record brings the room with it: the drummer's touch, the tape compression, a trace of whatever else was playing at that instant. Listen for that smear of extra information. It is the sound of a recording rather than the sound of a circuit.
-
-### 7. `e-kraftwerk-neu`
-
-Kraftwerk, "Ruckzuck" (1970) to Neu!, "Hallogallo" (1972)
-
-'Ruckzuck' is the early Kraftwerk: a flute riff, echoing, over drums that speed up and hit hard. There is already a hunger for forward motion in it. 'Hallogallo' keeps only that part. Dinger plays one straight, even beat for ten minutes and never fills or breaks it, while Rother's guitars stack into a shimmer on top. Listen for how the drums stop being decoration and become the road the music drives on.
-
-### 8. `e-tubby-pil`
-
-King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Public Image Ltd, "Careering" (1979)
-
-Both records put the bass where you would expect the voice and leave large holes elsewhere. In the Tubby track, instruments vanish and reappear. In the PiL track they never arrive in the first place. Same architecture, opposite method.
-
-### 9. `e-kingston-bronx`
-
-Kingston sound systems, "street dances and sound clashes" (1968) to DJ Kool Herc, "the back-to-school jam at 1520 Sedgwick Avenue" (1973)
-
-Listen for what crossed and what did not. The shape is the same in both places: a crowd outdoors, one person choosing records, another one talking over them, a system loud enough to be the event itself. The records are not the same at all. Put on what a Kingston sound was playing in 1970 and what Herc was playing in 1973 and they share almost nothing, because Bronx crowds would not take reggae and he switched to funk and soul. The method travelled. The music did not.
-
-### 10. `e-derrickmay-carlcraig`
+### 1. `e-derrickmay-carlcraig`
 
 Derrick May (Rhythim Is Rhythim), "Nude Photo" (1987) to Psyche (Carl Craig), "Elements" (1989)
 
 Both records share Transmat's repeating-figure discipline, but 'Elements' pulls the tempo down and lets the chords hang longer, the mark of an assistant absorbing his mentor's vocabulary and then bending it somewhere else.
 
-### 11. `e-hardy-heard`
+### 2. `e-hardy-jefferson`
+
+Ron Hardy, "Music Box DJ sets" (1983) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
+
+Jefferson's piano hook is the part everyone remembers, but the mix, the sequencing and drum programming Hardy shaped, is what makes it a dancefloor record rather than just a song.
+
+### 3. `e-ms10-atkins`
+
+Korg, "MS-10" (1978) to Cybotron, "Alleys of Your Mind" (1981)
+
+This is the record the years of learning led to, not a record made on the MS-10. Listen to how much of its character sits in the tone of each synthesized sound rather than in the tune. The notes themselves are simple. The interest is in how each one is shaped: bright or dull, clipped or held. That is the ear of someone who spent years alone with one synthesizer, turning knobs.
+
+### 4. `e-kinks-pulp`
+
+The Kinks, "Waterloo Sunset" (1967) to Pulp, "Common People" (1995)
+
+Same technique: pick one character in one specific situation (a student "slumming it," two people on a bridge) and let the details, not a chorus making a general statement, carry the song.
+
+### 5. `e-kingston-bronx`
+
+Kingston sound systems, "street dances and sound clashes" (1968) to DJ Kool Herc, "the back-to-school jam at 1520 Sedgwick Avenue" (1973)
+
+Listen for what crossed and what did not. The shape is the same in both places: a crowd outdoors, one person choosing records, another one talking over them, a system loud enough to be the event itself. The records are not the same at all. Put on what a Kingston sound was playing in 1970 and what Herc was playing in 1973 and they share almost nothing, because Bronx crowds would not take reggae and he switched to funk and soul. The method travelled. The music did not.
+
+### 6. `e-jamal-nas`
+
+Ahmad Jamal, "I Love Music" (1970) to Nas, "The World Is Yours" (1994)
+
+Listen to Jamal's piano: unhurried, with room between the phrases. Pete Rock picks a few notes of it and loops them, so a phrase that drifts in the original circles steadily in the new track. Under Nas's ambition the loop sounds wistful, and Jamal's restraint becomes the song's emotional weight.
+
+### 7. `e-hardy-heard`
 
 Ron Hardy, "Music Box DJ sets" (1984) to Mr. Fingers (Larry Heard), "Can You Feel It" (1986)
 
 Heard's record is slower and softer than most of what Hardy played, which is itself part of the story: the Music Box could break a record that didn't sound like everything else in the room.
 
-### 12. `e-rockersinternational-hughmundell`
+### 8. `e-rubin-beastieboys`
+
+LL Cool J, "I Can't Live Without My Radio" (1985) to Beastie Boys, "No Sleep till Brooklyn" (1986)
+
+Same producer, a year apart. On LL's record Rubin cut everything down to a booming drum machine and a voice. On 'No Sleep till Brooklyn' he keeps the booming drums and adds the other thing he loved: heavy metal guitar, riffs he played himself and a solo from Slayer's Kerry King. Listen for the moment the solo tears through. Rap and metal on one track, from a producer making Slayer's album in the same period.
+
+### 9. `e-moog-carlos`
+
+R. A. Moog Co., "Moog modular synthesizer" (1965) to Wendy Carlos, "Brandenburg Concerto No. 3 (Switched-On Bach)" (1968)
+
+Listen for the attack of each note. A harpsichord or a violin has its own way of starting a sound. Here each line has a different electronic tone that Carlos set up by hand, then recorded one part at a time, because the machine played only one note at once. The parts are perfectly in time and slightly too clean. That buzzing, reedy brightness was the first synthesizer sound most listeners in 1968 had ever heard.
+
+### 10. `e-coldchillin-bizmarkie`
+
+Gilbert O'Sullivan, "Alone Again (Naturally)" (1972) to Biz Markie, "Alone Again" (1991)
+
+Listen to O'Sullivan's piano, then to Biz's track, which loops a few bars of it, about ten seconds, under his rapping. Notice how little was taken and how instantly you recognise it anyway. That recognisability is the legal problem in one sound. A sample brings its author along with it, and after this case the author had to be asked, and usually paid.
+
+### 11. `e-sly-cypresshill`
+
+Sly and the Family Stone, "Life" (1968) to Cypress Hill, "Insane in the Brain" (1993)
+
+Listen to the start of 'Life': a jaunty, bouncing keyboard figure before the band comes in. In 'Insane in the Brain' Muggs keeps the figure but sets it in murk, loops it, and sets it under the squeal and B-Real's nasal voice. Something cheerful from 1968 becomes something woozy and threatening in 1993, and the notes haven't changed.
+
+### 12. `e-teac-perry`
+
+TEAC, "A-3340 four-track recorder" (1972) to Junior Murvin, "Police and Thieves" (1976)
+
+Listen to the rhythm under Murvin's high voice. It is dense and slightly blurred, as if heard through gauze. Drums, percussion and guitar melt into one texture instead of standing apart. Each time Perry combined finished parts onto one track to make room for more, another layer of hiss and softness went on. The haze is what four tracks cost, spent on purpose.
+
+### 13. `e-kraftwerk-dilla`
+
+Kraftwerk, "Trans-Europe Express" (1977) to Jay Dee, "B.B.E. (Big Booty Express)" (2001)
+
+Listen to how Kraftwerk say the title: flat, chanted, treated voices over a clanking rhythm meant to sound like a train. Then listen to how Dilla's track keeps the shape and rhythm of that chant and swaps the words, so the hook is instantly familiar and slightly ridiculous. Underneath, the music is his, not a sample of theirs. It is a Detroit hip-hop producer quoting the record Detroit's techno producers learned from.
+
+### 14. `e-rockersinternational-hughmundell`
 
 Augustus Pablo, "King Tubby Meets Rockers Uptown" (1976) to Hugh Mundell, "Africa Must Be Free By 1983" (1978)
 
 Pablo's own melodica records made the label's reputation; two years later he put that same production behind a teenager's songwriting instead of his own instrument, and 'Africa Must Be Free By 1983' is a vocal album built on the same spacious, echo-heavy platform.
 
-### 13. `e-melodica-pablo`
+### 15. `e-tubby-gangoffour`
 
-Hohner, "the Melodica, sold as a school instrument" (1958) to Augustus Pablo, "Java" (1972)
+King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Gang of Four, "Damaged Goods" (1978)
 
-Listen to where each note starts and stops. There is no sustain to lean on, so every note has to be blown and then released, and you can hear him running out of breath and taking more. That is why a plastic school instrument sounds like a person rather than a keyboard. The tone itself is thin and reedy, almost weak, and playing it slowly in a minor key is what turns that weakness into the mood.
+Listen to how much of "Damaged Goods" is empty: guitar stabs land in the gaps a dub mixer would leave for echo. Gang of Four never actually uses a dub production style, but the structural habit, thin out everything except bass and rhythm, is the same one Tubby's records established.
 
-### 14. `e-neu-bowie`
+### 16. `e-marleymarl-bizmarkie`
 
-Neu!, "Hero" (1975) to David Bowie, ""Heroes"" (1977)
+MC Shan, "The Bridge (produced by Marley Marl)" (1986) to Biz Markie, "Make the Music with Your Mouth, Biz" (1986)
 
-'Hero' is fast and ragged: Dinger's motorik beat pounding under his own hoarse, shouting vocal. '"Heroes"' borrows the drive and slows the tempo. Listen for the same idea of a beat that doesn't change while everything above it builds. The drone of guitar feedback held for the whole song, the vocal climbing from calm to shouting, the steady drums never reacting. And the quotation marks in Bowie's title, which undercut the heroism, just as Dinger's voice does.
+Both records are Marley Marl building on sampled drums in the same year. The difference on the Biz record is that one of the instruments is a person. Listen for the beatboxing: kicks, snares and hisses made with Biz's mouth, sitting alongside the drums Marl has pulled off records. Try to hear where the machine stops and the mouth starts. Part of the joke of the track is that it is sometimes hard to tell.
 
-### 15. `e-peterock-nas`
+### 17. `e-madlib-mfdoom`
 
-Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992) to Nas, "The World Is Yours" (1994)
+MF DOOM, "Doomsday" (1999) to Madvillain, "Accordion" (2004)
 
-Two years apart and the same idea from Pete Rock: a soft jazz phrase looped under heavy drums, turned melancholy. On 'T.R.O.Y.' it's a saxophone. On 'The World Is Yours' it's a gentle piano from an Ahmad Jamal record. Listen for how the piano keeps circling while Nas talks about ambition, the sweetness of the loop working against the hardness of the words.
+On 'Doomsday' DOOM produces himself, looping a smooth, sweet phrase from Sade's 'Kiss of Life' under his flat, unhurried voice. On 'Accordion' Madlib gives him something stranger: a wheezing, reedy loop that sounds like an accordion but was played on a cheap electric chord organ. Listen for how the rougher, odder beat pushes DOOM's rhyming, dense chains of internal rhyme packed into a short verse over one repeating figure.
 
-### 16. `e-sl1200-theodore`
+### 18. `e-studioone-kingstondub`
 
-Technics, "SL-1200 as a domestic hi-fi turntable" (1972) to Grand Wizzard Theodore, "the scratch" (1975)
+Studio One house band, "Studio One rhythm sessions" (1963) to King Tubby, "Dub versions of Studio One rhythms" (1973)
 
-Listen to the pitch of a scratch. It bends down as the hand slows the record and snaps back up the instant it is released, and the snap is the motor recovering almost immediately. On a belt-driven deck that recovery is a slow sag, which is a different and much less usable sound. The character of the scratch is partly the character of the motor.
+Neither side of this pair is one record to search for; it is a claim about supply. Studio One's session players cut rhythm tracks the label then owned outright, and Kingston's dub engineers, working for many different producers over the following decades, kept coming back to that same catalogue as the raw material to strip down, echo out and rebuild.
 
-### 17. `e-eps16-rza`
+### 19. `e-sp1200-peterock`
 
-Ensoniq, "EPS-16 Plus, sixteen-bit keyboard sampler" (1990) to Wu-Tang Clan, "C.R.E.A.M." (1993)
+E-mu Systems, "SP-1200, ten seconds of sampling time" (1987) to Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992)
 
-Listen to the length of the loop. The piano phrase in 'C.R.E.A.M.' runs for bars, a whole musical sentence repeating, which the SP-1200's ten seconds made hard. The sound is also cleaner at the top, without the SP's crunch, though RZA kept it dusty and dark. That's the machine allowing the long, sad phrase to become the song's whole mood.
+Listen for the grain of the SP-1200's twelve-bit sound on the drums, a slight crunch on the snare and hi-hats. Then listen to the bass: it sounds rounded and dark, as if the top has been cut off. Cutting the top end is how producers of the period pulled a bassline out of a full record, and Pete Rock is one of the best known for it. The short memory still sets the structure: one horn phrase, over and over, with changes made by dropping parts in and out.
 
-### 18. `e-casablanca-parliamentfunkadelic`
+### 20. `e-bootsycollins-parliamentfunkadelic`
 
-Parliament, "Up for the Down Stroke" (1974) to Parliament, "Mothership Connection (Star Child)" (1975)
+The J.B.'s, "The Grunt" (1970) to Parliament, "Up for the Down Stroke" (1974)
 
-'Up for the Down Stroke' is the sound of a band finding its commercial footing on a new label. A year later, with Casablanca's money behind the show as well as the record, 'Mothership Connection' sells an entire cosmology, alien mythology, a spaceship, a whole stage production, that the earlier single doesn't yet attempt.
-
-### 19. `e-sl1200-flash`
-
-Technics, "SL-1200 as a domestic hi-fi turntable" (1972) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
-
-Listen for what never happens: the beat does not sag. The same few bars come round again and again dead in time, and in the gaps you can hear a record being hauled backwards and dropped back in exactly on the one. A belt-driven deck would lag on every restart and the whole thing would slide. Everything frantic on this record rests on the machine underneath it being rigid.
-
-### 20. `e-808-manparrish`
-
-Roland, "TR-808 factory voices" (1980) to Man Parrish, "Hip Hop, Be Bop (Don't Stop)" (1982)
-
-Almost the entire record is 808 and synthesizer, with the drum machine given none of the studio disguise a live band would demand. Compare the cowbell and clap to 'Planet Rock' and they are close to identical factory sounds.
+'The Grunt' is a J.B.'s instrumental built around a tight, repeating bass figure with almost no ornamentation. 'Up for the Down Stroke', four years and one J.B.'s walkout later, keeps that same repeating-figure discipline but stretches it, adds Bernie Worrell's synthesizer, and lets Collins's bass talk back to the vocals instead of just holding time.

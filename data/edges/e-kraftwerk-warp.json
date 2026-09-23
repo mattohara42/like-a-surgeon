@@ -1,0 +1,31 @@
+{
+  "id": "e-kraftwerk-warp",
+  "from": "kraftwerk",
+  "to": "warp",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1992,
+  "crossLineage": false,
+  "evidence": "The cover of Warp's 1992 compilation 'Artificial Intelligence,' which launched the label's Aphex Twin- and Autechre-featuring series and the phrase 'electronic listening music,' depicts an android relaxing in an armchair with a hi-fi and record sleeves scattered on the floor, including Kraftwerk's 'Autobahn.' Documented in retrospective features (Wikipedia's 'Artificial Intelligence' articles, Vice's and the Quietus's 25th-anniversary oral histories) as a deliberate visual statement about the series' lineage.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Kraftwerk",
+      "title": "Autobahn",
+      "year": 1974
+    },
+    "later": {
+      "artist": "Various Artists",
+      "title": "Artificial Intelligence",
+      "year": 1992,
+      "search": "Warp Artificial Intelligence compilation"
+    },
+    "whatToListenFor": "'Autobahn' is on the compilation's own cover, propped against the android's hi-fi. Listen to how far the series carries that record's idea, electronic music made for sitting and listening rather than dancing, into the early-90s British bedroom-producer sound of Aphex Twin and Autechre."
+  },
+  "explanation": {
+    "age13": "When the British label Warp put out a famous compilation called 'Artificial Intelligence' in 1992, the cover showed a robot relaxing to records by Kraftwerk, a way of saying: this new electronic music comes from the same idea Kraftwerk started.",
+    "adult": "Warp already has its own edge to Detroit techno on this map (e-detroittechno-warp); this one names the other half of the label's stated lineage, the 1970s German 'electronic listening music' Kraftwerk pioneered, which its most famous compilation credited on its own sleeve rather than in an interview."
+  },
+  "tags": [
+    "technology"
+  ]
+}

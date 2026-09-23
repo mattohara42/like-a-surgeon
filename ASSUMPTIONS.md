@@ -1571,3 +1571,36 @@ each disagreement.
   booth, then the A&R relationship) rather than a specific claim, so
   it sits one tier lower, the same distinction A69's label-vs-artist
   edges draw elsewhere in this dataset.
+
+## Track D: bridge edges (no new nodes, three islands merged)
+
+- **A189. Three more islands merged into the main component, with no
+  new artists.** Re-ran the connectivity script from A184 after that
+  batch and found the pattern wasn't unique to orphan labels: several
+  scene and label nodes carry edges only to each other, in their own
+  small island, even though the artists who belong to them (via
+  `scenes`/`memberIds`, not a graph edge) sit in the main component.
+  `detroit-techno`/`warp`/`aphex-twin`/`autechre` (4 nodes),
+  `south-bronx`/`kingston-dub`/`studio-one` (3 nodes), and
+  `ensoniq-eps-16-plus`/`rza`/`the-charmels`/`wu-tang-clan` (4 nodes)
+  were each one edge away from the main graph. Added exactly one
+  bridging edge per island rather than new nodes: `e-kraftwerk-warp`
+  (documented: the 'Artificial Intelligence' compilation's cover
+  depicts Kraftwerk's 'Autobahn' on the android's turntable, a sleeve
+  fact rather than an interview quote), `e-bronx-theclash` (documented:
+  'The Magnificent Seven', recorded April 1980, directly credited to
+  the Clash's exposure to Grandmaster Flash and the Sugarhill Gang on
+  the ground in New York), and `e-publicenemy-rza` (consensus: RZA's
+  production widely described as adapting the Bomb Squad's cut-up
+  technique toward a sparser end, but no first-person RZA quote naming
+  Public Enemy specifically was found in the sources checked). Main
+  component: 126 to 137 nodes, 15 components to 12. `npm run validate`
+  stays clean at 0 errors, 48 warnings (unchanged, since none of these
+  three islands carried an orphan warning to begin with, only their
+  now-fixed disconnection from the main graph). Left `moog-modular`/
+  `tangerine-dream`/`virgin`/`wendy-carlos` and the `cypress-hill`
+  cluster alone: a candidate bridge for the Moog island (George
+  Harrison's Moog use on Beatles records) didn't hold up under a
+  second search, which credited the Melody Maker comparison to Wendy
+  Carlos rather than a stated influence, and no substitute was checked
+  carefully enough to add before running out of session time.
