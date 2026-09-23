@@ -4,21 +4,21 @@
   "to": "afrika-bambaataa",
   "type": "production",
   "confidence": "documented",
-  "evidence": "Baker and engineer John Robie are the credited producers of 'Planet Rock' (1982) for Tommy Boy Records.",
+  "evidence": "Baker and engineer John Robie are the credited producers of 'Planet Rock' (1982) for Tommy Boy Records. The earlier record, 'Jazzy Sensation' (Tommy Boy TB 812, 1981), credits Baker as producer and Kenton Nix as writer on its label.",
   "year": 1982,
   "crossLineage": false,
   "trackPair": {
     "earlier": {
-      "artist": "Arthur Baker",
-      "title": "Breaker's Revenge",
-      "year": 1982
+      "artist": "Afrika Bambaataa and the Jazzy 5",
+      "title": "Jazzy Sensation",
+      "year": 1981
     },
     "later": {
       "artist": "Afrika Bambaataa and the Soulsonic Force",
       "title": "Planet Rock",
       "year": 1982
     },
-    "whatToListenFor": "Both records share Baker's production fingerprints: hard, dry electro drums and a preference for interpolated melodic hooks over sampled ones."
+    "whatToListenFor": "Both records are Baker productions for Bambaataa on Tommy Boy, and both are built the same way: somebody else's music, replayed in the studio instead of sampled. The 'Jazzy Sensation' sleeve credits the song to Kenton Nix, who wrote Gwen Guthrie's 'Funky Sensation', and the music to a studio band. A year later 'Planet Rock' does the same thing to two Kraftwerk records, with a Roland TR-808 doing the drumming. Listen for the borrowed tune in each, and for how much harder and emptier the 1982 record sounds."
   },
   "explanation": {
     "age7": "Arthur Baker was the producer who helped Afrika Bambaataa build \"Planet Rock\" in the studio.",

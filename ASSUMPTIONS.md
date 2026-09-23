@@ -1142,3 +1142,62 @@ each disagreement.
   words, since registers never differ in facts (Q3). `data/seed.json`
   still has the old text. It is the ruler, not the dataset, so I left it
   alone.
+- **A157. Release years corrected from the pressings.** Every
+  `signatureTracks` and `trackPair` year was searched in MusicBrainz, and
+  the ones that disagreed were checked against Discogs release listings.
+  Most disagreements were MusicBrainz matching a reissue or compilation,
+  and those were ignored. Four were real:
+  'Breaker's Revenge' is 1984, from the Beat Street soundtrack, not 1982
+  (Wikipedia's Arthur Baker article and every Discogs pressing, all
+  Atlantic 1984). The 1982 date was probably a mix-up with Rocker's
+  Revenge's 'Walking on Sunshine', which Baker produced that year.
+  'Funky Child' is a 1992 Pendulum single (Discogs), ahead of the 1993
+  album. 'Male Stripper' is 1986 (Discogs, credited to Man 2 Man meet
+  Man Parrish), not 1983. Its `whyThisOne` claimed a UK chart run
+  "nearly a decade later", which the corrected date makes false, so
+  that sentence was rewritten without the chart claim. 'Sing a Simple
+  Song' first came out in November 1968 as the B-side of 'Everyday
+  People', so it moves from 1969 (the Stand! album) to 1968. Checked and
+  left alone: 'Your Love' (Jamie Principle's 1986 Persona single comes
+  before Knuckles' 1987 Trax version), 'Mecca and the Soul Brother'
+  (1991 promo, 1992 album), 'Timesteps' (the soundtrack LP is 1972 in
+  Discogs, and the 1971 single does not carry it), 'Don't Worry' (1960 in
+  Canada, 1961 in the US, and the US release is the one that matters).
+- **A158. e-baker-bambaataa has a new earlier record.** With
+  'Breaker's Revenge' at 1984, the edge's "earlier" record came two
+  years after the "later" one. It now pairs 'Jazzy Sensation' (Tommy
+  Boy TB 812, 1981) with 'Planet Rock'. The Discogs transcription of the
+  label credits Baker as producer, the studio band as the music, and
+  Kenton Nix as writer, which makes it a replay of Nix's 'Funky
+  Sensation' (a Gwen Guthrie record) rather than a sample. That is the
+  method 'Planet Rock' then used on Kraftwerk, so the new
+  `whatToListenFor` is about the method, and it claims nothing about
+  the 1981 drums that I have not heard described in a source. Matt
+  should listen to this pair before trusting it.
+- **A159. End years that now have a source.** The Roland RE-201 ends in
+  1990: English Wikipedia says it stayed in production until then.
+  Ruffhouse closes in 1999, when its founders shut it (Wikipedia), and
+  its 2012 revival through EMI is in the ownership story. Pye closes in
+  1980, when the rights to the name ran out and the label became PRT
+  (Wikipedia). The 2024 relaunch of the name is mentioned, and it is not
+  treated as the same label. Sly and the Family Stone's 1983 end (A139)
+  turns out to be what Wikipedia gives, so it is no longer a proxy.
+  Cold Chillin's 1998 close is confirmed.
+- **A160. End years still null after this pass, and why.** The Akai
+  MPC60 and MPC3000: English and German Wikipedia give launch years for
+  every model and no end dates. The Fairlight CMI: English Wikipedia
+  dates Series III 1985 to 1989, while German Wikipedia says the CMI was
+  replaced by the MFX from 1991. The sources disagree, so it stays null.
+  The Korg MS-10, Ensoniq Mirage, Mu-Tron Bi-Phase and Maestro FZ-1 have
+  no production end in any Wikipedia edition I could read. The Mellotron
+  and Technics SL-1200 are correct as null, because both are made again
+  today, and their records already say so. All of these still depend on
+  Q20.
+- **A161. The Oberheim DMX start year is disputed.** Wikipedia says it
+  was introduced in 1980. The record says 1981. The archive.org copies of
+  the owner's manual date the third edition to June 1982 and the
+  schematics to December 1981, which fits either. I left 1981, since
+  moving it would need the first-edition manual or a 1980 trade-press
+  listing, and archive.org's file downloads are blocked from the
+  container (see `docs/sources.md`). The record's end year of 1984 is
+  still from one secondary source, and Wikipedia only says "mid-1980s".
