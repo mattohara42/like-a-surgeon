@@ -1,0 +1,40 @@
+{
+  "id": "ll-cool-j",
+  "name": "LL Cool J",
+  "sortName": "LL Cool J",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1984,
+  "activeTo": null,
+  "originCity": "St. Albans, Queens, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "rick-rubin",
+    "marley-marl"
+  ],
+  "hook": "Def Jam's first star, whose career shows the change from drum-machine rap to sampled rap as clearly as any single artist's.",
+  "blurb": {
+    "age7": "A teenager from Queens who sent a tape to a student making rap records. His first song came out when he was sixteen.",
+    "age13": "James Todd Smith grew up in St. Albans, Queens, and was sixteen when 'I Need a Beat' came out on Def Jam in 1984. His first album, Radio, in 1985, was produced by Rick Rubin: a booming drum machine and almost nothing else. By 1989 people were saying his career was over. In 1990 he made Mama Said Knock You Out with Marley Marl, whose beats came from pieces of old records, and it was one of the biggest comebacks in rap.",
+    "adult": "LL Cool J's catalogue works as a controlled experiment on this map: the same rapper on the same label, produced first by Rubin with drum machines (Radio, 1985) and then by Marley Marl from samples (Mama Said Knock You Out, 1990). The commercial success of 'I Need a Beat', alongside the Beastie Boys' 'Rock Hard', helped Def Jam secure its distribution deal with Columbia in 1985."
+  },
+  "signatureTracks": [
+    {
+      "title": "I Need a Beat",
+      "year": 1984,
+      "whyThisOne": "His first single and one of Def Jam's first releases, made when he was sixteen."
+    },
+    {
+      "title": "I Can't Live Without My Radio",
+      "year": 1985,
+      "whyThisOne": "Rick Rubin's reduced production: a drum machine, a voice and scratches."
+    },
+    {
+      "title": "Mama Said Knock You Out",
+      "year": 1990,
+      "whyThisOne": "The comeback, produced by Marley Marl from sampled material, five years and one technology later."
+    }
+  ]
+}

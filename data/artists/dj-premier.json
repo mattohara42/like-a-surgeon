@@ -1,0 +1,37 @@
+{
+  "id": "dj-premier",
+  "name": "DJ Premier",
+  "sortName": "Premier, DJ",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1989,
+  "activeTo": null,
+  "originCity": "Houston, Texas",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Chopped samples into tiny pieces and scratched other records' words into his choruses, and made that the sound of 90s New York rap.",
+  "blurb": {
+    "age7": "A DJ and producer who cut old records into tiny pieces to make new beats. His choruses are often words scratched from other records.",
+    "age13": "Christopher Martin grew up in Houston and moved to New York, where he formed Gang Starr with the rapper Guru. Their first album came out in 1989. Premier did not just loop one long piece of an old record. He cut records into tiny pieces and rearranged them into new patterns, then made the chorus by scratching a few words from other rap records. He produced for Nas, Jay-Z, The Notorious B.I.G. and many others. Guru died in 2010.",
+    "adult": "Premier's method is short, chopped fragments re-sequenced into new patterns rather than long loops left intact, so the source record is often unrecognisable while its texture survives. The scratched vocal hook, a chorus assembled from other records' phrases, carries the DJ's craft from the Bronx turntable directly into the finished song. Gang Starr's first album was made on an E-mu SP-12, and his later work on an Akai MPC60 sequencing an Akai S950 sampler."
+  },
+  "signatureTracks": [
+    {
+      "title": "Mass Appeal (Gang Starr)",
+      "year": 1994,
+      "whyThisOne": "A tiny, repeated fragment and hard drums, with nothing wasted."
+    },
+    {
+      "title": "N.Y. State of Mind (Nas)",
+      "year": 1994,
+      "whyThisOne": "His production for someone else at its darkest and most spare."
+    },
+    {
+      "title": "You Know My Steez (Gang Starr)",
+      "year": 1997,
+      "whyThisOne": "Scratched hooks and chopped samples in their finished form."
+    }
+  ]
+}

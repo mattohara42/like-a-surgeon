@@ -1,0 +1,37 @@
+{
+  "id": "rick-rubin",
+  "name": "Rick Rubin",
+  "sortName": "Rubin, Rick",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1982,
+  "activeTo": null,
+  "originCity": "Long Beach, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A punk kid who brought a rock producer's taste for loud and simple into rap, starting Def Jam from a university dorm on the way.",
+  "blurb": {
+    "age7": "He played in a punk band, then started making rap records while he was a student. He liked them loud, with almost nothing else in them.",
+    "age13": "Rick Rubin grew up on Long Island and played in a hardcore punk band called Hose. At New York University he started producing rap records and, with Russell Simmons, turned the name he had used for his punk releases, Def Jam, into a record label in 1984. His rap production kept only what hit hardest: a loud drum machine, the rapper, a DJ's scratches, and sometimes a rock guitar. LL Cool J's first album credits him with 'reducing' it rather than producing it. He left Def Jam in 1988 and later became one of the most famous producers in rock.",
+    "adult": "Rubin is filed under rock deliberately. He came to rap from the New York hardcore scene, and what he brought with him, the volume, the stripped arrangements and the conviction that rap and rock guitar belonged together, is the substance of his effect on the form. That makes his edges into hip-hop cross-lineage, which is the point. Def Jam's first release was a 1982 single by his own band, Hose. The company was formalised with Simmons in 1984 and secured distribution through Columbia the following year. Rubin left in 1988 to found Def American, later American Recordings."
+  },
+  "signatureTracks": [
+    {
+      "title": "It's Yours (T La Rock and Jazzy Jay)",
+      "year": 1984,
+      "whyThisOne": "His first rap production, the record that brought him to Russell Simmons, and the first release under the Def Jam name as a rap label."
+    },
+    {
+      "title": "I Can't Live Without My Radio (LL Cool J)",
+      "year": 1985,
+      "whyThisOne": "From the album credited as 'reduced by Rick Rubin', which is a fair description of the sound."
+    },
+    {
+      "title": "Walk This Way (Run-D.M.C. with Aerosmith)",
+      "year": 1986,
+      "whyThisOne": "His idea, by the widely told account, and the record that put rap and hard rock on one track."
+    }
+  ]
+}
