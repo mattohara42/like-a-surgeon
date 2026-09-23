@@ -17,11 +17,27 @@ summary of it.
 | `www.wikidata.org`, `query.wikidata.org` | Birth and death dates, founding and dissolution years, cross-IDs (MusicBrainz, Discogs) in bulk | Anything interpretive. Its "work period" dates follow no single convention |
 | `musicbrainz.org` | First release dates of releases and recordings, credits | Machines and scenes |
 | `api.discogs.com` | Label, catalogue number, pressing year, credits as printed on the sleeve | Narrative. Release dates are often year-only |
-| `archive.org` | Wayback copies of magazine profiles that are blocked or dead (Sound on Sound, Keyboard, manufacturer pages), scanned manuals and catalogues | Search. You need the original URL |
-| `www.worldradiohistory.com` | Scanned trade press: Billboard, Cash Box, Music Week, Record Mirror. Good for release dates, label moves and price lists as printed at the time | Anything after the magazines stopped being scanned |
+| `archive.org` | Full-text and metadata search over scanned manuals, catalogues and magazines, with item dates (`advancedsearch.php`, `services/search/v1/scrape`, `metadata/<id>`) | Reading the files themselves: see below |
+| `www.worldradiohistory.com` | Scanned trade press: Billboard, Cash Box, Music Week, Record Mirror. Good for release dates, label moves and price lists as printed at the time | Browsing: see below |
 
 `www.discogs.com` (the website, not the API) returns 403 from the container.
-Use `api.discogs.com`.
+Use `api.discogs.com`. A release's `extraartists` and `notes` carry the
+credits and label copy as transcribed from the sleeve, which is often the
+primary evidence a `production` edge needs.
+
+**archive.org serves search, not files.** Downloads redirect to storage
+hosts such as `dn760109.eu.archive.org`, and the proxy refuses those. The
+Wayback Machine (`web.archive.org`) is refused too. So archive.org can tell
+you a dated manual exists, and its title and date can be cited, but its
+text cannot be read from the container. Adding `web.archive.org` and
+`*.archive.org` to the environment's allowed domains would fix both.
+
+**World Radio History serves PDFs, not pages.** Its HTML index pages sit
+behind a Cloudflare challenge, but a PDF at a known path downloads
+directly, for example
+`/Archive-All-Music/Billboard/80s/1981/BB-1981-01-17.pdf`. You need to
+know the issue date, which makes it a tool for confirming a date you
+already suspect rather than for finding one.
 
 `api.secondhandsongs.com` is reachable but not used yet: it needs an API key
 we do not have. It is the right source for `cover` edges and for who
