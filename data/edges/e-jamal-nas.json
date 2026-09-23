@@ -1,0 +1,31 @@
+{
+  "id": "e-jamal-nas",
+  "from": "ahmad-jamal",
+  "to": "nas",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1994,
+  "crossLineage": true,
+  "evidence": "'The World Is Yours' (1994), produced by Pete Rock, samples Ahmad Jamal's 'I Love Music' (1970), as recorded in the song's sample credits.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Ahmad Jamal",
+      "title": "I Love Music",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Nas",
+      "title": "The World Is Yours",
+      "year": 1994
+    },
+    "whatToListenFor": "Listen to Jamal's piano: unhurried, with room between the phrases. Pete Rock picks a few notes of it and loops them, so a phrase that drifts in the original circles steadily in the new track. Under Nas's ambition the loop sounds wistful, and Jamal's restraint becomes the song's emotional weight."
+  },
+  "explanation": {
+    "age7": "A jazz piano from 1970 is looped in Nas's 'The World Is Yours'.",
+    "age13": "Pete Rock took a few notes of piano from Ahmad Jamal's 'I Love Music' and looped them under Nas. In Jamal's version the piano wanders gently. Looped, it goes round and round, and it makes Nas's lyrics about wanting more from life sound thoughtful and a bit sad.",
+    "adult": "Jazz enters the map here as a sample source. The jazz lineage itself is deferred, so Jamal is a hub (Q21)."
+  },
+  "tags": [
+    "production"
+  ]
+}

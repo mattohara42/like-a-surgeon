@@ -1,0 +1,35 @@
+{
+  "id": "nwa",
+  "name": "N.W.A",
+  "sortName": "N.W.A",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1986,
+  "activeTo": 1991,
+  "originCity": "Compton, California",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Dr. Dre",
+    "DJ Yella"
+  ],
+  "hook": "The Compton group that put West Coast street reporting at the centre of rap, drew a letter from the FBI, and built 'Straight Outta Compton' on the Amen break.",
+  "blurb": {
+    "age7": "A rap group from Compton, near Los Angeles. Their songs about police and their neighbourhood made the FBI angry.",
+    "age13": "N.W.A came together in Compton, California, in 1986: Eazy-E, Dr. Dre, Ice Cube, MC Ren, DJ Yella and others. Eazy-E paid for it through his label, Ruthless Records. Their 1988 album Straight Outta Compton described life in their neighbourhood, including police harassment, in blunt language. The FBI wrote a letter to their record company complaining about 'Fuck tha Police'. The title track is built on the Amen break. Ice Cube left in 1989 in a dispute over money, and the group ended in 1991. Eazy-E died of AIDS in 1995.",
+    "adult": "N.W.A made West Coast gangsta rap a national force and provoked a federal agency to object to a song's lyrics, a rare direct collision between the state and a record. Dr. Dre, the group's main producer, pleaded no contest in 1991 to assaulting the television host Dee Barnes and was sentenced to probation, and a related civil suit was settled. He has since acknowledged the assault. That is part of the record here. G-funk and Dre's later production are deferred until Parliament-Funkadelic is on the map (BACKLOG)."
+  },
+  "signatureTracks": [
+    {
+      "title": "Straight Outta Compton",
+      "year": 1988,
+      "whyThisOne": "Built on the Amen break."
+    },
+    {
+      "title": "Fuck tha Police",
+      "year": 1988,
+      "whyThisOne": "The track the FBI wrote to their record company about."
+    }
+  ]
+}

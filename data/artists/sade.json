@@ -1,0 +1,32 @@
+{
+  "id": "sade",
+  "name": "Sade",
+  "sortName": "Sade",
+  "type": "artist",
+  "lineage": "other",
+  "activeFrom": 1982,
+  "activeTo": null,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A London band built around Sade Adu's voice, whose slow, smooth grooves are a favourite of hip-hop producers.",
+  "blurb": {
+    "age7": "A band from London with a singer called Sade. Their slow, smooth songs are often used in rap.",
+    "age13": "Sade is a band named after its singer, Sade Adu, who was born in Ibadan, Nigeria, and grew up in England. They started in London in the early 1980s and became famous for slow, smooth songs with a calm voice on top. MF DOOM's 'Doomsday' (1999) loops a piece of their 1992 song 'Kiss of Life', and many other rappers have used their music.",
+    "adult": "Sade's records are a sample source for their texture, the warm bass, soft keyboards and unhurried tempo. That fits the looped, mid-tempo beat. The band is on the map as a sample hub (Q21). Its own place in British soul and pop isn't mapped yet."
+  },
+  "signatureTracks": [
+    {
+      "title": "Kiss of Life",
+      "year": 1992,
+      "whyThisOne": "From Love Deluxe. Looped in MF DOOM's 'Doomsday'."
+    },
+    {
+      "title": "Smooth Operator",
+      "year": 1984,
+      "whyThisOne": "Their first international hit."
+    }
+  ]
+}

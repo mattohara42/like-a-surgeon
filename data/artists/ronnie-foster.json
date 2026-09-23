@@ -1,0 +1,27 @@
+{
+  "id": "ronnie-foster",
+  "name": "Ronnie Foster",
+  "sortName": "Foster, Ronnie",
+  "type": "artist",
+  "lineage": "other",
+  "activeFrom": 1972,
+  "activeTo": null,
+  "originCity": "Buffalo, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A jazz organist whose Blue Note debut gave A Tribe Called Quest the keyboard loop of 'Electric Relaxation'.",
+  "blurb": {
+    "age7": "A jazz organ player. A Tribe Called Quest used a piece of his music in one of their best songs.",
+    "age13": "Ronnie Foster is an organist from Buffalo, New York. His first album, Two Headed Freap, came out on the jazz label Blue Note in 1972. One track, 'Mystic Brew', has a soft, melancholy keyboard phrase. In 1993 A Tribe Called Quest looped it for 'Electric Relaxation', and it's been sampled and covered many times since.",
+    "adult": "Foster is on the map as a sample hub (Q21). 'Mystic Brew' is a clear case of a jazz label's catalogue becoming a hip-hop producer's library: Blue Note's 1970s records were among the most mined sources of the 1990s."
+  },
+  "signatureTracks": [
+    {
+      "title": "Mystic Brew",
+      "year": 1972,
+      "whyThisOne": "From Two Headed Freap. The loop in 'Electric Relaxation'."
+    }
+  ]
+}

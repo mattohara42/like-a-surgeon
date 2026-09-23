@@ -1,0 +1,31 @@
+{
+  "id": "e-honeydrippers-bizmarkie",
+  "from": "the-honey-drippers",
+  "to": "biz-markie",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1986,
+  "crossLineage": true,
+  "evidence": "'Make the Music with Your Mouth, Biz' (1986), produced by Marley Marl, samples 'Impeach the President' along with Isaac Hayes's 'Ike's Mood I' and Steam's 'Na Na Hey Hey Kiss Him Goodbye', as recorded in the song's sample credits.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Honey Drippers",
+      "title": "Impeach the President",
+      "year": 1973
+    },
+    "later": {
+      "artist": "Biz Markie",
+      "title": "Make the Music with Your Mouth, Biz",
+      "year": 1986
+    },
+    "whatToListenFor": "The same year and the same producer as 'The Bridge', and the same drums. But on the Biz record they share space with a human beatbox. Listen for the 'Impeach the President' kick and snare, then for Biz's mouth-made drums answering them. It's a sampled drummer from 1973 and a man imitating a drummer in 1986, on one track."
+  },
+  "explanation": {
+    "age7": "Biz Markie's first song uses the same old drum beat as 'The Bridge', plus Biz making drum sounds with his mouth.",
+    "age13": "Marley Marl used the 'Impeach the President' drums again for Biz Markie's first record, the same year as 'The Bridge'. On this one, Biz also beatboxes, so you hear real drums from an old record and drum sounds from Biz's mouth together.",
+    "adult": "A second use of the same break by the same producer within a year, which shows how a single sampled break became a house sound before it became a genre-wide one."
+  },
+  "tags": [
+    "production"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "e-honeydrippers-marleymarl",
+  "from": "the-honey-drippers",
+  "to": "marley-marl",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1986,
+  "crossLineage": true,
+  "evidence": "MC Shan's 'The Bridge' (1986), produced by Marley Marl, is built on the drum break that opens 'Impeach the President', along with a sample of the Magic Disco Machine's 'Scratchin'', as recorded in the song's sample credits. Accounts of the production say Marl took the kick and snare from the first four bars, held them in two Korg sampling delay units, and added kick and hi-hat from a TR-808. That last detail is from secondary retellings.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Honey Drippers",
+      "title": "Impeach the President",
+      "year": 1973
+    },
+    "later": {
+      "artist": "MC Shan",
+      "title": "The Bridge (produced by Marley Marl)",
+      "year": 1986,
+      "search": "MC Shan The Bridge"
+    },
+    "whatToListenFor": "The song opens on its drums alone for a few bars: a bouncy kick, a snare with a bright crack, and an open hi-hat that breathes between hits. Then play 'The Bridge'. Marl has lifted that kick and snare and set them against the steady tick of a drum machine's hi-hat. Listen for the two sources side by side: the real drum carrying a room and a tape hiss, the machine's hat perfectly even."
+  },
+  "explanation": {
+    "age7": "Marley Marl took the drums from the start of an old funk song and built 'The Bridge' with them.",
+    "age13": "'Impeach the President' was a 1973 funk song about President Nixon. It starts with just the drums. In 1986 Marley Marl sampled that drum part and built MC Shan's 'The Bridge' on it, mixing the real drums with a drum machine. Since then the same drums have been used in hundreds of songs.",
+    "adult": "This edge makes concrete the claim on Marl's own record, and on e-808-marleymarl, that sampled drums replaced synthesised ones. Here both are audible at once. The target is Marl rather than MC Shan because Shan isn't a node and the sampling decision was the producer's."
+  },
+  "tags": [
+    "production",
+    "politics"
+  ]
+}

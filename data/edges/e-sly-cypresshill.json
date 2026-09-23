@@ -1,0 +1,31 @@
+{
+  "id": "e-sly-cypresshill",
+  "from": "sly-and-the-family-stone",
+  "to": "cypress-hill",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1993,
+  "crossLineage": true,
+  "evidence": "'Insane in the Brain' (1993), produced by DJ Muggs, samples the opening keyboard riff of Sly and the Family Stone's 'Life' (1968), as recorded in the song's sample credits.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Sly and the Family Stone",
+      "title": "Life",
+      "year": 1968
+    },
+    "later": {
+      "artist": "Cypress Hill",
+      "title": "Insane in the Brain",
+      "year": 1993
+    },
+    "whatToListenFor": "Listen to the start of 'Life': a jaunty, bouncing keyboard figure before the band comes in. In 'Insane in the Brain' Muggs keeps the figure but sets it in murk, loops it, and sets it under the squeal and B-Real's nasal voice. Something cheerful from 1968 becomes something woozy and threatening in 1993, and the notes haven't changed."
+  },
+  "explanation": {
+    "age7": "Cypress Hill's big hit uses a bouncy keyboard part from an old Sly and the Family Stone song.",
+    "age13": "DJ Muggs took the keyboard riff from the start of Sly and the Family Stone's 'Life' and looped it for 'Insane in the Brain'. The original sounds happy and bouncy. In Muggs's version, with darker drums and a strange squeal on top, it sounds wild and a bit menacing.",
+    "adult": "Cross-lineage from funk into hip-hop. The same hub also reaches Public Enemy's 'Fight the Power' through 'Sing a Simple Song', which is noted in prose rather than as a second edge because the sound of that sample in the dense collage couldn't be described specifically enough."
+  },
+  "tags": [
+    "production"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "e-winstons-nwa",
+  "from": "the-winstons",
+  "to": "nwa",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1988,
+  "crossLineage": true,
+  "evidence": "'Straight Outta Compton' (1988) samples the drum break from The Winstons' 'Amen, Brother' (1969), as recorded in the song's sample credits. Richard Spencer, the copyright holder, received no royalties from this or any of the break's uses.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Winstons",
+      "title": "Amen, Brother",
+      "year": 1969
+    },
+    "later": {
+      "artist": "N.W.A",
+      "title": "Straight Outta Compton",
+      "year": 1988
+    },
+    "whatToListenFor": "Find the six seconds near the middle of 'Amen, Brother' where the band stops and Gregory Coleman plays alone. Listen for the last bars, where the snare shifts off its pattern and lands late. That hitch is what everyone recognises. Then hear it in 'Straight Outta Compton', looped hard under Ice Cube's opening verse. It has the same hitch in the snare, now with the urgency of the whole track riding on it."
+  },
+  "explanation": {
+    "age7": "N.W.A used a famous six-second drum solo called the Amen break for their song 'Straight Outta Compton'.",
+    "age13": "The Winstons' drummer, Gregory Coleman, played a six-second drum solo in 1969. N.W.A used it for 'Straight Outta Compton' in 1988. Later, British jungle producers chopped the same break into a whole new kind of dance music. The man who owned the song's rights never got paid.",
+    "adult": "The first on-map use of the Amen break. The same hub will carry edges into jungle and drum and bass once those artists are added (BACKLOG). That cross-lineage story is the break's larger significance."
+  },
+  "tags": [
+    "production",
+    "labels"
+  ]
+}

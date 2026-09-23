@@ -1,0 +1,32 @@
+{
+  "id": "james-brown",
+  "name": "James Brown",
+  "sortName": "Brown, James",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1956,
+  "activeTo": 2006,
+  "originCity": "Augusta, Georgia",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "The bandleader who put the rhythm in charge of the song, and whose drummers' breaks became the most sampled sounds in hip-hop.",
+  "blurb": {
+    "age7": "A singer and bandleader who made funk music. Rap producers have used his drummers' beats thousands of times.",
+    "age13": "James Brown grew up poor in Augusta, Georgia, and became one of the most famous performers in the world. In the late 1960s he changed how his band played: instead of a tune on top, every instrument became part of the rhythm, and the first beat of each bar hit hardest. That was funk. On 'Funky Drummer' (1970) his drummer Clyde Stubblefield played a short solo, a break, that hip-hop producers later sampled more than a thousand times. Stubblefield was never paid for those samples. Brown died on Christmas Day 2006.",
+    "adult": "Brown's band is the single largest source of sampled drums in hip-hop, which makes him this map's largest sampled-artist hub under Q21. The breaks were played by his drummers, chiefly Clyde Stubblefield and John 'Jabo' Starks. Stubblefield, who composed his own patterns, received no credit or royalty for their reuse, which is one of the plainest cases of the sampling economy's unequal payouts. Brown's own record includes a 1988 conviction after a police car chase, for which he served about two years, and arrests on domestic violence charges, including in 2004. Those are part of the record, stated here as fact."
+  },
+  "signatureTracks": [
+    {
+      "title": "Funky Drummer",
+      "year": 1970,
+      "whyThisOne": "Clyde Stubblefield's break, sampled more than a thousand times."
+    },
+    {
+      "title": "Cold Sweat",
+      "year": 1967,
+      "whyThisOne": "An early record where the rhythm becomes the whole song."
+    }
+  ]
+}

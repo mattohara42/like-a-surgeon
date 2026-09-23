@@ -1,0 +1,31 @@
+{
+  "id": "e-sade-mfdoom",
+  "from": "sade",
+  "to": "mf-doom",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1999,
+  "crossLineage": true,
+  "evidence": "'Doomsday' (1999), produced by MF DOOM, samples Sade's 'Kiss of Life' (1992) and Boogie Down Productions' 'Poetry', as recorded in the song's sample credits.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Sade",
+      "title": "Kiss of Life",
+      "year": 1992
+    },
+    "later": {
+      "artist": "MF DOOM",
+      "title": "Doomsday",
+      "year": 1999
+    },
+    "whatToListenFor": "'Kiss of Life' is warm and slow, with soft keyboards, a gentle bass and Sade's calm voice. DOOM loops a piece of that warmth and puts his flat, deadpan voice over it. Listen for the contrast: a love song's smoothness under a rapper describing coming back from the worst years of his life."
+  },
+  "explanation": {
+    "age7": "MF DOOM's comeback song uses a smooth piece of a Sade love song.",
+    "age13": "When MF DOOM returned in 1999, his first song, 'Doomsday', was built on a loop from Sade's 'Kiss of Life'. The Sade song is smooth and romantic. DOOM raps over it about hard times and coming back, and the calm music makes his words hit harder.",
+    "adult": "A self-produced sample, so the sampling artist and producer are the same person. The smooth-source, hard-subject contrast recurs across the Q21 hubs."
+  },
+  "tags": [
+    "production"
+  ]
+}

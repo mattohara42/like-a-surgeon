@@ -1,0 +1,30 @@
+{
+  "id": "the-charmels",
+  "name": "The Charmels",
+  "sortName": "Charmels, The",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1967,
+  "activeTo": 1968,
+  "originCity": "Memphis, Tennessee",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Isaac Hayes",
+    "David Porter"
+  ],
+  "hook": "A Stax girl group with no national hit, whose sad piano intro became the sound of Wu-Tang's 'C.R.E.A.M.'.",
+  "blurb": {
+    "age7": "A girl group from Memphis. Their song's sad piano was used by the Wu-Tang Clan.",
+    "age13": "The Charmels were a girl group on Volt, part of the Stax label in Memphis. They made a handful of singles, and none became a national hit. 'As Long as I've Got You' (1967) was written by Isaac Hayes and David Porter, the Stax songwriting team behind 'Soul Man'. In 1993 RZA sampled its piano for the Wu-Tang Clan's 'C.R.E.A.M.', and a record almost nobody knew became the sound of one of rap's most famous songs.",
+    "adult": "The Charmels are the clearest case on the map of sampling as rediscovery: an obscure Stax single, written by Hayes and Porter, made famous a generation later by a producer digging for mood rather than drums. The end year is approximate."
+  },
+  "signatureTracks": [
+    {
+      "title": "As Long as I've Got You",
+      "year": 1967,
+      "whyThisOne": "The Volt single whose piano became 'C.R.E.A.M.'."
+    }
+  ]
+}

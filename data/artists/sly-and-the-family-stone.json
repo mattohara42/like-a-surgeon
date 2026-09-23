@@ -1,0 +1,39 @@
+{
+  "id": "sly-and-the-family-stone",
+  "name": "Sly and the Family Stone",
+  "sortName": "Sly and the Family Stone",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1966,
+  "activeTo": 1983,
+  "originCity": "San Francisco, California",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Sly Stone"
+  ],
+  "hook": "A band that mixed Black and white, men and women, funk, rock and soul, and then became a quarry for hip-hop producers.",
+  "blurb": {
+    "age7": "A band of Black and white musicians, men and women, who mixed funk, rock and soul. Rap producers love to sample them.",
+    "age13": "Sylvester Stewart, known as Sly Stone, grew up in Vallejo, California, and formed the Family Stone in San Francisco in 1966. It was one of the first major American bands with Black and white members and men and women playing together. Their music mixed soul, rock and funk, with everyone singing. Hip-hop producers have sampled them often: Cypress Hill's 'Insane in the Brain' uses the keyboard riff from 'Life', and Public Enemy's 'Fight the Power' uses 'Sing a Simple Song'. Sly Stone died in June 2025, aged 82.",
+    "adult": "The Family Stone's integration by race and gender was a statement in 1966, not a detail, and their records moved between psychedelic rock and funk in a way that made them a shared ancestor for both lineages on this map. Drug problems derailed the band in the 1970s, and the group effectively ended by the early 1980s. The end year here is an approximation, not a sourced date. As a sample hub their records reach Cypress Hill and Public Enemy."
+  },
+  "signatureTracks": [
+    {
+      "title": "Life",
+      "year": 1968,
+      "whyThisOne": "Its opening keyboard riff is in 'Insane in the Brain'."
+    },
+    {
+      "title": "Sing a Simple Song",
+      "year": 1969,
+      "whyThisOne": "Sampled in Public Enemy's 'Fight the Power'."
+    },
+    {
+      "title": "Thank You (Falettinme Be Mice Elf Agin)",
+      "year": 1969,
+      "whyThisOne": "The bass playing that set a new standard for funk."
+    }
+  ]
+}
