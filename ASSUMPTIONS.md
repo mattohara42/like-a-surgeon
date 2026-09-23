@@ -1298,3 +1298,13 @@ each disagreement.
   was the only case besides e-baker-bambaataa (A158). Delia Derbyshire's
   1975 end year (A147) is confirmed by Wikipedia's "In 1975, she
   stopped producing music".
+- **A170. What this pass did not check.** It checked dates, deaths,
+  credits and named samples, which are the things a database or a
+  sleeve can settle. It did not check any `whatToListenFor` sound
+  description (those need ears, and A124's warning still stands), the
+  scene records' adult prose, the causal claims in `consensus` edges, or
+  the outré electronic batch's interpretive calls (A146 to A152) beyond
+  the dates in them. It did not use SecondHandSongs (no key yet), so the
+  one `cover` edge was checked only through Wikipedia. Wayback copies
+  and archive.org files could not be read (see `docs/sources.md`), so
+  the Sound on Sound profile A124 wanted is still unread.
