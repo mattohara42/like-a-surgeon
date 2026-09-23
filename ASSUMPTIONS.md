@@ -957,3 +957,53 @@ These cover what changed in `render/` to carry it, and what it supersedes.
   Elektra shelving KMD's album, Phife Dawg's and Ol' Dirty Bastard's
   deaths, and DOOM's death with its delayed announcement are each given
   once, plainly, in the registers where they belong.
+
+
+## Added during the sampling breaks batch (Q21, batch 2 of 3)
+
+- **A133. Roster.** Fourteen sampled-artist hubs and two sampling acts.
+  The hubs: James Brown, The Winstons, The Honey Drippers, the
+  Incredible Bongo Band, Sly and the Family Stone, The Charmels, Ahmad
+  Jamal, Sade, Ronnie Foster, Tom Scott, Gilbert O'Sullivan and Daedelus.
+  Public Enemy and N.W.A were added because the two most famous breaks
+  (Funky Drummer, the Amen) reach the map through them. Each hub got in
+  only with a sample edge whose credit I could source to a record
+  already on the map.
+- **A134. Where a sample edge points.** It points at the act on the
+  record when that act is a node (Nas, Wu-Tang, Biz Markie). When the act
+  isn't a node, it points at the producer who made the sampling choice:
+  Marley Marl for MC Shan's 'The Bridge', and Madlib for Madvillain's
+  'Accordion'. The edge text says which rule applied.
+- **A135. Lineage for sampled sources.** Soul and funk sources are
+  `funk`, under A71's nearest-neighbour logic (Brown, Sly, Winstons,
+  Honey Drippers, Charmels). Jazz players (Jamal, Foster, Scott), Sade,
+  O'Sullivan and the Bongo Band are `other`, because jazz, British soul
+  and pop have no lane yet. Daedelus is `electronic`. That makes almost
+  every sample edge cross-lineage, which is honest: sampling is where
+  hip-hop meets everything else. It's why cross-lineage edges jumped to
+  55 of the 60 target in one batch.
+- **A136. Single-track hubs are left at one.** The Honey Drippers, The
+  Charmels, Ronnie Foster, Tom Scott, Gilbert O'Sullivan and Daedelus
+  each carry one `signatureTracks` entry and warn. For a sample hub the
+  one sampled record is the reason they're here, and padding the list
+  with a second record I haven't checked would break the accuracy rules.
+- **A137. Edges I dropped rather than write thinly.** Sly Stone's 'Sing
+  a Simple Song' in 'Fight the Power' is named in prose only: I couldn't
+  describe where it sits in a dozen-layer collage. Isaac Hayes ('Ike's
+  Mood I' in Biz's debut) and Joni Mitchell ('Big Yellow Taxi' in
+  'Got 'til It's Gone') are waiting in BACKLOG. Hayes waits for the same
+  reason as Sly. Mitchell waits because the sampling act, Janet Jackson,
+  isn't a node. Michael Jackson ('Human Nature' in 'It Ain't Hard to
+  Tell') is deferred too. His record needs the documented allegations
+  and 2005 acquittal set out carefully in the adult register, and that
+  deserves more than a hub entry written at batch speed.
+- **A138. Conduct stated as fact.** James Brown's 1988 conviction and
+  domestic violence arrests, Professor Griff's 1989 antisemitic remarks,
+  and Dr. Dre's 1991 no-contest plea for assaulting Dee Barnes are each
+  stated once, in the adult register, without adjectives. That follows
+  the Q2 resolution.
+- **A139. Dates that are proxies.** Several hubs were short-lived acts
+  with no sourced end date: the Winstons (1970), the Charmels (1968), the
+  Bongo Band (1974) and Sly and the Family Stone (1983). Those end years
+  are approximate. The Bongo Band's city is Los Angeles, the base of its
+  organiser Michael Viner. Where the sessions happened isn't sourced.

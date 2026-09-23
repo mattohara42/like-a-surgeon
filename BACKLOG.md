@@ -418,3 +418,15 @@ fixing them inline.)
 - Stones Throw is the label behind Donuts, Champion Sound and
   Madvillainy, and is not on the map yet. It needs a causal label edge
   under A69, not just a roster.
+- Sample hubs still waiting after Q21 batch 2 (A137): Isaac Hayes,
+  Joni Mitchell (needs Janet Jackson or a producer target), Michael
+  Jackson (needs careful adult-register handling), Bob James, Syl
+  Johnson, the Isley Brothers, and Stan Getz and Luiz Bonfá (whose
+  'Saudade Vem Correndo' is in 'Runnin'').
+- The Amen break's larger story is in jungle and drum and bass, which
+  aren't on the map. Adding one or two jungle producers would give
+  `the-winstons` its cross-lineage edge into electronic music, which is
+  the break's real significance.
+- Dr. Dre and G-funk: N.W.A is now on the map, so the BACKLOG note about
+  the West Coast waiting on Parliament-Funkadelic now blocks only Dre's
+  post-1991 work.
