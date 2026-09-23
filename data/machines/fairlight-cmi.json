@@ -1,0 +1,19 @@
+{
+  "type": "machine",
+  "id": "fairlight-cmi",
+  "name": "Fairlight CMI",
+  "kind": "sampler",
+  "lineage": "electronic",
+  "maker": "Fairlight",
+  "releasedYear": 1979,
+  "discontinuedYear": null,
+  "originalPurpose": "A computer music workstation from Sydney, designed by Kim Ryrie and Peter Vogel. It could record a short sound digitally and play it back from a keyboard at any pitch, which is sampling. It was sold to wealthy studios and composers.",
+  "whatActuallyHappened": "One of its factory sounds, a short orchestral stab called ORCH5, was sampled from a recording of Stravinsky's 'Firebird'. On 'Planet Rock' in 1982 it became a hip-hop sound, and the orchestra hit went on to turn up on so many records that it became a cliche of the decade. The Fairlight was the first time most listeners heard a sampler, even if they did not know it.",
+  "priceStory": "Roughly 18,000 pounds for the first version in 1979, far more for later ones. Only big studios and rich musicians could own one. That is why sampling first reached hip-hop through a session player in a New York studio, and only later through cheap machines like the SP-1200.",
+  "hook": "A computer that could play back any sound, whose most famous sound was a stab from Stravinsky's 'Firebird'.",
+  "blurb": {
+    "age7": "A very expensive computer that could record a sound and play it back on a keyboard. One of its sounds became famous on a hip-hop record.",
+    "age13": "The Fairlight could record a sound and then play it on a keyboard, higher or lower. That is called sampling. It came with sounds built in, and one of them, a short blast from an orchestra, was taken from a piece by the composer Stravinsky. On 'Planet Rock' that orchestra blast became part of hip-hop, and then everyone used it. The machine cost nearly as much as a house.",
+    "adult": "The route from 'Firebird' to 'Planet Rock' is traced in detail in Robert Fink's scholarly essay on ORCH5, including who sampled the chord and how it came to ship as a preset. The Fairlight's early price confined sampling to elite studios, which makes its first famous hip-hop use a story about a producer and a keyboardist having studio access, not about the Bronx owning the technology."
+  }
+}

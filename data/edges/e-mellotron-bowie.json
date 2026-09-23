@@ -1,0 +1,33 @@
+{
+  "id": "e-mellotron-bowie",
+  "from": "mellotron",
+  "to": "david-bowie",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1969,
+  "crossLineage": true,
+  "evidence": "Rick Wakeman, then a young session player, played Mellotron on the 1969 single of 'Space Oddity'. The credit appears in his own accounts and in histories of the recording.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Streetly Electronics",
+      "title": "Mellotron, sold as a home orchestra",
+      "year": 1963,
+      "search": false
+    },
+    "later": {
+      "artist": "David Bowie",
+      "title": "Space Oddity",
+      "year": 1969
+    },
+    "whatToListenFor": "This record also has a real string arrangement, which makes it a good listening exercise. Somewhere in the swelling background there are string sounds that start with no bow attack and waver very slightly in pitch. Those are tape, played from a keyboard, sitting inside the real orchestra. Then listen for the Stylophone, which is on the same record."
+  },
+  "explanation": {
+    "age7": "A keyboard made of tape recordings helps make the floating sound of this song about a spaceman.",
+    "age13": "Rick Wakeman, who later became famous in the band Yes, played a Mellotron on 'Space Oddity'. Its tape-recorded strings blend in with a real orchestra. Part of the fun is trying to hear which strings are real players and which are tape.",
+    "adult": "A modest edge on its own. Its interest is that 'Space Oddity' carries two machines from this batch at once, the Mellotron and the Stylophone, one simulating an orchestra and one sounding exactly like the cheap gadget it was."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "e-fairlight-planetrock",
+  "from": "fairlight-cmi",
+  "to": "afrika-bambaataa",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1982,
+  "crossLineage": true,
+  "evidence": "Robert Fink's essay 'The Story of ORCH5' traces the Fairlight's orchestra-hit preset to a sample of the chord that opens the Infernal Dance in a recording of Stravinsky's 'Firebird', and follows it to 'Planet Rock', where John Robie played keyboards, including the Fairlight, alongside producer Arthur Baker.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Igor Stravinsky",
+      "title": "The Firebird, Infernal Dance",
+      "year": 1910,
+      "search": "Stravinsky Firebird Infernal Dance"
+    },
+    "later": {
+      "artist": "Afrika Bambaataa & Soulsonic Force",
+      "title": "Planet Rock",
+      "year": 1982
+    },
+    "whatToListenFor": "In the Stravinsky, wait for the Infernal Dance to begin: the whole orchestra hits one chord together, loud and sudden. Now play 'Planet Rock' and listen for the short orchestral blast that punches in between the electronic beats. That is a single chord from a recording like the first one, cut short, pitched down and played from a keyboard. A century of concert music has become a drum hit."
+  },
+  "explanation": {
+    "age7": "A famous orchestra sound became a blast on a hip-hop record, thanks to a computer that could record sounds.",
+    "age13": "The Fairlight came with a built-in sound of an orchestra playing one loud chord, taken from a recording of Stravinsky's 'Firebird'. On 'Planet Rock', that orchestra blast punches in between the drum machine beats. After this record the 'orchestra hit' turned up on so many songs that it became one of the most famous sounds of the 1980s.",
+    "adult": "The ORCH5 story is the clearest early example on the map of sampling as a cultural transfer: a fragment of a European concert score, digitised by a studio engineer, shipped as a factory preset, and made into a hip-hop gesture. Fink's essay is careful about the chain of custody, which makes this one of the better-documented sounds in the dataset."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

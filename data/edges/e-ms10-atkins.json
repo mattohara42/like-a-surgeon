@@ -1,0 +1,32 @@
+{
+  "id": "e-ms10-atkins",
+  "from": "korg-ms-10",
+  "to": "juan-atkins",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1978,
+  "crossLineage": false,
+  "evidence": "Atkins has described in interviews being given a Korg MS-10 as a teenager, learning synthesis on it with cassette decks for overdubs, and calling that period the most productive of his career. The edge claims the learning. It does not claim the MS-10 can be heard on any particular Cybotron release.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Korg",
+      "title": "MS-10",
+      "year": 1978,
+      "search": false
+    },
+    "later": {
+      "artist": "Cybotron",
+      "title": "Alleys of Your Mind",
+      "year": 1981
+    },
+    "whatToListenFor": "This is the record the years of learning led to, not a record made on the MS-10. Listen to how much of its character sits in the tone of each synthesized sound rather than in the tune. The notes themselves are simple. The interest is in how each one is shaped: bright or dull, clipped or held. That is the ear of someone who spent years alone with one synthesizer, turning knobs."
+  },
+  "explanation": {
+    "age7": "Juan Atkins learned to make music on this small synthesizer, and then helped invent techno.",
+    "age13": "Juan Atkins got a Korg MS-10 when he was about fifteen and spent years teaching himself how synthesizers work, recording onto cassettes. A few years later he formed Cybotron, and after that he made the first records people called techno. The small synth was his school.",
+    "adult": "An edge about learning rather than about a sound on a record, which is honest about what the evidence supports. The pattern, an affordable machine arriving early in the hands of someone who would later redefine a genre, recurs throughout this map."
+  },
+  "tags": [
+    "technology"
+  ]
+}

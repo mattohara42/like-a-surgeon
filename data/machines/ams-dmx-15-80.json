@@ -1,0 +1,19 @@
+{
+  "type": "machine",
+  "id": "ams-dmx-15-80",
+  "name": "AMS DMX 15-80",
+  "kind": "studio-technique",
+  "lineage": "other",
+  "maker": "AMS (Advanced Music Systems)",
+  "releasedYear": 1978,
+  "discontinuedYear": null,
+  "originalPurpose": "A digital delay for professional studios, made in Burnley, Lancashire, and described as the first microprocessor-controlled digital delay line. It was sold as a cleaner, more precise replacement for tape echo.",
+  "whatActuallyHappened": "In Manchester, the producer Martin Hannett got hold of one early and used it to rebuild drum sounds from the inside. Instead of dialling in tidy echoes that matched the tempo, he set short and irregular delay times that made a snare sound metallic, distant, or not quite like a drum at all. Joy Division's 'Unknown Pleasures' is the famous result. Digital delay went on to be standard in every studio in the 1980s.",
+  "priceStory": "Professional studio money. Its original price is not recorded here. The relevant fact is that Hannett, working with a small independent Manchester label, had access to cutting-edge digital equipment and used it to make a young band sound cold and enormous.",
+  "hook": "A precise digital echo that one producer used to make drums sound like they were in another room.",
+  "blurb": {
+    "age7": "A machine that makes echoes, used by one producer to make drums sound strange and far away.",
+    "age13": "Echo machines used to use tape, which hissed and wobbled. This one was digital, so the echoes came back clean and exact. Martin Hannett, who produced Joy Division, used it in odd ways, with echo times so short or so uneven that the drums stopped sounding like ordinary drums. That is a big part of why 'Unknown Pleasures' sounds so cold and empty.",
+    "adult": "Hannett's use of the DMX 15-80 is well attested by the band and in accounts of the sessions, and he is repeatedly cited as calling it a favourite. What mattered was not the delay as echo but as a way to relocate a sound in space: very short delay times and irregular settings produced a separated, chilled drum sound that became a template for post-punk production."
+  }
+}

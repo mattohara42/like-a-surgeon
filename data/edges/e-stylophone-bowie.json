@@ -1,0 +1,32 @@
+{
+  "id": "e-stylophone-bowie",
+  "from": "dubreq-stylophone",
+  "to": "david-bowie",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1969,
+  "crossLineage": true,
+  "evidence": "Tony Visconti has described Bowie as one of the first owners of a Stylophone and as writing 'Space Oddity' around its sound. The connection is restated in the 2021 collaboration between the David Bowie Archive and Dubreq. Bowie returned to the instrument on later recordings.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Dubreq",
+      "title": "Stylophone",
+      "year": 1968,
+      "search": false
+    },
+    "later": {
+      "artist": "David Bowie",
+      "title": "Space Oddity",
+      "year": 1969
+    },
+    "whatToListenFor": "Listen in the gaps between the sung lines for a thin, reedy, buzzing melody. It plays one note at a time, with no chords and no warmth. It is exactly the sound of the toy, and it is placed at the centre of a record about a man alone in space. The cheapness is part of what makes it sound lonely."
+  },
+  "explanation": {
+    "age7": "A toy keyboard makes the buzzing sound on a famous song about an astronaut.",
+    "age13": "Bowie got a Stylophone, a toy you play with a metal pen, and wrote 'Space Oddity' around its thin buzzing sound. The song became his first big hit. A children's gadget ended up as the sound of an astronaut floating away from Earth.",
+    "adult": "The Stylophone is a single-voice toy, and Bowie used it as one rather than disguising it. That treatment of a limited machine as a distinctive voice, instead of a poor imitation of a better instrument, runs through a great deal of electronic music later on this map."
+  },
+  "tags": [
+    "technology"
+  ]
+}

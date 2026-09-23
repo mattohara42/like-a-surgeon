@@ -1,0 +1,33 @@
+{
+  "id": "e-mutron-perry",
+  "from": "mu-tron-bi-phase",
+  "to": "lee-perry",
+  "type": "technological",
+  "confidence": "consensus",
+  "year": 1976,
+  "crossLineage": true,
+  "evidence": "Accounts of the Black Ark list a Mu-Tron phaser among its core equipment from the mid-1970s, and most identify it as the Bi-Phase. That Perry swept it by hand during mixes rests on those accounts and on how the records sound. The model attribution varies between sources, which is why this edge sits at consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Musitronics",
+      "title": "Mu-Tron Bi-Phase",
+      "year": 1975,
+      "search": false
+    },
+    "later": {
+      "artist": "The Congos",
+      "title": "Heart of the Congos",
+      "year": 1977
+    },
+    "whatToListenFor": "Put on the album and follow the cymbals and hi-hats. At points they begin to swirl, a hollow whoosh like a jet passing overhead, rising and falling at a speed that drifts instead of repeating evenly. That is the phaser, and the uneven speed is a hand on the control rather than a setting."
+  },
+  "explanation": {
+    "age7": "Lee Perry used a machine that makes a whooshing sound, like a jet flying past.",
+    "age13": "A phaser makes music sound like it is swirling. Lee Perry ran whole songs through one and moved the controls by hand while the music played. On albums he produced, like 'Heart of the Congos', the cymbals and drums swoosh back and forth. That swirl is one of the easiest ways to recognise his records.",
+    "adult": "Perry's use of the phaser belongs with Tubby's use of the console filter and the Space Echo: processing treated as live performance. The difference is timbral. Where Tubby carved space out of a mix, Perry tended to smear and saturate it."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}
