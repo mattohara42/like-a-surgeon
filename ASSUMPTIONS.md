@@ -1285,3 +1285,16 @@ each disagreement.
   and the ownership story now gives the bankruptcy and the settlement.
   Discogs confirms Metroplex (1985), Transmat (1986), KMS (1987), Tommy
   Boy (1981) and Factory (1978 to 1992) as the records have them.
+- **A169. e-dilla-roots had its pair in the wrong order.** 'Fall in
+  Love' (released 2000) was the earlier record and Things Fall Apart
+  (1999) the later one. That pairing came from A124, which picked the
+  track for how confidently its sound could be described. Fantastic,
+  Vol. 2 was finished in 1998 and circulated on advance cassettes that
+  year, before its delayed release, and Questlove is recorded as
+  championing it in that period. So the edge's earlier side is dated
+  1998, and the evidence explains why. Dilla's `signatureTracks` keeps
+  2000, because that field records release years. A scan for other pairs
+  with the earlier record dated after the later one found none, so this
+  was the only case besides e-baker-bambaataa (A158). Delia Derbyshire's
+  1975 end year (A147) is confirmed by Wikipedia's "In 1975, she
+  stopped producing music".

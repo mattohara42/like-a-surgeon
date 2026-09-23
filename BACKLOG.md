@@ -451,3 +451,25 @@ fixing them inline.)
 - At 1280x800 in the lineage arrangement, the "ROCK" lane title draws
   under the reading-level toggle, so "ADULT" and "ROCK" overlap. Lane
   titles give way to node names (A106) but not to the fixed controls.
+
+- `tools/validate.js` does not check that a track pair's `earlier.year`
+  is no later than its `later.year`. Two edges shipped with the order
+  inverted (e-baker-bambaataa, e-dilla-roots, see A158 and A169), and
+  both were found only by the source verification pass. It's a one-line
+  warning in the validator. It should probably warn rather than error,
+  since a pair can legitimately date the earlier side by circulation
+  rather than release, as e-dilla-roots now does.
+- The source verification pass (A155 onward) was run from throwaway
+  scripts: a Wikidata diff of every node, a MusicBrainz year check of
+  every track, and Discogs credit checks. They could live in `tools/`
+  as a dev-only `npm run crosscheck`, which reads the data, queries the
+  sources politely, and writes a report of disagreements to review. That
+  would make re-checking cheap after each batch. It needs network access,
+  which the app must never have but a dev tool can. Worth deciding
+  whether that line is acceptable before building it.
+- Storing a Wikidata QID on each node would make every future cross-check
+  exact rather than a title match (the first pass had to hand-map 150
+  titles). It's a schema change and an extra field on every record, so
+  it wants Matt's view. It fits the one-file-per-record rule, since the
+  ID lives in the record itself.
+
