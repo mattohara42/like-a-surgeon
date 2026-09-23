@@ -462,7 +462,7 @@ fixing them inline.)
   the pair look fine to both tools (A158). A validator warning would
   catch the first kind at authoring time. Nothing but source checking
   catches the second.
-- The source verification pass (A155 onward) was run from throwaway
+- **Built** as `tools/crosscheck.js` (A173). The source verification pass (A155 onward) was run from throwaway
   scripts: a Wikidata diff of every node, a MusicBrainz year check of
   every track, and Discogs credit checks. They could live in `tools/`
   as a dev-only `npm run crosscheck`, which reads the data, queries the
@@ -475,4 +475,16 @@ fixing them inline.)
   titles). It's a schema change and an extra field on every record, so
   it wants Matt's view. It fits the one-file-per-record rule, since the
   ID lives in the record itself.
+
+- Five nodes are still orphans after the orphans batch (A177). Each waits
+  for a specific artist, not for more research. **Transmat** connects when
+  Carl Craig (released as Psyche on Transmat) or another non-founder
+  Transmat artist is on the map. **KMS** connects with MK or Chez Damier.
+  **Rockers International** connects with Hugh Mundell or Jacob Miller,
+  whose records Pablo produced for it. **Kling Klang** (the label) may never
+  have an A69 edge, since it only ever released Kraftwerk. The Düsseldorf
+  scene record now carries the studio's effect (e-dusseldorf-kraftwerk).
+  **Brunswick** was only Decca's imprint for Shel Talmy's lease deal, and
+  its honest edge probably runs through Talmy if he becomes a node. It
+  may be better merged into a note on the Who than kept as a label node.
 

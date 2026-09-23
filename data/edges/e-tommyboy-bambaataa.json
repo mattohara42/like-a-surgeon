@@ -1,0 +1,31 @@
+{
+  "id": "e-tommyboy-bambaataa",
+  "from": "tommy-boy",
+  "to": "afrika-bambaataa",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1981,
+  "crossLineage": false,
+  "evidence": "Tommy Boy's owner Tom Silverman is credited as executive producer on 'Jazzy Sensation' (Tommy Boy TB 812, 1981), with Arthur Baker as producer (label credits as transcribed on Discogs). Wikipedia's article on 'Planet Rock' says Silverman asked Baker, the only producer he knew, to produce that record, and the same pairing made 'Planet Rock' the next year. Bambaataa's earlier single for Paul Winley Records had left him disappointed, and he left that label.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Afrika Bambaataa & the Soulsonic Force",
+      "title": "Zulu Nation Throwdown",
+      "year": 1980
+    },
+    "later": {
+      "artist": "Afrika Bambaataa and the Soulsonic Force",
+      "title": "Planet Rock",
+      "year": 1982
+    },
+    "whatToListenFor": "Two records by the same crew on two labels. The Winley single is rap over a band track arranged for them, the sound most rap records had after 'Rapper's Delight'. 'Planet Rock' is what happened when the new label paired Bambaataa with a producer: his record collection, Kraftwerk included, rebuilt in a studio around a drum machine. Listen for whose taste is running the record."
+  },
+  "explanation": {
+    "age13": "Before Tommy Boy, Afrika Bambaataa made a record for another label and didn't like how it turned out. Tommy Boy's owner, Tom Silverman, put him together with a producer, Arthur Baker. A year later Bambaataa and Baker made 'Planet Rock'.",
+    "adult": "A label edge in the plainest sense of A69: the owner's decision was the pairing, and the credits show it. The contrast with Bambaataa's Winley single matters because the two records came out of the same crew within two years."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

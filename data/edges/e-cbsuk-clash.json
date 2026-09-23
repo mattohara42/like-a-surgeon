@@ -1,0 +1,31 @@
+{
+  "id": "e-cbsuk-clash",
+  "from": "cbs-uk",
+  "to": "the-clash",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1977,
+  "crossLineage": false,
+  "evidence": "The record is the evidence. 'Complete Control' (CBS, 1977) is about its own label: its lyrics describe CBS releasing 'Remote Control' as a single without asking the band, and the manager who wanted control of the group. Wikipedia's article on the song gives the same account and names the label's release of 'Remote Control' as the song's motivation.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Clash",
+      "title": "Remote Control",
+      "year": 1977
+    },
+    "later": {
+      "artist": "The Clash",
+      "title": "Complete Control",
+      "year": 1977
+    },
+    "whatToListenFor": "Play the single CBS chose, then the band's answer a few months later. 'Remote Control' is an album track about bans and bureaucracy that the label put out on its own. 'Complete Control' is a song about that decision, so listen to the words as much as the guitars: the verses tell the story of the release, the chorus throws the phrase back at the label and the manager, and the record exists because the band lost an argument."
+  },
+  "explanation": {
+    "age13": "The Clash signed to CBS, a big American-owned company. In 1977 CBS released one of their songs, 'Remote Control', as a single without asking them. The band were furious and wrote 'Complete Control' about it, a song attacking their own record company, which CBS then released too.",
+    "adult": "A label edge under A69 where the label's decision produced a record directly: a single chosen over the band's heads, answered by a song about the choosing. It is also the plainest case on the map of punk's argument with the industry that paid for it, made on that industry's own label."
+  },
+  "tags": [
+    "labels",
+    "politics"
+  ]
+}

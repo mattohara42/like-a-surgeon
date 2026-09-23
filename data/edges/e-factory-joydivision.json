@@ -1,0 +1,33 @@
+{
+  "id": "e-factory-joydivision",
+  "from": "factory",
+  "to": "joy-division",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1979,
+  "crossLineage": false,
+  "evidence": "Unknown Pleasures (Factory, 1979) is credited as produced by Martin Hannett, one of Factory's founding partners and its in-house producer. It was recorded and mixed at Strawberry Studios in Stockport in April 1979 and paid for by the label: Tony Wilson later put the cost at £18,000. Joy Division had asked to be released from an RCA deal partly because they disliked how their music was mixed there, and their manager chose Factory for its 50/50 profit split (Wikipedia's articles on the album and on Factory Records).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Joy Division",
+      "title": "An Ideal for Living (EP)",
+      "year": 1978,
+      "search": "Joy Division An Ideal for Living"
+    },
+    "later": {
+      "artist": "Joy Division",
+      "title": "Unknown Pleasures (album)",
+      "year": 1979,
+      "search": "Joy Division Unknown Pleasures"
+    },
+    "whatToListenFor": "The 1978 EP is the band on their own, paying for it themselves: fast, plain and close to the punk gig that started them. A year later, with the label's money and the label's producer, the same four players sound like they are in a much larger, colder room. Listen to the drums and the space around them on Unknown Pleasures. The separation and the echoes come from Hannett's desk, not from the band, and that sound is the label's contribution."
+  },
+  "explanation": {
+    "age13": "Factory Records was a small Manchester label. It paid for Joy Division's first album and put them in the studio with Martin Hannett, who was one of the label's founders and its producer. Hannett used echo machines and odd recording tricks to make them sound spacious and cold, which is very different from their earlier punk recordings.",
+    "adult": "A label edge where the label's founder working as producer is the decision that changed the record, as with Ruffhouse and The Goats. Factory's other distinctive decisions, the profit split and letting bands own their recordings, belong to its ownership story rather than to this sound."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

@@ -12,9 +12,9 @@ Regenerate with `npm run report`. This report describes the dataset only;
 | machines | 30 | 25 | met |
 | scenes | 10 | 20 | 50% |
 | labels | 17 | 30 | 57% |
-| edges | 141 | 350 | 40% |
+| edges | 153 | 350 | 44% |
 | threads | 2 | 5 | 40% |
-| crossLineageEdges | 62 | 60 | met |
+| crossLineageEdges | 64 | 60 | met |
 | edgesWithDemo | 4 | 30 | 13% |
 
 ## Counts by lineage
@@ -49,8 +49,8 @@ Artists alone:
 | direct | 36 |
 | production | 21 |
 | sample | 19 |
-| scene | 13 |
-| label | 5 |
+| scene | 17 |
+| label | 13 |
 | reaction-against | 2 |
 | cover | 1 |
 | rediscovery | 1 |
@@ -59,8 +59,8 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 93 |
-| consensus | 47 |
+| documented | 99 |
+| consensus | 53 |
 | asserted | 1 |
 
 ## The 20 edges to read hardest
@@ -233,126 +233,126 @@ Evidence: John Lydon played Can on his guest programme on Capital Radio on 16 Ju
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 141 edges that carry one.
+Drawn with seed 1 from the 153 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-foster-tribe`
+### 1. `e-sade-mfdoom`
 
-Ronnie Foster, "Mystic Brew" (1972) to A Tribe Called Quest, "Electric Relaxation" (1993)
+Sade, "Kiss of Life" (1992) to MF DOOM, "Doomsday" (1999)
 
-Listen for the melancholy keyboard phrase in 'Mystic Brew', then hear Tribe loop it. The phrase that drifts in the original becomes a steady cycle, with soft drums sitting quietly under it. It's so relaxed that Q-Tip and Phife seem to be talking over it rather than rapping on top of it. The mood of a 1972 jazz record becomes the whole identity of the song.
+'Kiss of Life' is warm and slow, with soft keyboards, a gentle bass and Sade's calm voice. DOOM loops a piece of that warmth and puts his flat, deadpan voice over it. Listen for the contrast: a love song's smoothness under a rapper describing coming back from the worst years of his life.
 
-### 2. `e-beatles-rollingstones`
+### 2. `e-ruffhouse-goats`
 
-The Beatles, "I Wanna Be Your Man" (1963) to The Rolling Stones, "I Wanna Be Your Man" (1963)
+Cypress Hill, "How I Could Just Kill a Man" (1991) to The Goats, "Tricks of the Shade (album)" (1992)
 
-The same song by two bands in the same year. The Beatles' version, sung by Ringo, bounces along as cheerful beat music. The Stones' is rougher and faster, with Brian Jones's slide guitar wailing over it. Listen for how the Stones turn a Beatles pop song into something closer to the American R&B they were copying.
+Ruffhouse's first two rap records, a year apart and from the same studio, went opposite ways. Cypress Hill's is built from samples, murky and looped. Tricks of the Shade is backed by a live band, with horns and piano played by musicians, under three voices trading political verses and sketches. Listen for players rather than loops, and for how much the label let a debut album sprawl: twenty-five tracks, with a story running through them.
 
-### 3. `e-hendrix-cypresshill`
+### 3. `e-tommyboy-bambaataa`
 
-The Jimi Hendrix Experience, "Are You Experienced?" (1967) to Cypress Hill, "How I Could Just Kill a Man" (1991)
+Afrika Bambaataa & the Soulsonic Force, "Zulu Nation Throwdown" (1980) to Afrika Bambaataa and the Soulsonic Force, "Planet Rock" (1982)
 
-'Are You Experienced?' is full of sounds played backwards on tape: guitar and drums that swell up and cut off where they'd normally ring out. Muggs lifts a short guitar lick from it and loops it under B-Real's high voice and his own murky drums. Listen for Hendrix's guitar turned into a repeating pattern, a piece of 1967 psychedelia working as a hook in a 1991 rap single.
+Two records by the same crew on two labels. The Winley single is rap over a band track arranged for them, the sound most rap records had after 'Rapper's Delight'. 'Planet Rock' is what happened when the new label paired Bambaataa with a producer: his record collection, Kraftwerk included, rebuilt in a studio around a drum machine. Listen for whose taste is running the record.
 
-### 4. `e-mutron-perry`
+### 4. `e-peterock-nas`
 
-Musitronics, "Mu-Tron Bi-Phase" (1975) to The Congos, "Heart of the Congos" (1977)
+Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992) to Nas, "The World Is Yours" (1994)
 
-Put on the album and follow the cymbals and hi-hats. At points they begin to swirl, a hollow whoosh like a jet passing overhead, rising and falling at a speed that drifts instead of repeating evenly. That is the phaser, and the uneven speed is a hand on the control rather than a setting.
+Two years apart and the same idea from Pete Rock: a soft jazz phrase looped under heavy drums, turned melancholy. On 'T.R.O.Y.' it's a saxophone. On 'The World Is Yours' it's a gentle piano from an Ahmad Jamal record. Listen for how the piano keeps circling while Nas talks about ambition, the sweetness of the loop working against the hardness of the words.
 
-### 5. `e-pistols-pil`
+### 5. `e-honeydrippers-marleymarl`
 
-Sex Pistols, "Anarchy in the U.K." (1976) to Public Image Ltd, "Public Image" (1978)
+The Honey Drippers, "Impeach the President" (1973) to MC Shan, "The Bridge (produced by Marley Marl)" (1986)
 
-Same singer, opposite record. "Anarchy" is a three-chord shout. "Public Image" opens with a huge, un-punk guitar chime, and Lydon sings about his own manufactured persona rather than trying to provoke the audience.
+The song opens on its drums alone for a few bars: a bouncy kick, a snare with a bright crack, and an open hi-hat that breathes between hits. Then play 'The Bridge'. Marl has lifted that kick and snare and set them against the steady tick of a drum machine's hi-hat. Listen for the two sources side by side: the real drum carrying a room and a tape hiss, the machine's hat perfectly even.
 
-### 6. `e-rza-wutang`
+### 6. `e-madlib-mfdoom`
 
-Wu-Tang Clan, "Protect Ya Neck" (1992) to Wu-Tang Clan, "C.R.E.A.M." (1993)
+MF DOOM, "Doomsday" (1999) to Madvillain, "Accordion" (2004)
 
-'Protect Ya Neck' opens on kung fu film dialogue and then runs eight rappers back to back over a raw, clattering loop. It sounds almost homemade, and it was self-released. 'C.R.E.A.M.', a year later, slows everything down: a sad, looping soul piano from a Charmels record, with space around each verse. Listen for RZA moving from chaos to melancholy with the same dusty texture holding both together.
+On 'Doomsday' DOOM produces himself, looping a smooth, sweet phrase from Sade's 'Kiss of Life' under his flat, unhurried voice. On 'Accordion' Madlib gives him something stranger: a wheezing, reedy loop that sounds like an accordion but was played on a cheap electric chord organ. Listen for how the rougher, odder beat pushes DOOM's rhyming, dense chains of internal rhyme packed into a short verse over one repeating figure.
 
-### 7. `e-tomscott-peterock`
+### 7. `e-elpico-kinks`
 
-Tom Scott and the California Dreamers, "Today" (1967) to Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992)
+Dave Davies, "Elpico amplifier with a slashed speaker" (1964) to The Kinks, "You Really Got Me" (1964)
 
-Wait for Scott's saxophone solo in 'Today', then listen to 'T.R.O.Y.'. Pete Rock has taken pieces of that solo and turned them into a short, repeating horn line, the melody everyone remembers. A soft 1967 version of a Jefferson Airplane song has become a memorial for a friend who died. The notes are Scott's. The grief is Pete Rock's.
+The riff is two chords, a step apart, played over and over. Listen to the edges of each chord rather than the notes: a papery rattle and crackle rides on top of it, loudest as each chord dies away. That is a torn speaker cone flapping. When the song lifts the riff higher, the grit comes along with it. Nothing in the chain was built to sound like that.
 
-### 8. `e-radiophonic-derbyshire`
+### 8. `e-re201-tubby`
 
-BBC Radiophonic Workshop, "early radio sound work" (1958) to Delia Derbyshire, "Doctor Who theme" (1963)
+Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to King Tubby, "Dub from the Roots" (1974)
 
-Start with the bassline: a plucked string, recorded, then copied and cut so that every note is the same length and attack. Over it, the melody slides between notes, made from oscillators with the pitch swept by hand. There's no keyboard anywhere. Each note was a separate piece of tape, and the swoop you hear is someone turning a dial while the tape ran. Listen for how clean and mechanical the bass sounds next to how wild the tune is.
+Compare the echo here with Perry's. Tubby's repeats are cleaner and more rhythmic, placed so they land where a drum would have landed, so the delay becomes part of the pattern rather than a haze over it. Same kind of box, opposite instinct: Perry lets it flood, Tubby uses it to keep time.
 
-### 9. `e-moog-tangerinedream`
+### 9. `e-swinginglondon-hendrix`
 
-R. A. Moog Co., "Moog modular synthesizer with 960 sequencer" (1965) to Tangerine Dream, "Phaedra" (1974)
+The Who, "My Generation" (1965) to The Jimi Hendrix Experience, "Purple Haze" (1967)
 
-Wait for the pulse. A short row of bass notes repeats, bubbling, while its brightness slowly opens and closes as someone turns a filter knob. Nobody is playing those notes. The sequencer is. The musicians play over it: drifting Mellotron, echoing synth lines. Listen for the loop slightly changing pitch and tone over minutes, which is the hand on the knob, and for how long it keeps going without ever settling into a song.
+London in 1965 was already playing loud: listen to the feedback and the smashed chords at the end of 'My Generation'. Then play 'Purple Haze' a year and a half later. An American who arrived in that scene took the same noise, the fuzz and the feedback, and made it melodic, with the distortion carrying the tune instead of wrecking it. The scene gave him an audience ready for that.
 
-### 10. `e-pil-joydivision`
-
-Public Image Ltd, "Public Image" (1978) to Joy Division, "Transmission" (1979)
-
-Both push the bass into the lead role a guitar or vocal would normally hold, leaving space around it rather than filling every bar, even though the two basslines sound nothing alike.
-
-### 11. `e-perry-clash-production`
-
-Lee "Scratch" Perry, "Black Ark productions" (1976) to The Clash, "Complete Control" (1977)
-
-Perry's own records are all space and echo. The Clash single is not, because the band and label largely mixed his approach back out. What survives is the treatment on the vocal and the size of the drum sound. This is a good example of an influence being audible in the negotiation rather than the result.
-
-### 12. `e-mpc60-premier`
-
-Akai, "MPC60, sixteen pads and a sequencer" (1988) to Gang Starr, "Moment of Truth" (1998)
-
-Listen to the drums. Each hit is a single, short, tightly trimmed sound, a kick, a snare, a hat, played from the pads rather than looped as a chunk of someone else's drummer. That is why they sound so punchy and separate. Then listen to the sample on top. It has been cut into small pieces and replayed in a new order, so you hear a phrase you almost recognise that never quite goes where the original did.
-
-### 13. `e-marleymarl-peterock`
-
-Marley Marl, "The Symphony, produced for the Juice Crew" (1988) to Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992)
-
-Both are built on one short loop running under the vocals, and both keep the drums heavy and forward. Then listen to what Pete Rock added to Marl's approach. On 'The Symphony' the loop is hard and the drums dominate, leaving four MCs to fight over it. On 'T.R.O.Y.' the loop is a saxophone phrase from a Tom Scott jazz record, over a bassline that sounds rounded and dark. It is the same way of building a beat, turned warm and mournful.
-
-### 14. `e-kraftwerk-planetrock`
-
-Kraftwerk, "Trans-Europe Express" (1977) to Afrika Bambaataa & Soulsonic Force, "Planet Rock" (1982)
-
-Hum the Kraftwerk melody, then play 'Planet Rock'. It is the same line, faster and harder. Underneath, the rhythm is lifted from a different Kraftwerk track entirely, and the drum sounds come from an 808. Three separate sources welded into one record.
-
-### 15. `e-kraftwerk-may`
-
-Kraftwerk, "Numbers" (1981) to Rhythim Is Rhythim, "Strings of Life" (1987)
-
-Kraftwerk's rhythm is rigid and repeats without variation. May keeps the rigidity in the drums but layers a string figure that swells and falls, funk phrasing riding on top of a Kraftwerk-style engine.
-
-### 16. `e-herc-cokelarock`
-
-DJ Kool Herc, "the back-to-school jam at 1520 Sedgwick Avenue" (1973) to Coke La Rock, "shout-outs over Herc's records at Bronx parties" (1973)
-
-Nothing was recorded, so listen forward instead. Take any rap record and strip out the rhyme, the meter and the subject, and what is left underneath is a person naming friends in the room over somebody else's drums. That residue is what La Rock was doing, and it is the part that never went away.
-
-### 17. `e-schaeffer-stockhausen`
-
-Pierre Schaeffer, "Étude aux chemins de fer" (1948) to Karlheinz Stockhausen, "Konkrete Etüde" (1952)
-
-Schaeffer's piece is built from what the microphone caught: engine chuffs, whistles, wheels on joins, looped until they swing. Stockhausen's study is three minutes long and sounds far more controlled. He recorded short, struck sounds and cut them into precise lengths on tape, so the piece is about duration and order rather than about trains. Listen for the same razor-blade method used by two different minds: one looking for rhythm in noise, the other imposing a plan on it.
-
-### 18. `e-303-phuture`
-
-Roland, "TB-303 as intended" (1981) to Phuture, "Acid Tracks" (1987)
-
-The pattern of notes barely changes for twelve minutes. Everything that moves is the filter, opening and closing, and the resonance screaming at the top. Listen for the slide between notes, which is the machine doing a thing a bass player would do, badly, and brilliantly.
-
-### 19. `e-hardy-heard`
+### 10. `e-hardy-heard`
 
 Ron Hardy, "Music Box DJ sets" (1984) to Mr. Fingers (Larry Heard), "Can You Feel It" (1986)
 
 Heard's record is slower and softer than most of what Hardy played, which is itself part of the story: the Music Box could break a record that didn't sound like everything else in the room.
 
-### 20. `e-teac-perry`
+### 11. `e-sugarhill-mellemel`
 
-TEAC, "A-3340 four-track recorder" (1972) to Junior Murvin, "Police and Thieves" (1976)
+The Sugarhill Gang, "Rapper's Delight" (1979) to Grandmaster Flash and the Furious Five, "The Message" (1982)
 
-Listen to the rhythm under Murvin's high voice. It is dense and slightly blurred, as if heard through gauze. Drums, percussion and guitar melt into one texture instead of standing apart. Each time Perry combined finished parts onto one track to make room for more, another layer of hiss and softness went on. The haze is what four tracks cost, spent on purpose.
+Both records are played by the same house band rather than assembled from other people's records, and once you know that you can hear it: the music breathes, pushes and drags the way people do. Sugar Hill's rap records sound like funk records with rappers on them, because that is literally what they are. That house-band sound is a label decision, not an artist's.
+
+### 12. `e-perry-sherwood`
+
+Lee "Scratch" Perry, "Black Ark productions" (1976) to African Head Charge, "My Life in a Hole in the Ground" (1981)
+
+Both records treat the mix itself as the instrument: sounds appear and vanish, echo is pushed to the point of distortion, and the 'song' is really a shifting arrangement rather than a fixed structure.
+
+### 13. `e-rubin-rundmc`
+
+Aerosmith, "Walk This Way" (1975) to Run-D.M.C., "Walk This Way (with Aerosmith)" (1986)
+
+Start with the first seconds of each. Aerosmith's opens on a drummer's short, dry break, then the guitar riff. Run-D.M.C.'s opens on that same break, then Jam Master Jay cutting the guitar riff back and forth on a turntable, the way a DJ had been using the record at parties for years. Then the real guitar and Steven Tyler's voice arrive and sit next to the rapping. You are hearing a rock record the way hip-hop had always used it, as material, before its band walks in and joins.
+
+### 14. `e-simmons-sly`
+
+Simmons, "SDS-V electronic drums" (1981) to Black Uhuru, "Anthem" (1983)
+
+Listen to the drum fills. In places, instead of the round thud of a drum skin, a tom comes out as a short electronic zap that swoops down in pitch. Underneath it, the groove is still Sly's: the kick and snare placed with a reggae drummer's sense of where the beat should sit. The machine sound, played by a human, is the combination to hear.
+
+### 15. `e-bongoband-herc`
+
+Incredible Bongo Band, "Apache" (1973) to The Sugarhill Gang, "Apache" (1981)
+
+In the 1973 record, wait for the long passage where the melody drops away and bongos and drums play on their own. It runs far longer than most breaks, which is exactly why a DJ with two copies could stretch it out. Then play the Sugarhill Gang's 1981 'Apache', where a studio band replays the groove under rapping and chants. Listen for how the break has become the song.
+
+### 16. `e-eps16-rza`
+
+Ensoniq, "EPS-16 Plus, sixteen-bit keyboard sampler" (1990) to Wu-Tang Clan, "C.R.E.A.M." (1993)
+
+Listen to the length of the loop. The piano phrase in 'C.R.E.A.M.' runs for bars, a whole musical sentence repeating, which the SP-1200's ten seconds made hard. The sound is also cleaner at the top, without the SP's crunch, though RZA kept it dusty and dark. That's the machine allowing the long, sad phrase to become the song's whole mood.
+
+### 17. `e-tubby-atkins-resemblance`
+
+King Tubby, "various versions" (1976) to Juan Atkins, "No UFO's" (1985)
+
+Both treat the mixing desk as the instrument and the arrangement as something to be performed rather than fixed. This is a resemblance we are pointing out, not a line of transmission we can trace.
+
+### 18. `e-marleymarl-lotug`
+
+Marley Marl featuring MC Shan, "Marley Marl Scratch" (1985) to Lords of the Underground, "Lord Jazz Hit Me One Time (Make It Funky)" (1993)
+
+Here the producer samples himself. 'Marley Marl Scratch' is one of his first records, from before sampling drums was his method. Eight years later a piece of it turns up inside a Lords of the Underground track he produced. Listen for the older record returning as material, and for how it's become a sound source inside a bigger, busier 1993 production built around the group's DJ.
+
+### 19. `e-plank-kraftwerk`
+
+Kraftwerk, "Ralf und Florian" (1973) to Kraftwerk, "Autobahn" (1974)
+
+On 'Ralf und Florian' the sounds are still loose, with drifting organ, flute and electronic percussion. On 'Autobahn' they lock into place: a steady synthesized bass, a clean electronic rhythm, and car sounds sweeping across the stereo field. Listen for the passing cars and the Doppler swoosh, which are recordings placed in space, and for how exact every sound's position is. That clarity is engineering as much as composition.
+
+### 20. `e-marleymarl-llcoolj`
+
+LL Cool J, "I Can't Live Without My Radio" (1985) to LL Cool J, "Mama Said Knock You Out" (1990)
+
+Same rapper, same label, five years apart, and a different source for the drums. On 'Radio' they are drum machine hits, clean and identical each time. On 'Mama Said Knock You Out' the beat is built from pieces of older recordings, so the drums carry grit and room sound, and the loop has a live, rolling weight the machine never had.

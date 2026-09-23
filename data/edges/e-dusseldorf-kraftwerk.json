@@ -1,0 +1,31 @@
+{
+  "id": "e-dusseldorf-kraftwerk",
+  "from": "dusseldorf-kling-klang",
+  "to": "kraftwerk",
+  "type": "scene",
+  "confidence": "consensus",
+  "year": 1970,
+  "crossLineage": false,
+  "evidence": "Kling Klang began in 1970 as an empty room in a workshop building in Düsseldorf, and the band have marked it as the real beginning of Kraftwerk. Having their own room let them produce themselves. Without a drummer in 1971 they bought a cheap drum machine and treated it with echo and filtering, and by 1976 they were recording Trans-Europe Express there with sequencers they had commissioned to drive their Minimoog (Wikipedia's article on Kling Klang Studio). Held at consensus because the band's own framing reaches the map through a secondary source.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Kraftwerk",
+      "title": "Ruckzuck",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Kraftwerk",
+      "title": "Trans-Europe Express",
+      "year": 1977
+    },
+    "whatToListenFor": "Listen to who keeps time. 'Ruckzuck' is a flute riff over drums played by a person, speeding up as they go. 'Trans-Europe Express' is made in the same private room seven years later, and the rhythm is a machine's, steady and mechanical, with the synthesizer patterns running from sequencers the band had built for them. The studio is how they got from one to the other without anyone else's clock."
+  },
+  "explanation": {
+    "age13": "Kraftwerk's studio, Kling Klang, was a room in a Düsseldorf workshop that the band set up in 1970. Because it was theirs, they could spend as long as they liked there and build their own equipment. They say that room was the real start of Kraftwerk.",
+    "adult": "A scene edge where the scene is mostly one room. The Düsseldorf scene record is defined by Kling Klang, and the causal claim is the room's: time and control that a commercial studio could not have given, which is where the drum machines and sequencers came in."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

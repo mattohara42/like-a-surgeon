@@ -1,0 +1,32 @@
+{
+  "id": "e-trax-chicagohouse",
+  "from": "trax",
+  "to": "chicago-house",
+  "type": "label",
+  "confidence": "consensus",
+  "year": 1984,
+  "crossLineage": false,
+  "evidence": "Larry Sherman bought Musical Products, a pressing plant, in 1983, and Trax released many of Chicago house's defining records from it, including 'Move Your Body' and 'Can You Feel It' (both 1986). Sherman was criticised for poor-quality pressings, partly from recycled vinyl, and for unpaid royalties, which later led to lawsuits (Wikipedia's article on Trax Records). This is a label-to-scene edge, which A69 did not anticipate: its claim is about how the scene's records were made and sold, not about one artist's output. Held at consensus because the account is secondary.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Frankie Knuckles",
+      "title": "Warehouse DJ sets",
+      "year": 1982,
+      "search": false
+    },
+    "later": {
+      "artist": "Marshall Jefferson",
+      "title": "Move Your Body (The House Music Anthem)",
+      "year": 1986
+    },
+    "whatToListenFor": "Before labels like Trax, this music was mostly heard in the clubs, on DJs' edits and tapes. 'Move Your Body' is the same music as a product you could buy, pressed at the label owner's own plant. Listen to an original Trax pressing if you ever get the chance, and for the surface noise: the cheap, recycled vinyl was part of the sound people bought."
+  },
+  "explanation": {
+    "age13": "Trax Records owned its own pressing plant, the factory that makes vinyl records. That meant Chicago house producers could get records made quickly and cheaply, and the label released many of the most important early house records. But the records were often badly pressed, and many of the musicians say they were never paid properly.",
+    "adult": "The scene's records existed as records largely because one man owned a pressing plant, and the same ownership is behind house music's best-known royalty disputes. Both facts are the label's decisions. An edge to the scene rather than to any one artist is the honest shape for that."
+  },
+  "tags": [
+    "labels",
+    "technology"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-pye-kinks",
+  "from": "pye",
+  "to": "the-kinks",
+  "type": "label",
+  "confidence": "consensus",
+  "year": 1964,
+  "crossLineage": false,
+  "evidence": "Ray Davies's account, reported in Wikipedia's article on 'You Really Got Me': the band wanted to re-record the song after a first version covered in reverb, Pye refused to pay for another session because the band's first two singles had failed to chart, and Davies threatened not to promote the single. The band's management paid for the second session themselves. The re-recorded version was released by Pye in August 1964 and reached number one. Held at consensus because the account is Davies's, reached here through a secondary source.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Kinks",
+      "title": "Long Tall Sally",
+      "year": 1964
+    },
+    "later": {
+      "artist": "The Kinks",
+      "title": "You Really Got Me",
+      "year": 1964
+    },
+    "whatToListenFor": "The Kinks' first single for Pye is a cover of a Little Richard song. Their third is Ray Davies's own riff, two chords over and over, on a guitar played through a torn speaker. The version you know is the second attempt, made on a session the label wouldn't pay for. Listen for how dry and close the guitar is: the band's complaint about the first version was that the reverb buried it."
+  },
+  "explanation": {
+    "age13": "Pye was the Kinks' record company. When the band wanted to record 'You Really Got Me' again because the first version sounded wrong, Pye refused to pay, since their first two singles hadn't sold. The band's managers paid instead. The new version went to number one.",
+    "adult": "An unusual label edge: the label's decision was a refusal, and the record that mattered was made in spite of it. It belongs on the map because it shows how little room the standard 1960s deal left a band, and what it took to get the sound they heard in their heads onto the record."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-virgin-tangerinedream",
+  "from": "virgin",
+  "to": "tangerine-dream",
+  "type": "label",
+  "confidence": "consensus",
+  "year": 1973,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on Phaedra: Richard Branson heard recordings Edgar Froese and Christopher Franke had made in Berlin, gave the band a contract with Virgin, and encouraged them to come to England. The band bought a modular Moog with their advance and recorded Phaedra in November 1973 at the Manor, Virgin's studio in Oxfordshire. It was released by Virgin in February 1974. Held at consensus because the chain from the advance to the instrument is told in secondary sources.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Tangerine Dream",
+      "title": "Atem",
+      "year": 1973
+    },
+    "later": {
+      "artist": "Tangerine Dream",
+      "title": "Phaedra",
+      "year": 1974
+    },
+    "whatToListenFor": "Atem, the last album for their German label, is built from long organ and Mellotron sounds that swell and fade. Phaedra, the first for Virgin, was made with the Moog the Virgin advance paid for, in Virgin's own studio. Listen for the change underneath: a repeating electronic pattern that the machine plays by itself, so the music has a pulse without a drummer."
+  },
+  "explanation": {
+    "age13": "Virgin was a new British label. Its boss, Richard Branson, heard Tangerine Dream's recordings, signed them and invited them to England. The band spent their advance on a big Moog synthesizer and recorded their next album, Phaedra, in Virgin's own studio. It became one of their best-known records.",
+    "adult": "A label edge where the label's money bought the instrument and its studio made the record. It is also cross-lineage in a small way: a German electronic group on a British label that had begun as a shop selling German imports, which is how the label came to hear them."
+  },
+  "tags": [
+    "labels",
+    "technology"
+  ]
+}

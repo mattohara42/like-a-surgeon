@@ -1,0 +1,30 @@
+{
+  "id": "e-postpunk-sherwood",
+  "from": "uk-post-punk",
+  "to": "adrian-sherwood",
+  "type": "scene",
+  "confidence": "documented",
+  "year": 1980,
+  "crossLineage": true,
+  "evidence": "The New Age Steppers were formed in 1980 by Adrian Sherwood and Ari Up of the Slits. Their line-up drew on the British post-punk bands, including Keith Levene of Public Image Ltd and Mark Stewart and Bruce Smith of the Pop Group, alongside Jamaican musicians (Discogs artist credits). Their first single, 'Fade Away', came out in 1980.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Public Image Ltd",
+      "title": "Careering",
+      "year": 1979
+    },
+    "later": {
+      "artist": "New Age Steppers",
+      "title": "Fade Away",
+      "year": 1980
+    },
+    "whatToListenFor": "PiL had already taken dub's bass and space into a rock band. In the New Age Steppers the traffic runs the other way: post-punk players, PiL's guitarist among them, playing on a dub producer's record. Listen for the bass carrying the song, with the guitar as texture on top, and for the singer from the Slits in the middle of a reggae record."
+  },
+  "explanation": {
+    "age13": "Adrian Sherwood was a London dub producer. In 1980 he started a group called the New Age Steppers with the singer from the Slits, and players from other post-punk bands, including Public Image Ltd's guitarist, joined in. His records mixed the two scenes together.",
+    "adult": "A scene edge that runs from post-punk to dub, the reverse of the usual direction on this map, where Kingston and Tubby feed PiL and Gang of Four. Sherwood's session pool was the post-punk scene, and that is documented by the credits. It is cross-lineage for the same reason."
+  },
+  "tags": [
+    "production"
+  ]
+}

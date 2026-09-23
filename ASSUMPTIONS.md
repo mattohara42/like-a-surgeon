@@ -1343,3 +1343,86 @@ each disagreement.
   texts now say the map shows their end as unknown. Sly and the Family
   Stone's text no longer calls its 1983 end an approximation, which A159
   had found to be sourced but not fixed in the prose.
+
+
+## Added with the cross-check tool and the orphans batch
+
+- **A173. `tools/crosscheck.js`.** Matt asked for the BACKLOG idea to be
+  built, which settles the question it raised: a dev tool may use the
+  network. The app still never does, and nothing the app imports touches
+  it. The tool uses Node built-ins only, re-launches itself with
+  `NODE_USE_ENV_PROXY=1` when a proxy is set, caches responses in a
+  gitignored `.crosscheck/`, and writes `docs/crosscheck-report.md`. Two
+  matching choices came out of testing. MusicBrainz's search score is
+  ignored, because remix EPs outscore the 1982 'Planet Rock' single, and
+  a hit must instead match the title exactly and carry the most
+  distinctive (longest) word of the artist's name. Any shared word was
+  too loose: "Frankie" matched a 1955 'Your Love' by someone else. A
+  producer's `signatureTracks` entry names the act in brackets, so the
+  bracketed act counts as an artist, but a "with" guest doesn't:
+  "(with Aerosmith)" otherwise matched Aerosmith's own 1975 record.
+  Discogs isn't in the tool yet. Its credit checks needed a person to
+  pick the right release, and that doesn't automate well.
+- **A174. Wikimedia blocked this container's IP.** Partway through the
+  orphans batch, every Wikipedia request started returning 403 with a
+  message citing Wikimedia's robot policy. The first pass had made a few
+  hundred requests over several hours, with a descriptive User-Agent,
+  Retry-After honoured and gaps of several seconds. The IP is shared,
+  so it may not all have been this project's traffic. I stopped all
+  Wikimedia requests at once and did not try to get around the block.
+  The tool now stops asking any host that answers 403, and its
+  Wikimedia gaps are longer. The rest of the batch was researched from
+  articles fetched before the block, plus Discogs and MusicBrainz. If
+  Matt wants the block looked at, Wikimedia's error page gives
+  noc@wikimedia.org as the contact. That should come from Matt, not from
+  an agent.
+- **A175. The full cross-check's first findings.** The first full run
+  found one real error: 'Love Is Strange' is 1956 (Groove 4G-0175, per
+  Discogs), not 1957. The chart hit was early 1957, so the teen text's
+  "a hit in 1957" stays, and the signature track's year and "twenty-two
+  years" become 1956 and "twenty-three". The rest of its findings were
+  conventions already logged (Derbyshire's 1975, Pye's 1980) or
+  MusicBrainz data gaps. Its six "dates a track earlier" findings are
+  all settled now: 'Love Is Strange' and 'Quoth' match their Discogs
+  pressings, 'Don't Worry' (A157) and Mystic Warrior (A176) are logged
+  disputes, and 'Common People' came out in 1995, so MusicBrainz's 1994
+  is its own error. They will keep appearing in the report. That's
+  expected, since the report lists disagreements, not open work.
+- **A176. The orphans batch: twelve edges.** Label edges: CBS to the
+  Clash ('Complete Control' is about CBS releasing 'Remote Control'
+  without asking), Factory to Joy Division (Hannett's production, paid
+  for by the label), Pye to the Kinks (a refusal to pay for the
+  re-recording of 'You Really Got Me', which the band's management then
+  funded), Virgin to Tangerine Dream (the advance bought the Moog and
+  Virgin's own studio made Phaedra), Tommy Boy to Bambaataa (Silverman
+  pairing him with Baker), Metroplex to Saunderson (his first record,
+  as Kreem with Atkins, was Metroplex M-007 before he reissued it on
+  KMS), Ariwa to Lee Perry (the late-1980s and 1990s albums made and
+  released there), and Trax to the Chicago house scene. Scene edges: UK
+  punk to Joy Division (the Lesser Free Trade Hall show), UK post-punk to
+  Adrian Sherwood (the New Age Steppers' line-up), Chicago house to
+  Derrick May (his trips to the Warehouse and the Music Box), and
+  Düsseldorf to Kraftwerk (Kling Klang as the band's real beginning).
+  Tiers: six `documented`, each on a credit, a catalogue number, or the
+  record itself ('Complete Control' is its own evidence), and six
+  `consensus`, where the account reached me through Wikipedia rather
+  than a named first-hand source (the Q22 standard). Pye to the Kinks
+  is the unusual one, a label edge whose decision was a refusal, and its
+  adult text says so. Mystic Warrior's release year is disputed (the CD
+  says 1989, Ariwa's site and MusicBrainz say 1986). The edge uses 1989
+  and states the dispute. Three `whatToListenFor` fields describe records
+  I know only from their credits and descriptions: 'Triangle of Love',
+  Mystic Warrior and 'Fade Away'. Each is written around what the
+  credits and tracklist show, and the Ariwa one says outright that it
+  needs checking by ear. Matt should listen to those three pairs first.
+- **A177. A new convention: a label edge can point at a scene.** Trax's
+  causal role was owning the pressing plant that put Chicago house on
+  vinyl, cheaply and badly, and the royalty disputes that came with it.
+  That's a claim about the scene's records as a whole, not about one
+  artist, so e-trax-chicagohouse runs label to scene. A69 only described
+  label to artist. This extends it without changing it: the edge still
+  has to claim that the label's decisions changed the output. Five nodes
+  are left orphaned, because their only honest edges would be the
+  founder or roster relationships A69 excludes: Transmat, KMS, the Kling
+  Klang label, Rockers International and Brunswick. BACKLOG lists what
+  each is waiting for.
