@@ -1604,3 +1604,13 @@ each disagreement.
   second search, which credited the Melody Maker comparison to Wendy
   Carlos rather than a stated influence, and no substitute was checked
   carefully enough to add before running out of session time.
+- **A190. Crosscheck on the PR #32 batch.** `tools/crosscheck.js`
+  (MusicBrainz only, while Wikimedia's block holds, A174) over the 32
+  records added or changed since the orphans batch found two real date
+  errors, both confirmed on Discogs. 'Bring the Noise' was a 1987 Def Jam
+  single (651335 7) before It Takes a Nation of Millions (1988), so
+  e-parliamentfunkadelic-publicenemy and e-publicenemy-rza now date it
+  1987. 'Protect Ya Neck' was self-released on Wu-Tang Records in 1992
+  (PR234), as e-rza-wutang and the Wu-Tang record already said, so
+  e-publicenemy-rza's later side and edge year are now 1992. The rest of
+  its findings are MusicBrainz's thin dating of reggae and early techno.
