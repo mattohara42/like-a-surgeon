@@ -160,8 +160,12 @@ then `sheffield-idm` joined Aphex Twin and Autechre as a scene built
 around a label's marketing decision (Warp's 1992 "Artificial
 Intelligence" compilation) rather than a shared city, and `motown`
 closed with an edge into Michael Jackson (Berry Gordy reassigning
-"I Want You Back" from Gladys Knight to the Jackson 5). `npm run
-report` has the current distance on every remaining target.
+"I Want You Back" from Gladys Knight to the Jackson 5). A final batch
+added `stax` and the `memphis-stax` scene, splitting one history (the
+label's 1968 catalogue crisis, and the in-house writing system that
+predates and outlasts it) across a label edge into Isaac Hayes and a
+scene edge into The Charmels. `npm run report` has the current
+distance on every remaining target.
 
 ## Definition of done for any milestone
 
