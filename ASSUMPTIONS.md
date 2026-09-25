@@ -1795,3 +1795,21 @@ are named in each record's own `evidence` field rather than repeated here.
   The Verve's through the Rolling Stones/ABKCO sample story
   (`e-stones-verve`), so a second scene edge for either would have had
   nothing new to claim.
+- **A207. `cologne-krautrock` is a separate scene from `dusseldorf-kling-klang`,
+  not a merge into it,** even though both cover the same 1970s West
+  German moment the British press lumped together as "krautrock."
+  Düsseldorf's story is self-built and private (Kraftwerk's own factory-
+  space studio); Cologne's is institutional (WDR's state-funded Studio
+  for Electronic Music since 1951, which trained Can's founders under
+  Stockhausen). Distinct causal roots earned distinct scene nodes, the
+  same reasoning that already kept `kingston-dub` and the Bronx apart as
+  separate scenes rather than one generic "sampling-era" node.
+  `e-cologne-can` and the existing `e-stockhausen-can` are a deliberate
+  paired claim, the same shape as `e-osullivan-bizmarkie` and
+  `e-coldchillin-bizmarkie`: one edge names the institution (the studio
+  existing at all), the other the specific mechanism (two named students
+  and their teacher). Conny Plank joins the scene as a member without a
+  second scene edge; his own documented production credits run to
+  Düsseldorf acts (Kraftwerk, Neu!) already covered by that scene's own
+  edges, not to Can, so inventing a causal claim between his studio and
+  Cologne specifically would have overstated what's sourced.
