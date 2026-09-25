@@ -1994,3 +1994,32 @@ edge at once is also the less inviting one to explore.
   implications), and whether hover is the right trigger on a touch build
   with no hover at all (BACKLOG already defers touch/wall-panel as its
   own track).
+
+**A220.** Matt: discovered should be stored, and touch is out of scope for
+now but worth exploring later (no BACKLOG change needed, it was already
+filed there as its own track). Wired persistence into the prototype rather
+than leaving it as a described-but-unbuilt idea, since the mechanism is
+small and worth having in front of Matt alongside everything else here.
+
+- `discovered` now loads from and saves to `localStorage` under
+  `lineage.design04.discovered.v1`, mirroring `render/layers.js`'s
+  existing pattern exactly: wrapped in try/catch so Safari private mode
+  or blocked site data degrades to "starts empty" rather than breaking
+  the map, and only ids that resolve to a real edge in the current
+  dataset are read back, so a stale or hand-edited entry can't invent
+  one. Verified with Playwright: discovering King Tubby's 7 edges,
+  reloading the page, and reading the render-tree count back at 7/33
+  confirms the round trip; clearing via the new "Forget what I've found"
+  control drops it back to 0/33 and empties the stored array.
+- Added that control (a plain reset, no confirmation) specifically so
+  testing this doesn't require clearing `localStorage` by hand. A real
+  build likely wants the same affordance somewhere, if only so a reader
+  sharing a device with someone else isn't stuck looking at a
+  half-explored map that isn't theirs.
+- The storage key is namespaced to this prototype
+  (`lineage.design04.*`, not `lineage.discovered.*`) on purpose, so a
+  browser that has both this file and the real app open never confuses
+  a design experiment's state with the shipped reader's. `render/`'s
+  real key, if this direction is ported, is Matt's to name alongside
+  the rest of `CONFIG.layers`/`CONFIG.arrange`'s keys, not inherited
+  from here.

@@ -142,6 +142,7 @@
       <button class="chip" id="reveal-all" aria-pressed="true">All edges</button>
       <button class="chip" id="reveal-discover" aria-pressed="false">Discover on hover</button>
     </div>
+    <button class="chip" id="reveal-forget" style="opacity:0.6">Forget what I've found</button>
   </div>
 </div>
 
@@ -157,7 +158,9 @@
   reset depth. The thin year ruler never moves under either toggle &mdash;
   that's the constraint both ideas have to hold. In Discover, hover a star
   to light its real connections; they stay as a faint trail once you move
-  on. Every unlit connection is only a tick mark until then.
+  on. Every unlit connection is only a tick mark until then. What's found
+  is saved to this browser and survives a reload &mdash; "Forget what I've
+  found" clears it for testing.
 </div>
 
 <script src="data-snapshot.js"></script>
@@ -415,14 +418,46 @@
   // .hidden class), replaced by a two-sided tick that only says "something
   // connects here." Hovering a star reveals its real edges; leaving it
   // leaves them lit but dimmed, a permanent trail of what's been found.
-  // Nothing is ever un-discovered, so exploring only ever adds to the map.
+  // Nothing is ever un-discovered in a session, and what's found persists
+  // across visits too (Matt: a map that forgets what you found would undercut
+  // the whole point). Same guarded-localStorage shape as render/layers.js:
+  // wrapped in try/catch, only known-shape values read back, so a reader
+  // whose browser refuses to remember still gets a working map.
+  const DISCOVERED_STORAGE_KEY = 'lineage.design04.discovered.v1';
+  const edgeById = new Map(edges.map((e) => [e.id, e]));
+
+  function loadDiscovered() {
+    const found = new Set();
+    try {
+      const raw = localStorage.getItem(DISCOVERED_STORAGE_KEY);
+      const ids = raw ? JSON.parse(raw) : [];
+      if (Array.isArray(ids)) {
+        ids.forEach((id) => { const e = edgeById.get(id); if (e) found.add(e); });
+      }
+    } catch {
+      // ignored: fall through to nothing discovered yet
+    }
+    return found;
+  }
+  function saveDiscovered() {
+    try {
+      localStorage.setItem(DISCOVERED_STORAGE_KEY, JSON.stringify([...discovered].map((e) => e.id)));
+    } catch {
+      // ignored: the map works fine, it just will not remember
+    }
+  }
+
   let revealMode = 'all'; // 'all' | 'discover'
   let hoveredId = null;
-  const discovered = new Set();
+  const discovered = loadDiscovered();
 
   function onNodeHoverStart(n) { hoveredId = n.id; applyReveal(); }
   function onNodeHoverEnd(n) {
-    if (revealMode === 'discover') (nodeEdges.get(n.id) ?? []).forEach((e) => discovered.add(e));
+    if (revealMode === 'discover') {
+      const before = discovered.size;
+      (nodeEdges.get(n.id) ?? []).forEach((e) => discovered.add(e));
+      if (discovered.size !== before) saveDiscovered();
+    }
     hoveredId = null;
     applyReveal();
   }
@@ -533,6 +568,9 @@
   });
   revealDiscoverBtn.addEventListener('click', () => {
     revealMode = 'discover'; setPressed(revealAllBtn, false); setPressed(revealDiscoverBtn, true); applyReveal();
+  });
+  document.getElementById('reveal-forget').addEventListener('click', () => {
+    discovered.clear(); saveDiscovered(); applyReveal();
   });
 
   // ---- pan / zoom (minimal) ------------------------------------------------------
