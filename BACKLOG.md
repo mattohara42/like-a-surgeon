@@ -599,3 +599,16 @@ fixing them inline.)
   becomes a node. It may be better merged into a note on the Who than kept
   as a label node.
 
+
+- Left open by the four-label batch (A228 to A231). **Atlantic** still
+  has no node. Its Led Zeppelin edge fails A69, and its real causal
+  stories (Jerry Wexler taking Aretha Franklin to Muscle Shoals, the
+  Stax masters clause) need either an artist not yet on the map or an
+  edge `e-stax-isaachayes` already covers. **Elektra** is the obvious
+  source for the Stooges' and MC5's edges once either band arrives.
+  **Sly and Robbie's** Island deal has no sourced start or end year, so
+  their `labels` field stays empty. **Loud Records** has no sourced home
+  city (`city` is null). **ABKCO** and the 'Bitter Sweet Symphony'
+  settlement are a strong story for The Verve, but as a publishing claim
+  rather than a label decision. It probably wants a `sample` edge from
+  the Andrew Oldham Orchestra if that record ever becomes a node.
