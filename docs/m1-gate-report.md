@@ -8,13 +8,13 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 112 | 120 | 93% |
+| artists | 113 | 120 | 94% |
 | machines | 31 | 25 | met |
 | scenes | 10 | 20 | 50% |
 | labels | 22 | 30 | 73% |
-| edges | 184 | 350 | 53% |
+| edges | 185 | 350 | 53% |
 | threads | 2 | 5 | 40% |
-| crossLineageEdges | 75 | 60 | met |
+| crossLineageEdges | 76 | 60 | met |
 | edgesWithDemo | 5 | 30 | 17% |
 
 ## Counts by lineage
@@ -23,7 +23,7 @@ Every node type, since machines, scenes and labels carry a lineage too.
 
 | lineage | count |
 |---|---:|
-| electronic | 43 |
+| electronic | 44 |
 | hiphop | 41 |
 | other | 29 |
 | rock | 28 |
@@ -35,7 +35,7 @@ Artists alone:
 | lineage | count |
 |---|---:|
 | hiphop | 35 |
-| electronic | 20 |
+| electronic | 21 |
 | rock | 19 |
 | funk | 14 |
 | other | 13 |
@@ -47,7 +47,7 @@ Artists alone:
 |---|---:|
 | technological | 45 |
 | direct | 43 |
-| sample | 27 |
+| sample | 28 |
 | production | 25 |
 | label | 22 |
 | scene | 18 |
@@ -59,7 +59,7 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 125 |
+| documented | 126 |
 | consensus | 58 |
 | asserted | 1 |
 
@@ -233,7 +233,7 @@ Evidence: Sly and Robbie came up in the same 1970s Kingston studio scene as King
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 183 edges that carry one.
+Drawn with seed 1 from the 184 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
@@ -243,116 +243,116 @@ Kingston sound systems, "street dances and sound clashes" (1968) to DJ Kool Herc
 
 Listen for what crossed and what did not. The shape is the same in both places: a crowd outdoors, one person choosing records, another one talking over them, a system loud enough to be the event itself. The records are not the same at all. Put on what a Kingston sound was playing in 1970 and what Herc was playing in 1973 and they share almost nothing, because Bronx crowds would not take reggae and he switched to funk and soul. The method travelled. The music did not.
 
-### 2. `e-kevinsaunderson-chezdamier`
+### 2. `e-elpico-kinks`
 
-The Music Institute, "Club residencies, 1988-89" (1988) to Chez Damier, "Can You Feel It" (1992)
+Dave Davies, "Elpico amplifier with a slashed speaker" (1964) to The Kinks, "You Really Got Me" (1964)
 
-There is no early Damier record to compare against; the claim here is about proximity, not a specific production choice. 'Can You Feel It' arrived four years after the two men shared a DJ booth, made inside the label Saunderson ran.
+The riff is two chords, a step apart, played over and over. Listen to the edges of each chord rather than the notes: a papery rattle and crackle rides on top of it, loudest as each chord dies away. That is a torn speaker cone flapping. When the song lifts the riff higher, the grit comes along with it. Nothing in the chain was built to sound like that.
 
-### 3. `e-may-knuckles`
+### 3. `e-kinks-blur`
 
-Derrick May, "Detroit, working on a pair of TR-909s" (1983) to Frankie Knuckles, "Warehouse and Power Plant DJ sets" (1984)
+The Kinks, "Waterloo Sunset" (1967) to Blur, "Parklife" (1994)
 
-Listen to a Detroit record and a Chicago record from the same couple of years and find the shared object. Same kick, same ringing open hi-hat, one machine's voice in two cities. What differs is the instinct: Detroit leaves space around the machine and lets it sound like a machine, Chicago buries it under a soul vocal and a piano and asks it to carry a party.
+Both zoom in on one small, specific English scene (a couple crossing a bridge; a man walking his dog in a park) rather than making a generalized statement, and both use a talky, almost-spoken vocal delivery over a fairly simple melody.
 
-### 4. `e-premier-nas`
-
-Gang Starr, "Mass Appeal" (1994) to Nas, "N.Y. State of Mind" (1994)
-
-Premier made both in the same year, and his hands are audible in both: short, hard, tightly trimmed drums, and a small fragment looped until it becomes a mood. On 'Mass Appeal' the fragment is a thin, repeating figure that sounds almost like elevator music, a joke that fits a song mocking rap made for the charts. On 'N.Y. State of Mind' it's a dark, minor-key piano figure sitting low under the drums. Same method, opposite weather.
-
-### 5. `e-warp-autechre`
-
-Autechre, "Crystel" (1992) to Autechre, "Bike" (1993)
-
-'Crystel' is a clean electro beat with a soft, sad melody over it, still close to the dance floor. 'Bike', from Incunabula, slows everything down. The beat is still electro, but the melody takes over, and the track drifts for minutes without heading anywhere a DJ would want. Listen for the drum programming, which is tidy, deliberate and a little stiff, like the cassette edits the pair made copying Mantronix as teenagers, and for how little the track cares about being danced to.
-
-### 6. `e-isley-publicenemy`
-
-The Isley Brothers, "Fight the Power (Part 1)" (1975) to Public Enemy, "Fight the Power" (1989)
-
-The Isleys' original is a smooth, horn-driven funk protest song about censorship on the radio. Public Enemy keeps the title and a fragment of the groove but buries both under the Bomb Squad's usual density, turning a specific, contained complaint into a much broader, louder one.
-
-### 7. `e-rubin-llcoolj`
-
-T La Rock and Jazzy Jay, "It's Yours" (1984) to LL Cool J, "I Can't Live Without My Radio" (1985)
-
-Listen for what is missing on both. 'It's Yours', the first rap record Rubin made, is built around a drum machine and a DJ's scratches. A year later 'I Can't Live Without My Radio' pushes the same idea further: the kick drum is enormous and nothing competes with it. There is almost no melody, only the drum machine, LL's voice and scratches dropped in between lines. That is what the album credit 'reduced by Rick Rubin' means in sound.
-
-### 8. `e-ruffhouse-goats`
-
-Cypress Hill, "How I Could Just Kill a Man" (1991) to The Goats, "Tricks of the Shade (album)" (1992)
-
-Ruffhouse's first two rap records, a year apart and from the same studio, went opposite ways. Cypress Hill's is built from samples, murky and looped. Tricks of the Shade is backed by a live band, with horns and piano played by musicians, under three voices trading political verses and sketches. Listen for players rather than loops, and for how much the label let a debut album sprawl: twenty-five tracks, with a story running through them.
-
-### 9. `e-jamesbrown-publicenemy`
-
-James Brown, "Funky Drummer" (1970) to Public Enemy, "Fight the Power" (1989)
-
-LL Cool J's producer used the break as a clean bed. The Bomb Squad buries it. Listen for Stubblefield's rolling hi-hat and snare somewhere underneath, then for everything piled on top: shouts, horn stabs, scratches and fragments from a dozen other records, all at once, rubbing against each other. It's a wall of sound built from other people's recordings, two years before a court ruling made that kind of record almost impossible to afford.
-
-### 10. `e-robinson-mellemel`
-
-Sylvia Robinson, "Pillow Talk" (1973) to Grandmaster Flash and the Furious Five, "The Message" (1982)
-
-Listen to the tempo and then imagine a dancefloor. It does not work, and the group knew it did not work, which is why they did not want it. What the record buys with that refusal is room: at this speed a voice has time to finish a thought. Nearly everything rap does with slow tempo afterwards depends on somebody proving a slow rap record could sell.
-
-### 11. `e-flash-theodore`
-
-Grandmaster Flash, "quick-mix theory at Bronx jams" (1975) to Grand Wizzard Theodore, "the scratch" (1975)
-
-Flash's technique is about making the join invisible: you should not hear the second record arrive. Theodore's does the opposite and makes the hand audible on purpose. Listen for that inversion, because it is the moment the turntable stops pretending to be a playback device and starts admitting it is being operated.
-
-### 12. `e-metroplex-saunderson`
-
-Model 500, "No UFO's" (1985) to Kreem, "Triangle of Love" (1986)
-
-The first Metroplex record and the seventh. 'No UFO's' is Atkins alone. 'Triangle of Love' is the first record Saunderson made, with Atkins, and the 12-inch carries a vocal version, a dub and an instrumental. Play the vocal and the dub one after the other: the same track with the song taken out, so that a DJ gets a tool as well as a tune.
-
-### 13. `e-rubin-rundmc`
+### 4. `e-rubin-rundmc`
 
 Aerosmith, "Walk This Way" (1975) to Run-D.M.C., "Walk This Way (with Aerosmith)" (1986)
 
 Start with the first seconds of each. Aerosmith's opens on a drummer's short, dry break, then the guitar riff. Run-D.M.C.'s opens on that same break, then Jam Master Jay cutting the guitar riff back and forth on a turntable, the way a DJ had been using the record at parties for years. Then the real guitar and Steven Tyler's voice arrive and sit next to the rapping. You are hearing a rock record the way hip-hop had always used it, as material, before its band walks in and joins.
 
-### 14. `e-sly-cypresshill`
+### 5. `e-h910-bowie`
 
-Sly and the Family Stone, "Life" (1968) to Cypress Hill, "Insane in the Brain" (1993)
+Eventide, "H910 Harmonizer" (1975) to David Bowie, "Breaking Glass" (1977)
 
-Listen to the start of 'Life': a jaunty, bouncing keyboard figure before the band comes in. In 'Insane in the Brain' Muggs keeps the figure but sets it in murk, loops it, and sets it under the squeal and B-Real's nasal voice. Something cheerful from 1968 becomes something woozy and threatening in 1993, and the notes haven't changed.
+Listen only to the snare drum. Each hit is followed by a fast smear that drops in pitch, a thud that seems to fall away underneath itself. The Harmonizer shifted each echo down and fed it back in, so every repeat went lower than the last. On a normal record the snare is the most solid thing in the mix. Here it sounds like it is collapsing.
 
-### 15. `e-kraftwerk-atkins`
+### 6. `e-foster-tribe`
 
-Kraftwerk, "Numbers" (1981) to Cybotron, "Clear" (1983)
+Ronnie Foster, "Mystic Brew" (1972) to A Tribe Called Quest, "Electric Relaxation" (1993)
 
-Both are built from short repeating electronic figures with no human looseness. The Detroit record has more funk in how the accents fall. Listen to where the emphasis lands in the bar. That small difference is the entire Atlantic crossing.
+Listen for the melancholy keyboard phrase in 'Mystic Brew', then hear Tribe loop it. The phrase that drifts in the original becomes a steady cycle, with soft drums sitting quietly under it. It's so relaxed that Q-Tip and Phife seem to be talking over it rather than rapping on top of it. The mood of a 1972 jazz record becomes the whole identity of the song.
 
-### 16. `e-bowie-kraftwerk`
+### 7. `e-hardy-jefferson`
 
-Kraftwerk, "Autobahn" (1974) to David Bowie, "V-2 Schneider" (1977)
+Ron Hardy, "Music Box DJ sets" (1983) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
 
-Bowie's track doesn't sound much like "Autobahn" on the surface, it's built around a saxophone line, not synth arpeggios. The tribute is in the title and in both productions' shared interest in cold, motorik repetition underneath.
+Jefferson's piano hook is the part everyone remembers, but the mix, the sequencing and drum programming Hardy shaped, is what makes it a dancefloor record rather than just a song.
 
-### 17. `e-mirage-may`
+### 8. `e-re201-perry`
 
-Michael James, "a piano piece played at Derrick May's house" (null) to Rhythim Is Rhythim, "Strings of Life" (1987)
+Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to Lee "Scratch" Perry, "Revolution Dub" (1975)
 
-The strings are not strings and the piano is not really a piano. Both are a couple of seconds of recorded sound being retriggered from a keyboard, which is why the chords all cut off at the same instant instead of decaying the way a real instrument would. Listen for the edges of those cuts. The record is exhilarating partly because it is so obviously assembled.
+Pick one snare hit and follow it. It repeats, and each repeat is slightly duller and slightly less in tune than the one before, because it is a tape loop wearing the sound down every pass. Then listen for the places where the repeats stop dying away and start feeding on themselves, piling up into a howl before somebody pulls them back. That is a hand on a knob, decided in the moment.
 
-### 18. `e-perry-madprofessor`
+### 9. `e-rockersinternational-hughmundell`
 
-Lee "Scratch" Perry, "Black Ark productions" (1976) to Lee "Scratch" Perry & Mad Professor, "Ariwa studio collaborations" (1987)
+Augustus Pablo, "King Tubby Meets Rockers Uptown" (1976) to Hugh Mundell, "Africa Must Be Free By 1983" (1978)
 
-Perry's original records are raw and cluttered on purpose. The Ariwa collaborations are cleaner and more controlled, Mad Professor's studio discipline audibly reining in Perry's chaos without erasing it.
+Pablo's own melodica records made the label's reputation; two years later he put that same production behind a teenager's songwriting instead of his own instrument, and 'Africa Must Be Free By 1983' is a vocal album built on the same spacious, echo-heavy platform.
 
-### 19. `e-kinks-pulp`
+### 10. `e-pye-kinks`
 
-The Kinks, "Waterloo Sunset" (1967) to Pulp, "Common People" (1995)
+The Kinks, "Long Tall Sally" (1964) to The Kinks, "You Really Got Me" (1964)
 
-Same technique: pick one character in one specific situation (a student "slumming it," two people on a bridge) and let the details, not a chorus making a general statement, carry the song.
+The Kinks' first single for Pye is a cover of a Little Richard song. Their third is Ray Davies's own riff, two chords over and over, on a guitar played through a torn speaker. The version you know is the second attempt, made on a session the label wouldn't pay for. Listen for how dry and close the guitar is: the band's complaint about the first version was that the reverb buried it.
 
-### 20. `e-dmx-rundmc`
+### 11. `e-melodica-pablo`
 
-Orange Krush, "Action" (1982) to Run-D.M.C., "Sucker M.C.'s" (1983)
+Hohner, "the Melodica, sold as a school instrument" (1958) to Augustus Pablo, "Java" (1972)
 
-On 'Action' the beat is played by a drummer inside a band, with bass, keys and a singer around it. On 'Sucker M.C.'s' the same pattern comes back out of a drum machine and everything else is gone. There is no bassline and no melody. Listen for how much reverb sits on the snare, so each hit booms out into the empty space, and for the two voices passing lines back and forth where a band used to be. The emptiness is the arrangement.
+Listen to where each note starts and stops. There is no sustain to lean on, so every note has to be blown and then released, and you can hear him running out of breath and taking more. That is why a plastic school instrument sounds like a person rather than a keyboard. The tone itself is thin and reedy, almost weak, and playing it slowly in a minor key is what turns that weakness into the mood.
+
+### 12. `e-jonimitchell-janetjackson`
+
+Joni Mitchell, "Big Yellow Taxi" (1970) to Janet Jackson, "Got 'til It's Gone" (1997)
+
+Mitchell's original is a bright, strummed folk-pop protest song, the line 'you don't know what you've got till it's gone' delivered plainly over acoustic guitar. Jackson's version loops that line as a chorus hook under a mid-tempo hip-hop groove, and Mitchell's own voice, re-recorded for this track rather than only sampled, sits inside a completely different rhythmic world than the one she wrote it in.
+
+### 13. `e-largepro-nas`
+
+Main Source, "Live at the Barbeque" (1991) to Nas, "It Ain't Hard to Tell" (1994)
+
+On 'Live at the Barbeque' Nas is one voice in a posse cut, a teenager fitting a short, dense verse between older rappers. Three years later the same producer builds 'It Ain't Hard to Tell' for him alone, looping the soft keyboard riff from Michael Jackson's 'Human Nature' under him. Listen for how much room is left around the voice now. The beat is light and bright so that nothing competes with the rapping, which is a producer framing someone he found.
+
+### 14. `e-simmons-sly`
+
+Simmons, "SDS-V electronic drums" (1981) to Black Uhuru, "Anthem" (1983)
+
+Listen to the drum fills. In places, instead of the round thud of a drum skin, a tom comes out as a short electronic zap that swoops down in pitch. Underneath it, the groove is still Sly's: the kick and snare placed with a reggae drummer's sense of where the beat should sit. The machine sound, played by a human, is the combination to hear.
+
+### 15. `e-perry-sherwood`
+
+Lee "Scratch" Perry, "Black Ark productions" (1976) to African Head Charge, "My Life in a Hole in the Ground" (1981)
+
+Both records treat the mix itself as the instrument: sounds appear and vanish, echo is pushed to the point of distortion, and the 'song' is really a shifting arrangement rather than a fixed structure.
+
+### 16. `e-jamal-nas`
+
+Ahmad Jamal, "I Love Music" (1970) to Nas, "The World Is Yours" (1994)
+
+Listen to Jamal's piano: unhurried, with room between the phrases. Pete Rock picks a few notes of it and loops them, so a phrase that drifts in the original circles steadily in the new track. Under Nas's ambition the loop sounds wistful, and Jamal's restraint becomes the song's emotional weight.
+
+### 17. `e-metroplex-saunderson`
+
+Model 500, "No UFO's" (1985) to Kreem, "Triangle of Love" (1986)
+
+The first Metroplex record and the seventh. 'No UFO's' is Atkins alone. 'Triangle of Love' is the first record Saunderson made, with Atkins, and the 12-inch carries a vocal version, a dub and an instrumental. Play the vocal and the dub one after the other: the same track with the song taken out, so that a DJ gets a tool as well as a tune.
+
+### 18. `e-mirage-saunderson`
+
+Ensoniq, "Mirage, an eight-bit sampler at 1,695 dollars" (1984) to Inner City, "Big Fun" (1988)
+
+Listen to how the record is put together underneath the vocal: short stabs that all stop dead rather than ring out, repeating in the same place every bar. Then notice what the sampler let him do that the others could not, which is put a full sung performance on top of it. Detroit techno arriving on daytime radio starts here.
+
+### 19. `e-mellotron-beatles`
+
+Mellotron, "flute tape bank, as sold" (1963) to The Beatles, "Strawberry Fields Forever" (1967)
+
+Listen to the opening seconds: a flute that isn't quite a flute. Each key on a Mellotron plays a strip of tape with a real flute note recorded on it, so the sound wobbles slightly and every note stops after about eight seconds. McCartney's chords sound a little out of tune with themselves because the flute recordings don't quite match. That wobble is a recording of a recording, playing back as an instrument.
+
+### 20. `e-kinks-who`
+
+The Kinks, "You Really Got Me" (1964) to The Who, "I Can't Explain" (1965)
+
+The same trick in both: a short chord shape shoved up the neck, no bass movement underneath, and the riff repeated with almost no variation. Then listen to the drums. The Kinks keep time. Keith Moon refuses to, and that difference is the whole future of the Who.

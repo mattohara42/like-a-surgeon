@@ -1748,3 +1748,13 @@ are named in each record's own `evidence` field rather than repeated here.
   the map for one documented sample connection each (into Nas, and
   between each other), not for a fuller biography, matching the Q21
   sample-hub convention.
+- **A203. Shy FX added alone, not jointly with UK Apache, for
+  'Original Nuttah' (1994).** Unlike the Getz/Bonfá pairing (A199), Shy
+  FX is a decades-long solo/production career on his own credit; UK
+  Apache's MC contribution is named in the edge's evidence and prose
+  rather than given a separate node, the same treatment other one-off
+  guest vocalists (Q-Tip's features, for instance) already get elsewhere
+  on the map. `e-winstons-shyfx` closes the "jungle and drum and bass
+  aren't on the map" gap BACKLOG had named for the Amen break specifically;
+  it is one hub edge, not coverage of either genre, which BACKLOG now
+  says explicitly.

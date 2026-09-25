@@ -1,0 +1,32 @@
+{
+  "id": "shy-fx",
+  "name": "Shy FX",
+  "sortName": "Shy FX",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1992,
+  "activeTo": null,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A London producer whose 1994 ragga-jungle single, built on the same six-second break N.W.A had already sampled, became the first jungle record to chart in Britain.",
+  "blurb": {
+    "age7": "Shy FX is a music producer from London. He made a jungle song using the same short drum break that other artists on this map have used too.",
+    "age13": "Andre Williams, known as Shy FX, started making jungle music in London in 1992. His 1994 single 'Original Nuttah', with vocals from MC UK Apache, samples the same 'Amen, Brother' drum break The Winstons recorded in 1969 and N.W.A had already sampled in 1988, but chops and speeds it into something much more frantic. It became the first drum and bass or jungle record to enter the British singles chart.",
+    "adult": "'Original Nuttah' (1994) is the clearest documented case on this map of the Amen break's second life: the same six-second solo that anchored a 1988 American rap record, retimed and chopped into the harder, faster, more fragmented rhythm that defined UK jungle. Shy FX went on to a long production career (the 2001 crossover hit 'Shake Ur Body' with T Power, Digital Soundboy Recordings from 2005), but this map holds him for the one record that closes the Amen break's cross-lineage story from soul through hip-hop into British dance music."
+  },
+  "signatureTracks": [
+    {
+      "title": "Original Nuttah",
+      "year": 1994,
+      "whyThisOne": "With MC UK Apache; the Amen break chopped into jungle, and the first D&B/jungle record to chart in the UK."
+    },
+    {
+      "title": "Shake Ur Body",
+      "year": 2001,
+      "whyThisOne": "With T Power; a UK Top 10 crossover a jungle background could still deliver."
+    }
+  ]
+}
