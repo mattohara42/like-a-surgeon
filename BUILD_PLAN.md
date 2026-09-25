@@ -135,8 +135,10 @@ nodes (A189), and a sample-hub/Native Tongues batch (A191) that added
 Isaac Hayes, the Isley Brothers, Bob James, Syl Johnson, De La Soul,
 Prince Paul and Mantronix, plus the Casio MT-40 machine. Batch 5 is
 half done. Machines exceeded 25 in PR #23 and again this batch, and
-labels are still short. `npm run report` has the current distance on
-every target.
+labels are still short. A small label batch added Stones Throw Records,
+closing a gap already visible in Madlib's, MF DOOM's and J Dilla's own
+blurbs, plus Stan Getz and Luiz Bonfá as a sample hub into J Dilla's
+'Runnin''. `npm run report` has the current distance on every target.
 
 ## Definition of done for any milestone
 

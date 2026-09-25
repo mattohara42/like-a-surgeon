@@ -1,0 +1,31 @@
+{
+  "id": "e-stonesthrow-mfdoom",
+  "from": "stones-throw",
+  "to": "mf-doom",
+  "type": "label",
+  "confidence": "documented",
+  "year": 2004,
+  "crossLineage": false,
+  "evidence": "Stones Throw founder Chris Manak (Peanut Butter Wolf) has said in multiple interviews, including a Complex piece marking Madvillainy's 20th anniversary, that he called Daniel Dumile (MF DOOM) directly to suggest he work with the label's own Madlib, then hosted the sessions at his house, Madlib recording beats in the basement while DOOM wrote vocals upstairs. The resulting 2004 album, Madvillainy, is a deliberately dense, sample-collage record, a sharp turn from the sparer, largely self-produced sound of DOOM's prior solo album.",
+  "trackPair": {
+    "earlier": {
+      "artist": "MF DOOM",
+      "title": "Doomsday",
+      "year": 1999
+    },
+    "later": {
+      "artist": "Madvillain",
+      "title": "Accordion",
+      "year": 2004
+    },
+    "whatToListenFor": "\"Doomsday\" is DOOM producing himself: a single wheezing loop, drums, and his own voice, unhurried and plain in the mix. \"Accordion\" is a different kind of record entirely, built from a producer who was not DOOM: a thinner, stranger organ loop that starts and stops on its own logic, drums buried further back, DOOM's voice bending to fit someone else's sense of space. The label made the pairing happen; the record is what changed once it did."
+  },
+  "explanation": {
+    "age7": "The record company put MF DOOM and the producer Madlib together, even though DOOM usually made his own beats. The album they made, Madvillainy, sounds different from anything DOOM had made alone.",
+    "age13": "Stones Throw's own founder, Chris Manak, called MF DOOM to suggest he team up with Madlib, an artist already on the label, and let them record together at his house. DOOM had produced almost all of his own earlier work; Madvillainy, made with someone else's beats for the first time, sounds noticeably different from it.",
+    "adult": "A label edge under the A69 convention: the founder's own account, since corroborated by both artists, describes a specific label decision (the introduction and the studio arrangement) rather than a roster relationship. The change in DOOM's output is audible rather than inferred, which is why this sits at documented tier despite resting on interview testimony rather than a paper trail."
+  },
+  "tags": [
+    "production"
+  ]
+}
