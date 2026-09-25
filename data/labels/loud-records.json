@@ -1,0 +1,19 @@
+{
+  "id": "loud-records",
+  "name": "Loud Records",
+  "type": "label",
+  "lineage": "hiphop",
+  "foundedYear": 1991,
+  "closedYear": 2002,
+  "city": null,
+  "founders": [
+    "Steve Rifkind",
+    "Rich Isaacson"
+  ],
+  "ownershipStory": "Founded in 1991 by Steve Rifkind and Rich Isaacson. Its first signing, Tung Twista, failed to chart in 1992, and by the end of that year the label had moved its distribution from Zoo Entertainment to RCA. Wu-Tang Clan's 'Enter the Wu-Tang (36 Chambers)' (November 1993) turned its fortunes, followed by Mobb Deep, Raekwon's solo debut, Xzibit and Big Pun. Rifkind sold half the company to RCA in 1996, and distribution moved to Columbia in 1999. Sony Music shut Loud down in March 2002 and its artists moved to other Sony labels or elsewhere. Sony revived the name in 2007 and Rifkind bought it back, and it relaunched again in 2020 as Loud Music Group; closedYear marks the 2002 shutdown, the end of the label this map is about.",
+  "hook": "The label that signed the Wu-Tang Clan on terms no other label would accept: the group was Loud's, but each member was free to go solo anywhere.",
+  "blurb": {
+    "age13": "Loud Records started in 1991 and nearly failed in its first year. In 1993 it signed the Wu-Tang Clan, nine rappers from Staten Island, and agreed to something unusual: the group would record for Loud, but every member could sign his own solo deal with any other company. Within two years Wu-Tang members had solo albums out on several different major labels, all produced mostly by RZA.",
+    "adult": "Loud matters here for one contract term. Wu-Tang Clan's deal, which RZA has described as a condition most labels refused, bound the group to Loud while leaving each member free to sign solo elsewhere. Method Man went to Def Jam, Ol' Dirty Bastard to Elektra, GZA to Geffen, while Raekwon stayed at Loud. The effect was that a single producer's sound, RZA's, was distributed by competing companies at once, with each of them paying to promote it. Loud itself was a Sony casualty in 2002, and the name has been revived twice since."
+  }
+}

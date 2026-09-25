@@ -1,0 +1,32 @@
+{
+  "id": "e-loud-wutang",
+  "from": "loud-records",
+  "to": "wu-tang-clan",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1993,
+  "crossLineage": false,
+  "evidence": "RZA has described in interviews and in his own books a condition he set when shopping the group in 1993: a label could sign the Wu-Tang Clan as a group only if every member stayed free to sign solo deals with any other company. He has said most labels refused and that Steve Rifkind at Loud accepted. The members' release history bears it out: Method Man's 'Tical' (Def Jam, 1994), Ol' Dirty Bastard's 'Return to the 36 Chambers' (Elektra, 1995) and GZA's 'Liquid Swords' (Geffen, 1995) all came out on other labels while the group stayed with Loud, and Raekwon's 'Only Built 4 Cuban Linx...' (1995) came out on Loud itself.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Wu-Tang Clan",
+      "title": "Protect Ya Neck",
+      "year": 1992
+    },
+    "later": {
+      "artist": "GZA",
+      "title": "Liquid Swords",
+      "year": 1995
+    },
+    "whatToListenFor": "'Protect Ya Neck' is crowded on purpose: eight rappers take turns on one rough, lo-fi loop, each getting a single verse before the next one cuts in, and the group is the star. 'Liquid Swords' gives one member the whole track, opening on film dialogue and settling into a slow, eerie RZA loop with space around the voice. Same producer, same kung fu film habit, but now a solo record on a different company's label, which is exactly what the Loud deal allowed."
+  },
+  "explanation": {
+    "age7": "When the Wu-Tang Clan signed with Loud Records, they made a deal that let each rapper also make his own albums with other record companies. So soon their music was coming out everywhere at once.",
+    "age13": "When Loud Records signed the Wu-Tang Clan in 1993, it agreed that each of the nine members could sign his own solo deal with any other label. So within two years Method Man had an album on Def Jam, Ol' Dirty Bastard on Elektra and GZA on Geffen, while the group itself stayed with Loud. RZA produced most of those records, so his sound came out through lots of rival companies at the same time.",
+    "adult": "A label edge where the label's decision was to give up control rather than exercise it. Loud's acceptance of RZA's solo-freedom term is what let the group's sound spread through competing major labels simultaneously, each financing and promoting what was, in production terms, the same body of work. The source for the negotiation is RZA's own account, and the release history is the check on it."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

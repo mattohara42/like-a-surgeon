@@ -9,7 +9,13 @@
   "originCity": "Staten Island, New York",
   "originCountry": "USA",
   "scenes": [],
-  "labels": [],
+  "labels": [
+    {
+      "labelId": "loud-records",
+      "from": 1993,
+      "to": 2001
+    }
+  ],
   "keyProducers": [
     "rza"
   ],

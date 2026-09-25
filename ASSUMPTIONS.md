@@ -2080,3 +2080,15 @@ small and worth having in front of Matt alongside everything else here.
   (`dropEmptyLanes`). The first blues artists (Muddy Waters is the
   obvious one, already named in `e-chess-stones`) are a data batch, not
   part of this change.
+- **A228. `loud-records` closes in 2002 despite two revivals.** Sony
+  shut Loud down in March 2002. The name came back under Sony in 2007,
+  Rifkind bought it back, and it relaunched in 2020 as Loud Music Group.
+  `closedYear` marks the 2002 shutdown, since the revivals are new
+  businesses under an old name and none of them connects to anything on
+  this map; `ownershipStory` names both. `city` is null: Wikipedia calls
+  the label bi-coastal and names no home city, and guessing New York
+  would be an invented fact. `e-loud-wutang` is a label edge where the
+  decision was to give up control (the members' freedom to sign solo
+  anywhere), and its source is RZA's own account, checked against where
+  the members' solo albums actually came out. Wu-Tang's `labels` entry
+  runs 1993 to 2001, 'Enter the Wu-Tang' to 'Iron Flag'.
