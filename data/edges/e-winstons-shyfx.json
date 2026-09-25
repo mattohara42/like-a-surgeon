@@ -1,0 +1,32 @@
+{
+  "id": "e-winstons-shyfx",
+  "from": "the-winstons",
+  "to": "shy-fx",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1994,
+  "crossLineage": true,
+  "evidence": "'Original Nuttah' (1994), by UK Apachi and Shy FX, samples the drum break from The Winstons' 'Amen, Brother' (1969), as documented on sample-database entries. It is widely credited as the first jungle or drum and bass record to enter the British singles chart (reaching number 39 in October 1994).",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Winstons",
+      "title": "Amen, Brother",
+      "year": 1969
+    },
+    "later": {
+      "artist": "UK Apachi and Shy FX",
+      "title": "Original Nuttah",
+      "year": 1994
+    },
+    "whatToListenFor": "The original break is one drummer, alone, for six seconds, its timing plain enough to hum. In 'Original Nuttah' the same break is chopped into fragments and reassembled faster than a body could play it, hi-hats scattering unevenly across the bar, so the same six seconds that once sounded like a pause in a soul record now sounds like the whole floor shaking."
+  },
+  "explanation": {
+    "age7": "A jungle song called 'Original Nuttah' uses the same famous drum break as N.W.A's song, but chopped up and sped up until it sounds completely different.",
+    "age13": "British producer Shy FX, with vocals from MC UK Apache, built 'Original Nuttah' (1994) around The Winstons' Amen break, the same six seconds N.W.A had sampled in 1988. Chopped and sped up, it became one of the most famous jungle records ever and the first of its kind to chart in Britain.",
+    "adult": "The Amen break's larger significance, flagged as missing on this map since the-winstons.json's own adult text and e-winstons-nwa's explanation both named it, is the break's second life in British jungle and drum and bass: the same recording, retimed into an unrecognizably faster and more fragmented rhythm, becoming the rhythmic basis of an entire genre a continent and two decades away from its source."
+  },
+  "tags": [
+    "production",
+    "technology"
+  ]
+}

@@ -479,6 +479,11 @@ fixing them inline.)
   aren't on the map. Adding one or two jungle producers would give
   `the-winstons` its cross-lineage edge into electronic music, which is
   the break's real significance.
+  **Closed** by `shy-fx` and `e-winstons-shyfx`: 'Original Nuttah' (1994)
+  is a documented, sourced use of the same break, and the first jungle
+  or drum and bass record to chart in Britain. Jungle and drum and bass
+  as genres are still otherwise absent from the map; this is one hub
+  edge, not coverage of the scene.
 - Dr. Dre and G-funk: N.W.A is now on the map, so the BACKLOG note about
   the West Coast waiting on Parliament-Funkadelic now blocks only Dre's
   post-1991 work.
