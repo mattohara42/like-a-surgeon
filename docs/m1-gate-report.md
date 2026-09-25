@@ -10,9 +10,9 @@ Regenerate with `npm run report`. This report describes the dataset only;
 |---|---:|---:|---|
 | artists | 115 | 120 | 96% |
 | machines | 31 | 25 | met |
-| scenes | 10 | 20 | 50% |
+| scenes | 11 | 20 | 55% |
 | labels | 22 | 30 | 73% |
-| edges | 186 | 350 | 53% |
+| edges | 187 | 350 | 53% |
 | threads | 2 | 5 | 40% |
 | crossLineageEdges | 77 | 60 | met |
 | edgesWithDemo | 5 | 30 | 17% |
@@ -26,7 +26,7 @@ Every node type, since machines, scenes and labels carry a lineage too.
 | electronic | 44 |
 | hiphop | 42 |
 | other | 29 |
-| rock | 28 |
+| rock | 29 |
 | funk | 18 |
 | dub | 17 |
 
@@ -50,7 +50,7 @@ Artists alone:
 | sample | 29 |
 | production | 25 |
 | label | 22 |
-| scene | 18 |
+| scene | 19 |
 | reaction-against | 2 |
 | cover | 1 |
 | rediscovery | 1 |
@@ -60,7 +60,7 @@ Artists alone:
 | tier | count |
 |---|---:|
 | documented | 127 |
-| consensus | 58 |
+| consensus | 59 |
 | asserted | 1 |
 
 ## The 20 edges to read hardest
@@ -233,126 +233,126 @@ Evidence: Sly and Robbie came up in the same 1970s Kingston studio scene as King
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 185 edges that carry one.
+Drawn with seed 1 from the 186 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-elpico-kinks`
-
-Dave Davies, "Elpico amplifier with a slashed speaker" (1964) to The Kinks, "You Really Got Me" (1964)
-
-The riff is two chords, a step apart, played over and over. Listen to the edges of each chord rather than the notes: a papery rattle and crackle rides on top of it, loudest as each chord dies away. That is a torn speaker cone flapping. When the song lifts the riff higher, the grit comes along with it. Nothing in the chain was built to sound like that.
-
-### 2. `e-jonimitchell-janetjackson`
-
-Joni Mitchell, "Big Yellow Taxi" (1970) to Janet Jackson, "Got 'til It's Gone" (1997)
-
-Mitchell's original is a bright, strummed folk-pop protest song, the line 'you don't know what you've got till it's gone' delivered plainly over acoustic guitar. Jackson's version loops that line as a chorus hook under a mid-tempo hip-hop groove, and Mitchell's own voice, re-recorded for this track rather than only sampled, sits inside a completely different rhythmic world than the one she wrote it in.
-
-### 3. `e-princepaul-delasoul`
-
-Prince Paul, "DJing for Stetsasonic" (1988) to De La Soul, "3 Feet High and Rising" (1989)
-
-Stetsasonic's own records are dense but conventional boom-bap. On De La Soul's album the same production instincts turn playful and collage-like: skits, game-show samples and non-sequitur interludes across a much wider, weirder crate of source records than Paul had used behind Stetsasonic's own mic.
-
-### 4. `e-kinks-blur`
+### 1. `e-kinks-blur`
 
 The Kinks, "Waterloo Sunset" (1967) to Blur, "Parklife" (1994)
 
 Both zoom in on one small, specific English scene (a couple crossing a bridge; a man walking his dog in a park) rather than making a generalized statement, and both use a talky, almost-spoken vocal delivery over a fairly simple melody.
 
-### 5. `e-foster-tribe`
+### 2. `e-simmons-sly`
 
-Ronnie Foster, "Mystic Brew" (1972) to A Tribe Called Quest, "Electric Relaxation" (1993)
+Simmons, "SDS-V electronic drums" (1981) to Black Uhuru, "Anthem" (1983)
 
-Listen for the melancholy keyboard phrase in 'Mystic Brew', then hear Tribe loop it. The phrase that drifts in the original becomes a steady cycle, with soft drums sitting quietly under it. It's so relaxed that Q-Tip and Phife seem to be talking over it rather than rapping on top of it. The mood of a 1972 jazz record becomes the whole identity of the song.
+Listen to the drum fills. In places, instead of the round thud of a drum skin, a tom comes out as a short electronic zap that swoops down in pitch. Underneath it, the groove is still Sly's: the kick and snare placed with a reggae drummer's sense of where the beat should sit. The machine sound, played by a human, is the combination to hear.
 
-### 6. `e-peterock-nas`
+### 3. `e-peterock-nas`
 
 Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992) to Nas, "The World Is Yours" (1994)
 
 Two years apart and the same idea from Pete Rock: a soft jazz phrase looped under heavy drums, turned melancholy. On 'T.R.O.Y.' it's a saxophone. On 'The World Is Yours' it's a gentle piano from an Ahmad Jamal record. Listen for how the piano keeps circling while Nas talks about ambition, the sweetness of the loop working against the hardness of the words.
 
-### 7. `e-cobham-soulsofmischief`
-
-Billy Cobham, "Heather" (1974) to Souls of Mischief, "93 'til Infinity" (1993)
-
-Start with 'Heather': slow, almost drifting, a lazy bassline and a marimba floating over it. Then play '93 'til Infinity'. A-Plus sped up that bassline and marimba so they bounce instead of float, put his own drums under them, and brought the horns in from the same record. Listen for how the same notes change mood with speed alone, from a daydream to a head-nod.
-
-### 8. `e-publicenemy-rza`
-
-Public Enemy, "Bring the Noise" (1987) to Wu-Tang Clan, "Protect Ya Neck" (1992)
-
-'Bring the Noise' stacks dense layers of sirens, horn stabs and vocal snatches on top of each other, chaotic on purpose. 'Protect Ya Neck' takes the same cut-up instinct and strips it back to one or two grimy loops, murky and minimal rather than maximal, RZA's own turn on the same technique.
-
-### 9. `e-dilla-roots`
-
-Slum Village, "Fall in Love" (1998) to The Roots, "Things Fall Apart (album)" (1999)
-
-Put a programmed Dilla beat next to Questlove playing live. In 'Fall in Love' the kicks land early or late against the loop and the beat seems to lean. On the slower tracks of Things Fall Apart, listen to Questlove's kick and snare: played by hand, but placed a fraction behind where a metronome would put them, so the groove drags lazily. A drummer is copying a machine that was being used against its own settings.
-
-### 10. `e-perry-sherwood`
-
-Lee "Scratch" Perry, "Black Ark productions" (1976) to African Head Charge, "My Life in a Hole in the Ground" (1981)
-
-Both records treat the mix itself as the instrument: sounds appear and vanish, echo is pushed to the point of distortion, and the 'song' is really a shifting arrangement rather than a fixed structure.
-
-### 11. `e-rubin-rundmc`
+### 4. `e-rubin-rundmc`
 
 Aerosmith, "Walk This Way" (1975) to Run-D.M.C., "Walk This Way (with Aerosmith)" (1986)
 
 Start with the first seconds of each. Aerosmith's opens on a drummer's short, dry break, then the guitar riff. Run-D.M.C.'s opens on that same break, then Jam Master Jay cutting the guitar riff back and forth on a turntable, the way a DJ had been using the record at parties for years. Then the real guitar and Steven Tyler's voice arrive and sit next to the rapping. You are hearing a rock record the way hip-hop had always used it, as material, before its band walks in and joins.
 
-### 12. `e-transmat-carlcraig`
+### 5. `e-treasureisle-uroy`
 
-Derrick May (Rhythim Is Rhythim), "Strings of Life" (1987) to Psyche (Carl Craig), "Elements" (1989)
+Alton Ellis, "Girl I've Got a Date" (1967) to U-Roy, "Wake the Town" (1970)
 
-'Strings of Life' is techno reaching for euphoria in broad daylight. 'Elements,' made two years later inside the same label, is quieter and more interior, described by reissue notes as 'swooning electro-jazz.' Same label, same machine palette, a different temperament entirely.
+Play Ellis's original rocksteady vocal first, then U-Roy's version built on the same rhythm track three years later: the tune and the players are the same, but U-Roy talks, chants and ad-libs over the top instead of singing a fixed lyric, turning Reid's back catalogue into new records without a new song being written.
 
-### 13. `e-charmels-wutang`
+### 6. `e-marleymarl-lotug`
 
-The Charmels, "As Long as I've Got You" (1967) to Wu-Tang Clan, "C.R.E.A.M." (1993)
+Marley Marl featuring MC Shan, "Marley Marl Scratch" (1985) to Lords of the Underground, "Lord Jazz Hit Me One Time (Make It Funky)" (1993)
 
-Hear the sad, slow piano in the Charmels' single. RZA lifts a phrase of it, loops it, and slows the mood even further, so it hangs over Raekwon's and Inspectah Deck's verses about growing up broke. Listen for how a love song's introduction becomes a lament about money.
+Here the producer samples himself. 'Marley Marl Scratch' is one of his first records, from before sampling drums was his method. Eight years later a piece of it turns up inside a Lords of the Underground track he produced. Listen for the older record returning as material, and for how it's become a sound source inside a bigger, busier 1993 production built around the group's DJ.
 
-### 14. `e-bootee-mellemel`
-
-Duke Bootee, "The Message, written and demoed" (1980) to Grandmaster Flash and the Furious Five, "The Message" (1982)
-
-There are two rappers on this record and they do not sound alike. Bootee's delivery is even and conversational, closer to someone talking you through something. Mel's is heavier, slower, landing on the beat like a weight. The famous part, the last verse that turns the song from description into a life, is Mel. Knowing which voice is which changes how the record reads.
-
-### 15. `e-pye-kinks`
-
-The Kinks, "Long Tall Sally" (1964) to The Kinks, "You Really Got Me" (1964)
-
-The Kinks' first single for Pye is a cover of a Little Richard song. Their third is Ray Davies's own riff, two chords over and over, on a guitar played through a torn speaker. The version you know is the second attempt, made on a session the label wouldn't pay for. Listen for how dry and close the guitar is: the band's complaint about the first version was that the reverb buried it.
-
-### 16. `e-kingston-bronx`
+### 7. `e-kingston-bronx`
 
 Kingston sound systems, "street dances and sound clashes" (1968) to DJ Kool Herc, "the back-to-school jam at 1520 Sedgwick Avenue" (1973)
 
 Listen for what crossed and what did not. The shape is the same in both places: a crowd outdoors, one person choosing records, another one talking over them, a system loud enough to be the event itself. The records are not the same at all. Put on what a Kingston sound was playing in 1970 and what Herc was playing in 1973 and they share almost nothing, because Bronx crowds would not take reggae and he switched to funk and soul. The method travelled. The music did not.
 
-### 17. `e-mjackson-nas`
+### 8. `e-osullivan-bizmarkie`
 
-Michael Jackson, "Human Nature" (1982) to Nas, "It Ain't Hard to Tell" (1994)
+Gilbert O'Sullivan, "Alone Again (Naturally)" (1972) to Biz Markie, "Alone Again" (1991)
 
-Jackson's original glides on a bright, synth-and-guitar hook under a falsetto vocal. Large Professor pulls just that hook, loops it, and drops it under a much harder, dustier drum break, so the same shimmering figure that once sat inside a pop ballad now underlines nineteen-year-old Nas's dense, image-packed verses.
+Listen to O'Sullivan's piano, then to Biz's loop of it. It's only a few bars, repeated, and still instantly recognisable. That's the whole case in one sound: a sample carries its author with it. The Cold Chillin' edge covers the label's decision, and this edge is the sound that decision was about.
 
-### 18. `e-mellotron-beatles`
+### 9. `e-cbsuk-clash`
 
-Mellotron, "flute tape bank, as sold" (1963) to The Beatles, "Strawberry Fields Forever" (1967)
+The Clash, "Remote Control" (1977) to The Clash, "Complete Control" (1977)
 
-Listen to the opening seconds: a flute that isn't quite a flute. Each key on a Mellotron plays a strip of tape with a real flute note recorded on it, so the sound wobbles slightly and every note stops after about eight seconds. McCartney's chords sound a little out of tune with themselves because the flute recordings don't quite match. That wobble is a recording of a recording, playing back as an instrument.
+Play the single CBS chose, then the band's answer a few months later. 'Remote Control' is an album track about bans and bureaucracy that the label put out on its own. 'Complete Control' is a song about that decision, so listen to the words as much as the guitars: the verses tell the story of the release, the chorus throws the phrase back at the label and the manager, and the record exists because the band lost an argument.
 
-### 19. `e-ams-joydivision`
+### 10. `e-rza-wutang`
+
+Wu-Tang Clan, "Protect Ya Neck" (1992) to Wu-Tang Clan, "C.R.E.A.M." (1993)
+
+'Protect Ya Neck' opens on kung fu film dialogue and then runs eight rappers back to back over a raw, clattering loop. It sounds almost homemade, and it was self-released. 'C.R.E.A.M.', a year later, slows everything down: a sad, looping soul piano from a Charmels record, with space around each verse. Listen for RZA moving from chaos to melancholy with the same dusty texture holding both together.
+
+### 11. `e-daedelus-madlib`
+
+Daedelus, "Experience" (2002) to Madvillain, "Accordion" (2004)
+
+Listen to 'Experience': a wheezy, reedy melody that really does sound like an accordion, played on a cheap electric chord organ. Madlib loops it and hands it to MF DOOM. Listen for how much of the track's character comes from the choice of loop alone.
+
+### 12. `e-sp1200-marleymarl`
+
+E-mu Systems, "SP-1200, ten seconds of sampling time" (1987) to Marley Marl, "The Symphony, produced for the Juice Crew" (1988)
+
+Listen for the grain. Everything running through this machine picks up a slight crunch at the top end that was not in the source record, and producers wanted it. Then listen to how short the loops are: one or two bars, over and over. That is not a stylistic preference, it is ten seconds of memory deciding the structure of the song.
+
+### 13. `e-hardy-heard`
+
+Ron Hardy, "Music Box DJ sets" (1984) to Mr. Fingers (Larry Heard), "Can You Feel It" (1986)
+
+Heard's record is slower and softer than most of what Hardy played, which is itself part of the story: the Music Box could break a record that didn't sound like everything else in the room.
+
+### 14. `e-madlib-mfdoom`
+
+MF DOOM, "Doomsday" (1999) to Madvillain, "Accordion" (2004)
+
+On 'Doomsday' DOOM produces himself, looping a smooth, sweet phrase from Sade's 'Kiss of Life' under his flat, unhurried voice. On 'Accordion' Madlib gives him something stranger: a wheezing, reedy loop that sounds like an accordion but was played on a cheap electric chord organ. Listen for how the rougher, odder beat pushes DOOM's rhyming, dense chains of internal rhyme packed into a short verse over one repeating figure.
+
+### 15. `e-dilla-roots`
+
+Slum Village, "Fall in Love" (1998) to The Roots, "Things Fall Apart (album)" (1999)
+
+Put a programmed Dilla beat next to Questlove playing live. In 'Fall in Love' the kicks land early or late against the loop and the beat seems to lean. On the slower tracks of Things Fall Apart, listen to Questlove's kick and snare: played by hand, but placed a fraction behind where a metronome would put them, so the groove drags lazily. A drummer is copying a machine that was being used against its own settings.
+
+### 16. `e-sugarhill-mellemel`
+
+The Sugarhill Gang, "Rapper's Delight" (1979) to Grandmaster Flash and the Furious Five, "The Message" (1982)
+
+Both records are played by the same house band rather than assembled from other people's records, and once you know that you can hear it: the music breathes, pushes and drags the way people do. Sugar Hill's rap records sound like funk records with rappers on them, because that is literally what they are. That house-band sound is a label decision, not an artist's.
+
+### 17. `e-kraftwerk-atkins`
+
+Kraftwerk, "Numbers" (1981) to Cybotron, "Clear" (1983)
+
+Both are built from short repeating electronic figures with no human looseness. The Detroit record has more funk in how the accents fall. Listen to where the emphasis lands in the bar. That small difference is the entire Atlantic crossing.
+
+### 18. `e-jamal-nas`
+
+Ahmad Jamal, "I Love Music" (1970) to Nas, "The World Is Yours" (1994)
+
+Listen to Jamal's piano: unhurried, with room between the phrases. Pete Rock picks a few notes of it and loops them, so a phrase that drifts in the original circles steadily in the new track. Under Nas's ambition the loop sounds wistful, and Jamal's restraint becomes the song's emotional weight.
+
+### 19. `e-kms-chezdamier`
+
+Kevin Saunderson (Inner City), "Big Fun" (1988) to Chez Damier, "Can You Feel It" (1992)
+
+'Big Fun' is KMS's commercial peak, pop-facing house built to cross over. 'Can You Feel It,' made by the label's own A&R four years later, is rawer and more interior, closer to the deep house Damier and Ron Trent would build Prescription Records around the next year.
+
+### 20. `e-ams-joydivision`
 
 AMS, "DMX 15-80 digital delay" (1978) to Joy Division, "Unknown Pleasures" (1979)
 
 Pick any track and ignore the singing. The drums sound as if they were recorded in a different, colder room from the rest of the band, and the snare has a short metallic ring after each hit, closer to a knock on a pipe than to a drum. That separation and that ring come from Hannett isolating each drum and pushing it through the delay at settings nobody else would have chosen.
-
-### 20. `e-jamesbrown-publicenemy`
-
-James Brown, "Funky Drummer" (1970) to Public Enemy, "Fight the Power" (1989)
-
-LL Cool J's producer used the break as a clean bed. The Bomb Squad buries it. Listen for Stubblefield's rolling hi-hat and snare somewhere underneath, then for everything piled on top: shouts, horn stabs, scratches and fragments from a dozen other records, all at once, rubbing against each other. It's a wall of sound built from other people's recordings, two years before a court ruling made that kind of record almost impossible to afford.

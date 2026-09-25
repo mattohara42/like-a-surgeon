@@ -1,0 +1,31 @@
+{
+  "id": "e-britpop-pulp",
+  "from": "britpop",
+  "to": "pulp",
+  "type": "scene",
+  "confidence": "consensus",
+  "year": 1995,
+  "crossLineage": false,
+  "evidence": "Pulp formed in Sheffield in 1978 and spent over fifteen years without mainstream success before 'Common People' (1995) made them stars. Critics and historians widely describe this timing as inseparable from Britpop's rise: with Suede, Blur, and then Oasis already establishing a mainstream audience for English guitar pop, a British public was primed for exactly the kind of sharp, class-conscious songwriting Pulp had been doing for over a decade, in a way it hadn't been for most of the band's existence.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Pulp",
+      "title": "My Legendary Girlfriend",
+      "year": 1991
+    },
+    "later": {
+      "artist": "Pulp",
+      "title": "Common People",
+      "year": 1995
+    },
+    "whatToListenFor": "The songwriting voice, wry, specific, class-attentive, is already fully formed on the 1991 single; it just found almost no audience. Four years later, 'Common People' is not a different Pulp, only the same band arriving during a moment already primed to hear them."
+  },
+  "explanation": {
+    "age7": "Pulp had been making music for a very long time before they became famous. They finally had a hit because British music had become ready for the kind of songs they always wrote.",
+    "age13": "Pulp formed in 1978 but stayed mostly unknown for over fifteen years. By 1995, Britpop had already made English guitar bands hugely popular, and Pulp's sharp, funny, class-conscious songs suddenly fit the moment perfectly. 'Common People' became one of the era's biggest hits.",
+    "adult": "A scene-to-artist edge, the same causal shape as `e-swinginglondon-hendrix`: the scene supplied the audience and cultural moment, not the songwriting itself, which Pulp had already been doing for over a decade. Held at consensus rather than documented, since this is a widely shared critical reading of timing rather than a single first-person account."
+  },
+  "tags": [
+    "production"
+  ]
+}

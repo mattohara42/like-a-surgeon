@@ -8,7 +8,7 @@
   "activeTo": null,
   "originCity": "London",
   "originCountry": "UK",
-  "scenes": [],
+  "scenes": ["britpop"],
   "labels": [],
   "keyProducers": [],
   "hook": "Took Ray Davies' observational English songwriting and rebuilt it for a country arguing about Britpop and class in the 1990s.",
