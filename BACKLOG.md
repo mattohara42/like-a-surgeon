@@ -491,9 +491,13 @@ fixing them inline.)
   the break's real significance.
   **Closed** by `shy-fx` and `e-winstons-shyfx`: 'Original Nuttah' (1994)
   is a documented, sourced use of the same break, and the first jungle
-  or drum and bass record to chart in Britain. Jungle and drum and bass
-  as genres are still otherwise absent from the map; this is one hub
-  edge, not coverage of the scene.
+  or drum and bass record to chart in Britain.
+  **Further closed:** `uk-jungle` (1991-1997) now authors the scene
+  itself, joining Shy FX with Goldie, whose Metalheadz residency and
+  `e-goldie-bowie` (a rare edge running from a younger dance producer
+  into an older rock legend, documented in Goldie's own account of
+  inspiring David Bowie's 'Earthling') gives the scene real depth rather
+  than a single hub edge.
 - Dr. Dre and G-funk: N.W.A is now on the map, so the BACKLOG note about
   the West Coast waiting on Parliament-Funkadelic now blocks only Dre's
   post-1991 work.

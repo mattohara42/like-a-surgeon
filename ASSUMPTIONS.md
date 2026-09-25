@@ -1838,3 +1838,17 @@ are named in each record's own `evidence` field rather than repeated here.
   documented mentorship of a then-unsigned Jay-Z (touring as his hype
   man, a 1994 track together) is real but goes nowhere on this map,
   since Jay-Z isn't a node.
+- **A210. `uk-jungle` gives Shy FX a second scene edge's worth of
+  context without a second edge**, since he's already the source of
+  `e-winstons-shyfx` (a sample edge, not a scene one); `e-ukjungle-goldie`
+  carries the scene's own causal claim instead, on the same "scene
+  supplied the audience, not the technique" model as `e-britpop-pulp`
+  and `e-swinginglondon-hendrix`. `e-goldie-bowie` runs the opposite
+  direction from most of this map's cross-lineage edges: a young dance-
+  music producer's club night reshaping an older rock legend's late
+  work, rather than the usual older-artist-shapes-younger-successor
+  pattern, and it's genuinely documented, in Goldie's own repeated
+  account, not a reach for symmetry. Bowie's own reciprocal guest vocal
+  on Goldie's 'Saturnz Return' (1998) is named in prose rather than
+  given a second edge, since the causal claim (the club night inspiring
+  'Earthling') only runs one way.

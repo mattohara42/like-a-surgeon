@@ -145,8 +145,13 @@ Clinton solo and Dr. Dre), and authored two new scenes, `britpop` and
 `cologne-krautrock`, the latter deliberately kept separate from
 `dusseldorf-kling-klang` despite both sitting under the "krautrock"
 umbrella, since their institutional roots (a state broadcaster's studio
-against a band's private one) are genuinely different stories. `npm run
-report` has the current distance on every target.
+against a band's private one) are genuinely different stories. Two more
+batches followed: Enjoy Records (Bobby Robinson) and Big Daddy Kane
+closed further BACKLOG waits, then a `uk-jungle` scene joined Shy FX
+with Goldie, whose own account of inspiring David Bowie's 'Earthling'
+(1997) runs this map's usual older-artist-shapes-younger-successor
+pattern in reverse. `npm run report` has the current distance on every
+target.
 
 ## Definition of done for any milestone
 
