@@ -1,0 +1,21 @@
+{
+  "id": "island",
+  "name": "Island Records",
+  "type": "label",
+  "lineage": "dub",
+  "foundedYear": 1959,
+  "closedYear": null,
+  "city": "London",
+  "founders": [
+    "Chris Blackwell",
+    "Graeme Goodall",
+    "Leslie Kong",
+    "Michael Chambers"
+  ],
+  "ownershipStory": "Founded in Jamaica on 4 July 1959 by Chris Blackwell, Graeme Goodall and Leslie Kong, with the lawyer Michael Chambers, and named after the Harry Belafonte song 'Island in the Sun'. Blackwell moved the label to London in May 1962, working from a basement in Kilburn and carrying his stock of Jamaican records round the city to sell to shops himself, and Millie Small's 'My Boy Lollipop' (1964) was its first British hit. Island went on to release Jamaican music and British rock side by side, and in 1977 Blackwell built Compass Point Studios in Nassau, Bahamas. He sold Island to PolyGram in 1989, and it passed to Universal Music Group, which still owns it. Pulp were on Island from 1994.",
+  "hook": "A Jamaican label run out of London that treated reggae and rock as the same business, then built a studio in the Bahamas and a house band around Sly and Robbie.",
+  "blurb": {
+    "age13": "Chris Blackwell started Island Records in Jamaica in 1959 and moved it to London in 1962, where he carried Jamaican records round the city and sold them to shops himself. Island became one of the biggest independent labels in the world by putting out reggae and British rock on the same label. In 1977 Blackwell built a studio in the Bahamas called Compass Point, and in 1980 he put together a house band there with the Jamaican drummer and bassist Sly Dunbar and Robbie Shakespeare at its centre.",
+    "adult": "Island's position on this map is as the pipe between Kingston and the international pop industry, run by a founder who chose sounds as well as signed acts. Blackwell's Compass Point project is the clearest case: a studio with its own resident band, engineer and producer, assembled around a Jamaican rhythm section so that it could be applied to new wave, disco and rock singers alike. Island was sold to PolyGram in 1989 and has been part of Universal since."
+  }
+}

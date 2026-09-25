@@ -2108,3 +2108,16 @@ small and worth having in front of Matt alongside everything else here.
   control was never Atlantic's decision to give. Atlantic's real causal
   story on this map is Stax's 1968 catalogue loss, which
   `e-stax-isaachayes` already carries from the other side.
+- **A230. `island` sits in the dub lane and `e-island-slyrobbie` is its
+  only edge.** Island released British rock as much as Jamaican music,
+  but its origin, its founder's role and its one edge on this map are
+  all Kingston's, so `dub` is its home lineage. `city` is London, where
+  it operated from 1962; the Jamaican founding is in `ownershipStory`.
+  Sly and Robbie's `labels` field stays empty: Wikipedia says they
+  signed to Island "in the 1970s" without a year, and the end of the
+  relationship is unsourced, so a `{ from, to }` entry would invent two
+  dates. The track pair's earlier side is Black Uhuru's 'General
+  Penitentiary' ('Showcase', 1979) rather than 'Shine Eye Gal', which
+  MusicBrainz cannot date before 1980. Serge Gainsbourg was cut from the
+  adult text's list of what Compass Point led to, since his first Sly
+  and Robbie record was made in Kingston in 1979, before it.
