@@ -1,0 +1,31 @@
+{
+  "id": "e-mjackson-nas",
+  "from": "michael-jackson",
+  "to": "nas",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1994,
+  "crossLineage": true,
+  "evidence": "Nas's 'It Ain't Hard to Tell' (from 'Illmatic', 1994), produced by Large Professor, samples Michael Jackson's 'Human Nature' (from 'Thriller', 1982), as documented on sample-database entries and standard accounts of the track; the same instrumental hook is among the most sampled in hip-hop production.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Michael Jackson",
+      "title": "Human Nature",
+      "year": 1982
+    },
+    "later": {
+      "artist": "Nas",
+      "title": "It Ain't Hard to Tell",
+      "year": 1994
+    },
+    "whatToListenFor": "Jackson's original glides on a bright, synth-and-guitar hook under a falsetto vocal. Large Professor pulls just that hook, loops it, and drops it under a much harder, dustier drum break, so the same shimmering figure that once sat inside a pop ballad now underlines nineteen-year-old Nas's dense, image-packed verses."
+  },
+  "explanation": {
+    "age7": "Nas's song 'It Ain't Hard to Tell' uses a piece of Michael Jackson's song 'Human Nature', looped by the producer Large Professor.",
+    "age13": "Michael Jackson's 'Human Nature' (1982), produced by Quincy Jones, has a shimmering guitar-and-synth hook. Large Professor looped that hook for Nas's 'It Ain't Hard to Tell' (1994), one of the standout tracks on Nas's debut album 'Illmatic'.",
+    "adult": "A clear single-source sample lineage, widely documented and disputed by neither party: one 1982 pop recording, one 1994 rap record, the loop itself doing the identifying work."
+  },
+  "tags": [
+    "production"
+  ]
+}

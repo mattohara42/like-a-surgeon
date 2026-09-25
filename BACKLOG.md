@@ -469,6 +469,12 @@ fixing them inline.)
   the map, each with a documented single-song sample credit into an
   artist already there. Joni Mitchell, Michael Jackson, and Stan Getz
   and Luiz Bonfá are still waiting.
+  **Closed.** Stan Getz and Luiz Bonfá landed with the Stones Throw
+  batch (`e-getzbonfa-dilla`). Michael Jackson is on the map with
+  `e-mjackson-nas` and the careful adult (and Teen) register handling
+  A137 called for (A201). Joni Mitchell got her producer target: not
+  Nas, but Janet Jackson, whose 'Got 'til It's Gone' (1997) sampled and
+  featured new vocals from Mitchell herself (`e-jonimitchell-janetjackson`).
 - The Amen break's larger story is in jungle and drum and bass, which
   aren't on the map. Adding one or two jungle producers would give
   `the-winstons` its cross-lineage edge into electronic music, which is

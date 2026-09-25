@@ -1722,3 +1722,29 @@ are named in each record's own `evidence` field rather than repeated here.
   Dilla each have exactly one dated Stones Throw record on this map
   (Madvillainy, Donuts), which the edge's own `year` field already
   carries.
+- **A201. Michael Jackson's `hook` and both required registers state the
+  child sexual abuse allegations as fact, in age-appropriate language,
+  rather than omitting them or confining them to the adult register.**
+  CLAUDE.md's writing rules say reading level changes vocabulary, never
+  facts, as "the governing rule for all three registers," and its
+  accuracy rules treat an artist's documented conduct as part of the
+  historical record, not an editorial aside. The specific claims (the
+  1993 civil suit and 1994 settlement, the 2005 criminal acquittal, and
+  the 2019 'Leaving Neverland' allegations with the estate's denial and
+  lawsuit against HBO) were checked against Wikipedia's own dated,
+  sourced summary rather than assumed. This is the first artist on the
+  map BACKLOG had flagged by name as needing "careful adult-register
+  handling" (A137); the same care was extended to the required Teen
+  register rather than only the Adult one.
+- **A202. Michael Jackson, Janet Jackson, and Sade are all filed
+  `lineage: "funk"` or `"other"` for the same reason: none fits `"rock"`,
+  `"hiphop"`, `"dub"`, or the enum's narrower sense of `"funk"` cleanly,
+  and the map has no `"pop"` or `"soul"` lineage (A71 already declined to
+  add a lineage value for disco on similar grounds).** Michael and Janet
+  Jackson went to `"funk"` as the closer fit (Motown/JB's-descended
+  funk-soul-pop, matching James Brown and Isaac Hayes); Joni Mitchell
+  went to `"rock"` as canonical folk-rock singer-songwriter work, not a
+  sample-hub-only case like Bob James or Ahmad Jamal. All three are on
+  the map for one documented sample connection each (into Nas, and
+  between each other), not for a fuller biography, matching the Q21
+  sample-hub convention.
