@@ -1,0 +1,27 @@
+{
+  "id": "george-clinton",
+  "name": "George Clinton",
+  "sortName": "Clinton, George",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1982,
+  "activeTo": null,
+  "originCity": "Kannapolis, North Carolina",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "The Parliament-Funkadelic bandleader's own 1982 solo hit became the sample gangsta rap built a whole sound out of.",
+  "blurb": {
+    "age7": "George Clinton led the huge band Parliament-Funkadelic, then made his own solo music too. One of his solo songs, 'Atomic Dog', got used by rap producers again and again.",
+    "age13": "After legal and money troubles forced George Clinton to dissolve Parliament and Funkadelic in 1981, he signed to Capitol Records as a solo artist. His 1982 single 'Atomic Dog', from the album 'Computer Games', reached number one on the R&B chart on its own, separate from either band's catalogue. A decade later, its chant became one of the most sampled pieces of music in West Coast hip-hop, especially on Dr. Dre's 'The Chronic' (1992).",
+    "adult": "'Atomic Dog' (1982) is credited to Clinton alone, not Parliament or Funkadelic, recorded after Bridgeport Music's royalty and copyright disputes and PolyGram's acquisition of Casablanca had made the old band structure unworkable. Its chant, 'bow wow wow, yippee yo, yippee yay', became foundational to G-funk: Dr. Dre's production, especially on 'The Chronic', treats P-Funk's catalogue generally and 'Atomic Dog' specifically as a sonic starting point rather than an occasional source."
+  },
+  "signatureTracks": [
+    {
+      "title": "Atomic Dog",
+      "year": 1982,
+      "whyThisOne": "His biggest solo hit, and the source of the chant G-funk built on."
+    }
+  ]
+}

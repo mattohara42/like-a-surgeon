@@ -1758,3 +1758,23 @@ are named in each record's own `evidence` field rather than repeated here.
   aren't on the map" gap BACKLOG had named for the Amen break specifically;
   it is one hub edge, not coverage of either genre, which BACKLOG now
   says explicitly.
+- **A204. George Clinton is a separate node from `parliament-funkadelic`,
+  `activeFrom` starting in 1982 rather than his full career.** 'Atomic
+  Dog' is a Clinton solo credit on Capitol, not a Parliament or
+  Funkadelic release, and BACKLOG had already named this as the reason
+  the sample couldn't attach to the band's node. The node is deliberately
+  scoped to his solo career rather than backdated to the Parliaments in
+  the 1950s, since the band node already covers 1968-1981 and a full
+  Clinton biography isn't this map's job (Q21 sample-hub convention).
+- **A205. `dr-dre` added as N.W.A's producer stepping out on his own,
+  with `nwa.json`'s `keyProducers` updated from the plain name "Dr. Dre"
+  to the `dr-dre` id now that the node exists**, the same fix A127 and
+  others have made elsewhere once a plain-name credit gets its own
+  record. His entry repeats, briefly and by reference rather than in
+  full, the Dee Barnes assault N.W.A's own record already documents in
+  full (CLAUDE.md: historical importance is not endorsement, and
+  documented conduct is fact, not an aside), rather than omitting it
+  from a second record about the same person. The same plain-name-to-id
+  fix was applied to `bootsy-collins.json` and `parliament-funkadelic.json`,
+  both of which carried "George Clinton" as a plain-name `keyProducers`
+  entry that now resolves to `george-clinton`.
