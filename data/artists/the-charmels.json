@@ -8,7 +8,7 @@
   "activeTo": 1968,
   "originCity": "Memphis, Tennessee",
   "originCountry": "USA",
-  "scenes": [],
+  "scenes": ["memphis-stax"],
   "labels": [],
   "keyProducers": [
     "isaac-hayes",

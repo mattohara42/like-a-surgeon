@@ -1,0 +1,32 @@
+{
+  "id": "e-memphisstax-charmels",
+  "from": "memphis-stax",
+  "to": "the-charmels",
+  "type": "scene",
+  "confidence": "documented",
+  "year": 1967,
+  "crossLineage": false,
+  "evidence": "The Charmels, signed to Stax's Volt subsidiary, recorded 'As Long as I've Got You' (1967), written for them by staff songwriters Isaac Hayes and David Porter, the same in-house writing team behind much of Sam & Dave's catalogue, as documented in Stax's own history.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Sam & Dave",
+      "title": "Hold On, I'm Comin'",
+      "year": 1966,
+      "search": false
+    },
+    "later": {
+      "artist": "The Charmels",
+      "title": "As Long as I've Got You",
+      "year": 1967
+    },
+    "whatToListenFor": "Both records come from the same writing room: Hayes and Porter's melodic instinct and a horn-driven Stax arrangement. Sam & Dave's version is a full-band, up-tempo declaration; the Charmels', a year later, slows the same songwriting team's sensibility into a sadder, sparer piano ballad, the version a producer would later go looking for."
+  },
+  "explanation": {
+    "age7": "Two songwriters who worked for the Stax record label wrote a sad, pretty song for the Charmels, a girl group nobody remembered until a rap producer found it years later.",
+    "age13": "Stax's staff songwriters Isaac Hayes and David Porter, already known for writing hits for Sam & Dave, wrote 'As Long as I've Got You' for the Charmels in 1967. It went nowhere commercially at the time, one of many records the label's in-house writing system produced.",
+    "adult": "A scene-to-artist edge naming the mechanism this map's other Stax and Motown edges also describe: an in-house writing and production system, not a single artist's own creative choices, is what put this specific song into existence at all."
+  },
+  "tags": [
+    "production"
+  ]
+}

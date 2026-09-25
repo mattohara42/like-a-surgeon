@@ -1905,3 +1905,16 @@ are named in each record's own `evidence` field rather than repeated here.
   genuinely never closed, it changed hands (MCA in 1988, PolyGram in
   1993, Universal in 1999) and still operates as a label today, which is
   a different fact than "we don't know when it ended."
+- **A215. `stax` and `memphis-stax` split one history into a label edge
+  and a scene edge, each carrying a different half of it,** the same
+  division `cologne-krautrock`/`e-cologne-can` and `e-stockhausen-can`
+  used. `e-stax-isaachayes` (label) names the specific mechanism: Stax's
+  1968 catalogue loss to Atlantic forced Al Bell to grant Hayes full
+  creative control in exchange for trying again after his flopped 1968
+  debut, which is what produced 'Hot Buttered Soul'. `e-memphisstax-charmels`
+  (scene) names the general condition instead: an in-house writing system
+  (Hayes and Porter, before Hayes's own solo career) that could and did
+  produce records for acts far less prominent than its own staff. Both
+  Isaac Hayes and The Charmels join the scene; only Hayes gets the label
+  edge, since the Charmels' record predates and has no connection to the
+  1968 crisis that is `e-stax-isaachayes`'s actual claim.
