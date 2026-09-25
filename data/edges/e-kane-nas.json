@@ -1,0 +1,31 @@
+{
+  "id": "e-kane-nas",
+  "from": "big-daddy-kane",
+  "to": "nas",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1994,
+  "crossLineage": false,
+  "evidence": "Big Daddy Kane is widely credited in hip-hop journalism and criticism as a foundational technical influence on the generation of New York MCs that followed him, Nas among them; Rolling Stone describes him as \"a huge influence on a generation of MCs.\" No single documented statement from Nas naming Kane specifically as a direct influence on his own writing was found, which is why this sits at consensus rather than documented.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Big Daddy Kane",
+      "title": "Ain't No Half-Steppin'",
+      "year": 1988
+    },
+    "later": {
+      "artist": "Nas",
+      "title": "It Ain't Hard to Tell",
+      "year": 1994
+    },
+    "whatToListenFor": "Kane's verses pack dense internal rhyme into a fast, clean flow with no wasted breath. Six years later, Nas's own debut single stacks images and rhymes just as densely, at a more measured pace, description doing the work Kane's speed did. Same commitment to packing a bar full; different instrument used to do it."
+  },
+  "explanation": {
+    "age7": "Big Daddy Kane rapped very fast with clever rhymes, and later rappers like Nas learned from how he did it.",
+    "age13": "Big Daddy Kane's technical, rapid-fire rhyming in the late 1980s is widely described as a direct forerunner of the dense, wordy style Nas and other 1990s MCs became known for, even without one specific quote from Nas naming him.",
+    "adult": "A consensus-tier lineage claim rather than a documented one: critics and historians place Kane at the technical root of Nas's generation, but this edge names that reading honestly as a critical consensus rather than dressing it up as a sourced statement."
+  },
+  "tags": [
+    "production"
+  ]
+}

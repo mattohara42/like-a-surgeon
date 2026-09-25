@@ -1,0 +1,34 @@
+{
+  "id": "big-daddy-kane",
+  "name": "Big Daddy Kane",
+  "sortName": "Kane, Big Daddy",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1986,
+  "activeTo": null,
+  "originCity": "Brooklyn, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "marley-marl"
+  ],
+  "hook": "A Brooklyn wordsmith who wrote rhymes for Biz Markie before writing his own, then spent a career being cited as the reason so many later MCs could rap fast and clean at once.",
+  "blurb": {
+    "age7": "Big Daddy Kane was a rapper famous for rhyming very fast and very clearly at the same time. Lots of later rappers learned from him.",
+    "age13": "Antonio Hardy, born in Brooklyn in 1968, first wrote lyrics for his friend Biz Markie before joining Marley Marl's Juice Crew himself and signing to Cold Chillin' Records. His 1988 album 'Long Live the Kane' and its single 'Ain't No Half-Steppin'' showed off a rapid, technically complex flow that became a template for later rappers. In the early 1990s, Kane brought an unknown Jay-Z on tour as a hype man and tried, unsuccessfully at the time, to get him a record deal.",
+    "adult": "Kane's technical wordplay, internal rhyme, breath control, and speed without losing clarity, made him one of the most cited technical influences of hip-hop's late-1980s generation; Rolling Stone has called him simply a huge influence on a generation of MCs. His mentorship of a then-unsigned Jay-Z, who appeared on his 1994 track 'Show & Prove' after touring as Kane's hype man, is one of the more directly documented cases of one MC's career opening a path for a later one."
+  },
+  "signatureTracks": [
+    {
+      "title": "Ain't No Half-Steppin'",
+      "year": 1988,
+      "whyThisOne": "From 'Long Live the Kane'; Rolling Stone ranked it among the 50 greatest hip-hop songs ever made."
+    },
+    {
+      "title": "Raw",
+      "year": 1987,
+      "whyThisOne": "His professional debut single, and an early showcase of the rapid, technical flow he became known for."
+    }
+  ]
+}

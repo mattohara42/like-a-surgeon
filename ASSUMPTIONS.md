@@ -1825,3 +1825,16 @@ are named in each record's own `evidence` field rather than repeated here.
   populated, matching the more recent convention (A197, A200) even
   though a closed `{ from: 1979, to: 1979 }` range would have been
   defensible here.
+- **A209. `e-kane-nas` is held at `consensus`, not `documented`,** after
+  a specific-sounding secondary claim (that Nas's 'Where Are They Now'
+  both reuses a Marley Marl sample and lyrically shouts out Big Daddy
+  Kane's Juice Crew by name) turned out not to hold up under a second
+  check: the sample reuse is real, but no source checked confirmed the
+  song names Kane specifically rather than other Juice Crew members, or
+  gave a firm release year. Rather than build the edge on a half-verified
+  specific, it rests on the broadly and repeatedly documented critical
+  reading of Kane as a technical forerunner of Nas's generation, which
+  is genuinely consensus rather than a single sourced claim. His
+  documented mentorship of a then-unsigned Jay-Z (touring as his hype
+  man, a 1994 track together) is real but goes nowhere on this map,
+  since Jay-Z isn't a node.
