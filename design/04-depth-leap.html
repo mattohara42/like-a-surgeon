@@ -38,6 +38,19 @@
     fill: none; stroke-linecap: round; vector-effect: non-scaling-stroke;
     transition: opacity 420ms ease, d 650ms cubic-bezier(.2,.7,.2,1), stroke-width 420ms ease;
   }
+  /* display:none pulls a hidden edge out of the render tree entirely --
+     no layout, no paint, no compositing -- rather than just making it
+     invisible. That's the actual performance lever "discover on hover"
+     is testing, not just the look of it. */
+  .edge-path.hidden { display: none; }
+
+  /* A hint tick: a short stub at a node's rim pointing toward a connection
+     that hasn't been drawn yet. Static, no curve, no comet -- cheap enough
+     to leave hundreds of them sitting in the DOM at once. */
+  .hint-tick {
+    stroke-linecap: round; vector-effect: non-scaling-stroke;
+    transition: opacity 300ms ease; pointer-events: none;
+  }
   .node circle {
     transition: cy 650ms cubic-bezier(.2,.7,.2,1), r 650ms cubic-bezier(.2,.7,.2,1),
       opacity 420ms ease, filter 420ms ease;
@@ -102,8 +115,8 @@
 <div class="hud" id="title">
   <h1>04 — Depth &amp; Leap (mockup)</h1>
   <p>
-    Answers two open questions, not app code, frozen against the same
-    snapshot as <code>01</code>&ndash;<code>03</code>. Nothing here imports
+    Not app code, frozen against the same snapshot as
+    <code>01</code>&ndash;<code>03</code>. Nothing here imports
     <code>render/</code>.
   </p>
 </div>
@@ -123,18 +136,28 @@
       <button class="chip" id="depth-on" aria-pressed="false">Click a lane to focus</button>
     </div>
   </div>
+  <div class="group">
+    <h2>Reveal</h2>
+    <div class="row">
+      <button class="chip" id="reveal-all" aria-pressed="true">All edges</button>
+      <button class="chip" id="reveal-discover" aria-pressed="false">Discover on hover</button>
+    </div>
+  </div>
 </div>
 
 <div class="hud" id="readout">
   <div class="headline">Edge steepness</div>
   <div><b id="stat-steep">&mdash;</b> steeper than 63&deg; (near-vertical)</div>
   <div>median horizontal gap: <b id="stat-gap">&mdash;</b> years</div>
+  <div style="margin-top:8px">edges in the render tree: <b id="stat-live">&mdash;</b></div>
 </div>
 
 <div class="hud" id="hint">
   Drag to pan, wheel to zoom. Click empty space or a focused lane again to
   reset depth. The thin year ruler never moves under either toggle &mdash;
-  that's the constraint both ideas have to hold.
+  that's the constraint both ideas have to hold. In Discover, hover a star
+  to light its real connections; they stay as a faint trail once you move
+  on. Every unlit connection is only a tick mark until then.
 </div>
 
 <script src="data-snapshot.js"></script>
@@ -183,6 +206,8 @@
     .map((e) => ({ ...e, a: byId.get(e.from), b: byId.get(e.to) }));
   nodes.forEach((n) => { n.degree = 0; });
   edges.forEach((e) => { e.a.degree++; e.b.degree++; });
+  const nodeEdges = new Map(nodes.map((n) => [n.id, []]));
+  edges.forEach((e) => { nodeEdges.get(e.a.id).push(e); nodeEdges.get(e.b.id).push(e); });
 
   // x = year, set exactly once, here, and never touched again. Depth mode
   // is only allowed to move y, r, opacity and blur -- see CONFIG.depth and
@@ -242,8 +267,9 @@
   const lanesG = el('g', { class: 'lanes' });
   const axisG = el('g', { class: 'axis' });
   const edgesG = el('g', { class: 'edges' });
+  const hintsG = el('g', { class: 'hints' });
   const nodesG = el('g', { class: 'nodes' });
-  viewport.append(lanesG, axisG, edgesG, nodesG);
+  viewport.append(lanesG, axisG, edgesG, hintsG, nodesG);
   svg.appendChild(viewport);
 
   // Lane bands + titles, one <g class="lane-group"> per lineage so depth can
@@ -287,6 +313,8 @@
     t.textContent = n.name;
     g.append(c, t);
     g.addEventListener('click', (ev) => { ev.stopPropagation(); onNodeClick(n); });
+    g.addEventListener('pointerenter', () => onNodeHoverStart(n));
+    g.addEventListener('pointerleave', () => onNodeHoverEnd(n));
     nodesG.appendChild(g);
     nodeEls.set(n.id, { g, c, t });
   });
@@ -349,6 +377,78 @@
     updateStats();
   }
 
+  // ---- discovery hints -------------------------------------------------------
+  // A short stub at each end of an edge, pointing at the connection instead
+  // of drawing it. Positions track the nodes' *current* y (depth-aware) but
+  // use the base radius, not the depth-scaled one -- close enough for a
+  // hint that only has to invite a look, not describe a shape.
+  const HINT_LEN = 7;
+  const hintEls = new Map(); // edge -> { a: <line>, b: <line> }
+  function setHintLine(line, n, ang) {
+    const x1 = n.x + Math.cos(ang) * (n.r + 2);
+    const y1 = n.y + Math.sin(ang) * (n.r + 2);
+    const x2 = n.x + Math.cos(ang) * (n.r + 2 + HINT_LEN);
+    const y2 = n.y + Math.sin(ang) * (n.r + 2 + HINT_LEN);
+    line.setAttribute('x1', x1); line.setAttribute('y1', y1);
+    line.setAttribute('x2', x2); line.setAttribute('y2', y2);
+  }
+  function repositionHints() {
+    edges.forEach((e) => {
+      const { a, b } = hintEls.get(e);
+      const ang = Math.atan2(e.b.y - e.a.y, e.b.x - e.a.x);
+      setHintLine(a, e.a, ang);
+      setHintLine(b, e.b, ang + Math.PI);
+    });
+  }
+  edges.forEach((e) => {
+    const a = el('line', { class: 'hint-tick', stroke: LINEAGE_COLOR[e.a.lineage], 'stroke-width': 1.5, opacity: 0 });
+    const b = el('line', { class: 'hint-tick', stroke: LINEAGE_COLOR[e.b.lineage], 'stroke-width': 1.5, opacity: 0 });
+    hintsG.append(a, b);
+    hintEls.set(e, { a, b });
+  });
+  repositionHints();
+
+  // ---- reveal / discovery (Matt's "hide the wiring" note) --------------------
+  // 'all': every edge sits in the DOM at full opacity, same as before --
+  // this is what a browser has to paint and animate at once today.
+  // 'discover': every edge starts *out of the DOM* (display:none via the
+  // .hidden class), replaced by a two-sided tick that only says "something
+  // connects here." Hovering a star reveals its real edges; leaving it
+  // leaves them lit but dimmed, a permanent trail of what's been found.
+  // Nothing is ever un-discovered, so exploring only ever adds to the map.
+  let revealMode = 'all'; // 'all' | 'discover'
+  let hoveredId = null;
+  const discovered = new Set();
+
+  function onNodeHoverStart(n) { hoveredId = n.id; applyReveal(); }
+  function onNodeHoverEnd(n) {
+    if (revealMode === 'discover') (nodeEdges.get(n.id) ?? []).forEach((e) => discovered.add(e));
+    hoveredId = null;
+    applyReveal();
+  }
+
+  function applyReveal() {
+    let liveCount = 0;
+    edges.forEach((e) => {
+      const path = edgeEls.get(e);
+      const { a, b } = hintEls.get(e);
+      const isHoverAdjacent = hoveredId != null && (e.a.id === hoveredId || e.b.id === hoveredId);
+      const live = revealMode === 'all' || discovered.has(e) || isHoverAdjacent;
+      path.classList.toggle('hidden', !live);
+      if (live) {
+        liveCount++;
+        const base = e.tier === 'documented' ? 0.55 : 0.32;
+        // A discovered-but-not-hovered edge stays as a dimmer trail, so the
+        // reader can tell "I found this" from "I'm looking at this now."
+        path.style.opacity = revealMode === 'discover' && !isHoverAdjacent ? base * 0.55 : base;
+      }
+      const showHint = revealMode === 'discover' && !live;
+      a.style.opacity = showHint ? 0.5 : 0;
+      b.style.opacity = showHint ? 0.5 : 0;
+    });
+    document.getElementById('stat-live').textContent = `${liveCount} / ${edges.length}`;
+  }
+
   function updateStats() {
     const fn = edgeMode === 'year' ? yearAnchor : starAnchor;
     const spans = edges.map((e) => {
@@ -396,6 +496,7 @@
       });
     });
     redrawEdges();
+    repositionHints();
   }
 
   function onNodeClick(n) {
@@ -424,6 +525,14 @@
   });
   depthOnBtn.addEventListener('click', () => {
     depthOn = true; setPressed(depthOffBtn, false); setPressed(depthOnBtn, true); applyDepth();
+  });
+  const revealAllBtn = document.getElementById('reveal-all');
+  const revealDiscoverBtn = document.getElementById('reveal-discover');
+  revealAllBtn.addEventListener('click', () => {
+    revealMode = 'all'; setPressed(revealAllBtn, true); setPressed(revealDiscoverBtn, false); applyReveal();
+  });
+  revealDiscoverBtn.addEventListener('click', () => {
+    revealMode = 'discover'; setPressed(revealAllBtn, false); setPressed(revealDiscoverBtn, true); applyReveal();
   });
 
   // ---- pan / zoom (minimal) ------------------------------------------------------
@@ -455,6 +564,7 @@
   }, { passive: false });
 
   redrawEdges();
+  applyReveal();
 })();
 </script>
 </body>

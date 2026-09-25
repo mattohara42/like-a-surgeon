@@ -1964,3 +1964,33 @@ move otherwise.
   in `BACKLOG.md` under "Deferred features" so the idea isn't lost before
   Matt decides how this whole pass gets sequenced against the open M3
   gate.
+
+## Added a "discover on hover" reveal mode to the depth/leap prototype
+
+Matt tried the Netlify preview and reported it taxing the browser, with
+too many lines on screen at once, and asked for most connections (the
+vertical ones especially) hidden by default and revealed on discovery.
+This is the same problem two ways: BACKLOG already carried the M2 perf
+gate's real-browser spot-check as unverified, and a map that shows every
+edge at once is also the less inviting one to explore.
+
+- **A219.** Added a third toggle to `design/04-depth-leap.html`: "All
+  edges" (unchanged) versus "Discover on hover". In discover mode every
+  edge starts out of the render tree entirely (`display: none`, not just
+  invisible), replaced by a short static tick at each endpoint that only
+  says a connection exists there, not what it is. Hovering a node reveals
+  its real edges; leaving the node leaves them lit but dimmed rather than
+  hidden again, so exploring only ever adds to what's shown and nothing
+  Matt finds disappears on him. The prototype's own readout now counts
+  live edges against the total, so the perf argument is a number on
+  screen rather than an assertion: hovering one well-connected node in
+  the 33-edge snapshot put 7 edges in the render tree, not 33.
+- This composes with depth (A217) without changing either: a hint tick
+  sits at the node's current position, so it recedes and dims along with
+  its lane, same as everything else there.
+- Not decided yet: whether "discovered" persists across a session (this
+  prototype never forgets, which was the simplest thing to build and
+  worth Matt's read before it becomes a real behaviour with real storage
+  implications), and whether hover is the right trigger on a touch build
+  with no hover at all (BACKLOG already defers touch/wall-panel as its
+  own track).
