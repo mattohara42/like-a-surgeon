@@ -8,7 +8,7 @@
   "activeTo": null,
   "originCity": "Sheffield",
   "originCountry": "UK",
-  "scenes": [],
+  "scenes": ["britpop"],
   "labels": [],
   "keyProducers": [],
   "hook": "Jarvis Cocker started the band as a schoolboy in Sheffield and spent fifteen years turning it into Britpop's sharpest class commentary.",

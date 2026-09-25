@@ -8,7 +8,7 @@
   "activeTo": 2009,
   "originCity": "Wigan",
   "originCountry": "UK",
-  "scenes": [],
+  "scenes": ["britpop"],
   "labels": [],
   "keyProducers": [],
   "hook": "A British band whose biggest song was built on an orchestral sample of a Rolling Stones song, and who lost its royalties for twenty years.",

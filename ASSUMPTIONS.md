@@ -1778,3 +1778,20 @@ are named in each record's own `evidence` field rather than repeated here.
   fix was applied to `bootsy-collins.json` and `parliament-funkadelic.json`,
   both of which carried "George Clinton" as a plain-name `keyProducers`
   entry that now resolves to `george-clinton`.
+- **A206. `britpop` given `city: "London"` despite its three members
+  spanning London (Blur), Sheffield (Pulp), and Wigan (The Verve),** the
+  same pragmatic single-value choice A26/the open design question on
+  `uk-post-punk` already made for a scene with no single city: London
+  carries the scene's press and industry weight (Food Records, the
+  Britpop-vs-grunge press narrative, the 1997 Downing Street framing),
+  and the other two cities are named directly in the scene's own prose.
+  `e-britpop-pulp` is a scene-to-artist edge in the `e-swinginglondon-hendrix`
+  mould (the scene as causal agent supplying an audience and moment, not
+  the songwriting), held at `consensus` rather than `documented` since
+  it rests on a widely shared critical reading of timing rather than a
+  single first-person account. Blur and The Verve are scene members
+  without their own scene-edge for now: Blur's causal story already runs
+  through the Kinks (`e-kinks-blur`) rather than the scene itself, and
+  The Verve's through the Rolling Stones/ABKCO sample story
+  (`e-stones-verve`), so a second scene edge for either would have had
+  nothing new to claim.

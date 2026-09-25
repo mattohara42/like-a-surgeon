@@ -138,7 +138,12 @@ half done. Machines exceeded 25 in PR #23 and again this batch, and
 labels are still short. A small label batch added Stones Throw Records,
 closing a gap already visible in Madlib's, MF DOOM's and J Dilla's own
 blurbs, plus Stan Getz and Luiz Bonfá as a sample hub into J Dilla's
-'Runnin''. `npm run report` has the current distance on every target.
+'Runnin''. An overnight run then closed out the last Q21 sample-hub
+waits (Michael Jackson, Joni Mitchell and Janet Jackson), gave the Amen
+break its jungle crossing (Shy FX), closed the G-funk gap (George
+Clinton solo and Dr. Dre), and authored `britpop`, the scene target's
+first new entry in several batches. `npm run report` has the current
+distance on every target.
 
 ## Definition of done for any milestone
 
