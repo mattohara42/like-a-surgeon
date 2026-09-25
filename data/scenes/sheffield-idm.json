@@ -1,0 +1,32 @@
+{
+  "id": "sheffield-idm",
+  "name": "Artificial Intelligence and IDM",
+  "type": "scene",
+  "lineage": "electronic",
+  "yearFrom": 1992,
+  "yearTo": 1996,
+  "city": "Sheffield",
+  "country": "UK",
+  "hook": "A record shop's label decided some electronic music was for sitting and thinking, not dancing, and a name that almost nobody who made the music liked stuck anyway.",
+  "blurb": {
+    "age7": "A record label in England decided that some electronic music was made for listening at home, not dancing at a club, and people started calling it 'intelligent dance music.'",
+    "age13": "Warp Records, started in a Sheffield record shop in 1989, had built its name on bleep techno for clubs. In 1992 it released 'Artificial Intelligence', a compilation it described as electronic music for home listening rather than the dance floor, featuring Aphex Twin and Autechre. Journalists and an early internet mailing list soon started calling this kind of music 'intelligent dance music', or IDM, even though most of the artists disliked the label.",
+    "adult": "The 'home listening' framing was a marketing decision, not a musical one, but it created a real critical and commercial category almost by naming it into existence. The scene sits at an odd angle to most of this map's others: its members were rarely in the same room, its geography is really one label's decision more than a shared city's culture, and its 'intelligent' label implicitly, and unfairly, cast the dance music it was setting itself apart from as unintelligent."
+  },
+  "geopolitics": "The scene emerged just after the UK's early-1990s rave explosion and the same Criminal Justice and Public Order Act 1994 crackdown that reshaped jungle (see uk-jungle); positioning electronic music as home-listening rather than dancefloor-oriented was partly a way of distancing it from a culture increasingly under legal pressure.",
+  "whatWasNew": "Marketing club-descended electronic music explicitly as a listening format, complete with album-length statements and cover art aimed at record buyers rather than DJs, at a time when most electronic music was still sold and consumed as club-functional 12-inch singles.",
+  "production": "Aphex Twin and Autechre both worked largely alone with samplers, synthesizers and, increasingly, custom software, outside any shared studio or city; the connecting infrastructure was Warp's own A&R and marketing, not a physical scene.",
+  "labels": "Warp Records (Sheffield, founded 1989) is definitional here in a way few labels are for other scenes on this map: the 'Artificial Intelligence' series is both the scene's founding document and close to its entire roster.",
+  "politics": "Rarely explicit, but the 'intelligent' framing carried an implicit class and taste judgment, drawing a line between headphone listening and dancefloor culture that several of the scene's own artists have said they found reductive or embarrassing.",
+  "memberIds": [
+    "aphex-twin",
+    "autechre"
+  ],
+  "palette": {
+    "ink": "#0e0e14",
+    "paper": "#dcdce6",
+    "accent": "#5a3fc0",
+    "accent2": "#3fb8c0"
+  },
+  "motif": "sequencer-grid"
+}

@@ -1880,3 +1880,17 @@ are named in each record's own `evidence` field rather than repeated here.
   artists is what put the Stones in the same room as Muddy Waters and
   Chuck Berry, which both band accounts and Keith Richards' own telling
   tie to their shift toward original songwriting shortly after.
+- **A213. `sheffield-idm` is a scene built around a label's marketing
+  decision rather than a shared city or club culture,** and says so in
+  its own adult text: Aphex Twin and Autechre were never based in
+  Sheffield or working in the same room, and the connecting fact is
+  Warp Records' 1992 'Artificial Intelligence' compilation and its
+  'home listening' framing, which is also already documented in
+  `warp.json`'s own blurb. `city: "Sheffield"` follows the same
+  pragmatic single-value convention as `britpop` and `uk-post-punk`
+  (the label's home city, not either artist's). `e-sheffieldidm-aphextwin`
+  is a scene-to-artist edge in the by-now-familiar mould (the scene
+  supplied a name, a category and an audience; Aphex Twin's ambient,
+  non-club music predates the compilation). Both artists already carried
+  `warp` in their `labels` field from an earlier batch, which this one
+  didn't touch.

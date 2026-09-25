@@ -1,0 +1,31 @@
+{
+  "id": "e-sheffieldidm-aphextwin",
+  "from": "sheffield-idm",
+  "to": "aphex-twin",
+  "type": "scene",
+  "confidence": "documented",
+  "year": 1992,
+  "crossLineage": false,
+  "evidence": "Aphex Twin's ambient, non-club-functional electronic music predates Warp's 'Artificial Intelligence' compilation (1992), but the compilation and the 'home listening' framing Warp built around it gave that music a named context, a critical category, and an audience that a 12-inch club single aimed at DJs would not have reached in the same way.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Aphex Twin",
+      "title": "Digeridoo",
+      "year": 1992
+    },
+    "later": {
+      "artist": "Aphex Twin",
+      "title": "Xtal",
+      "year": 1992
+    },
+    "whatToListenFor": "'Digeridoo' is still built for a dancefloor's low end, a club record with a rave lineage. 'Xtal', on the same year's 'Selected Ambient Works 85-92' and the kind of track 'Artificial Intelligence' pointed to, floats without a beat built for dancing at all. The same year, two different destinations."
+  },
+  "explanation": {
+    "age7": "Aphex Twin already made this kind of music before the record label gave it a name and a context to be heard in.",
+    "age13": "Aphex Twin's calmer, non-club electronic music existed before Warp's 1992 'Artificial Intelligence' compilation, but the compilation gave it a name, an audience and a way to be marketed as something to sit and listen to rather than dance to.",
+    "adult": "A scene-to-artist edge in the `e-britpop-pulp`/`e-ukjungle-goldie` mould: the scene (really, one label's marketing decision) supplied the context and audience, not the underlying music, which Aphex Twin had already been making."
+  },
+  "tags": [
+    "production"
+  ]
+}

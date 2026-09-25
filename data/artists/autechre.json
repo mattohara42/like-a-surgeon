@@ -8,7 +8,7 @@
   "activeTo": null,
   "originCity": "Rochdale",
   "originCountry": "UK",
-  "scenes": [],
+  "scenes": ["sheffield-idm"],
   "labels": [
     {
       "labelId": "warp",

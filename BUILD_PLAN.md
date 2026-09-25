@@ -155,8 +155,11 @@ Shanté onto the map, each with a documented Marley Marl production
 edge, brought the artist count to 120 and **met the M1 target** for the
 first time; the Juice Crew is nearly closed out too (only Craig G still
 waits). A `chess-records` label batch followed, giving the rock spine
-its first blues-label edge (the Rolling Stones' 1964 Chicago sessions).
-`npm run report` has the current distance on every remaining target.
+its first blues-label edge (the Rolling Stones' 1964 Chicago sessions),
+then `sheffield-idm` joined Aphex Twin and Autechre as a scene built
+around a label's marketing decision (Warp's 1992 "Artificial
+Intelligence" compilation) rather than a shared city. `npm run report`
+has the current distance on every remaining target.
 
 ## Definition of done for any milestone
 
