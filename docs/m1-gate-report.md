@@ -11,8 +11,8 @@ Regenerate with `npm run report`. This report describes the dataset only;
 | artists | 120 | 120 | met |
 | machines | 31 | 25 | met |
 | scenes | 14 | 20 | 70% |
-| labels | 24 | 30 | 80% |
-| edges | 197 | 350 | 56% |
+| labels | 25 | 30 | 83% |
+| edges | 198 | 350 | 57% |
 | threads | 2 | 5 | 40% |
 | crossLineageEdges | 79 | 60 | met |
 | edgesWithDemo | 5 | 30 | 17% |
@@ -27,7 +27,7 @@ Every node type, since machines, scenes and labels carry a lineage too.
 | hiphop | 47 |
 | rock | 30 |
 | other | 29 |
-| funk | 19 |
+| funk | 20 |
 | dub | 17 |
 
 Artists alone:
@@ -49,7 +49,7 @@ Artists alone:
 | technological | 45 |
 | sample | 29 |
 | production | 28 |
-| label | 24 |
+| label | 25 |
 | scene | 22 |
 | reaction-against | 2 |
 | cover | 1 |
@@ -59,7 +59,7 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 136 |
+| documented | 137 |
 | consensus | 60 |
 | asserted | 1 |
 
@@ -233,126 +233,126 @@ Evidence: De La Soul has said they submitted full sample information for '3 Feet
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 196 edges that carry one.
+Drawn with seed 1 from the 197 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-pil-joydivision`
+### 1. `e-syljohnson-delasoul`
+
+Syl Johnson, "Different Strokes" (1967) to De La Soul, "Freedom of Speak (We Got Three Minutes)" (1988)
+
+Johnson's original is a tight, live soul-funk groove built around a drum break and a spoken 'different strokes for different folks' hook. De La Soul chops it into just a fragment inside a dense collage, one voice among several sources rather than the whole beat, the same reuse-as-texture approach 'Different Strokes' would get from dozens of other producers.
+
+### 2. `e-pil-joydivision`
 
 Public Image Ltd, "Public Image" (1978) to Joy Division, "Transmission" (1979)
 
 Both push the bass into the lead role a guitar or vocal would normally hold, leaving space around it rather than filling every bar, even though the two basslines sound nothing alike.
 
-### 2. `e-neu-bowie`
+### 3. `e-tubby-madprofessor`
 
-Neu!, "Hero" (1975) to David Bowie, ""Heroes"" (1977)
+King Tubby, "Home-built mixing desk, Waterhouse" (1968) to Mad Professor, "Ariwa Sounds, home-built desk" (1979)
 
-'Hero' is fast and ragged: Dinger's motorik beat pounding under his own hoarse, shouting vocal. '"Heroes"' borrows the drive and slows the tempo. Listen for the same idea of a beat that doesn't change while everything above it builds. The drone of guitar feedback held for the whole song, the vocal climbing from calm to shouting, the steady drums never reacting. And the quotation marks in Bowie's title, which undercut the heroism, just as Dinger's voice does.
+Both men's records treat the mixing desk itself, not a mixed-down finished master, as the instrument being played live. The specific tools differ by a decade of electronics, but the gesture is the same.
 
-### 3. `e-elpico-kinks`
-
-Dave Davies, "Elpico amplifier with a slashed speaker" (1964) to The Kinks, "You Really Got Me" (1964)
-
-The riff is two chords, a step apart, played over and over. Listen to the edges of each chord rather than the notes: a papery rattle and crackle rides on top of it, loudest as each chord dies away. That is a torn speaker cone flapping. When the song lifts the riff higher, the grit comes along with it. Nothing in the chain was built to sound like that.
-
-### 4. `e-sl1200-flash`
-
-Technics, "SL-1200 as a domestic hi-fi turntable" (1972) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
-
-Listen for what never happens: the beat does not sag. The same few bars come round again and again dead in time, and in the gaps you can hear a record being hauled backwards and dropped back in exactly on the one. A belt-driven deck would lag on every restart and the whole thing would slide. Everything frantic on this record rests on the machine underneath it being rigid.
-
-### 5. `e-re201-tubby`
+### 4. `e-re201-tubby`
 
 Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to King Tubby, "Dub from the Roots" (1974)
 
 Compare the echo here with Perry's. Tubby's repeats are cleaner and more rhythmic, placed so they land where a drum would have landed, so the delay becomes part of the pattern rather than a haze over it. Same kind of box, opposite instinct: Perry lets it flood, Tubby uses it to keep time.
 
-### 6. `e-flash-theodore`
+### 5. `e-stockhausen-beatles`
 
-Grandmaster Flash, "quick-mix theory at Bronx jams" (1975) to Grand Wizzard Theodore, "the scratch" (1975)
+Karlheinz Stockhausen, "Hymnen" (1967) to The Beatles, "Revolution 9" (1968)
 
-Flash's technique is about making the join invisible: you should not hear the second record arrive. Theodore's does the opposite and makes the hand audible on purpose. Listen for that inversion, because it is the moment the turntable stops pretending to be a playback device and starts admitting it is being operated.
+Both pieces are made of fragments that arrive, overlap and vanish: radio noise, snatches of orchestral music, voices. In 'Revolution 9' listen for the loop of a voice repeating 'number nine', the crowd noise, the reversed tape and the stretches where several unrelated recordings play at once. That layering of found sound, with no beat and no tune to hold it together, is the Cologne studio's method in the middle of the best-selling band in the world.
 
-### 7. `e-sheffieldidm-aphextwin`
+### 6. `e-jamal-nas`
 
-Aphex Twin, "Digeridoo" (1992) to Aphex Twin, "Xtal" (1992)
+Ahmad Jamal, "I Love Music" (1970) to Nas, "The World Is Yours" (1994)
 
-'Digeridoo' is still built for a dancefloor's low end, a club record with a rave lineage. 'Xtal', on the same year's 'Selected Ambient Works 85-92' and the kind of track 'Artificial Intelligence' pointed to, floats without a beat built for dancing at all. The same year, two different destinations.
+Listen to Jamal's piano: unhurried, with room between the phrases. Pete Rock picks a few notes of it and loops them, so a phrase that drifts in the original circles steadily in the new track. Under Nas's ambition the loop sounds wistful, and Jamal's restraint becomes the song's emotional weight.
 
-### 8. `e-fairlight-planetrock`
+### 7. `e-bongoband-herc`
 
-Igor Stravinsky, "The Firebird, Infernal Dance" (1910) to Afrika Bambaataa & Soulsonic Force, "Planet Rock" (1982)
+Incredible Bongo Band, "Apache" (1973) to The Sugarhill Gang, "Apache" (1981)
 
-In the Stravinsky, wait for the Infernal Dance to begin: the whole orchestra hits one chord together, loud and sudden. Now play 'Planet Rock' and listen for the short orchestral blast that punches in between the electronic beats. That is a single chord from a recording like the first one, cut short, pitched down and played from a keyboard. A century of concert music has become a drum hit.
+In the 1973 record, wait for the long passage where the melody drops away and bongos and drums play on their own. It runs far longer than most breaks, which is exactly why a DJ with two copies could stretch it out. Then play the Sugarhill Gang's 1981 'Apache', where a studio band replays the groove under rapping and chants. Listen for how the break has become the song.
 
-### 9. `e-dusseldorf-kraftwerk`
+### 8. `e-tubby-atkins-resemblance`
 
-Kraftwerk, "Ruckzuck" (1970) to Kraftwerk, "Trans-Europe Express" (1977)
+King Tubby, "various versions" (1976) to Juan Atkins, "No UFO's" (1985)
 
-Listen to who keeps time. 'Ruckzuck' is a flute riff over drums played by a person, speeding up as they go. 'Trans-Europe Express' is made in the same private room seven years later, and the rhythm is a machine's, steady and mechanical, with the synthesizer patterns running from sequencers the band had built for them. The studio is how they got from one to the other without anyone else's clock.
+Both treat the mixing desk as the instrument and the arrangement as something to be performed rather than fixed. This is a resemblance we are pointing out, not a line of transmission we can trace.
 
-### 10. `e-kinks-pulp`
+### 9. `e-tubby-scientist`
 
-The Kinks, "Waterloo Sunset" (1967) to Pulp, "Common People" (1995)
+King Tubby, "Home-built mixing desk, Waterhouse" (1968) to Scientist, "Scientist Rids the World of the Evil Curse of the Vampires" (1981)
 
-Same technique: pick one character in one specific situation (a student "slumming it," two people on a bridge) and let the details, not a chorus making a general statement, carry the song.
+Tubby's own dub instrumentals treat the desk as an instrument played live, dropping instruments in and out and pushing the spring reverb hard. A decade later, mixing at the same studio, Scientist applies the identical toolkit, echo, filtering, sudden drop-outs, to a new decade's rhythms, with a themed album concept built on top.
 
-### 11. `e-marleymarl-mcshan`
+### 10. `e-sl1200-flash`
 
-MC Shan, "The Bridge" (1986) to Boogie Down Productions, "The Bridge Is Over" (1987)
+Technics, "SL-1200 as a domestic hi-fi turntable" (1972) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
 
-'The Bridge' is a proud, unhurried borough anthem, MC Shan naming names and places over Marl's beat. 'The Bridge Is Over', KRS-One's answer a year later, borrows the same title and subject and turns it into an attack, faster and meaner, ending with a mocking sung outro aimed straight at Shan and Marl. Same beat-and-borough format, opposite intent.
+Listen for what never happens: the beat does not sag. The same few bars come round again and again dead in time, and in the gaps you can hear a record being hauled backwards and dropped back in exactly on the one. A belt-driven deck would lag on every restart and the whole thing would slide. Everything frantic on this record rests on the machine underneath it being rigid.
 
-### 12. `e-teac-perry`
+### 11. `e-knuckles-jefferson`
 
-TEAC, "A-3340 four-track recorder" (1972) to Junior Murvin, "Police and Thieves" (1976)
+Frankie Knuckles, "Warehouse-era DJ sets" (1978) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
 
-Listen to the rhythm under Murvin's high voice. It is dense and slightly blurred, as if heard through gauze. Drums, percussion and guitar melt into one texture instead of standing apart. Each time Perry combined finished parts onto one track to make room for more, another layer of hiss and softness went on. The haze is what four tracks cost, spent on purpose.
+Knuckles' sets built the audience and the vocabulary ('house music') that Jefferson's generation of producers was writing directly for by the time they started making records.
 
-### 13. `e-getzbonfa-dilla`
+### 12. `e-marleymarl-peterock`
 
-Stan Getz and Luiz Bonfá, "Saudade Vem Correndo" (1963) to The Pharcyde, "Runnin'" (1995)
+Marley Marl, "The Symphony, produced for the Juice Crew" (1988) to Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992)
 
-The bossa nova original moves in a steady, unhurried sway, guitar and flute trading a bright, circling phrase. Dilla chops that phrase down to a few notes and loops it tight against a harder, dustier drum break, so the same figure that once drifted now insists. Listen for how little of the original he needed to take before it was recognisably his.
+Both are built on one short loop running under the vocals, and both keep the drums heavy and forward. Then listen to what Pete Rock added to Marl's approach. On 'The Symphony' the loop is hard and the drums dominate, leaving four MCs to fight over it. On 'T.R.O.Y.' the loop is a saxophone phrase from a Tom Scott jazz record, over a bassline that sounds rounded and dark. It is the same way of building a beat, turned warm and mournful.
 
-### 14. `e-808-mantronix`
+### 13. `e-808-mantronix`
 
 Roland, "TR-808 factory voices" (1980) to Mantronix, "Fresh Is the Word" (1985)
 
 The 808 carries almost the entire track: a hard, dry kick-and-hi-hat pattern with almost no live instrumentation layered over it, an early example of hip-hop production built to sound like a machine rather than to disguise one.
 
-### 15. `e-mellotron-stones`
+### 14. `e-herc-flash`
 
-Streetly Electronics, "Mellotron, sold as a home orchestra" (1963) to The Rolling Stones, "2000 Light Years from Home" (1967)
+DJ Kool Herc, "park jams and rec-room parties, the merry-go-round" (1973) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
 
-The strings that swell in around the vocal are not a string section. Listen to how each note starts: no scrape of a bow, just a smooth fade up, and a slight wobble in pitch as if every player were a little seasick. That wobble is tape being dragged past a playback head. One person is playing it from a keyboard.
+Listen for precision, because that is the whole difference. Herc's idea is that the break repeats. Flash's contribution is that the repeat lands exactly where the next bar would have started, so the loop is seamless and you stop noticing there are two records. On 'Wheels of Steel' the joins are so tight that the record sounds composed rather than performed, which is the point Flash was chasing.
 
-### 16. `e-knuckles-atkins`
+### 15. `e-mellotron-beatles`
 
-Frankie Knuckles, "Warehouse-era DJ sets" (1982) to Model 500 (Juan Atkins), "No UFOs" (1985)
+Mellotron, "flute tape bank, as sold" (1963) to The Beatles, "Strawberry Fields Forever" (1967)
 
-Detroit techno's four-on-the-floor structure owes something to house records like Knuckles' sets reaching Detroit via radio and record pools; listen for how close the underlying drum pattern is, even as the two genres' moods diverge sharply.
+Listen to the opening seconds: a flute that isn't quite a flute. Each key on a Mellotron plays a strip of tape with a real flute note recorded on it, so the sound wobbles slightly and every note stops after about eight seconds. McCartney's chords sound a little out of tune with themselves because the flute recordings don't quite match. That wobble is a recording of a recording, playing back as an instrument.
 
-### 17. `e-stockhausen-can`
+### 16. `e-rza-wutang`
 
-Karlheinz Stockhausen, "Hymnen" (1967) to Can, "Aumgn" (1971)
+Wu-Tang Clan, "Protect Ya Neck" (1992) to Wu-Tang Clan, "C.R.E.A.M." (1993)
 
-Hymnen takes found material, national anthems and shortwave radio noise, and treats it as raw sound to be filtered and cut. Put on 'Aumgn' from Tago Mago and wait out the opening. There is no beat for long stretches. Voices are stretched into a low drone, sounds come in treated past recognition, and the piece is shaped by editing rather than by a song form. Then listen to 'Halleluhwah' on the same album to hear what the method did to a rock groove: an eighteen-minute jam cut down on tape until it holds.
+'Protect Ya Neck' opens on kung fu film dialogue and then runs eight rappers back to back over a raw, clattering loop. It sounds almost homemade, and it was self-released. 'C.R.E.A.M.', a year later, slows everything down: a sad, looping soul piano from a Charmels record, with space around each verse. Listen for RZA moving from chaos to melancholy with the same dusty texture holding both together.
 
-### 18. `e-daedelus-madlib`
+### 17. `e-sugarhill-mellemel`
 
-Daedelus, "Experience" (2002) to Madvillain, "Accordion" (2004)
+The Sugarhill Gang, "Rapper's Delight" (1979) to Grandmaster Flash and the Furious Five, "The Message" (1982)
 
-Listen to 'Experience': a wheezy, reedy melody that really does sound like an accordion, played on a cheap electric chord organ. Madlib loops it and hands it to MF DOOM. Listen for how much of the track's character comes from the choice of loop alone.
+Both records are played by the same house band rather than assembled from other people's records, and once you know that you can hear it: the music breathes, pushes and drags the way people do. Sugar Hill's rap records sound like funk records with rappers on them, because that is literally what they are. That house-band sound is a label decision, not an artist's.
 
-### 19. `e-ruffhouse-goats`
+### 18. `e-tubby-gangoffour`
 
-Cypress Hill, "How I Could Just Kill a Man" (1991) to The Goats, "Tricks of the Shade (album)" (1992)
+King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Gang of Four, "Damaged Goods" (1978)
 
-Ruffhouse's first two rap records, a year apart and from the same studio, went opposite ways. Cypress Hill's is built from samples, murky and looped. Tricks of the Shade is backed by a live band, with horns and piano played by musicians, under three voices trading political verses and sketches. Listen for players rather than loops, and for how much the label let a debut album sprawl: twenty-five tracks, with a story running through them.
+Listen to how much of "Damaged Goods" is empty: guitar stabs land in the gaps a dub mixer would leave for echo. Gang of Four never actually uses a dub production style, but the structural habit, thin out everything except bass and rhythm, is the same one Tubby's records established.
 
-### 20. `e-derrickmay-carlcraig`
+### 19. `e-derrickmay-carlcraig`
 
 Derrick May (Rhythim Is Rhythim), "Nude Photo" (1987) to Psyche (Carl Craig), "Elements" (1989)
 
 Both records share Transmat's repeating-figure discipline, but 'Elements' pulls the tempo down and lets the chords hang longer, the mark of an assistant absorbing his mentor's vocabulary and then bending it somewhere else.
+
+### 20. `e-ruffhouse-goats`
+
+Cypress Hill, "How I Could Just Kill a Man" (1991) to The Goats, "Tricks of the Shade (album)" (1992)
+
+Ruffhouse's first two rap records, a year apart and from the same studio, went opposite ways. Cypress Hill's is built from samples, murky and looped. Tricks of the Shade is backed by a live band, with horns and piano played by musicians, under three voices trading political verses and sketches. Listen for players rather than loops, and for how much the label let a debut album sprawl: twenty-five tracks, with a story running through them.
