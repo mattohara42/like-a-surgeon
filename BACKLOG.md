@@ -152,6 +152,13 @@ correct response to a good idea arriving mid-milestone.
 
 ## Observed problems
 
+- `render/loader.js` loads every record before anything renders, which
+  CLAUDE.md's scope rule names as a thing not to do. It's harmless at the
+  current ~400 records (under 1 MB). Somewhere in the low thousands of
+  artists, startup time and memory will make it the bottleneck. The fix
+  is probably loading node records up front and deferring prose (blurbs,
+  edge explanations) until a panel opens, but that's worth designing
+  when the dataset is close to needing it, not before.
 - `data/labels/brunswick.json` has no `foundedYear`, so it cannot be placed
   on the time axis and is silently absent whenever the Labels layer is on
   (12 of 13 labels draw). `render/loader.js` now warns, but the real fix is
