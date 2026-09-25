@@ -1,0 +1,29 @@
+{
+  "id": "roxanne-shante",
+  "name": "Roxanne Shanté",
+  "sortName": "Shanté, Roxanne",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1984,
+  "activeTo": null,
+  "originCity": "Queensbridge, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "marley-marl"
+  ],
+  "hook": "A 14-year-old from Queensbridge answered a record she didn't like and touched off more than fifty response records, hip-hop's first great beef.",
+  "blurb": {
+    "age7": "Roxanne Shanté was only 14 when she recorded a song answering back at another group's song. So many other rappers made their own answer songs that people called it the Roxanne Wars.",
+    "age13": "Lolita Shanté Gooden, born in Queensbridge in 1969, was 14 years old when she recorded 'Roxanne's Revenge' (1984), produced by a then-unknown Marley Marl, answering UTFO's hit 'Roxanne, Roxanne' in character. The record sold hundreds of thousands of copies in the New York area alone and set off the Roxanne Wars, a wave of dozens of answer records from other artists. She became one of the first women to build a career as a solo rapper, and later a member of Marley Marl's Juice Crew.",
+    "adult": "'Roxanne's Revenge' (1984) is one of hip-hop's first true diss and answer records, and its commercial success, without major-label backing, at a moment when few women rapped solo at all, made Shanté a genuine star before she could legally work full-time. The Roxanne Wars that followed, by some counts more than fifty answer records from other artists, is among the earliest evidence that a rap record could be a public conversation rather than a fixed, final statement."
+  },
+  "signatureTracks": [
+    {
+      "title": "Roxanne's Revenge",
+      "year": 1984,
+      "whyThisOne": "Recorded at 14; the answer record that started the Roxanne Wars."
+    }
+  ]
+}

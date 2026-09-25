@@ -150,8 +150,10 @@ batches followed: Enjoy Records (Bobby Robinson) and Big Daddy Kane
 closed further BACKLOG waits, then a `uk-jungle` scene joined Shy FX
 with Goldie, whose own account of inspiring David Bowie's 'Earthling'
 (1997) runs this map's usual older-artist-shapes-younger-successor
-pattern in reverse. `npm run report` has the current distance on every
-target.
+pattern in reverse. A final overnight batch brought MC Shan, Kool G Rap
+and Roxanne Shanté onto the map, each with a documented Marley Marl
+production edge, nearly closing out the Juice Crew (only Craig G still
+waits). `npm run report` has the current distance on every target.
 
 ## Definition of done for any milestone
 

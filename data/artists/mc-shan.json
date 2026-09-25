@@ -1,0 +1,29 @@
+{
+  "id": "mc-shan",
+  "name": "MC Shan",
+  "sortName": "Shan, MC",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1985,
+  "activeTo": null,
+  "originCity": "Queensbridge, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "marley-marl"
+  ],
+  "hook": "A Queensbridge rapper's borough anthem accidentally started one of hip-hop's first great beefs.",
+  "blurb": {
+    "age7": "MC Shan made a song bragging about his neighbourhood, and another rapper from a different neighbourhood got angry and wrote a song back.",
+    "age13": "Shawn Moltke, born in the Queensbridge housing projects in 1965, joined Marley Marl's Juice Crew and signed to Cold Chillin' Records. His 1986 single 'The Bridge', produced by Marl, told the story of how their crew started in Queensbridge and was widely heard as claiming Queensbridge as hip-hop's birthplace, though the lyrics don't actually say that. The Bronx's KRS-One, hearing it that way, answered with 'South Bronx' and then 'The Bridge Is Over', starting a rivalry, the Bridge Wars, that made KRS-One's name at Shan's expense.",
+    "adult": "'The Bridge' (1986) is a case study in how a record's reception can outrun its actual claim: it never states Queensbridge invented hip-hop, but was heard that way, and KRS-One and Boogie Down Productions' response records, especially 'The Bridge Is Over', are still cited among the most effective diss tracks ever made. The Bridge Wars is widely read as the first well-documented borough-versus-borough rap rivalry, predating the East Coast-West Coast conflicts of the 1990s by nearly a decade."
+  },
+  "signatureTracks": [
+    {
+      "title": "The Bridge",
+      "year": 1986,
+      "whyThisOne": "Produced by Marley Marl; the record that started the Bridge Wars with KRS-One."
+    }
+  ]
+}

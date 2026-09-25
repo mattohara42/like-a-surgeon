@@ -8,11 +8,11 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 117 | 120 | 98% |
+| artists | 120 | 120 | met |
 | machines | 31 | 25 | met |
 | scenes | 13 | 20 | 65% |
 | labels | 23 | 30 | 77% |
-| edges | 192 | 350 | 55% |
+| edges | 195 | 350 | 56% |
 | threads | 2 | 5 | 40% |
 | crossLineageEdges | 78 | 60 | met |
 | edgesWithDemo | 5 | 30 | 17% |
@@ -23,8 +23,8 @@ Every node type, since machines, scenes and labels carry a lineage too.
 
 | lineage | count |
 |---|---:|
+| hiphop | 47 |
 | electronic | 46 |
-| hiphop | 44 |
 | rock | 30 |
 | other | 29 |
 | funk | 18 |
@@ -34,7 +34,7 @@ Artists alone:
 
 | lineage | count |
 |---|---:|
-| hiphop | 37 |
+| hiphop | 40 |
 | electronic | 22 |
 | rock | 19 |
 | funk | 15 |
@@ -48,7 +48,7 @@ Artists alone:
 | direct | 45 |
 | technological | 45 |
 | sample | 29 |
-| production | 25 |
+| production | 28 |
 | label | 23 |
 | scene | 21 |
 | reaction-against | 2 |
@@ -59,7 +59,7 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 131 |
+| documented | 134 |
 | consensus | 60 |
 | asserted | 1 |
 
@@ -233,126 +233,126 @@ Evidence: De La Soul has said they submitted full sample information for '3 Feet
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 191 edges that carry one.
+Drawn with seed 1 from the 194 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-tubby-madprofessor`
+### 1. `e-hayes-publicenemy`
 
-King Tubby, "Home-built mixing desk, Waterhouse" (1968) to Mad Professor, "Ariwa Sounds, home-built desk" (1979)
+Isaac Hayes, "Hyperbolicsyllabicsesquedalymistic" (1969) to Public Enemy, "Black Steel in the Hour of Chaos" (1988)
 
-Both men's records treat the mixing desk itself, not a mixed-down finished master, as the instrument being played live. The specific tools differ by a decade of electronics, but the gesture is the same.
+Hayes's original is a long, orchestral funk-soul groove with strings and a driving bassline stretched over several minutes. The Bomb Squad extracts a fragment of it and buries it inside a dense, chaotic wall of other sources, the same layering approach as e-jamesbrown-publicenemy but a different, less obvious source record.
 
-### 2. `e-mellotron-bowie`
+### 2. `e-dubplate-tubby`
 
-Streetly Electronics, "Mellotron, sold as a home orchestra" (1963) to David Bowie, "Space Oddity" (1969)
+Jamaican sound systems, "one-off acetates cut as exclusives" (1950) to King Tubby, "dub mixes cut for named sound systems" (1972)
 
-This record also has a real string arrangement, which makes it a good listening exercise. Somewhere in the swelling background there are string sounds that start with no bow attack and waver very slightly in pitch. Those are tape, played from a keyboard, sitting inside the real orchestra. Then listen for the Stylophone, which is on the same record.
+Listen for who the record is talking to. A sound system's name gets shouted over the top of the mix, or the singer greets a crew by name, and you realise the record is not addressed to you or to a radio audience. It was made for one crowd in one yard on one night, on a disc that would be worn out within a few months.
 
-### 3. `e-marshall-who`
+### 3. `e-kms-chezdamier`
 
-Marshall, "JTM45, and the 100-watt version built for Townshend" (1965) to The Who, "My Generation" (1965)
+Kevin Saunderson (Inner City), "Big Fun" (1988) to Chez Damier, "Can You Feel It" (1992)
 
-Skip to the last stretch of the song, where it stops behaving like a song. The guitar howls with feedback, notes hang on far longer than a string alone would let them, and the drums crash around underneath. Feedback like that needs a guitar held near a very loud amplifier. The Who built their live show on that volume, and this record brings it into the studio.
+'Big Fun' is KMS's commercial peak, pop-facing house built to cross over. 'Can You Feel It,' made by the label's own A&R four years later, is rawer and more interior, closer to the deep house Damier and Ron Trent would build Prescription Records around the next year.
 
-### 4. `e-hendrix-cypresshill`
+### 4. `e-syljohnson-delasoul`
 
-The Jimi Hendrix Experience, "Are You Experienced?" (1967) to Cypress Hill, "How I Could Just Kill a Man" (1991)
+Syl Johnson, "Different Strokes" (1967) to De La Soul, "Freedom of Speak (We Got Three Minutes)" (1988)
 
-'Are You Experienced?' is full of sounds played backwards on tape: guitar and drums that swell up and cut off where they'd normally ring out. Muggs lifts a short guitar lick from it and loops it under B-Real's high voice and his own murky drums. Listen for Hendrix's guitar turned into a repeating pattern, a piece of 1967 psychedelia working as a hook in a 1991 rap single.
+Johnson's original is a tight, live soul-funk groove built around a drum break and a spoken 'different strokes for different folks' hook. De La Soul chops it into just a fragment inside a dense collage, one voice among several sources rather than the whole beat, the same reuse-as-texture approach 'Different Strokes' would get from dozens of other producers.
 
-### 5. `e-808-marleymarl`
-
-Roland, "TR-808 snare, as synthesised" (1980) to Marley Marl, "The Bridge, produced for MC Shan" (1986)
-
-Compare two snares. The 808's is a short burst of noise with a tuned ring under it, always identical, sitting cleanly in its own space. A snare lifted off a record brings the room with it: the drummer's touch, the tape compression, a trace of whatever else was playing at that instant. Listen for that smear of extra information. It is the sound of a recording rather than the sound of a circuit.
-
-### 6. `e-factory-joydivision`
-
-Joy Division, "An Ideal for Living (EP)" (1978) to Joy Division, "Unknown Pleasures (album)" (1979)
-
-The 1978 EP is the band on their own, paying for it themselves: fast, plain and close to the punk gig that started them. A year later, with the label's money and the label's producer, the same four players sound like they are in a much larger, colder room. Listen to the drums and the space around them on Unknown Pleasures. The separation and the echoes come from Hannett's desk, not from the band, and that sound is the label's contribution.
-
-### 7. `e-marleymarl-peterock`
-
-Marley Marl, "The Symphony, produced for the Juice Crew" (1988) to Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992)
-
-Both are built on one short loop running under the vocals, and both keep the drums heavy and forward. Then listen to what Pete Rock added to Marl's approach. On 'The Symphony' the loop is hard and the drums dominate, leaving four MCs to fight over it. On 'T.R.O.Y.' the loop is a saxophone phrase from a Tom Scott jazz record, over a bassline that sounds rounded and dark. It is the same way of building a beat, turned warm and mournful.
-
-### 8. `e-pil-gangoffour`
+### 5. `e-pil-gangoffour`
 
 Public Image Ltd, "Public Image" (1978) to Gang of Four, "At Home He's a Tourist" (1979)
 
 PiL empties the arrangement out around the bass. Gang of Four does something closer to the opposite: Andy Gill's guitar stabs into the gaps Dave Allen's bassline leaves, funk-tight rather than dub-spacious, but the same basic idea of building the song from the rhythm section first.
 
-### 9. `e-kinks-pulp`
+### 6. `e-marleymarl-roxanneshante`
 
-The Kinks, "Waterloo Sunset" (1967) to Pulp, "Common People" (1995)
+UTFO, "Roxanne, Roxanne" (1984) to Roxanne Shanté, "Roxanne's Revenge" (1984)
 
-Same technique: pick one character in one specific situation (a student "slumming it," two people on a bridge) and let the details, not a chorus making a general statement, carry the song.
+UTFO's original is three men describing a woman who turns them all down. Shanté's answer, over the same beat, puts her own voice directly into that story, sharp and unimpressed, a teenager talking back to a hit record within weeks of its release.
 
-### 10. `e-sl1200-flash`
+### 7. `e-britpop-pulp`
 
-Technics, "SL-1200 as a domestic hi-fi turntable" (1972) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
+Pulp, "My Legendary Girlfriend" (1991) to Pulp, "Common People" (1995)
 
-Listen for what never happens: the beat does not sag. The same few bars come round again and again dead in time, and in the gaps you can hear a record being hauled backwards and dropped back in exactly on the one. A belt-driven deck would lag on every restart and the whole thing would slide. Everything frantic on this record rests on the machine underneath it being rigid.
+The songwriting voice, wry, specific, class-attentive, is already fully formed on the 1991 single; it just found almost no audience. Four years later, 'Common People' is not a different Pulp, only the same band arriving during a moment already primed to hear them.
 
-### 11. `e-jamesbrown-llcoolj`
+### 8. `e-robinson-mellemel`
 
-James Brown, "Funky Drummer" (1970) to LL Cool J, "Mama Said Knock You Out" (1990)
+Sylvia Robinson, "Pillow Talk" (1973) to Grandmaster Flash and the Furious Five, "The Message" (1982)
 
-In 'Funky Drummer', wait for the moment the band drops out and Clyde Stubblefield plays alone. Listen to the hi-hat running steadily, and to the quiet snare taps between the loud ones, ghost notes that make the beat feel like it's rolling. Then hear those same few seconds looped under LL Cool J twenty years later. The ghost notes are why a sampled beat felt alive in a way a drum machine's didn't.
+Listen to the tempo and then imagine a dancefloor. It does not work, and the group knew it did not work, which is why they did not want it. What the record buys with that refusal is room: at this speed a voice has time to finish a thought. Nearly everything rap does with slow tempo afterwards depends on somebody proving a slow rap record could sell.
 
-### 12. `e-rza-wutang`
+### 9. `e-808-marleymarl`
 
-Wu-Tang Clan, "Protect Ya Neck" (1992) to Wu-Tang Clan, "C.R.E.A.M." (1993)
+Roland, "TR-808 snare, as synthesised" (1980) to Marley Marl, "The Bridge, produced for MC Shan" (1986)
 
-'Protect Ya Neck' opens on kung fu film dialogue and then runs eight rappers back to back over a raw, clattering loop. It sounds almost homemade, and it was self-released. 'C.R.E.A.M.', a year later, slows everything down: a sad, looping soul piano from a Charmels record, with space around each verse. Listen for RZA moving from chaos to melancholy with the same dusty texture holding both together.
+Compare two snares. The 808's is a short burst of noise with a tuned ring under it, always identical, sitting cleanly in its own space. A snare lifted off a record brings the room with it: the drummer's touch, the tape compression, a trace of whatever else was playing at that instant. Listen for that smear of extra information. It is the sound of a recording rather than the sound of a circuit.
 
-### 13. `e-swinginglondon-hendrix`
+### 10. `e-tubby-madprofessor`
 
-The Who, "My Generation" (1965) to The Jimi Hendrix Experience, "Purple Haze" (1967)
+King Tubby, "Home-built mixing desk, Waterhouse" (1968) to Mad Professor, "Ariwa Sounds, home-built desk" (1979)
 
-London in 1965 was already playing loud: listen to the feedback and the smashed chords at the end of 'My Generation'. Then play 'Purple Haze' a year and a half later. An American who arrived in that scene took the same noise, the fuzz and the feedback, and made it melodic, with the distortion carrying the tune instead of wrecking it. The scene gave him an audience ready for that.
+Both men's records treat the mixing desk itself, not a mixed-down finished master, as the instrument being played live. The specific tools differ by a decade of electronics, but the gesture is the same.
 
-### 14. `e-stones-kinks`
+### 11. `e-kingston-bronx`
 
-The Rolling Stones, "Come On" (1963) to The Kinks, "You Really Got Me" (1964)
+Kingston sound systems, "street dances and sound clashes" (1968) to DJ Kool Herc, "the back-to-school jam at 1520 Sedgwick Avenue" (1973)
 
-The Stones' early singles stay close to their American blues sources. The Kinks' 1964 breakthrough pushes past covering the blues into something rawer and more English; hear the difference in how much more compressed and torn the Kinks' guitar sound is.
+Listen for what crossed and what did not. The shape is the same in both places: a crowd outdoors, one person choosing records, another one talking over them, a system loud enough to be the event itself. The records are not the same at all. Put on what a Kingston sound was playing in 1970 and what Herc was playing in 1973 and they share almost nothing, because Bronx crowds would not take reggae and he switched to funk and soul. The method travelled. The music did not.
 
-### 15. `e-pistols-clash`
+### 12. `e-simmons-sly`
 
-Sex Pistols, "Anarchy in the U.K." (1976) to The Clash, "White Riot" (1977)
+Simmons, "SDS-V electronic drums" (1981) to Black Uhuru, "Anthem" (1983)
 
-Both are built from the same three-chord urgency, but listen to how directly "White Riot" addresses a specific real event (the 1976 Notting Hill Carnival riot) where "Anarchy in the U.K." stays in the realm of general provocation.
+Listen to the drum fills. In places, instead of the round thud of a drum skin, a tom comes out as a short electronic zap that swoops down in pitch. Underneath it, the groove is still Sly's: the kick and snare placed with a reggae drummer's sense of where the beat should sit. The machine sound, played by a human, is the combination to hear.
 
-### 16. `e-sl1200-theodore`
+### 13. `e-jamal-nas`
 
-Technics, "SL-1200 as a domestic hi-fi turntable" (1972) to Grand Wizzard Theodore, "the scratch" (1975)
+Ahmad Jamal, "I Love Music" (1970) to Nas, "The World Is Yours" (1994)
 
-Listen to the pitch of a scratch. It bends down as the hand slows the record and snaps back up the instant it is released, and the snap is the motor recovering almost immediately. On a belt-driven deck that recovery is a slow sag, which is a different and much less usable sound. The character of the scratch is partly the character of the motor.
+Listen to Jamal's piano: unhurried, with room between the phrases. Pete Rock picks a few notes of it and loops them, so a phrase that drifts in the original circles steadily in the new track. Under Nas's ambition the loop sounds wistful, and Jamal's restraint becomes the song's emotional weight.
 
-### 17. `e-honeydrippers-marleymarl`
+### 14. `e-jamesbrown-publicenemy`
 
-The Honey Drippers, "Impeach the President" (1973) to MC Shan, "The Bridge (produced by Marley Marl)" (1986)
+James Brown, "Funky Drummer" (1970) to Public Enemy, "Fight the Power" (1989)
 
-The song opens on its drums alone for a few bars: a bouncy kick, a snare with a bright crack, and an open hi-hat that breathes between hits. Then play 'The Bridge'. Marl has lifted that kick and snare and set them against the steady tick of a drum machine's hi-hat. Listen for the two sources side by side: the real drum carrying a room and a tape hiss, the machine's hat perfectly even.
+LL Cool J's producer used the break as a clean bed. The Bomb Squad buries it. Listen for Stubblefield's rolling hi-hat and snare somewhere underneath, then for everything piled on top: shouts, horn stabs, scratches and fragments from a dozen other records, all at once, rubbing against each other. It's a wall of sound built from other people's recordings, two years before a court ruling made that kind of record almost impossible to afford.
 
-### 18. `e-hardy-jefferson`
+### 15. `e-re201-perry`
 
-Ron Hardy, "Music Box DJ sets" (1983) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
+Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to Lee "Scratch" Perry, "Revolution Dub" (1975)
 
-Jefferson's piano hook is the part everyone remembers, but the mix, the sequencing and drum programming Hardy shaped, is what makes it a dancefloor record rather than just a song.
+Pick one snare hit and follow it. It repeats, and each repeat is slightly duller and slightly less in tune than the one before, because it is a tape loop wearing the sound down every pass. Then listen for the places where the repeats stop dying away and start feeding on themselves, piling up into a howl before somebody pulls them back. That is a hand on a knob, decided in the moment.
 
-### 19. `e-honeydrippers-bizmarkie`
+### 16. `e-tommyboy-delasoul`
 
-The Honey Drippers, "Impeach the President" (1973) to Biz Markie, "Make the Music with Your Mouth, Biz" (1986)
+De La Soul, "3 Feet High and Rising" (1989) to De La Soul, "De La Soul Is Dead" (1991)
 
-The same year and the same producer as 'The Bridge', and the same drums. But on the Biz record they share space with a human beatbox. Listen for the 'Impeach the President' kick and snare, then for Biz's mouth-made drums answering them. It's a sampled drummer from 1973 and a man imitating a drummer in 1986, on one track.
+The debut is bright, generous with its samples and happy to be liked. Its follow-up opens by smashing the daisy-and-flower image of the first record and turns markedly more cynical throughout, released the same year the Turtles settlement became public.
 
-### 20. `e-dilla-roots`
+### 17. `e-knuckles-atkins`
 
-Slum Village, "Fall in Love" (1998) to The Roots, "Things Fall Apart (album)" (1999)
+Frankie Knuckles, "Warehouse-era DJ sets" (1982) to Model 500 (Juan Atkins), "No UFOs" (1985)
 
-Put a programmed Dilla beat next to Questlove playing live. In 'Fall in Love' the kicks land early or late against the loop and the beat seems to lean. On the slower tracks of Things Fall Apart, listen to Questlove's kick and snare: played by hand, but placed a fraction behind where a metronome would put them, so the groove drags lazily. A drummer is copying a machine that was being used against its own settings.
+Detroit techno's four-on-the-floor structure owes something to house records like Knuckles' sets reaching Detroit via radio and record pools; listen for how close the underlying drum pattern is, even as the two genres' moods diverge sharply.
+
+### 18. `e-madlib-mfdoom`
+
+MF DOOM, "Doomsday" (1999) to Madvillain, "Accordion" (2004)
+
+On 'Doomsday' DOOM produces himself, looping a smooth, sweet phrase from Sade's 'Kiss of Life' under his flat, unhurried voice. On 'Accordion' Madlib gives him something stranger: a wheezing, reedy loop that sounds like an accordion but was played on a cheap electric chord organ. Listen for how the rougher, odder beat pushes DOOM's rhyming, dense chains of internal rhyme packed into a short verse over one repeating figure.
+
+### 19. `e-mellotron-bowie`
+
+Streetly Electronics, "Mellotron, sold as a home orchestra" (1963) to David Bowie, "Space Oddity" (1969)
+
+This record also has a real string arrangement, which makes it a good listening exercise. Somewhere in the swelling background there are string sounds that start with no bow attack and waver very slightly in pitch. Those are tape, played from a keyboard, sitting inside the real orchestra. Then listen for the Stylophone, which is on the same record.
+
+### 20. `e-trax-chicagohouse`
+
+Frankie Knuckles, "Warehouse DJ sets" (1982) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
+
+Before labels like Trax, this music was mostly heard in the clubs, on DJs' edits and tapes. 'Move Your Body' is the same music as a product you could buy, pressed at the label owner's own plant. Listen to an original Trax pressing if you ever get the chance, and for the surface noise: the cheap, recycled vinyl was part of the sound people bought.

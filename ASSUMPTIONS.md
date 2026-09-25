@@ -1852,3 +1852,17 @@ are named in each record's own `evidence` field rather than repeated here.
   on Goldie's 'Saturnz Return' (1998) is named in prose rather than
   given a second edge, since the causal claim (the club night inspiring
   'Earthling') only runs one way.
+- **A211. MC Shan, Kool G Rap, and Roxanne Shanté all connect to the map
+  through a straightforward `production` edge from `marley-marl`,**
+  rather than a `label` edge from `cold-chillin`, since the causal claim
+  in each case is squarely about what Marl did in the booth (produced
+  'The Bridge' and 'Road to the Riches' in full, made his own production
+  debut on 'Roxanne's Revenge') rather than a label decision under the
+  A69 convention. `e-marleymarl-mcshan`'s trackPair names 'The Bridge Is
+  Over' with `search: false`, since Boogie Down Productions isn't a node
+  and the record is prose-only context, the same pattern the seed already
+  used for MC Shan himself inside `e-marleymarl-bizmarkie` before this
+  batch gave him his own record. Both single-signature-track warnings
+  (MC Shan, Roxanne Shanté) are deliberate: each is on the map for the
+  one record this batch's edges are actually about, matching the-charmels'
+  and gilbert-osullivan's precedent, not a gap to be padded.
