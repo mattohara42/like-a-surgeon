@@ -4,7 +4,19 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
-None right now.
+- **Q23. Where do the tape and radiophonic pioneers belong now that
+  lineages are cheap to add?** Schaeffer, Stockhausen, Oram, Derbyshire,
+  and the `paris-musique-concrete` and `bbc-radiophonic-workshop` scenes
+  are `other` under A148, which avoided an "art music" lineage because it
+  would have been a schema change. It is now one file (A221). SPEC.md
+  names musique concrète and the Radiophonic Workshop as where the
+  electronic spine starts. Options:
+  (a) **Recommended.** Move them to `electronic`. SPEC already puts them
+  there, and it turns their edges into Kraftwerk and the Radiophonic
+  successors into same-lineage edges, which is what they are.
+  (b) Add an `avant-garde` roots lane, alongside jazz and blues (A224).
+  Keeps them visibly separate as a source the pop lineages drew on.
+  (c) Leave them in `other`.
 
 ## Resolved
 

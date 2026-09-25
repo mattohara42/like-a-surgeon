@@ -57,7 +57,9 @@ correct response to a good idea arriving mid-milestone.
 
 ## Deferred data
 
-- Jazz, which touches everything and would triple the graph.
+- Jazz and blues beyond what later music traces back to. Both are now
+  roots lanes (A224), filled depth-first from documented connections.
+  Covering either as its own full history would still triple the graph.
 - Country and its production lineage.
 - Classical minimalism into electronic music.
 - Regional scenes outside the US, UK, Jamaica, and Germany.

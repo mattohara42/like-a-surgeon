@@ -2047,3 +2047,36 @@ small and worth having in front of Matt alongside everything else here.
   order and colours are unchanged from before. The one visible change is
   the lane title, which now uses the record's `name`, so HIPHOP reads
   HIP-HOP.
+
+## Jazz and blues as roots lanes
+
+- **A224. Jazz and blues are ordinary lineages placed below funk as
+  roots lanes** (jazz at order 60, blues at 70, `other` stays last at
+  90). Matt approved this in chat (2026-09-25), and said the 1950 start
+  is a soft default and the map should aim for depth over completeness.
+  "Roots" is a position, not a new field: nothing in the schema marks a
+  lineage as roots, since nothing yet needs to read that. The rule for
+  filling them follows the depth decision. A jazz or blues record joins
+  the map when a documented connection reaches something already on it,
+  the same test the Q21 sample hubs already met. That rule is why Bob
+  James and Ahmad Jamal were here before these lanes existed.
+- **A225. What moved.** The six jazz players filed `other` under A135 and
+  A199 (Ahmad Jamal, Billy Cobham, Bob James, Ronnie Foster, Tom Scott,
+  Stan Getz and Luiz Bonfá) are now `jazz`. Chess Records, filed `funk`
+  under A212 only because there was no blues bucket, is now `blues`.
+  Every edge touching these seven was already cross-lineage and still
+  is, so no `crossLineage` flag changed. Three adult blurbs (Jamal,
+  Cobham, Getz and Bonfá) said jazz was a deferred lineage; that one
+  sentence in each now says it is a roots lane. No other prose changed.
+  Sade, Gilbert O'Sullivan and the Incredible Bongo Band stay `other`,
+  and Motown and Stax stay `funk`, since neither new lane fits them. The
+  tape and radiophonic pioneers are Q23.
+- **A226. Colours.** Jazz is rose (`#ff86c8`) and blues is lime
+  (`#b4e05a`). Both sit in hue gaps the existing six leave open. Blue
+  would have been the obvious colour for blues, but it collides with
+  electronic. First-pass choices, one line each to change.
+- **A227. The blues lane holds only Chess for now,** and Chess is a
+  label marker, so the lane only appears when the Labels layer is on
+  (`dropEmptyLanes`). The first blues artists (Muddy Waters is the
+  obvious one, already named in `e-chess-stones`) are a data batch, not
+  part of this change.
