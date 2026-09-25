@@ -1,0 +1,19 @@
+{
+  "id": "chess-records",
+  "name": "Chess Records",
+  "type": "label",
+  "lineage": "funk",
+  "foundedYear": 1950,
+  "closedYear": 1975,
+  "city": "Chicago",
+  "founders": [
+    "Leonard Chess",
+    "Phil Chess"
+  ],
+  "ownershipStory": "Leonard and Phil Chess bought out Aristocrat Records in 1950 and renamed it Chess, building a Chicago blues roster, Muddy Waters, Howlin' Wolf, Chuck Berry, Bo Diddley, Willie Dixon, Etta James, Buddy Guy, around their studio at 2120 South Michigan Avenue from 1957. The brothers sold the label to General Recorded Tape in early 1969 for $6.5 million; Leonard Chess died later that year. The catalogue passed through several owners before landing at Universal Music Group. The 2120 South Michigan Avenue building is now a Chicago Landmark and Willie Dixon's Blues Heaven Foundation.",
+  "hook": "The Chicago blues label whose studio let a young British R&B band meet Muddy Waters and start writing their own songs instead of covering his.",
+  "blurb": {
+    "age13": "Chess Records, started by brothers Leonard and Phil Chess in 1950, recorded the Chicago blues artists, Muddy Waters, Chuck Berry, Howlin' Wolf and others, that most of the British Invasion bands grew up copying. In June 1964, manager Andrew Loog Oldham talked Chess into letting the still-unknown Rolling Stones record in their studio, even though Chess didn't normally rent it to outside artists. The band met Muddy Waters and Chuck Berry there and named an instrumental, '2120 South Michigan Avenue', after the studio's address.",
+    "adult": "Chess's studio access, granted as a favour to a manager rather than a business decision, gave the Rolling Stones something more valuable than the session itself: proximity to the musicians they had been imitating from records. Keith Richards has said the riff for 'Satisfaction' came to him not long after these sessions, and the band's shift from mostly covering blues and R&B standards toward writing their own material dates from around this visit."
+  }
+}

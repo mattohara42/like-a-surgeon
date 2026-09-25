@@ -150,10 +150,13 @@ batches followed: Enjoy Records (Bobby Robinson) and Big Daddy Kane
 closed further BACKLOG waits, then a `uk-jungle` scene joined Shy FX
 with Goldie, whose own account of inspiring David Bowie's 'Earthling'
 (1997) runs this map's usual older-artist-shapes-younger-successor
-pattern in reverse. A final overnight batch brought MC Shan, Kool G Rap
-and Roxanne Shanté onto the map, each with a documented Marley Marl
-production edge, nearly closing out the Juice Crew (only Craig G still
-waits). `npm run report` has the current distance on every target.
+pattern in reverse. A batch bringing MC Shan, Kool G Rap and Roxanne
+Shanté onto the map, each with a documented Marley Marl production
+edge, brought the artist count to 120 and **met the M1 target** for the
+first time; the Juice Crew is nearly closed out too (only Craig G still
+waits). A `chess-records` label batch followed, giving the rock spine
+its first blues-label edge (the Rolling Stones' 1964 Chicago sessions).
+`npm run report` has the current distance on every remaining target.
 
 ## Definition of done for any milestone
 

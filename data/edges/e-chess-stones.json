@@ -1,0 +1,31 @@
+{
+  "id": "e-chess-stones",
+  "from": "chess-records",
+  "to": "rolling-stones",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1964,
+  "crossLineage": true,
+  "evidence": "Manager Andrew Loog Oldham arranged for the still-largely-unknown Rolling Stones to record at Chess's Chicago studio on 10-11 June 1964, unusual since Chess did not normally let outside artists use it. The band met Muddy Waters, Chuck Berry, Willie Dixon and Buddy Guy during the sessions and recorded the instrumental '2120 South Michigan Avenue', named for the studio's address, released on the 'Five by Five' EP. Keith Richards has said the riff for 'Satisfaction' came to him shortly after these sessions, around the time the band's songwriting shifted from mostly covers toward original material.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Rolling Stones",
+      "title": "It's All Over Now",
+      "year": 1964
+    },
+    "later": {
+      "artist": "The Rolling Stones",
+      "title": "(I Can't Get No) Satisfaction",
+      "year": 1965
+    },
+    "whatToListenFor": "'It's All Over Now', cut in the same Chess sessions, is still a cover, a Bobby Womack song reworked. 'Satisfaction', less than a year later, is the band's own riff and words, written not long after standing in the room where the blues records they'd been copying were actually made."
+  },
+  "explanation": {
+    "age7": "A famous blues record company let the Rolling Stones record in their studio in Chicago, and the band even met some of their musical heroes there.",
+    "age13": "In June 1964, the Rolling Stones recorded at Chess Records' Chicago studio, meeting blues legends Muddy Waters and Chuck Berry, whose records they had grown up copying. They named an instrumental '2120 South Michigan Avenue' after the studio's address. Not long after, the band started writing more of their own songs, including 'Satisfaction'.",
+    "adult": "A label edge under the A69 convention, but the decision here is access rather than a contract or a creative note: Chess granting studio time it didn't normally give outside artists put the Rolling Stones physically inside the tradition they had been learning from records, and the band's turn toward original songwriting dates from around this visit."
+  },
+  "tags": [
+    "production"
+  ]
+}
