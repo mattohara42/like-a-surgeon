@@ -129,9 +129,12 @@ rock spine, the founding Bronx generation, 80s hip-hop production, and
 all three Q21 batches (90s groups and producers, the most-sampled breaks,
 classic rock), batch 3 (outré electronic) in a first pass, a funk/dub
 batch (A180), an orphan-closing batch that connected Transmat, KMS
-and Rockers International to the main graph (A184), and a bridge-edge
+and Rockers International to the main graph (A184), a bridge-edge
 pass that merged three more scene/label islands without adding new
-nodes (A189). Batch 5 is half done. Machines reached 25 in PR #23, and
+nodes (A189), and a sample-hub/Native Tongues batch (A191) that added
+Isaac Hayes, the Isley Brothers, Bob James, Syl Johnson, De La Soul,
+Prince Paul and Mantronix, plus the Casio MT-40 machine. Batch 5 is
+half done. Machines exceeded 25 in PR #23 and again this batch, and
 labels are still short. `npm run report` has the current distance on
 every target.
 

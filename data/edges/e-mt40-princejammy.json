@@ -1,0 +1,30 @@
+{
+  "id": "e-mt40-princejammy",
+  "from": "casio-mt40",
+  "to": "prince-jammy",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1985,
+  "crossLineage": true,
+  "evidence": "Musician Noel Davey has described using the Casio MT-40's built-in 'rock' rhythm preset, unable to afford the Yamaha DX7 he originally wanted, to build the backing track for Wayne Smith's 'Under Mi Sleng Teng', produced by Prince Jammy (credited at the time as King Jammy) and released in 1985.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Casio",
+      "title": "MT-40 'rock' rhythm preset",
+      "year": 1981,
+      "search": false
+    },
+    "later": {
+      "artist": "Wayne Smith",
+      "title": "Under Mi Sleng Teng",
+      "year": 1985
+    },
+    "whatToListenFor": "The entire backing track is the MT-40's unmodified preset: no live drums, no live bass, just a cheap home keyboard's demo rhythm sped up and run underneath the vocal. It sounds nothing like the analogue dub coming out of Jammy's own former workplace, King Tubby's studio, a decade earlier."
+  },
+  "explanation": {
+    "age7": "A song called 'Under Mi Sleng Teng' used the beat that was already built into a cheap toy keyboard, instead of real drums, and it changed reggae music.",
+    "age13": "Noel Davey couldn't afford the synthesizer he wanted, so he used a Casio MT-40's built-in 'rock' preset instead, and it became the whole backing track for Wayne Smith's 'Under Mi Sleng Teng' (1985), produced by Prince Jammy. It set off reggae's move to fully computerized production.",
+    "adult": "Closes a gap this map had flagged in e-tubby-princejammy: Jammy's 1985 break from analogue technique now has its own machine and its own edge, distinct from his 1970s apprenticeship under King Tubby."
+  },
+  "tags": ["technology"]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "e-hayes-publicenemy",
+  "from": "isaac-hayes",
+  "to": "public-enemy",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1988,
+  "crossLineage": true,
+  "evidence": "Public Enemy's 'Black Steel in the Hour of Chaos' (from 'It Takes a Nation of Millions to Hold Us Back', 1988), produced by the Bomb Squad, samples Isaac Hayes's 'Hyperbolicsyllabicsesquedalymistic' (from 'Hot Buttered Soul', 1969), as catalogued in sample-credit databases and discussed in accounts of the Bomb Squad's production method.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Isaac Hayes",
+      "title": "Hyperbolicsyllabicsesquedalymistic",
+      "year": 1969
+    },
+    "later": {
+      "artist": "Public Enemy",
+      "title": "Black Steel in the Hour of Chaos",
+      "year": 1988
+    },
+    "whatToListenFor": "Hayes's original is a long, orchestral funk-soul groove with strings and a driving bassline stretched over several minutes. The Bomb Squad extracts a fragment of it and buries it inside a dense, chaotic wall of other sources, the same layering approach as e-jamesbrown-publicenemy but a different, less obvious source record."
+  },
+  "explanation": {
+    "age7": "One of Public Enemy's angriest songs uses a small piece of a long Isaac Hayes soul song, hidden inside a wall of other sampled sounds.",
+    "age13": "'Black Steel in the Hour of Chaos' (1988) samples Isaac Hayes's 1969 track 'Hyperbolicsyllabicsesquedalymistic' from his album 'Hot Buttered Soul', one of many sources the Bomb Squad layered together for the song.",
+    "adult": "Another entry in the Bomb Squad's sampling of deep, non-obvious soul and funk sources rather than the era's more commonly sampled breaks, part of the density that made their method one of the first casualties of the 1991 sampling ruling."
+  },
+  "tags": ["production"]
+}

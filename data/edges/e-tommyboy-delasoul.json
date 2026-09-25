@@ -1,0 +1,29 @@
+{
+  "id": "e-tommyboy-delasoul",
+  "from": "tommy-boy",
+  "to": "de-la-soul",
+  "type": "label",
+  "confidence": "consensus",
+  "year": 1989,
+  "crossLineage": false,
+  "evidence": "De La Soul has said they submitted full sample information for '3 Feet High and Rising' (1989), and that Tommy Boy chose which of those samples to clear and which to leave uncleared, including a Turtles sample the label did not clear. The Turtles' Howard Kaylan and Mark Volman sued for copyright infringement in 1991 and the case was settled out of court, reportedly for a large sum. Critics and biographers widely read the group's next album, 'De La Soul Is Dead' (1991), as a direct, more guarded and cynical response to that year, though no single interview ties every change in tone to the lawsuit specifically, which is why this sits at consensus rather than documented.",
+  "trackPair": {
+    "earlier": {
+      "artist": "De La Soul",
+      "title": "3 Feet High and Rising",
+      "year": 1989
+    },
+    "later": {
+      "artist": "De La Soul",
+      "title": "De La Soul Is Dead",
+      "year": 1991
+    },
+    "whatToListenFor": "The debut is bright, generous with its samples and happy to be liked. Its follow-up opens by smashing the daisy-and-flower image of the first record and turns markedly more cynical throughout, released the same year the Turtles settlement became public."
+  },
+  "explanation": {
+    "age7": "De La Soul used a small piece of someone else's song without permission on their first album, got sued for it, and their next album sounded much less cheerful.",
+    "age13": "Tommy Boy released '3 Feet High and Rising' with an uncleared sample of The Turtles's 'You Showed Me'. The Turtles sued in 1991 and the case was settled. That same year De La Soul released 'De La Soul Is Dead', a noticeably darker, more cynical record that took aim at their own cheerful image.",
+    "adult": "The clearance decision was the label's, not the artists': De La Soul say they handed in full sample documentation and Tommy Boy decided what to clear. The lawsuit that followed is one of hip-hop's landmark sampling cases. The tonal shift on the next album is a critical consensus reading rather than a confirmed one-to-one causal statement, which is why this edge sits at consensus and says so plainly, matching the same label-decision-to-artist-output claim A69 and A121 already established."
+  },
+  "tags": ["production", "labels"]
+}

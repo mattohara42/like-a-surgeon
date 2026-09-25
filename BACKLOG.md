@@ -421,8 +421,11 @@ fixing them inline.)
   as a label node also waits: every causal claim about it found so far
   is really Rubin's, and A69 keeps roster relationships out of edges.
   **Partly closed** by the Q21 batch 1, which added the Beastie Boys and
-  much of the 90s. Public Enemy, De La Soul, Mantronix, Big Daddy Kane
-  and the West Coast are still waiting.
+  much of the 90s, and further by the sample-hub/Native Tongues batch
+  (A191), which added De La Soul, Prince Paul and Mantronix, and gave
+  Tommy Boy its label edge along with the Turtles suit (`e-tommyboy-delasoul`).
+  Big Daddy Kane and the rest of the Juice Crew, and the West Coast, are
+  still waiting.
 - The batch added two more null end years of the "could not find it"
   kind that Q20 is about: `akai-mpc60` and `akai-mpc3000`. Both will read
   as still on sale until Q20 is answered.
@@ -447,6 +450,11 @@ fixing them inline.)
   Jackson (needs careful adult-register handling), Bob James, Syl
   Johnson, the Isley Brothers, and Stan Getz and Luiz Bonfá (whose
   'Saudade Vem Correndo' is in 'Runnin'').
+  **Partly closed** by the sample-hub/Native Tongues batch (A191):
+  Isaac Hayes, Bob James, Syl Johnson and the Isley Brothers are now on
+  the map, each with a documented single-song sample credit into an
+  artist already there. Joni Mitchell, Michael Jackson, and Stan Getz
+  and Luiz Bonfá are still waiting.
 - The Amen break's larger story is in jungle and drum and bass, which
   aren't on the map. Adding one or two jungle producers would give
   `the-winstons` its cross-lineage edge into electronic music, which is
@@ -472,6 +480,9 @@ fixing them inline.)
   MT-40 has no machine record yet; `e-tubby-princejammy`'s adult text
   flags the gap rather than inventing an edge to a machine that isn't
   there.
+  **Resolved** by the sample-hub/Native Tongues batch (A191, A196):
+  `casio-mt40` is now a machine record, with `e-mt40-princejammy` closing
+  the edge and `e-tubby-princejammy`'s adult text updated to point at it.
 
 - The transport's year readout ends at 2028. `layout.timeScale.yearEnd` is
   the latest year in the data plus `CONFIG.layout.marginYears` (2), and

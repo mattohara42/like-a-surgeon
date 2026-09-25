@@ -1,0 +1,32 @@
+{
+  "id": "prince-paul",
+  "name": "Prince Paul",
+  "sortName": "Prince Paul",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1985,
+  "activeTo": null,
+  "originCity": "Amityville, Long Island, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A Stetsasonic DJ turned producer whose collage style and cartoonish concept records gave De La Soul, then Gravediggaz, their sound.",
+  "blurb": {
+    "age7": "Prince Paul was a DJ who became a record producer. He made the music behind De La Soul's first, colorful albums.",
+    "age13": "Paul Huston DJ'd for the Brooklyn group Stetsasonic before producing all of De La Soul's 1989 debut, '3 Feet High and Rising', building its collage of samples and comedy skits. He went on to produce for Big Daddy Kane, Boogie Down Productions and Queen Latifah, and in 1994 formed the horror-themed group Gravediggaz with RZA.",
+    "adult": "Prince Paul's production for De La Soul established a template, dense sampling, comic skits, an underlying concept, that shaped alternative and 'jazz rap' through the early 1990s. His later horrorcore project Gravediggaz, formed with RZA, Poetic and fellow Stetsasonic member Frukwan, applied the same sensibility to a much darker register."
+  },
+  "signatureTracks": [
+    {
+      "title": "3 Feet High and Rising (De La Soul)",
+      "year": 1989,
+      "whyThisOne": "His full-album production debut, and the record that defined his sound."
+    },
+    {
+      "title": "6 Feet Deep (Gravediggaz)",
+      "year": 1994,
+      "whyThisOne": "Formed with RZA; took his sample-collage sensibility into horrorcore."
+    }
+  ]
+}
