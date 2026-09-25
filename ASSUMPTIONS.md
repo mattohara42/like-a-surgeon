@@ -2121,3 +2121,19 @@ small and worth having in front of Matt alongside everything else here.
   MusicBrainz cannot date before 1980. Serge Gainsbourg was cut from the
   adult text's list of what Compass Point led to, since his first Sly
   and Robbie record was made in Kingston in 1979, before it.
+- **A231. Elektra replaces ABKCO as the batch's fourth label, and
+  `e-elektra-mfdoom` sits at consensus.** ABKCO into The Verve was the
+  first replacement for Atlantic, and was dropped before writing: its
+  leverage over 'Bitter Sweet Symphony' came from publishing (Decca
+  owned the master), and it changed credits and royalties rather than
+  the music, which is not an A69 claim. Elektra's cancellation of KMD's
+  'Black Bastards' in 1994 is documented (catalogue number assigned,
+  promos and a single out, then pulled). The reason is only "reportedly"
+  the cover, and the edge says so. The causal step from the cancellation
+  to the masked MF DOOM persona rests on Dumile's interviews and on
+  critics, which is consensus, not documented. 'Peachfuzz' is dated 1990,
+  the single, per MusicBrainz, not 1991 for 'Mr. Hood'. `city` is New
+  York, where Elektra ran through its folk and rock years; it was started
+  in Holzman's college dorm room. MF DOOM's `labels` entry runs 1990 to
+  1994. `lineage` is `rock` for the Doors and the Stooges, which makes
+  the edge cross-lineage.

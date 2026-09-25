@@ -11,10 +11,10 @@ Regenerate with `npm run report`. This report describes the dataset only;
 | artists | 120 | 120 | met |
 | machines | 31 | 25 | met |
 | scenes | 15 | 20 | 75% |
-| labels | 29 | 30 | 97% |
-| edges | 203 | 350 | 58% |
+| labels | 30 | 30 | met |
+| edges | 204 | 350 | 58% |
 | threads | 2 | 5 | 40% |
-| crossLineageEdges | 79 | 60 | met |
+| crossLineageEdges | 80 | 60 | met |
 | edgesWithDemo | 5 | 30 | 17% |
 
 ## Counts by lineage
@@ -25,7 +25,7 @@ Every node type, since machines, scenes and labels carry a lineage too.
 |---|---:|
 | hiphop | 48 |
 | electronic | 47 |
-| rock | 31 |
+| rock | 32 |
 | other | 23 |
 | funk | 21 |
 | dub | 18 |
@@ -50,7 +50,7 @@ Artists alone:
 |---|---:|
 | direct | 45 |
 | technological | 45 |
-| label | 29 |
+| label | 30 |
 | sample | 29 |
 | production | 28 |
 | scene | 23 |
@@ -63,7 +63,7 @@ Artists alone:
 | tier | count |
 |---|---:|
 | documented | 142 |
-| consensus | 60 |
+| consensus | 61 |
 | asserted | 1 |
 
 ## The 20 edges to read hardest
@@ -130,7 +130,15 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Secondary accounts of Larry Smith's work (a Cuepoint profile of Smith, and standard histories of the single) agree that 'It's Like That' and 'Sucker M.C.'s' were programmed on an Oberheim DMX, and that Smith rebuilt the drum pattern from Orange Krush's 'Action', played by drummer Trevor Gale, reusing it on several later Run-D.M.C. tracks. No first-person account from Smith was consulted, so this is held at consensus.
 
-### 8. `e-flash-bambaataa` (score 65)
+### 8. `e-elektra-mfdoom` (score 65)
+
+Elektra Records to MF DOOM, label, consensus, 1994
+
+Flags: consensus tier; evidence is second-hand.
+
+Evidence: Elektra released KMD's debut 'Mr. Hood' (1991) and scheduled their second album, 'Black Bastards', for May 1994, assigning it a catalogue number and sending out promotional copies and a single. It then cancelled the release and dropped the group, reportedly over the cover art, which showed a Sambo caricature being hanged. DJ Subroc, Zev Love X's brother and fellow KMD member, had been killed by a car shortly before the album was finished. The album stayed unreleased until 2000. The cancellation is documented. The link from it to the masked MF DOOM persona that Daniel Dumile introduced in the late 1990s rests on his own interviews, where he described the character as a villain taking revenge on the industry that had damaged him, and on critics who read the persona that way. That is why the edge sits at consensus rather than documented.
+
+### 9. `e-flash-bambaataa` (score 65)
 
 Grandmaster Flash to Afrika Bambaataa, scene, consensus, 1976
 
@@ -138,7 +146,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Flash and Bambaataa are consistently described together in Bronx hip-hop oral histories (e.g. Jeff Chang's 'Can't Stop Won't Stop', Fricke and Ahearn's 'Yes Yes Y'all') as the two most prominent DJ/crew leaders of the mid-1970s Bronx park-jam scene, mutually aware and sometimes rival, without a single documented direct collaboration.
 
-### 9. `e-kane-nas` (score 65)
+### 10. `e-kane-nas` (score 65)
 
 Big Daddy Kane to Nas, direct, consensus, 1994
 
@@ -146,7 +154,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Big Daddy Kane is widely credited in hip-hop journalism and criticism as a foundational technical influence on the generation of New York MCs that followed him, Nas among them; Rolling Stone describes him as "a huge influence on a generation of MCs." No single documented statement from Nas naming Kane specifically as a direct influence on his own writing was found, which is why this sits at consensus rather than documented.
 
-### 10. `e-kevinsaunderson-chezdamier` (score 65)
+### 11. `e-kevinsaunderson-chezdamier` (score 65)
 
 Kevin Saunderson to Chez Damier, direct, consensus, 1988
 
@@ -154,7 +162,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Damier and Saunderson were both part of the Music Institute's circle from its 1988 opening (Saunderson among its regular DJs, Damier a co-owner), and Damier went on to work A&R for Saunderson's KMS. Widely described this way in retrospectives (Red Bull Music Academy, the Music Origins Project), though no single first-person account from either man specifies what Saunderson's mentorship directly changed in Damier's own productions, so this sits at consensus rather than documented.
 
-### 11. `e-knuckles-atkins` (score 65)
+### 12. `e-knuckles-atkins` (score 65)
 
 Frankie Knuckles to Juan Atkins, scene, consensus, 1984
 
@@ -162,7 +170,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Chicago house and Detroit techno are widely described in music histories as parallel, mutually aware Midwest scenes that traded records and radio play through the mid-1980s, without a single documented direct meeting between Knuckles and Atkins anchoring the claim.
 
-### 12. `e-knuckles-jefferson` (score 65)
+### 13. `e-knuckles-jefferson` (score 65)
 
 Frankie Knuckles to Marshall Jefferson, scene, consensus, 1983
 
@@ -170,7 +178,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Knuckles' Warehouse residency (from 1977) predates and is widely credited with establishing the Chicago club culture Jefferson entered in the early 1980s, though no specific documented meeting between the two anchors this individual claim.
 
-### 13. `e-marleymarl-ericbrakim` (score 65)
+### 14. `e-marleymarl-ericbrakim` (score 65)
 
 Marley Marl to Eric B. & Rakim, production, consensus, 1986
 
@@ -178,7 +186,7 @@ Flags: consensus tier; evidence calls the claim disputed.
 
 Evidence: Disputed. Both parties agree 'Eric B. Is President' was made at Marley Marl's home studio in Queensbridge. Marl has said he produced it and 'My Melody', and has demonstrated on video how he built the first beat. Eric B. has said he brought the records to Marl and paid him as an engineer, not a producer. The album Paid in Full credits production to Eric B. & Rakim, with Marl credited only for a remix of 'My Melody'. The edge claims only that Marl's room, equipment and hands shaped the record, which neither account denies. Who authored the beat is left open.
 
-### 14. `e-perry-sherwood` (score 65)
+### 15. `e-perry-sherwood` (score 65)
 
 Lee "Scratch" Perry to Adrian Sherwood, direct, consensus, 1979
 
@@ -186,7 +194,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Sherwood has described Jamaican dub production, including Perry's Black Ark work, as formative in numerous interviews across his career (Red Bull Music Academy, AllMusic, and others); no single documented meeting or collaboration between the two anchors the claim, so it sits at consensus rather than documented.
 
-### 15. `e-peterock-dilla` (score 65)
+### 16. `e-peterock-dilla` (score 65)
 
 Pete Rock to J Dilla, direct, consensus, 2000
 
@@ -194,7 +202,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Dan Charnas's biography Dilla Time (2022), based on interviews with Dilla's family and collaborators, describes Pete Rock as the young producer's idol, and describes Dilla calling Pete Rock for inspiration when he was stuck. Pete Rock's influence on Dilla's early work is widely stated in retrospectives. No first-person statement from Dilla was consulted, so this is held at consensus.
 
-### 16. `e-pil-gangoffour` (score 65)
+### 17. `e-pil-gangoffour` (score 65)
 
 Public Image Ltd to Gang of Four, scene, consensus, 1979
 
@@ -202,7 +210,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: PiL and Gang of Four are both central to the 1978-79 UK post-punk moment's move away from punk's simple format, PiL toward dub space and Gang of Four toward funk-and-dub-influenced rhythm, without a documented instance of direct contact between the two acts.
 
-### 17. `e-pistols-clash` (score 65)
+### 18. `e-pistols-clash` (score 65)
 
 Sex Pistols to The Clash, scene, consensus, 1976
 
@@ -210,7 +218,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: The Sex Pistols and the Clash are the two foundational bands of the 1976-77 London punk scene, sharing bills (including the 100 Club Punk Festival, September 1976) and rival managers (Malcolm McLaren and Bernie Rhodes), though no single documented act of direct musical influence between the two anchors the claim beyond shared scene.
 
-### 18. `e-publicenemy-rza` (score 65)
+### 19. `e-publicenemy-rza` (score 65)
 
 Public Enemy to RZA, direct, consensus, 1992
 
@@ -218,7 +226,7 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: Critics and hip-hop production histories consistently describe RZA's dense, lo-fi Wu-Tang sound as built on the Bomb Squad's cut-up sampling technique, adapted toward a grittier, more minimalist end using an Ensoniq sampler rather than the Bomb Squad's own dozens-of-samples-per-track density. Described this way in retrospectives (Mixdown Magazine, general hip-hop production histories); no specific first-person RZA statement naming the Bomb Squad was consulted, so this sits at consensus.
 
-### 19. `e-stones-kinks` (score 65)
+### 20. `e-stones-kinks` (score 65)
 
 The Rolling Stones to The Kinks, scene, consensus, 1964
 
@@ -226,49 +234,41 @@ Flags: consensus tier; evidence says the connection is not documented.
 
 Evidence: The Rolling Stones and the Kinks are widely treated in British music history as the two key contemporaneous British R&B chart rivals of the early-to-mid 1960s, both signed within about a year of each other and drawing on the same American blues and R&B catalogue, without a documented instance of one directly shaping the other's specific records.
 
-### 20. `e-tommyboy-delasoul` (score 65)
-
-Tommy Boy Records to De La Soul, label, consensus, 1989
-
-Flags: consensus tier; evidence is second-hand.
-
-Evidence: De La Soul has said they submitted full sample information for '3 Feet High and Rising' (1989), and that Tommy Boy chose which of those samples to clear and which to leave uncleared, including a Turtles sample the label did not clear. The Turtles' Howard Kaylan and Mark Volman sued for copyright infringement in 1991 and the case was settled out of court, reportedly for a large sum. Critics and biographers widely read the group's next album, 'De La Soul Is Dead' (1991), as a direct, more guarded and cynical response to that year, though no single interview ties every change in tone to the lawsuit specifically, which is why this sits at consensus rather than documented.
-
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 202 edges that carry one.
+Drawn with seed 1 from the 203 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-sl1200-flash`
+### 1. `e-sly-cypresshill`
 
-Technics, "SL-1200 as a domestic hi-fi turntable" (1972) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
+Sly and the Family Stone, "Life" (1968) to Cypress Hill, "Insane in the Brain" (1993)
 
-Listen for what never happens: the beat does not sag. The same few bars come round again and again dead in time, and in the gaps you can hear a record being hauled backwards and dropped back in exactly on the one. A belt-driven deck would lag on every restart and the whole thing would slide. Everything frantic on this record rests on the machine underneath it being rigid.
+Listen to the start of 'Life': a jaunty, bouncing keyboard figure before the band comes in. In 'Insane in the Brain' Muggs keeps the figure but sets it in murk, loops it, and sets it under the squeal and B-Real's nasal voice. Something cheerful from 1968 becomes something woozy and threatening in 1993, and the notes haven't changed.
 
-### 2. `e-kevinsaunderson-chezdamier`
+### 2. `e-stax-isaachayes`
 
-The Music Institute, "Club residencies, 1988-89" (1988) to Chez Damier, "Can You Feel It" (1992)
+Isaac Hayes, "Precious, Precious (Presenting Isaac Hayes)" (1968) to Isaac Hayes, "Walk On By (Hot Buttered Soul)" (1969)
 
-There is no early Damier record to compare against; the claim here is about proximity, not a specific production choice. 'Can You Feel It' arrived four years after the two men shared a DJ booth, made inside the label Saunderson ran.
+The 1968 debut is a competent, conventional soul session, short songs, tight arrangements, nothing that announces a distinct voice. A year later, the same singer stretches a Burt Bacharach song past eleven minutes, opening with strings and a wah-wah guitar solo before the vocal even arrives. The difference is what a label desperate enough to hand over full control actually sounds like.
 
-### 3. `e-detroittechno-warp`
+### 3. `e-tubby-scientist`
 
-Model 500, "No UFO's" (1985) to LFO, "LFO" (1990)
+King Tubby, "Home-built mixing desk, Waterhouse" (1968) to Scientist, "Scientist Rids the World of the Evil Curse of the Vampires" (1981)
 
-'No UFO's' is Juan Atkins's drum machine funk: crisp claps, a synth riff, a cool vocoder voice. 'LFO' strips that down further and moves the weight into the bass. Listen for the sub-bass notes that were built to shake a club system. They were so low that home stereos struggled with them. Over the top are a few pure bleeps, the sound that named the whole Sheffield style. The Detroit idea is there, machines with no apology, rebuilt for a northern English city's clubs.
+Tubby's own dub instrumentals treat the desk as an instrument played live, dropping instruments in and out and pushing the spring reverb hard. A decade later, mixing at the same studio, Scientist applies the identical toolkit, echo, filtering, sudden drop-outs, to a new decade's rhythms, with a themed album concept built on top.
 
-### 4. `e-marleymarl-bizmarkie`
+### 4. `e-909-heard`
 
-MC Shan, "The Bridge (produced by Marley Marl)" (1986) to Biz Markie, "Make the Music with Your Mouth, Biz" (1986)
+Roland, "TR-909" (1983) to Mr. Fingers, "Washing Machine" (1986)
 
-Both records are Marley Marl building on sampled drums in the same year. The difference on the Biz record is that one of the instruments is a person. Listen for the beatboxing: kicks, snares and hisses made with Biz's mouth, sitting alongside the drums Marl has pulled off records. Try to hear where the machine stops and the mouth starts. Part of the joke of the track is that it is sometimes hard to tell.
+The drum machine carries this record almost on its own. Listen to the hi-hats: bright and metallic, ticking in a perfectly even grid over a synthetic kick. The 909's cymbals were short digital recordings, which is why they sound harder and more real than the rest of the kit. Then play 'Can You Feel It', made on the same two machines in the same few days, and hear how differently they can be used.
 
-### 5. `e-kraftwerk-atkins`
+### 5. `e-tubby-princejammy`
 
-Kraftwerk, "Numbers" (1981) to Cybotron, "Clear" (1983)
+King Tubby, "Home-built mixing desk, Waterhouse" (1968) to Prince Jammy, "Kamikazi Dub" (1979)
 
-Both are built from short repeating electronic figures with no human looseness. The Detroit record has more funk in how the accents fall. Listen to where the emphasis lands in the bar. That small difference is the entire Atlantic crossing.
+'Kamikazi Dub' is credited to Jammy alone, but it is built with Tubby's own studio and Tubby's mixing vocabulary, spring reverb, tape delay, sudden drop-outs, on musicians including Sly and Robbie and Augustus Pablo. Listen for the same desk-as-instrument approach as the earlier King Tubby and Scientist edges, from a third engineer Tubby trained.
 
 ### 6. `e-atkins-may`
 
@@ -276,86 +276,86 @@ Cybotron, "Clear" (1983) to Rhythim Is Rhythim, "Nude Photo" (1987)
 
 Both share the same cold, sequenced foundation, but May's record adds a warmth and swing Atkins' more rigid, Kraftwerk-indebted arrangements don't reach for.
 
-### 7. `e-foster-tribe`
+### 7. `e-metroplex-saunderson`
 
-Ronnie Foster, "Mystic Brew" (1972) to A Tribe Called Quest, "Electric Relaxation" (1993)
+Model 500, "No UFO's" (1985) to Kreem, "Triangle of Love" (1986)
 
-Listen for the melancholy keyboard phrase in 'Mystic Brew', then hear Tribe loop it. The phrase that drifts in the original becomes a steady cycle, with soft drums sitting quietly under it. It's so relaxed that Q-Tip and Phife seem to be talking over it rather than rapping on top of it. The mood of a 1972 jazz record becomes the whole identity of the song.
+The first Metroplex record and the seventh. 'No UFO's' is Atkins alone. 'Triangle of Love' is the first record Saunderson made, with Atkins, and the 12-inch carries a vocal version, a dub and an instrumental. Play the vocal and the dub one after the other: the same track with the song taken out, so that a DJ gets a tool as well as a tune.
 
-### 8. `e-909-heard`
-
-Roland, "TR-909" (1983) to Mr. Fingers, "Washing Machine" (1986)
-
-The drum machine carries this record almost on its own. Listen to the hi-hats: bright and metallic, ticking in a perfectly even grid over a synthetic kick. The 909's cymbals were short digital recordings, which is why they sound harder and more real than the rest of the kit. Then play 'Can You Feel It', made on the same two machines in the same few days, and hear how differently they can be used.
-
-### 9. `e-virgin-tangerinedream`
+### 8. `e-virgin-tangerinedream`
 
 Tangerine Dream, "Atem" (1973) to Tangerine Dream, "Phaedra" (1974)
 
 Atem, the last album for their German label, is built from long organ and Mellotron sounds that swell and fade. Phaedra, the first for Virgin, was made with the Moog the Virgin advance paid for, in Virgin's own studio. Listen for the change underneath: a repeating electronic pattern that the machine plays by itself, so the music has a pulse without a drummer.
 
-### 10. `e-kingston-bronx`
+### 9. `e-kevinsaunderson-chezdamier`
 
-Kingston sound systems, "street dances and sound clashes" (1968) to DJ Kool Herc, "the back-to-school jam at 1520 Sedgwick Avenue" (1973)
+The Music Institute, "Club residencies, 1988-89" (1988) to Chez Damier, "Can You Feel It" (1992)
 
-Listen for what crossed and what did not. The shape is the same in both places: a crowd outdoors, one person choosing records, another one talking over them, a system loud enough to be the event itself. The records are not the same at all. Put on what a Kingston sound was playing in 1970 and what Herc was playing in 1973 and they share almost nothing, because Bronx crowds would not take reggae and he switched to funk and soul. The method travelled. The music did not.
+There is no early Damier record to compare against; the claim here is about proximity, not a specific production choice. 'Can You Feel It' arrived four years after the two men shared a DJ booth, made inside the label Saunderson ran.
 
-### 11. `e-stones-verve`
+### 10. `e-dusseldorf-kraftwerk`
 
-The Rolling Stones, "The Last Time" (1965) to The Verve, "Bitter Sweet Symphony" (1997)
+Kraftwerk, "Ruckzuck" (1970) to Kraftwerk, "Trans-Europe Express" (1977)
 
-Start with the Stones' 'The Last Time': a jangly guitar riff and a pop song. Then play 'Bitter Sweet Symphony'. The loop isn't from the Stones' record at all but from an orchestral version made by their former manager, a few bars of strings repeating. Listen for the Stones' tune hidden inside the strings. That hidden tune cost the Verve the song for twenty years.
+Listen to who keeps time. 'Ruckzuck' is a flute riff over drums played by a person, speeding up as they go. 'Trans-Europe Express' is made in the same private room seven years later, and the rhythm is a machine's, steady and mechanical, with the synthesizer patterns running from sequencers the band had built for them. The studio is how they got from one to the other without anyone else's clock.
 
-### 12. `e-pil-gangoffour`
+### 11. `e-bootee-mellemel`
 
-Public Image Ltd, "Public Image" (1978) to Gang of Four, "At Home He's a Tourist" (1979)
+Duke Bootee, "The Message, written and demoed" (1980) to Grandmaster Flash and the Furious Five, "The Message" (1982)
 
-PiL empties the arrangement out around the bass. Gang of Four does something closer to the opposite: Andy Gill's guitar stabs into the gaps Dave Allen's bassline leaves, funk-tight rather than dub-spacious, but the same basic idea of building the song from the rhythm section first.
+There are two rappers on this record and they do not sound alike. Bootee's delivery is even and conversational, closer to someone talking you through something. Mel's is heavier, slower, landing on the beat like a weight. The famous part, the last verse that turns the song from description into a life, is Mel. Knowing which voice is which changes how the record reads.
 
-### 13. `e-jonimitchell-janetjackson`
+### 12. `e-cobham-soulsofmischief`
 
-Joni Mitchell, "Big Yellow Taxi" (1970) to Janet Jackson, "Got 'til It's Gone" (1997)
+Billy Cobham, "Heather" (1974) to Souls of Mischief, "93 'til Infinity" (1993)
 
-Mitchell's original is a bright, strummed folk-pop protest song, the line 'you don't know what you've got till it's gone' delivered plainly over acoustic guitar. Jackson's version loops that line as a chorus hook under a mid-tempo hip-hop groove, and Mitchell's own voice, re-recorded for this track rather than only sampled, sits inside a completely different rhythmic world than the one she wrote it in.
+Start with 'Heather': slow, almost drifting, a lazy bassline and a marimba floating over it. Then play '93 'til Infinity'. A-Plus sped up that bassline and marimba so they bounce instead of float, put his own drums under them, and brought the horns in from the same record. Listen for how the same notes change mood with speed alone, from a daydream to a head-nod.
 
-### 14. `e-tubby-atkins-resemblance`
+### 13. `e-teac-perry`
 
-King Tubby, "various versions" (1976) to Juan Atkins, "No UFO's" (1985)
+TEAC, "A-3340 four-track recorder" (1972) to Junior Murvin, "Police and Thieves" (1976)
 
-Both treat the mixing desk as the instrument and the arrangement as something to be performed rather than fixed. This is a resemblance we are pointing out, not a line of transmission we can trace.
+Listen to the rhythm under Murvin's high voice. It is dense and slightly blurred, as if heard through gauze. Drums, percussion and guitar melt into one texture instead of standing apart. Each time Perry combined finished parts onto one track to make room for more, another layer of hiss and softness went on. The haze is what four tracks cost, spent on purpose.
 
-### 15. `e-can-pil`
+### 14. `e-dubplate-tubby`
 
-Can, "Halleluhwah" (1971) to Public Image Ltd, "Albatross" (1979)
+Jamaican sound systems, "one-off acetates cut as exclusives" (1950) to King Tubby, "dub mixes cut for named sound systems" (1972)
 
-Both run over ten minutes on one groove that barely changes. In 'Halleluhwah' Liebezeit's drum pattern loops for most of eighteen minutes, and the bass sits under it, patient, while guitar and voice come and go. In 'Albatross', which opens Metal Box, Wobble's bass repeats one dark figure the whole way through and Levene's guitar scrapes over it. Listen for the rhythm section refusing to go anywhere, and for how that makes everything on top sound unsettled.
+Listen for who the record is talking to. A sound system's name gets shouted over the top of the mix, or the singer greets a crew by name, and you realise the record is not addressed to you or to a radio audience. It was made for one crowd in one yard on one night, on a disc that would be worn out within a few months.
 
-### 16. `e-osullivan-bizmarkie`
+### 15. `e-eno-bowie`
+
+Brian Eno, "Discreet Music" (1975) to David Bowie, "Warszawa" (1977)
+
+'Discreet Music' is slow synth phrases repeating through tape echo, with no beat and nothing asking for attention. 'Warszawa' opens the ambient second side of Low with a single held note and slow, heavy chords, no drums, and Bowie singing in a made-up language late in the piece. Listen for the same patience: sounds that last a long time and change slowly. It's the most Eno-like thing on a Bowie record, and the side a rock audience least expected.
+
+### 16. `e-getzbonfa-dilla`
+
+Stan Getz and Luiz Bonfá, "Saudade Vem Correndo" (1963) to The Pharcyde, "Runnin'" (1995)
+
+The bossa nova original moves in a steady, unhurried sway, guitar and flute trading a bright, circling phrase. Dilla chops that phrase down to a few notes and loops it tight against a harder, dustier drum break, so the same figure that once drifted now insists. Listen for how little of the original he needed to take before it was recognisably his.
+
+### 17. `e-osullivan-bizmarkie`
 
 Gilbert O'Sullivan, "Alone Again (Naturally)" (1972) to Biz Markie, "Alone Again" (1991)
 
 Listen to O'Sullivan's piano, then to Biz's loop of it. It's only a few bars, repeated, and still instantly recognisable. That's the whole case in one sound: a sample carries its author with it. The Cold Chillin' edge covers the label's decision, and this edge is the sound that decision was about.
 
-### 17. `e-hardy-jefferson`
+### 18. `e-hardy-jefferson`
 
 Ron Hardy, "Music Box DJ sets" (1983) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
 
 Jefferson's piano hook is the part everyone remembers, but the mix, the sequencing and drum programming Hardy shaped, is what makes it a dancefloor record rather than just a song.
 
-### 18. `e-isley-publicenemy`
+### 19. `e-isley-publicenemy`
 
 The Isley Brothers, "Fight the Power (Part 1)" (1975) to Public Enemy, "Fight the Power" (1989)
 
 The Isleys' original is a smooth, horn-driven funk protest song about censorship on the radio. Public Enemy keeps the title and a fragment of the groove but buries both under the Bomb Squad's usual density, turning a specific, contained complaint into a much broader, louder one.
 
-### 19. `e-robinson-mellemel`
+### 20. `e-eps16-rza`
 
-Sylvia Robinson, "Pillow Talk" (1973) to Grandmaster Flash and the Furious Five, "The Message" (1982)
+Ensoniq, "EPS-16 Plus, sixteen-bit keyboard sampler" (1990) to Wu-Tang Clan, "C.R.E.A.M." (1993)
 
-Listen to the tempo and then imagine a dancefloor. It does not work, and the group knew it did not work, which is why they did not want it. What the record buys with that refusal is room: at this speed a voice has time to finish a thought. Nearly everything rap does with slow tempo afterwards depends on somebody proving a slow rap record could sell.
-
-### 20. `e-pistols-clash`
-
-Sex Pistols, "Anarchy in the U.K." (1976) to The Clash, "White Riot" (1977)
-
-Both are built from the same three-chord urgency, but listen to how directly "White Riot" addresses a specific real event (the 1976 Notting Hill Carnival riot) where "Anarchy in the U.K." stays in the realm of general provocation.
+Listen to the length of the loop. The piano phrase in 'C.R.E.A.M.' runs for bars, a whole musical sentence repeating, which the SP-1200's ten seconds made hard. The sound is also cleaner at the top, without the SP's crunch, though RZA kept it dusty and dark. That's the machine allowing the long, sad phrase to become the song's whole mood.
