@@ -8,7 +8,7 @@
   "activeTo": null,
   "originCity": "London",
   "originCountry": "UK",
-  "scenes": [],
+  "scenes": ["uk-jungle"],
   "labels": [],
   "keyProducers": [],
   "hook": "A London producer whose 1994 ragga-jungle single, built on the same six-second break N.W.A had already sampled, became the first jungle record to chart in Britain.",

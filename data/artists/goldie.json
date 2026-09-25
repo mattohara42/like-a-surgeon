@@ -1,0 +1,32 @@
+{
+  "id": "goldie",
+  "name": "Goldie",
+  "sortName": "Goldie",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1991,
+  "activeTo": null,
+  "originCity": "Walsall",
+  "originCountry": "UK",
+  "scenes": ["uk-jungle"],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A former graffiti artist whose 1994 label and 1995 album turned jungle's chopped, timestretched breaks into an art form, then talked David Bowie into making a drum and bass record.",
+  "blurb": {
+    "age7": "Goldie was a graffiti artist who became a music producer. He started a record label and made a famous album, and he even got David Bowie interested in his kind of music.",
+    "age13": "Clifford Price, known as Goldie, grew up in foster care in the West Midlands before becoming a graffiti artist in the 1980s. In London in the early 1990s he moved into jungle production, pioneering the timestretching technique on 'Terminator' (1992) and founding the label Metalheadz in 1994. His 1995 album 'Timeless' brought orchestral strings and soul vocals into jungle's chopped breakbeats. David Bowie became a regular at Goldie's Metalheadz club night, and Goldie has said those nights directly inspired Bowie's own drum and bass album, 'Earthling' (1997); Bowie later returned the favour, singing on Goldie's 1998 album 'Saturnz Return'.",
+    "adult": "Goldie's technical innovation, timestretching a break without changing its pitch, gave jungle producers a tool that let a six-second sample fill a whole arrangement, and 'Timeless' (1995) is the genre's clearest bid for the same orchestral ambition as a rock or classical record. His direct influence on David Bowie's 'Earthling' is documented in Goldie's own accounts of Bowie's attendance at Metalheadz's residency, a rare instance on this map of a rock legend's late-career reinvention running through a younger dance-music producer rather than the reverse."
+  },
+  "signatureTracks": [
+    {
+      "title": "Inner City Life",
+      "year": 1994,
+      "whyThisOne": "With vocalist Diane Charlemagne; jungle's clearest mainstream crossover single."
+    },
+    {
+      "title": "Timeless",
+      "year": 1995,
+      "whyThisOne": "The 21-minute title track that opened the album of the same name, orchestral strings over jungle breaks."
+    }
+  ]
+}
