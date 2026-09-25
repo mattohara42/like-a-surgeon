@@ -26,9 +26,11 @@ Every node type, since machines, scenes and labels carry a lineage too.
 | electronic | 47 |
 | hiphop | 47 |
 | rock | 30 |
-| other | 29 |
-| funk | 22 |
+| other | 23 |
+| funk | 21 |
 | dub | 17 |
+| jazz | 6 |
+| blues | 1 |
 
 Artists alone:
 
@@ -38,8 +40,9 @@ Artists alone:
 | electronic | 22 |
 | rock | 19 |
 | funk | 15 |
-| other | 13 |
 | dub | 11 |
+| other | 7 |
+| jazz | 6 |
 
 ## Counts by edge type
 
