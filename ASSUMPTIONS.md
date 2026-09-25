@@ -1894,3 +1894,14 @@ are named in each record's own `evidence` field rather than repeated here.
   non-club music predates the compilation). Both artists already carried
   `warp` in their `labels` field from an earlier batch, which this one
   didn't touch.
+- **A214. `motown` connects to `michael-jackson` rather than a
+  standalone Jackson 5 node.** The causal claim, Berry Gordy reassigning
+  a Corporation-written song from Gladys Knight to the Jacksons and
+  putting an eleven-year-old Michael at the center of the arrangement,
+  is specifically about him, and `michael-jackson.json` already covers
+  his Jackson 5 years in its own text rather than treating them as a
+  separate, unconnected phase. `closedYear` is `null` without
+  `endUnknown`, unlike several other labels on this map: Motown
+  genuinely never closed, it changed hands (MCA in 1988, PolyGram in
+  1993, Universal in 1999) and still operates as a label today, which is
+  a different fact than "we don't know when it ended."

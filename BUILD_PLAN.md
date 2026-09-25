@@ -158,8 +158,10 @@ waits). A `chess-records` label batch followed, giving the rock spine
 its first blues-label edge (the Rolling Stones' 1964 Chicago sessions),
 then `sheffield-idm` joined Aphex Twin and Autechre as a scene built
 around a label's marketing decision (Warp's 1992 "Artificial
-Intelligence" compilation) rather than a shared city. `npm run report`
-has the current distance on every remaining target.
+Intelligence" compilation) rather than a shared city, and `motown`
+closed with an edge into Michael Jackson (Berry Gordy reassigning
+"I Want You Back" from Gladys Knight to the Jackson 5). `npm run
+report` has the current distance on every remaining target.
 
 ## Definition of done for any milestone
 
