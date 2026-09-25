@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lineage — Depth &amp; Leap (mockup)</title>
+<style>
+  :root {
+    --rock:       #ff6f55;
+    --dub:        #3ddfa4;
+    --electronic: #5fa8ff;
+    --hiphop:     #bd82ff;
+    --void: #04060d;
+    --ink:  #eaf0ff;
+    --dim:  #7e8ca8;
+    --hairline: rgba(150, 180, 235, 0.14);
+    --ui: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--void); color: var(--ink); font-family: var(--ui);
+    overflow: hidden; -webkit-font-smoothing: antialiased;
+  }
+  #stage { position: fixed; inset: 0; cursor: grab; }
+  #stage.dragging { cursor: grabbing; }
+  #world { position: fixed; inset: 0; width: 100%; height: 100%; }
+
+  .year-tick { font-family: var(--mono); font-size: 11px; fill: var(--dim); }
+  .year-rule { stroke: var(--hairline); vector-effect: non-scaling-stroke; }
+  .lane-label {
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.22em;
+    text-transform: uppercase; fill: var(--dim);
+  }
+
+  .edge-path {
+    fill: none; stroke-linecap: round; vector-effect: non-scaling-stroke;
+    transition: opacity 420ms ease, d 650ms cubic-bezier(.2,.7,.2,1), stroke-width 420ms ease;
+  }
+  .node circle {
+    transition: cy 650ms cubic-bezier(.2,.7,.2,1), r 650ms cubic-bezier(.2,.7,.2,1),
+      opacity 420ms ease, filter 420ms ease;
+    vector-effect: non-scaling-stroke;
+  }
+  .node text {
+    transition: y 650ms cubic-bezier(.2,.7,.2,1), opacity 420ms ease;
+    paint-order: stroke; stroke: rgba(4,6,13,0.88); stroke-width: 4px;
+    font-size: 12px; fill: var(--ink); pointer-events: none;
+  }
+  .node { cursor: pointer; }
+  .lane-group { transition: filter 420ms ease; }
+
+  /* Depth recession: everything not in the focused lane dims and blurs.
+     Only opacity/blur/scale/y move here -- x (the year) is set once at
+     init in a separate pass that depth.js never touches. See the ruler:
+     it never moves either. */
+  .receded { filter: blur(var(--blur, 0px)); }
+
+  .hud { position: fixed; z-index: 5; }
+  #title { top: 26px; left: 30px; max-width: 420px; pointer-events: none; }
+  #title h1 { margin: 0; font-weight: 600; font-size: 15px; letter-spacing: 0.02em; }
+  #title p { margin: 8px 0 0; font-size: 12.5px; line-height: 1.6; color: var(--dim); }
+  #title code { color: #cfdcf5; }
+
+  #controls {
+    top: 26px; right: 30px; display: flex; flex-direction: column; gap: 14px;
+    align-items: flex-end;
+  }
+  .group { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+  .group h2 {
+    margin: 0; font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--dim); font-weight: 500;
+  }
+  .row { display: flex; gap: 8px; }
+  .chip {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+    color: var(--dim); background: rgba(140,170,220,0.06); border: 1px solid var(--hairline);
+    border-radius: 999px; padding: 7px 14px; cursor: pointer;
+    transition: color 180ms, border-color 180ms, background 180ms;
+  }
+  .chip:hover { color: var(--ink); border-color: rgba(150,180,235,0.34); }
+  .chip[aria-pressed="true"] { color: #05070f; background: var(--ink); border-color: var(--ink); }
+
+  #readout {
+    bottom: 26px; right: 30px; text-align: right;
+    font-family: var(--mono); font-size: 11px; line-height: 1.9; color: var(--dim);
+  }
+  #readout b { color: var(--ink); font-weight: 600; }
+  #readout .headline { color: var(--ink); font-size: 12px; margin-bottom: 4px; }
+
+  #hint {
+    bottom: 26px; left: 30px; font-size: 12px; color: var(--dim); max-width: 360px;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<div id="stage"><svg id="world"></svg></div>
+
+<div class="hud" id="title">
+  <h1>04 — Depth &amp; Leap (mockup)</h1>
+  <p>
+    Answers two open questions, not app code, frozen against the same
+    snapshot as <code>01</code>&ndash;<code>03</code>. Nothing here imports
+    <code>render/</code>.
+  </p>
+</div>
+
+<div class="hud" id="controls">
+  <div class="group">
+    <h2>Edges</h2>
+    <div class="row">
+      <button class="chip" id="edge-year" aria-pressed="true">Year-anchored (current)</button>
+      <button class="chip" id="edge-star" aria-pressed="false">Star-to-star (diagonal)</button>
+    </div>
+  </div>
+  <div class="group">
+    <h2>Depth</h2>
+    <div class="row">
+      <button class="chip" id="depth-off" aria-pressed="true">Off</button>
+      <button class="chip" id="depth-on" aria-pressed="false">Click a lane to focus</button>
+    </div>
+  </div>
+</div>
+
+<div class="hud" id="readout">
+  <div class="headline">Edge steepness</div>
+  <div><b id="stat-steep">&mdash;</b> steeper than 63&deg; (near-vertical)</div>
+  <div>median horizontal gap: <b id="stat-gap">&mdash;</b> years</div>
+</div>
+
+<div class="hud" id="hint">
+  Drag to pan, wheel to zoom. Click empty space or a focused lane again to
+  reset depth. The thin year ruler never moves under either toggle &mdash;
+  that's the constraint both ideas have to hold.
+</div>
+
+<script src="data-snapshot.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  const CONFIG = {
+    yearMin: 1958, yearMax: 1994,
+    pxPerYear: 108,
+    laneHeight: 190,
+    laneOrder: ['rock', 'dub', 'hiphop', 'electronic'],
+    nodeRadius: { min: 6, max: 12.5, perEdge: 1.6 },
+    clearance: { x: 168, y: 58 },
+    curveBow: 0.16,
+    depth: {
+      // How far a receded lane's rows compress toward each other and how
+      // much its nodes shrink and blur, by |rank| = lanes away from focus.
+      opacity: [1, 0.55, 0.3, 0.16],
+      blurPx: [0, 2.5, 4.5, 6],
+      radiusScale: [1.12, 0.82, 0.68, 0.58],
+      rowCompress: [1, 0.62, 0.46, 0.38],
+    },
+    zoom: { min: 0.3, max: 3 },
+  };
+
+  const LINEAGE_COLOR = { rock: '#ff6f55', dub: '#3ddfa4', electronic: '#5fa8ff', hiphop: '#bd82ff' };
+  const LINEAGE_LABEL = { rock: 'ROCK', dub: 'DUB', hiphop: 'HIP-HOP', electronic: 'ELECTRONIC' };
+
+  const D = window.LINEAGE;
+  const SVGNS = 'http://www.w3.org/2000/svg';
+  const el = (n, a) => {
+    const e = document.createElementNS(SVGNS, n);
+    for (const k in (a || {})) e.setAttribute(k, a[k]);
+    return e;
+  };
+
+  // ---- model ---------------------------------------------------------------
+  const nodes = D.artists.map((a) => ({
+    id: a.id, name: a.name, lineage: a.lineage,
+    startYear: a.activeFrom, endYear: a.activeTo ?? 2026,
+  }));
+  const byId = new Map(nodes.map((n) => [n.id, n]));
+  const edges = D.edges
+    .filter((e) => byId.has(e.from) && byId.has(e.to))
+    .map((e) => ({ ...e, a: byId.get(e.from), b: byId.get(e.to) }));
+  nodes.forEach((n) => { n.degree = 0; });
+  edges.forEach((e) => { e.a.degree++; e.b.degree++; });
+
+  // x = year, set exactly once, here, and never touched again. Depth mode
+  // is only allowed to move y, r, opacity and blur -- see CONFIG.depth and
+  // applyDepth() below, neither of which references .x.
+  const xOf = (year) => (year - CONFIG.yearMin) * CONFIG.pxPerYear;
+  nodes.forEach((n) => { n.x = xOf(n.startYear); });
+
+  // ---- lane packing (same shape as render/layout.js, trimmed) --------------
+  const lanes = new Map();
+  nodes.forEach((n) => {
+    const li = Math.max(0, CONFIG.laneOrder.indexOf(n.lineage));
+    n.laneIndex = li;
+    if (!lanes.has(li)) lanes.set(li, []);
+    lanes.get(li).push(n);
+  });
+  lanes.forEach((list, li) => {
+    list.sort((p, q) => p.startYear - q.startYear);
+    const mid = li * CONFIG.laneHeight + CONFIG.laneHeight / 2;
+    list.forEach((n, i) => {
+      n.homeY = mid + ((i % 3) - 1) * CONFIG.laneHeight * 0.24;
+      n.r = Math.min(CONFIG.nodeRadius.max, CONFIG.nodeRadius.min + n.degree * CONFIG.nodeRadius.perEdge);
+    });
+  });
+  function relax(list, centreOf, limit) {
+    const { x: needX, y: needY } = CONFIG.clearance;
+    for (let pass = 0; pass < 40; pass++) {
+      for (let i = 0; i < list.length; i++) {
+        for (let j = i + 1; j < list.length; j++) {
+          const p = list[i], q = list[j];
+          if (Math.abs(q.x - p.x) >= needX) continue;
+          const dy = q.homeY - p.homeY;
+          if (Math.abs(dy) >= needY) continue;
+          const push = (needY - Math.abs(dy)) / 2 + 1;
+          const s = dy >= 0 ? 1 : -1;
+          p.homeY -= s * push; q.homeY += s * push;
+        }
+      }
+      list.forEach((n) => {
+        const mid = centreOf(n);
+        n.homeY = Math.max(mid - limit, Math.min(mid + limit, n.homeY));
+      });
+    }
+  }
+  lanes.forEach((list, li) => relax(
+    list,
+    () => li * CONFIG.laneHeight + CONFIG.laneHeight / 2,
+    CONFIG.laneHeight * 0.42,
+  ));
+  nodes.forEach((n) => { n.y = n.homeY; }); // current, mutated by depth
+
+  const WORLD_W = xOf(CONFIG.yearMax);
+  const WORLD_H = CONFIG.laneOrder.length * CONFIG.laneHeight;
+
+  // ---- svg scaffold ---------------------------------------------------------
+  const svg = document.getElementById('world');
+  const viewport = el('g', { class: 'viewport' });
+  const lanesG = el('g', { class: 'lanes' });
+  const axisG = el('g', { class: 'axis' });
+  const edgesG = el('g', { class: 'edges' });
+  const nodesG = el('g', { class: 'nodes' });
+  viewport.append(lanesG, axisG, edgesG, nodesG);
+  svg.appendChild(viewport);
+
+  // Lane bands + titles, one <g class="lane-group"> per lineage so depth can
+  // dim/blur a whole lane at once via CSS custom properties.
+  const laneGroups = {};
+  CONFIG.laneOrder.forEach((lineage, li) => {
+    const g = el('g', { class: 'lane-group', 'data-lineage': lineage });
+    const band = el('rect', {
+      x: -400, y: li * CONFIG.laneHeight, width: WORLD_W + 3000, height: CONFIG.laneHeight,
+      fill: LINEAGE_COLOR[lineage], opacity: li % 2 ? 0.025 : 0.045,
+    });
+    const title = el('text', {
+      class: 'lane-label', x: -370, y: li * CONFIG.laneHeight + 26,
+    });
+    title.textContent = LINEAGE_LABEL[lineage];
+    title.style.fill = LINEAGE_COLOR[lineage];
+    g.append(band, title);
+    lanesG.appendChild(g);
+    laneGroups[lineage] = g;
+  });
+
+  // Year ruler. Drawn once, outside every lane group, and nothing past this
+  // block ever sets its x -- the thing both mockups have to prove they don't
+  // touch.
+  for (let y = CONFIG.yearMin; y <= CONFIG.yearMax; y += 4) {
+    const x = xOf(y);
+    axisG.appendChild(el('line', {
+      class: 'year-rule', x1: x, y1: -20, x2: x, y2: WORLD_H + 20,
+    }));
+    const t = el('text', { class: 'year-tick', x: x + 6, y: WORLD_H + 34 });
+    t.textContent = y;
+    axisG.appendChild(t);
+  }
+
+  // ---- nodes -----------------------------------------------------------------
+  const nodeEls = new Map();
+  nodes.forEach((n) => {
+    const g = el('g', { class: 'node' });
+    const c = el('circle', { cx: n.x, cy: n.y, r: n.r, fill: LINEAGE_COLOR[n.lineage] });
+    const t = el('text', { x: n.x + n.r + 7, y: n.y + 4 });
+    t.textContent = n.name;
+    g.append(c, t);
+    g.addEventListener('click', (ev) => { ev.stopPropagation(); onNodeClick(n); });
+    nodesG.appendChild(g);
+    nodeEls.set(n.id, { g, c, t });
+  });
+
+  // ---- edges -----------------------------------------------------------------
+  function bowSign(id) {
+    let h = 0;
+    for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) | 0;
+    return h % 2 === 0 ? 1 : -1;
+  }
+  function curvePath(x1, y1, x2, y2, id) {
+    const dx = x2 - x1, dy = y2 - y1;
+    const dist = Math.hypot(dx, dy) || 1;
+    const bow = dist * CONFIG.curveBow * bowSign(id);
+    const midX = (x1 + x2) / 2, midY = (y1 + y2) / 2;
+    const cx = midX - (dy / dist) * bow, cy = midY + (dx / dist) * bow;
+    return `M ${x1},${y1} Q ${cx},${cy} ${x2},${y2}`;
+  }
+
+  // Two anchor strategies -- this is the whole of Q1.
+  //
+  //   yearAnchor:  both ends sit at the edge's own year, one per artist's
+  //                lane. This is what render/graph.js does today, and it's
+  //                why the map reads as vertical stripes: a same-year edge
+  //                has almost no horizontal run at all.
+  //   starAnchor:  both ends sit on the artists' own markers, wherever
+  //                their careers actually put them. Reads as a leap between
+  //                two stars; costs the edge's exact year as a readable
+  //                position on the axis (the reading panel still states it
+  //                in prose).
+  function clampYear(y, lo, hi) { return Math.max(lo, Math.min(hi, y)); }
+  function yearAnchor(e) {
+    const ay = clampYear(e.year, e.a.startYear, e.a.endYear);
+    const by = clampYear(e.year, e.b.startYear, e.b.endYear);
+    return { x1: xOf(ay), y1: e.a.y, x2: xOf(by), y2: e.b.y };
+  }
+  function starAnchor(e) {
+    return { x1: e.a.x, y1: e.a.y, x2: e.b.x, y2: e.b.y };
+  }
+
+  let edgeMode = 'year'; // 'year' | 'star'
+  const edgeEls = new Map();
+  edges.forEach((e) => {
+    const p = el('path', {
+      class: 'edge-path',
+      stroke: e.crossLineage ? LINEAGE_COLOR[e.a.lineage] : LINEAGE_COLOR[e.a.lineage],
+      'stroke-width': e.tier === 'documented' ? 1.6 : 1.1,
+      opacity: e.tier === 'documented' ? 0.55 : 0.32,
+    });
+    edgesG.appendChild(p);
+    edgeEls.set(e, p);
+  });
+
+  function redrawEdges() {
+    const fn = edgeMode === 'year' ? yearAnchor : starAnchor;
+    edges.forEach((e) => {
+      const a = fn(e);
+      edgeEls.get(e).setAttribute('d', curvePath(a.x1, a.y1, a.x2, a.y2, e.id ?? (e.from + e.to)));
+    });
+    updateStats();
+  }
+
+  function updateStats() {
+    const fn = edgeMode === 'year' ? yearAnchor : starAnchor;
+    const spans = edges.map((e) => {
+      const a = fn(e);
+      return { dx: Math.abs(a.x2 - a.x1), dy: Math.abs(a.y2 - a.y1) };
+    });
+    const steep = spans.filter((s) => s.dy > 2 * s.dx).length;
+    const gaps = spans.map((s) => s.dx / CONFIG.pxPerYear).sort((a, b) => a - b);
+    const median = gaps.length ? gaps[gaps.length >> 1] : 0;
+    document.getElementById('stat-steep').textContent =
+      `${steep} / ${spans.length} (${Math.round((100 * steep) / spans.length)}%)`;
+    document.getElementById('stat-gap').textContent = median.toFixed(1);
+  }
+
+  // ---- depth (Q2) --------------------------------------------------------------
+  // Focusing a lane pulls it forward: full opacity, no blur, nodes enlarged.
+  // Every other lane recedes by CSS opacity + blur, and its *rows* compress
+  // toward the lane's own centreline (rowCompress), which changes how far
+  // apart nodes sit from each other -- never where they sit on the year
+  // axis. depthOn=false restores every node to its home position exactly.
+  let depthOn = false;
+  let focusedLane = null;
+
+  function applyDepth() {
+    CONFIG.laneOrder.forEach((lineage, li) => {
+      const rank = focusedLane == null ? 0 : Math.min(3, Math.abs(li - CONFIG.laneOrder.indexOf(focusedLane)));
+      const isFocused = focusedLane === lineage;
+      const g = laneGroups[lineage];
+      g.classList.toggle('receded', depthOn && !isFocused);
+      g.style.setProperty('--blur', depthOn ? `${CONFIG.depth.blurPx[rank]}px` : '0px');
+      g.style.opacity = depthOn ? CONFIG.depth.opacity[rank] : 1;
+
+      const list = lanes.get(li) ?? [];
+      const mid = li * CONFIG.laneHeight + CONFIG.laneHeight / 2;
+      const compress = depthOn ? CONFIG.depth.rowCompress[rank] : 1;
+      const rScale = depthOn ? CONFIG.depth.radiusScale[isFocused ? 0 : rank] : 1;
+      list.forEach((n) => {
+        // Only y and r move. n.x is read here, never written.
+        n.y = mid + (n.homeY - mid) * compress;
+        const els = nodeEls.get(n.id);
+        els.c.setAttribute('cy', n.y);
+        els.c.setAttribute('r', n.r * rScale);
+        els.t.setAttribute('y', n.y + 4);
+        els.t.style.opacity = depthOn && !isFocused && rank > 1 ? 0.35 : 1;
+      });
+    });
+    redrawEdges();
+  }
+
+  function onNodeClick(n) {
+    if (!depthOn) return;
+    focusedLane = focusedLane === n.lineage ? null : n.lineage;
+    applyDepth();
+  }
+  document.getElementById('stage').addEventListener('click', () => {
+    if (depthOn && focusedLane) { focusedLane = null; applyDepth(); }
+  });
+
+  // ---- controls ----------------------------------------------------------------
+  function setPressed(el2, val) { el2.setAttribute('aria-pressed', String(val)); }
+  const edgeYearBtn = document.getElementById('edge-year');
+  const edgeStarBtn = document.getElementById('edge-star');
+  edgeYearBtn.addEventListener('click', () => {
+    edgeMode = 'year'; setPressed(edgeYearBtn, true); setPressed(edgeStarBtn, false); redrawEdges();
+  });
+  edgeStarBtn.addEventListener('click', () => {
+    edgeMode = 'star'; setPressed(edgeYearBtn, false); setPressed(edgeStarBtn, true); redrawEdges();
+  });
+  const depthOffBtn = document.getElementById('depth-off');
+  const depthOnBtn = document.getElementById('depth-on');
+  depthOffBtn.addEventListener('click', () => {
+    depthOn = false; focusedLane = null; setPressed(depthOffBtn, true); setPressed(depthOnBtn, false); applyDepth();
+  });
+  depthOnBtn.addEventListener('click', () => {
+    depthOn = true; setPressed(depthOffBtn, false); setPressed(depthOnBtn, true); applyDepth();
+  });
+
+  // ---- pan / zoom (minimal) ------------------------------------------------------
+  const vp = { tx: 60, ty: 60, scale: 0.62 };
+  function applyTransform() {
+    viewport.setAttribute('transform', `translate(${vp.tx},${vp.ty}) scale(${vp.scale})`);
+  }
+  applyTransform();
+  const stage = document.getElementById('stage');
+  let dragging = false, lastX = 0, lastY = 0;
+  stage.addEventListener('pointerdown', (ev) => {
+    dragging = true; lastX = ev.clientX; lastY = ev.clientY; stage.classList.add('dragging');
+  });
+  window.addEventListener('pointerup', () => { dragging = false; stage.classList.remove('dragging'); });
+  window.addEventListener('pointermove', (ev) => {
+    if (!dragging) return;
+    vp.tx += ev.clientX - lastX; vp.ty += ev.clientY - lastY;
+    lastX = ev.clientX; lastY = ev.clientY; applyTransform();
+  });
+  stage.addEventListener('wheel', (ev) => {
+    ev.preventDefault();
+    const factor = Math.exp(-ev.deltaY * 0.0015);
+    const next = Math.max(CONFIG.zoom.min, Math.min(CONFIG.zoom.max, vp.scale * factor));
+    const rect = stage.getBoundingClientRect();
+    const mx = ev.clientX - rect.left, my = ev.clientY - rect.top;
+    vp.tx = mx - ((mx - vp.tx) / vp.scale) * next;
+    vp.ty = my - ((my - vp.ty) / vp.scale) * next;
+    vp.scale = next; applyTransform();
+  }, { passive: false });
+
+  redrawEdges();
+})();
+</script>
+</body>
+</html>

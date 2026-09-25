@@ -1918,3 +1918,49 @@ are named in each record's own `evidence` field rather than repeated here.
   Isaac Hayes and The Charmels join the scene; only Hayes gets the label
   edge, since the Charmels' record predates and has no connection to the
   1968 crisis that is `e-stax-isaachayes`'s actual claim.
+
+## Added a fourth visual-direction prototype: depth and leap
+
+Matt asked how to fix the map reading as vertical stripes, add an illusion
+of depth, and add randomized discovery and a challenge mode. Measured the
+live M2 render before proposing anything: of 154 on-screen edges, 132
+(86%) were steeper than 63 degrees and the median horizontal span was 0
+years. Traced the cause to `edgeAnchors` in `render/graph.js`, which
+anchors both ends of an edge at the edge's own year rather than at the
+artists' own markers, so a same-year edge is nearly vertical by
+construction. Raised the fix as two options (arc the edges but keep the
+year anchor, or anchor edges at the markers for a true diagonal leap) and
+raised depth as a question of what "recede" means. Matt chose diagonals
+and asked to see depth mocked up; asked to keep planning before any build
+move otherwise.
+
+- **A216.** Built `design/04-depth-leap.html`, a fourth prototype
+  alongside `01`-`03`: same conventions (frozen against the same snapshot,
+  imports nothing from `render/`, is not app code). It answers only the
+  two visual questions Matt asked to see, not the random-discovery or
+  challenge-mode ideas, which stay text-only per "keep planning."
+- **A217. Depth recedes lanes vertically only, never on the time axis.**
+  A focused lane's nodes enlarge to full opacity and sharpness; every
+  other lane dims, blurs (CSS `filter: blur()`, scaled by how many lanes
+  away it is), and compresses its rows toward its own centreline. The
+  prototype enforces this structurally rather than by convention: `n.x`
+  is set once from `xOf(year)` during layout and no code past that point
+  ever writes to it, and a static year ruler is drawn outside every lane
+  group specifically so a reader can see it hold still under both toggles.
+  This is a real constraint on any future 3D treatment: true parallax
+  (background layers sliding sideways at a different rate while panning)
+  is exactly the thing CLAUDE.md rules out, since it would put two
+  different years at the same screen x.
+- **A218. The diagonal-edge option changes what an edge's exact year
+  means on screen.** Star-to-star anchoring dropped the steep-edge count
+  from 86% to 3% and moved the median horizontal gap from 0 to 7 years in
+  the prototype's smaller snapshot, but an edge's `year` field no longer
+  positions it on the axis; the claim's year still has to be readable
+  somewhere (the reading panel already states it in prose per M3, so nothing
+  new is needed there, but it is a real trade Matt should hold in mind
+  before signing off on the direction for M2's port).
+- Random discovery ("Leap"/"Dive" through the neighbour graph) and the
+  Connect-the-Stars challenge mode were not prototyped or built. Logged
+  in `BACKLOG.md` under "Deferred features" so the idea isn't lost before
+  Matt decides how this whole pass gets sequenced against the open M3
+  gate.
