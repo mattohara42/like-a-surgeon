@@ -9,6 +9,18 @@ correct response to a good idea arriving mid-milestone.
 - Hosted deployment with a share-a-view URL scheme.
 - User-authored threads, saved locally.
 - A "what should I listen to next" walk that respects what the reader clicked.
+- **Leap / Dive random discovery.** A button that flies the camera along a
+  random edge (weighted toward cross-lineage and demo-carrying edges) and
+  opens the reading panel on the far side, for unscripted browsing. Holding
+  it or pressing again chains hops from wherever the reader lands. Needs
+  `reading/neighbours.js` re-exported or moved so `render/` can use it (see
+  "Spread-on-click" under "Deferred from the Strata port"). Raised by Matt
+  alongside the depth/leap visual pass; not prototyped yet.
+- **Connect the Stars challenge mode.** "Get from X to Y in N leaps or
+  fewer," played over the real graph, scored on the shortest real path and
+  rewarding cross-lineage hops. Unlockables (a completed lineage crossing,
+  a long Dive, etc.) tracked in localStorage, one reader per device. Raised
+  by Matt alongside the depth/leap visual pass; not built or scoped yet.
 - Printable poster export of a thread.
 - Per-scene ambient generative bed that plays while browsing that region.
 - Comparison mode: two artists side by side with their full edge sets.

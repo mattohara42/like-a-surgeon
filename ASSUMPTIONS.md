@@ -1918,3 +1918,108 @@ are named in each record's own `evidence` field rather than repeated here.
   Isaac Hayes and The Charmels join the scene; only Hayes gets the label
   edge, since the Charmels' record predates and has no connection to the
   1968 crisis that is `e-stax-isaachayes`'s actual claim.
+
+## Added a fourth visual-direction prototype: depth and leap
+
+Matt asked how to fix the map reading as vertical stripes, add an illusion
+of depth, and add randomized discovery and a challenge mode. Measured the
+live M2 render before proposing anything: of 154 on-screen edges, 132
+(86%) were steeper than 63 degrees and the median horizontal span was 0
+years. Traced the cause to `edgeAnchors` in `render/graph.js`, which
+anchors both ends of an edge at the edge's own year rather than at the
+artists' own markers, so a same-year edge is nearly vertical by
+construction. Raised the fix as two options (arc the edges but keep the
+year anchor, or anchor edges at the markers for a true diagonal leap) and
+raised depth as a question of what "recede" means. Matt chose diagonals
+and asked to see depth mocked up; asked to keep planning before any build
+move otherwise.
+
+- **A216.** Built `design/04-depth-leap.html`, a fourth prototype
+  alongside `01`-`03`: same conventions (frozen against the same snapshot,
+  imports nothing from `render/`, is not app code). It answers only the
+  two visual questions Matt asked to see, not the random-discovery or
+  challenge-mode ideas, which stay text-only per "keep planning."
+- **A217. Depth recedes lanes vertically only, never on the time axis.**
+  A focused lane's nodes enlarge to full opacity and sharpness; every
+  other lane dims, blurs (CSS `filter: blur()`, scaled by how many lanes
+  away it is), and compresses its rows toward its own centreline. The
+  prototype enforces this structurally rather than by convention: `n.x`
+  is set once from `xOf(year)` during layout and no code past that point
+  ever writes to it, and a static year ruler is drawn outside every lane
+  group specifically so a reader can see it hold still under both toggles.
+  This is a real constraint on any future 3D treatment: true parallax
+  (background layers sliding sideways at a different rate while panning)
+  is exactly the thing CLAUDE.md rules out, since it would put two
+  different years at the same screen x.
+- **A218. The diagonal-edge option changes what an edge's exact year
+  means on screen.** Star-to-star anchoring dropped the steep-edge count
+  from 86% to 3% and moved the median horizontal gap from 0 to 7 years in
+  the prototype's smaller snapshot, but an edge's `year` field no longer
+  positions it on the axis; the claim's year still has to be readable
+  somewhere (the reading panel already states it in prose per M3, so nothing
+  new is needed there, but it is a real trade Matt should hold in mind
+  before signing off on the direction for M2's port).
+- Random discovery ("Leap"/"Dive" through the neighbour graph) and the
+  Connect-the-Stars challenge mode were not prototyped or built. Logged
+  in `BACKLOG.md` under "Deferred features" so the idea isn't lost before
+  Matt decides how this whole pass gets sequenced against the open M3
+  gate.
+
+## Added a "discover on hover" reveal mode to the depth/leap prototype
+
+Matt tried the Netlify preview and reported it taxing the browser, with
+too many lines on screen at once, and asked for most connections (the
+vertical ones especially) hidden by default and revealed on discovery.
+This is the same problem two ways: BACKLOG already carried the M2 perf
+gate's real-browser spot-check as unverified, and a map that shows every
+edge at once is also the less inviting one to explore.
+
+- **A219.** Added a third toggle to `design/04-depth-leap.html`: "All
+  edges" (unchanged) versus "Discover on hover". In discover mode every
+  edge starts out of the render tree entirely (`display: none`, not just
+  invisible), replaced by a short static tick at each endpoint that only
+  says a connection exists there, not what it is. Hovering a node reveals
+  its real edges; leaving the node leaves them lit but dimmed rather than
+  hidden again, so exploring only ever adds to what's shown and nothing
+  Matt finds disappears on him. The prototype's own readout now counts
+  live edges against the total, so the perf argument is a number on
+  screen rather than an assertion: hovering one well-connected node in
+  the 33-edge snapshot put 7 edges in the render tree, not 33.
+- This composes with depth (A217) without changing either: a hint tick
+  sits at the node's current position, so it recedes and dims along with
+  its lane, same as everything else there.
+- Not decided yet: whether "discovered" persists across a session (this
+  prototype never forgets, which was the simplest thing to build and
+  worth Matt's read before it becomes a real behaviour with real storage
+  implications), and whether hover is the right trigger on a touch build
+  with no hover at all (BACKLOG already defers touch/wall-panel as its
+  own track).
+
+**A220.** Matt: discovered should be stored, and touch is out of scope for
+now but worth exploring later (no BACKLOG change needed, it was already
+filed there as its own track). Wired persistence into the prototype rather
+than leaving it as a described-but-unbuilt idea, since the mechanism is
+small and worth having in front of Matt alongside everything else here.
+
+- `discovered` now loads from and saves to `localStorage` under
+  `lineage.design04.discovered.v1`, mirroring `render/layers.js`'s
+  existing pattern exactly: wrapped in try/catch so Safari private mode
+  or blocked site data degrades to "starts empty" rather than breaking
+  the map, and only ids that resolve to a real edge in the current
+  dataset are read back, so a stale or hand-edited entry can't invent
+  one. Verified with Playwright: discovering King Tubby's 7 edges,
+  reloading the page, and reading the render-tree count back at 7/33
+  confirms the round trip; clearing via the new "Forget what I've found"
+  control drops it back to 0/33 and empties the stored array.
+- Added that control (a plain reset, no confirmation) specifically so
+  testing this doesn't require clearing `localStorage` by hand. A real
+  build likely wants the same affordance somewhere, if only so a reader
+  sharing a device with someone else isn't stuck looking at a
+  half-explored map that isn't theirs.
+- The storage key is namespaced to this prototype
+  (`lineage.design04.*`, not `lineage.discovered.*`) on purpose, so a
+  browser that has both this file and the real app open never confuses
+  a design experiment's state with the shipped reader's. `render/`'s
+  real key, if this direction is ported, is Matt's to name alongside
+  the rest of `CONFIG.layers`/`CONFIG.arrange`'s keys, not inherited
+  from here.
