@@ -1,0 +1,32 @@
+{
+  "id": "dr-dre",
+  "name": "Dr. Dre",
+  "sortName": "Dre, Dr.",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1986,
+  "activeTo": null,
+  "originCity": "Compton, California",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "N.W.A's main producer left the group in 1991 and built G-funk, an entire West Coast sound, largely out of George Clinton's catalogue.",
+  "blurb": {
+    "age7": "Dr. Dre was a producer in the rap group N.W.A. After he left, he made his own albums built around slow, funky beats, and started a record label that found stars like Eminem.",
+    "age13": "Andre Young, known as Dr. Dre, was N.W.A's main producer. He left the group in 1991 and co-founded Death Row Records with Suge Knight. His 1992 solo album 'The Chronic' pioneered G-funk, a slower, synth-and-funk-sample-heavy style built heavily on George Clinton and Parliament-Funkadelic's music, including George Clinton's own solo hit 'Atomic Dog'. Dre later founded Aftermath Entertainment in 1996 and signed Eminem in 1998. In 2006 he co-founded Beats Electronics, sold to Apple in 2014.",
+    "adult": "'The Chronic' (1992) is the record that made G-funk the dominant West Coast sound of the early-to-mid 1990s, built on dense, mostly uncredited-at-release P-Funk sampling; 'Fuck Wit Dre Day' alone draws on multiple Parliament-Funkadelic and George Clinton recordings, including the 'Atomic Dog' chant. Dre's later career, Aftermath, Eminem, and Beats Electronics, sits outside this map's scope. Also part of the record: Dre pleaded no contest in 1991 to assaulting television host Dee Barnes, was sentenced to probation, and a related civil suit was settled; he has since acknowledged the assault, first documented on this map at N.W.A's own entry."
+  },
+  "signatureTracks": [
+    {
+      "title": "Fuck Wit Dre Day (And Everybody's Celebratin')",
+      "year": 1992,
+      "whyThisOne": "From 'The Chronic'; built partly on George Clinton's 'Atomic Dog' chant."
+    },
+    {
+      "title": "Nuthin' but a 'G' Thang",
+      "year": 1992,
+      "whyThisOne": "With Snoop Dogg; the single that defined G-funk for a mainstream audience."
+    }
+  ]
+}

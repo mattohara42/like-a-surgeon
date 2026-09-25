@@ -494,6 +494,10 @@ fixing them inline.)
   (a George Clinton solo release, not band-credited, so it needs its own
   artist node rather than attaching to Parliament-Funkadelic), are still
   waiting.
+  **Closed:** `george-clinton` and `dr-dre` are both now on the map,
+  with `e-clinton-dre` carrying 'Atomic Dog' into 'Fuck Wit Dre Day'.
+  `nwa.json`'s `keyProducers` now points at `dr-dre` instead of the
+  plain name it carried before the node existed.
 - The Casio MT-40's "rock" preset, programmed by Casio employee Okuda
   Hiroko, is the entire backing track of Wayne Smith's 'Under Mi Sleng
   Teng' (1985, produced by Prince Jammy), the record that began reggae's
