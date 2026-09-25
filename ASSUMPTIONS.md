@@ -2092,3 +2092,19 @@ small and worth having in front of Matt alongside everything else here.
   anywhere), and its source is RZA's own account, checked against where
   the members' solo albums actually came out. Wu-Tang's `labels` entry
   runs 1993 to 2001, 'Enter the Wu-Tang' to 'Iron Flag'.
+- **A229. `e-food-blur` claims the single, not the Englishness.** The
+  popular Britpop story has the label steering Blur toward English
+  guitar pop after the 1992 American tour. The album's own history says
+  the opposite: David Balfe argued against Albarn's English turn and
+  relented only warily. What Food did do, documented, is reject the
+  finished 'Modern Life Is Rubbish' in December 1992 and demand singles,
+  which is how 'For Tomorrow' came to be written on Christmas Day. The
+  edge claims only that. Blur's `labels` entry runs 1990 ('She's So
+  High', a Food single) to 2000, when EMI folded Food into Parlophone.
+  **Atlantic was planned for this batch and dropped.** The obvious
+  Atlantic edge, into Led Zeppelin, fails A69: the debut was recorded
+  before any deal, paid for by Page and Peter Grant, and that
+  self-funding is what kept a label out of the music. The band's
+  control was never Atlantic's decision to give. Atlantic's real causal
+  story on this map is Stax's 1968 catalogue loss, which
+  `e-stax-isaachayes` already carries from the other side.

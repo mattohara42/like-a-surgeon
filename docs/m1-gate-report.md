@@ -11,8 +11,8 @@ Regenerate with `npm run report`. This report describes the dataset only;
 | artists | 120 | 120 | met |
 | machines | 31 | 25 | met |
 | scenes | 15 | 20 | 75% |
-| labels | 27 | 30 | 90% |
-| edges | 201 | 350 | 57% |
+| labels | 28 | 30 | 93% |
+| edges | 202 | 350 | 58% |
 | threads | 2 | 5 | 40% |
 | crossLineageEdges | 79 | 60 | met |
 | edgesWithDemo | 5 | 30 | 17% |
@@ -25,7 +25,7 @@ Every node type, since machines, scenes and labels carry a lineage too.
 |---|---:|
 | hiphop | 48 |
 | electronic | 47 |
-| rock | 30 |
+| rock | 31 |
 | other | 23 |
 | funk | 21 |
 | dub | 17 |
@@ -51,8 +51,8 @@ Artists alone:
 | direct | 45 |
 | technological | 45 |
 | sample | 29 |
+| label | 28 |
 | production | 28 |
-| label | 27 |
 | scene | 23 |
 | reaction-against | 2 |
 | cover | 1 |
@@ -62,7 +62,7 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 140 |
+| documented | 141 |
 | consensus | 60 |
 | asserted | 1 |
 
@@ -236,126 +236,126 @@ Evidence: De La Soul has said they submitted full sample information for '3 Feet
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 200 edges that carry one.
+Drawn with seed 1 from the 201 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-808-mantronix`
+### 1. `e-909-heard`
 
-Roland, "TR-808 factory voices" (1980) to Mantronix, "Fresh Is the Word" (1985)
+Roland, "TR-909" (1983) to Mr. Fingers, "Washing Machine" (1986)
 
-The 808 carries almost the entire track: a hard, dry kick-and-hi-hat pattern with almost no live instrumentation layered over it, an early example of hip-hop production built to sound like a machine rather than to disguise one.
+The drum machine carries this record almost on its own. Listen to the hi-hats: bright and metallic, ticking in a perfectly even grid over a synthetic kick. The 909's cymbals were short digital recordings, which is why they sound harder and more real than the rest of the kit. Then play 'Can You Feel It', made on the same two machines in the same few days, and hear how differently they can be used.
 
-### 2. `e-pistols-clash`
+### 2. `e-mellotron-bowie`
 
-Sex Pistols, "Anarchy in the U.K." (1976) to The Clash, "White Riot" (1977)
+Streetly Electronics, "Mellotron, sold as a home orchestra" (1963) to David Bowie, "Space Oddity" (1969)
 
-Both are built from the same three-chord urgency, but listen to how directly "White Riot" addresses a specific real event (the 1976 Notting Hill Carnival riot) where "Anarchy in the U.K." stays in the realm of general provocation.
+This record also has a real string arrangement, which makes it a good listening exercise. Somewhere in the swelling background there are string sounds that start with no bow attack and waver very slightly in pitch. Those are tape, played from a keyboard, sitting inside the real orchestra. Then listen for the Stylophone, which is on the same record.
 
-### 3. `e-re201-tubby`
+### 3. `e-marleymarl-koolgrap`
+
+Kool G Rap and DJ Polo, "It's a Demo" (1986) to Kool G Rap and DJ Polo, "Road to the Riches" (1989)
+
+'It's a Demo', recorded in Marl's living room, is a rapper announcing his technical range: fast, dense, still finding its subject. Three years later, 'Road to the Riches' keeps the same rhyme density but points it at a specific story, an immigrant hustler's rise and fall, years before 'mafioso rap' had a name.
+
+### 4. `e-marleymarl-roxanneshante`
+
+UTFO, "Roxanne, Roxanne" (1984) to Roxanne Shanté, "Roxanne's Revenge" (1984)
+
+UTFO's original is three men describing a woman who turns them all down. Shanté's answer, over the same beat, puts her own voice directly into that story, sharp and unimpressed, a teenager talking back to a hit record within weeks of its release.
+
+### 5. `e-re201-tubby`
 
 Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to King Tubby, "Dub from the Roots" (1974)
 
 Compare the echo here with Perry's. Tubby's repeats are cleaner and more rhythmic, placed so they land where a drum would have landed, so the delay becomes part of the pattern rather than a haze over it. Same kind of box, opposite instinct: Perry lets it flood, Tubby uses it to keep time.
 
-### 4. `e-tubby-madprofessor`
+### 6. `e-mellotron-beatles`
 
-King Tubby, "Home-built mixing desk, Waterhouse" (1968) to Mad Professor, "Ariwa Sounds, home-built desk" (1979)
+Mellotron, "flute tape bank, as sold" (1963) to The Beatles, "Strawberry Fields Forever" (1967)
 
-Both men's records treat the mixing desk itself, not a mixed-down finished master, as the instrument being played live. The specific tools differ by a decade of electronics, but the gesture is the same.
+Listen to the opening seconds: a flute that isn't quite a flute. Each key on a Mellotron plays a strip of tape with a real flute note recorded on it, so the sound wobbles slightly and every note stops after about eight seconds. McCartney's chords sound a little out of tune with themselves because the flute recordings don't quite match. That wobble is a recording of a recording, playing back as an instrument.
 
-### 5. `e-kraftwerk-atkins`
+### 7. `e-rubin-rundmc`
 
-Kraftwerk, "Numbers" (1981) to Cybotron, "Clear" (1983)
+Aerosmith, "Walk This Way" (1975) to Run-D.M.C., "Walk This Way (with Aerosmith)" (1986)
 
-Both are built from short repeating electronic figures with no human looseness. The Detroit record has more funk in how the accents fall. Listen to where the emphasis lands in the bar. That small difference is the entire Atlantic crossing.
+Start with the first seconds of each. Aerosmith's opens on a drummer's short, dry break, then the guitar riff. Run-D.M.C.'s opens on that same break, then Jam Master Jay cutting the guitar riff back and forth on a turntable, the way a DJ had been using the record at parties for years. Then the real guitar and Steven Tyler's voice arrive and sit next to the rapping. You are hearing a rock record the way hip-hop had always used it, as material, before its band walks in and joins.
 
-### 6. `e-sugarhill-mellemel`
+### 8. `e-808-mantronix`
 
-The Sugarhill Gang, "Rapper's Delight" (1979) to Grandmaster Flash and the Furious Five, "The Message" (1982)
+Roland, "TR-808 factory voices" (1980) to Mantronix, "Fresh Is the Word" (1985)
 
-Both records are played by the same house band rather than assembled from other people's records, and once you know that you can hear it: the music breathes, pushes and drags the way people do. Sugar Hill's rap records sound like funk records with rappers on them, because that is literally what they are. That house-band sound is a label decision, not an artist's.
+The 808 carries almost the entire track: a hard, dry kick-and-hi-hat pattern with almost no live instrumentation layered over it, an early example of hip-hop production built to sound like a machine rather than to disguise one.
 
-### 7. `e-marleymarl-peterock`
+### 9. `e-desk-tubby`
 
-Marley Marl, "The Symphony, produced for the Juice Crew" (1988) to Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992)
+MCI, "a twelve-into-four studio console, as designed" (1965) to King Tubby, "King Tubby Meets Rockers Uptown" (1976)
 
-Both are built on one short loop running under the vocals, and both keep the drums heavy and forward. Then listen to what Pete Rock added to Marl's approach. On 'The Symphony' the loop is hard and the drums dominate, leaving four MCs to fight over it. On 'T.R.O.Y.' the loop is a saxophone phrase from a Tom Scott jazz record, over a bassline that sounds rounded and dark. It is the same way of building a beat, turned warm and mournful.
+Follow one thing: the filter. The whole track thins out from the bottom up, loses its body, hangs there sounding like a radio in another room, then floods back. That is one knob being turned by hand while the tape runs. Underneath it, notice that the singing is not mixed low, it is gone, and comes back for one word before disappearing again. Both are performances, not settings.
 
-### 8. `e-derrickmay-carlcraig`
+### 10. `e-stones-verve`
 
-Derrick May (Rhythim Is Rhythim), "Nude Photo" (1987) to Psyche (Carl Craig), "Elements" (1989)
+The Rolling Stones, "The Last Time" (1965) to The Verve, "Bitter Sweet Symphony" (1997)
 
-Both records share Transmat's repeating-figure discipline, but 'Elements' pulls the tempo down and lets the chords hang longer, the mark of an assistant absorbing his mentor's vocabulary and then bending it somewhere else.
+Start with the Stones' 'The Last Time': a jangly guitar riff and a pop song. Then play 'Bitter Sweet Symphony'. The loop isn't from the Stones' record at all but from an orchestral version made by their former manager, a few bars of strings repeating. Listen for the Stones' tune hidden inside the strings. That hidden tune cost the Verve the song for twenty years.
 
-### 9. `e-mirage-saunderson`
-
-Ensoniq, "Mirage, an eight-bit sampler at 1,695 dollars" (1984) to Inner City, "Big Fun" (1988)
-
-Listen to how the record is put together underneath the vocal: short stabs that all stop dead rather than ring out, repeating in the same place every bar. Then notice what the sampler let him do that the others could not, which is put a full sung performance on top of it. Detroit techno arriving on daytime radio starts here.
-
-### 10. `e-marshall-who`
-
-Marshall, "JTM45, and the 100-watt version built for Townshend" (1965) to The Who, "My Generation" (1965)
-
-Skip to the last stretch of the song, where it stops behaving like a song. The guitar howls with feedback, notes hang on far longer than a string alone would let them, and the drums crash around underneath. Feedback like that needs a guitar held near a very loud amplifier. The Who built their live show on that volume, and this record brings it into the studio.
-
-### 11. `e-juno60-heard`
-
-Roland, "Juno-60" (1982) to Mr. Fingers, "Can You Feel It" (1986)
-
-Listen to the chords floating above the bassline. They have no hard front edge: each one arrives softly and hangs in the air, and they sound wide, as if coming from both sides at once. That softness and width are the kind of sound the Juno's built-in chorus was designed to make. The whole record was built from a synth, a drum machine and two cassette decks.
-
-### 12. `e-transmat-carlcraig`
-
-Derrick May (Rhythim Is Rhythim), "Strings of Life" (1987) to Psyche (Carl Craig), "Elements" (1989)
-
-'Strings of Life' is techno reaching for euphoria in broad daylight. 'Elements,' made two years later inside the same label, is quieter and more interior, described by reissue notes as 'swooning electro-jazz.' Same label, same machine palette, a different temperament entirely.
-
-### 13. `e-chess-stones`
-
-The Rolling Stones, "It's All Over Now" (1964) to The Rolling Stones, "(I Can't Get No) Satisfaction" (1965)
-
-'It's All Over Now', cut in the same Chess sessions, is still a cover, a Bobby Womack song reworked. 'Satisfaction', less than a year later, is the band's own riff and words, written not long after standing in the room where the blues records they'd been copying were actually made.
-
-### 14. `e-sl1200-flash`
+### 11. `e-sl1200-flash`
 
 Technics, "SL-1200 as a domestic hi-fi turntable" (1972) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
 
 Listen for what never happens: the beat does not sag. The same few bars come round again and again dead in time, and in the gaps you can hear a record being hauled backwards and dropped back in exactly on the one. A belt-driven deck would lag on every restart and the whole thing would slide. Everything frantic on this record rests on the machine underneath it being rigid.
 
-### 15. `e-detroittechno-warp`
+### 12. `e-eps16-rza`
 
-Model 500, "No UFO's" (1985) to LFO, "LFO" (1990)
+Ensoniq, "EPS-16 Plus, sixteen-bit keyboard sampler" (1990) to Wu-Tang Clan, "C.R.E.A.M." (1993)
 
-'No UFO's' is Juan Atkins's drum machine funk: crisp claps, a synth riff, a cool vocoder voice. 'LFO' strips that down further and moves the weight into the bass. Listen for the sub-bass notes that were built to shake a club system. They were so low that home stereos struggled with them. Over the top are a few pure bleeps, the sound that named the whole Sheffield style. The Detroit idea is there, machines with no apology, rebuilt for a northern English city's clubs.
+Listen to the length of the loop. The piano phrase in 'C.R.E.A.M.' runs for bars, a whole musical sentence repeating, which the SP-1200's ten seconds made hard. The sound is also cleaner at the top, without the SP's crunch, though RZA kept it dusty and dark. That's the machine allowing the long, sad phrase to become the song's whole mood.
 
-### 16. `e-enjoy-flash`
+### 13. `e-isley-publicenemy`
 
-Grandmaster Flash and the Furious Five, "Superrappin'" (1979) to Grandmaster Flash and the Furious Five, "Freedom" (1980)
+The Isley Brothers, "Fight the Power (Part 1)" (1975) to Public Enemy, "Fight the Power" (1989)
 
-'Superrappin'' is already a fully formed group performance, five voices trading lines over a live band. 'Freedom', their first Sugar Hill single less than a year later, isn't a different sound so much as the same group suddenly heard everywhere: the label changed the record's reach, not what the group was doing.
+The Isleys' original is a smooth, horn-driven funk protest song about censorship on the radio. Public Enemy keeps the title and a fragment of the groove but buries both under the Bomb Squad's usual density, turning a specific, contained complaint into a much broader, louder one.
 
-### 17. `e-clinton-dre`
-
-George Clinton, "Atomic Dog" (1982) to Dr. Dre, "Fuck Wit Dre Day (And Everybody's Celebratin')" (1992)
-
-Clinton's original chant floats over a loose, synth-driven groove, half sung and half spoken, more strange than tough. Dre tightens everything around it: a slower, heavier low end, a cleaner beat, and the chant now sitting inside a much harder, more menacing record. The words barely change. The mood around them does completely.
-
-### 18. `e-peterock-nas`
-
-Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992) to Nas, "The World Is Yours" (1994)
-
-Two years apart and the same idea from Pete Rock: a soft jazz phrase looped under heavy drums, turned melancholy. On 'T.R.O.Y.' it's a saxophone. On 'The World Is Yours' it's a gentle piano from an Ahmad Jamal record. Listen for how the piano keeps circling while Nas talks about ambition, the sweetness of the loop working against the hardness of the words.
-
-### 19. `e-baker-bambaataa`
-
-Afrika Bambaataa and the Jazzy 5, "Jazzy Sensation" (1981) to Afrika Bambaataa and the Soulsonic Force, "Planet Rock" (1982)
-
-Both records are Baker productions for Bambaataa on Tommy Boy, and both are built the same way: somebody else's music, replayed in the studio instead of sampled. The 'Jazzy Sensation' sleeve credits the song to Kenton Nix, who wrote Gwen Guthrie's 'Funky Sensation', and the music to a studio band. A year later 'Planet Rock' does the same thing to two Kraftwerk records, with a Roland TR-808 doing the drumming. Listen for the borrowed tune in each, and for how much harder and emptier the 1982 record sounds.
-
-### 20. `e-kinks-who`
+### 14. `e-kinks-who`
 
 The Kinks, "You Really Got Me" (1964) to The Who, "I Can't Explain" (1965)
 
 The same trick in both: a short chord shape shoved up the neck, no bass movement underneath, and the riff repeated with almost no variation. Then listen to the drums. The Kinks keep time. Keith Moon refuses to, and that difference is the whole future of the Who.
+
+### 15. `e-food-blur`
+
+Blur, "Popscene" (1992) to Blur, "For Tomorrow" (1993)
+
+'Popscene' already has the English guitar-pop idea, but it comes at you fast and loud: a blaring brass section, a sprinting tempo, and no chorus built to be sung back. 'For Tomorrow' slows down and opens up: a la-la-la chorus sung by female backing singers, a string quartet (the band's first), and a lyric that takes a drive up to Primrose Hill in north London. The Englishness is the same. The difference is a song written to order for a label that wanted a single.
+
+### 16. `e-stockhausen-can`
+
+Karlheinz Stockhausen, "Hymnen" (1967) to Can, "Aumgn" (1971)
+
+Hymnen takes found material, national anthems and shortwave radio noise, and treats it as raw sound to be filtered and cut. Put on 'Aumgn' from Tago Mago and wait out the opening. There is no beat for long stretches. Voices are stretched into a low drone, sounds come in treated past recognition, and the piece is shaped by editing rather than by a song form. Then listen to 'Halleluhwah' on the same album to hear what the method did to a rock groove: an eighteen-minute jam cut down on tape until it holds.
+
+### 17. `e-kraftwerk-atkins`
+
+Kraftwerk, "Numbers" (1981) to Cybotron, "Clear" (1983)
+
+Both are built from short repeating electronic figures with no human looseness. The Detroit record has more funk in how the accents fall. Listen to where the emphasis lands in the bar. That small difference is the entire Atlantic crossing.
+
+### 18. `e-tubby-lee`
+
+King Tubby, "early dub plates for Duke Reid" (1968) to Bunny Lee productions, dubbed by King Tubby, "various" (1974)
+
+Lee's productions from the mid-1970s onward routinely exist in two forms: a vocal version, and a King Tubby dub cut sold or played separately. The dub cut is where the empty space and echo live.
+
+### 19. `e-pistols-clash`
+
+Sex Pistols, "Anarchy in the U.K." (1976) to The Clash, "White Riot" (1977)
+
+Both are built from the same three-chord urgency, but listen to how directly "White Riot" addresses a specific real event (the 1976 Notting Hill Carnival riot) where "Anarchy in the U.K." stays in the realm of general provocation.
+
+### 20. `e-chess-stones`
+
+The Rolling Stones, "It's All Over Now" (1964) to The Rolling Stones, "(I Can't Get No) Satisfaction" (1965)
+
+'It's All Over Now', cut in the same Chess sessions, is still a cover, a Bobby Womack song reworked. 'Satisfaction', less than a year later, is the band's own riff and words, written not long after standing in the room where the blues records they'd been copying were actually made.
