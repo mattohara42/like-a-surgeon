@@ -1,0 +1,32 @@
+{
+  "id": "isaac-hayes",
+  "name": "Isaac Hayes",
+  "sortName": "Hayes, Isaac",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1964,
+  "activeTo": 2008,
+  "originCity": "Covington, Tennessee",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A Stax songwriter and session player who turned solo albums into long, orchestral soul monologues, and became one of the most sampled voices in hip-hop.",
+  "blurb": {
+    "age7": "Isaac Hayes wrote and played on soul records at Stax Records, then made his own albums with long, dramatic songs. Rap producers use pieces of his records all the time.",
+    "age13": "Isaac Hayes joined Memphis's Stax Records as a session musician, and by 1964 he and David Porter were writing hits for Sam & Dave, including 'Soul Man' and 'Hold On, I'm Comin''. His own 1969 album 'Hot Buttered Soul' stretched songs into long, string-heavy pieces with spoken introductions, and his 1971 'Theme from Shaft' made him the first Black composer to win the Academy Award for Best Original Song.",
+    "adult": "Hayes's Stax writing partnership with David Porter supplied much of the Sam & Dave catalogue before his own solo records, starting with 'Hot Buttered Soul' (1969), stretched soul into extended, orchestral, spoken-word pieces that changed what a solo soul album could sound like. 'Theme from Shaft' (1971) won him the Oscar. His catalogue's dense strings, isolated vocal fragments and spoken interludes have made him one of the most sampled artists in hip-hop production."
+  },
+  "signatureTracks": [
+    {
+      "title": "Theme from Shaft",
+      "year": 1971,
+      "whyThisOne": "Won the Academy Award for Best Original Song and defined his orchestral funk sound."
+    },
+    {
+      "title": "Hyperbolicsyllabicsesquedalymistic",
+      "year": 1969,
+      "whyThisOne": "From 'Hot Buttered Soul'; its strings and vocal fragments are the source for Public Enemy's 'Black Steel in the Hour of Chaos'."
+    }
+  ]
+}

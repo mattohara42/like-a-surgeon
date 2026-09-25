@@ -1,0 +1,32 @@
+{
+  "id": "syl-johnson",
+  "name": "Syl Johnson",
+  "sortName": "Johnson, Syl",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1959,
+  "activeTo": 2022,
+  "originCity": "Holly Springs, Mississippi",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A Chicago soul singer who called himself 'the most sampled man in history,' and had the sample databases to back it up.",
+  "blurb": {
+    "age7": "Syl Johnson was a soul singer from Chicago. Rap producers have used pieces of his song 'Different Strokes' more than almost any other record.",
+    "age13": "Born Sylvester Thompson in Mississippi, Johnson moved to Chicago as a child, where the blues guitarist Magic Sam was his neighbor. He recorded for Chicago's Twinight Records in the 1960s and Memphis's Hi Records in the 1970s. His 1967 single 'Different Strokes' has been sampled by dozens of hip-hop acts, including Wu-Tang Clan, Public Enemy and De La Soul.",
+    "adult": "Johnson's recording career spans Chicago soul (Twinight, 1966-1971) and the Hi Records Memphis soul sound under Willie Mitchell (1971-1977), but his lasting influence on this map runs through a single 1967 drum break, 'Different Strokes', reused across hip-hop from its earliest sample-based records onward. Johnson pursued sample-clearance and royalty claims aggressively later in his career, becoming a vocal advocate for sampled artists' compensation."
+  },
+  "signatureTracks": [
+    {
+      "title": "Different Strokes",
+      "year": 1967,
+      "whyThisOne": "One of the most sampled breaks in hip-hop history."
+    },
+    {
+      "title": "Is It Because I'm Black",
+      "year": 1969,
+      "whyThisOne": "His biggest chart hit for Twinight, reaching No. 11 R&B."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "e-syljohnson-delasoul",
+  "from": "syl-johnson",
+  "to": "de-la-soul",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1988,
+  "crossLineage": true,
+  "evidence": "De La Soul's 'Freedom of Speak (We Got Three Minutes)', the B-side of their 'Plug Tunin'' single (1988), samples Syl Johnson's 1967 'Different Strokes' alongside several James Brown records, as catalogued by sample-credit databases including WhoSampled.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Syl Johnson",
+      "title": "Different Strokes",
+      "year": 1967
+    },
+    "later": {
+      "artist": "De La Soul",
+      "title": "Freedom of Speak (We Got Three Minutes)",
+      "year": 1988
+    },
+    "whatToListenFor": "Johnson's original is a tight, live soul-funk groove built around a drum break and a spoken 'different strokes for different folks' hook. De La Soul chops it into just a fragment inside a dense collage, one voice among several sources rather than the whole beat, the same reuse-as-texture approach 'Different Strokes' would get from dozens of other producers."
+  },
+  "explanation": {
+    "age7": "De La Soul used a little piece of an old Syl Johnson song in one of their tracks, mixed in with pieces of other records.",
+    "age13": "Syl Johnson's 1967 song 'Different Strokes' has been sampled by more hip-hop producers than almost any other record. De La Soul used a piece of it on 'Freedom of Speak', from the same 1988 single as 'Plug Tunin'', the demo tape that got them signed.",
+    "adult": "One credited use among dozens: 'Different Strokes' has been sampled by acts across this map (Wu-Tang Clan and Public Enemy among them), which is part of why Johnson later called himself, without much exaggeration, the most sampled man in music history."
+  },
+  "tags": ["production"]
+}

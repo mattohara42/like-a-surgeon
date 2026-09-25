@@ -1,0 +1,32 @@
+{
+  "id": "mantronix",
+  "name": "Mantronix",
+  "sortName": "Mantronix",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1984,
+  "activeTo": null,
+  "originCity": "New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A DJ-and-MC duo who taught themselves the TR-808 in one studio session and built a whole style of hip-hop around programming it directly.",
+  "blurb": {
+    "age7": "Mantronix were a DJ and a rapper who made fast, machine-built rap songs, with a drum machine standing in for a whole band.",
+    "age13": "Kurtis Mantronik (DJ) and MC Tee (rapper) released 'Fresh Is the Word' in 1985, programming its beat on a Roland TR-808 that Mantronik taught himself to use in a single studio session. Their records leaned harder on the drum machine, with less live instrumentation, than most rap production of the time, and MC Tee left after their third album in 1988.",
+    "adult": "Mantronix's 1985 debut single set out an electro-funk approach built almost entirely from programmed drums, synth bass and a vocoded or synthesized voice, a polyrhythmic style compared at the time to West African log-drumming patterns. Kurtis Mantronik continued the group after MC Tee's departure, moving toward straight dance music through 1990 and 1991 before the name went dormant; Mantronik later revived it for solo and reunion work."
+  },
+  "signatureTracks": [
+    {
+      "title": "Fresh Is the Word",
+      "year": 1985,
+      "whyThisOne": "Their debut single, programmed on a TR-808 in a single studio session."
+    },
+    {
+      "title": "Bassline",
+      "year": 1985,
+      "whyThisOne": "From 'The Album' (1985); an early, stripped electro-funk production showcase."
+    }
+  ]
+}

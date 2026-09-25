@@ -1614,3 +1614,80 @@ each disagreement.
   (PR234), as e-rza-wutang and the Wu-Tang record already said, so
   e-publicenemy-rza's later side and edge year are now 1992. The rest of
   its findings are MusicBrainz's thin dating of reggae and early techno.
+
+## Track D: sample-hub and Native Tongues batch (unattended, autonomous session)
+
+Run without Matt in the loop, at his own request ("how far can you go
+without my input"). Every fact below was checked against live web sources
+(WebSearch) during the session rather than recalled from training data,
+following A62/A117's lesson that confident recall of a credit or date is
+exactly the kind of claim this project has been burned by before. Sources
+are named in each record's own `evidence` field rather than repeated here.
+
+- **A191. Scope: seven artists, one machine, nine edges.** Isaac Hayes,
+  The Isley Brothers, Bob James and Syl Johnson (sample hubs named in
+  `BACKLOG.md`, all now with a documented single-song sample credit into
+  an artist already on the map), De La Soul and Prince Paul (closing the
+  hip-hop-production-batch gap A118 logged), Mantronix (an early,
+  well-documented TR-808 self-taught-in-the-session story, same pattern
+  as Man Parrish's), and the Casio MT-40 (closing the specific machine
+  gap `e-tubby-princejammy`'s own adult text had been flagging since the
+  funk/dub batch, A180). The A107/A118 orphan rule held: every new node
+  got a sourced edge to something already on the map before being
+  written, not after.
+- **A192. Isaac Hayes and The Isley Brothers both sample into Public
+  Enemy's Bomb Squad catalogue** (`e-hayes-publicenemy`,
+  `e-isley-publicenemy`) rather than into some other already-mapped act,
+  because the Bomb Squad's own dense, multi-source collage method is
+  already established on this map (`e-jamesbrown-publicenemy`) and both
+  new credits are independently well documented single-song matches
+  rather than a guess at which of a dozen buried sources mattered most.
+  The Isley Brothers edge also confirms, rather than duplicates, a credit
+  `e-jamesbrown-publicenemy`'s own evidence field had already named in
+  passing.
+- **A193. `e-tommyboy-delasoul` held at `consensus`, not `documented`,**
+  on purpose. The label decision itself (Tommy Boy choosing which of De
+  La Soul's submitted samples to clear) and the resulting Turtles lawsuit
+  and settlement are both directly sourced. The claim that the group's
+  next album's darker tone was a response to that specific lawsuit is a
+  widely repeated critical reading, not a first-person causal statement
+  from the group naming the lawsuit as the cause, so per rule 4 it earns
+  consensus and says so in its own explanation text, the same honesty
+  move A171/Q22 already established for edges resting on agreement
+  rather than testimony.
+- **A194. `e-delasoul-tribecalledquest` is this map's first `direct`-type
+  edge between two contemporaneous peers rather than a mentor, a
+  technique, or a one-way transmission.** Chronology decided the
+  direction: De La Soul's debut (1989) predates A Tribe Called Quest's
+  (1990), and Q-Tip appears on a De La Soul record months before his own
+  group's first album, so `from: de-la-soul, to: a-tribe-called-quest`
+  is defensible even though the real relationship is a shared collective
+  identity (the Native Tongues) rather than a one-way act of influence.
+  Held at `consensus`, and the edge's own adult text says plainly that
+  this is a collective identity forming around a style, not a named
+  transmission, rather than dressing up a mutual scene as a directed
+  claim.
+- **A195. Mantronix filed `lineage: "hiphop"`, not `"electronic"`,**
+  unlike Man Parrish (`electronic`). Both are 1980s electro acts built
+  around the TR-808, but Mantronix always had a credited rapper, MC Tee,
+  and released on a rap-context label (Sleeping Bag), matching Afrika
+  Bambaataa's precedent (also `hiphop` despite heavy machine use) rather
+  than Man Parrish's instrumental-only electro records. `crossLineage`
+  on `e-808-mantronix` is therefore `true`.
+- **A196. Casio MT-40 filed `kind: "instrument"`, not `"synth"`.**
+  Sources describing the machine are explicit that it is not a
+  synthesizer in the signal-generating sense, since it only plays
+  prerecorded preset sounds; it is played by hand the same way A109 reads
+  the Mellotron, a fixed sound library triggered from a keyboard, which
+  is the closer analogy.
+- **A197. De La Soul's own `labels` field is left empty rather than
+  populated with a `tommy-boy` entry.** The schema's `{ labelId, from,
+  to }` shape implies a closed date range, and no source checked gives a
+  defensible year the group's association with Tommy Boy ended (they
+  remained linked to the label's catalogue into the streaming era in
+  ways too tangled for a single "to" year). The causal claim that matters
+  for this map, the label's sample-clearance decision, is carried by
+  `e-tommyboy-delasoul` instead, which needs no end year. Tommy Boy's own
+  `ownershipStory` already named De La Soul in prose before this batch,
+  so nothing about the relationship was previously undocumented, only
+  ungraphed.

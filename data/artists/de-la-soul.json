@@ -1,0 +1,34 @@
+{
+  "id": "de-la-soul",
+  "name": "De La Soul",
+  "sortName": "De La Soul",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1988,
+  "activeTo": null,
+  "originCity": "Amityville, Long Island, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "prince-paul"
+  ],
+  "hook": "Three high school friends whose collage of samples and offbeat humor gave the Native Tongues collective its founding record.",
+  "blurb": {
+    "age7": "De La Soul were three friends from Long Island who made colorful, funny rap songs built from pieces of old records.",
+    "age13": "Kelvin 'Posdnuos' Mercer, David 'Trugoy' Jolicoeur and Vincent 'Maseo' Mason formed De La Soul in high school in Amityville, Long Island. Producer Prince Paul heard their demo tape and brought them to Tommy Boy Records, where their 1989 debut, '3 Feet High and Rising', built playful, densely sampled songs out of everything from James Brown to a Johnny Cash title. They were part of the Native Tongues, a loose collective of like-minded rap acts that included A Tribe Called Quest, and appeared together on the 'Buddy' remix that year.",
+    "adult": "'3 Feet High and Rising' (1989) reset expectations for what a sample could be: alongside soul and funk breaks, its collage pulls from French-language instruction records, game-show interludes and other unlikely sources, framed by comic skits rather than a single continuous narrative. The record's dense, not-fully-cleared sampling led to a 1991 lawsuit from the psychedelic pop group The Turtles over an uncredited use, settled out of court, and De La Soul co-founder David Jolicoeur died in February 2023."
+  },
+  "signatureTracks": [
+    {
+      "title": "Me Myself and I",
+      "year": 1989,
+      "whyThisOne": "Their breakout single, pushing back against being cast as hip-hop hippies."
+    },
+    {
+      "title": "Buddy (Remix)",
+      "year": 1989,
+      "whyThisOne": "Brought Q-Tip, Jungle Brothers, Queen Latifah and Monie Love together as the Native Tongues' clearest single statement."
+    }
+  ]
+}
