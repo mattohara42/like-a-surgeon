@@ -1,6 +1,6 @@
 // Shared gradient defs for edge trails and machine beams.
 //
-// One gradient per *lineage pair* (at most lineages^2, currently 36) rather
+// One gradient per *lineage pair* (lineages^2) rather
 // than one per edge: viewport culling creates and destroys edge elements
 // constantly while panning, and per-edge defs would mean adding and
 // removing <linearGradient> nodes on every frame. Trails use
@@ -9,21 +9,20 @@
 
 import { CONFIG } from '../config.js';
 import { svgEl } from './svg.js';
-
-const LINEAGES = Object.keys(CONFIG.colors.lineage);
+import { lineageIds, lineageColor } from './lineages.js';
 
 export const trailGradientId = (from, to) => `lg-${from}-${to}`;
 export const beamGradientId = (lineage) => `bm-${lineage}`;
 
 export function colorFor(lineage) {
-  return CONFIG.colors.lineage[lineage] ?? CONFIG.colors.lineage.other;
+  return lineageColor(lineage);
 }
 
 export function createEdgeGradients() {
   const out = [];
 
-  for (const from of LINEAGES) {
-    for (const to of LINEAGES) {
+  for (const from of lineageIds()) {
+    for (const to of lineageIds()) {
       const g = svgEl('linearGradient', {
         id: trailGradientId(from, to),
         x1: '0', y1: '0', x2: '1', y2: '0',
@@ -41,7 +40,7 @@ export function createEdgeGradients() {
   // coloured the whole way: a beam that fades to transparent at the top
   // reads as grey smoke as soon as two of them overlap.
   const { near, mid, far } = CONFIG.beam.stops;
-  for (const lineage of LINEAGES) {
+  for (const lineage of lineageIds()) {
     const g = svgEl('linearGradient', {
       id: beamGradientId(lineage),
       x1: '0', y1: '0', x2: '0', y2: '1',
@@ -62,7 +61,7 @@ export function createEdgeGradients() {
 export const haloGradientId = (lineage) => `halo-${lineage}`;
 
 export function createHaloGradients() {
-  return LINEAGES.map((lineage) => {
+  return lineageIds().map((lineage) => {
     const g = svgEl('radialGradient', { id: haloGradientId(lineage) });
     g.append(
       svgEl('stop', { offset: '0%', 'stop-color': colorFor(lineage), 'stop-opacity': 0.6 }),

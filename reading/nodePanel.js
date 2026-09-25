@@ -4,8 +4,8 @@
 //   register, nodesById, neighbours, sceneMembers(id),
 //   goNode(id), goEdge(id)
 
-import { CONFIG } from '../config.js';
-import { COPY, KIND_LABELS, LINEAGE_LABELS, EDGE_TYPE_LABELS } from './copy.js';
+import { COPY, KIND_LABELS, EDGE_TYPE_LABELS } from './copy.js';
+import { lineageColor, lineageName } from '../render/lineages.js';
 import { h, tierSwatch } from './dom.js';
 import { pick } from './registers.js';
 import { youtubeLink } from './links.js';
@@ -18,10 +18,6 @@ export function yearSpan(from, to, endUnknown = false) {
 
 function heading(key, register) {
   return h('h3', {}, pick(COPY.headings[key], register));
-}
-
-function lineageColor(lineage) {
-  return CONFIG.colors.lineage[lineage] ?? CONFIG.colors.lineage.other;
 }
 
 function metaLine(node) {
@@ -196,7 +192,7 @@ export function renderNodePanel(node, ctx) {
     h(
       'div',
       { class: 'kicker', style: `color:${lineageColor(node.lineage)}` },
-      `${KIND_LABELS[node.kind] ?? node.kind} · ${LINEAGE_LABELS[node.lineage] ?? node.lineage}`,
+      `${KIND_LABELS[node.kind] ?? node.kind} · ${lineageName(node.lineage)}`,
     ),
     h('h2', {}, node.name),
     h('div', { class: 'meta' }, metaLine(node).filter(Boolean).join(' · ')),

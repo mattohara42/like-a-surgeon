@@ -22,9 +22,9 @@ export const CONFIG = {
     labelMinPx: 170,
     axisHeight: 32,
     // Lanes with no nodes in them are skipped entirely rather than drawn
-    // empty. `colors.lineage` carries spines the dataset has not reached
-    // yet (funk, other); reserving vertical space for them pushes the
-    // populated lanes apart for no reading benefit.
+    // empty. data/lineages/ can carry a lineage before any record uses
+    // it; reserving vertical space for it pushes the populated lanes apart
+    // for no reading benefit.
     dropEmptyLanes: true,
     // A record whose end is unknown (`endUnknown: true`, Q20) draws its
     // span this many years past its start and fades it out, rather than
@@ -302,14 +302,10 @@ export const CONFIG = {
   },
 
   colors: {
-    lineage: {
-      rock: '#ff6f55',
-      dub: '#3ddfa4',
-      hiphop: '#bd82ff',
-      electronic: '#5fa8ff',
-      funk: '#ffc46b',
-      other: '#8fa6c8',
-    },
+    // Each lineage's own colour lives on its record in data/lineages/, so
+    // adding a lineage stays a one-file change. This is only for a node
+    // whose lineage has no record.
+    lineageFallback: '#8fa6c8',
     background: '#04060d',
     ink: '#eaf0ff',
     dim: '#7e8ca8',

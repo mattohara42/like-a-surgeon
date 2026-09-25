@@ -104,7 +104,7 @@ export function drawNebulae(nebulaG, scenes, layout) {
       svgEl('ellipse', {
         class: 'scene-nebula',
         cx, cy, rx, ry,
-        fill: scene.palette?.accent ?? CONFIG.colors.lineage.other,
+        fill: scene.palette?.accent ?? CONFIG.colors.lineageFallback,
         filter: 'url(#nebula-blur)',
         opacity,
       }),

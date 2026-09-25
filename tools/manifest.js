@@ -6,6 +6,7 @@ import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 export const SHARD_TYPES = [
+  'lineages',
   'artists',
   'machines',
   'scenes',

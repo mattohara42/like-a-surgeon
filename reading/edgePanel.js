@@ -2,8 +2,8 @@
 // project (SPEC.md), and `whatToListenFor` is the highest-value text in the
 // dataset, so it is set as the most prominent paragraph here.
 
-import { CONFIG } from '../config.js';
 import { COPY, EDGE_TYPE_LABELS } from './copy.js';
+import { lineageColor } from '../render/lineages.js';
 import { h, tierSwatch } from './dom.js';
 import { pick } from './registers.js';
 import { trackPairQuery, youtubeLink } from './links.js';
@@ -37,7 +37,7 @@ export function renderEdgePanel(edge, ctx) {
   const reg = ctx.register;
   const tier = COPY.tiers[edge.confidence];
   const tp = edge.trackPair;
-  const color = CONFIG.colors.lineage[edge.to.lineage] ?? CONFIG.colors.lineage.other;
+  const color = lineageColor(edge.to.lineage);
   const heading = (key) => h('h3', {}, pick(COPY.headings[key], reg));
 
   return h(

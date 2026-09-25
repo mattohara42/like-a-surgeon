@@ -9,8 +9,9 @@
 // the manifest or bundle actually contains.
 
 import { CONFIG } from '../config.js';
+import { setLineages } from './lineages.js';
 
-const SHARD_TYPES = ['artists', 'machines', 'scenes', 'labels', 'edges', 'demos', 'threads'];
+const SHARD_TYPES = ['lineages', 'artists', 'machines', 'scenes', 'labels', 'edges', 'demos', 'threads'];
 
 const CURRENT_YEAR = new Date().getFullYear();
 
@@ -74,6 +75,7 @@ function normalizeNode(kind, record) {
 
 export async function loadGraphData() {
   const bundle = window.LINEAGE_DATA ?? (await loadFromDevServer());
+  setLineages(Object.values(bundle.lineages ?? {}));
 
   const nodesById = new Map();
   for (const [kind, shard] of [

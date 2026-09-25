@@ -2,12 +2,13 @@
 
 Plain JSON, human-readable, hand-editable. Matt will edit these directly.
 
-Sharding: one file per record under `data/artists/`, `data/machines/`,
-`data/scenes/`, `data/labels/`, `data/edges/`, `data/threads/`, `data/demos/`.
+Sharding: one file per record under `data/lineages/`, `data/artists/`,
+`data/machines/`, `data/scenes/`, `data/labels/`, `data/edges/`,
+`data/threads/`, `data/demos/`.
 Filename is the id, exactly; a mismatch is a hard validator error.
 
 `data/manifest.json` is **generated, not hand-maintained.** `tools/manifest.js`
-walks the seven directories and writes it; `serve.js`, `validate.js`, and
+walks the eight directories and writes it; `serve.js`, `validate.js`, and
 `bundle.js` all call that same helper. Adding a record is one new file and
 zero manifest edits. Do not hand-edit `data/manifest.json`.
 
@@ -36,6 +37,27 @@ which facts are present. See "Writing rules" in `CLAUDE.md`.
 
 ---
 
+## lineage
+
+A lane on the map. The legal values of every node's `lineage` field are
+exactly the ids in this directory, so adding a lineage is one file here
+and no code change.
+
+```
+id            slug, stable forever; what node records put in `lineage`
+name          display name, shown on the lane title and in panels
+color         six-digit hex, the lane's colour everywhere it appears
+order         number, lane position top to bottom (lower is higher up);
+              must be unique. Spaced in tens so a lane can be slotted in
+              between two others without renumbering
+```
+
+A lineage with no records in it takes no space on the map (see
+`CONFIG.layout.dropEmptyLanes`), so a lineage can be added before its first
+artist.
+
+---
+
 ## artist
 
 ```
@@ -43,7 +65,7 @@ id            slug, stable forever
 name
 sortName
 type          "artist"
-lineage       "rock" | "electronic" | "hiphop" | "dub" | "funk" | "other"
+lineage       a lineage id, one of the files in data/lineages/
 activeFrom    year
 activeTo      year or null (null = still active)
 endUnknown    optional, true when activeTo is null because the end is
@@ -67,7 +89,7 @@ because for long stretches of this history it is the protagonist.
 id, name, type: "machine"
 kind          "drum-machine" | "synth" | "sampler" | "studio-technique" |
               "format" | "instrument"
-lineage       "rock" | "electronic" | "hiphop" | "dub" | "funk" | "other"
+lineage       a lineage id, one of the files in data/lineages/
               the machine's home lineage, for crossLineage checks on edges
               that touch it
 maker, releasedYear, discontinuedYear
@@ -83,7 +105,7 @@ demoId        optional, a playable demonstration of the machine itself
 
 ```
 id, name, type: "scene"
-lineage       "rock" | "electronic" | "hiphop" | "dub" | "funk" | "other"
+lineage       a lineage id, one of the files in data/lineages/
               the scene's home lineage, for crossLineage checks on edges
               that touch it
 yearFrom, yearTo, city, country
@@ -110,7 +132,7 @@ informs the blurb, not shown at every reading level on their own.
 
 ```
 id, name, type: "label"
-lineage       "rock" | "electronic" | "hiphop" | "dub" | "funk" | "other"
+lineage       a lineage id, one of the files in data/lineages/
 foundedYear, closedYear, city, founders
 ownershipStory  who owned it, who it was sold to, what happened to the artists
 hook, blurb

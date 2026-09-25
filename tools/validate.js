@@ -14,7 +14,6 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = join(ROOT, 'data');
 const STRICT = process.argv.includes('--strict');
 
-const LINEAGES = ['rock', 'electronic', 'hiphop', 'dub', 'funk', 'other'];
 const EDGE_TYPES = [
   'direct',
   'production',
@@ -38,6 +37,7 @@ const MACHINE_KINDS = [
 
 // Shard directory name -> expected `type` field value.
 const SHARD_TO_TYPE = {
+  lineages: 'lineage',
   artists: 'artist',
   machines: 'machine',
   scenes: 'scene',
@@ -63,6 +63,7 @@ const REGISTER_FIELDS = {
 };
 
 const REQUIRED_FIELDS = {
+  lineages: ['id', 'name', 'color', 'order'],
   artists: [
     'id', 'name', 'sortName', 'type', 'lineage', 'activeFrom', 'activeTo',
     'originCity', 'originCountry', 'scenes', 'labels', 'keyProducers',
@@ -122,6 +123,24 @@ for (const shard of SHARD_TYPES) {
       fail(`${shard}/${id}.json: filename does not match id "${record.id}"`);
     }
     records[shard].set(id, record);
+  }
+}
+
+// The legal lineage values are whatever data/lineages/ holds, so adding a
+// lineage is one file there and nothing here.
+const LINEAGES = [...records.lineages.keys()];
+const lineageOrders = new Map();
+for (const [id, lineage] of records.lineages) {
+  const where = `lineages/${id}.json`;
+  if (typeof lineage.color !== 'string' || !/^#[0-9a-f]{6}$/i.test(lineage.color)) {
+    fail(`${where}: color must be a six-digit hex colour like "#5fa8ff"`);
+  }
+  if (!Number.isFinite(lineage.order)) {
+    fail(`${where}: order must be a number`);
+  } else if (lineageOrders.has(lineage.order)) {
+    fail(`${where}: order ${lineage.order} is already used by "${lineageOrders.get(lineage.order)}"`);
+  } else {
+    lineageOrders.set(lineage.order, id);
   }
 }
 

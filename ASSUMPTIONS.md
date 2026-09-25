@@ -2023,3 +2023,27 @@ small and worth having in front of Matt alongside everything else here.
   real key, if this direction is ported, is Matt's to name alongside
   the rest of `CONFIG.layers`/`CONFIG.arrange`'s keys, not inherited
   from here.
+
+## Lineages moved into the data
+
+- **A221. Lineages are records in `data/lineages/`, not a list in code.**
+  Matt asked for this in chat (2026-09-25) after a scope conversation
+  about adding jazz and blues and about letting others run the concept
+  against their own taste. The list had been copied into four places
+  (`tools/validate.js`, `CONFIG.colors.lineage`, `reading/copy.js`'s
+  `LINEAGE_LABELS`, and `data/SCHEMA.md`), so adding a lineage meant
+  editing three files, which CLAUDE.md's scope rule says is the
+  architecture being wrong. Each record now holds `id`, `name`, `color`
+  and `order`, and `render/lineages.js` is the one place the app asks.
+- **A222. A lineage's colour lives on its record, not in `CONFIG`.** This
+  bends the "all tuning values in `CONFIG`" rule on purpose. A lane's
+  colour is part of what the lineage is, the same way a scene's
+  `palette` already lives on the scene record, and keeping it in
+  `CONFIG` would make a new lineage a two-file change again. `CONFIG`
+  keeps one `colors.lineageFallback` for a node whose lineage has no
+  record.
+- **A223. `order` is spaced in tens** (rock 10 through funk 50, `other`
+  at 90) so a lane can go between two others without renumbering. Lane
+  order and colours are unchanged from before. The one visible change is
+  the lane title, which now uses the record's `name`, so HIPHOP reads
+  HIP-HOP.

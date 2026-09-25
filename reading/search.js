@@ -15,6 +15,7 @@ import { CONFIG } from '../config.js';
 import { COPY, KIND_LABELS } from './copy.js';
 import { h } from './dom.js';
 import { pick } from './registers.js';
+import { lineageColor } from '../render/lineages.js';
 
 // "Motörhead!" -> "motorhead", "Atkins, Juan" -> "atkins juan"
 export function fold(text) {
@@ -175,7 +176,7 @@ export function createSearch(root, { nodes, yearBounds, onSelectNode, onSelectYe
   }
 
   function nodeRow(node) {
-    const color = CONFIG.colors.lineage[node.lineage] ?? CONFIG.colors.lineage.other;
+    const color = lineageColor(node.lineage);
     return option(
       [
         h('span', { class: 'search-dot', style: `background:${color}` }),
