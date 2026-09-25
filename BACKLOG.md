@@ -450,6 +450,14 @@ fixing them inline.)
   consensus-tier direct edge into Nas (`e-kane-nas`); the rest of the
   Juice Crew (Kool G Rap, Roxanne Shanté, MC Shan, Craig G) is still
   waiting.
+  **Mostly closed:** MC Shan, Kool G Rap and Roxanne Shanté are all now
+  on the map, each with a documented production edge from Marley Marl.
+  MC Shan's own entry also covers the Bridge Wars in full, which had
+  previously existed only as a plain-name trackPair reference inside
+  `e-marleymarl-bizmarkie`. Craig G is still waiting, and so is a KRS-One
+  node, which would let the Bridge Wars' other side (`e-marleymarl-mcshan`'s
+  own trackPair names 'The Bridge Is Over' but has nowhere on the map for
+  Boogie Down Productions to land) become a real edge rather than prose.
 - The batch added two more null end years of the "could not find it"
   kind that Q20 is about: `akai-mpc60` and `akai-mpc3000`. Both will read
   as still on sale until Q20 is answered.

@@ -1,0 +1,32 @@
+{
+  "id": "e-marleymarl-roxanneshante",
+  "from": "marley-marl",
+  "to": "roxanne-shante",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1984,
+  "crossLineage": false,
+  "evidence": "'Roxanne's Revenge' (1984), a then-unknown Marley Marl's first production credit, was recorded with 14-year-old Roxanne Shanté answering UTFO's 'Roxanne, Roxanne' in character, as documented in standard hip-hop histories and both artists' own accounts; the earliest version reportedly used a cassette recording of the freestyle from Mr. Magic's radio show.",
+  "trackPair": {
+    "earlier": {
+      "artist": "UTFO",
+      "title": "Roxanne, Roxanne",
+      "year": 1984,
+      "search": false
+    },
+    "later": {
+      "artist": "Roxanne Shanté",
+      "title": "Roxanne's Revenge",
+      "year": 1984
+    },
+    "whatToListenFor": "UTFO's original is three men describing a woman who turns them all down. Shanté's answer, over the same beat, puts her own voice directly into that story, sharp and unimpressed, a teenager talking back to a hit record within weeks of its release."
+  },
+  "explanation": {
+    "age7": "A group made a song about a girl called Roxanne who wouldn't talk to them. A real 14-year-old rapper answered back with her own song, produced by Marley Marl, and it became a huge hit.",
+    "age13": "UTFO's 'Roxanne, Roxanne' (1984) described a woman who ignored them. Fourteen-year-old Roxanne Shanté answered in character on 'Roxanne's Revenge', produced by a then-unknown Marley Marl. It sold hundreds of thousands of copies around New York and set off dozens of other answer records, the Roxanne Wars.",
+    "adult": "This is also Marley Marl's first production credit, making the edge as much about a producer's beginning as an artist's. The Roxanne Wars that followed are among the earliest evidence that a hip-hop record could function as one side of a public, ongoing exchange rather than a closed statement."
+  },
+  "tags": [
+    "production"
+  ]
+}
