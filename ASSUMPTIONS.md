@@ -1866,3 +1866,17 @@ are named in each record's own `evidence` field rather than repeated here.
   (MC Shan, Roxanne Shanté) are deliberate: each is on the map for the
   one record this batch's edges are actually about, matching the-charmels'
   and gilbert-osullivan's precedent, not a gap to be padded.
+- **A212. `chess-records` filed `lineage: "funk"`, not `"rock"`,** on the
+  same logic A71 already used for disco: the enum has no blues bucket,
+  and Chess's actual catalogue (Muddy Waters, Chuck Berry, Howlin' Wolf)
+  is Black American vernacular music, closer in kind to the funk bucket's
+  other occupants than to the British and American rock acts on the
+  other side of most of its edges. This makes `e-chess-stones` genuinely
+  `crossLineage: true`, which reads truer to the real story (a blues
+  label's studio reshaping a British rock band) than tagging Chess
+  `"rock"` to match its edge target would have. The causal claim is
+  access, not a creative or contractual decision like most A69 label
+  edges: Chess granting studio time it didn't normally extend to outside
+  artists is what put the Stones in the same room as Muddy Waters and
+  Chuck Berry, which both band accounts and Keith Richards' own telling
+  tie to their shift toward original songwriting shortly after.
