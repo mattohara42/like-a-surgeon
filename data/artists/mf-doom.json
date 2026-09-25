@@ -9,7 +9,13 @@
   "originCity": "Long Beach, New York",
   "originCountry": "USA",
   "scenes": [],
-  "labels": [],
+  "labels": [
+    {
+      "labelId": "elektra",
+      "from": 1990,
+      "to": 1994
+    }
+  ],
   "keyProducers": [
     "madlib"
   ],

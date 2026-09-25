@@ -2080,3 +2080,60 @@ small and worth having in front of Matt alongside everything else here.
   (`dropEmptyLanes`). The first blues artists (Muddy Waters is the
   obvious one, already named in `e-chess-stones`) are a data batch, not
   part of this change.
+- **A228. `loud-records` closes in 2002 despite two revivals.** Sony
+  shut Loud down in March 2002. The name came back under Sony in 2007,
+  Rifkind bought it back, and it relaunched in 2020 as Loud Music Group.
+  `closedYear` marks the 2002 shutdown, since the revivals are new
+  businesses under an old name and none of them connects to anything on
+  this map; `ownershipStory` names both. `city` is null: Wikipedia calls
+  the label bi-coastal and names no home city, and guessing New York
+  would be an invented fact. `e-loud-wutang` is a label edge where the
+  decision was to give up control (the members' freedom to sign solo
+  anywhere), and its source is RZA's own account, checked against where
+  the members' solo albums actually came out. Wu-Tang's `labels` entry
+  runs 1993 to 2001, 'Enter the Wu-Tang' to 'Iron Flag'.
+- **A229. `e-food-blur` claims the single, not the Englishness.** The
+  popular Britpop story has the label steering Blur toward English
+  guitar pop after the 1992 American tour. The album's own history says
+  the opposite: David Balfe argued against Albarn's English turn and
+  relented only warily. What Food did do, documented, is reject the
+  finished 'Modern Life Is Rubbish' in December 1992 and demand singles,
+  which is how 'For Tomorrow' came to be written on Christmas Day. The
+  edge claims only that. Blur's `labels` entry runs 1990 ('She's So
+  High', a Food single) to 2000, when EMI folded Food into Parlophone.
+  **Atlantic was planned for this batch and dropped.** The obvious
+  Atlantic edge, into Led Zeppelin, fails A69: the debut was recorded
+  before any deal, paid for by Page and Peter Grant, and that
+  self-funding is what kept a label out of the music. The band's
+  control was never Atlantic's decision to give. Atlantic's real causal
+  story on this map is Stax's 1968 catalogue loss, which
+  `e-stax-isaachayes` already carries from the other side.
+- **A230. `island` sits in the dub lane and `e-island-slyrobbie` is its
+  only edge.** Island released British rock as much as Jamaican music,
+  but its origin, its founder's role and its one edge on this map are
+  all Kingston's, so `dub` is its home lineage. `city` is London, where
+  it operated from 1962; the Jamaican founding is in `ownershipStory`.
+  Sly and Robbie's `labels` field stays empty: Wikipedia says they
+  signed to Island "in the 1970s" without a year, and the end of the
+  relationship is unsourced, so a `{ from, to }` entry would invent two
+  dates. The track pair's earlier side is Black Uhuru's 'General
+  Penitentiary' ('Showcase', 1979) rather than 'Shine Eye Gal', which
+  MusicBrainz cannot date before 1980. Serge Gainsbourg was cut from the
+  adult text's list of what Compass Point led to, since his first Sly
+  and Robbie record was made in Kingston in 1979, before it.
+- **A231. Elektra replaces ABKCO as the batch's fourth label, and
+  `e-elektra-mfdoom` sits at consensus.** ABKCO into The Verve was the
+  first replacement for Atlantic, and was dropped before writing: its
+  leverage over 'Bitter Sweet Symphony' came from publishing (Decca
+  owned the master), and it changed credits and royalties rather than
+  the music, which is not an A69 claim. Elektra's cancellation of KMD's
+  'Black Bastards' in 1994 is documented (catalogue number assigned,
+  promos and a single out, then pulled). The reason is only "reportedly"
+  the cover, and the edge says so. The causal step from the cancellation
+  to the masked MF DOOM persona rests on Dumile's interviews and on
+  critics, which is consensus, not documented. 'Peachfuzz' is dated 1990,
+  the single, per MusicBrainz, not 1991 for 'Mr. Hood'. `city` is New
+  York, where Elektra ran through its folk and rock years; it was started
+  in Holzman's college dorm room. MF DOOM's `labels` entry runs 1990 to
+  1994. `lineage` is `rock` for the Doors and the Stooges, which makes
+  the edge cross-lineage.

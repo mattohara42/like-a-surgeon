@@ -9,7 +9,13 @@
   "originCity": "London",
   "originCountry": "UK",
   "scenes": ["britpop"],
-  "labels": [],
+  "labels": [
+    {
+      "labelId": "food-records",
+      "from": 1990,
+      "to": 2000
+    }
+  ],
   "keyProducers": [],
   "hook": "Took Ray Davies' observational English songwriting and rebuilt it for a country arguing about Britpop and class in the 1990s.",
   "blurb": {

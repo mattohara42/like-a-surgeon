@@ -164,7 +164,12 @@ closed with an edge into Michael Jackson (Berry Gordy reassigning
 added `stax` and the `memphis-stax` scene, splitting one history (the
 label's 1968 catalogue crisis, and the in-house writing system that
 predates and outlasts it) across a label edge into Isaac Hayes and a
-scene edge into The Charmels. `npm run report` has the current
+scene edge into The Charmels. A four-label batch then met the M1
+label target (30): Loud (Wu-Tang's solo-freedom deal), Food (sending
+Blur's second album back for a single), Island (the Compass Point band
+built around Sly and Robbie) and Elektra (shelving KMD's 'Black
+Bastards'), each with one label edge into an artist already on the
+map. Atlantic was planned and dropped (A229). `npm run report` has the current
 distance on every remaining target.
 
 ## Definition of done for any milestone

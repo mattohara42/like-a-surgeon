@@ -1,0 +1,32 @@
+{
+  "id": "e-island-slyrobbie",
+  "from": "island",
+  "to": "sly-and-robbie",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1980,
+  "crossLineage": false,
+  "evidence": "In 1980 Chris Blackwell assembled a resident band at Island's Compass Point Studios in Nassau, built around Sly Dunbar and Robbie Shakespeare, with Wally Badarou, Barry Reynolds, Mikey Chung and Sticky Thompson, and Alex Sadkin engineering and co-producing. Blackwell has described what he was after as a Jamaican rhythm section with a harsh, modern sound. The band, later called the Compass Point All Stars, backed Grace Jones's 'Warm Leatherette' (Island, May 1980), a deliberate break from her three disco albums, then 'Nightclubbing' (1981) and Joe Cocker's 'Sheffield Steel' (1982). Sly and Robbie's later Compass Point work includes Mick Jagger's 'She's the Boss' and their own 'Language Barrier' (1985), which began as an attempt at an All Stars album.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Black Uhuru",
+      "title": "General Penitentiary",
+      "year": 1979
+    },
+    "later": {
+      "artist": "Grace Jones",
+      "title": "Private Life",
+      "year": 1980
+    },
+    "whatToListenFor": "'General Penitentiary' is Sly and Robbie at home: a Kingston roots record for Kingston listeners, with a heavy, rolling bass line and a hard, steady drum pattern under Black Uhuru's close harmonies. A year later the same drummer and bassist are playing under a Pretenders song, sung coolly by a former disco star, with synthesizer and rock guitar around them. The rhythm is still recognisably theirs. What changed is who they were playing for, and that was Blackwell's decision."
+  },
+  "explanation": {
+    "age7": "The boss of Island Records built a studio on a sunny island and asked Sly and Robbie, a Jamaican drummer and bass player, to be its band. Then they played on records by pop and rock singers from all over the world.",
+    "age13": "In 1980 Chris Blackwell, who ran Island Records, put together a house band at his studio in the Bahamas, with Sly Dunbar on drums and Robbie Shakespeare on bass at its centre. Its first job was Grace Jones's album 'Warm Leatherette', which turned a disco singer into something new by putting reggae rhythm under new wave and rock songs. After that, Sly and Robbie were in demand far outside Jamaica.",
+    "adult": "A label edge where the label's founder acted as a casting director. Blackwell's choice to build Compass Point's sound on a Jamaican rhythm section is what moved Sly and Robbie from the busiest session players in Kingston to an international production resource, applied to new wave, rock and soul singers who had no connection to reggae. Later sessions such as Bob Dylan's 'Infidels' (1983) and their work with Bill Laswell drew on the reputation Compass Point built."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}
