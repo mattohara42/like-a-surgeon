@@ -10,19 +10,15 @@
 // label adds a lane with no code change.
 
 import { CONFIG } from '../config.js';
+import { lineageIds, lineageColor, lineageName } from './lineages.js';
 
-const LINEAGE_ORDER = Object.keys(CONFIG.colors.lineage);
 const UNGROUPED = 'ungrouped';
-
-function lineageColor(lineage) {
-  return CONFIG.colors.lineage[lineage] ?? CONFIG.colors.lineage.other;
-}
 
 function lineagePlan() {
   return {
-    lanes: LINEAGE_ORDER.map((lineage) => ({
+    lanes: lineageIds().map((lineage) => ({
       key: lineage,
-      title: lineage.toUpperCase(),
+      title: lineageName(lineage).toUpperCase(),
       color: lineageColor(lineage),
       groupId: null,
       titleAtContent: false,

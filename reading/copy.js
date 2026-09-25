@@ -111,15 +111,6 @@ export const KIND_LABELS = {
   label: 'Label',
 };
 
-export const LINEAGE_LABELS = {
-  rock: 'Rock',
-  electronic: 'Electronic',
-  hiphop: 'Hip-hop',
-  dub: 'Dub',
-  funk: 'Funk',
-  other: 'Other',
-};
-
 export const EDGE_TYPE_LABELS = {
   direct: 'Direct influence',
   production: 'Production',

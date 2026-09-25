@@ -2023,3 +2023,60 @@ small and worth having in front of Matt alongside everything else here.
   real key, if this direction is ported, is Matt's to name alongside
   the rest of `CONFIG.layers`/`CONFIG.arrange`'s keys, not inherited
   from here.
+
+## Lineages moved into the data
+
+- **A221. Lineages are records in `data/lineages/`, not a list in code.**
+  Matt asked for this in chat (2026-09-25) after a scope conversation
+  about adding jazz and blues and about letting others run the concept
+  against their own taste. The list had been copied into four places
+  (`tools/validate.js`, `CONFIG.colors.lineage`, `reading/copy.js`'s
+  `LINEAGE_LABELS`, and `data/SCHEMA.md`), so adding a lineage meant
+  editing three files, which CLAUDE.md's scope rule says is the
+  architecture being wrong. Each record now holds `id`, `name`, `color`
+  and `order`, and `render/lineages.js` is the one place the app asks.
+- **A222. A lineage's colour lives on its record, not in `CONFIG`.** This
+  bends the "all tuning values in `CONFIG`" rule on purpose. A lane's
+  colour is part of what the lineage is, the same way a scene's
+  `palette` already lives on the scene record, and keeping it in
+  `CONFIG` would make a new lineage a two-file change again. `CONFIG`
+  keeps one `colors.lineageFallback` for a node whose lineage has no
+  record.
+- **A223. `order` is spaced in tens** (rock 10 through funk 50, `other`
+  at 90) so a lane can go between two others without renumbering. Lane
+  order and colours are unchanged from before. The one visible change is
+  the lane title, which now uses the record's `name`, so HIPHOP reads
+  HIP-HOP.
+
+## Jazz and blues as roots lanes
+
+- **A224. Jazz and blues are ordinary lineages placed below funk as
+  roots lanes** (jazz at order 60, blues at 70, `other` stays last at
+  90). Matt approved this in chat (2026-09-25), and said the 1950 start
+  is a soft default and the map should aim for depth over completeness.
+  "Roots" is a position, not a new field: nothing in the schema marks a
+  lineage as roots, since nothing yet needs to read that. The rule for
+  filling them follows the depth decision. A jazz or blues record joins
+  the map when a documented connection reaches something already on it,
+  the same test the Q21 sample hubs already met. That rule is why Bob
+  James and Ahmad Jamal were here before these lanes existed.
+- **A225. What moved.** The six jazz players filed `other` under A135 and
+  A199 (Ahmad Jamal, Billy Cobham, Bob James, Ronnie Foster, Tom Scott,
+  Stan Getz and Luiz Bonfá) are now `jazz`. Chess Records, filed `funk`
+  under A212 only because there was no blues bucket, is now `blues`.
+  Every edge touching these seven was already cross-lineage and still
+  is, so no `crossLineage` flag changed. Three adult blurbs (Jamal,
+  Cobham, Getz and Bonfá) said jazz was a deferred lineage; that one
+  sentence in each now says it is a roots lane. No other prose changed.
+  Sade, Gilbert O'Sullivan and the Incredible Bongo Band stay `other`,
+  and Motown and Stax stay `funk`, since neither new lane fits them. The
+  tape and radiophonic pioneers are Q23.
+- **A226. Colours.** Jazz is rose (`#ff86c8`) and blues is lime
+  (`#b4e05a`). Both sit in hue gaps the existing six leave open. Blue
+  would have been the obvious colour for blues, but it collides with
+  electronic. First-pass choices, one line each to change.
+- **A227. The blues lane holds only Chess for now,** and Chess is a
+  label marker, so the lane only appears when the Labels layer is on
+  (`dropEmptyLanes`). The first blues artists (Muddy Waters is the
+  obvious one, already named in `e-chess-stones`) are a data batch, not
+  part of this change.

@@ -266,7 +266,7 @@ export function setNodeHovered(g, hovered, scale) {
     ring.setAttribute('stroke-opacity', '0.9');
   } else {
     const isMachine = g.classList.contains('node-machine');
-    ring.setAttribute('stroke', ring.dataset.baseStroke ?? CONFIG.colors.lineage.other);
+    ring.setAttribute('stroke', ring.dataset.baseStroke ?? CONFIG.colors.lineageFallback);
     ring.setAttribute('stroke-width', String(0.9 / scale));
     ring.setAttribute('stroke-opacity', isMachine ? '0.55' : '0.38');
   }
