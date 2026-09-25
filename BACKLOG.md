@@ -445,6 +445,11 @@ fixing them inline.)
   Tommy Boy its label edge along with the Turtles suit (`e-tommyboy-delasoul`).
   Big Daddy Kane and the rest of the Juice Crew, and the West Coast, are
   still waiting.
+  **Further closed:** the West Coast landed with George Clinton and
+  Dr. Dre (A204-A205). Big Daddy Kane is now on the map with a
+  consensus-tier direct edge into Nas (`e-kane-nas`); the rest of the
+  Juice Crew (Kool G Rap, Roxanne Shanté, MC Shan, Craig G) is still
+  waiting.
 - The batch added two more null end years of the "could not find it"
   kind that Q20 is about: `akai-mpc60` and `akai-mpc3000`. Both will read
   as still on sale until Q20 is answered.
