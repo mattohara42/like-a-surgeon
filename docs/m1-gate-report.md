@@ -8,13 +8,13 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 108 | 120 | 90% |
+| artists | 109 | 120 | 91% |
 | machines | 31 | 25 | met |
 | scenes | 10 | 20 | 50% |
-| labels | 21 | 30 | 70% |
-| edges | 180 | 350 | 51% |
+| labels | 22 | 30 | 73% |
+| edges | 182 | 350 | 52% |
 | threads | 2 | 5 | 40% |
-| crossLineageEdges | 72 | 60 | met |
+| crossLineageEdges | 73 | 60 | met |
 | edgesWithDemo | 5 | 30 | 17% |
 
 ## Counts by lineage
@@ -24,8 +24,8 @@ Every node type, since machines, scenes and labels carry a lineage too.
 | lineage | count |
 |---|---:|
 | electronic | 43 |
-| hiphop | 40 |
-| other | 28 |
+| hiphop | 41 |
+| other | 29 |
 | rock | 27 |
 | dub | 17 |
 | funk | 15 |
@@ -37,8 +37,8 @@ Artists alone:
 | hiphop | 35 |
 | electronic | 20 |
 | rock | 18 |
+| other | 13 |
 | funk | 12 |
-| other | 12 |
 | dub | 11 |
 
 ## Counts by edge type
@@ -48,8 +48,8 @@ Artists alone:
 | technological | 45 |
 | direct | 43 |
 | production | 25 |
-| sample | 24 |
-| label | 21 |
+| sample | 25 |
+| label | 22 |
 | scene | 18 |
 | reaction-against | 2 |
 | cover | 1 |
@@ -59,7 +59,7 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 121 |
+| documented | 123 |
 | consensus | 58 |
 | asserted | 1 |
 
@@ -233,21 +233,21 @@ Evidence: Sly and Robbie came up in the same 1970s Kingston studio scene as King
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 179 edges that carry one.
+Drawn with seed 1 from the 181 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-tubby-gangoffour`
+### 1. `e-dmx-rundmc`
 
-King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Gang of Four, "Damaged Goods" (1978)
+Orange Krush, "Action" (1982) to Run-D.M.C., "Sucker M.C.'s" (1983)
 
-Listen to how much of "Damaged Goods" is empty: guitar stabs land in the gaps a dub mixer would leave for echo. Gang of Four never actually uses a dub production style, but the structural habit, thin out everything except bass and rhythm, is the same one Tubby's records established.
+On 'Action' the beat is played by a drummer inside a band, with bass, keys and a singer around it. On 'Sucker M.C.'s' the same pattern comes back out of a drum machine and everything else is gone. There is no bassline and no melody. Listen for how much reverb sits on the snare, so each hit booms out into the empty space, and for the two voices passing lines back and forth where a band used to be. The emptiness is the arrangement.
 
-### 2. `e-dubplate-tubby`
+### 2. `e-bowie-kraftwerk`
 
-Jamaican sound systems, "one-off acetates cut as exclusives" (1950) to King Tubby, "dub mixes cut for named sound systems" (1972)
+Kraftwerk, "Autobahn" (1974) to David Bowie, "V-2 Schneider" (1977)
 
-Listen for who the record is talking to. A sound system's name gets shouted over the top of the mix, or the singer greets a crew by name, and you realise the record is not addressed to you or to a radio audience. It was made for one crowd in one yard on one night, on a disc that would be worn out within a few months.
+Bowie's track doesn't sound much like "Autobahn" on the surface, it's built around a saxophone line, not synth arpeggios. The tribute is in the title and in both productions' shared interest in cold, motorik repetition underneath.
 
 ### 3. `e-rubin-rundmc`
 
@@ -255,53 +255,53 @@ Aerosmith, "Walk This Way" (1975) to Run-D.M.C., "Walk This Way (with Aerosmith)
 
 Start with the first seconds of each. Aerosmith's opens on a drummer's short, dry break, then the guitar riff. Run-D.M.C.'s opens on that same break, then Jam Master Jay cutting the guitar riff back and forth on a turntable, the way a DJ had been using the record at parties for years. Then the real guitar and Steven Tyler's voice arrive and sit next to the rapping. You are hearing a rock record the way hip-hop had always used it, as material, before its band walks in and joins.
 
-### 4. `e-rubin-beastieboys`
+### 4. `e-perry-madprofessor`
 
-LL Cool J, "I Can't Live Without My Radio" (1985) to Beastie Boys, "No Sleep till Brooklyn" (1986)
+Lee "Scratch" Perry, "Black Ark productions" (1976) to Lee "Scratch" Perry & Mad Professor, "Ariwa studio collaborations" (1987)
 
-Same producer, a year apart. On LL's record Rubin cut everything down to a booming drum machine and a voice. On 'No Sleep till Brooklyn' he keeps the booming drums and adds the other thing he loved: heavy metal guitar, riffs he played himself and a solo from Slayer's Kerry King. Listen for the moment the solo tears through. Rap and metal on one track, from a producer making Slayer's album in the same period.
+Perry's original records are raw and cluttered on purpose. The Ariwa collaborations are cleaner and more controlled, Mad Professor's studio discipline audibly reining in Perry's chaos without erasing it.
 
-### 5. `e-re201-tubby`
+### 5. `e-robinson-mellemel`
 
-Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to King Tubby, "Dub from the Roots" (1974)
+Sylvia Robinson, "Pillow Talk" (1973) to Grandmaster Flash and the Furious Five, "The Message" (1982)
 
-Compare the echo here with Perry's. Tubby's repeats are cleaner and more rhythmic, placed so they land where a drum would have landed, so the delay becomes part of the pattern rather than a haze over it. Same kind of box, opposite instinct: Perry lets it flood, Tubby uses it to keep time.
+Listen to the tempo and then imagine a dancefloor. It does not work, and the group knew it did not work, which is why they did not want it. What the record buys with that refusal is room: at this speed a voice has time to finish a thought. Nearly everything rap does with slow tempo afterwards depends on somebody proving a slow rap record could sell.
 
-### 6. `e-pistols-pil`
+### 6. `e-teac-perry`
+
+TEAC, "A-3340 four-track recorder" (1972) to Junior Murvin, "Police and Thieves" (1976)
+
+Listen to the rhythm under Murvin's high voice. It is dense and slightly blurred, as if heard through gauze. Drums, percussion and guitar melt into one texture instead of standing apart. Each time Perry combined finished parts onto one track to make room for more, another layer of hiss and softness went on. The haze is what four tracks cost, spent on purpose.
+
+### 7. `e-pistols-pil`
 
 Sex Pistols, "Anarchy in the U.K." (1976) to Public Image Ltd, "Public Image" (1978)
 
 Same singer, opposite record. "Anarchy" is a three-chord shout. "Public Image" opens with a huge, un-punk guitar chime, and Lydon sings about his own manufactured persona rather than trying to provoke the audience.
 
-### 7. `e-stockhausen-beatles`
+### 8. `e-minimoog-kraftwerk`
 
-Karlheinz Stockhausen, "Hymnen" (1967) to The Beatles, "Revolution 9" (1968)
+Moog Music, "Minimoog Model D" (1970) to Kraftwerk, "Autobahn" (1974)
 
-Both pieces are made of fragments that arrive, overlap and vanish: radio noise, snatches of orchestral music, voices. In 'Revolution 9' listen for the loop of a voice repeating 'number nine', the crowd noise, the reversed tape and the stretches where several unrelated recordings play at once. That layering of found sound, with no beat and no tune to hold it together, is the Cologne studio's method in the middle of the best-selling band in the world.
+Listen to the bass and try to find a player in it. There is no fret noise, no finger on a string, no note arriving a fraction late because a hand had to move. Every note has the same attack as the one before. That evenness is not a limitation being worked around, it is the subject: a record about driving, played by something that does not get tired.
 
-### 8. `e-eps16-rza`
+### 9. `e-princepaul-delasoul`
 
-Ensoniq, "EPS-16 Plus, sixteen-bit keyboard sampler" (1990) to Wu-Tang Clan, "C.R.E.A.M." (1993)
+Prince Paul, "DJing for Stetsasonic" (1988) to De La Soul, "3 Feet High and Rising" (1989)
 
-Listen to the length of the loop. The piano phrase in 'C.R.E.A.M.' runs for bars, a whole musical sentence repeating, which the SP-1200's ten seconds made hard. The sound is also cleaner at the top, without the SP's crunch, though RZA kept it dusty and dark. That's the machine allowing the long, sad phrase to become the song's whole mood.
+Stetsasonic's own records are dense but conventional boom-bap. On De La Soul's album the same production instincts turn playful and collage-like: skits, game-show samples and non-sequitur interludes across a much wider, weirder crate of source records than Paul had used behind Stetsasonic's own mic.
 
-### 9. `e-osullivan-bizmarkie`
+### 10. `e-sp1200-peterock`
 
-Gilbert O'Sullivan, "Alone Again (Naturally)" (1972) to Biz Markie, "Alone Again" (1991)
+E-mu Systems, "SP-1200, ten seconds of sampling time" (1987) to Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992)
 
-Listen to O'Sullivan's piano, then to Biz's loop of it. It's only a few bars, repeated, and still instantly recognisable. That's the whole case in one sound: a sample carries its author with it. The Cold Chillin' edge covers the label's decision, and this edge is the sound that decision was about.
+Listen for the grain of the SP-1200's twelve-bit sound on the drums, a slight crunch on the snare and hi-hats. Then listen to the bass: it sounds rounded and dark, as if the top has been cut off. Cutting the top end is how producers of the period pulled a bassline out of a full record, and Pete Rock is one of the best known for it. The short memory still sets the structure: one horn phrase, over and over, with changes made by dropping parts in and out.
 
-### 10. `e-marleymarl-bizmarkie`
+### 11. `e-808-mantronix`
 
-MC Shan, "The Bridge (produced by Marley Marl)" (1986) to Biz Markie, "Make the Music with Your Mouth, Biz" (1986)
+Roland, "TR-808 factory voices" (1980) to Mantronix, "Fresh Is the Word" (1985)
 
-Both records are Marley Marl building on sampled drums in the same year. The difference on the Biz record is that one of the instruments is a person. Listen for the beatboxing: kicks, snares and hisses made with Biz's mouth, sitting alongside the drums Marl has pulled off records. Try to hear where the machine stops and the mouth starts. Part of the joke of the track is that it is sometimes hard to tell.
-
-### 11. `e-stones-verve`
-
-The Rolling Stones, "The Last Time" (1965) to The Verve, "Bitter Sweet Symphony" (1997)
-
-Start with the Stones' 'The Last Time': a jangly guitar riff and a pop song. Then play 'Bitter Sweet Symphony'. The loop isn't from the Stones' record at all but from an orchestral version made by their former manager, a few bars of strings repeating. Listen for the Stones' tune hidden inside the strings. That hidden tune cost the Verve the song for twenty years.
+The 808 carries almost the entire track: a hard, dry kick-and-hi-hat pattern with almost no live instrumentation layered over it, an early example of hip-hop production built to sound like a machine rather than to disguise one.
 
 ### 12. `e-bootsycollins-parliamentfunkadelic`
 
@@ -309,50 +309,50 @@ The J.B.'s, "The Grunt" (1970) to Parliament, "Up for the Down Stroke" (1974)
 
 'The Grunt' is a J.B.'s instrumental built around a tight, repeating bass figure with almost no ornamentation. 'Up for the Down Stroke', four years and one J.B.'s walkout later, keeps that same repeating-figure discipline but stretches it, adds Bernie Worrell's synthesizer, and lets Collins's bass talk back to the vocals instead of just holding time.
 
-### 13. `e-hardy-phuture`
+### 13. `e-warp-autechre`
+
+Autechre, "Crystel" (1992) to Autechre, "Bike" (1993)
+
+'Crystel' is a clean electro beat with a soft, sad melody over it, still close to the dance floor. 'Bike', from Incunabula, slows everything down. The beat is still electro, but the melody takes over, and the track drifts for minutes without heading anywhere a DJ would want. Listen for the drum programming, which is tidy, deliberate and a little stiff, like the cassette edits the pair made copying Mantronix as teenagers, and for how little the track cares about being danced to.
+
+### 14. `e-hardy-phuture`
 
 Ron Hardy, "Music Box DJ sets" (1986) to Phuture, "Acid Tracks" (1987)
 
 'Acid Tracks' was reportedly played at the Music Box on cassette for months before release; Hardy's sets are part of why a twelve-minute record built from one squelching filter sweep had an audience ready for it.
 
-### 14. `e-premier-nas`
+### 15. `e-may-knuckles`
 
-Gang Starr, "Mass Appeal" (1994) to Nas, "N.Y. State of Mind" (1994)
+Derrick May, "Detroit, working on a pair of TR-909s" (1983) to Frankie Knuckles, "Warehouse and Power Plant DJ sets" (1984)
 
-Premier made both in the same year, and his hands are audible in both: short, hard, tightly trimmed drums, and a small fragment looped until it becomes a mood. On 'Mass Appeal' the fragment is a thin, repeating figure that sounds almost like elevator music, a joke that fits a song mocking rap made for the charts. On 'N.Y. State of Mind' it's a dark, minor-key piano figure sitting low under the drums. Same method, opposite weather.
+Listen to a Detroit record and a Chicago record from the same couple of years and find the shared object. Same kick, same ringing open hi-hat, one machine's voice in two cities. What differs is the instinct: Detroit leaves space around the machine and lets it sound like a machine, Chicago buries it under a soul vocal and a piano and asks it to carry a party.
 
-### 15. `e-tubby-pil`
+### 16. `e-herc-bambaataa`
 
-King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Public Image Ltd, "Careering" (1979)
+DJ Kool Herc, "park jams and rec-room parties, the merry-go-round" (1973) to Afrika Bambaataa, "Zulu Nation park jams" (1977)
 
-Both records put the bass where you would expect the voice and leave large holes elsewhere. In the Tubby track, instruments vanish and reappear. In the PiL track they never arrive in the first place. Same architecture, opposite method.
+The format is inherited and the record selection is not. Both are playing breaks to a park, but Herc's crates are funk and soul, and Bambaataa's take the same logic somewhere deliberately strange: a rock record, a TV theme, a German electronic album. Listen for how little the technique has to change to absorb material that sounds nothing like the last thing.
 
-### 16. `e-rubin-llcoolj`
+### 17. `e-kinks-blur`
 
-T La Rock and Jazzy Jay, "It's Yours" (1984) to LL Cool J, "I Can't Live Without My Radio" (1985)
+The Kinks, "Waterloo Sunset" (1967) to Blur, "Parklife" (1994)
 
-Listen for what is missing on both. 'It's Yours', the first rap record Rubin made, is built around a drum machine and a DJ's scratches. A year later 'I Can't Live Without My Radio' pushes the same idea further: the kick drum is enormous and nothing competes with it. There is almost no melody, only the drum machine, LL's voice and scratches dropped in between lines. That is what the album credit 'reduced by Rick Rubin' means in sound.
+Both zoom in on one small, specific English scene (a couple crossing a bridge; a man walking his dog in a park) rather than making a generalized statement, and both use a talky, almost-spoken vocal delivery over a fairly simple melody.
 
-### 17. `e-moog-tangerinedream`
+### 18. `e-cobham-soulsofmischief`
 
-R. A. Moog Co., "Moog modular synthesizer with 960 sequencer" (1965) to Tangerine Dream, "Phaedra" (1974)
+Billy Cobham, "Heather" (1974) to Souls of Mischief, "93 'til Infinity" (1993)
 
-Wait for the pulse. A short row of bass notes repeats, bubbling, while its brightness slowly opens and closes as someone turns a filter knob. Nobody is playing those notes. The sequencer is. The musicians play over it: drifting Mellotron, echoing synth lines. Listen for the loop slightly changing pitch and tone over minutes, which is the hand on the knob, and for how long it keeps going without ever settling into a song.
+Start with 'Heather': slow, almost drifting, a lazy bassline and a marimba floating over it. Then play '93 'til Infinity'. A-Plus sped up that bassline and marimba so they bounce instead of float, put his own drums under them, and brought the horns in from the same record. Listen for how the same notes change mood with speed alone, from a daydream to a head-nod.
 
-### 18. `e-808-mantronix`
+### 19. `e-tubby-gangoffour`
 
-Roland, "TR-808 factory voices" (1980) to Mantronix, "Fresh Is the Word" (1985)
+King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Gang of Four, "Damaged Goods" (1978)
 
-The 808 carries almost the entire track: a hard, dry kick-and-hi-hat pattern with almost no live instrumentation layered over it, an early example of hip-hop production built to sound like a machine rather than to disguise one.
+Listen to how much of "Damaged Goods" is empty: guitar stabs land in the gaps a dub mixer would leave for echo. Gang of Four never actually uses a dub production style, but the structural habit, thin out everything except bass and rhythm, is the same one Tubby's records established.
 
-### 19. `e-kingston-bronx`
+### 20. `e-herc-flash`
 
-Kingston sound systems, "street dances and sound clashes" (1968) to DJ Kool Herc, "the back-to-school jam at 1520 Sedgwick Avenue" (1973)
+DJ Kool Herc, "park jams and rec-room parties, the merry-go-round" (1973) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
 
-Listen for what crossed and what did not. The shape is the same in both places: a crowd outdoors, one person choosing records, another one talking over them, a system loud enough to be the event itself. The records are not the same at all. Put on what a Kingston sound was playing in 1970 and what Herc was playing in 1973 and they share almost nothing, because Bronx crowds would not take reggae and he switched to funk and soul. The method travelled. The music did not.
-
-### 20. `e-mirage-may`
-
-Michael James, "a piano piece played at Derrick May's house" (null) to Rhythim Is Rhythim, "Strings of Life" (1987)
-
-The strings are not strings and the piano is not really a piano. Both are a couple of seconds of recorded sound being retriggered from a keyboard, which is why the chords all cut off at the same instant instead of decaying the way a real instrument would. Listen for the edges of those cuts. The record is exhilarating partly because it is so obviously assembled.
+Listen for precision, because that is the whole difference. Herc's idea is that the break repeats. Flash's contribution is that the repeat lands exactly where the next bar would have started, so the loop is seamless and you stop noticing there are two records. On 'Wheels of Steel' the joins are so tight that the record sounds composed rather than performed, which is the point Flash was chasing.

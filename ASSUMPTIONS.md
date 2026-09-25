@@ -1691,3 +1691,34 @@ are named in each record's own `evidence` field rather than repeated here.
   `ownershipStory` already named De La Soul in prose before this batch,
   so nothing about the relationship was previously undocumented, only
   ungraphed.
+- **A198. `stones-throw` added as a label whose causal edge targets MF DOOM,
+  not Madlib, for the Madvillain pairing.** Founder Chris Manak's own
+  account (a Complex interview marking Madvillainy's 20th anniversary,
+  corroborated elsewhere) describes a specific mechanism: he called
+  Dumile to propose the collaboration with his own already-signed artist
+  Madlib, then hosted the sessions at his house. The label's decision
+  landed on DOOM's side of the pairing, so `e-stonesthrow-mfdoom` runs
+  label to DOOM under the A69 convention, with DOOM's self-produced
+  'Doomsday' (1999) and Madvillain's 'Accordion' (2004) as the trackPair
+  showing the audible change. Madlib's own `labels` field is left
+  untouched; he is a career-long Stones Throw artist across many records,
+  not one this specific documented decision reshaped.
+- **A199. Stan Getz and Luiz Bonfá are filed as one joint artist node,
+  `stan-getz-luiz-bonfa`, not two.** Their 1963 album 'Jazz Samba
+  Encore!' is co-billed on every pressing checked (Discogs: "Stan Getz /
+  Luiz Bonfá"), and the node exists on this map only for that one
+  session's sample into J Dilla's 'Runnin'' (The Pharcyde, 1995), the
+  same minimal sample-hub pattern Bob James and Ahmad Jamal already
+  established (Q21) rather than a claim about either musician's much
+  larger individual career. `activeFrom` and `activeTo` are both set to
+  1963, the one year this node represents. Jazz remains a deferred
+  lineage (BACKLOG); this is a sample-hub exception, not the start of
+  covering it.
+- **A200. Neither `mf-doom.json` nor `j-dilla.json` had a `stones-throw`
+  entry added to their `labels` array.** Following A197's precedent
+  rather than the older `biz-markie.json`/`cold-chillin` pattern: the
+  causal claim lives in the edge, and a closed `{ from, to }` date range
+  on the artist record would add a fact the edge doesn't need: DOOM and
+  Dilla each have exactly one dated Stones Throw record on this map
+  (Madvillainy, Donuts), which the edge's own `year` field already
+  carries.

@@ -1,0 +1,31 @@
+{
+  "id": "e-getzbonfa-dilla",
+  "from": "stan-getz-luiz-bonfa",
+  "to": "j-dilla",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1995,
+  "crossLineage": true,
+  "evidence": "The Pharcyde's 'Runnin'' (from 'Labcabincalifornia', 1995), produced by Jay Dee (J Dilla), samples the guitar and flute figure from Stan Getz and Luiz Bonfá's 'Saudade Vem Correndo' (from 'Jazz Samba Encore!', Verve, 1963), as documented on sample-database entries and standard accounts of the track. It was one of Dilla's first productions to reach an audience outside Detroit.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Stan Getz and Luiz Bonfá",
+      "title": "Saudade Vem Correndo",
+      "year": 1963
+    },
+    "later": {
+      "artist": "The Pharcyde",
+      "title": "Runnin'",
+      "year": 1995
+    },
+    "whatToListenFor": "The bossa nova original moves in a steady, unhurried sway, guitar and flute trading a bright, circling phrase. Dilla chops that phrase down to a few notes and loops it tight against a harder, dustier drum break, so the same figure that once drifted now insists. Listen for how little of the original he needed to take before it was recognisably his."
+  },
+  "explanation": {
+    "age7": "A song called 'Runnin'' by The Pharcyde uses a small piece of an old jazz record from Brazil, chopped up and looped by the producer J Dilla.",
+    "age13": "Stan Getz and Luiz Bonfá recorded 'Saudade Vem Correndo' in 1963, blending American jazz with Brazilian bossa nova. More than thirty years later, a young Detroit producer working as Jay Dee, later known as J Dilla, looped a few seconds of its guitar and flute for The Pharcyde's 'Runnin'', one of his earliest productions to be heard beyond Detroit.",
+    "adult": "A clear single-source sample lineage, acknowledged on both sides and disputed by neither: one 1963 bossa nova session, one 1995 rap record, the sample itself doing the identifying work."
+  },
+  "tags": [
+    "production"
+  ]
+}

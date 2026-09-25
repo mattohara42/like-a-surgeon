@@ -148,6 +148,20 @@ correct response to a good idea arriving mid-milestone.
 (Claude Code: record code smells and architectural concerns here rather than
 fixing them inline.)
 
+- `j-dilla.json`'s adult text states "Donuts was mostly made in hospital" as
+  plain fact. Researching the new `stones-throw` label for this batch turned
+  up Dan Charnas's biography 'Dilla Time' (2022, built on nearly 200
+  interviews), which argues that account is largely myth: the album began
+  as a shorter beat tape made at home, and Stones Throw's own art director,
+  Jeff Jank, expanded and sequenced it into the released 31-track record.
+  Charnas reports Stones Throw didn't correct the hospital story at the time
+  because it helped sales, and founder Chris Manak has since corrected it
+  himself in interviews. This is exactly the CLAUDE.md rule 4 case (a
+  widely repeated popular-history claim that turns out to be disputed), but
+  no edge in this batch touches Dilla's own record directly enough to carry
+  the correction, so it's left as a data fix for the next Dilla-adjacent
+  batch rather than edited inline here.
+
 - Node labels are placed so they never overlap each other (A100), but they
   can still run under a neighbouring node's marker: each node's group
   paints its own label, and a later node paints over it. "Bunny 'Striker'
