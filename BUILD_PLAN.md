@@ -141,9 +141,12 @@ blurbs, plus Stan Getz and Luiz Bonfá as a sample hub into J Dilla's
 'Runnin''. An overnight run then closed out the last Q21 sample-hub
 waits (Michael Jackson, Joni Mitchell and Janet Jackson), gave the Amen
 break its jungle crossing (Shy FX), closed the G-funk gap (George
-Clinton solo and Dr. Dre), and authored `britpop`, the scene target's
-first new entry in several batches. `npm run report` has the current
-distance on every target.
+Clinton solo and Dr. Dre), and authored two new scenes, `britpop` and
+`cologne-krautrock`, the latter deliberately kept separate from
+`dusseldorf-kling-klang` despite both sitting under the "krautrock"
+umbrella, since their institutional roots (a state broadcaster's studio
+against a band's private one) are genuinely different stories. `npm run
+report` has the current distance on every target.
 
 ## Definition of done for any milestone
 
