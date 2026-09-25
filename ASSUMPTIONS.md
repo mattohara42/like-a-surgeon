@@ -1813,3 +1813,15 @@ are named in each record's own `evidence` field rather than repeated here.
   Düsseldorf acts (Kraftwerk, Neu!) already covered by that scene's own
   edges, not to Can, so inventing a causal claim between his studio and
   Cologne specifically would have overstated what's sourced.
+- **A208. `enjoy-records`'s A69 claim is a distribution limitation, not a
+  creative or contractual decision like the label edges before it.**
+  Robinson's judgment on Grandmaster Flash and the Furious Five was
+  sound; Enjoy simply had no machinery to sell 'Superrappin'' outside
+  New York, which is what moved the group to Sugar Hill within the year.
+  `closedYear` is `null` with `endUnknown: true` (Q20) rather than a
+  guessed date, since Robinson stayed active into the mid-1980s but no
+  source checked gives the label's own closing year.
+  `grandmaster-flash.json`'s `labels` field is left empty rather than
+  populated, matching the more recent convention (A197, A200) even
+  though a closed `{ from: 1979, to: 1979 }` range would have been
+  defensible here.

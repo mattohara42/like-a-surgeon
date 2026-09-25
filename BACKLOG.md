@@ -402,6 +402,11 @@ fixing them inline.)
   **Half closed:** Cold Chillin' arrived with the hip-hop production
   batch, carried by the Biz Markie sampling case (A121). Enjoy Records is
   still waiting.
+  **Closed.** `enjoy-records` and `e-enjoy-flash` carry a different
+  shape of A69 claim than the label's other edges: not a creative
+  decision but a distribution limitation. Enjoy's inability to sell
+  'Superrappin'' outside New York is what moved Grandmaster Flash to
+  Sugar Hill within the year.
 - `duke-bootee` carries one `signatureTracks` entry against the schema's
   two to three. Rather than pad it with a record I could not verify, it
   stands at one and warns. His catalogue outside 'The Message' needs real
