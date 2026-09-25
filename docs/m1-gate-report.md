@@ -10,9 +10,9 @@ Regenerate with `npm run report`. This report describes the dataset only;
 |---|---:|---:|---|
 | artists | 120 | 120 | met |
 | machines | 31 | 25 | met |
-| scenes | 13 | 20 | 65% |
+| scenes | 14 | 20 | 70% |
 | labels | 24 | 30 | 80% |
-| edges | 196 | 350 | 56% |
+| edges | 197 | 350 | 56% |
 | threads | 2 | 5 | 40% |
 | crossLineageEdges | 79 | 60 | met |
 | edgesWithDemo | 5 | 30 | 17% |
@@ -23,8 +23,8 @@ Every node type, since machines, scenes and labels carry a lineage too.
 
 | lineage | count |
 |---|---:|
+| electronic | 47 |
 | hiphop | 47 |
-| electronic | 46 |
 | rock | 30 |
 | other | 29 |
 | funk | 19 |
@@ -50,7 +50,7 @@ Artists alone:
 | sample | 29 |
 | production | 28 |
 | label | 24 |
-| scene | 21 |
+| scene | 22 |
 | reaction-against | 2 |
 | cover | 1 |
 | rediscovery | 1 |
@@ -59,7 +59,7 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 135 |
+| documented | 136 |
 | consensus | 60 |
 | asserted | 1 |
 
@@ -233,126 +233,126 @@ Evidence: De La Soul has said they submitted full sample information for '3 Feet
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 195 edges that carry one.
+Drawn with seed 1 from the 196 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-marleymarl-koolgrap`
+### 1. `e-pil-joydivision`
 
-Kool G Rap and DJ Polo, "It's a Demo" (1986) to Kool G Rap and DJ Polo, "Road to the Riches" (1989)
+Public Image Ltd, "Public Image" (1978) to Joy Division, "Transmission" (1979)
 
-'It's a Demo', recorded in Marl's living room, is a rapper announcing his technical range: fast, dense, still finding its subject. Three years later, 'Road to the Riches' keeps the same rhyme density but points it at a specific story, an immigrant hustler's rise and fall, years before 'mafioso rap' had a name.
+Both push the bass into the lead role a guitar or vocal would normally hold, leaving space around it rather than filling every bar, even though the two basslines sound nothing alike.
 
-### 2. `e-808-marleymarl`
+### 2. `e-neu-bowie`
 
-Roland, "TR-808 snare, as synthesised" (1980) to Marley Marl, "The Bridge, produced for MC Shan" (1986)
+Neu!, "Hero" (1975) to David Bowie, ""Heroes"" (1977)
 
-Compare two snares. The 808's is a short burst of noise with a tuned ring under it, always identical, sitting cleanly in its own space. A snare lifted off a record brings the room with it: the drummer's touch, the tape compression, a trace of whatever else was playing at that instant. Listen for that smear of extra information. It is the sound of a recording rather than the sound of a circuit.
+'Hero' is fast and ragged: Dinger's motorik beat pounding under his own hoarse, shouting vocal. '"Heroes"' borrows the drive and slows the tempo. Listen for the same idea of a beat that doesn't change while everything above it builds. The drone of guitar feedback held for the whole song, the vocal climbing from calm to shouting, the steady drums never reacting. And the quotation marks in Bowie's title, which undercut the heroism, just as Dinger's voice does.
 
-### 3. `e-winstons-nwa`
+### 3. `e-elpico-kinks`
 
-The Winstons, "Amen, Brother" (1969) to N.W.A, "Straight Outta Compton" (1988)
+Dave Davies, "Elpico amplifier with a slashed speaker" (1964) to The Kinks, "You Really Got Me" (1964)
 
-Find the six seconds near the middle of 'Amen, Brother' where the band stops and Gregory Coleman plays alone. Listen for the last bars, where the snare shifts off its pattern and lands late. That hitch is what everyone recognises. Then hear it in 'Straight Outta Compton', looped hard under Ice Cube's opening verse. It has the same hitch in the snare, now with the urgency of the whole track riding on it.
+The riff is two chords, a step apart, played over and over. Listen to the edges of each chord rather than the notes: a papery rattle and crackle rides on top of it, loudest as each chord dies away. That is a torn speaker cone flapping. When the song lifts the riff higher, the grit comes along with it. Nothing in the chain was built to sound like that.
 
-### 4. `e-zeppelin-beastieboys`
+### 4. `e-sl1200-flash`
 
-Led Zeppelin, "When the Levee Breaks" (1971) to Beastie Boys, "Rhymin & Stealin" (1986)
+Technics, "SL-1200 as a domestic hi-fi turntable" (1972) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
 
-Listen to how huge Bonham's drums sound at the start of 'When the Levee Breaks': slow and heavy, with a long echo after every hit, because they were recorded at the bottom of a stairwell with microphones high above. Then hear that same beat looped under the Beastie Boys, even heavier and scratched up. The room around the drums comes along with them, which is why this beat sounds bigger than any drum machine.
+Listen for what never happens: the beat does not sag. The same few bars come round again and again dead in time, and in the gaps you can hear a record being hauled backwards and dropped back in exactly on the one. A belt-driven deck would lag on every restart and the whole thing would slide. Everything frantic on this record rests on the machine underneath it being rigid.
 
-### 5. `e-jamesbrown-bootsycollins`
+### 5. `e-re201-tubby`
 
-James Brown, "Sex Machine" (1970) to Bootsy's Rubber Band, "Bootzilla" (1978)
+Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to King Tubby, "Dub from the Roots" (1974)
 
-On 'Sex Machine', Collins is eighteen and playing inside Brown's discipline: the bass holds the groove down and stays out of the way. Eight years later on his own record, the same bass instinct has become the whole show, elastic, cartoonish and grinning, with a wah pedal doing to the tone what the J.B.'s taught him to do to the rhythm.
+Compare the echo here with Perry's. Tubby's repeats are cleaner and more rhythmic, placed so they land where a drum would have landed, so the delay becomes part of the pattern rather than a haze over it. Same kind of box, opposite instinct: Perry lets it flood, Tubby uses it to keep time.
 
-### 6. `e-jamesbrown-publicenemy`
+### 6. `e-flash-theodore`
 
-James Brown, "Funky Drummer" (1970) to Public Enemy, "Fight the Power" (1989)
+Grandmaster Flash, "quick-mix theory at Bronx jams" (1975) to Grand Wizzard Theodore, "the scratch" (1975)
 
-LL Cool J's producer used the break as a clean bed. The Bomb Squad buries it. Listen for Stubblefield's rolling hi-hat and snare somewhere underneath, then for everything piled on top: shouts, horn stabs, scratches and fragments from a dozen other records, all at once, rubbing against each other. It's a wall of sound built from other people's recordings, two years before a court ruling made that kind of record almost impossible to afford.
+Flash's technique is about making the join invisible: you should not hear the second record arrive. Theodore's does the opposite and makes the hand audible on purpose. Listen for that inversion, because it is the moment the turntable stops pretending to be a playback device and starts admitting it is being operated.
 
-### 7. `e-radiophonic-derbyshire`
+### 7. `e-sheffieldidm-aphextwin`
 
-BBC Radiophonic Workshop, "early radio sound work" (1958) to Delia Derbyshire, "Doctor Who theme" (1963)
+Aphex Twin, "Digeridoo" (1992) to Aphex Twin, "Xtal" (1992)
 
-Start with the bassline: a plucked string, recorded, then copied and cut so that every note is the same length and attack. Over it, the melody slides between notes, made from oscillators with the pitch swept by hand. There's no keyboard anywhere. Each note was a separate piece of tape, and the swoop you hear is someone turning a dial while the tape ran. Listen for how clean and mechanical the bass sounds next to how wild the tune is.
+'Digeridoo' is still built for a dancefloor's low end, a club record with a rave lineage. 'Xtal', on the same year's 'Selected Ambient Works 85-92' and the kind of track 'Artificial Intelligence' pointed to, floats without a beat built for dancing at all. The same year, two different destinations.
 
-### 8. `e-publicenemy-rza`
+### 8. `e-fairlight-planetrock`
 
-Public Enemy, "Bring the Noise" (1987) to Wu-Tang Clan, "Protect Ya Neck" (1992)
+Igor Stravinsky, "The Firebird, Infernal Dance" (1910) to Afrika Bambaataa & Soulsonic Force, "Planet Rock" (1982)
 
-'Bring the Noise' stacks dense layers of sirens, horn stabs and vocal snatches on top of each other, chaotic on purpose. 'Protect Ya Neck' takes the same cut-up instinct and strips it back to one or two grimy loops, murky and minimal rather than maximal, RZA's own turn on the same technique.
+In the Stravinsky, wait for the Infernal Dance to begin: the whole orchestra hits one chord together, loud and sudden. Now play 'Planet Rock' and listen for the short orchestral blast that punches in between the electronic beats. That is a single chord from a recording like the first one, cut short, pitched down and played from a keyboard. A century of concert music has become a drum hit.
 
-### 9. `e-tubby-atkins-resemblance`
-
-King Tubby, "various versions" (1976) to Juan Atkins, "No UFO's" (1985)
-
-Both treat the mixing desk as the instrument and the arrangement as something to be performed rather than fixed. This is a resemblance we are pointing out, not a line of transmission we can trace.
-
-### 10. `e-pil-gangoffour`
-
-Public Image Ltd, "Public Image" (1978) to Gang of Four, "At Home He's a Tourist" (1979)
-
-PiL empties the arrangement out around the bass. Gang of Four does something closer to the opposite: Andy Gill's guitar stabs into the gaps Dave Allen's bassline leaves, funk-tight rather than dub-spacious, but the same basic idea of building the song from the rhythm section first.
-
-### 11. `e-robinson-mellemel`
-
-Sylvia Robinson, "Pillow Talk" (1973) to Grandmaster Flash and the Furious Five, "The Message" (1982)
-
-Listen to the tempo and then imagine a dancefloor. It does not work, and the group knew it did not work, which is why they did not want it. What the record buys with that refusal is room: at this speed a voice has time to finish a thought. Nearly everything rap does with slow tempo afterwards depends on somebody proving a slow rap record could sell.
-
-### 12. `e-tommyboy-delasoul`
-
-De La Soul, "3 Feet High and Rising" (1989) to De La Soul, "De La Soul Is Dead" (1991)
-
-The debut is bright, generous with its samples and happy to be liked. Its follow-up opens by smashing the daisy-and-flower image of the first record and turns markedly more cynical throughout, released the same year the Turtles settlement became public.
-
-### 13. `e-flash-mellemel`
-
-Grandmaster Flash, "Bronx jams with the Furious Five" (1977) to Grandmaster Flash and the Furious Five, "Superrappin'" (1979)
-
-Listen to how the five MCs hand lines to each other, finishing each other's bars and coming in together on the last word. That is choreography built for a live room where the DJ is the main event and the MCs work around him, and you can hear it surviving intact onto a record where there is no room and no crowd.
-
-### 14. `e-tubby-madprofessor`
-
-King Tubby, "Home-built mixing desk, Waterhouse" (1968) to Mad Professor, "Ariwa Sounds, home-built desk" (1979)
-
-Both men's records treat the mixing desk itself, not a mixed-down finished master, as the instrument being played live. The specific tools differ by a decade of electronics, but the gesture is the same.
-
-### 15. `e-kms-chezdamier`
-
-Kevin Saunderson (Inner City), "Big Fun" (1988) to Chez Damier, "Can You Feel It" (1992)
-
-'Big Fun' is KMS's commercial peak, pop-facing house built to cross over. 'Can You Feel It,' made by the label's own A&R four years later, is rawer and more interior, closer to the deep house Damier and Ron Trent would build Prescription Records around the next year.
-
-### 16. `e-dusseldorf-kraftwerk`
+### 9. `e-dusseldorf-kraftwerk`
 
 Kraftwerk, "Ruckzuck" (1970) to Kraftwerk, "Trans-Europe Express" (1977)
 
 Listen to who keeps time. 'Ruckzuck' is a flute riff over drums played by a person, speeding up as they go. 'Trans-Europe Express' is made in the same private room seven years later, and the rhythm is a machine's, steady and mechanical, with the synthesizer patterns running from sequencers the band had built for them. The studio is how they got from one to the other without anyone else's clock.
 
-### 17. `e-re201-perry`
+### 10. `e-kinks-pulp`
 
-Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to Lee "Scratch" Perry, "Revolution Dub" (1975)
+The Kinks, "Waterloo Sunset" (1967) to Pulp, "Common People" (1995)
 
-Pick one snare hit and follow it. It repeats, and each repeat is slightly duller and slightly less in tune than the one before, because it is a tape loop wearing the sound down every pass. Then listen for the places where the repeats stop dying away and start feeding on themselves, piling up into a howl before somebody pulls them back. That is a hand on a knob, decided in the moment.
+Same technique: pick one character in one specific situation (a student "slumming it," two people on a bridge) and let the details, not a chorus making a general statement, carry the song.
 
-### 18. `e-kraftwerk-may`
+### 11. `e-marleymarl-mcshan`
 
-Kraftwerk, "Numbers" (1981) to Rhythim Is Rhythim, "Strings of Life" (1987)
+MC Shan, "The Bridge" (1986) to Boogie Down Productions, "The Bridge Is Over" (1987)
 
-Kraftwerk's rhythm is rigid and repeats without variation. May keeps the rigidity in the drums but layers a string figure that swells and falls, funk phrasing riding on top of a Kraftwerk-style engine.
+'The Bridge' is a proud, unhurried borough anthem, MC Shan naming names and places over Marl's beat. 'The Bridge Is Over', KRS-One's answer a year later, borrows the same title and subject and turns it into an attack, faster and meaner, ending with a mocking sung outro aimed straight at Shan and Marl. Same beat-and-borough format, opposite intent.
 
-### 19. `e-daedelus-madlib`
+### 12. `e-teac-perry`
+
+TEAC, "A-3340 four-track recorder" (1972) to Junior Murvin, "Police and Thieves" (1976)
+
+Listen to the rhythm under Murvin's high voice. It is dense and slightly blurred, as if heard through gauze. Drums, percussion and guitar melt into one texture instead of standing apart. Each time Perry combined finished parts onto one track to make room for more, another layer of hiss and softness went on. The haze is what four tracks cost, spent on purpose.
+
+### 13. `e-getzbonfa-dilla`
+
+Stan Getz and Luiz Bonfá, "Saudade Vem Correndo" (1963) to The Pharcyde, "Runnin'" (1995)
+
+The bossa nova original moves in a steady, unhurried sway, guitar and flute trading a bright, circling phrase. Dilla chops that phrase down to a few notes and loops it tight against a harder, dustier drum break, so the same figure that once drifted now insists. Listen for how little of the original he needed to take before it was recognisably his.
+
+### 14. `e-808-mantronix`
+
+Roland, "TR-808 factory voices" (1980) to Mantronix, "Fresh Is the Word" (1985)
+
+The 808 carries almost the entire track: a hard, dry kick-and-hi-hat pattern with almost no live instrumentation layered over it, an early example of hip-hop production built to sound like a machine rather than to disguise one.
+
+### 15. `e-mellotron-stones`
+
+Streetly Electronics, "Mellotron, sold as a home orchestra" (1963) to The Rolling Stones, "2000 Light Years from Home" (1967)
+
+The strings that swell in around the vocal are not a string section. Listen to how each note starts: no scrape of a bow, just a smooth fade up, and a slight wobble in pitch as if every player were a little seasick. That wobble is tape being dragged past a playback head. One person is playing it from a keyboard.
+
+### 16. `e-knuckles-atkins`
+
+Frankie Knuckles, "Warehouse-era DJ sets" (1982) to Model 500 (Juan Atkins), "No UFOs" (1985)
+
+Detroit techno's four-on-the-floor structure owes something to house records like Knuckles' sets reaching Detroit via radio and record pools; listen for how close the underlying drum pattern is, even as the two genres' moods diverge sharply.
+
+### 17. `e-stockhausen-can`
+
+Karlheinz Stockhausen, "Hymnen" (1967) to Can, "Aumgn" (1971)
+
+Hymnen takes found material, national anthems and shortwave radio noise, and treats it as raw sound to be filtered and cut. Put on 'Aumgn' from Tago Mago and wait out the opening. There is no beat for long stretches. Voices are stretched into a low drone, sounds come in treated past recognition, and the piece is shaped by editing rather than by a song form. Then listen to 'Halleluhwah' on the same album to hear what the method did to a rock groove: an eighteen-minute jam cut down on tape until it holds.
+
+### 18. `e-daedelus-madlib`
 
 Daedelus, "Experience" (2002) to Madvillain, "Accordion" (2004)
 
 Listen to 'Experience': a wheezy, reedy melody that really does sound like an accordion, played on a cheap electric chord organ. Madlib loops it and hands it to MF DOOM. Listen for how much of the track's character comes from the choice of loop alone.
 
-### 20. `e-britpop-pulp`
+### 19. `e-ruffhouse-goats`
 
-Pulp, "My Legendary Girlfriend" (1991) to Pulp, "Common People" (1995)
+Cypress Hill, "How I Could Just Kill a Man" (1991) to The Goats, "Tricks of the Shade (album)" (1992)
 
-The songwriting voice, wry, specific, class-attentive, is already fully formed on the 1991 single; it just found almost no audience. Four years later, 'Common People' is not a different Pulp, only the same band arriving during a moment already primed to hear them.
+Ruffhouse's first two rap records, a year apart and from the same studio, went opposite ways. Cypress Hill's is built from samples, murky and looped. Tricks of the Shade is backed by a live band, with horns and piano played by musicians, under three voices trading political verses and sketches. Listen for players rather than loops, and for how much the label let a debut album sprawl: twenty-five tracks, with a story running through them.
+
+### 20. `e-derrickmay-carlcraig`
+
+Derrick May (Rhythim Is Rhythim), "Nude Photo" (1987) to Psyche (Carl Craig), "Elements" (1989)
+
+Both records share Transmat's repeating-figure discipline, but 'Elements' pulls the tempo down and lets the chords hang longer, the mark of an assistant absorbing his mentor's vocabulary and then bending it somewhere else.
