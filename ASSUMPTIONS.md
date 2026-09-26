@@ -2204,3 +2204,34 @@ small and worth having in front of Matt alongside everything else here.
   and a first draft that paired Rubin with Run-DMC's 'Rock Box', which
   Rubin did not produce. The Spectrum City listening note describes only
   Chuck D's voice, since I could not check the single's arrangement.
+- **A235. The map loads a skeleton at startup and each record's full
+  text on demand.** Closes the BACKLOG observed problem of the loader
+  loading every record first. Matt chose the two forks: search stays on
+  names and places, and the release ships one file per record.
+  `tools/skeleton.js` builds the index from whitelisted fields per shard
+  (ids, names, years, lineage, hook, membership, places, and each edge's
+  endpoints, type, tier, year, tags and demoId). Lineages, demos and
+  threads ship whole because they are few. On today's data the release
+  index is 117 KB, down from the 870 KB `data.js` that held everything, and
+  dev startup makes one data request instead of about 420. Decisions made
+  without asking: dev serves `data/index.json` from memory, built fresh on
+  every request rather than written to disk, so a hand edit to a record
+  shows on reload with no server restart, the same as before, and there
+  is no new generated file to gitignore. The release adds
+  `dist/records/<shard>/<id>.js` as a `<script>` tag because `file://`
+  blocks `fetch()` but not classic scripts; each file registers itself on
+  `window.LINEAGE_RECORDS`, and the loader moves it into its own cache and
+  deletes the global copy. The release's global is renamed from
+  `LINEAGE_DATA` to `LINEAGE_INDEX`, so a stale reference fails loudly
+  rather than reading a skeleton as if it were full data. Register
+  detection (Q15) moves to build time: the index carries the register keys
+  every data register object has, and the client intersects them with its
+  configured registers and interface copy, so the Kid register still
+  appears on its own when Track D completes. The panel accepts a Promise
+  from `renderTarget` and shows the record's name and a loading line
+  until it settles, or a failure line if the file is missing; a result
+  that arrives after the reader has moved on is dropped. A failed load is
+  evicted from the cache so reopening retries. Verified with Playwright
+  in dev and from `file://`: node, edge, scene, machine and label panels
+  render, Back and a register switch work, and a deleted record file shows
+  the failure line.

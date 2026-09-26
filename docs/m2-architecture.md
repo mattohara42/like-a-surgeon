@@ -12,7 +12,8 @@ call and a reasonable default costs nothing to reverse (it's layout code).
 config.js              CONFIG object, root level per CLAUDE.md
 index.html, main.js    page shell + entry point
 render/
-  loader.js            data/manifest.json fetch (dev) or window.LINEAGE_DATA (release)
+  loader.js            skeleton index at startup (data/index.json in dev, window.LINEAGE_INDEX
+                       in release), full records on demand via loadRecord (A235)
   layout.js             time scale + lineage-lane/machine-band row packing
   viewport.js            pan/zoom transform state, visible-range math
   zoomLevels.js           scale -> collapsed/mid/detail

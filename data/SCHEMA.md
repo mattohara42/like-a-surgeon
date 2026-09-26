@@ -12,6 +12,16 @@ walks the eight directories and writes it; `serve.js`, `validate.js`, and
 `bundle.js` all call that same helper. Adding a record is one new file and
 zero manifest edits. Do not hand-edit `data/manifest.json`.
 
+The app does not load every record at startup. It loads a **skeleton
+index** (`tools/skeleton.js`): each artist, machine, scene, label and edge
+cut down to the fields the map draws with, plus lineages, demos and
+threads whole. A record's full text loads when its panel opens. The
+skeleton's field lists are whitelists, so a new field that anything other
+than the reading panels needs (the graph, search, Arrange by, the scene
+atmosphere) has to be added to `SKELETON_FIELDS` there too, or the map
+will not see it. Dev serves the index at `data/index.json`, built fresh on
+each request, and the release writes it to `dist/data.js`.
+
 Artist, machine, scene, and label ids share one namespace, since an edge's
 `from`/`to` can be any of the four with no type tag. A label named the same
 as an existing artist is a collision, checked globally by the validator.
