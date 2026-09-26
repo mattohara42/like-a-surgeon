@@ -8,7 +8,9 @@
   "activeTo": 1992,
   "originCity": "Long Island and Queens, New York",
   "originCountry": "USA",
-  "scenes": [],
+  "scenes": [
+    "long-island-hip-hop"
+  ],
   "labels": [],
   "keyProducers": [
     "marley-marl"

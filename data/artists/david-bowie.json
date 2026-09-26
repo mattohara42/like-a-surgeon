@@ -8,7 +8,9 @@
   "activeTo": 2016,
   "originCity": "London",
   "originCountry": "UK",
-  "scenes": [],
+  "scenes": [
+    "west-berlin"
+  ],
   "labels": [],
   "keyProducers": [
     "Tony Visconti",

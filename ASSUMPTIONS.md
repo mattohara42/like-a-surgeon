@@ -2158,3 +2158,49 @@ small and worth having in front of Matt alongside everything else here.
   blurb only. Scotti Brothers is not a label node, so `labels` is empty.
   Facts come from Wikipedia's articles on Yankovic, 'Eat It', 'Fat' and
   the 'UHF' soundtrack.
+- **A233. Five scenes to meet the M1 scene target, each built on members
+  already on the map.** `queensbridge-juice-crew`, `native-tongues`,
+  `west-berlin`, `long-island-hip-hop` and `los-angeles-gangsta-rap`
+  bring scenes from 15 to 20. I picked scenes whose members were already
+  nodes, so the batch adds structure without adding artists. Each
+  member's `scenes[]` is updated in the same commit so the two sides of
+  the membership agree (the mismatch BACKLOG records from an earlier
+  batch). Choices worth checking: Native Tongues is a collective rather
+  than a place, filed as a scene in the way `sheffield-idm` is built
+  around a label's marketing, with `city` New York. De La Soul sits in
+  both Native Tongues and Long Island, which is true of the group. Biz
+  Markie is in the Juice Crew only, although he is also from Long
+  Island, because the crew is where his records were made. Eno is not a
+  `west-berlin` member: he worked on the Berlin records but did not live
+  there. `west-berlin` is in the `electronic` lane, since its founding
+  institution is the Zodiak and its lasting output the Berlin School, so
+  its edge into Bowie is cross-lineage. End years are judgment calls:
+  1991 for the Juice Crew (Wikipedia's "active until"), 1996 for Native
+  Tongues and LA gangsta rap (nominal, and the LA blurb says so), 1989
+  for West Berlin (the Wall), 1991 for Long Island. Facts come from
+  Wikipedia's articles on the Juice Crew, Native Tongues, the Jungle
+  Brothers, Zodiak Free Arts Lab, Tangerine Dream, Hansa Tonstudio, the
+  Berlin Trilogy, Public Enemy, 'Yo! Bum Rush the Show', N.W.A, 'Fuck
+  tha Police' and Operation Hammer, BlackPast for the Operation Hammer
+  arrest figures, and Discogs for Spectrum City's 1984 Vanguard single.
+- **A234. Nine edges, five of them scene edges, and the tiers.** Six are
+  `documented` and three `consensus`, still richer in `documented` than
+  METHOD.md's healthy ratio, so here is what each rests on. Documented:
+  Nas's own recollection of the Juice Crew as an example (the edge
+  claims example and setting, not sound, since no Juice Crew producer
+  worked on 'Illmatic'); Bowie's move and the Hansa recording of
+  '"Heroes"'; Public Enemy's WBAU and Spectrum City origins; Rubin's
+  executive-producer credit (the story that Chuck D held out for months
+  is left out as unsourced); and two sample credits on 'Eric B. Is
+  President'. Consensus: Bambaataa to Native Tongues (histories describe
+  the tie, no single statement), Tangerine Dream to Bowie (listed among
+  the trilogy's influences, but unlike Kraftwerk and Neu! I found no
+  Bowie statement), and LA gangsta rap to N.W.A (that Operation Hammer
+  shaped the album is the standard reading, not a documented cause). The
+  Eric B. production dispute (A122) is again carried, not settled.
+  Cuts made while drafting: a claim that Marley Marl worked in his
+  sister's apartment, battering-ram raids as part of Operation Hammer
+  (I could not tie the battering ram to Operation Hammer itself), sirens on 'Fuck tha Police',
+  and a first draft that paired Rubin with Run-DMC's 'Rock Box', which
+  Rubin did not produce. The Spectrum City listening note describes only
+  Chuck D's voice, since I could not check the single's arrangement.

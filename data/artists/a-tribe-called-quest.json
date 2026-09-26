@@ -8,7 +8,9 @@
   "activeTo": 2017,
   "originCity": "St. Albans, Queens, New York",
   "originCountry": "USA",
-  "scenes": [],
+  "scenes": [
+    "native-tongues"
+  ],
   "labels": [],
   "keyProducers": [
     "Q-Tip",

@@ -1,0 +1,30 @@
+{
+  "id": "e-lagangstarap-nwa",
+  "from": "los-angeles-gangsta-rap",
+  "to": "nwa",
+  "type": "scene",
+  "confidence": "consensus",
+  "year": 1988,
+  "crossLineage": false,
+  "evidence": "N.W.A formed in Compton, and 'Straight Outta Compton' (August 1988, Ruthless and Priority) arrived during Operation Hammer (1987 to 1990), whose April 1988 weekend sweep made 1,453 arrests in South Central, with only 103 charged (Wikipedia's article on Operation Hammer; BlackPast). 'Fuck tha Police' drew a letter from FBI assistant director Milt Ahlerich to Priority. Ice-T's '6 in the Mornin'' (1986) is widely cited as an earlier LA first-person street narrative. That the policing directly shaped the album is the standard critical reading and matches the lyrics' subject, but it is a reading, so the tier is consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Ice-T",
+      "title": "6 in the Mornin'",
+      "year": 1986
+    },
+    "later": {
+      "artist": "N.W.A",
+      "title": "Fuck tha Police",
+      "year": 1988
+    },
+    "whatToListenFor": "'6 in the Mornin'' is a bare drum machine pattern with Ice-T telling a long story in a flat, conversational voice, starting with police at the door at dawn. 'Fuck tha Police' takes the same subject and stages it as a courtroom, with members of the group taking turns as witnesses. The beat is much busier, with sampled funk drums and scratching. Listen for the spoken courtroom interruptions between verses: the record is built like a scene from a film, not just a rap over a beat."
+  },
+  "explanation": {
+    "age13": "N.W.A made 'Straight Outta Compton' while the Los Angeles police were arresting thousands of young Black and Latino men in their neighbourhoods. In one weekend in 1988 they arrested 1,453 people, and only 103 were charged with anything. 'Fuck tha Police' is about that, and it made an FBI official write a complaint to their record company.",
+    "adult": "The scene edge is here because the album's most famous track is about a specific policing regime, not policing in the abstract. Operation Hammer's sweeps were at their peak as the record was made. Ice-T's earlier narratives had already set out the first-person form. N.W.A made it confrontational and, without radio play, national. The FBI letter turned the song into a free-speech case, and the 1992 uprising after the Rodney King verdicts made it look like reporting."
+  },
+  "tags": [
+    "politics"
+  ]
+}

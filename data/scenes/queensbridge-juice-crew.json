@@ -1,0 +1,35 @@
+{
+  "id": "queensbridge-juice-crew",
+  "name": "Queensbridge and the Juice Crew",
+  "type": "scene",
+  "lineage": "hiphop",
+  "yearFrom": 1983,
+  "yearTo": 1991,
+  "city": "Queens, New York",
+  "country": "USA",
+  "hook": "A radio DJ's crew and his young producer turned one Queens housing project into a hit factory, then lost a rap battle about whether rap had started there.",
+  "blurb": {
+    "age13": "Mr. Magic hosted 'Rap Attack' on WBLS, one of the first shows on a big New York radio station to play only hip-hop. In 1983 he gathered a crew around it and named it after his on-air name, Sir Juice. His sidekick was Marley Marl, a young producer from the Queensbridge Houses, the biggest public housing project in the country. Marley made the records and the radio show played them. The crew included Roxanne Shanté, MC Shan, Big Daddy Kane, Biz Markie and Kool G Rap. In 1984 Shanté's 'Roxanne's Revenge' started the Roxanne Wars, dozens of answer records. In 1986 MC Shan's 'The Bridge' was heard as saying hip-hop started in Queensbridge, and Boogie Down Productions from the Bronx answered with 'South Bronx' and then 'The Bridge Is Over', which most people think won. The crew had broken up by about 1991.",
+    "adult": "The Juice Crew was a radio crew before it was a record crew. Mr. Magic's 'Rap Attack' on WBLS-FM is described as the first exclusively hip-hop programme on a major station, and he named the collective after his on-air alias, Sir Juice. Marley Marl, his sidekick, produced most of its records, so one person controlled both the sound and a large share of the airplay, a closed loop that explains how quickly Roxanne Shanté, MC Shan, Big Daddy Kane, Biz Markie and Kool G Rap broke. 'Roxanne's Revenge' (1984) set off the Roxanne Wars. MC Shan's 'The Bridge' (1986) was taken as a claim that hip-hop began in Queensbridge, which led to the Bridge Wars with Boogie Down Productions: 'South Bronx', Shan and Marley's 'Kill That Noise' (1987), and BDP's 'The Bridge Is Over', widely seen as the winner. Marley's 1988 posse cut 'The Symphony' is the crew's other landmark. It was active until about 1991."
+  },
+  "geopolitics": "The Queensbridge Houses, opened in 1939, are the largest public housing development in the United States, a city-built island of low-income tenants in Long Island City. By the mid-1980s the crack trade and the city's retreat from services after the 1970s fiscal crisis shaped daily life there. Radio was the choke point: very few commercial stations would play rap at all, so a single weekend show on WBLS decided which records most New Yorkers heard.",
+  "whatWasNew": "Drums sampled from old records and retriggered by hand on a sampler instead of played on a drum machine, which Marley Marl is widely credited with bringing into rap production, plus the answer record as a competitive form: a hit could now provoke dozens of replies within weeks.",
+  "production": "Marley Marl produced most of the records, on a Roland TR-808 early on and later with samplers, the E-mu SP-1200 among them. Budgets were tiny and turnaround was fast, which suited answer records.",
+  "labels": "Pop Art released the earliest records, including 'Roxanne's Revenge'. Cold Chillin', started in 1986 by the crew's manager Tyrone Williams with Len Fichtelberg, became the crew's own label, distributed by Warner Bros. from 1988 to 1993.",
+  "politics": "Mostly neighbourhood pride and competition rather than stated politics. The Bridge Wars were an argument about geography and credit, whether the Bronx or Queens owned the origin story, and they showed how much a borough identity mattered to the music.",
+  "memberIds": [
+    "marley-marl",
+    "roxanne-shante",
+    "mc-shan",
+    "big-daddy-kane",
+    "biz-markie",
+    "kool-g-rap"
+  ],
+  "palette": {
+    "ink": "#1d1f24",
+    "paper": "#ece7dc",
+    "accent": "#d4462c",
+    "accent2": "#2f5d8a"
+  },
+  "motif": "turntable-circles"
+}

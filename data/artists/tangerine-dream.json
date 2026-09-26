@@ -8,7 +8,9 @@
   "activeTo": null,
   "originCity": "West Berlin",
   "originCountry": "West Germany",
-  "scenes": [],
+  "scenes": [
+    "west-berlin"
+  ],
   "labels": [
     {
       "labelId": "virgin",

@@ -1,0 +1,31 @@
+{
+  "id": "e-longisland-publicenemy",
+  "from": "long-island-hip-hop",
+  "to": "public-enemy",
+  "type": "scene",
+  "confidence": "documented",
+  "year": 1987,
+  "crossLineage": false,
+  "evidence": "Chuck D and Flavor Flav met at Adelphi University on Long Island, where Chuck D worked at the college station WBAU and Bill Stephney was programme director. Hank Shocklee's Spectrum City, a Long Island mobile DJ crew with Chuck D on the mic, released 'Lies' / 'Check Out the Radio' on Vanguard in 1984. Its members became the Bomb Squad, and 'Yo! Bum Rush the Show' (Def Jam, March 1987) was recorded at Spectrum City Studios in Hempstead (Wikipedia's articles on Public Enemy and the album; Discogs for the Vanguard single).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Spectrum City",
+      "title": "Check Out the Radio",
+      "year": 1984,
+      "search": "Spectrum City Check Out the Radio"
+    },
+    "later": {
+      "artist": "Public Enemy",
+      "title": "Public Enemy No. 1",
+      "year": 1987
+    },
+    "whatToListenFor": "Listen to Chuck D on 'Check Out the Radio' first: the deep, booming delivery is already there in 1984. Then play 'Public Enemy No. 1', where the same voice sits over a high, squealing synthesiser whine sampled from the JB's 'Blow Your Head', looping over a heavy beat. The voice barely changed in three years. Listen to how much the production did, from an ordinary early-80s single toward the start of the Bomb Squad's noise."
+  },
+  "explanation": {
+    "age13": "Public Enemy started at a college radio station, WBAU, at Adelphi University on Long Island. Chuck D worked there, and Hank Shocklee ran a DJ crew called Spectrum City, which made a single in 1984. The crew became Public Enemy's production team, the Bomb Squad, and they recorded their first album in Hempstead, Long Island.",
+    "adult": "Almost every piece of Public Enemy was assembled on Long Island before any label was involved: the station that gave Chuck D a platform, the programme director who later brought them to Def Jam, the DJ crew that became the Bomb Squad, and the Hempstead studio where the first album was made. The edge is from the scene because the group was already a working unit of that scene before Rick Rubin heard the tape."
+  },
+  "tags": [
+    "production"
+  ]
+}

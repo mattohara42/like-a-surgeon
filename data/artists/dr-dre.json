@@ -8,7 +8,9 @@
   "activeTo": null,
   "originCity": "Compton, California",
   "originCountry": "USA",
-  "scenes": [],
+  "scenes": [
+    "los-angeles-gangsta-rap"
+  ],
   "labels": [],
   "keyProducers": [],
   "hook": "N.W.A's main producer left the group in 1991 and built G-funk, an entire West Coast sound, largely out of George Clinton's catalogue.",

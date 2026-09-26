@@ -8,7 +8,10 @@
   "activeTo": null,
   "originCity": "Amityville, Long Island, New York",
   "originCountry": "USA",
-  "scenes": [],
+  "scenes": [
+    "native-tongues",
+    "long-island-hip-hop"
+  ],
   "labels": [],
   "keyProducers": [
     "prince-paul"

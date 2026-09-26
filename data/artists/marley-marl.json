@@ -8,7 +8,9 @@
   "activeTo": null,
   "originCity": "Queensbridge, New York",
   "originCountry": "USA",
-  "scenes": [],
+  "scenes": [
+    "queensbridge-juice-crew"
+  ],
   "labels": [],
   "keyProducers": [],
   "hook": "Made a mistake in a mixing session, caught a snare drum off a record by accident, and worked out on the spot that this was better than any drum machine.",

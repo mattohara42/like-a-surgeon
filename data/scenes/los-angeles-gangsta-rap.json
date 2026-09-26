@@ -1,0 +1,31 @@
+{
+  "id": "los-angeles-gangsta-rap",
+  "name": "Los Angeles gangsta rap",
+  "type": "scene",
+  "lineage": "hiphop",
+  "yearFrom": 1986,
+  "yearTo": 1996,
+  "city": "Los Angeles",
+  "country": "USA",
+  "hook": "Rap from Compton and South Central that reported on gangs, crack and police raids in the first person, during the years the LAPD was arresting young Black and Latino men by the thousand.",
+  "blurb": {
+    "age13": "In the late 1980s, crack cocaine and gang fights hit poor neighbourhoods in Los Angeles hard. The police chief, Daryl Gates, answered with Operation Hammer, from 1987 to 1990. In one weekend in April 1988, a thousand officers arrested 1,453 people in South Central LA, and only 103 were charged with a crime. About 25,000 people were arrested during the whole operation. Rappers from these neighbourhoods started telling stories about it in the first person. Ice-T's '6 in the Mornin'' (1986) is often named as an early example. N.W.A, from Compton, released 'Straight Outta Compton' in 1988 on Eazy-E's label, Ruthless. Its song 'Fuck tha Police' made an FBI official write to their record company. In 1992, after police officers who beat Rodney King were found not guilty, the city erupted. Dr. Dre's 'The Chronic' came out the same year.",
+    "adult": "The scene's backdrop is specific. Crack and gang violence rose through South Central and Compton in the mid-1980s, and Chief Daryl Gates's Operation Hammer (1987 to 1990) responded with mass sweeps. One weekend in April 1988 about a thousand officers made 1,453 arrests, the most arrests of Black Angelenos since Watts in 1965, and only 103 people were charged. Around 25,000 were arrested over the operation. Ice-T's '6 in the Mornin'' (1986) is usually cited as an early first-person street narrative. N.W.A's 'Straight Outta Compton' (1988, Ruthless and Priority) made the form national without radio support. 'Fuck tha Police' drew a letter from FBI assistant director Milt Ahlerich to Priority, which cited officers killed in 1988 and called such records discouraging and degrading to them, though he did not name the song. The acquittals in the Rodney King case led to the 1992 uprising, and Dr. Dre's 'The Chronic' (1992) carried the scene into its G-funk phase. The 1996 end date is a nominal close to that phase, not a documented turning point."
+  },
+  "geopolitics": "Deindustrialisation closed the auto, steel and tyre plants that had employed South Central's Black workforce, and the crack trade grew in the gap in the mid-1980s. Operation Hammer (1987 to 1990) used mass sweeps and raids such as the August 1988 raid on two apartment buildings at 39th Street and Dalton Avenue, which left them wrecked, and citizen complaints of police brutality rose by a third. The 1991 beating of Rodney King on video, and the 1992 acquittal of the officers, led to six days of riots.",
+  "whatWasNew": "First-person narrative rap about gang life and policing, told in detail and without apology, and later G-funk's slow tempos, whining synth leads and P-Funk samples, a West Coast sound distinct from New York's.",
+  "production": "Dr. Dre and DJ Yella produced N.W.A on drum machines and samplers, Dre moving from the electro of the World Class Wreckin' Cru toward harder sample-based tracks and then, on 'The Chronic', toward replayed funk with live bass and synth.",
+  "labels": "Ruthless Records, founded in 1987 by Eazy-E and manager Jerry Heller, with distribution through Priority. Disputes over royalties drove Ice Cube out in 1989 and Dr. Dre out in 1991, to co-found Death Row.",
+  "politics": "Police violence was the explicit subject of 'Fuck tha Police', and the FBI letter made the song a free-speech case. The scene was also criticised, then and since, for misogyny and for glamourising violence, and those criticisms belong to its history.",
+  "memberIds": [
+    "nwa",
+    "dr-dre"
+  ],
+  "palette": {
+    "ink": "#1a1714",
+    "paper": "#efe5d3",
+    "accent": "#1f4f8f",
+    "accent2": "#d9a441"
+  },
+  "motif": "soundsystem-stack"
+}

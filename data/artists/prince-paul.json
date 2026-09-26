@@ -8,7 +8,9 @@
   "activeTo": null,
   "originCity": "Amityville, Long Island, New York",
   "originCountry": "USA",
-  "scenes": [],
+  "scenes": [
+    "long-island-hip-hop"
+  ],
   "labels": [],
   "keyProducers": [],
   "hook": "A Stetsasonic DJ turned producer whose collage style and cartoonish concept records gave De La Soul, then Gravediggaz, their sound.",
