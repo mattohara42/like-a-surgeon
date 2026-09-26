@@ -1,0 +1,30 @@
+{
+  "id": "e-bambaataa-nativetongues",
+  "from": "afrika-bambaataa",
+  "to": "native-tongues",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1988,
+  "crossLineage": false,
+  "evidence": "Wikipedia's Native Tongues article describes the collective as continuing the spirit of Afrika Bambaataa and the Universal Zulu Nation and as closely tied to the Zulu Nation. The Jungle Brothers, who founded the collective, recorded the hip-house track 'I'll House You' with house producer Todd Terry, added to late-1988 reissues of 'Straight Out the Jungle'. The Afrika Baby Bam name is widely read as a nod to Bambaataa. The tie is repeated across histories of the movement rather than pinned to one documented statement, so it is tiered consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Afrika Bambaataa & the Soulsonic Force",
+      "title": "Planet Rock",
+      "year": 1982
+    },
+    "later": {
+      "artist": "Jungle Brothers",
+      "title": "I'll House You",
+      "year": 1988
+    },
+    "whatToListenFor": "'Planet Rock' puts rapping over a Kraftwerk melody and a drum machine, music nobody in the Bronx was supposed to like. 'I'll House You' does the same trick six years later with Chicago and New York house: a four-on-the-floor kick, a house bassline and piano stabs under rapping. Listen for the kick drum. Almost all rap in 1988 swung on a broken beat, and this one runs straight like a dance record. The shared idea is that a rap group can take whatever dance music is around and rap over it."
+  },
+  "explanation": {
+    "age13": "The Native Tongues groups were close to Afrika Bambaataa and his Universal Zulu Nation, and are often described as carrying on his spirit: rap mixed with any kind of music, and a message of peace and African pride. The Jungle Brothers showed it by rapping over a house track in 1988, just as Bambaataa had rapped over German electronic music in 1982.",
+    "adult": "Bambaataa's model had two parts, genre omnivorousness and the Zulu Nation's Afrocentric, anti-gang programme, and Native Tongues took up both. 'I'll House You' is the clearest musical echo: a hip-hop group on a house producer's track, as 'Planet Rock' had been hip-hop on a Kraftwerk melody. The accusations against Bambaataa from 2016, recorded on his own entry, came long after this period and do not change the historical link, but they are part of how the Zulu Nation connection is now read."
+  },
+  "tags": [
+    "politics"
+  ]
+}
