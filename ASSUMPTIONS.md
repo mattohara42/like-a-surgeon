@@ -2246,8 +2246,8 @@ small and worth having in front of Matt alongside everything else here.
   Kraftwerk to Joy Division (the PA ritual and the man-machine admiration
   are retrospective band accounts), Sly to P-Funk (standard in funk
   histories, no single statement), Large Professor to Eric B. & Rakim
-  (the credits say otherwise, and the attribution is his), and nothing
-  else. Documented where a named source says the thing: the Warsaw name
+  (the credits say otherwise, and the attribution is his). Documented
+  where a named source says the thing: the Warsaw name
   and Sumner's comment on Bowie's synthesisers, the Virgin signing dates,
   the Pistols' 'Substitute' at their first gig and on 'The Great Rock 'n'
   Roll Swindle', Derrick May's own Clinton-meets-Kraftwerk description,
