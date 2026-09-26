@@ -1,0 +1,30 @@
+{
+  "id": "e-marshalljefferson-phuture",
+  "from": "marshall-jefferson",
+  "to": "phuture",
+  "type": "production",
+  "confidence": "consensus",
+  "year": 1987,
+  "crossLineage": false,
+  "evidence": "Jefferson is credited as producer of 'Acid Tracks' (Trax, 1987). DJ Pierre of Phuture has since said Jefferson's contribution was setting levels and that he added no new sounds, while acknowledging that Jefferson suggested slowing the track from about 130 to about 120 beats per minute and suggested vocal changes on the B-side (Wikipedia's article on the record). The credit is documented. What it amounted to is disputed, so the tier is consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Marshall Jefferson",
+      "title": "Move Your Body (The House Music Anthem)",
+      "year": 1986
+    },
+    "later": {
+      "artist": "Phuture",
+      "title": "Acid Tracks",
+      "year": 1987
+    },
+    "whatToListenFor": "'Move Your Body' is bright and busy, with piano, vocals and a quick beat. 'Acid Tracks' strips all of that away to a drum machine and one squelching bassline, and it moves more slowly than Phuture first made it. Listen to the tempo. The slower, heavier walk is the one change everyone agrees Jefferson asked for, and it gives the 303 room to twist."
+  },
+  "explanation": {
+    "age13": "Marshall Jefferson is listed as the producer of Phuture's 'Acid Tracks'. Phuture's DJ Pierre says Jefferson did not add any sounds, but did tell them to slow it down, and the slower speed is part of what makes it work.",
+    "adult": "Producer credits in early Chicago house were often loose, and this is a clear case of a credited producer whose role the artists dispute. The one agreed change, taking the track from about 130 to about 120 beats per minute, is a real musical decision, so the edge stands, typed production and tiered consensus, with the dispute stated."
+  },
+  "tags": [
+    "production"
+  ]
+}

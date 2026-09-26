@@ -1,0 +1,31 @@
+{
+  "id": "e-stylophone-kraftwerk",
+  "from": "dubreq-stylophone",
+  "to": "kraftwerk",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1981,
+  "crossLineage": true,
+  "evidence": "Kraftwerk's 'Pocket Calculator', from 'Computer World' (1981), features the Stylophone among its main instruments (Wikipedia's Stylophone article). The Stylophone was invented by Brian Jarvis and made by Dubreq in London from 1968, sold largely as a toy, advertised in Britain by Rolf Harris, and sold about three million units before production stopped in 1975.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Dubreq",
+      "title": "Stylophone",
+      "year": 1968,
+      "search": false
+    },
+    "later": {
+      "artist": "Kraftwerk",
+      "title": "Pocket Calculator",
+      "year": 1981
+    },
+    "whatToListenFor": "Listen for the thin, buzzing, one-note-at-a-time melody played with a metal stylus on a metal keyboard. On 'Pocket Calculator' it sits among expensive synthesisers and still sounds exactly like a toy, because that is the point: the song is about the fun of small electronic gadgets, and Kraftwerk chose one of the cheapest there was."
+  },
+  "explanation": {
+    "age13": "The Stylophone was a cheap toy synthesiser you played by touching a metal pen to a metal keyboard. Kraftwerk, one of the most high-tech bands in the world, used it on their 1981 song 'Pocket Calculator', a song about how much fun small electronic gadgets are.",
+    "adult": "The Stylophone is on the map because of Bowie's 'Space Oddity'. Kraftwerk's use twelve years later is the other half of its story: a band that had built custom sequencers at Kling Klang choosing a discontinued British toy, as part of a record about consumer electronics. The instrument became a joke that Kraftwerk were in on."
+  },
+  "tags": [
+    "technology"
+  ]
+}
