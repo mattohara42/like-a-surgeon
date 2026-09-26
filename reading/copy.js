@@ -95,6 +95,14 @@ export const COPY = {
       age13: 'There is a playable demo for this. It arrives with the audio engine.',
       adult: 'A playable demo is defined for this edge and arrives with the audio engine (M4).',
     },
+    loading: {
+      age13: 'Loading…',
+      adult: 'Loading…',
+    },
+    loadFailed: {
+      age13: 'This page did not load. Close it and try again.',
+      adult: 'This record failed to load. Close the panel and try again.',
+    },
     offMap: {
       age13: 'This one has no year yet, so it cannot be placed on the map.',
       adult: 'This record has no start year, so the time axis cannot place it.',
