@@ -8,7 +8,9 @@
   "activeTo": null,
   "originCity": "Queensbridge, New York",
   "originCountry": "USA",
-  "scenes": [],
+  "scenes": [
+    "queensbridge-juice-crew"
+  ],
   "labels": [],
   "keyProducers": [
     "marley-marl"

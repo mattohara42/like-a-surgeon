@@ -8,7 +8,9 @@
   "activeTo": 1991,
   "originCity": "Compton, California",
   "originCountry": "USA",
-  "scenes": [],
+  "scenes": [
+    "los-angeles-gangsta-rap"
+  ],
   "labels": [],
   "keyProducers": [
     "dr-dre",
