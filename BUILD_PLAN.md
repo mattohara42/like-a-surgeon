@@ -180,7 +180,9 @@ batch added eight more, among them Hendrix's Isley Brothers apprenticeship,
 the Minimoog bass on 'Flash Light' and two Trax label edges (A237). A third edge batch
 added five more, including two label edges an artist's own record
 already implied (Ariwa, Sugar Hill) and the 1975 move of James Brown's
-horn section into P-Funk (A238). `npm run report` has the current
+horn section into P-Funk (A238). A fourth batch added six more,
+including the Willie Dixon/Chess Records credit dispute behind 'Whole Lotta
+Love' and Kool G Rap's line into Nas (A239). `npm run report` has the current
 distance on every remaining target.
 
 ## Definition of done for any milestone

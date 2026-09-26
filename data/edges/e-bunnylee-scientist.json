@@ -1,0 +1,29 @@
+{
+  "id": "e-bunnylee-scientist",
+  "from": "bunny-lee",
+  "to": "scientist",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1975,
+  "crossLineage": false,
+  "evidence": "Hopeton Overton Brown began hanging around King Tubby's studio, drawn in by his father's work in electronics repair, and was hired as an assistant, winding transformer coils before moving up to mixing in the mid-1970s. Bunny Lee is the source of his stage name: seeing his technical ability, Lee remarked to King Tubby, 'this little boy must be a scientist,' and the name stuck (Wikipedia's article on Scientist).",
+  "trackPair": {
+    "earlier": {
+      "artist": "King Tubby",
+      "title": "early dub mixes",
+      "year": 1973,
+      "search": false
+    },
+    "later": {
+      "artist": "Scientist",
+      "title": "Scientist Rids the World of the Evil Curse of the Vampires",
+      "year": 1981
+    },
+    "whatToListenFor": "There is no shared record to compare here: this is an origin story, not a sound Lee handed down. Listen instead to how far the name travelled. 'Scientist Rids the World of the Evil Curse of the Vampires' plays the mixing desk like an instrument, sounds swooping and vanishing as if by an actual scientist at work, the same joke Bunny Lee made off the cuff years before it became one of the most recognisable names in dub."
+  },
+  "explanation": {
+    "age13": "The dub mixer Scientist wasn't born with that name. Producer Bunny Lee gave it to him as an offhand remark to King Tubby, admiring how technically skilled the teenage assistant was: 'this little boy must be a scientist.'",
+    "adult": "This edge is a naming story rather than a mentorship: Scientist's real teacher was King Tubby, whose edges into him are already on the map. Bunny Lee's role was smaller but documented and specific, so it earns its own line rather than being folded into Tubby's."
+  },
+  "tags": []
+}

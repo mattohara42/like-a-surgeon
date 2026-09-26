@@ -1,0 +1,30 @@
+{
+  "id": "e-motown-isleybrothers",
+  "from": "motown",
+  "to": "the-isley-brothers",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1966,
+  "crossLineage": false,
+  "evidence": "The Isley Brothers signed to Motown's Tamla subsidiary in 1965. 'This Old Heart of Mine (Is Weak for You)', written by Holland-Dozier-Holland and Sylvia Moy and produced by Brian Holland and Lamont Dozier, was released on Tamla on 12 January 1966, reached number 12 on the Hot 100, and was their only Motown hit. By 1969 they had left the label and relaunched their own T-Neck Records (Wikipedia's articles on the Isley Brothers and the song).",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Isley Brothers",
+      "title": "Twist and Shout",
+      "year": 1962
+    },
+    "later": {
+      "artist": "The Isley Brothers",
+      "title": "This Old Heart of Mine (Is Weak for You)",
+      "year": 1966
+    },
+    "whatToListenFor": "'Twist and Shout' is raw and shouted, the Isleys driving a rock and roll band at full volume. 'This Old Heart of Mine', made inside Motown's assembly-line system with Holland-Dozier-Holland's own songwriting and production, is smoother and tighter, with a string arrangement and a controlled, pleading lead vocal. The same singers sound like a different group once Motown's house style takes over."
+  },
+  "explanation": {
+    "age13": "The Isley Brothers spent a few years on Motown's Tamla label in the 1960s. Motown's own songwriters and producers gave them their only hit there, 'This Old Heart of Mine', in 1966, but by 1969 the group had left to run their own label instead.",
+    "adult": "The Isleys' Motown stop was brief and produced only one hit, and the label edge marks the moment Motown's house-band, house-songwriter system touched a group already established on its own before and after. Jimi Hendrix's own stint in the Isleys' backing band, already on the map, overlaps this same period."
+  },
+  "tags": [
+    "labels"
+  ]
+}
