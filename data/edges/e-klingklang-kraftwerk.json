@@ -1,0 +1,32 @@
+{
+  "id": "e-klingklang-kraftwerk",
+  "from": "kling-klang",
+  "to": "kraftwerk",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1977,
+  "crossLineage": false,
+  "evidence": "Kraftwerk set up the Kling Klang studio in 1970 at Mintropstrasse 16 in Düsseldorf and treated it as the band's real beginning. They recorded on their own tape machines and took masters elsewhere for final mixing, which let them produce themselves. From 1976 they recorded 'Trans-Europe Express' there using custom-built Synthanorma sequencers. Kling Klang became their own label imprint in 1975, distributed by EMI and later Warner (Wikipedia's Kling Klang article).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Kraftwerk",
+      "title": "Autobahn",
+      "year": 1974
+    },
+    "later": {
+      "artist": "Kraftwerk",
+      "title": "Trans-Europe Express",
+      "year": 1977
+    },
+    "whatToListenFor": "'Autobahn' drifts: synthesisers, flute and voices float over a loose pulse for more than twenty minutes. 'Trans-Europe Express' is locked tight, a repeating sequence clanking forward like wheels on rails, with every part in its place. The difference is a band that now owned its room and could spend as long as it liked getting a pattern exactly right."
+  },
+  "explanation": {
+    "age13": "Kling Klang was Kraftwerk's own studio in Düsseldorf, and later the name of their own record label. Because they owned the room, they could work slowly and build their own machines, and from 1976 they made 'Trans-Europe Express' there with custom-built sequencers.",
+    "adult": "The node is a label, and the label mattered for ownership: from 1975 Kraftwerk held their own masters and set their own release pace. The musical effect ran through the studio of the same name. Owning Kling Klang let them self-produce, commission custom instruments and work at a pace no commercial studio booking would allow, and the precision of 'Trans-Europe Express' is the result. 'Autobahn' is paired as the before because Conny Plank co-produced it, an edge already on the map."
+  },
+  "tags": [
+    "labels",
+    "technology",
+    "production"
+  ]
+}

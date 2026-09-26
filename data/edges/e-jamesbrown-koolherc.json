@@ -1,0 +1,29 @@
+{
+  "id": "e-jamesbrown-koolherc",
+  "from": "james-brown",
+  "to": "kool-herc",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1973,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on Herc describes his 1973 extended cut-and-mix of the percussion breakdown from James Brown's 'Give It Up or Turnit a Loose', and says he owned and played Brown's 'Sex Machine' album (1970) at early parties. His Merry-Go-Round, switching between breaks on two copies of records, is documented moving from the Brown break into the Incredible Bongo Band's 'Bongo Rock' and Babe Ruth's 'The Mexican'. The account rests largely on Herc's own recollections, repeated consistently.",
+  "trackPair": {
+    "earlier": {
+      "artist": "James Brown",
+      "title": "Give It Up or Turnit a Loose",
+      "year": 1970
+    },
+    "later": {
+      "artist": "DJ Kool Herc",
+      "title": "The Merry-Go-Round (live DJ technique)",
+      "year": 1973,
+      "search": false
+    },
+    "whatToListenFor": "Find the live version of 'Give It Up or Turnit a Loose' on 'Sex Machine' and wait for the breakdown: the band drops out except for drums, bass and percussion, and the groove keeps going. Herc's discovery was that this short stretch was what the dancers were waiting for. With two copies of the record he could play it over and over, and that repeating break is the floor hip-hop is built on."
+  },
+  "explanation": {
+    "age13": "Kool Herc noticed that dancers went wild for the short parts of funk records where everything drops out except the drums, called the break. James Brown's 'Give It Up or Turnit a Loose' had one of the best. In 1973 Herc used two copies of records to play breaks like that again and again, and that trick became the base of hip-hop.",
+    "adult": "The Incredible Bongo Band is already linked to Herc on this map. James Brown was the bigger source, and the edge records the specific break Herc's history centres on. Brown's band recorded breakdowns to lift a live crowd, and Herc turned that performance device into a loop. The account rests on Herc's own consistent recollections, which is the best evidence available for a DJ set that no one recorded."
+  },
+  "tags": []
+}
