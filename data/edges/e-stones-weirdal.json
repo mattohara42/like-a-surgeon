@@ -1,0 +1,28 @@
+{
+  "id": "e-stones-weirdal",
+  "from": "rolling-stones",
+  "to": "weird-al-yankovic",
+  "type": "cover",
+  "confidence": "documented",
+  "year": 1989,
+  "crossLineage": true,
+  "evidence": "'The Hot Rocks Polka', on the 'UHF' soundtrack album (released 18 July 1989, produced by Rick Derringer, on Rock 'n Roll Records and Scotti Brothers), is a polka medley of twelve Rolling Stones songs, among them '(I Can't Get No) Satisfaction', 'Brown Sugar', 'Honky Tonk Women', 'Ruby Tuesday', 'Sympathy for the Devil' and 'Miss You', plus a short original polka (Wikipedia's article on the album). Its title matches the Stones' 1971 compilation 'Hot Rocks 1964-1971'.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Rolling Stones",
+      "title": "(I Can't Get No) Satisfaction",
+      "year": 1965
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "The Hot Rocks Polka",
+      "year": 1989
+    },
+    "whatToListenFor": "Listen to the 'Satisfaction' riff first, a fuzzed guitar line over a heavy backbeat, then find it in the medley. The polka puts everything on a bouncing two-beat pulse and hands the melody to the accordion, so a riff built around a fuzz pedal has to survive on a squeezebox. The tune survives the move. The tone and the swagger do not, which tells you how much of the Stones' sound lived in the playing rather than the notes."
+  },
+  "explanation": {
+    "age13": "Yankovic took twelve Rolling Stones songs, from 1965's 'Satisfaction' to 1978's 'Miss You', and played them one after another as a fast polka on the accordion. You still recognise every one, which shows how strong the tunes are even when the sound is completely different.",
+    "adult": "The polka medley is Yankovic's second recurring form, alongside the parody, and it treats a catalogue as raw melody. Recasting Stones songs from 1965 to 1978 into a single dance idiom strips out the tone and the attitude and leaves only the tunes, a blunt test of how much of a rock record lives in its performance. It is typed as a cover, the same as one band recording another band's song."
+  },
+  "tags": []
+}

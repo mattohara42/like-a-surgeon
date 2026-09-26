@@ -2137,3 +2137,24 @@ small and worth having in front of Matt alongside everything else here.
   in Holzman's college dorm room. MF DOOM's `labels` entry runs 1990 to
   1994. `lineage` is `rock` for the Doors and the Stooges, which makes
   the edge cross-lineage.
+- **A232. Weird Al comes in as an artist with two `cover` edges, and
+  the "Six Degrees" thread stays in `BACKLOG.md`.** The BACKLOG entry
+  waited on an overlapping artist, and Michael Jackson and the Rolling
+  Stones are now both on the map. `e-mjackson-weirdal` ('Beat It' to
+  'Eat It') and `e-stones-weirdal` ('The Hot Rocks Polka') are typed
+  `cover`, the nearest existing type: a parody here is a close
+  re-recording of someone else's arrangement with new words, and a polka
+  medley is a string of covers. A dedicated `parody` type would be a
+  schema change, so it is raised as Q24 instead of added. Jackson's
+  approval of 'Fat' and his refusal of 'Black or White' go into the one
+  Jackson edge rather than getting edges of their own, since they
+  describe the relationship rather than a separate musical change.
+  `lineage` is `other`: his records sit in whatever genre he is
+  parodying, and no single lane is honest. `activeFrom` is 1979, the
+  first release ('My Bologna'), not 1976, the first airplay.
+  `originCity` is Downey, his birthplace per Wikipedia. No Beatles edge:
+  'Polkas on 45' (1984) includes a Beatles song, but it is one entry in a
+  mixed medley and I did not verify which song, so it is mentioned in the
+  blurb only. Scotti Brothers is not a label node, so `labels` is empty.
+  Facts come from Wikipedia's articles on Yankovic, 'Eat It', 'Fat' and
+  the 'UHF' soundtrack.

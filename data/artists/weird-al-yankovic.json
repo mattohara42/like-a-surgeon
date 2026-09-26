@@ -1,0 +1,38 @@
+{
+  "id": "weird-al-yankovic",
+  "name": "\"Weird Al\" Yankovic",
+  "sortName": "Yankovic, \"Weird Al\"",
+  "type": "artist",
+  "lineage": "other",
+  "activeFrom": 1979,
+  "activeTo": null,
+  "originCity": "Downey, California",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Rick Derringer"
+  ],
+  "hook": "A song parodist whose band re-records a hit's arrangement as closely as it can while he changes the words, usually with the original artist's blessing, which makes his catalogue a record of which songs everyone knew.",
+  "blurb": {
+    "age13": "Alfred Yankovic was born in Downey, California, in 1959 and had his first accordion lesson the day before he turned seven. At 16 he sent a home-made tape to Dr. Demento, a radio DJ who played comedy records. In 1979 he recorded 'My Bologna', a joke version of the Knack's 'My Sharona', on his accordion in a college restroom because the echo sounded good, and Capitol put it out as a single. His parodies keep the music of a hit song, played by his band to sound as much like the original as they can, and change the words. He asks the original artist for permission first. Rick Derringer produced his records from his first album in 1983 until Yankovic took over in 1992. 'Eat It' (1984), his parody of Michael Jackson's 'Beat It', reached number 12 in America, his first top 40 hit, and won a Grammy. The same album had 'Polkas on 45', a string of hit songs by Devo, Deep Purple, Berlin, the Beatles and others played as fast accordion polkas, and most of his albums since have had a polka medley like it. He is on this map because a parody only works if you already know the song, so his records show which songs were big enough for everyone to know.",
+    "adult": "Born in Downey, California, in 1959, Yankovic started accordion lessons the day before his seventh birthday. His route in was Dr. Demento's syndicated comedy radio show, which first played one of his home tapes in 1976, when he was 16. 'My Bologna' (1979), a parody of the Knack's 'My Sharona' recorded on accordion in a restroom across from his college radio station for its echo, was released as a single by Capitol. Rick Derringer produced his records from his 1983 Scotti Brothers debut until Yankovic took over production in 1992. The method is consistent: the band re-creates the original arrangement closely, Yankovic writes new words, and he seeks the original artist's permission. 'Eat It' (1984), from 'In 3-D', reached number 12 on the Billboard Hot 100, his first US top 40 hit, and won the Grammy for Best Comedy Recording. 'In 3-D' also carried 'Polkas on 45' (Devo, Deep Purple, Berlin and the Beatles among its sources), which established the polka medley of about a dozen current songs as a fixture of most of his studio albums. His place on the map follows from the form: a parody lands only if the listener already knows the record, so the catalogue doubles as a record of which songs were ubiquitous, and several of its tracks are close studies of other people's arrangements."
+  },
+  "signatureTracks": [
+    {
+      "title": "My Bologna",
+      "year": 1979,
+      "whyThisOne": "The first release: a Knack parody on solo accordion, recorded in a restroom for the echo."
+    },
+    {
+      "title": "Eat It",
+      "year": 1984,
+      "whyThisOne": "The breakthrough, and the clearest example of the method: Michael Jackson's arrangement rebuilt closely, with new words."
+    },
+    {
+      "title": "The Hot Rocks Polka",
+      "year": 1989,
+      "whyThisOne": "Twelve Rolling Stones songs turned into one continuous accordion polka."
+    }
+  ]
+}
