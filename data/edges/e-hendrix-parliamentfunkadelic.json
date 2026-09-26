@@ -1,0 +1,29 @@
+{
+  "id": "e-hendrix-parliamentfunkadelic",
+  "from": "jimi-hendrix",
+  "to": "parliament-funkadelic",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1970,
+  "crossLineage": true,
+  "evidence": "Wikipedia's Funkadelic article names Jimi Hendrix, alongside Sly Stone, the MC5 and Vanilla Fudge, among the band's major inspirations. Eddie Hazel's guitar on 'Maggot Brain' (1971) is routinely compared to Hendrix. No single statement pins the influence down, so the tier is consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Jimi Hendrix Experience",
+      "title": "Machine Gun",
+      "year": 1970,
+      "search": "Jimi Hendrix Machine Gun"
+    },
+    "later": {
+      "artist": "Funkadelic",
+      "title": "Maggot Brain",
+      "year": 1971
+    },
+    "whatToListenFor": "'Machine Gun', from 'Band of Gypsys', is Hendrix stretching single notes into long, screaming, feedback-drenched lines over a slow groove. 'Maggot Brain' is ten minutes of Eddie Hazel doing the same over a quiet, repeating accompaniment, with long sustained notes that cry and break up. Listen for the guitar held on the edge of feedback. That was Hendrix's sound, and Funkadelic took it into a Black funk band's record."
+  },
+  "explanation": {
+    "age13": "Funkadelic, George Clinton's wilder, guitar-heavy band, grew up on Jimi Hendrix. You can hear it most clearly in 'Maggot Brain', where Eddie Hazel plays a ten-minute guitar solo full of long, crying notes and feedback, like Hendrix's own solos.",
+    "adult": "Hendrix proved a Black guitarist could lead a loud psychedelic rock band, and Funkadelic, the P-Funk wing built around guitar, took that licence. The Hendrix line into Funkadelic is standard in funk histories and in the band's listed inspirations, and 'Maggot Brain' is the usual exhibit. It is tiered consensus because it rests on the records and critical tradition rather than on one documented statement."
+  },
+  "tags": []
+}

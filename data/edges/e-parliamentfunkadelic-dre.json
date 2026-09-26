@@ -1,0 +1,28 @@
+{
+  "id": "e-parliamentfunkadelic-dre",
+  "from": "parliament-funkadelic",
+  "to": "dr-dre",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1993,
+  "crossLineage": true,
+  "evidence": "Dr. Dre's 'Let Me Ride' (from 'The Chronic', released as a single on 28 August 1993) uses a sample and an interpolation of the chorus of Parliament's 'Mothership Connection (Star Child)' (1976), alongside James Brown's 'Funky Drummer' and Bill Withers's 'Kissing My Love'. It won the Grammy for Best Rap Solo Performance in 1994 and reached number 34 on the Hot 100 (Wikipedia's article on the song).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Parliament",
+      "title": "Mothership Connection (Star Child)",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Dr. Dre",
+      "title": "Let Me Ride",
+      "year": 1993
+    },
+    "whatToListenFor": "Listen for the chorus. Parliament's 'Mothership Connection' ends on a slow, sung chant about swinging down in a chariot. 'Let Me Ride' re-sings that chant as its own hook over a slow, rolling G-funk beat with a high synthesiser whine. The tempo is laid back, the bass is deep, and the P-Funk chorus sits on top like a familiar voice from a car radio. That is G-funk's method: replay and re-sing the funk records rather than just loop them."
+  },
+  "explanation": {
+    "age13": "Dr. Dre's 'Let Me Ride', from 'The Chronic', takes its chorus from Parliament's 1976 song 'Mothership Connection (Star Child)'. It won Dre a Grammy in 1994. His whole G-funk sound was built on Parliament and George Clinton records like this one.",
+    "adult": "The map already carries George Clinton's solo 'Atomic Dog' into Dre. This edge adds the band, which matters because G-funk drew on the Parliament catalogue as a whole, and because 'Let Me Ride' shows the method, part sample and part re-sung interpolation."
+  },
+  "tags": []
+}

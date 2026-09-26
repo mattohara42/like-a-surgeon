@@ -1,0 +1,29 @@
+{
+  "id": "e-isleybrothers-hendrix",
+  "from": "the-isley-brothers",
+  "to": "jimi-hendrix",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1964,
+  "crossLineage": true,
+  "evidence": "In February or March 1964 Ronald Isley auditioned Hendrix and hired him as guitarist in the Isley Brothers' backing band, the I.B. Specials. He played on the two-part single 'Testify' (recorded in March, released in June 1964) and on 'Move Over and Let Me Dance' / 'Have You Ever Been Disappointed' (T-Neck, distributed by Atlantic, 1965). None charted. He toured with them through much of 1964, left near the end of October, briefly rejoined in the summer of 1965, then left for good (Wikipedia's Isley Brothers article).",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Isley Brothers",
+      "title": "Testify",
+      "year": 1964
+    },
+    "later": {
+      "artist": "The Jimi Hendrix Experience",
+      "title": "Purple Haze",
+      "year": 1967,
+      "search": "Jimi Hendrix Purple Haze"
+    },
+    "whatToListenFor": "On 'Testify' Hendrix is a sideman in a tight R&B backing band, under the Isleys' gospel-style vocals, and he is hard to pick out. Three years later on 'Purple Haze' the same player is the whole show, with distortion, bent notes and feedback. Listening to both, you can hear the R&B rhythm playing he learned in bands like this one still underneath the noise."
+  },
+  "explanation": {
+    "age13": "Before he was famous, Jimi Hendrix was the guitarist in the Isley Brothers' backing band in 1964, playing on their single 'Testify'. He got bored of playing the same set every night and left. Three years later he was a star in London.",
+    "adult": "Hendrix's R&B apprenticeship is on this map for two reasons. It shows the rhythm-guitar grounding under his later noise, and it closes a loop. In 1973 Ernie Isley brought a Hendrix-style lead guitar to the Isleys' own 'That Lady'. The documented part of the edge is the employment and the recordings. The 'That Lady' debt is described in Wikipedia's article on the group."
+  },
+  "tags": []
+}
