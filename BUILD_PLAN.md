@@ -177,7 +177,10 @@ samples on 'Eric B. Is President' (A233, A234). An edge-only batch followed with
 between nodes already on the map, closing the Kling Klang orphan and
 linking Joy Division back to Bowie and Kraftwerk (A236). A second edge-only
 batch added eight more, among them Hendrix's Isley Brothers apprenticeship,
-the Minimoog bass on 'Flash Light' and two Trax label edges (A237). `npm run report` has the current
+the Minimoog bass on 'Flash Light' and two Trax label edges (A237). A third edge batch
+added five more, including two label edges an artist's own record
+already implied (Ariwa, Sugar Hill) and the 1975 move of James Brown's
+horn section into P-Funk (A238). `npm run report` has the current
 distance on every remaining target.
 
 ## Definition of done for any milestone

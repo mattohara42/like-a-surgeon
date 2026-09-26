@@ -1,0 +1,30 @@
+{
+  "id": "e-radiophonic-oram",
+  "from": "bbc-radiophonic-workshop",
+  "to": "daphne-oram",
+  "type": "scene",
+  "confidence": "documented",
+  "year": 1958,
+  "crossLineage": false,
+  "evidence": "Oram co-founded the BBC Radiophonic Workshop with Desmond Briscoe in 1958 and served as its first studio manager, then resigned within a year, in 1959, to build her own studio and develop Oramics, a technique for drawing sound onto film (Wikipedia's articles on Oram and the Workshop). She left before Delia Derbyshire joined in 1962, so the two women never worked there together.",
+  "trackPair": {
+    "earlier": {
+      "artist": "BBC Radiophonic Workshop",
+      "title": "founding, 1958",
+      "year": 1958,
+      "search": false
+    },
+    "later": {
+      "artist": "Daphne Oram",
+      "title": "independent Oramics studio",
+      "year": 1959,
+      "search": false
+    },
+    "whatToListenFor": "There's no shared recording to compare here: Oram fought to get the Workshop opened, then left it almost immediately for a studio of her own. Listen instead to what she built next: Oramics turned drawn shapes on film into sound, with no keyboard or tape splicing at all, a technique nobody else in Britain had. Leaving is what let her build it."
+  },
+  "explanation": {
+    "age13": "Daphne Oram was one of the two people who started the BBC Radiophonic Workshop in 1958. She left after less than a year to build her own electronic music studio, where she invented a way to turn drawings into sound.",
+    "adult": "This edge exists to put Oram's founding role on the map alongside her successor Delia Derbyshire's, already linked from the Workshop. The two never overlapped there, so this is a founding-and-departure edge rather than a working relationship, and the map is honest about that in the framing."
+  },
+  "tags": []
+}

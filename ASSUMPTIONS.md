@@ -2293,3 +2293,28 @@ small and worth having in front of Matt alongside everything else here.
   Facts come from Wikipedia's articles on 'Flash Light', the Stylophone,
   Funkadelic, the Isley Brothers, Trax Records, 'Acid Tracks' and 'Let Me
   Ride'.
+- **A238. A third edge-only batch: five edges, all between existing nodes.**
+  Two label edges that were already implied by an artist's own `labels`
+  field but had no edge (`ariwa` to Mad Professor, `sugar-hill` to
+  Grandmaster Flash), a production edge (Conny Plank engineering
+  'Cluster & Eno', 1977), a scene edge for Daphne Oram's own founding of
+  the BBC Radiophonic Workshop, and a personnel edge for the 1975 move of
+  James Brown's horn section (Fred Wesley, Maceo Parker) into P-Funk,
+  alongside Bootsy Collins's earlier move. All five are `documented`.
+  Choices worth checking: `e-radiophonic-oram` is framed as a founding
+  and departure rather than a working relationship, since Oram left in
+  1959 and Derbyshire did not join until 1962; they never overlapped, and
+  the text says so plainly rather than implying they worked together.
+  `e-sugarhill-flash` restates the authorship dispute already carried at
+  Duke Bootee's entry, since a label edge from Sugar Hill has to mention
+  what "The Message" actually was. `e-ariwa-madprofessor` has no real
+  before-and-after trackPair, since Ariwa is the room he has always
+  recorded in, and the pair is a nominal loosely-dated pairing more than a
+  contrast. Dropped after checking: Autechre to Aphex Twin (no documented
+  connection found, only shared scene and era), Curtis Mayfield to James
+  Brown and George Clinton to James Brown (both rest on general-audience
+  bios, not the kind of source this project's accuracy rules ask for),
+  and a Bob James to DJ Premier sample I could not confirm exists. Facts
+  come from Wikipedia's articles on Daphne Oram, the BBC Radiophonic
+  Workshop, 'The Message', 'Cluster & Eno', Parliament-Funkadelic and
+  Fred Wesley.
