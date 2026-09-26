@@ -7,11 +7,11 @@
 // graph only through the callbacks and focus calls wired up here.
 
 import { CONFIG } from './config.js';
-import { loadGraphData } from './render/loader.js';
+import { loadGraphData, loadRecord, SHARD_FOR_KIND } from './render/loader.js';
 import { createGraph } from './render/graph.js';
 import { loadLayers, saveLayers, createLayerToggles } from './render/layers.js';
 import { loadArrange, saveArrange, createArrangeControl } from './render/arrange.js';
-import { availableRegisters, loadRegister, saveRegister, createRegisterSelector } from './reading/registers.js';
+import { availableRegisters, loadRegister, saveRegister, createRegisterSelector, pick } from './reading/registers.js';
 import { buildNeighbours } from './reading/neighbours.js';
 import { createPanel } from './reading/panel.js';
 import { renderNodePanel } from './reading/nodePanel.js';
@@ -19,6 +19,8 @@ import { renderEdgePanel } from './reading/edgePanel.js';
 import { createLegend } from './reading/legend.js';
 import { createSearch } from './reading/search.js';
 import { applyTypeScale } from './reading/type.js';
+import { COPY } from './reading/copy.js';
+import { h } from './reading/dom.js';
 
 const statusEl = document.getElementById('status');
 const appEl = document.getElementById('app');
@@ -94,11 +96,39 @@ async function main() {
 
   const panelContext = () => ({ register, nodesById, neighbours, sceneMembers, goNode, goEdge });
 
+  // The map holds only the skeleton of each record (render/loader.js). A
+  // panel loads the full record, then draws it over the skeleton so the
+  // resolved from/to nodes and normalized years stay as the map has them.
+  function renderTarget(target) {
+    if (target.kind === 'node') {
+      const node = nodesById.get(target.id);
+      return loadRecord(SHARD_FOR_KIND[node.kind], node.id).then((raw) =>
+        renderNodePanel({ ...node, raw }, panelContext()),
+      );
+    }
+    const edge = edgesById.get(target.id);
+    return loadRecord('edges', edge.id).then((full) =>
+      renderEdgePanel({ ...full, from: edge.from, to: edge.to }, panelContext()),
+    );
+  }
+
+  // What the panel shows while the full record loads, or if it cannot: the
+  // name from the skeleton, so the reader knows the click landed.
+  function panelNotice(target, copyKey) {
+    const edge = target.kind === 'edge' ? edgesById.get(target.id) : null;
+    const title = edge ? `${edge.from.name} → ${edge.to.name}` : nodesById.get(target.id)?.name;
+    return h(
+      'article',
+      { class: 'panel-body' },
+      h('h2', {}, title ?? ''),
+      h('p', { class: 'note' }, pick(COPY.headings[copyKey], register)),
+    );
+  }
+
   const panel = createPanel(panelEl, {
-    renderTarget: (target) =>
-      target.kind === 'node'
-        ? renderNodePanel(nodesById.get(target.id), panelContext())
-        : renderEdgePanel(edgesById.get(target.id), panelContext()),
+    renderTarget,
+    renderLoading: (target) => panelNotice(target, 'loading'),
+    renderFailed: (target) => panelNotice(target, 'loadFailed'),
     onNavigate: focusTarget,
     onClose: () => graph?.clearSelection(),
   });

@@ -11,28 +11,6 @@ import { CONFIG } from '../config.js';
 import { COPY } from './copy.js';
 import { h } from './dom.js';
 
-// Every register object a reader can reach: blurbs, edge explanations, demo
-// captions, thread text, and the interface's own copy.
-function* registerObjects(data) {
-  for (const node of data.nodes) {
-    if (node.raw.blurb) yield node.raw.blurb;
-  }
-  for (const edge of data.edges) {
-    if (edge.explanation) yield edge.explanation;
-  }
-  for (const demo of Object.values(data.demos)) {
-    if (demo.caption) yield demo.caption;
-  }
-  for (const thread of Object.values(data.threads)) {
-    if (thread.intro) yield thread.intro;
-    if (thread.outro) yield thread.outro;
-    for (const step of thread.steps ?? []) {
-      if (step.framing) yield step.framing;
-    }
-  }
-  yield* copyObjects(COPY);
-}
-
 // Walks the copy tree for leaf register objects: any object whose values
 // are all strings.
 function* copyObjects(node) {
@@ -48,8 +26,11 @@ function* copyObjects(node) {
 
 export function availableRegisters(data) {
   const candidates = CONFIG.reading.registers.map((r) => r.key);
-  const complete = new Set(candidates);
-  for (const obj of registerObjects(data)) {
+  // The data's register objects are checked when the index is built
+  // (tools/skeleton.js), since the prose is not loaded at startup, and
+  // arrive as `data.registers`. The interface copy is checked here.
+  const complete = new Set(candidates.filter((key) => data.registers.includes(key)));
+  for (const obj of copyObjects(COPY)) {
     for (const key of complete) {
       if (typeof obj[key] !== 'string' || !obj[key].trim()) complete.delete(key);
     }

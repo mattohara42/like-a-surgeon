@@ -5,11 +5,16 @@
 // a short back stack so a reader who follows three edges sideways can step
 // back without hunting for where they were. The stack is in memory only;
 // a shareable URL for a view is in the backlog.
+//
+// `renderTarget` may return a Promise, since a record's full text loads
+// only when its panel opens (render/loader.js). Until it settles the panel
+// shows `renderLoading(target)`, and `renderFailed(target, err)` if it
+// fails. A result that arrives after the reader has moved on is dropped.
 
 import { CONFIG } from '../config.js';
 import { h } from './dom.js';
 
-export function createPanel(el, { renderTarget, onNavigate, onClose }) {
+export function createPanel(el, { renderTarget, renderLoading, renderFailed, onNavigate, onClose }) {
   let current = null;
   const stack = [];
   let returnFocusTo = null;
@@ -21,7 +26,15 @@ export function createPanel(el, { renderTarget, onNavigate, onClose }) {
   el.setAttribute('aria-hidden', 'true');
   el.inert = true;
 
-  function draw() {
+  // Bumped on every draw, so a slow load for a target the reader has left
+  // cannot overwrite what they are reading now.
+  let drawToken = 0;
+
+  // `scrollTop` is where to leave the scroll once the content is in: 0 for
+  // a new target, the old position for a redraw in place. `andFocus` moves
+  // focus to the heading once the real content is in.
+  function draw({ scrollTop = 0, andFocus = false } = {}) {
+    const token = ++drawToken;
     const controls = h(
       'div',
       { class: 'panel-controls' },
@@ -30,8 +43,23 @@ export function createPanel(el, { renderTarget, onNavigate, onClose }) {
         : null,
       h('button', { type: 'button', class: 'panel-close', 'aria-label': 'Close', onClick: close }, '×'),
     );
-    el.replaceChildren(controls, renderTarget(current));
-    el.scrollTop = 0;
+    const show = (body) => {
+      if (token !== drawToken) return;
+      el.replaceChildren(controls, body);
+      el.scrollTop = scrollTop;
+      if (andFocus) focusHeading();
+    };
+    const result = renderTarget(current);
+    if (typeof result?.then !== 'function') {
+      show(result);
+      return;
+    }
+    const target = current;
+    el.replaceChildren(controls, renderLoading(target));
+    result.then(show, (err) => {
+      console.error(err);
+      show(renderFailed(target, err));
+    });
   }
 
   function focusHeading() {
@@ -50,18 +78,16 @@ export function createPanel(el, { renderTarget, onNavigate, onClose }) {
       if (stack.length > CONFIG.panel.backStackMax) stack.shift();
     }
     current = target;
-    draw();
     el.classList.add('open');
     el.setAttribute('aria-hidden', 'false');
     el.inert = false;
-    focusHeading();
+    draw({ andFocus: true });
   }
 
   function back() {
     if (!stack.length) return;
     current = stack.pop();
-    draw();
-    focusHeading();
+    draw({ andFocus: true });
     onNavigate(current);
   }
 
@@ -72,6 +98,7 @@ export function createPanel(el, { renderTarget, onNavigate, onClose }) {
     el.inert = true;
     current = null;
     stack.length = 0;
+    drawToken++;
     // Hand focus back to where the reader was, if that is still on the page.
     if (returnFocusTo?.isConnected) returnFocusTo.focus({ preventScroll: true });
     returnFocusTo = null;
@@ -99,9 +126,7 @@ export function createPanel(el, { renderTarget, onNavigate, onClose }) {
     // position's meaning; does not move focus.
     redraw: () => {
       if (!current) return;
-      const scroll = el.scrollTop;
-      draw();
-      el.scrollTop = scroll;
+      draw({ scrollTop: el.scrollTop });
     },
     // Width the drawer covers right now, for the camera inset. offsetWidth
     // ignores the slide transform, so this is correct mid-animation.
