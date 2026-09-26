@@ -175,7 +175,9 @@ Island and Los Angeles gangsta rap, all built from artists already on
 the map, with nine edges including two Honey Drippers and James Brown
 samples on 'Eric B. Is President' (A233, A234). An edge-only batch followed with eleven edges
 between nodes already on the map, closing the Kling Klang orphan and
-linking Joy Division back to Bowie and Kraftwerk (A236). `npm run report` has the current
+linking Joy Division back to Bowie and Kraftwerk (A236). A second edge-only
+batch added eight more, among them Hendrix's Isley Brothers apprenticeship,
+the Minimoog bass on 'Flash Light' and two Trax label edges (A237). `npm run report` has the current
 distance on every remaining target.
 
 ## Definition of done for any milestone

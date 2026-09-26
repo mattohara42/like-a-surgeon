@@ -2267,3 +2267,29 @@ small and worth having in front of Matt alongside everything else here.
   Joy Division, the Sex Pistols, 'The Great Rock 'n' Roll Swindle',
   Funkadelic, Lee Perry, Derrick May, Kling Klang, Kool Herc, 'Let the
   Rhythm Hit 'Em', Big Daddy Kane and 'Long Live the Kane'.
+- **A237. A second edge-only batch: eight edges, four of them
+  cross-lineage.** This batch closes more gaps between existing nodes: the
+  Minimoog had only its Kraftwerk edge, although Bernie Worrell's
+  'Flash Light' bass is the other famous use; the Stylophone had only
+  Bowie; Hendrix had no link to Funkadelic or to his 1964 Isley Brothers
+  apprenticeship; Trax had only its scene edge; and Dr. Dre was linked to
+  Clinton's solo 'Atomic Dog' but not to Parliament. Tiers: six
+  `documented`, two `consensus`. Hendrix to Funkadelic is consensus (the
+  band's listed inspirations and the 'Maggot Brain' comparison, with no
+  single statement). Marshall Jefferson to Phuture is consensus because
+  his production credit is documented but DJ Pierre disputes what it
+  amounted to, apart from the agreed tempo change, and the edge states
+  the dispute. One edge dropped: U-Roy to Kool Herc. Herc left Kingston in
+  November 1967, before U-Roy's run of hits, and the source I checked
+  describes sound-system toasting in general without naming U-Roy. The
+  existing `e-kingston-bronx` scene edge already carries the general
+  link. Two `trackPair` sides are not records: the Trax pressing plant
+  (the label shaped distribution, not sound) and Ron Hardy's plays of
+  'Acid Tracks', dated to the release year because I found no date for the
+  first plays. Claims cut in review: Kraftwerk playing the Stylophone on
+  stage, Ernie Isley watching Hendrix as a boy, a running time for 'Acid
+  Tracks', and a causal link between the 1991 Biz Markie ruling and 'The
+  Chronic' replaying rather than sampling. None of them could be checked.
+  Facts come from Wikipedia's articles on 'Flash Light', the Stylophone,
+  Funkadelic, the Isley Brothers, Trax Records, 'Acid Tracks' and 'Let Me
+  Ride'.
