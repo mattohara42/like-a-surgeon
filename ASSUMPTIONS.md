@@ -2318,3 +2318,24 @@ small and worth having in front of Matt alongside everything else here.
   come from Wikipedia's articles on Daphne Oram, the BBC Radiophonic
   Workshop, 'The Message', 'Cluster & Eno', Parliament-Funkadelic and
   Fred Wesley.
+- **A239. A fourth edge-only batch: six edges.** Bunny Lee to Scientist (a
+  naming story, not the mentorship Tubby's own edges already cover), Kool
+  G Rap to Nas (their 1995 collaboration, standing in for an influence
+  Rolling Stone describes as running earlier, through his "early
+  records"), Mantronix to Beastie Boys (two samples twenty years apart),
+  the Incredible Bongo Band to N.W.A (the same "Bongo Rock" that gave
+  Kool Herc his first breaks, resurfacing on a 1991 gangsta rap record),
+  Chess Records to Led Zeppelin (Willie Dixon's uncredited "You Need
+  Love" becoming "Whole Lotta Love", the lawsuit and the 1999 credit),
+  and Motown to the Isley Brothers (their brief, one-hit Tamla stop,
+  1965-1969). All six `documented`. Dropped after checking: Carl Craig to
+  Derrick May, where Wikipedia describes only a fan hearing a radio show
+  and passing a tape through an intermediary, not the mentorship the
+  Detroit techno "second wave" narrative implies. Willie Dixon himself
+  isn't a node, so the Chess edge runs from the label; the same convention
+  as `label.founders` carrying plain names (A26) rather than inventing an
+  artist record for someone with only this one edge to justify it. Facts
+  come from Wikipedia's articles on Scientist, Kool G Rap, Mantronix,
+  'Whole Lotta Love', 'You Need Love', Willie Dixon, the Isley Brothers
+  and 'This Old Heart of Mine', and WhoSampled's catalogue for the two
+  sample edges.
