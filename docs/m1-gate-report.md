@@ -12,9 +12,9 @@ Regenerate with `npm run report`. This report describes the dataset only;
 | machines | 31 | 25 | met |
 | scenes | 20 | 20 | met |
 | labels | 30 | 30 | met |
-| edges | 215 | 350 | 61% |
+| edges | 226 | 350 | 65% |
 | threads | 2 | 5 | 40% |
-| crossLineageEdges | 87 | 60 | met |
+| crossLineageEdges | 90 | 60 | met |
 | edgesWithDemo | 5 | 30 | 17% |
 
 ## Counts by lineage
@@ -48,13 +48,13 @@ Artists alone:
 
 | edge type | count |
 |---|---:|
-| direct | 47 |
+| direct | 52 |
 | technological | 45 |
+| label | 33 |
+| production | 31 |
 | sample | 31 |
-| label | 30 |
-| production | 29 |
 | scene | 27 |
-| cover | 3 |
+| cover | 4 |
 | reaction-against | 2 |
 | rediscovery | 1 |
 
@@ -62,8 +62,8 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 150 |
-| consensus | 64 |
+| documented | 158 |
+| consensus | 67 |
 | asserted | 1 |
 
 ## The 20 edges to read hardest
@@ -236,7 +236,7 @@ Evidence: Critics and hip-hop production histories consistently describe RZA's d
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 214 edges that carry one.
+Drawn with seed 1 from the 225 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
@@ -246,116 +246,116 @@ KMD, "Peachfuzz" (1990) to MF DOOM, "Doomsday" (1999)
 
 On 'Peachfuzz' Dumile is Zev Love X: young, bright-voiced and trading lines inside a group, on their first single for a major label. Nine years later the same man is alone on the record, producing it himself, his voice lower, flatter and unhurried over a looped slice of Sade. Between the two sit a shelved album, a dead brother and several years out of music. The voice is the easiest place to hear the distance.
 
-### 2. `e-atkins-may`
+### 2. `e-memphisstax-charmels`
 
-Cybotron, "Clear" (1983) to Rhythim Is Rhythim, "Nude Photo" (1987)
+Sam & Dave, "Hold On, I'm Comin'" (1966) to The Charmels, "As Long as I've Got You" (1967)
 
-Both share the same cold, sequenced foundation, but May's record adds a warmth and swing Atkins' more rigid, Kraftwerk-indebted arrangements don't reach for.
+Both records come from the same writing room: Hayes and Porter's melodic instinct and a horn-driven Stax arrangement. Sam & Dave's version is a full-band, up-tempo declaration; the Charmels', a year later, slows the same songwriting team's sensibility into a sadder, sparer piano ballad, the version a producer would later go looking for.
 
-### 3. `e-tubby-sly-robbie`
-
-King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Sly and Robbie, "Sinsemilla (Black Uhuru)" (1980)
-
-Tubby empties a finished mix out until the rhythm is nearly all that's left. Sly and Robbie build the rhythm that way from the start: drum and bass carrying the song, everything else arranged around them rather than the other way around.
-
-### 4. `e-re201-tubby`
-
-Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to King Tubby, "Dub from the Roots" (1974)
-
-Compare the echo here with Perry's. Tubby's repeats are cleaner and more rhythmic, placed so they land where a drum would have landed, so the delay becomes part of the pattern rather than a haze over it. Same kind of box, opposite instinct: Perry lets it flood, Tubby uses it to keep time.
-
-### 5. `e-rubin-publicenemy`
-
-LL Cool J, "Rock the Bells" (1985) to Public Enemy, "Public Enemy No. 1" (1987)
-
-'Rock the Bells', produced by Rubin for Def Jam, is the label's early sound at its barest: loud drum-machine beats, scratching and a voice, with almost nothing else. 'Public Enemy No. 1' keeps that stripped frame of heavy beat and forceful voice, then adds one thing that does not belong in it, a squealing synthesiser sample looping over the top. You can hear Def Jam's hardness in it, and the first sign of the noise the Bomb Squad would pile on a year later.
-
-### 6. `e-knuckles-atkins`
-
-Frankie Knuckles, "Warehouse-era DJ sets" (1982) to Model 500 (Juan Atkins), "No UFOs" (1985)
-
-Detroit techno's four-on-the-floor structure owes something to house records like Knuckles' sets reaching Detroit via radio and record pools; listen for how close the underlying drum pattern is, even as the two genres' moods diverge sharply.
-
-### 7. `e-fuzztone-stones`
-
-Marty Robbins, "Don't Worry" (1961) to The Rolling Stones, "(I Can't Get No) Satisfaction" (1965)
-
-Start with the Robbins record and wait for the instrumental break, where a bass line suddenly comes out torn and buzzing. That accident is what the Fuzz-Tone was built to repeat. Then play 'Satisfaction'. The riff comes in alone, and each note swells and holds with a raspy buzz instead of ringing out and fading like a clean guitar. Hum it and it phrases like a horn line, which is what Richards has said it was meant to become.
-
-### 8. `e-hendrix-cypresshill`
-
-The Jimi Hendrix Experience, "Are You Experienced?" (1967) to Cypress Hill, "How I Could Just Kill a Man" (1991)
-
-'Are You Experienced?' is full of sounds played backwards on tape: guitar and drums that swell up and cut off where they'd normally ring out. Muggs lifts a short guitar lick from it and loops it under B-Real's high voice and his own murky drums. Listen for Hendrix's guitar turned into a repeating pattern, a piece of 1967 psychedelia working as a hook in a 1991 rap single.
-
-### 9. `e-808-mantronix`
-
-Roland, "TR-808 factory voices" (1980) to Mantronix, "Fresh Is the Word" (1985)
-
-The 808 carries almost the entire track: a hard, dry kick-and-hi-hat pattern with almost no live instrumentation layered over it, an early example of hip-hop production built to sound like a machine rather than to disguise one.
-
-### 10. `e-stones-weirdal`
-
-The Rolling Stones, "(I Can't Get No) Satisfaction" (1965) to "Weird Al" Yankovic, "The Hot Rocks Polka" (1989)
-
-Listen to the 'Satisfaction' riff first, a fuzzed guitar line over a heavy backbeat, then find it in the medley. The polka puts everything on a bouncing two-beat pulse and hands the melody to the accordion, so a riff built around a fuzz pedal has to survive on a squeezebox. The tune survives the move. The tone and the swagger do not, which tells you how much of the Stones' sound lived in the playing rather than the notes.
-
-### 11. `e-909-heard`
-
-Roland, "TR-909" (1983) to Mr. Fingers, "Washing Machine" (1986)
-
-The drum machine carries this record almost on its own. Listen to the hi-hats: bright and metallic, ticking in a perfectly even grid over a synthetic kick. The 909's cymbals were short digital recordings, which is why they sound harder and more real than the rest of the kit. Then play 'Can You Feel It', made on the same two machines in the same few days, and hear how differently they can be used.
-
-### 12. `e-mirage-saunderson`
+### 3. `e-mirage-saunderson`
 
 Ensoniq, "Mirage, an eight-bit sampler at 1,695 dollars" (1984) to Inner City, "Big Fun" (1988)
 
 Listen to how the record is put together underneath the vocal: short stabs that all stop dead rather than ring out, repeating in the same place every bar. Then notice what the sampler let him do that the others could not, which is put a full sung performance on top of it. Detroit techno arriving on daytime radio starts here.
 
-### 13. `e-sugarhill-mellemel`
+### 4. `e-swinginglondon-hendrix`
 
-The Sugarhill Gang, "Rapper's Delight" (1979) to Grandmaster Flash and the Furious Five, "The Message" (1982)
+The Who, "My Generation" (1965) to The Jimi Hendrix Experience, "Purple Haze" (1967)
 
-Both records are played by the same house band rather than assembled from other people's records, and once you know that you can hear it: the music breathes, pushes and drags the way people do. Sugar Hill's rap records sound like funk records with rappers on them, because that is literally what they are. That house-band sound is a label decision, not an artist's.
+London in 1965 was already playing loud: listen to the feedback and the smashed chords at the end of 'My Generation'. Then play 'Purple Haze' a year and a half later. An American who arrived in that scene took the same noise, the fuzz and the feedback, and made it melodic, with the distortion carrying the tune instead of wrecking it. The scene gave him an audience ready for that.
 
-### 14. `e-atkins-ur`
+### 5. `e-sly-parliamentfunkadelic`
 
-Cybotron, "Clear" (1983) to Underground Resistance, "Death Star" (1992)
+Sly and the Family Stone, "Thank You (Falettinme Be Mice Elf Agin)" (1969) to Parliament, "Up for the Down Stroke" (1974)
 
-Atkins' record is cool and controlled; UR's is aggressive and stripped of any pop concession. Same machine vocabulary, opposite emotional register and opposite stance toward the music industry.
+On 'Thank You', Larry Graham's bass is thumped and plucked so hard it becomes the lead instrument, and the vocal lines pass between several singers instead of staying with one. 'Up for the Down Stroke' does the same with a bigger crowd: the bass is up front, and the vocals are chants and call-and-response from the whole group. The idea of the band as a gang of voices, with the bass in charge, is what P-Funk took from Sly.
 
-### 15. `e-goldie-bowie`
+### 6. `e-dmx-rundmc`
 
-Goldie, "Inner City Life" (1994) to David Bowie, "Little Wonder" (1997)
+Orange Krush, "Action" (1982) to Run-D.M.C., "Sucker M.C.'s" (1983)
 
-Goldie's jungle keeps the chopped, timestretched Amen break at the centre of the arrangement, everything else built around it. Bowie's 'Little Wonder', from 'Earthling', bolts the same fast, fractured breakbeat programming onto a guitar-driven rock song, industrial riffs sitting on top of a rhythm a club regular, not a rock producer, brought into his world.
+On 'Action' the beat is played by a drummer inside a band, with bass, keys and a singer around it. On 'Sucker M.C.'s' the same pattern comes back out of a drum machine and everything else is gone. There is no bassline and no melody. Listen for how much reverb sits on the snare, so each hit booms out into the empty space, and for the two voices passing lines back and forth where a band used to be. The emptiness is the arrangement.
 
-### 16. `e-hardy-jefferson`
+### 7. `e-herc-cokelarock`
 
-Ron Hardy, "Music Box DJ sets" (1983) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
+DJ Kool Herc, "the back-to-school jam at 1520 Sedgwick Avenue" (1973) to Coke La Rock, "shout-outs over Herc's records at Bronx parties" (1973)
 
-Jefferson's piano hook is the part everyone remembers, but the mix, the sequencing and drum programming Hardy shaped, is what makes it a dancefloor record rather than just a song.
+Nothing was recorded, so listen forward instead. Take any rap record and strip out the rhyme, the meter and the subject, and what is left underneath is a person naming friends in the room over somebody else's drums. That residue is what La Rock was doing, and it is the part that never went away.
 
-### 17. `e-factory-joydivision`
+### 8. `e-re201-tubby`
 
-Joy Division, "An Ideal for Living (EP)" (1978) to Joy Division, "Unknown Pleasures (album)" (1979)
+Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to King Tubby, "Dub from the Roots" (1974)
 
-The 1978 EP is the band on their own, paying for it themselves: fast, plain and close to the punk gig that started them. A year later, with the label's money and the label's producer, the same four players sound like they are in a much larger, colder room. Listen to the drums and the space around them on Unknown Pleasures. The separation and the echoes come from Hannett's desk, not from the band, and that sound is the label's contribution.
+Compare the echo here with Perry's. Tubby's repeats are cleaner and more rhythmic, placed so they land where a drum would have landed, so the delay becomes part of the pattern rather than a haze over it. Same kind of box, opposite instinct: Perry lets it flood, Tubby uses it to keep time.
 
-### 18. `e-minimoog-kraftwerk`
+### 9. `e-flash-theodore`
 
-Moog Music, "Minimoog Model D" (1970) to Kraftwerk, "Autobahn" (1974)
+Grandmaster Flash, "quick-mix theory at Bronx jams" (1975) to Grand Wizzard Theodore, "the scratch" (1975)
 
-Listen to the bass and try to find a player in it. There is no fret noise, no finger on a string, no note arriving a fraction late because a hand had to move. Every note has the same attack as the one before. That evenness is not a limitation being worked around, it is the subject: a record about driving, played by something that does not get tired.
+Flash's technique is about making the join invisible: you should not hear the second record arrive. Theodore's does the opposite and makes the hand audible on purpose. Listen for that inversion, because it is the moment the turntable stops pretending to be a playback device and starts admitting it is being operated.
 
-### 19. `e-elpico-kinks`
+### 10. `e-kraftwerk-neu`
 
-Dave Davies, "Elpico amplifier with a slashed speaker" (1964) to The Kinks, "You Really Got Me" (1964)
+Kraftwerk, "Ruckzuck" (1970) to Neu!, "Hallogallo" (1972)
 
-The riff is two chords, a step apart, played over and over. Listen to the edges of each chord rather than the notes: a papery rattle and crackle rides on top of it, loudest as each chord dies away. That is a torn speaker cone flapping. When the song lifts the riff higher, the grit comes along with it. Nothing in the chain was built to sound like that.
+'Ruckzuck' is the early Kraftwerk: a flute riff, echoing, over drums that speed up and hit hard. There is already a hunger for forward motion in it. 'Hallogallo' keeps only that part. Dinger plays one straight, even beat for ten minutes and never fills or breaks it, while Rother's guitars stack into a shimmer on top. Listen for how the drums stop being decoration and become the road the music drives on.
 
-### 20. `e-mellotron-stones`
+### 11. `e-cologne-can`
 
-Streetly Electronics, "Mellotron, sold as a home orchestra" (1963) to The Rolling Stones, "2000 Light Years from Home" (1967)
+Karlheinz Stockhausen, "Gesang der Jünglinge" (1956) to Can, "Halleluhwah" (1971)
 
-The strings that swell in around the vocal are not a string section. Listen to how each note starts: no scrape of a bow, just a smooth fade up, and a slight wobble in pitch as if every player were a little seasick. That wobble is tape being dragged past a playback head. One person is playing it from a keyboard.
+Stockhausen's piece treats a boy's voice as raw material, cut, layered and processed inside a studio built for exactly that. Fifteen years later and a few miles away, Can builds an eighteen-minute rock groove the same way: recorded loosely, then shaped and trimmed on tape until the editing itself is the composition, a studio-first method the city, not just the man, made available to them.
+
+### 12. `e-cokelarock-robinson`
+
+Coke La Rock, "shout-outs over Herc's records at Bronx parties" (1973) to The Sugarhill Gang, "Rapper's Delight" (1979)
+
+Listen to 'Rapper's Delight' for how much of it is stock phrasing rather than anything written for the record. The hotel-motel lines, the call-and-response, the way the rappers hand off to each other: none of that was invented in a studio in New Jersey in 1979. It was the common language of Bronx parties, being recorded for the first time by people who mostly were not the ones who built it.
+
+### 13. `e-longisland-publicenemy`
+
+Spectrum City, "Check Out the Radio" (1984) to Public Enemy, "Public Enemy No. 1" (1987)
+
+Listen to Chuck D on 'Check Out the Radio' first: the deep, booming delivery is already there in 1984. Then play 'Public Enemy No. 1', where the same voice sits over a high, squealing synthesiser whine sampled from the JB's 'Blow Your Head', looping over a heavy beat. The voice barely changed in three years. Listen to how much the production did, from an ordinary early-80s single toward the start of the Bomb Squad's noise.
+
+### 14. `e-flash-mellemel`
+
+Grandmaster Flash, "Bronx jams with the Furious Five" (1977) to Grandmaster Flash and the Furious Five, "Superrappin'" (1979)
+
+Listen to how the five MCs hand lines to each other, finishing each other's bars and coming in together on the last word. That is choreography built for a live room where the DJ is the main event and the MCs work around him, and you can hear it surviving intact onto a record where there is no room and no crowd.
+
+### 15. `e-tubby-lee`
+
+King Tubby, "early dub plates for Duke Reid" (1968) to Bunny Lee productions, dubbed by King Tubby, "various" (1974)
+
+Lee's productions from the mid-1970s onward routinely exist in two forms: a vocal version, and a King Tubby dub cut sold or played separately. The dub cut is where the empty space and echo live.
+
+### 16. `e-robinson-mellemel`
+
+Sylvia Robinson, "Pillow Talk" (1973) to Grandmaster Flash and the Furious Five, "The Message" (1982)
+
+Listen to the tempo and then imagine a dancefloor. It does not work, and the group knew it did not work, which is why they did not want it. What the record buys with that refusal is room: at this speed a voice has time to finish a thought. Nearly everything rap does with slow tempo afterwards depends on somebody proving a slow rap record could sell.
+
+### 17. `e-moog-tangerinedream`
+
+R. A. Moog Co., "Moog modular synthesizer with 960 sequencer" (1965) to Tangerine Dream, "Phaedra" (1974)
+
+Wait for the pulse. A short row of bass notes repeats, bubbling, while its brightness slowly opens and closes as someone turns a filter knob. Nobody is playing those notes. The sequencer is. The musicians play over it: drifting Mellotron, echoing synth lines. Listen for the loop slightly changing pitch and tone over minutes, which is the hand on the knob, and for how long it keeps going without ever settling into a song.
+
+### 18. `e-kinks-who`
+
+The Kinks, "You Really Got Me" (1964) to The Who, "I Can't Explain" (1965)
+
+The same trick in both: a short chord shape shoved up the neck, no bass movement underneath, and the riff repeated with almost no variation. Then listen to the drums. The Kinks keep time. Keith Moon refuses to, and that difference is the whole future of the Who.
+
+### 19. `e-honeydrippers-ericbrakim`
+
+The Honey Drippers, "Impeach the President" (1973) to Eric B. & Rakim, "Eric B. Is President" (1986)
+
+Listen to the drum intro of 'Impeach the President': a dry, tight kick and snare with a hi-hat, every hit distinct. On 'Eric B. Is President' those drums sit under a rolling bassline and scratches, with very little else on top. The space in the track is what lets Rakim's calm, low delivery come through. He does not have to shout over anything.
+
+### 20. `e-rubin-beastieboys`
+
+LL Cool J, "I Can't Live Without My Radio" (1985) to Beastie Boys, "No Sleep till Brooklyn" (1986)
+
+Same producer, a year apart. On LL's record Rubin cut everything down to a booming drum machine and a voice. On 'No Sleep till Brooklyn' he keeps the booming drums and adds the other thing he loved: heavy metal guitar, riffs he played himself and a solo from Slayer's Kerry King. Listen for the moment the solo tears through. Rap and metal on one track, from a producer making Slayer's album in the same period.
