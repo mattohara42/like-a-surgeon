@@ -1,0 +1,32 @@
+{
+  "id": "e-ariwa-madprofessor",
+  "from": "ariwa",
+  "to": "mad-professor",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1979,
+  "crossLineage": false,
+  "evidence": "Mad Professor (Neil Fraser) built his own mixing board and opened a four-track studio in his south London living room in 1979, naming it Ariwa. He has run it and released his own and others' dub through it ever since (Wikipedia's and this map's Ariwa and Mad Professor entries; his artist record's own `labels` field already listed this relationship without an edge).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Mad Professor",
+      "title": "early Ariwa dub sides",
+      "year": 1979,
+      "search": false
+    },
+    "later": {
+      "artist": "Mad Professor",
+      "title": "Dub Me Crazy",
+      "year": 1982,
+      "search": "Mad Professor Dub Me Crazy"
+    },
+    "whatToListenFor": "There isn't a before-and-after here: Ariwa is the room Mad Professor built to make dub in, so his whole catalogue was made inside it. Listen to any 'Dub Me Crazy' volume for a home studio's dub sound: a small, dry room, echo and reverb doing the work a bigger studio's space would otherwise do."
+  },
+  "explanation": {
+    "age13": "Mad Professor built his own recording studio in his living room in 1979 and named it Ariwa. He has released almost everything he's made through it ever since.",
+    "adult": "Ariwa is unusual on this map as a label that is really one producer's own room, the same shape as Kling Klang for Kraftwerk. The edge exists mainly to make that relationship, already stated in Mad Professor's own `labels` field, visible as a line on the map."
+  },
+  "tags": [
+    "labels"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "e-jamesbrown-parliamentfunkadelic",
+  "from": "james-brown",
+  "to": "parliament-funkadelic",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1975,
+  "crossLineage": false,
+  "evidence": "Maceo Parker joined James Brown's band in 1964 and Fred Wesley became bandleader and musical director of the J.B.'s in the 1970s, arranging horns on records including 'Say It Loud - I'm Black and I'm Proud'. In 1975 both left Brown's organisation and joined George Clinton's Parliament-Funkadelic world, Wesley playing through Bootsy Collins's Rubber Band into the early 1980s (Wikipedia's articles on Parliament-Funkadelic and Fred Wesley). Bootsy Collins himself had already made the same move in 1970, already an edge on this map.",
+  "trackPair": {
+    "earlier": {
+      "artist": "James Brown",
+      "title": "Say It Loud - I'm Black and I'm Proud",
+      "year": 1968
+    },
+    "later": {
+      "artist": "Parliament",
+      "title": "Mothership Connection",
+      "year": 1975
+    },
+    "whatToListenFor": "Listen to the horns. On the James Brown record they punch in short, tight stabs that lock to the drums like another percussion instrument. On 'Mothership Connection' the same kind of arranging is stretched over a slower, spacier groove, with room left around each hit. Fred Wesley arranged horns for both records. The difference is the band he was arranging them into."
+  },
+  "explanation": {
+    "age13": "By 1975, two of James Brown's key musicians, Fred Wesley and Maceo Parker, had left his band and joined George Clinton's Parliament-Funkadelic world, following the bass player Bootsy Collins, who had made the same move five years earlier. They brought James Brown's tight horn arranging with them.",
+    "adult": "This edge is about musicians rather than a single record: an entire horn section built inside James Brown's band carried his arranging discipline into P-Funk's looser, more theatrical funk. It sits alongside the existing Bootsy Collins edge as the second and larger wave of that migration, and it is why P-Funk's horns are recognisably descended from Brown's even though the two bandleaders never worked together directly."
+  },
+  "tags": []
+}

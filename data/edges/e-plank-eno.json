@@ -1,0 +1,30 @@
+{
+  "id": "e-plank-eno",
+  "from": "conny-plank",
+  "to": "brian-eno",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1977,
+  "crossLineage": true,
+  "evidence": "'Cluster & Eno' (Sky Records, 1977) was recorded at Conny's Studio in Cologne with Conny Plank as engineer and co-producer alongside Cluster (Hans-Joachim Roedelius and Dieter Moebius). Brian Eno's prior visibility from Roxy Music brought the record wider attention than Cluster's earlier albums, and a second collaboration, 'After the Heat', followed in 1978 (Wikipedia's article on 'Cluster & Eno').",
+  "trackPair": {
+    "earlier": {
+      "artist": "Cluster",
+      "title": "Sowiesoso",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Cluster & Eno",
+      "title": "Cluster & Eno",
+      "year": 1977
+    },
+    "whatToListenFor": "'Sowiesoso' is Cluster alone: two synthesiser players building slow, softly overlapping tones with no clear beat. 'Cluster & Eno', made a year later in Plank's Cologne studio, keeps that same unhurried pace but adds Eno's clearer melodic sense, so tones resolve into something closer to a tune. Plank recorded and shaped both records, and the difference between them is the extra voice in the room."
+  },
+  "explanation": {
+    "age13": "Brian Eno went to Cologne in 1977 to record an album with the German duo Cluster, produced by Conny Plank, the engineer already linked on this map to Kraftwerk and Neu!. It brought Cluster a much bigger audience than they'd had before.",
+    "adult": "Plank is the connective tissue of German experimental music in the 1970s, and this session is where his studio brought Eno directly into that world rather than only influencing him from a distance, as the Bowie edges already on the map do. The edge is typed production because Plank's engineering and co-production, not just his studio's address, shaped the record."
+  },
+  "tags": [
+    "production"
+  ]
+}
