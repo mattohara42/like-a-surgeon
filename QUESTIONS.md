@@ -4,6 +4,14 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
+- **Q24. Should parody be its own edge type?** Weird Al's two edges
+  (A232) are typed `cover`. That is close, but a parody keeps the
+  arrangement and deliberately replaces the words, which a reader might
+  want to filter on or see drawn differently. Options:
+  (a) **Recommended for now.** Keep `cover`. Two edges do not justify a
+  schema change, and the edge text already says "parody".
+  (b) Add `parody` to the edge `type` enum (SCHEMA.md, validator, and the
+  renderer's edge styling).
 - **Q23. Where do the tape and radiophonic pioneers belong now that
   lineages are cheap to add?** Schaeffer, Stockhausen, Oram, Derbyshire,
   and the `paris-musique-concrete` and `bbc-radiophonic-workshop` scenes

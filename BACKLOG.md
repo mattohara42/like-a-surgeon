@@ -38,11 +38,14 @@ correct response to a good idea arriving mid-milestone.
   genuinely touches a surprising cross-section of artists (parody targets
   like Coolio, Michael Jackson, Nirvana, The Knack, Devo; polka-medley
   covers of dozens more), which is exactly what the `thread` object is for.
-  Not buildable yet: none of his real, documented connections land on
-  anyone currently in the graph. Revisit once a batch adds an overlapping
-  artist (a 90s/grunge or mainstream-pop batch would probably do it), then
-  build it with the same evidence discipline as every other edge, not as
-  an exception to it.
+  Weird Al is now on the map (A232) with documented edges from Michael
+  Jackson and the Rolling Stones, so a path exists: through Jackson to
+  Motown and to Nas's 'Human Nature' sample, and through the Stones to
+  Chess, the Kinks and the Verve. Still waiting on two things. The thread
+  player is M5 work. And two anchors make a short thread, so a 90s/grunge
+  or mainstream-pop batch (Nirvana, Coolio, Madonna) would give it the
+  range the idea needs. Build it with the same evidence discipline as
+  every other edge, not as an exception to it.
 
 - **Follow the producer (Q21).** Select a producer and see everything
   they touched lit up across the map, or an "Arrange by producer" lane

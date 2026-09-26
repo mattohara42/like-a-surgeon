@@ -1,0 +1,30 @@
+{
+  "id": "e-mjackson-weirdal",
+  "from": "michael-jackson",
+  "to": "weird-al-yankovic",
+  "type": "cover",
+  "confidence": "documented",
+  "year": 1984,
+  "crossLineage": true,
+  "evidence": "'Eat It' (released 28 February 1984, from 'In 3-D') is a parody of Jackson's 'Beat It' (1983). Yankovic has described Jackson returning his calls and approving the idea. Its video is a shot-for-shot remake of the 'Beat It' video, using some of the same dancers, and Yankovic paid Jackson royalties for copying it so closely. Producer Rick Derringer re-created the record's guitar solo. The single reached number 12 on the Billboard Hot 100, Yankovic's first US top 40 hit, and won the Grammy for Best Comedy Recording. Jackson later let him use the subway set from the 'Bad' video for 'Fat' (1988), and in 1992 refused permission for a 'Black or White' parody on the grounds that the song's serious message would be undermined (Wikipedia's articles on Yankovic, 'Eat It' and 'Fat').",
+  "trackPair": {
+    "earlier": {
+      "artist": "Michael Jackson",
+      "title": "Beat It",
+      "year": 1983
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "Eat It",
+      "year": 1984
+    },
+    "whatToListenFor": "Play the first thirty seconds of each back to back. The riff, the tempo and the drum pattern are rebuilt to match Jackson's record as closely as a different band in a different studio could manage, and the guitar solo is re-played rather than sampled. Almost everything that changes is in the words and the voice. That is the whole method: the joke only works if you instantly recognise the record underneath it, so the band's job is to sound exactly like somebody else."
+  },
+  "explanation": {
+    "age13": "'Eat It' copies the music of 'Beat It' as closely as it can and swaps the words for a song about a fussy eater being told to finish their food. Jackson said yes to it. It became Yankovic's first big hit in America, won a Grammy, and set up his whole career. Jackson later lent him the subway set from his 'Bad' video for another parody, 'Fat', but in 1992 said no to a parody of 'Black or White' because he thought its message was too serious to joke about, and Yankovic did not release it.",
+    "adult": "'Eat It' turned Yankovic from a Dr. Demento regular into a chart act, and the Jackson relationship shows his permission-first practice working in both directions. Jackson approved 'Eat It', lent the 'Bad' subway set for 'Fat' (1988), and in 1992 refused a parody of 'Black or White' because he felt its serious message would be undermined. Yankovic did not release it. The edge runs from Jackson because the arrangement being re-created is the one Jackson and Quincy Jones made, and the parody is a careful re-recording of it."
+  },
+  "tags": [
+    "production"
+  ]
+}
