@@ -1,0 +1,30 @@
+{
+  "id": "e-largepro-ericbrakim",
+  "from": "large-professor",
+  "to": "eric-b-and-rakim",
+  "type": "production",
+  "confidence": "consensus",
+  "year": 1990,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'Let the Rhythm Hit 'Em' (MCA, 19 June 1990) lists Large Professor among uncredited producers: all of 'In the Ghetto' and 'Step Back', drum programming on 'No Omega' and co-production of the title track. He also finished work left by producer Paul C, who was murdered in July 1989. The album credits Eric B. and Rakim, so the attribution rests on Large Professor's later accounts and has not been contradicted, which makes it consensus rather than documented.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Eric B. & Rakim",
+      "title": "Follow the Leader",
+      "year": 1988
+    },
+    "later": {
+      "artist": "Eric B. & Rakim",
+      "title": "In the Ghetto",
+      "year": 1990
+    },
+    "whatToListenFor": "'Follow the Leader' is fast and dramatic, a racing beat under Rakim's rapid lines. 'In the Ghetto' slows right down and turns inward, and Rakim has room to stretch out. The change of pace between the two albums is partly the change of hands behind the boards, from Eric B.'s credited team to a teenage Large Professor working without credit."
+  },
+  "explanation": {
+    "age13": "Large Professor was a teenager from Queens when he made beats for Eric B. & Rakim's 1990 album 'Let the Rhythm Hit 'Em', including all of 'In the Ghetto'. He was not credited on the album. He also finished songs left unfinished by the producer Paul C, who was killed in 1989.",
+    "adult": "Uncredited production was common in this period, and this is one of the better-attested cases. It connects Large Professor, already linked on the map forward to Nas and A Tribe Called Quest, back to one of the most admired rap albums of 1990. Tiered consensus because the credits say otherwise and the account is Large Professor's."
+  },
+  "tags": [
+    "production"
+  ]
+}

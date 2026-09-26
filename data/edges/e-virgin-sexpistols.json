@@ -1,0 +1,30 @@
+{
+  "id": "e-virgin-sexpistols",
+  "from": "virgin",
+  "to": "sex-pistols",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1977,
+  "crossLineage": false,
+  "evidence": "EMI signed the Sex Pistols on 8 October 1976 and dropped them in January 1977. A&M signed them outside Buckingham Palace in March 1977 and broke the contract on 16 March after trouble at its offices. Virgin signed them in May 1977 and released 'God Save the Queen' on 27 May, timed for the Queen's Silver Jubilee celebrations that June, and 'Never Mind the Bollocks, Here's the Sex Pistols' on 28 October 1977 (Wikipedia's Sex Pistols article).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Sex Pistols",
+      "title": "Anarchy in the U.K.",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Sex Pistols",
+      "title": "God Save the Queen",
+      "year": 1977
+    },
+    "whatToListenFor": "Play the two back to back. The sound barely changes: the same four players, the same wall of overdubbed guitar, Johnny Rotten's voice pushed to the front. Almost nothing on the record explains why one came out on EMI and the next could only come out on a five-year-old label that had grown out of a record shop. The difference is in the words and the timing, not in the music."
+  },
+  "explanation": {
+    "age13": "Two big record companies, EMI and A&M, signed the Sex Pistols and then dropped them within months because of the trouble they caused. Virgin, a young label, signed them in May 1977 and put out 'God Save the Queen' just before the Queen's Silver Jubilee celebrations, and then their only album.",
+    "adult": "Virgin's willingness to take the band after two majors had paid them to go away is what got 'God Save the Queen' and 'Never Mind the Bollocks' released in 1977 at all. It also moved a label known for krautrock and Tangerine Dream to the centre of punk. The edge is typed label because what Virgin supplied was the release, not the sound."
+  },
+  "tags": [
+    "labels"
+  ]
+}

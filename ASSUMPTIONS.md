@@ -2235,3 +2235,35 @@ small and worth having in front of Matt alongside everything else here.
   in dev and from `file://`: node, edge, scene, machine and label panels
   render, Back and a register switch work, and a deleted record file shows
   the failure line.
+- **A236. An edge-only batch: eleven edges between nodes already on the
+  map.** Edges are the furthest M1 target (215 of 350), and edges between
+  existing nodes are the cheapest honest way to close it. The batch fills
+  gaps the graph made visible: Joy Division had no link to Bowie or
+  Kraftwerk despite both being in their own history, Kling Klang was an
+  orphan, Big Daddy Kane had no link back to Marley Marl, and James Brown
+  had no link to Kool Herc even though Herc's origin story centres on a
+  Brown break. Tiers: seven `documented`, four `consensus`. Consensus:
+  Kraftwerk to Joy Division (the PA ritual and the man-machine admiration
+  are retrospective band accounts), Sly to P-Funk (standard in funk
+  histories, no single statement), Large Professor to Eric B. & Rakim
+  (the credits say otherwise, and the attribution is his). Documented
+  where a named source says the thing: the Warsaw name
+  and Sumner's comment on Bowie's synthesisers, the Virgin signing dates,
+  the Pistols' 'Substitute' at their first gig and on 'The Great Rock 'n'
+  Roll Swindle', Derrick May's own Clinton-meets-Kraftwerk description,
+  Kling Klang's studio history, Herc's account of the Brown break, and the
+  'Long Live the Kane' production credit. Choices worth checking:
+  `e-jamesbrown-koolherc` is typed `direct` rather than `rediscovery`,
+  unlike the Incredible Bongo Band edge, because Brown was not a
+  forgotten record in 1973. `e-klingklang-kraftwerk` is typed `label`
+  although most of its substance is the studio of the same name, and the
+  adult text says so. `e-who-sexpistols` is dated 1976, the recording,
+  not 1979, the release. Brunswick stays an orphan: it has no
+  `foundedYear`, so the loader would skip any edge touching it; that gap
+  is already in BACKLOG. Two listening notes are deliberately general
+  because I could not check the arrangements: 'Run for Cover' is
+  described only as Perry's answer to Dodd, and the Eric B. & Rakim pair
+  is described by tempo and mood. Facts come from Wikipedia's articles on
+  Joy Division, the Sex Pistols, 'The Great Rock 'n' Roll Swindle',
+  Funkadelic, Lee Perry, Derrick May, Kling Klang, Kool Herc, 'Let the
+  Rhythm Hit 'Em', Big Daddy Kane and 'Long Live the Kane'.

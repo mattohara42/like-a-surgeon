@@ -1,0 +1,30 @@
+{
+  "id": "e-marleymarl-bigdaddykane",
+  "from": "marley-marl",
+  "to": "big-daddy-kane",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1987,
+  "crossLineage": false,
+  "evidence": "Kane signed to Cold Chillin' in 1987 and released 'Raw' that year. His debut album 'Long Live the Kane' (Cold Chillin'/Warner Bros., 21 June 1988) was produced by Marley Marl, with the 45 King contributing, and included a remix of 'Raw' on the same beat and 'Ain't No Half-Steppin'' (Wikipedia's articles on Kane and the album). Kane rapped on Marley's 1988 posse cut 'The Symphony'.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Big Daddy Kane",
+      "title": "Raw",
+      "year": 1987
+    },
+    "later": {
+      "artist": "Big Daddy Kane",
+      "title": "Ain't No Half-Steppin'",
+      "year": 1988
+    },
+    "whatToListenFor": "'Raw' is fast and hard: a quick, punchy beat with little on top, built to show off how quickly Kane can rap. 'Ain't No Half-Steppin'' slows to a smooth groove built on a sample of the Emotions' 'Blind Alley', and Kane switches from speed to cool. The same producer gave him both, which is the range that made Kane a star."
+  },
+  "explanation": {
+    "age13": "Marley Marl produced Big Daddy Kane's first album, 'Long Live the Kane', in 1988. It had the fast, hard 'Raw' and the smooth 'Ain't No Half-Steppin''. Kane was part of Marley's Juice Crew and also helped write lyrics for other members.",
+    "adult": "Kane is the Juice Crew rapper whose technique aged best, and Marley Marl built his first records. The pairing shows Marley's range in the SP-1200 era: a stripped, fast track and a soul-sample groove on one album. It fills a gap in the map, where Kane was linked only forward to Nas and not back to the producer who made him."
+  },
+  "tags": [
+    "production"
+  ]
+}

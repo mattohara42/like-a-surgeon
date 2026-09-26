@@ -173,7 +173,9 @@ map. Atlantic was planned and dropped (A229). A scene batch then met the M1 scen
 (20): the Juice Crew in Queensbridge, Native Tongues, West Berlin, Long
 Island and Los Angeles gangsta rap, all built from artists already on
 the map, with nine edges including two Honey Drippers and James Brown
-samples on 'Eric B. Is President' (A233, A234). `npm run report` has the current
+samples on 'Eric B. Is President' (A233, A234). An edge-only batch followed with eleven edges
+between nodes already on the map, closing the Kling Klang orphan and
+linking Joy Division back to Bowie and Kraftwerk (A236). `npm run report` has the current
 distance on every remaining target.
 
 ## Definition of done for any milestone
