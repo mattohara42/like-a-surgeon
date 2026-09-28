@@ -1,0 +1,24 @@
+{
+  "id": "uk-punk-77",
+  "name": "UK Punk, 1976 to 1979",
+  "type": "scene",
+  "lineage": "rock",
+  "yearFrom": 1976,
+  "yearTo": 1979,
+  "city": "London",
+  "country": "UK",
+  "hook": "Three chords, under three minutes, and an audience that had had enough of being told rock required more than that.",
+  "blurb": {
+    "age7": "In London, some bands started playing short, fast, simple songs on purpose, and told everyone anyone could start a band.",
+    "age13": "By the mid-1970s Britain was in an economic slump, and a wave of London bands reacted against what they saw as rock music that had gotten too complicated and too far from its audience. Punk stripped songs down to three chords and a few minutes, and insisted that not knowing how to play well was no reason to stay quiet.",
+    "adult": "UK punk's political character was contested from inside the scene. Some of the same working-class frustration it channeled was also being courted by the far-right National Front, and Rock Against Racism organized specifically to pull that audience toward an anti-racist politics instead, pairing punk and reggae acts on the same bills."
+  },
+  "geopolitics": "Mid-1970s Britain faced high unemployment, inflation, and a 1976 IMF loan that came with painful spending cuts. The National Front held marches and made real inroads recruiting among some of the same disaffected young, mostly white, working-class audience that punk also drew from, which Rock Against Racism was founded specifically to counter.",
+  "whatWasNew": "Rejecting instrumental virtuosity as a value at all, treating the three-minute single as the primary unit again, and using explicitly political and confrontational lyrics as a mainstream chart proposition rather than an underground one.",
+  "production": "Fast, cheap studio sessions, frequently close to live takes, a deliberate contrast to the expensive, polished rock records of the earlier 1970s.",
+  "labels": "A mix of major labels chasing a fast-moving trend, CBS signed the Clash, and independent labels formed specifically to serve the scene.",
+  "politics": "Explicitly anti-establishment across the scene, but split on race: some bands and audiences aligned with Rock Against Racism's anti-racist politics, while the same working-class discontent also had real overlap with far-right recruitment, which the scene did not uniformly resist.",
+  "memberIds": ["the-clash"],
+  "palette": { "ink": "#0c0c0c", "paper": "#f0ede6", "accent": "#d1272b", "accent2": "#2b2b2b" },
+  "motif": "safety-pin-tear"
+}

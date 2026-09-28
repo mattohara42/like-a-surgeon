@@ -1,0 +1,17 @@
+{
+  "id": "brunswick",
+  "name": "Brunswick (UK)",
+  "type": "label",
+  "lineage": "rock",
+  "foundedYear": null,
+  "closedYear": null,
+  "city": "London",
+  "founders": "Originally a US label; UK operations distributed via Decca",
+  "ownershipStory": "The Who's earliest UK singles, including 'I Can't Explain,' were released on Brunswick's UK operation, before the band moved on within a couple of years in search of a deal offering more creative control. Exact founding and closing dates for the UK operation are not confirmed here and are left null rather than guessed.",
+  "hook": "A brief early home for the Who, before they went looking for more control.",
+  "blurb": {
+    "age7": "This company put out the Who's very first songs.",
+    "age13": "Brunswick released the Who's very first singles in Britain. The band moved on within a couple of years to a label that gave them more say over their own music.",
+    "adult": "Brunswick UK's brief tenure with the Who is a minor but telling episode: bands of this era typically churned through label arrangements quickly in search of better terms, and the Who's subsequent move was part of that pattern."
+  }
+}

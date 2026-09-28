@@ -1,0 +1,17 @@
+{
+  "id": "cbs-uk",
+  "name": "CBS UK",
+  "type": "label",
+  "lineage": "rock",
+  "foundedYear": null,
+  "closedYear": null,
+  "city": "London",
+  "founders": "CBS Inc. (US parent company)",
+  "ownershipStory": "The UK arm of the American CBS Records, and the major label the Clash signed to in 1977 despite the band's punk politics, a contradiction they addressed directly in song ('Complete Control'). CBS Records' US parent was acquired by Sony in 1988; exact founding and closing dates for the UK arm specifically are not confirmed here and are left null rather than guessed.",
+  "hook": "A major label the Clash signed to, then wrote a song attacking.",
+  "blurb": {
+    "age7": "This was a big record company. The Clash signed with them and then wrote a song complaining about it.",
+    "age13": "CBS UK was a major record company, the opposite of the small independent labels punk was supposed to favor. The Clash signed to it anyway in 1977, and then wrote a song, 'Complete Control,' about the label interfering with their music.",
+    "adult": "CBS UK is this dataset's clearest example of punk's contradiction between anti-corporate politics and major-label distribution. The Clash's signing, and their public friction with the label including a recalled single, produced some of their best-documented commentary on artistic control."
+  }
+}

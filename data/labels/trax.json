@@ -1,0 +1,17 @@
+{
+  "id": "trax",
+  "name": "Trax Records",
+  "type": "label",
+  "lineage": "electronic",
+  "foundedYear": 1984,
+  "closedYear": null,
+  "city": "Chicago",
+  "founders": "Larry Sherman",
+  "ownershipStory": "Trax pressed and released most of the foundational Chicago house and acid house records, including Phuture's 'Acid Tracks,' but became notorious among the artists themselves for poor-quality pressings and unpaid or minimal royalties. Several producers spent decades afterward trying to recover rights to records that defined an entire genre.",
+  "hook": "Put out the records that named a genre, and became a cautionary tale about who owns them.",
+  "blurb": {
+    "age7": "This company put out the first house and acid house records, but it did not treat the musicians fairly.",
+    "age13": "Trax Records in Chicago released many of the first house and acid house records, including Phuture's 'Acid Tracks.' The label became known for treating the artists badly, paying little and sometimes losing track of who owned what.",
+    "adult": "Trax is one of the starkest label-exploitation stories in this dataset: it built a catalogue that defined house and acid house while multiple artists spent years fighting over royalties and rights to their own masters."
+  }
+}

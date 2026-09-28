@@ -1,0 +1,17 @@
+{
+  "id": "metroplex",
+  "name": "Metroplex",
+  "type": "label",
+  "lineage": "electronic",
+  "foundedYear": 1985,
+  "closedYear": null,
+  "city": "Detroit",
+  "founders": "Juan Atkins",
+  "ownershipStory": "Founded by Juan Atkins to release his own records after larger labels showed no interest in Detroit electronic music. Metroplex stayed artist-owned from the start, which let Atkins and the acts he signed keep their own masters, a rarity in this dataset and a direct contrast to the sound-system economics in Kingston or the early rap contracts in New York.",
+  "hook": "The label Juan Atkins built because nobody else would put his records out.",
+  "blurb": {
+    "age7": "This is the record company Juan Atkins started so he could put his own music out.",
+    "age13": "Metroplex is Juan Atkins' own record label, started in Detroit in 1985 because no bigger label wanted to release techno. Because Atkins owned it himself, he kept control of his music in a way many musicians in this story did not.",
+    "adult": "Metroplex is one of the few artist-owned labels in this dataset where the founder kept his own masters from day one. Its first release, Atkins' 'No UFO's' as Model 500, is treated by most historians as the founding document of techno as a named genre."
+  }
+}

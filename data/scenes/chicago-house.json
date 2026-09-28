@@ -1,0 +1,24 @@
+{
+  "id": "chicago-house",
+  "name": "Chicago House",
+  "type": "scene",
+  "lineage": "electronic",
+  "yearFrom": 1983,
+  "yearTo": 1988,
+  "city": "Chicago",
+  "country": "USA",
+  "hook": "Disco kept alive after the mainstream declared it dead, on drum machines instead of a live rhythm section.",
+  "blurb": {
+    "age7": "After a lot of people said disco was over, DJs in Chicago kept dancing to it anyway and started making their own version with drum machines.",
+    "age13": "In 1979 a stunt at a Chicago baseball stadium destroyed a pile of disco records on the field, and disco's mainstream popularity collapsed soon after. Chicago DJs, especially at clubs serving Black and Latino gay audiences, kept the sound alive and started extending and remaking it with cheap drum machines. That new version got named 'house' after one of the clubs, the Warehouse, where it was played.",
+    "adult": "House music's origin is bound up with who disco's backlash was actually aimed at. The audience that kept the sound alive at clubs like the Warehouse was largely Black and Latino and gay, at a moment when mainstream culture had turned openly hostile to disco and, not coincidentally, to the audiences most associated with it. Cheap secondhand drum machines, the same commercial-failure economics that gave Detroit its gear, let DJs rebuild the sound themselves."
+  },
+  "geopolitics": "Chicago's South and West Sides were shaped by decades of racial segregation in housing and employment. The 1979 'Disco Demolition Night' at Comiskey Park, where a promotional stunt destroyed disco records in a pile, is widely read as a moment where disco's mainstream backlash carried an undertone of hostility toward the Black and gay audiences most identified with the genre.",
+  "whatWasNew": "Extending and rebuilding disco's rhythm section entirely on drum machines and sequencers, in clubs, rather than treating disco as a finished form to preserve.",
+  "production": "Small clubs and small studios, DJ-producers working directly off dance floor reaction, records pressed fast and cheap.",
+  "labels": "Trax Records and DJ International were the main outlets; Trax in particular became known for poor pressing quality and disputed payment to artists.",
+  "politics": "A refuge scene for Black and Latino gay Chicagoans excluded from much of mainstream club and radio culture after disco's backlash, a part of the story that shorter accounts often leave out.",
+  "memberIds": ["phuture"],
+  "palette": { "ink": "#120a17", "paper": "#f5ecf0", "accent": "#7d3c98", "accent2": "#16a085" },
+  "motif": "acid-squiggle"
+}

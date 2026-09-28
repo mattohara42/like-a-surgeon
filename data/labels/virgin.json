@@ -1,0 +1,17 @@
+{
+  "id": "virgin",
+  "name": "Virgin Records",
+  "type": "label",
+  "lineage": "rock",
+  "foundedYear": 1972,
+  "closedYear": null,
+  "city": "London",
+  "founders": "Richard Branson, Simon Draper, Nik Powell",
+  "ownershipStory": "Started as a mail-order record business before becoming a label, Virgin grew into one of the UK's major independents and signed Public Image Ltd directly out of the collapse of the Sex Pistols. Branson sold the label's recorded-music arm to Thorn EMI in 1992.",
+  "hook": "The independent that signed John Lydon the moment the Sex Pistols were finished.",
+  "blurb": {
+    "age7": "This record company started as a tiny record shop and grew huge.",
+    "age13": "Virgin Records started as a small mail-order record shop before it became one of Britain's biggest independent labels. It signed Public Image Ltd right after the Sex Pistols broke up.",
+    "adult": "Virgin's growth from mail-order business to major independent is a useful contrast to Trax or the Kingston sound systems: a UK label that scaled up enough to eventually be sold to a major, Thorn EMI, in 1992."
+  }
+}

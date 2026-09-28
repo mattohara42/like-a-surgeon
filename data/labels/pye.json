@@ -1,0 +1,17 @@
+{
+  "id": "pye",
+  "name": "Pye Records",
+  "type": "label",
+  "lineage": "rock",
+  "foundedYear": null,
+  "closedYear": null,
+  "city": "London",
+  "founders": "Pye Ltd (electronics manufacturer)",
+  "ownershipStory": "A UK label run as an arm of the Pye electronics company, and the label the Kinks signed to in 1964. Pye's contract terms and royalty accounting became a lasting grievance for Ray Davies, part of why the band spent much of the mid-1960s in business disputes even as their singles charted. Exact founding and closing dates for the label are not confirmed here and are left null rather than guessed.",
+  "hook": "Signed the Kinks and then spent years disputing what it owed them.",
+  "blurb": {
+    "age7": "This company put out the Kinks' records, but argued with them a lot about money.",
+    "age13": "Pye Records signed the Kinks in 1964. The band had hit after hit, but arguments with Pye over money and rights took up a lot of their time and energy in those years.",
+    "adult": "Pye's relationship with the Kinks is a period-typical case of a British Invasion-era label extracting long-term value from a band whose control over royalties and publishing lagged well behind their commercial success."
+  }
+}

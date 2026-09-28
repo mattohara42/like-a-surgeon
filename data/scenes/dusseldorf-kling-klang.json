@@ -1,0 +1,24 @@
+{
+  "id": "dusseldorf-kling-klang",
+  "name": "Düsseldorf and Kling Klang",
+  "type": "scene",
+  "lineage": "electronic",
+  "yearFrom": 1970,
+  "yearTo": null,
+  "city": "Düsseldorf",
+  "country": "Germany",
+  "hook": "A self-built studio in an industrial German city where four musicians decided the future should sound mechanical, not human.",
+  "blurb": {
+    "age7": "In a German city with a lot of factories, a band built their own studio and made music that sounded like machines on purpose.",
+    "age13": "Düsseldorf in the early 1970s was an industrial Rhineland city, and Kraftwerk built their own studio there, Kling Klang, rather than renting time in someone else's. Coming out of a generation of young Germans working out what German culture could even mean after the war, they built music that sounded deliberately robotic instead of trying to sound like American or British rock.",
+    "adult": "The scene around Kling Klang is inseparable from postwar West German identity politics: a generation too young to have fought in the war but formed by its aftermath, rejecting both nostalgic German nationalism and reflexive imitation of Anglo-American rock, choosing instead to foreground the machine rather than hide it. Early records were made with engineer Konrad 'Conny' Plank before the band became fully self-sufficient at Kling Klang."
+  },
+  "geopolitics": "West Germany's postwar 'Wirtschaftswunder' rebuilt the industrial Rhineland, including Düsseldorf, at speed. The generation making this music grew up in that rebuilt, prosperous, but culturally uneasy country, and a broader scene of German experimental musicians, loosely and often dismissively labeled 'Krautrock' by British critics, was consciously working out an identity distinct from both Nazi-era culture and imported Anglo-American rock.",
+  "whatWasNew": "Fully sequenced, machine-generated music presented without apology, vocoder-processed vocals, and album subject matter, trains, highways, calculators, robots, that treated technology as the actual content rather than a production tool.",
+  "production": "A self-owned, continually rebuilt studio rather than rented commercial time, letting the band work at their own pace across years between releases once fully independent.",
+  "labels": "Kling Klang served as the band's own imprint and production entity; international distribution ran through larger companies at different points in their career, while the band retained ownership of the recordings themselves.",
+  "politics": "An implicit political statement in embracing a machine-made, explicitly German identity rather than either nostalgic nationalism or American rock import, at a moment when both were live cultural options for German youth.",
+  "memberIds": ["kraftwerk"],
+  "palette": { "ink": "#0a0a0c", "paper": "#eef0f2", "accent": "#c0392b", "accent2": "#4a4a4a" },
+  "motif": "vocoder-lattice"
+}
