@@ -1,0 +1,32 @@
+{
+  "id": "e-atkins-may",
+  "from": "juan-atkins",
+  "to": "derrick-may",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "The friendship between Atkins, May, and Kevin Saunderson, later dubbed 'the Belleville Three' by journalists, is documented across numerous interviews and reissue liner notes. May has repeatedly credited Atkins with introducing him to Kraftwerk and to electronic music production during their high school years in Belleville, Michigan.",
+  "year": 1987,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Cybotron",
+      "title": "Clear",
+      "year": 1983
+    },
+    "later": {
+      "artist": "Rhythim Is Rhythim",
+      "title": "Strings of Life",
+      "year": 1987
+    },
+    "whatToListenFor": "Both records sit on the same rigid machine grid. Atkins' record stays cold all the way through. May keeps the same grid but pours a looping, almost gospel piano line over it, the same mentorship arriving somewhere warmer."
+  },
+  "explanation": {
+    "age7": "Juan Atkins showed his friend Derrick May electronic music, and years later May made his own kind of it with a piano on top.",
+    "age13": "Atkins and May were friends in high school in a Detroit suburb, and Atkins introduced May to Kraftwerk and to making electronic music himself. May took the same rigid machine sound Atkins pioneered and added a driving piano line, most famously on 'Strings of Life' in 1987.",
+    "adult": "Atkins to May is the clearest mentorship edge inside Detroit techno's founding trio. The relationship is well documented in the genre's own retelling of itself, sometimes to the point of myth-making, but the core claim, that Atkins introduced May to the music, holds up across independent interviews."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

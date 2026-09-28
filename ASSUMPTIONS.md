@@ -112,3 +112,47 @@ Every decision made without asking. Append, do not rewrite.
   references that connect nodes rather than name a not-yet-written one
   (`scene.memberIds`, `edge.from`/`to`, `demoId`, thread steps) stay hard
   errors, since those are added alongside the nodes they connect.
+
+## Added during the second data batch (2026-09-28)
+
+- **A27.** Prioritized clearing existing debt over adding wholly new
+  artists: all eight labels and five scenes that were already referenced by
+  `artist.scenes[]`/`artist.labels[]` but never authored got written first,
+  since they were already half-committed to by the existing roster and
+  resolve real validator warnings rather than add new unreferenced content.
+  Three new artists (James Brown, Grandmaster Flash, Derrick May) and three
+  new edges were added afterward, chosen because each connects cleanly and
+  verifiably to the existing graph rather than starting a new island.
+- **A28.** James Brown brings the `funk` lineage its first node, and was
+  given `scenes: []` rather than inventing a scene to hold him, since no
+  funk-lineage scene exists yet and writing one properly (geopolitics,
+  production, labels, politics fields) felt like it deserved its own
+  editorial pass rather than being rushed to avoid an empty array. Logged
+  in `BACKLOG.md`.
+- **A29.** Per `CLAUDE.md`'s "historical importance is not endorsement"
+  rule, James Brown's adult-register text states his domestic violence
+  arrests and 1988 conviction as fact, without adjectives, alongside the
+  documented account of him fining band members for mistakes. Neither is
+  softened or omitted; neither is editorialized about beyond what's stated.
+- **A30.** Three label records (`cbs-uk`, `pye`, `brunswick`) have
+  `foundedYear` and/or `closedYear` set to `null` rather than a best-guess
+  year, per `CLAUDE.md` rule 2 ("never invent a date... null it and note
+  it"). I was not confident enough in these specific years from training
+  knowledge to state them as fact. Flagged in `BACKLOG.md` for a
+  verification pass.
+- **A31.** The `e-jamesbrown-southbronx` edge connects James Brown directly
+  to the `south-bronx` scene node rather than to `afrika-bambaataa`
+  personally. I could not pin a specific, confidently-accurate James
+  Brown/Bambaataa track pairing to a `documented` or even safely `consensus`
+  standard, so I widened the claim to the scene level, where the underlying
+  fact (JB's breaks as foundational breakbeat-DJing raw material) is much
+  more solidly supported, and used `trackPair.later` (James Brown "Funky
+  Drummer" into Public Enemy "Fight the Power") as an illustrative,
+  well-documented pairing that doesn't require either artist to be a graph
+  node itself, since `trackPair` fields are descriptive strings, not
+  references.
+- **A32.** `e-jamesbrown-southbronx` and `e-flash-bambaataa` are both tiered
+  `consensus` rather than `documented`, since their evidence describes
+  broadly repeated scene history rather than a specific citable interview
+  or quotation, matching the tiering logic already used in
+  `e-tubby-pil.json`.

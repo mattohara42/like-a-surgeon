@@ -1,0 +1,40 @@
+{
+  "id": "derrick-may",
+  "name": "Derrick May",
+  "sortName": "May, Derrick",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1987,
+  "activeTo": null,
+  "originCity": "Detroit",
+  "originCountry": "USA",
+  "scenes": [
+    "detroit-techno"
+  ],
+  "labels": [
+    {
+      "labelId": "transmat",
+      "from": 1986,
+      "to": null
+    }
+  ],
+  "keyProducers": [],
+  "hook": "Took the same rigid machine grid Atkins built and poured a gospel piano line over it.",
+  "blurb": {
+    "age7": "Derrick May took the hard, robotic beat his friend Juan Atkins was making and put a beautiful piano tune on top of it.",
+    "age13": "May was one of Juan Atkins' closest friends and, with Atkins and Kevin Saunderson, part of what people later called the Belleville Three, three friends from the same Detroit suburb who each built a different strand of techno. May's own records, especially 'Strings of Life' in 1987, kept techno's rigid machine rhythm but added a driving, almost gospel piano part that made it feel less cold.",
+    "adult": "May's importance lies in demonstrating that techno's rigidity was a choice rather than a limitation of the form. 'Strings of Life' pairs an unyielding drum-machine grid with a piano line closer to house and gospel, and the record is widely credited by DJs and critics as bridging Detroit techno with Chicago house's warmer, more vocal dance-music lineage."
+  },
+  "signatureTracks": [
+    {
+      "title": "Strings of Life",
+      "year": 1987,
+      "whyThisOne": "As Rhythim Is Rhythim. The clearest example in the dataset of warmth added onto a rigid machine grid."
+    },
+    {
+      "title": "Nude Photo",
+      "year": 1987,
+      "whyThisOne": "As Rhythim Is Rhythim, on May's own Transmat label. A colder, more purely rhythmic counterpart to 'Strings of Life' from the same year."
+    }
+  ]
+}

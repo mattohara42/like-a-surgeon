@@ -1,0 +1,31 @@
+{
+  "id": "e-flash-bambaataa",
+  "from": "grandmaster-flash",
+  "to": "afrika-bambaataa",
+  "type": "scene",
+  "confidence": "consensus",
+  "evidence": "Flash and Bambaataa were contemporaries in the same early-to-mid-1970s South Bronx DJ circuit, each developing turntable and sound system techniques independently and in dialogue with the same park-jam audience. This is broad scene history repeated across accounts like Jeff Chang's 'Can't Stop Won't Stop' rather than a single sourced quotation.",
+  "year": 1982,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Grandmaster Flash and the Furious Five",
+      "title": "The Adventures of Grandmaster Flash on the Wheels of Steel",
+      "year": 1981
+    },
+    "later": {
+      "artist": "Afrika Bambaataa and the Soulsonic Force",
+      "title": "Planet Rock",
+      "year": 1982
+    },
+    "whatToListenFor": "Flash's record is turntable collage: cut breakbeats stitched together live by hand. Bambaataa's, a year later, is the same park-jam instinct rebuilt entirely on synthesizers and a drum machine. Same scene, same era, two different answers to the same problem."
+  },
+  "explanation": {
+    "age7": "Flash and Bambaataa were both DJs in the same neighborhood, working out new tricks at the same time.",
+    "age13": "Flash and Bambaataa were both DJing park jams and block parties in the South Bronx from the mid-1970s, each inventing techniques, quick-mixing and cutting for Flash, eclectic crate-digging and later synthesizers for Bambaataa, in the same scene at the same time.",
+    "adult": "Flash and Bambaataa are best understood as parallel inventors within one scene rather than a strict influence chain in either direction. Crediting a single originator for South Bronx DJ technique oversimplifies a scene where several DJs were developing overlapping ideas concurrently."
+  },
+  "tags": [
+    "technology"
+  ]
+}

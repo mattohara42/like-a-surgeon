@@ -1,0 +1,17 @@
+{
+  "id": "king-records",
+  "name": "King Records",
+  "type": "label",
+  "lineage": "funk",
+  "foundedYear": 1943,
+  "closedYear": null,
+  "city": "Cincinnati",
+  "founders": "Syd Nathan",
+  "ownershipStory": "James Brown recorded for King from 1956 to 1971. Nathan's label paid flat session fees and kept tight control over releases, and Brown's long friction with those terms, alongside his simultaneous rise to running his own production and publishing operations, is a well-documented case of a Black artist wresting unusual creative control away from a label during the era.",
+  "hook": "Where James Brown recorded for fifteen years while fighting to control his own masters.",
+  "blurb": {
+    "age7": "This company put out James Brown's records for a long time before he took more control of his own music.",
+    "age13": "King Records in Cincinnati released James Brown's music from 1956 to 1971. Over that time Brown fought hard to get more control over his own recordings and business, which was unusual for a Black artist at a label like King in that era.",
+    "adult": "King's arrangement with Brown, flat fees, tight release control, sits inside a broader pattern in this dataset of labels extracting long-term value from artists with little bargaining power. Brown's eventual success in gaining more control over his own masters and publishing is part of what makes his career notable beyond the music itself."
+  }
+}

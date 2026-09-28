@@ -1,0 +1,38 @@
+{
+  "id": "james-brown",
+  "name": "James Brown",
+  "sortName": "Brown, James",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1956,
+  "activeTo": 2006,
+  "originCity": "Augusta, Georgia",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "king-records",
+      "from": 1956,
+      "to": 1971
+    }
+  ],
+  "keyProducers": [],
+  "hook": "Turned the whole band into a drum and rebuilt American popular rhythm around the downbeat.",
+  "blurb": {
+    "age7": "James Brown made the whole band play like drums, with a hard beat on the first count of every bar.",
+    "age13": "Starting around 1965, Brown stripped songs down until almost every instrument, guitar, horns, bass, was played rhythmically instead of melodically, locked to a hard emphasis on the first beat of the bar. That approach is what funk means. Decades later, his drummers' breaks became some of the most reused pieces of music ever recorded.",
+    "adult": "Brown's shift toward rhythm as the primary element, roughly 1965 to 1967, is one of the clearest technical turning points in this dataset. It came from tight control over a large, heavily rehearsed band; band members have documented that Brown fined musicians for missed cues and mistakes. Brown's own record also includes multiple domestic violence arrests and a 1988 conviction following a high-speed police chase across Georgia and South Carolina. That history is part of the public record for an artist whose musical innovations are treated here as historically important regardless of it."
+  },
+  "signatureTracks": [
+    {
+      "title": "Cold Sweat",
+      "year": 1967,
+      "whyThisOne": "Horns and bass reduced to pure rhythmic punctuation. Widely treated as the record where funk's grammar fully arrives."
+    },
+    {
+      "title": "Funky Drummer",
+      "year": 1970,
+      "whyThisOne": "Clyde Stubblefield's isolated break here is the most sampled piece of recorded music in history."
+    }
+  ]
+}

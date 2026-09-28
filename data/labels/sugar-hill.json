@@ -1,0 +1,17 @@
+{
+  "id": "sugar-hill",
+  "name": "Sugar Hill Records",
+  "type": "label",
+  "lineage": "hiphop",
+  "foundedYear": 1979,
+  "closedYear": null,
+  "city": "Englewood, New Jersey",
+  "founders": "Sylvia Robinson, Joe Robinson",
+  "ownershipStory": "Founded by Sylvia and Joe Robinson, Sugar Hill released 'Rapper's Delight' in 1979 and 'The Message' in 1982, effectively creating the commercial market for recorded hip-hop. The label became widely known for disputed songwriting credits and unpaid royalties, and several of its artists, including members of Grandmaster Flash and the Furious Five, later sued over compensation. Its exact closing date is not confirmed here and is left null rather than guessed.",
+  "hook": "Made hip-hop a record-store genre, and became one of its earliest cautionary tales about who got paid.",
+  "blurb": {
+    "age7": "This company put out some of the very first hip-hop records, including 'Rapper's Delight' and 'The Message.'",
+    "age13": "Sugar Hill Records put out 'Rapper's Delight' in 1979, the record that proved hip-hop could sell outside the Bronx, and 'The Message' in 1982. The label was also known for not paying artists fairly, and some of them later sued over it.",
+    "adult": "Sugar Hill created the commercial template for recorded hip-hop while replicating the same royalty and credit disputes seen elsewhere in this dataset, Trax and King Records among them. Several Furious Five members later took legal action over compensation."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "transmat",
+  "name": "Transmat",
+  "type": "label",
+  "lineage": "electronic",
+  "foundedYear": 1986,
+  "closedYear": null,
+  "city": "Detroit",
+  "founders": "Derrick May",
+  "ownershipStory": "Founded by Derrick May to release his own records, following the artist-owned model Juan Atkins had already established with Metroplex. Transmat put out Rhythim Is Rhythim's foundational releases, including 'Strings of Life' and 'Nude Photo,' both in 1987.",
+  "hook": "Derrick May's own label, built on the same artist-owned model as Atkins' Metroplex.",
+  "blurb": {
+    "age7": "This is Derrick May's own record label in Detroit.",
+    "age13": "Transmat is Derrick May's own label, started in Detroit in 1986. He used it to release his own music, including 'Strings of Life,' rather than depend on anyone else's label.",
+    "adult": "Transmat follows the same artist-owned pattern Atkins set with Metroplex: Detroit techno's early makers largely kept their own masters, an unusual and consequential choice given how many artists elsewhere in this dataset did not."
+  }
+}

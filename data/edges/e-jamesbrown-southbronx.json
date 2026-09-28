@@ -1,0 +1,32 @@
+{
+  "id": "e-jamesbrown-southbronx",
+  "from": "james-brown",
+  "to": "south-bronx",
+  "type": "sample",
+  "confidence": "consensus",
+  "evidence": "Widely documented across hip-hop histories that James Brown's catalogue, and Clyde Stubblefield's 'Funky Drummer' break specifically, became foundational raw material for breakbeat DJing and later sample-based production. No single interview is cited here; this is a claim repeated across the scene's own oral histories rather than one sourced statement.",
+  "year": 1989,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "James Brown",
+      "title": "Funky Drummer",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Public Enemy",
+      "title": "Fight the Power",
+      "year": 1989
+    },
+    "whatToListenFor": "Clyde Stubblefield's drum break on 'Funky Drummer' is the single most sampled piece of recorded music in history. Listen to the syncopated hi-hat and snare pattern under Brown's ad-libs, then hear how directly that same break, chopped and looped, drives Public Enemy's rhythm track two decades later with almost nothing added."
+  },
+  "explanation": {
+    "age7": "A drummer named Clyde Stubblefield played a drum part for James Brown that DJs later used to build almost a whole style of music.",
+    "age13": "James Brown's band, especially drummer Clyde Stubblefield on 'Funky Drummer,' recorded drum breaks that Bronx DJs and later producers looped and rebuilt songs around, starting with Kool Herc's earliest park jams in 1973. It became some of the most reused music ever recorded.",
+    "adult": "James Brown's catalogue, mediated by his drummers rather than by Brown alone, supplied the rhythmic raw material for breakbeat DJing and, later, digital sampling. 'Funky Drummer' is the clearest single example: an eight-bar break that turns up, credited and uncredited, across four decades of hip-hop production."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}
