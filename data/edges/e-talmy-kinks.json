@@ -1,0 +1,32 @@
+{
+  "id": "e-talmy-kinks",
+  "from": "shel-talmy",
+  "to": "the-kinks",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Shel Talmy is credited as producer on the Kinks' 'You Really Got Me' (1964) on the original Pye release and every subsequent reissue, and has discussed the session in numerous interviews.",
+  "year": 1964,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "The Kinks",
+      "title": "You Really Got Me",
+      "year": 1964,
+      "search": false
+    },
+    "later": {
+      "artist": "The Who",
+      "title": "I Can't Explain",
+      "year": 1965
+    },
+    "whatToListenFor": "Talmy's Kinks production is the template: compressed, riff-led, little separation between the instruments. A year later on the Who record he reaches for the same compression and the same short, repeated riff shape."
+  },
+  "explanation": {
+    "age7": "Shel Talmy was the producer who recorded the Kinks' famous fuzzy guitar song.",
+    "age13": "Talmy produced 'You Really Got Me' for the Kinks in 1964, mixing Dave Davies' slashed-speaker guitar sound as hard and compressed as the equipment of the time allowed.",
+    "adult": "A straightforward production credit, made significant mainly by what it set up: the same producer applying a version of this template to the Who a year later."
+  },
+  "tags": [
+    "production"
+  ]
+}

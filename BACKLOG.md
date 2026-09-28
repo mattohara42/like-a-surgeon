@@ -609,6 +609,13 @@ fixing them inline.)
   Talmy's lease deal, and its honest edge probably runs through Talmy if he
   becomes a node. It may be better merged into a note on the Who than kept
   as a label node.
+  **Closed.** Shel Talmy is now a node (`shel-talmy.json`), which both
+  `the-kinks.json` and `the-who.json` already named as a plain-text
+  `keyProducers` entry. `e-brunswick-talmy` (a `label` edge, the unusual
+  direction where the causal claim runs through the producer's contract
+  rather than an editorial decision by the label) closes Brunswick's
+  orphan status, kept as its own node rather than merged into a Who note
+  as this entry had floated, since it now has a real edge to justify it.
 
 
 - Left open by the four-label batch (A228 to A231). **Atlantic** still
