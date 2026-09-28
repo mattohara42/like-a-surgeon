@@ -482,6 +482,14 @@ fixing them inline.)
   node, which would let the Bridge Wars' other side (`e-marleymarl-mcshan`'s
   own trackPair names 'The Bridge Is Over' but has nowhere on the map for
   Boogie Down Productions to land) become a real edge rather than prose.
+  **Closed.** Craig G joins the Juice Crew (`e-marleymarl-craigg`, both
+  'Droppin' Science' and his verse on 'The Symphony'), which finishes the
+  named Juice Crew roster. The Bridge Wars' other side lands as
+  `boogie-down-productions` (the group, not a solo KRS-One node, since
+  both 'South Bronx' and 'The Bridge Is Over' are group-credited) with
+  `e-bdp-mcshan`, the dataset's third `reaction-against` edge. Left his
+  `scenes` empty: BDP's 1986-87 run falls outside `south-bronx`'s
+  1973-1984 window, and no later-Bronx scene exists yet to hold him.
 - The batch added two more null end years of the "could not find it"
   kind that Q20 is about: `akai-mpc60` and `akai-mpc3000`. Both will read
   as still on sale until Q20 is answered.

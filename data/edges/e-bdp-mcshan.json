@@ -1,0 +1,31 @@
+{
+  "id": "e-bdp-mcshan",
+  "from": "boogie-down-productions",
+  "to": "mc-shan",
+  "type": "reaction-against",
+  "confidence": "documented",
+  "evidence": "KRS-One and MC Shan have both discussed the Bridge Wars extensively and consistently in interviews and documentaries (including VH1's 'Beef', 2003), confirming 'South Bronx' and 'The Bridge Is Over' were written as direct responses to 'The Bridge'.",
+  "year": 1987,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "MC Shan",
+      "title": "The Bridge",
+      "year": 1986
+    },
+    "later": {
+      "artist": "Boogie Down Productions",
+      "title": "The Bridge Is Over",
+      "year": 1987
+    },
+    "whatToListenFor": "Shan's original is an unhurried, proud borough anthem. BDP's answer keeps the same subject, hip-hop's origin, and even echoes the title, but turns it faster, meaner, and ends with a mocking sung outro aimed directly at Shan and Marley Marl. Same format, opposite intent."
+  },
+  "explanation": {
+    "age7": "A Bronx rapper thought another rapper's song was saying his neighborhood invented rap by itself, so he wrote two angry songs back, and most people agree he won.",
+    "age13": "KRS-One and Boogie Down Productions heard MC Shan's 'The Bridge' as a claim that hip-hop began in Queensbridge and answered with 'South Bronx' and then 'The Bridge Is Over', starting and largely winning the Bridge Wars.",
+    "adult": "A reaction-against edge rather than a production or direct-influence one: BDP's records exist specifically to rebut Shan's, and their effectiveness is judged by how thoroughly they were seen to win that argument rather than by any musical debt owed."
+  },
+  "tags": [
+    "production"
+  ]
+}

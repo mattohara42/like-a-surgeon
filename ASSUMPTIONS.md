@@ -2339,3 +2339,25 @@ small and worth having in front of Matt alongside everything else here.
   'Whole Lotta Love', 'You Need Love', Willie Dixon, the Isley Brothers
   and 'This Old Heart of Mine', and WhoSampled's catalogue for the two
   sample edges.
+
+- **A240. Closed the last named Juice Crew wait: Craig G, plus Boogie Down
+  Productions for the Bridge Wars' other side.** Craig G joins on
+  `e-marleymarl-craigg` ('Droppin' Science', 1986; his verse on 'The
+  Symphony', 1988), matching the production-edge pattern already set by
+  MC Shan, Kool G Rap and Roxanne Shanté. Boogie Down Productions is
+  authored as the group, not a solo KRS-One node, since both 'South
+  Bronx' and 'The Bridge Is Over' are credited to the group and Scott La
+  Rock's role (co-founder, killed in August 1987) is part of the honest
+  story; `e-bdp-mcshan` is the dataset's third `reaction-against` edge.
+  BDP's `scenes` stays empty: their 1986-87 run falls outside
+  `south-bronx`'s 1973-1984 window and no later-Bronx scene exists yet.
+  Also fixed a stale `keyProducers` entry on `the-clash.json`: `lee-perry`
+  already existed as a node when the Clash's own record still listed him
+  as a plain name, exactly the drift `BACKLOG.md` flagged as worth a
+  systematic pass. Unlike recent batches, this session had no live
+  source-verification tool available; these facts (the Bridge Wars
+  chronology, Scott La Rock's death, Craig G's two tracks) come from
+  general knowledge of well-documented, widely-repeated hip-hop history
+  rather than a fresh Wikipedia or Discogs check, tiered `documented` on
+  the same basis `e-marleymarl-mcshan.json` already uses for the same
+  underlying claim, not upgraded further for being retold here.

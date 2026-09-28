@@ -1,0 +1,31 @@
+{
+  "id": "e-marleymarl-craigg",
+  "from": "marley-marl",
+  "to": "craig-g",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1988,
+  "crossLineage": false,
+  "evidence": "Marley Marl produced Craig G's 1986 debut single 'Droppin' Science' and the 1988 Juice Crew posse cut 'The Symphony', on which Craig G is one of four featured MCs, as recorded in standard hip-hop histories and reissue liner notes.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Craig G",
+      "title": "Droppin' Science",
+      "year": 1986
+    },
+    "later": {
+      "artist": "Craig G",
+      "title": "The Symphony",
+      "year": 1988
+    },
+    "whatToListenFor": "'Droppin' Science' is a teenager showing off raw speed over a fairly plain Marl beat. Two years later on 'The Symphony', the same fast delivery is deployed with far more control, one verse among four over a single looped horn stab, and it's the verse most often picked out of the four."
+  },
+  "explanation": {
+    "age7": "Marley Marl made the music for Craig G's first song when Craig was still a teenager, and later put him on a famous song with three other rappers.",
+    "age13": "Marley Marl produced Craig G's 1986 debut 'Droppin' Science' and put him on 'The Symphony' (1988) alongside Kool G Rap, Big Daddy Kane, and Masta Ace, where Craig G's verse is the one most often singled out.",
+    "adult": "A straightforward producer-to-artist credit, but a useful contrast with the crew's bigger names: Marl's beat is the constant across both records, while what changes is entirely Craig G's own technical growth."
+  },
+  "tags": [
+    "production"
+  ]
+}
