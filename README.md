@@ -3,7 +3,35 @@
 An offline, browser-based atlas of how recorded popular music influenced itself,
 built to be explored by a curious 13-year-old.
 
-This folder is the design package. There is no code yet, on purpose.
+The map lays the whole dataset on a left-to-right time axis, with lanes by
+lineage, scene or label, machines on a receding floor beneath, and a year
+cursor you can drag to watch it arrive. Click anything to read about it.
+
+The latest `main` is live at https://like-a-surgeon.netlify.app, and every
+pull request gets its own Netlify preview.
+
+## Where things stand
+
+- **M1 (data layer):** closed. The dataset targets moved to Track D, which
+  keeps growing (`npm run report` measures the distance).
+- **M2 (graph renderer):** shipped.
+- **M3 (reading surface):** built. Panels, reading levels, legend, search,
+  YouTube links, Arrange by, and the typography pass are all in (PRs #16 to
+  #21). The gate is still open: it passes when Matt's 13-year-old uses the
+  map without instruction and gets somewhere. `docs/m3-gate-notes.md` is the
+  guide for that session.
+- **Track D (data):** machines reached their 25 target in PR #23. Q21's
+  three batches followed PR #24's 80s hip-hop: the 90s groups and their
+  producers, the most-sampled breaks with their artists as hubs, and
+  classic rock (the Beatles, Led Zeppelin, Hendrix, the Verve), most of it
+  joined to hip-hop through samples. Then outré electronic: musique
+  concrète, the Radiophonic Workshop, Can and Neu!, Eno, and early Warp.
+  The rest are still short: 92 of 120 artists, 141 of 350 edges, 10 of 20
+  scenes, 17 of 30 labels, 2 of 5 threads, 4 of 30 edges with a demo.
+- **Open question:** Q20 in `QUESTIONS.md`. A null end year can't
+  currently tell "still made" from "unknown", so some machines read as
+  still on sale.
+- **Next:** M4, the audio engine, once the M3 gate is passed.
 
 ## What is here
 
@@ -14,43 +42,54 @@ This folder is the design package. There is no code yet, on purpose.
 | `BUILD_PLAN.md` | Milestones and gates, plus the ungated data-expansion track. |
 | `BACKLOG.md` | Everything deliberately not being built yet. |
 | `ASSUMPTIONS.md` | Decisions made without asking. Append-only. |
-| `QUESTIONS.md` | Five open questions that need Matt's answers before M1. |
+| `QUESTIONS.md` | Open questions that need Matt's answers, and the resolved ones. |
 | `data/SCHEMA.md` | The data contract. |
 | `data/seed.json` | Frozen reference copy of the original ten-artist quality bar. No longer live data; see `data/artists/` etc. |
 | `data/artists/`, `data/machines/`, `data/scenes/`, `data/labels/`, `data/edges/`, `data/demos/`, `data/threads/` | The live, sharded dataset. One file per record. |
 | `tools/validate.js` | Checks the data tree. `npm run validate`. |
 | `tools/serve.js` | Dev static server, solves the `file://` fetch problem. `npm run dev`. |
-| `tools/bundle.js` | Release bundler, inlines all data into `data/data.bundle.js`. `npm run build`. |
+| `tools/bundle.js` | Release bundler. Writes `dist/`, which opens from disk with no server. `npm run build`. |
+| `tools/report.js` | Generates the M1 gate report into `docs/m1-gate-report.md`. `npm run report`. |
+| `tools/crosscheck.js` | Checks the data against Wikidata and MusicBrainz and lists disagreements in `docs/crosscheck-report.md`. Dev only, and the only tool that uses the network. `npm run crosscheck`. |
+| `index.html`, `main.js` | The app shell and entry point. |
+| `config.js` | Every tuning value in the project. No magic numbers in logic. |
+| `render/` | The graph renderer: layout, lane plans (`arrange.js`), substrate, nodes, edges, gradients, atmosphere, transport, viewport culling, semantic zoom, label placement. |
+| `reading/` | The reading surface: the drawer and its node and edge panels, reading levels, legend and version stamp, search, YouTube links, interface copy in registers, the type scale. |
+| `docs/` | Milestone designs (`m1-`, `m2-`, `m3-architecture.md`), the M1 gate report, and the M3 gate notes. |
+| `netlify.toml` | Builds `dist/` for the Netlify site and its PR previews. |
+| `design/` | Visual direction prototypes. `03-strata.html` is the one that shipped. |
+| `tools/design-snapshot.js` | Freezes `data/` for the `design/` prototypes. `npm run design:snapshot`. |
+| `.claude/hooks/session-start.sh` | Tells each session how far behind `origin/main` it is, and what else is in flight. |
 
-## How to start with Claude Code
+## Running it
 
-1. Answer `QUESTIONS.md` in the file. Five questions, ten minutes.
-2. Read `data/seed.json`, specifically the `whatToListenFor` fields and the
-   `evidence` fields. If those read well to you, the project will read well.
-   If they read like filler, fix two of them by hand so there is a standard to
-   point at.
-3. `git init`, commit the whole folder as the design package.
-4. Open Claude Code in the folder and send the kickoff message below.
+    npm run dev        # serves at localhost:8080
+    npm run validate   # checks the data tree
+    npm run report     # regenerates docs/m1-gate-report.md
+    npm run crosscheck # checks the data against outside sources (needs network)
+    npm run build      # writes dist/, the offline release: open dist/index.html directly
 
-### Kickoff message
+Scroll to zoom, drag to pan, and drag the year cursor or press play. Click a
+dot or a line to open its panel, and follow the links in the panel sideways.
+Press `/` to search by name, place or year. The top-left controls switch
+the layers, the reading level (Teen, Adult) and the arrangement (Lineage,
+Scene, Label). The legend bottom-left explains how sure each line is.
 
-> Read CLAUDE.md, SPEC.md, BUILD_PLAN.md, and data/SCHEMA.md before doing
-> anything. Then read data/seed.json carefully, because it is the quality bar
-> for everything you will write.
->
-> You are starting M1. Do not write any UI code, any renderer, or any scratch
-> visualization. M1 is the data layer and nothing else.
->
-> Start by proposing the sharded file layout and the manifest format, and by
-> solving the file:// fetch problem with a stdlib-only dev server and a bundling
-> step. Show me that plan before you build it.
->
-> Then expand the dataset toward the M1 targets in BUILD_PLAN.md, in batches of
-> about twenty artists with their edges, pausing after each batch so I can read
-> a sample. Lead with the dub, electro, Detroit, and Chicago material.
->
-> The single thing I will judge you on is the quality of edge.evidence and
-> trackPair.whatToListenFor. Never invent a quotation. Tier confidence honestly.
+## Working with Claude Code
+
+Each session starts by reading `CLAUDE.md`, and the SessionStart hook reports
+whether the checkout is behind `main`. Work goes through a pull request per
+concern. Every decision made without asking goes in `ASSUMPTIONS.md`, and
+every question for Matt goes in `QUESTIONS.md`. The prompts that drove M1 are
+kept in `prompts/`, and the original kickoff message is preserved there
+(`prompts/README.md`).
+
+## License
+
+The code is under the MIT License (`LICENSE`). The dataset in `data/`, the
+records and the writing in them, is under Creative Commons
+Attribution-ShareAlike 4.0 (`data/LICENSE`). Anyone can reuse and adapt the
+data if they credit Lineage and share their version under the same terms.
 
 ## The one rule that protects this project
 

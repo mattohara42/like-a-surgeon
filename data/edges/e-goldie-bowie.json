@@ -1,0 +1,31 @@
+{
+  "id": "e-goldie-bowie",
+  "from": "goldie",
+  "to": "david-bowie",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1997,
+  "crossLineage": true,
+  "evidence": "Goldie has said in his own accounts that David Bowie's regular attendance at his Metalheadz club residency directly inspired Bowie's drum and bass reinvention on 'Earthling' (1997). Bowie returned the collaboration by singing on Goldie's 1998 album 'Saturnz Return'.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Goldie",
+      "title": "Inner City Life",
+      "year": 1994
+    },
+    "later": {
+      "artist": "David Bowie",
+      "title": "Little Wonder",
+      "year": 1997
+    },
+    "whatToListenFor": "Goldie's jungle keeps the chopped, timestretched Amen break at the centre of the arrangement, everything else built around it. Bowie's 'Little Wonder', from 'Earthling', bolts the same fast, fractured breakbeat programming onto a guitar-driven rock song, industrial riffs sitting on top of a rhythm a club regular, not a rock producer, brought into his world."
+  },
+  "explanation": {
+    "age7": "David Bowie loved going to Goldie's club nights, and that gave him the idea to make his own album with jungle-style drum sounds.",
+    "age13": "Goldie has said that David Bowie's regular visits to his Metalheadz club night directly led to Bowie making 'Earthling' (1997), an album built around jungle and drum and bass rhythms. The following year, Bowie sang on a track from Goldie's own album 'Saturnz Return'.",
+    "adult": "An unusual direction for this map: most cross-lineage edges run from an older, foundational figure into a younger successor. Here a young jungle producer's club night reshapes a rock legend's late-career sound, which Goldie has been direct and consistent about in interviews across decades."
+  },
+  "tags": [
+    "production"
+  ]
+}

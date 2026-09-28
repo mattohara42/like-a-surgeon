@@ -1,0 +1,31 @@
+{
+  "id": "e-stockhausen-can",
+  "from": "karlheinz-stockhausen",
+  "to": "can",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1968,
+  "crossLineage": true,
+  "evidence": "Holger Czukay studied composition with Stockhausen in Cologne from 1963 to 1966, and Irmin Schmidt attended his Cologne Courses for New Music in 1964 and 1965. Both founded Can in 1968. Stated in the band's biographies and in interviews given by both men over decades.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Karlheinz Stockhausen",
+      "title": "Hymnen",
+      "year": 1967
+    },
+    "later": {
+      "artist": "Can",
+      "title": "Aumgn",
+      "year": 1971
+    },
+    "whatToListenFor": "Hymnen takes found material, national anthems and shortwave radio noise, and treats it as raw sound to be filtered and cut. Put on 'Aumgn' from Tago Mago and wait out the opening. There is no beat for long stretches. Voices are stretched into a low drone, sounds come in treated past recognition, and the piece is shaped by editing rather than by a song form. Then listen to 'Halleluhwah' on the same album to hear what the method did to a rock groove: an eighteen-minute jam cut down on tape until it holds."
+  },
+  "explanation": {
+    "age7": "Two men from the band Can had studied with Stockhausen, and they used his ideas in rock music.",
+    "age13": "Stockhausen taught in Cologne in the 1960s. Two of his students, Holger Czukay and Irmin Schmidt, started the band Can in 1968. They recorded long jams and edited the tape afterwards, the way a composer in an electronic studio would, and they used strange, treated sounds that came from his world.",
+    "adult": "Cross-lineage by design: this is the most direct documented route from the European art-music studio into rock. Teaching is the mechanism, which makes it stronger than an influence claim built on listening alone."
+  },
+  "tags": [
+    "technology"
+  ]
+}

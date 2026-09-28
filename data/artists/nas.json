@@ -1,0 +1,43 @@
+{
+  "id": "nas",
+  "name": "Nas",
+  "sortName": "Nas",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1991,
+  "activeTo": null,
+  "originCity": "Queensbridge, Queens, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "large-professor",
+    "dj-premier",
+    "pete-rock",
+    "Q-Tip",
+    "L.E.S."
+  ],
+  "hook": "A Queensbridge teenager whose first album gathered the best producers in New York on one record, each doing their best work for him.",
+  "blurb": {
+    "age7": "A rapper from Queensbridge in New York. His first album is one of the most famous rap albums ever made.",
+    "age13": "Nasir Jones grew up in the Queensbridge housing projects, the same place Marley Marl's Juice Crew came from. Large Professor put him on a Main Source record in 1991, when he was seventeen. His first album, Illmatic, came out in 1994. It had only ten songs, but they were produced by some of the best beat-makers of the time: Large Professor, DJ Premier, Pete Rock, Q-Tip and L.E.S. His father, Olu Dara, is a jazz cornet player.",
+    "adult": "Illmatic is the clearest case on this map of producers as a separate dimension from artists. Five producers, most of them already on the map, are gathered on one debut, and several of the tracks are among the best-known work each of them did. That the record is by a rapper and not a producer is part of the point: by 1994 a label assembled the producers the way Sugar Hill once assembled a house band."
+  },
+  "signatureTracks": [
+    {
+      "title": "Live at the Barbeque (Main Source)",
+      "year": 1991,
+      "whyThisOne": "His first verse on record, as a teenager, on Large Professor's group's album."
+    },
+    {
+      "title": "N.Y. State of Mind",
+      "year": 1994,
+      "whyThisOne": "The opening track of Illmatic, produced by DJ Premier."
+    },
+    {
+      "title": "The World Is Yours",
+      "year": 1994,
+      "whyThisOne": "Pete Rock's production on Illmatic, built on an Ahmad Jamal piano record."
+    }
+  ]
+}

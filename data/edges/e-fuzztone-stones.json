@@ -1,0 +1,31 @@
+{
+  "id": "e-fuzztone-stones",
+  "from": "maestro-fz-1",
+  "to": "rolling-stones",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1965,
+  "crossLineage": true,
+  "evidence": "Keith Richards has said in interviews that he used the Fuzz-Tone to sketch the 'Satisfaction' riff as a stand-in for a horn part, and that the take was released before any horns were added. The pedal's history (a 1962 launch, weak sales, then a surge in demand in 1965) appears in accounts of the FZ-1 and of Gibson's effects line, which differ on the exact sales figures.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Marty Robbins",
+      "title": "Don't Worry",
+      "year": 1961
+    },
+    "later": {
+      "artist": "The Rolling Stones",
+      "title": "(I Can't Get No) Satisfaction",
+      "year": 1965
+    },
+    "whatToListenFor": "Start with the Robbins record and wait for the instrumental break, where a bass line suddenly comes out torn and buzzing. That accident is what the Fuzz-Tone was built to repeat. Then play 'Satisfaction'. The riff comes in alone, and each note swells and holds with a raspy buzz instead of ringing out and fading like a clean guitar. Hum it and it phrases like a horn line, which is what Richards has said it was meant to become."
+  },
+  "explanation": {
+    "age7": "A fuzz box nobody wanted, until the Rolling Stones used it and every band wanted one.",
+    "age13": "The Fuzz-Tone copied a sound that had happened by accident at a country session. For three years it barely sold. Then Keith Richards used it to play the riff on 'Satisfaction' as a rough stand-in for horns, the record came out that way, and it went to number one. After that, fuzz was part of what rock guitar sounded like.",
+    "adult": "The edge runs from device to band, but the causal weight runs through the record: 'Satisfaction' did not use a popular effect, it made an unpopular one popular. Richards's own account, that the fuzz was a placeholder for horns, is worth keeping, because it means the defining guitar tone of 1965 was a sketch that nobody replaced."
+  },
+  "tags": [
+    "technology"
+  ]
+}

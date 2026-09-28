@@ -1,0 +1,32 @@
+{
+  "id": "e-enjoy-flash",
+  "from": "enjoy-records",
+  "to": "grandmaster-flash",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1979,
+  "crossLineage": false,
+  "evidence": "Bobby Robinson's Enjoy Records recorded and released 'Superrappin'' (1979), Grandmaster Flash and the Furious Five's first single. It became a local New York hit but Enjoy lacked the distribution to take it nationally, and the group signed to Sugar Hill Records before the year was out, as documented in standard hip-hop histories.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Grandmaster Flash and the Furious Five",
+      "title": "Superrappin'",
+      "year": 1979
+    },
+    "later": {
+      "artist": "Grandmaster Flash and the Furious Five",
+      "title": "Freedom",
+      "year": 1980
+    },
+    "whatToListenFor": "'Superrappin'' is already a fully formed group performance, five voices trading lines over a live band. 'Freedom', their first Sugar Hill single less than a year later, isn't a different sound so much as the same group suddenly heard everywhere: the label changed the record's reach, not what the group was doing."
+  },
+  "explanation": {
+    "age7": "A small record company made Grandmaster Flash's very first song, but it could only be heard in New York. So the group moved to a bigger company.",
+    "age13": "Bobby Robinson's Enjoy Records recorded 'Superrappin'' (1979), the first single by Grandmaster Flash and the Furious Five. It was a hit in New York, but Enjoy had no way to sell it nationally, so before the year was over the group signed with Sugar Hill Records instead.",
+    "adult": "A label edge under the A69 convention, but the decision here is a limitation rather than a choice: Enjoy's distribution reach, built for an earlier era of New York R&B, is what changed the group's path, not any specific creative or contractual decision Robinson made."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

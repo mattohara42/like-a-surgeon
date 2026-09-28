@@ -1,0 +1,19 @@
+{
+  "id": "oberheim-dmx",
+  "name": "Oberheim DMX",
+  "type": "machine",
+  "kind": "drum-machine",
+  "lineage": "electronic",
+  "maker": "Oberheim Electronics",
+  "releasedYear": 1981,
+  "discontinuedYear": 1984,
+  "originalPurpose": "A programmable drum machine for studios and bands, built on short digital recordings of real drums stored on memory chips rather than on synthesised tones. The chips could be swapped for other sounds.",
+  "whatActuallyHappened": "In Queens, producer Larry Smith programmed a drummer's pattern into one and built Run-D.M.C.'s first single around it with almost nothing else. The DMX's hard, bright hits, soaked in reverb, became the sound of the rap records that came after the Sugar Hill house-band era. The same machine also drove pop and new wave records of the early 1980s.",
+  "priceStory": "List price was about 2,900 US dollars in 1980 to 1981, comparable to its rival the LinnDrum. This was a studio purchase, not a bedroom one, so its place in rap came through producers with studio access rather than through cheap secondhand units the way the 808 arrived.",
+  "hook": "The drum machine behind the first Run-D.M.C. record, which threw out the band and left rap with nothing but drums and voices.",
+  "blurb": {
+    "age7": "A drum machine that played recordings of real drums. Run-D.M.C. made their first record with it and hardly anything else.",
+    "age13": "The DMX was one of the first drum machines to play short digital recordings of real drums instead of making drum sounds out of electronics. That made it hit harder and sound more real than older machines. In 1983 a producer named Larry Smith used one to make Run-D.M.C.'s first record. He left out the band completely: just the drum machine and two rappers. After that, rap records started sounding bare and hard instead of like disco with talking on top.",
+    "adult": "The DMX sits between two eras on this map. Its sounds were sampled, like the SP-1200's, but supplied on chips rather than recorded by the user, so a producer arranged sounds rather than choosing them. Its importance to rap is less about the timbre than about what Smith did with it: the stripped arrangement of 'Sucker M.C.'s' broke with the house-band model Sugar Hill had set, and made the drum machine the whole track rather than a replacement for a drummer inside one. The end year here comes from a single secondary source and is not confirmed elsewhere."
+  }
+}

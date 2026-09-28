@@ -1,0 +1,32 @@
+{
+  "id": "e-juno60-heard",
+  "from": "roland-juno-60",
+  "to": "larry-heard",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1984,
+  "crossLineage": false,
+  "evidence": "Heard has described in interviews, including a 2017 account of the making of 'Can You Feel It', buying a Juno-60 and a TR-909 and recording that track, 'Mystery of Love' and 'Washing Machine' within days, using two cassette decks and no multitrack recorder.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Roland",
+      "title": "Juno-60",
+      "year": 1982,
+      "search": false
+    },
+    "later": {
+      "artist": "Mr. Fingers",
+      "title": "Can You Feel It",
+      "year": 1986
+    },
+    "whatToListenFor": "Listen to the chords floating above the bassline. They have no hard front edge: each one arrives softly and hangs in the air, and they sound wide, as if coming from both sides at once. That softness and width are the kind of sound the Juno's built-in chorus was designed to make. The whole record was built from a synth, a drum machine and two cassette decks."
+  },
+  "explanation": {
+    "age7": "Larry Heard bought a synthesizer and made one of the first deep house songs a few days later.",
+    "age13": "Larry Heard bought a Roland Juno-60 and a drum machine in 1984. Within a few days he had made 'Can You Feel It', a song that helped start deep house. He did not have a proper studio, just two cassette decks. The Juno's soft, warm chords are a big part of why the song feels calm instead of pounding.",
+    "adult": "Deep house's warmth is harmonic and timbral: extended chords, slow filter movement, a lack of aggression in the attack. The Juno-60 was well suited to exactly that, and Heard's account makes this one of the most direct machine-to-style connections on the map."
+  },
+  "tags": [
+    "technology"
+  ]
+}

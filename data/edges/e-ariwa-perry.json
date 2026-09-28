@@ -1,0 +1,32 @@
+{
+  "id": "e-ariwa-perry",
+  "from": "ariwa",
+  "to": "lee-perry",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1989,
+  "crossLineage": false,
+  "evidence": "Mystic Warrior (Ariwa, ARICD054) credits Lee Perry, as King Scratch, and Mad Professor as producers and mixers, recorded and mixed at Ariwa Studios in London. Its release date is disputed: the CD notes say 1989, and Ariwa's own website has said 1986 (both noted in the Discogs listing). Ariwa went on to release further Perry albums made the same way, including Black Ark Experryments (1995) and Who Put the Voodoo 'Pon Reggae (1996).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Lee \"Scratch\" Perry",
+      "title": "Revolution Dub",
+      "year": 1975
+    },
+    "later": {
+      "artist": "Lee \"Scratch\" Perry & Mad Professor",
+      "title": "Mystic Warrior",
+      "year": 1989,
+      "search": "Lee Perry Mad Professor Mystic Warrior"
+    },
+    "whatToListenFor": "Revolution Dub comes from Perry's own Black Ark in Kingston. Mystic Warrior was made fourteen years later in someone else's studio, on someone else's label, with the owner sharing the mixing desk. The credits list both men as mixers. Listen for two people's dub in one record, and for what changes when the room is no longer the four-track Black Ark. Of all the pairs on the map, this one most needs checking by ear."
+  },
+  "explanation": {
+    "age13": "From the late 1980s Lee Perry made a run of albums in London at Ariwa, Mad Professor's studio and label. The two men produced and mixed them together, and Ariwa released them.",
+    "adult": "A label edge of the Ruffhouse kind, where the label and the studio are one place and the owner works on the records. It runs the other way from e-perry-madprofessor, which is Perry's influence on Mad Professor. This edge is Ariwa's effect on Perry: a working base, a mixing partner and a label for his records from the late 1980s."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

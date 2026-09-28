@@ -1,0 +1,19 @@
+{
+  "type": "machine",
+  "id": "roland-juno-60",
+  "name": "Roland Juno-60",
+  "kind": "synth",
+  "lineage": "electronic",
+  "maker": "Roland",
+  "releasedYear": 1982,
+  "discontinuedYear": 1984,
+  "originalPurpose": "An affordable polyphonic synthesizer, able to play chords, with a built-in chorus effect that made its sound wide and warm. Roland sold it to working musicians who could not afford the flagship polysynths.",
+  "whatActuallyHappened": "In Chicago in 1984, Larry Heard bought a Juno-60 and a TR-909. Within days he had recorded 'Can You Feel It', 'Mystery of Love' and 'Washing Machine', using little else but two cassette decks. Those tracks became founding documents of deep house, and the Juno's soft, chorused chords are a large part of what makes them sound the way they do.",
+  "priceStory": "About 1,800 US dollars new in 1982. Not cheap, but it was a real polyphonic synthesizer at a working musician's price, and a few years later secondhand ones were cheaper still.",
+  "hook": "A mid-priced chord synthesizer on which deep house was recorded in a matter of days.",
+  "blurb": {
+    "age7": "A synthesizer that can play chords. Larry Heard used one to make some of the first deep house songs.",
+    "age13": "Some synthesizers only play one note at a time. The Juno-60 could play chords, and it had a built-in effect that made them sound soft and wide. Larry Heard bought one and a drum machine in 1984, and within a few days he had made three songs that became classics of deep house. He recorded them with nothing more than two cassette decks.",
+    "adult": "Heard's account of buying the Juno-60 and the 909 and recording three landmark tracks within days is documented in his own interviews. The instrument's chorus and its gentle, rounded filter suit the warm, unhurried harmony that deep house is built on, which the map reads as a real fit between machine and style rather than coincidence."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "frankie-knuckles",
+  "name": "Frankie Knuckles",
+  "sortName": "Knuckles, Frankie",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1977,
+  "activeTo": 2014,
+  "originCity": "Chicago",
+  "originCountry": "USA",
+  "scenes": [
+    "chicago-house"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A New York DJ whose five years at one Chicago club gave an entire genre its name.",
+  "blurb": {
+    "age7": "Frankie Knuckles played records at a Chicago club called the Warehouse, and people started calling that kind of music \"house.\"",
+    "age13": "Born in the Bronx, Knuckles moved to Chicago in 1977 to DJ at a club called the Warehouse. He mixed disco, European electronic records, and drum machine beats into all-night sets, and record shops started getting requests for \"that Warehouse music,\" shortened to house music.",
+    "adult": "Knuckles' residency at the Warehouse from 1977 supplies the genre's actual etymology, which is unusually well documented for a dance-music origin story. He later produced and remixed extensively (including early collaborations with vocalist Jamie Principle), but his lasting significance is as the DJ whose specific taste and mixing style, played in one room for a decade, got a whole sound named after the building."
+  },
+  "signatureTracks": [
+    {
+      "title": "Your Love (with Jamie Principle)",
+      "year": 1986,
+      "whyThisOne": "A Knuckles/Jamie Principle collaboration that circulated on cassette and reel-to-reel for years before its wider release, mapping how house records spread before they were even pressed."
+    },
+    {
+      "title": "Baby Wants to Ride (with Jamie Principle)",
+      "year": 1987,
+      "whyThisOne": "The other half of the Knuckles/Principle pairing, deep and explicit where \"Your Love\" is wistful."
+    }
+  ]
+}

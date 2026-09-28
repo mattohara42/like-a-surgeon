@@ -39,6 +39,13 @@ confidence tier, plus the twenty edges you are least sure about, plus twenty
 randomly sampled `whatToListenFor` fields. Reading those twenty is the real
 quality check on the whole dataset.
 
+**Gate passed.** Matt reviewed `docs/m1-gate-report.md` and closed M1 in chat.
+The step-5 dataset targets were not met at closing (39 artists of 120, 61 edges
+of 350, 12 machines of 25) and they are not abandoned: they move to Track D as
+its destination, which is where the plan always said data expansion lives.
+`npm run report` keeps measuring the distance. Closing M1 opens M3, since M2
+shipped ahead of the gate.
+
 ---
 
 ## M2 — Graph renderer
@@ -49,6 +56,10 @@ collapse and expand animation. Node and edge hit testing. Render the whole M1
 dataset at 60fps or raise the problem.
 
 **Gate:** performance at 2x the M1 dataset size, simulated by duplication.
+
+**Shipped ahead of its gate** (A72). The 2x check was run headless, where
+`render()` averaged 1.9ms against a 16.7ms budget. A spot check in a real
+browser is still logged in BACKLOG.
 
 ---
 
@@ -61,6 +72,11 @@ the data rather than hardcoding two.
 Confidence legend. Search. Outbound streaming-search links. Typography pass.
 
 **Gate:** Matt's 13-year-old uses it without instruction and gets somewhere.
+
+**Build complete, gate open.** Every step in `docs/m3-architecture.md`
+shipped in PRs #16 to #21, plus Arrange by (Q19), which Matt asked for
+mid-milestone. `docs/m3-gate-notes.md` covers how to run the gate session.
+M4 does not open until the gate is passed.
 
 ---
 
@@ -107,6 +123,67 @@ Suggested batch order after M1:
 6. Kid (7-11) register written across the whole dataset, once Teen and Adult
    text is stable and proven with a real reader.
 7. Long tail, forever.
+
+Progress: batches so far have covered dub, electro and Detroit, the UK
+rock spine, the founding Bronx generation, 80s hip-hop production, and
+all three Q21 batches (90s groups and producers, the most-sampled breaks,
+classic rock), batch 3 (outré electronic) in a first pass, a funk/dub
+batch (A180), an orphan-closing batch that connected Transmat, KMS
+and Rockers International to the main graph (A184), a bridge-edge
+pass that merged three more scene/label islands without adding new
+nodes (A189), and a sample-hub/Native Tongues batch (A191) that added
+Isaac Hayes, the Isley Brothers, Bob James, Syl Johnson, De La Soul,
+Prince Paul and Mantronix, plus the Casio MT-40 machine. Batch 5 is
+half done. Machines exceeded 25 in PR #23 and again this batch, and
+labels are still short. A small label batch added Stones Throw Records,
+closing a gap already visible in Madlib's, MF DOOM's and J Dilla's own
+blurbs, plus Stan Getz and Luiz Bonfá as a sample hub into J Dilla's
+'Runnin''. An overnight run then closed out the last Q21 sample-hub
+waits (Michael Jackson, Joni Mitchell and Janet Jackson), gave the Amen
+break its jungle crossing (Shy FX), closed the G-funk gap (George
+Clinton solo and Dr. Dre), and authored two new scenes, `britpop` and
+`cologne-krautrock`, the latter deliberately kept separate from
+`dusseldorf-kling-klang` despite both sitting under the "krautrock"
+umbrella, since their institutional roots (a state broadcaster's studio
+against a band's private one) are genuinely different stories. Two more
+batches followed: Enjoy Records (Bobby Robinson) and Big Daddy Kane
+closed further BACKLOG waits, then a `uk-jungle` scene joined Shy FX
+with Goldie, whose own account of inspiring David Bowie's 'Earthling'
+(1997) runs this map's usual older-artist-shapes-younger-successor
+pattern in reverse. A batch bringing MC Shan, Kool G Rap and Roxanne
+Shanté onto the map, each with a documented Marley Marl production
+edge, brought the artist count to 120 and **met the M1 target** for the
+first time; the Juice Crew is nearly closed out too (only Craig G still
+waits). A `chess-records` label batch followed, giving the rock spine
+its first blues-label edge (the Rolling Stones' 1964 Chicago sessions),
+then `sheffield-idm` joined Aphex Twin and Autechre as a scene built
+around a label's marketing decision (Warp's 1992 "Artificial
+Intelligence" compilation) rather than a shared city, and `motown`
+closed with an edge into Michael Jackson (Berry Gordy reassigning
+"I Want You Back" from Gladys Knight to the Jackson 5). A final batch
+added `stax` and the `memphis-stax` scene, splitting one history (the
+label's 1968 catalogue crisis, and the in-house writing system that
+predates and outlasts it) across a label edge into Isaac Hayes and a
+scene edge into The Charmels. A four-label batch then met the M1
+label target (30): Loud (Wu-Tang's solo-freedom deal), Food (sending
+Blur's second album back for a single), Island (the Compass Point band
+built around Sly and Robbie) and Elektra (shelving KMD's 'Black
+Bastards'), each with one label edge into an artist already on the
+map. Atlantic was planned and dropped (A229). A scene batch then met the M1 scene target
+(20): the Juice Crew in Queensbridge, Native Tongues, West Berlin, Long
+Island and Los Angeles gangsta rap, all built from artists already on
+the map, with nine edges including two Honey Drippers and James Brown
+samples on 'Eric B. Is President' (A233, A234). An edge-only batch followed with eleven edges
+between nodes already on the map, closing the Kling Klang orphan and
+linking Joy Division back to Bowie and Kraftwerk (A236). A second edge-only
+batch added eight more, among them Hendrix's Isley Brothers apprenticeship,
+the Minimoog bass on 'Flash Light' and two Trax label edges (A237). A third edge batch
+added five more, including two label edges an artist's own record
+already implied (Ariwa, Sugar Hill) and the 1975 move of James Brown's
+horn section into P-Funk (A238). A fourth batch added six more,
+including the Willie Dixon/Chess Records credit dispute behind 'Whole Lotta
+Love' and Kool G Rap's line into Nas (A239). `npm run report` has the current
+distance on every remaining target.
 
 ## Definition of done for any milestone
 

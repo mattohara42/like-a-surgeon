@@ -1,0 +1,31 @@
+{
+  "id": "e-foster-tribe",
+  "from": "ronnie-foster",
+  "to": "a-tribe-called-quest",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1993,
+  "crossLineage": true,
+  "evidence": "'Electric Relaxation' (1993) samples Ronnie Foster's 'Mystic Brew' from Two Headed Freap (Blue Note, 1972), as recorded in the song's sample credits.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Ronnie Foster",
+      "title": "Mystic Brew",
+      "year": 1972
+    },
+    "later": {
+      "artist": "A Tribe Called Quest",
+      "title": "Electric Relaxation",
+      "year": 1993
+    },
+    "whatToListenFor": "Listen for the melancholy keyboard phrase in 'Mystic Brew', then hear Tribe loop it. The phrase that drifts in the original becomes a steady cycle, with soft drums sitting quietly under it. It's so relaxed that Q-Tip and Phife seem to be talking over it rather than rapping on top of it. The mood of a 1972 jazz record becomes the whole identity of the song."
+  },
+  "explanation": {
+    "age7": "A Tribe Called Quest looped a soft jazz organ part for 'Electric Relaxation'.",
+    "age13": "'Electric Relaxation' is built on a loop from 'Mystic Brew', a 1972 song by the jazz organist Ronnie Foster. Tribe kept its soft, dreamy feeling and put gentle drums and relaxed rapping over it.",
+    "adult": "A clear example of Blue Note's 1970s catalogue becoming source material for 1990s hip-hop."
+  },
+  "tags": [
+    "production"
+  ]
+}

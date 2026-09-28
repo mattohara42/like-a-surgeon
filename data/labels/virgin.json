@@ -6,12 +6,12 @@
   "foundedYear": 1972,
   "closedYear": null,
   "city": "London",
-  "founders": "Richard Branson, Simon Draper, Nik Powell",
-  "ownershipStory": "Started as a mail-order record business before becoming a label, Virgin grew into one of the UK's major independents and signed Public Image Ltd directly out of the collapse of the Sex Pistols. Branson sold the label's recorded-music arm to Thorn EMI in 1992.",
-  "hook": "The independent that signed John Lydon the moment the Sex Pistols were finished.",
+  "founders": "Richard Branson, Simon Draper, Nik Powell, Tom Newman",
+  "ownershipStory": "Founded in 1972 by Richard Branson, Simon Draper, Nik Powell, and musician Tom Newman, growing out of Branson and Powell's Notting Hill record shop, which specialized in krautrock and progressive-rock imports. Virgin later became the label willing to sign the Sex Pistols in 1977 after both EMI and A&M had dropped them over controversy.",
+  "hook": "Started as a mail-order shop for krautrock imports, ended up releasing \"Never Mind the Bollocks.\"",
   "blurb": {
-    "age7": "This record company started as a tiny record shop and grew huge.",
-    "age13": "Virgin Records started as a small mail-order record shop before it became one of Britain's biggest independent labels. It signed Public Image Ltd right after the Sex Pistols broke up.",
-    "adult": "Virgin's growth from mail-order business to major independent is a useful contrast to Trax or the Kingston sound systems: a UK label that scaled up enough to eventually be sold to a major, Thorn EMI, in 1992."
+    "age7": "Virgin Records started as a small record shop and grew into a label big enough to release the Sex Pistols.",
+    "age13": "Richard Branson and friends founded Virgin in 1972, starting from a record shop that specialized in imported German electronic music. Five years later it was the only label willing to sign the Sex Pistols.",
+    "adult": "Virgin's origin in a shop specializing in krautrock imports is a nice small link back to this dataset's Kraftwerk/Dusseldorf scene, and its willingness to sign the Sex Pistols after two majors backed out shows how much of punk's early commercial life still ran through label risk tolerance rather than pure independence."
   }
 }

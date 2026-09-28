@@ -1,0 +1,19 @@
+{
+  "id": "hohner-melodica",
+  "name": "Hohner Melodica",
+  "type": "machine",
+  "kind": "instrument",
+  "lineage": "other",
+  "maker": "Hohner",
+  "releasedYear": 1958,
+  "discontinuedYear": null,
+  "originalPurpose": "A cheap keyboard you blow into, made largely for teaching children music in schools.",
+  "whatActuallyHappened": "Jamaican schools used them, which is how one reached Augustus Pablo. Played slowly, in minor keys, through a studio's echo and reverb, the toy stops sounding like a toy and starts sounding like the loneliest instrument in the room. Pablo built a whole strand of reggae and dub on it, which he called the Far East sound. The instrument's thin, reedy tone and its total lack of sustain are the reasons it works: every note has to be pushed, so the phrasing is breath rather than keys.",
+  "priceStory": "The cheapest melodic instrument in the building, and that is the point. It was in the room because it was made for children, not because a producer chose it for a record.",
+  "hook": "A school instrument for children, played slowly enough to become the sound of dub's melancholy.",
+  "blurb": {
+    "age7": "A little keyboard you blow into, the kind schools give children, played so slowly and sadly that it stopped sounding like a toy.",
+    "age13": "The melodica was made for classrooms: cheap, small, blow into one end and press the keys. Augustus Pablo picked one up in Jamaica and played it slowly in minor keys with heavy echo on it. Because you have to blow every note, the playing follows your breath rather than your fingers, and that is why it sounds human rather than mechanical.",
+    "adult": "A useful corrective to the idea that new sounds require new technology. The melodica was twenty years old and sold as an educational product; what changed was the register, the tempo, the tuning and the signal chain it was placed in. Pablo's 'Far East' sound is an argument about context rather than invention."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "e-simmons-sly",
+  "from": "simmons-sds-v",
+  "to": "sly-and-robbie",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1983,
+  "crossLineage": true,
+  "evidence": "Sly Dunbar has said in interviews, including a 2008 Red Bull Music Academy lecture, that most Jamaican drummers were wary of drum machines while he was fascinated by them. He has also said he bought a Simmons kit while making Black Uhuru's 'Anthem' and used it on that album and on some Jamaican sessions.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Simmons",
+      "title": "SDS-V electronic drums",
+      "year": 1981,
+      "search": false
+    },
+    "later": {
+      "artist": "Black Uhuru",
+      "title": "Anthem",
+      "year": 1983
+    },
+    "whatToListenFor": "Listen to the drum fills. In places, instead of the round thud of a drum skin, a tom comes out as a short electronic zap that swoops down in pitch. Underneath it, the groove is still Sly's: the kick and snare placed with a reggae drummer's sense of where the beat should sit. The machine sound, played by a human, is the combination to hear."
+  },
+  "explanation": {
+    "age7": "Sly Dunbar played electronic drums on a reggae album when most drummers would not touch them.",
+    "age13": "Most Jamaican drummers did not like drum machines. Sly Dunbar was curious instead, and he bought a set of Simmons electronic drums and used them on Black Uhuru's album 'Anthem', which went on to win the first Grammy ever given for a reggae album. Soon after, Jamaican music became more and more electronic.",
+    "adult": "The documented part is Dunbar's adoption and his account of his peers' suspicion. Whether his example accelerated dancehall's move to digital production is a plausible reading of the timeline rather than something the evidence establishes, and the map does not draw that second step."
+  },
+  "tags": [
+    "technology"
+  ]
+}

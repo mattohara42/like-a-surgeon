@@ -1,0 +1,19 @@
+{
+  "id": "tr-909",
+  "name": "Roland TR-909",
+  "type": "machine",
+  "kind": "drum-machine",
+  "lineage": "electronic",
+  "maker": "Roland",
+  "releasedYear": 1983,
+  "discontinuedYear": 1985,
+  "originalPurpose": "The 808's replacement. Analogue drum voices again, but with sampled cymbals and hi-hats this time, so that it might finally sound like a drum kit.",
+  "whatActuallyHappened": "It sold badly in the same way the 808 had, roughly ten thousand units before Roland stopped making it in 1985, and it took the same route afterwards: cheap, secondhand, into the hands of people in Chicago and Detroit who were not the customer Roland had in mind. Its kick is tighter and harder than the 808's and its sampled open hi-hat has a specific short ring to it. Those two sounds, four to the bar with the hat between them, are most of what house and techno are made of.",
+  "priceStory": "1,195 US dollars new in 1983. It was on the secondhand market within about two years of release, which is the only reason it reached the people who used it.",
+  "hook": "Roland's attempt to fix the 808 failed the same way and built house and techno instead.",
+  "blurb": {
+    "age7": "Another drum machine that shops could not sell, which ended up being used to make two whole kinds of music.",
+    "age13": "Roland thought the 808 failed because it did not sound like real drums, so the 909 used recordings of real cymbals and hi-hats to fix that. It sold badly anyway, and only about ten thousand were made. Then it turned up cheap secondhand in Chicago and Detroit, where nobody wanted it to sound like a drum kit. That hard kick and that short ringing hi-hat are the basic building blocks of house and techno.",
+    "adult": "The 909 is the 808's story told twice, which is why both are here. Roland diagnosed the 808's commercial failure as insufficient realism and corrected for it, and the correction failed commercially on the same terms. The second failure produced a second set of timbres that a second generation organised genres around, and the pattern, failure to affordability to access to invention, is the one this project keeps finding."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-treasureisle-uroy",
+  "from": "treasure-isle",
+  "to": "u-roy",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1970,
+  "crossLineage": false,
+  "evidence": "Singer John Holt introduced U-Roy to producer Duke Reid in 1970; Reid put him to work talking over existing Treasure Isle rocksteady rhythms, starting with Alton Ellis's 'Girl I've Got a Date' (1967), as documented in U-Roy's own biography accounts and Wikipedia's articles on 'Wake the Town' and U-Roy.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Alton Ellis",
+      "title": "Girl I've Got a Date",
+      "year": 1967
+    },
+    "later": {
+      "artist": "U-Roy",
+      "title": "Wake the Town",
+      "year": 1970
+    },
+    "whatToListenFor": "Play Ellis's original rocksteady vocal first, then U-Roy's version built on the same rhythm track three years later: the tune and the players are the same, but U-Roy talks, chants and ad-libs over the top instead of singing a fixed lyric, turning Reid's back catalogue into new records without a new song being written."
+  },
+  "explanation": {
+    "age13": "Duke Reid, who owned Treasure Isle, gave U-Roy his first records to make in 1970 by having him talk over existing rocksteady rhythm tracks the label already owned, starting with a song by Alton Ellis. It made U-Roy a star and gave the label's old rhythms a second life.",
+    "adult": "A label edge in the direct sense: Reid's catalogue of already-owned rhythm tracks was the raw material his own decision to pair with U-Roy turned into a new commercial format, toasting on record, that reused Treasure Isle's existing masters rather than paying for new backing tracks."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "studio-one",
+  "name": "Studio One",
+  "type": "label",
+  "lineage": "dub",
+  "foundedYear": 1954,
+  "closedYear": null,
+  "endUnknown": true,
+  "city": "Kingston",
+  "founders": [
+    "Clement \"Coxsone\" Dodd"
+  ],
+  "ownershipStory": "Clement 'Coxsone' Dodd began releasing records as Studio One in 1954, funded by his sound system's popularity, using other people's studios before building his own on Brentford Road in Kingston in 1963, Jamaica's first Black-owned recording studio. Dodd worked with, and effectively trained, a large share of the musicians who defined ska, rocksteady and reggae, and paid session musicians a flat fee for rhythms he then owned outright, rhythms that other producers have re-recorded, or 'versioned', for decades since, more than almost any other catalogue in Jamaican music. Dodd ran the label until his death in 2004; its ownership and operating status since are not clearly established in the sources checked here.",
+  "hook": "Reggae's most reused catalogue, built on rhythms its own musicians were paid once for and never again.",
+  "blurb": {
+    "age7": "Studio One was a Jamaican record label and studio where many famous reggae musicians got their start. Other producers have reused its songs' rhythm tracks thousands of times since.",
+    "age13": "Clement 'Coxsone' Dodd started Studio One in 1954 and opened his own studio, Jamaica's first Black-owned one, in Kingston in 1963. A huge number of ska, rocksteady and reggae musicians passed through it, and Dodd's house rhythms have been re-recorded by other producers more than almost any other catalogue in Jamaican music.",
+    "adult": "Studio One is often called Jamaica's Motown for the sheer number of major artists and musicians who passed through it, and for Dodd's habit of paying session players a flat fee for rhythms he then owned and could license out indefinitely, which is one of the starkest uncompensated-labour stories on this map. Its rhythms are the raw material the wider Kingston dub and sound-system scene versioned, remixed and rebuilt for decades."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "incredible-bongo-band",
+  "name": "Incredible Bongo Band",
+  "sortName": "Incredible Bongo Band",
+  "type": "artist",
+  "lineage": "other",
+  "activeFrom": 1972,
+  "activeTo": 1974,
+  "originCity": "Los Angeles, California",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Michael Viner"
+  ],
+  "hook": "A studio project whose bongo-heavy cover of 'Apache' flopped in 1973 and then became what Kool Herc called hip-hop's national anthem.",
+  "blurb": {
+    "age7": "A band that made a song called 'Apache' with lots of bongo drums. The first hip-hop DJs played it at every party.",
+    "age13": "The Incredible Bongo Band was a studio project put together by the record executive Michael Viner. In 1973 they recorded 'Apache', a cover of a 1960 instrumental hit by the Shadows, with long passages of bongos and drums. It wasn't a hit. A few years later in the Bronx, DJs like Kool Herc and Grandmaster Flash found it and played the drum part over and over, because it ran longer than almost any other break. It became one of the most important records in early hip-hop.",
+    "adult": "'Apache' is a rediscovery rather than a sample in the first instance: it entered hip-hop through the turntable, years before samplers, as a long break that DJs could extend by switching between two copies. A 2006 New York Times piece by Will Hermes reported Herc describing it as hip-hop's national anthem. It was later sampled on hundreds of records. The band existed only as a studio project in the early 1970s, so its dates are approximate."
+  },
+  "signatureTracks": [
+    {
+      "title": "Apache",
+      "year": 1973,
+      "whyThisOne": "The flop that became a foundation of Bronx DJ sets."
+    },
+    {
+      "title": "Bongo Rock",
+      "year": 1973,
+      "whyThisOne": "The title track of the same album, also a break staple."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "e-largepro-tribe",
+  "from": "large-professor",
+  "to": "a-tribe-called-quest",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1991,
+  "crossLineage": false,
+  "evidence": "Accounts of The Low End Theory's making, and equipment profiles of Q-Tip, describe Large Professor teaching Q-Tip to use the E-mu SP-1200 and introducing him to the Akai S950, with Q-Tip using the SP-1200 for drums and the S950 for loops. The sources consulted are secondary, so this is held at consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Main Source",
+      "title": "Looking at the Front Door",
+      "year": 1990
+    },
+    "later": {
+      "artist": "A Tribe Called Quest",
+      "title": "Check the Rhime",
+      "year": 1991
+    },
+    "whatToListenFor": "Listen for the split the two machines made. The drums have the SP-1200's crunchy, clipped grain, with short decays and a gritty snare. The musical loop above them, from the other sampler, runs longer and sounds cleaner and rounder. The Low End Theory is named for the bass, and on this album the low end is deep and warm rather than punchy. It's a teacher's setup, drums on one machine and loops on the other, used by his student for a different kind of record."
+  },
+  "explanation": {
+    "age7": "Large Professor showed Q-Tip how to use sampling machines.",
+    "age13": "Large Professor helped Q-Tip learn the SP-1200, a machine for drums, and introduced him to another sampler for longer loops. Q-Tip used both on A Tribe Called Quest's second album, The Low End Theory: crunchy drums from one machine, smoother music from the other.",
+    "adult": "A teaching edge about equipment and method rather than style. Tribe's jazz-based sound is its own, but the two-sampler workflow came through Large Professor. Consensus tier because the account rests on retellings rather than a statement from either man."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

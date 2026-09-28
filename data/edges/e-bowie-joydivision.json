@@ -1,0 +1,28 @@
+{
+  "id": "e-bowie-joydivision",
+  "from": "david-bowie",
+  "to": "joy-division",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1978,
+  "crossLineage": false,
+  "evidence": "The band called itself Warsaw until early 1978, after 'Warszawa' on Bowie's 'Low' (1977), and renamed itself Joy Division to avoid confusion with the London punk band Warsaw Pakt. Bernard Sumner has cited the Berlin Trilogy as an influence, singling out the cold austerity of its synthesisers (Wikipedia's Joy Division article).",
+  "trackPair": {
+    "earlier": {
+      "artist": "David Bowie",
+      "title": "Warszawa",
+      "year": 1977
+    },
+    "later": {
+      "artist": "Joy Division",
+      "title": "Decades",
+      "year": 1980
+    },
+    "whatToListenFor": "'Warszawa' is slow, built from synthesiser chords that hang in the air, with no drums and a voice singing in an invented language. 'Decades', the last track on 'Closer', moves almost as slowly. A synthesiser carries the melody over a steady drum pattern, and Ian Curtis sings low and flat. This is a punk band from Manchester, three years after its first gig, sounding closer to Bowie's Berlin side two than to the Sex Pistols."
+  },
+  "explanation": {
+    "age13": "Joy Division's first name, Warsaw, came from 'Warszawa', a slow synthesiser piece on Bowie's 1977 album 'Low'. Bernard Sumner has said the Berlin albums' cold synthesiser sound was an influence, and you can hear it by the time of their last album, 'Closer', in 1980.",
+    "adult": "The name is the documented part: Warsaw, after 'Warszawa', until early 1978. The musical debt is Sumner's own account of the Berlin Trilogy's synthesiser austerity, which is audible on 'Closer'. The Bowie-to-Joy Division line matters on this map because it carries the German electronic influence on Bowie (already linked from Kraftwerk and Neu!) one step further into British post-punk, and from there into New Order."
+  },
+  "tags": []
+}

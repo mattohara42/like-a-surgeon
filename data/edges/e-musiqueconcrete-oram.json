@@ -1,0 +1,32 @@
+{
+  "id": "e-musiqueconcrete-oram",
+  "from": "paris-musique-concrete",
+  "to": "daphne-oram",
+  "type": "technological",
+  "confidence": "consensus",
+  "year": 1957,
+  "crossLineage": false,
+  "evidence": "Accounts of Private Dreams and Public Nightmares (BBC, 1957) record that Oram described its sounds as partly what she called musique concrète, while the makers chose not to use that term on air. Standard histories of the Radiophonic Workshop give the Paris tape methods as the precedent for its early work.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Pierre Schaeffer",
+      "title": "Étude aux chemins de fer",
+      "year": 1948
+    },
+    "later": {
+      "artist": "Daphne Oram and Frederick Bradnum",
+      "title": "Private Dreams and Public Nightmares",
+      "year": 1957,
+      "search": "Private Dreams and Public Nightmares radiophonic poem 1957"
+    },
+    "whatToListenFor": "In Schaeffer's piece you can still hear the trains. In the BBC piece you mostly can't. Listen for sounds that have been slowed, reversed and echoed until their source disappears, sitting under a spoken poem. The method is the same, recorded sound cut and changed on tape. The use is different. In Paris it was the whole piece. At the BBC it was built to serve a script, which is how the Workshop worked for the next forty years."
+  },
+  "explanation": {
+    "age7": "A woman at the BBC used the Paris way of making music from tape to make sounds for a radio play.",
+    "age13": "Schaeffer's broadcasts showed that you could make music from recorded sound. In 1957 Daphne Oram used the same tricks at the BBC for a radio play called Private Dreams and Public Nightmares. It was successful enough that the BBC opened the Radiophonic Workshop the next year.",
+    "adult": "The edge runs from the scene rather than from Schaeffer because what crossed the Channel was a method, not one composer's influence, and Oram's direct contact with Schaeffer is not sourced here."
+  },
+  "tags": [
+    "technology"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "e-marleymarl-bizmarkie",
+  "from": "marley-marl",
+  "to": "biz-markie",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1986,
+  "crossLineage": false,
+  "evidence": "The 1986 Prism Records EP Make the Music with Your Mouth, Biz is credited as produced and mixed by Marley Marl, as recorded in the Cornell University Hip Hop Collection's catalogue. It was Biz Markie's debut and also introduced the Juice Crew singer TJ Swan.",
+  "trackPair": {
+    "earlier": {
+      "artist": "MC Shan",
+      "title": "The Bridge (produced by Marley Marl)",
+      "year": 1986,
+      "search": "MC Shan The Bridge"
+    },
+    "later": {
+      "artist": "Biz Markie",
+      "title": "Make the Music with Your Mouth, Biz",
+      "year": 1986
+    },
+    "whatToListenFor": "Both records are Marley Marl building on sampled drums in the same year. The difference on the Biz record is that one of the instruments is a person. Listen for the beatboxing: kicks, snares and hisses made with Biz's mouth, sitting alongside the drums Marl has pulled off records. Try to hear where the machine stops and the mouth starts. Part of the joke of the track is that it is sometimes hard to tell."
+  },
+  "explanation": {
+    "age7": "Marley Marl made Biz Markie's first record, where Biz makes drum sounds with his mouth.",
+    "age13": "Biz Markie's first record was produced by Marley Marl, the same year as MC Shan's 'The Bridge'. Marl's beats used drum sounds taken from old records, and on this track Biz adds drum sounds he makes with his mouth, called beatboxing. It started Biz's career in the Juice Crew.",
+    "adult": "The Juice Crew was a production house as much as a crew, with Marl's studio and methods shaping several careers at once. This edge also makes a small point about sampling: in 1986 a sampled drum and a human mouth imitating one sat on the same record as equally legitimate materials."
+  },
+  "tags": [
+    "production"
+  ]
+}

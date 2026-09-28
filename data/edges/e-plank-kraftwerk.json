@@ -1,0 +1,31 @@
+{
+  "id": "e-plank-kraftwerk",
+  "from": "conny-plank",
+  "to": "kraftwerk",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1974,
+  "crossLineage": false,
+  "evidence": "Plank engineered Kraftwerk's albums up to and including Autobahn (1974), which was recorded partly at his new farmhouse studio and at Kling Klang with his mobile truck. He is credited as engineer, and as co-producer of the title track in some accounts. Autobahn was his last work with the band.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Kraftwerk",
+      "title": "Ralf und Florian",
+      "year": 1973
+    },
+    "later": {
+      "artist": "Kraftwerk",
+      "title": "Autobahn",
+      "year": 1974
+    },
+    "whatToListenFor": "On 'Ralf und Florian' the sounds are still loose, with drifting organ, flute and electronic percussion. On 'Autobahn' they lock into place: a steady synthesized bass, a clean electronic rhythm, and car sounds sweeping across the stereo field. Listen for the passing cars and the Doppler swoosh, which are recordings placed in space, and for how exact every sound's position is. That clarity is engineering as much as composition."
+  },
+  "explanation": {
+    "age7": "Conny Plank recorded Kraftwerk's early records, including 'Autobahn'.",
+    "age13": "Conny Plank recorded Kraftwerk's first albums. 'Autobahn' was the last, made partly at his new studio on a farm. After it, Kraftwerk worked alone in their own studio, and the sound they found with Plank became the Kraftwerk sound.",
+    "adult": "Kraftwerk later played down the pre-Autobahn records. Plank's role in reaching the Autobahn sound is widely credited by others, less so by the band, and the credits themselves are the settled part."
+  },
+  "tags": [
+    "production"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-madlib-mfdoom",
+  "from": "madlib",
+  "to": "mf-doom",
+  "type": "production",
+  "confidence": "documented",
+  "year": 2004,
+  "crossLineage": false,
+  "evidence": "Madvillainy (Stones Throw, 2004), by Madvillain (MF DOOM and Madlib), was produced by Madlib, who made most of the instrumentals in a hotel room in Brazil on a Boss SP-303, a turntable and a tape deck. 'Accordion' samples Daedelus's 'Experience', which Daedelus recorded on a Magnus electric chord organ.",
+  "trackPair": {
+    "earlier": {
+      "artist": "MF DOOM",
+      "title": "Doomsday",
+      "year": 1999
+    },
+    "later": {
+      "artist": "Madvillain",
+      "title": "Accordion",
+      "year": 2004
+    },
+    "whatToListenFor": "On 'Doomsday' DOOM produces himself, looping a smooth, sweet phrase from Sade's 'Kiss of Life' under his flat, unhurried voice. On 'Accordion' Madlib gives him something stranger: a wheezing, reedy loop that sounds like an accordion but was played on a cheap electric chord organ. Listen for how the rougher, odder beat pushes DOOM's rhyming, dense chains of internal rhyme packed into a short verse over one repeating figure."
+  },
+  "explanation": {
+    "age7": "The producer Madlib made the music for MF DOOM's most famous album.",
+    "age13": "MF DOOM usually made his own beats, like on 'Doomsday', which uses a smooth piece of a Sade song. For Madvillainy he worked with Madlib, who made most of the beats on a small sampler in a hotel room in Brazil. The song 'Accordion' sounds like an accordion, but the sound actually comes from an electric organ on someone else's record.",
+    "adult": "A producer-artist pairing where both are producers, and the record is credited to the duo. The minimal gear (a portable sampler, a turntable, a tape deck) extends the SP-1200 story of constraint into the 2000s."
+  },
+  "tags": [
+    "production"
+  ]
+}

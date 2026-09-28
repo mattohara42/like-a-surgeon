@@ -1,0 +1,32 @@
+{
+  "id": "cologne-krautrock",
+  "name": "Cologne and the Tape Studio",
+  "type": "scene",
+  "lineage": "rock",
+  "yearFrom": 1968,
+  "yearTo": 1979,
+  "city": "Cologne",
+  "country": "West Germany",
+  "hook": "A city that had run a state broadcaster's electronic music studio since 1951 produced a rock band that edited its jams on tape instead of just recording them.",
+  "blurb": {
+    "age7": "In Cologne, Germany, a band called Can played very long songs and then cut up the tape afterward to make the best parts into a record.",
+    "age13": "Cologne had run a public radio station's electronic music studio since 1951, where the composer Karlheinz Stockhausen worked and taught. Two of his students, Holger Czukay and Irmin Schmidt, started the rock band Can in 1968 and brought his methods with them: play for a long time, then edit the tape afterward like a composition, not a recording of a performance. Producer Conny Plank, whose farmhouse studio near the city served the wider circle of West German experimental musicians, worked in the same regional scene.",
+    "adult": "Cologne's route into what the British press later labelled 'krautrock' ran through an institution, WDR's Studio for Electronic Music, rather than through a self-built private space the way Düsseldorf's Kling Klang did. That gave Cologne's version of the scene a formal, compositional cast: treating a long improvisation as raw material for editing, the way a tape composer treats recorded sound, rather than treating the studio as an instrument to be played live, which was Düsseldorf's approach."
+  },
+  "geopolitics": "West Germany's postwar generation was reckoning openly with the Nazi period, the same context that shaped Düsseldorf's scene, but Cologne's institutional starting point was different: WDR, a public broadcaster, had funded a dedicated electronic music studio since 1951, giving the city a state-backed avant-garde tradition that trained the musicians who went on to found Can, rather than a DIY, self-financed one.",
+  "whatWasNew": "Treating a rock band's studio session as raw material to be edited afterward, the way a tape composer works, rather than as a document of a live performance: long improvisations retroactively composed on the editing block into finished tracks.",
+  "production": "Can ran their own studios, first a room in Schloss Nörvenich and then, from 1971, Inner Space in Weilerswist, with no outside producer. Conny Plank's farmhouse studio at Wolperath, opened in the early 1970s, served the wider regional circle of West German experimental musicians before drawing British and American acts later in the decade.",
+  "labels": "Can released through United Artists/Liberty until 1979, when Irmin Schmidt's wife, Hildegard Schmidt, bought back the rights to the catalogue and founded Spoon Records to control it directly.",
+  "politics": "Less an explicit ideological statement than Düsseldorf's mechanized Germanness; Cologne's politics were formal, treating open-ended improvisation, tape editing, and Jaki Liebezeit's jazz- and non-Western-influenced drumming as a rejection of both American blues-rock vocabulary and the culture of Germany's immediate past.",
+  "memberIds": [
+    "can",
+    "conny-plank"
+  ],
+  "palette": {
+    "ink": "#141414",
+    "paper": "#eae0c8",
+    "accent": "#b5651d",
+    "accent2": "#2f4858"
+  },
+  "motif": "reel-splice"
+}

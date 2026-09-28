@@ -1,0 +1,31 @@
+{
+  "id": "e-cologne-can",
+  "from": "cologne-krautrock",
+  "to": "can",
+  "type": "scene",
+  "confidence": "documented",
+  "year": 1968,
+  "crossLineage": false,
+  "evidence": "Cologne had hosted WDR's Studio for Electronic Music since 1951, where Karlheinz Stockhausen worked and taught his Cologne Courses for New Music; Can's Holger Czukay and Irmin Schmidt attended them before founding the band in 1968, as documented in the band's own biographies and interviews across decades.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Karlheinz Stockhausen",
+      "title": "Gesang der Jünglinge",
+      "year": 1956
+    },
+    "later": {
+      "artist": "Can",
+      "title": "Halleluhwah",
+      "year": 1971
+    },
+    "whatToListenFor": "Stockhausen's piece treats a boy's voice as raw material, cut, layered and processed inside a studio built for exactly that. Fifteen years later and a few miles away, Can builds an eighteen-minute rock groove the same way: recorded loosely, then shaped and trimmed on tape until the editing itself is the composition, a studio-first method the city, not just the man, made available to them."
+  },
+  "explanation": {
+    "age7": "Cologne had a special studio for making music out of recorded sounds. Two men who later started the band Can learned there, and used those ideas in rock music.",
+    "age13": "Cologne ran an electronic music studio for German radio, where the composer Stockhausen worked and taught. Two future members of Can studied there before starting the band in 1968, and they brought his method, record first and shape it afterward, into rock music.",
+    "adult": "This scene edge and `e-stockhausen-can` tell two sides of the same fact: this one names the institution, an electronic music studio Cologne had funded since 1951, as the general condition; `e-stockhausen-can` names the specific teacher and students as the mechanism. Cologne having the studio at all is what made Stockhausen's Cologne courses possible in the first place."
+  },
+  "tags": [
+    "technology"
+  ]
+}

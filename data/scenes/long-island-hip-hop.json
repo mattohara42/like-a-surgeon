@@ -1,0 +1,33 @@
+{
+  "id": "long-island-hip-hop",
+  "name": "Long Island hip-hop",
+  "type": "scene",
+  "lineage": "hiphop",
+  "yearFrom": 1982,
+  "yearTo": 1991,
+  "city": "Long Island, New York",
+  "country": "USA",
+  "hook": "Suburban Black towns east of the city, a college radio station and a mobile DJ crew produced Public Enemy, Rakim and De La Soul within about three years.",
+  "blurb": {
+    "age13": "Long Island is the suburbs east of New York City. Some towns there, like Roosevelt, Hempstead, Wyandanch and Amityville, had large Black populations, partly because housing rules and banks had kept Black families out of other suburbs. At Adelphi University, the college radio station WBAU played rap. Chuck D worked there, and Hank Shocklee ran a DJ crew called Spectrum City. In 1984 they put out a single, 'Lies' and 'Check Out the Radio'. When Rick Rubin of Def Jam heard Chuck D's tape 'Public Enemy Number One', he wanted to sign him, and Public Enemy's first album came out in 1987. Rakim, from Wyandanch, made 'Eric B. Is President' with Eric B. in 1986. De La Soul and Prince Paul came from Amityville.",
+    "adult": "Long Island's rap came out of segregated suburbs. Postwar developments such as Levittown excluded Black buyers by covenant and policy, so Black families concentrated in towns like Roosevelt, Hempstead, Wyandanch and Amityville. Adelphi University's WBAU gave the scene a radio base. Chuck D worked there, Bill Stephney was its programme director, and Hank Shocklee's Spectrum City was a mobile DJ crew that released 'Lies' / 'Check Out the Radio' on Vanguard in 1984. Rick Rubin heard Chuck D's 'Public Enemy Number One' through Andre 'Doctor Dré' Brown and set out to sign him, and Stephney joined Def Jam in 1986 partly to make that happen. The Spectrum City crew became the Bomb Squad, and 'Yo! Bum Rush the Show' (1987) was recorded at Spectrum City Studios in Hempstead. Rakim of Wyandanch debuted on 'Eric B. Is President' (1986), and De La Soul and Prince Paul came from Amityville. The scene is defined here by that three-year run and ends as its acts left for national careers."
+  },
+  "geopolitics": "Long Island's suburbs were built after 1945 on federally backed mortgages that, through redlining and racial covenants, largely excluded Black buyers. The result was a set of mostly Black towns such as Roosevelt, Hempstead and Wyandanch among mostly white ones. These were working and middle-class places with cars, basements and college access, not inner-city projects, and the music often talked about the city from just outside it.",
+  "whatWasNew": "The Bomb Squad's wall of dozens of layered samples and noise, and Rakim's internal rhymes and relaxed, unshouted delivery, both of which changed what rap production and rapping sounded like.",
+  "production": "Spectrum City Studios in Hempstead, where 'Yo! Bum Rush the Show' was recorded in 1986. Samplers and drum machines in home and small commercial studios, and WBAU's facilities as a place to try out mixes and tapes.",
+  "labels": "Def Jam (Public Enemy), Zakia and then 4th & B'way (Eric B. & Rakim), Tommy Boy (De La Soul) and Vanguard for Spectrum City's single.",
+  "politics": "Public Enemy made Black nationalist politics the centre of their records, from the name onward. The scene's politics were shaped by the segregated suburb as much as the city.",
+  "memberIds": [
+    "public-enemy",
+    "eric-b-and-rakim",
+    "de-la-soul",
+    "prince-paul"
+  ],
+  "palette": {
+    "ink": "#161616",
+    "paper": "#efece6",
+    "accent": "#b8262b",
+    "accent2": "#d8b13a"
+  },
+  "motif": "turntable-circles"
+}

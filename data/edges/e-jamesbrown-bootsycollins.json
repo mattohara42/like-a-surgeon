@@ -1,0 +1,31 @@
+{
+  "id": "e-jamesbrown-bootsycollins",
+  "from": "james-brown",
+  "to": "bootsy-collins",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1970,
+  "crossLineage": false,
+  "evidence": "Most of James Brown's band quit over a pay dispute in March 1970. Brown's bandleader Bobby Byrd recruited a Cincinnati group, the Pacesetters, including 18-year-old Bootsy Collins and his brother Catfish, as replacements; they were renamed the J.B.'s and recorded 'Sex Machine' within weeks (as widely documented in Collins's own interviews, including Guitar World and NPR).",
+  "trackPair": {
+    "earlier": {
+      "artist": "James Brown",
+      "title": "Sex Machine",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Bootsy's Rubber Band",
+      "title": "Bootzilla",
+      "year": 1978
+    },
+    "whatToListenFor": "On 'Sex Machine', Collins is eighteen and playing inside Brown's discipline: the bass holds the groove down and stays out of the way. Eight years later on his own record, the same bass instinct has become the whole show, elastic, cartoonish and grinning, with a wah pedal doing to the tone what the J.B.'s taught him to do to the rhythm."
+  },
+  "explanation": {
+    "age13": "When most of James Brown's band quit over pay in 1970, Brown hired teenager Bootsy Collins and his brother on bass and guitar. Collins learned Brown's tight, disciplined style of funk there before leaving, later, to build his own looser, funnier version of it with George Clinton.",
+    "adult": "A direct lineage edge from bandleader to sideman: Collins's entire subsequent career, the J.B.'s, then Parliament-Funkadelic, then his own Rubber Band, starts from eight months inside Brown's band. The J.B.'s themselves left over a pay dispute of their own within a year, an echo of the walkout that had created the opening for them."
+  },
+  "tags": [
+    "production",
+    "labels"
+  ]
+}

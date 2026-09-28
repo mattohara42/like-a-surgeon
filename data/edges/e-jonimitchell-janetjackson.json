@@ -1,0 +1,31 @@
+{
+  "id": "e-jonimitchell-janetjackson",
+  "from": "joni-mitchell",
+  "to": "janet-jackson",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1997,
+  "crossLineage": true,
+  "evidence": "Janet Jackson's 'Got 'til It's Gone' (from 'The Velvet Rope', 1997), produced by Jackson with Jimmy Jam and Terry Lewis, samples the hook of Joni Mitchell's 'Big Yellow Taxi' (1970), an idea Jam suggested. Jackson has said in interviews that she called Mitchell directly to ask permission, against others' expectations that Mitchell would refuse, and Mitchell agreed and recorded new guest vocals for the track alongside the sampled hook.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Joni Mitchell",
+      "title": "Big Yellow Taxi",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Janet Jackson",
+      "title": "Got 'til It's Gone",
+      "year": 1997
+    },
+    "whatToListenFor": "Mitchell's original is a bright, strummed folk-pop protest song, the line 'you don't know what you've got till it's gone' delivered plainly over acoustic guitar. Jackson's version loops that line as a chorus hook under a mid-tempo hip-hop groove, and Mitchell's own voice, re-recorded for this track rather than only sampled, sits inside a completely different rhythmic world than the one she wrote it in."
+  },
+  "explanation": {
+    "age7": "Janet Jackson used a piece of Joni Mitchell's old song in her own song, and Joni even sang some new parts for it herself, because Janet asked her nicely.",
+    "age13": "Janet Jackson's producer Jimmy Jam suggested sampling Joni Mitchell's 1970 song 'Big Yellow Taxi'. Jackson called Mitchell herself to ask permission, and Mitchell agreed, singing new guest vocals for 'Got 'til It's Gone' (1997) alongside the sampled hook.",
+    "adult": "An unusually cooperative sample story next to this map's other sample edges: rather than an uncleared loop or a licence sought and refused, the source artist personally granted permission and became a credited guest vocalist on the record that used her."
+  },
+  "tags": [
+    "production"
+  ]
+}

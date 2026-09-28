@@ -1,0 +1,32 @@
+{
+  "id": "pete-rock",
+  "name": "Pete Rock",
+  "sortName": "Rock, Pete",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1988,
+  "activeTo": null,
+  "originCity": "Mount Vernon, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Learned on Marley Marl's radio show and an SP-1200 he was given, and made the soft, horn-heavy sampled sound that defined early-90s New York.",
+  "blurb": {
+    "age7": "A producer who made beats out of old jazz and soul records. His most famous song is about a friend who died.",
+    "age13": "Peter Phillips grew up in Mount Vernon, just north of New York City. As a teenager he got a job as a DJ on Marley Marl's radio show on WBLS, through his cousin Heavy D. The rapper Freddie Foxx gave him an SP-1200 at seventeen, and he taught himself to make beats on it. With the rapper CL Smooth he made 'They Reminisce Over You (T.R.O.Y.)' in 1992. It was written after their friend Troy Dixon, a dancer with Heavy D, died in an accident. Its saxophone line comes from a jazz record by Tom Scott.",
+    "adult": "Pete Rock's early-1990s productions, built from jazz and soul horns, filtered basslines and dense drums, defined a warmer strain of New York hip-hop than the Bomb Squad's noise or Marley Marl's hard loops. His apprenticeship is well documented: archived broadcasts of 'In Control with Marley Marl' on WBLS from 1989 and 1990 feature him, and he has described getting the SP-1200 from Freddie Foxx. He was also a formative influence on J Dilla."
+  },
+  "signatureTracks": [
+    {
+      "title": "They Reminisce Over You (T.R.O.Y.) (with CL Smooth)",
+      "year": 1992,
+      "whyThisOne": "A memorial for Troy Dixon, built on a saxophone line from Tom Scott's 'Today'."
+    },
+    {
+      "title": "Mecca and the Soul Brother (with CL Smooth)",
+      "year": 1992,
+      "whyThisOne": "The album that shows his whole palette of horns, filtered bass and heavy drums."
+    }
+  ]
+}

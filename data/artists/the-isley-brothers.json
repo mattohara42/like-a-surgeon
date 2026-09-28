@@ -1,0 +1,32 @@
+{
+  "id": "the-isley-brothers",
+  "name": "The Isley Brothers",
+  "sortName": "Isley Brothers, The",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1954,
+  "activeTo": null,
+  "originCity": "Cincinnati, Ohio",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A gospel trio that outlasted six musical eras, briefly employed a young Jimi Hendrix, and left behind two of the most sampled records in hip-hop.",
+  "blurb": {
+    "age7": "The Isley Brothers started out singing gospel, then made rock, soul and funk hits for decades. Rap songs sample their records all the time.",
+    "age13": "O'Kelly, Rudolph and Ronald Isley began singing gospel together in Cincinnati in 1954 and moved through doo-wop, soul and rock, briefly employing a young guitarist named Jimi Hendrix in their backing band in the mid-1960s. They started their own label, T-Neck Records, and their 1969 hit 'It's Your Thing' and 1975's 'Fight the Power' became two of the most sampled records in hip-hop.",
+    "adult": "The Isley Brothers' six-decade catalogue crosses gospel, doo-wop, rock and roll, soul and funk, and their willingness to keep changing sound, adding younger brothers Ernie and Marvin and brother-in-law Chris Jasper as an in-house rock/funk band in the early 1970s, kept them commercially relevant across every one of those eras. 'Fight the Power' (1975), a protest record about censorship on the radio, gave Public Enemy's own 1989 song of the same title both its name and, per sample-credit databases, part of its rhythm track."
+  },
+  "signatureTracks": [
+    {
+      "title": "It's Your Thing",
+      "year": 1969,
+      "whyThisOne": "Their self-released breakthrough on their own T-Neck label, and a widely sampled funk foundation."
+    },
+    {
+      "title": "Fight the Power (Part 1)",
+      "year": 1975,
+      "whyThisOne": "Its title and part of its rhythm track were sampled directly on Public Enemy's song of the same name."
+    }
+  ]
+}

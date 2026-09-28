@@ -1,0 +1,33 @@
+{
+  "id": "e-ams-joydivision",
+  "from": "ams-dmx-15-80",
+  "to": "joy-division",
+  "type": "technological",
+  "confidence": "consensus",
+  "year": 1979,
+  "crossLineage": true,
+  "evidence": "Band members, including drummer Stephen Morris, have described Martin Hannett's insistence on recording each drum in isolation so that he could treat each one separately. Accounts of the 'Unknown Pleasures' sessions name the AMS DMX 15-80 as his favourite device and say he owned several. No session log ties a specific setting to a specific sound, which is why this edge sits at consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "AMS",
+      "title": "DMX 15-80 digital delay",
+      "year": 1978,
+      "search": false
+    },
+    "later": {
+      "artist": "Joy Division",
+      "title": "Unknown Pleasures",
+      "year": 1979
+    },
+    "whatToListenFor": "Pick any track and ignore the singing. The drums sound as if they were recorded in a different, colder room from the rest of the band, and the snare has a short metallic ring after each hit, closer to a knock on a pipe than to a drum. That separation and that ring come from Hannett isolating each drum and pushing it through the delay at settings nobody else would have chosen."
+  },
+  "explanation": {
+    "age7": "An echo machine helped make Joy Division's drums sound cold and far away.",
+    "age13": "Martin Hannett, Joy Division's producer, loved this digital echo machine. He recorded each drum separately and then ran them through it with very short or odd echo times. That is a big part of why 'Unknown Pleasures' sounds so empty and cold, like it was recorded somewhere nobody lives.",
+    "adult": "Joy Division's live sound was, by the band's own account, much rougher than the record, and some members disliked what Hannett did to it at the time. The production is Hannett's as much as theirs, and digital delay is at the centre of it. That tension between a band and its producer is part of the record's story."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

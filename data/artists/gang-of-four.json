@@ -1,0 +1,34 @@
+{
+  "id": "gang-of-four",
+  "name": "Gang of Four",
+  "sortName": "Gang of Four",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1976,
+  "activeTo": 2020,
+  "originCity": "Leeds",
+  "originCountry": "UK",
+  "scenes": [
+    "uk-post-punk"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Turned Marxist theory and dub-reggae bass into art-school punk-funk, and named themselves after a Chinese Communist Party faction.",
+  "blurb": {
+    "age7": "Gang of Four were a band who mixed punk with funky bass and wrote songs about politics and money.",
+    "age13": "Formed by art students in Leeds, Gang of Four combined punk's aggression with funk rhythm and dub reggae's bass-heavy sound, and their lyrics were full of political and economic ideas rather than typical rock subjects. Their 1979 album 'Entertainment!' is still cited as one of the most influential post-punk records.",
+    "adult": "Gang of Four's \"punk funk\" (Andy Gill's scraping, non-soloing guitar over Dave Allen's dub-and-funk-influenced bass) put explicit Marxist and Situationist theory into a genre that mostly avoided direct political language, and 'Entertainment!' (1979) is now treated as a founding text of the style, cited by acts from R.E.M. to later dance-punk revivalists."
+  },
+  "signatureTracks": [
+    {
+      "title": "Damaged Goods",
+      "year": 1978,
+      "whyThisOne": "The template: jagged, non-melodic guitar, a dub-heavy bassline, and lyrics treating a relationship in the language of a commercial transaction."
+    },
+    {
+      "title": "At Home He's a Tourist",
+      "year": 1979,
+      "whyThisOne": "Pulled from a Top of the Pops performance over a lyric about condoms, a useful snapshot of how far the band's directness went."
+    }
+  ]
+}

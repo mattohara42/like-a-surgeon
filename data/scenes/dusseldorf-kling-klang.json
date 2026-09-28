@@ -4,21 +4,29 @@
   "type": "scene",
   "lineage": "electronic",
   "yearFrom": 1970,
-  "yearTo": null,
+  "yearTo": 1986,
   "city": "Düsseldorf",
-  "country": "Germany",
-  "hook": "A self-built studio in an industrial German city where four musicians decided the future should sound mechanical, not human.",
+  "country": "West Germany",
+  "hook": "A self-built studio in a former factory space, where a band decided rock music should sound nothing like rock music.",
   "blurb": {
-    "age7": "In a German city with a lot of factories, a band built their own studio and made music that sounded like machines on purpose.",
-    "age13": "Düsseldorf in the early 1970s was an industrial Rhineland city, and Kraftwerk built their own studio there, Kling Klang, rather than renting time in someone else's. Coming out of a generation of young Germans working out what German culture could even mean after the war, they built music that sounded deliberately robotic instead of trying to sound like American or British rock.",
-    "adult": "The scene around Kling Klang is inseparable from postwar West German identity politics: a generation too young to have fought in the war but formed by its aftermath, rejecting both nostalgic German nationalism and reflexive imitation of Anglo-American rock, choosing instead to foreground the machine rather than hide it. Early records were made with engineer Konrad 'Conny' Plank before the band became fully self-sufficient at Kling Klang."
+    "age7": "In Germany, Kraftwerk built their own studio and made music that sounded like machines on purpose.",
+    "age13": "Ralf Hütter and Florian Schneider set up Kling Klang, their own studio in Düsseldorf, in 1970, and used it to build custom instruments and write music that rejected American and British rock entirely. It was a deliberate attempt to find a German sound after a war that had made \"German culture\" a loaded phrase.",
+    "adult": "Kling Klang, founded in 1970 and run as Kraftwerk's private studio and (from 1975) their own vanity label, let the band work at their own pace outside a commercial label's schedule, which is part of why their catalogue is so tightly controlled and small. The scene around it was less a night-life culture than a studio practice: a search for a distinctly German, post-war electronic identity that avoided the American blues-rock vocabulary most of their contemporaries were still working in."
   },
-  "geopolitics": "West Germany's postwar 'Wirtschaftswunder' rebuilt the industrial Rhineland, including Düsseldorf, at speed. The generation making this music grew up in that rebuilt, prosperous, but culturally uneasy country, and a broader scene of German experimental musicians, loosely and often dismissively labeled 'Krautrock' by British critics, was consciously working out an identity distinct from both Nazi-era culture and imported Anglo-American rock.",
-  "whatWasNew": "Fully sequenced, machine-generated music presented without apology, vocoder-processed vocals, and album subject matter, trains, highways, calculators, robots, that treated technology as the actual content rather than a production tool.",
-  "production": "A self-owned, continually rebuilt studio rather than rented commercial time, letting the band work at their own pace across years between releases once fully independent.",
-  "labels": "Kling Klang served as the band's own imprint and production entity; international distribution ran through larger companies at different points in their career, while the band retained ownership of the recordings themselves.",
-  "politics": "An implicit political statement in embracing a machine-made, explicitly German identity rather than either nostalgic nationalism or American rock import, at a moment when both were live cultural options for German youth.",
-  "memberIds": ["kraftwerk"],
-  "palette": { "ink": "#0a0a0c", "paper": "#eef0f2", "accent": "#c0392b", "accent2": "#4a4a4a" },
-  "motif": "vocoder-lattice"
+  "geopolitics": "West Germany's postwar generation, coming of age in the late 1960s, was reckoning openly with the Nazi period for the first time, and much of the era's German rock and experimental music (labeled 'krautrock' by the British press) was an explicit attempt to build a new cultural identity that owed nothing to either American pop culture or Germany's own recent past.",
+  "whatWasNew": "Electronic music built entirely from synthesizers, drum machines, and vocoders, performed with a deliberately flat, mechanical stage presence, at a time when 'electronic' still mostly meant an experimental sideline to a rock band's real instruments.",
+  "production": "Kling Klang studio, built and continually modified by the band themselves, including custom-built electronic percussion and voice synthesis equipment not commercially available elsewhere.",
+  "labels": "Released through Philips and later EMI in Europe, while retaining ownership of the Kling Klang studio and, from 1975, their own vanity label for the master recordings.",
+  "politics": "Rarely explicit in lyrics, but the concept itself, mechanized, depersonalized, and proudly German, was a political statement about what postwar German art could be.",
+  "memberIds": [
+    "kraftwerk",
+    "neu"
+  ],
+  "palette": {
+    "ink": "#0c0d10",
+    "paper": "#e6e8ea",
+    "accent": "#c23b3b",
+    "accent2": "#8a8f98"
+  },
+  "motif": "vocoder-grid"
 }

@@ -1,0 +1,23 @@
+{
+  "id": "ron-hardy",
+  "name": "Ron Hardy",
+  "sortName": "Hardy, Ron",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1977,
+  "activeTo": 1992,
+  "originCity": "Chicago",
+  "originCountry": "USA",
+  "scenes": [
+    "chicago-house"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Never released a record under his own name, but the DJ whose Music Box sets and tape edits broke half of Chicago house before it was ever pressed.",
+  "blurb": {
+    "age7": "Ron Hardy was a DJ, not a singer or a band. He played tapes he'd edited himself at a club called the Music Box, and those nights shaped what house music became.",
+    "age13": "Hardy DJed at Chicago's Music Box from 1982 to 1986, using two turntables, a mixer, and a reel-to-reel tape deck to edit and extend records live. Producers like Marshall Jefferson and Larry Heard brought him early tapes of their new tracks to test on his dancefloor before anyone else heard them.",
+    "adult": "Hardy left almost no formal discography: he never released music under his own name during his lifetime, and his influence survives mostly through secondhand accounts, bootleg reissues of his tape edits, and the records other producers made in direct response to what worked at the Music Box. That absence of a paper trail is itself instructive: some of the most load-bearing figures in this dataset, King Tubby included, shaped recorded music primarily through the room rather than through releases credited to them."
+  },
+  "signatureTracks": []
+}

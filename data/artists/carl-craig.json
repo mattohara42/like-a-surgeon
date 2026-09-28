@@ -1,0 +1,40 @@
+{
+  "id": "carl-craig",
+  "name": "Carl Craig",
+  "sortName": "Craig, Carl",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1989,
+  "activeTo": null,
+  "originCity": "Detroit",
+  "originCountry": "USA",
+  "scenes": [
+    "detroit-techno"
+  ],
+  "labels": [
+    {
+      "labelId": "transmat",
+      "from": 1989,
+      "to": 1990
+    }
+  ],
+  "keyProducers": [],
+  "hook": "Learned the music from Derrick May's radio show, then became his assistant, before splitting into half a dozen aliases so no single sound would have to carry his name.",
+  "blurb": {
+    "age7": "Carl Craig loved a radio show that played strange electronic music, then went to work for the DJ who made it and started building his own.",
+    "age13": "Carl Craig grew up in Detroit listening to Derrick May's radio show, and eventually became May's assistant at his label, Transmat. His first record, 'Elements,' came out under the name Psyche in 1989. Two years later he started his own label, Planet E, and kept using different names for different sounds: harder techno as '69,' jazzier material as Innerzone Orchestra.",
+    "adult": "Craig's route through Transmat as May's assistant before founding Planet E in 1991 is the clearest second-wave case of Detroit techno's own apprenticeship system, the same artist-to-artist transmission that built the genre's first wave. His habit of assigning a different alias to each stylistic direction, Psyche for ambient work, 69 for harder techno, Paperclip People for house, Innerzone Orchestra for jazz-inflected material, treats identity itself as a production tool."
+  },
+  "signatureTracks": [
+    {
+      "title": "Elements (Psyche)",
+      "year": 1989,
+      "whyThisOne": "His first release, made at Transmat under May's mentorship and later collected on the compilation 'Elements 1989-1990.'"
+    },
+    {
+      "title": "Bug in the Bass Bin (69)",
+      "year": 1994,
+      "whyThisOne": "One of the most enduring club records to come out of Detroit's second wave, made under the harder '69' alias."
+    }
+  ]
+}

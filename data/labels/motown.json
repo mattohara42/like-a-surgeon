@@ -1,0 +1,16 @@
+{
+  "id": "motown",
+  "name": "Motown",
+  "type": "label",
+  "lineage": "funk",
+  "foundedYear": 1959,
+  "closedYear": null,
+  "city": "Detroit",
+  "founders": "Berry Gordy Jr.",
+  "ownershipStory": "Berry Gordy founded Motown (first as Tamla) in Detroit in January 1959, converting a photography studio at 2648 West Grand Boulevard into the Hitsville U.S.A. studio and headquarters. Gordy ran the label like a factory: staff songwriters, a house band, and weekly quality-control meetings where he personally vetoed any single he judged wouldn't compete with that week's top five pop records. Gordy sold his stake to MCA Records and Boston Ventures for $61 million in 1988; the label passed to PolyGram in 1993 and then to Universal Music Group in 1999, which still owns it.",
+  "hook": "A converted Detroit photography studio that ran hit singles through a factory process strict enough that Berry Gordy personally vetoed anything that wasn't good enough.",
+  "blurb": {
+    "age13": "Berry Gordy started Motown in Detroit in 1959, turning a small photography studio into Hitsville U.S.A. He ran it like a factory: staff songwriters wrote for whichever act suited a song best, a house band played on almost everything, and Gordy held a meeting every week where he personally decided which songs were good enough to release.",
+    "adult": "Motown's assembly-line production system, criticized by some as impersonal and celebrated by others as a genuine hit-making discipline, is the clearest example on this map of a label's internal process, not just its contracts or distribution, directly shaping what got released and to whom a song went."
+  }
+}

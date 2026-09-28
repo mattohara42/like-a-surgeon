@@ -1,0 +1,31 @@
+{
+  "id": "e-kraftwerk-may",
+  "from": "kraftwerk",
+  "to": "derrick-may",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "May has repeatedly named Kraftwerk in interviews as a formative influence heard via Detroit's Electrifying Mojo, independently of Atkins, describing techno as sounding like 'George Clinton and Kraftwerk stuck in an elevator.'",
+  "year": 1987,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Kraftwerk",
+      "title": "Numbers",
+      "year": 1981
+    },
+    "later": {
+      "artist": "Rhythim Is Rhythim",
+      "title": "Strings of Life",
+      "year": 1987
+    },
+    "whatToListenFor": "Kraftwerk's rhythm is rigid and repeats without variation. May keeps the rigidity in the drums but layers a string figure that swells and falls, funk phrasing riding on top of a Kraftwerk-style engine."
+  },
+  "explanation": {
+    "age7": "May heard the same German band as his friend Atkins did, and it shaped his music too.",
+    "age13": "May, like Atkins, grew up hearing Kraftwerk on Detroit radio next to funk records. His own words for the resulting sound: George Clinton and Kraftwerk stuck in an elevator.",
+    "adult": "A second, independent line of transmission from the same source, worth keeping distinct from the Atkins edge because it demonstrates the influence reached the wider Detroit scene through shared radio exposure, not solely through Atkins as an intermediary."
+  },
+  "tags": [
+    "technology"
+  ]
+}

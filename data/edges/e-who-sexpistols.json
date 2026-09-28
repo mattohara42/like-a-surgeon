@@ -1,0 +1,29 @@
+{
+  "id": "e-who-sexpistols",
+  "from": "the-who",
+  "to": "sex-pistols",
+  "type": "cover",
+  "confidence": "documented",
+  "year": 1976,
+  "crossLineage": false,
+  "evidence": "The Sex Pistols played the Who's 'Substitute' at their first gig, at Saint Martin's School of Art on 6 November 1975 (Wikipedia's Sex Pistols article). A studio recording made in October 1976 was released on 'The Great Rock 'n' Roll Swindle' (Virgin, 23 February 1979), per Wikipedia's article on that album.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Who",
+      "title": "Substitute",
+      "year": 1966
+    },
+    "later": {
+      "artist": "Sex Pistols",
+      "title": "Substitute",
+      "year": 1979,
+      "search": "Sex Pistols Substitute"
+    },
+    "whatToListenFor": "The Who's 'Substitute' is driven by a strummed acoustic guitar riff, with the band crashing in around it. The Sex Pistols' version keeps the riff and the tune but plays it as a wall of loud electric guitar at full pressure, and Johnny Rotten sneers the words. Punk bands that claimed to hate the 1960s were still learning from its singles."
+  },
+  "explanation": {
+    "age13": "The very first song the Sex Pistols played at their very first gig, in 1975, was 'Substitute' by the Who, from 1966. They recorded it in 1976, and it came out on a Sex Pistols album in 1979.",
+    "adult": "Punk's rhetoric of year zero sits awkwardly with its set lists. The Pistols opened their first gig with a 1966 Who single, and the Who's mod-era aggression and short, riff-built songs are part of what punk inherited. The recording was made in 1976 and released only in 1979, after the band had split, so the edge is dated to the recording."
+  },
+  "tags": []
+}

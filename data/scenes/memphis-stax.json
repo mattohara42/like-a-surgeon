@@ -1,0 +1,32 @@
+{
+  "id": "memphis-stax",
+  "name": "Memphis and Stax",
+  "type": "scene",
+  "lineage": "funk",
+  "yearFrom": 1961,
+  "yearTo": 1975,
+  "city": "Memphis",
+  "country": "USA",
+  "hook": "A racially integrated label and house band worked in the open in a segregated city, then lost everything overnight and rebuilt itself into something stranger.",
+  "blurb": {
+    "age7": "In Memphis, a record label called Stax had Black and white musicians playing together at a time when many places in the city still kept people apart. The label made a lot of soul music, then had a big financial disaster, and the artists who kept working there made even more unusual records afterward.",
+    "age13": "Stax Records, from 1961 onward, built its sound around Booker T. and the MGs, an integrated house band, at a time when segregation still shaped daily life in Memphis. The label recorded artists like the Charmels, a girl group on its Volt subsidiary, and Isaac Hayes, first as a session musician and songwriter. After Stax lost its entire back catalogue to Atlantic Records in 1968, the label pushed its artists to record new, more personal material fast, which is how Hayes ended up making 'Hot Buttered Soul' (1969).",
+    "adult": "Memphis's segregation is the scene's constant backdrop rather than its subject: Stax's studio was integrated in practice, not in public statement, and the label's biggest creative turn, the 1969 wave of solo and personal records that followed the 1968 catalogue disaster, was a survival response to a business crisis rather than an artistic movement planned in advance."
+  },
+  "geopolitics": "Memphis in the 1960s remained functionally segregated in restaurants, schools and public life even as Stax's own studio operated on an integrated basis; the label sat two miles from the Lorraine Motel, where Martin Luther King Jr. was assassinated in April 1968, a few months before Stax's own catalogue crisis with Atlantic.",
+  "whatWasNew": "An integrated house band and staff writing room producing records for a national audience from inside a segregated Southern city, and, after 1968, a wave of Stax solo records that abandoned tight, radio-length arrangements for longer, more personal and more idiosyncratic ones.",
+  "production": "Stax's own converted movie theatre studio on McLemore Avenue, with Booker T. and the MGs as the de facto house band across most of the label's output through the 1960s.",
+  "labels": "Stax Records and its Volt subsidiary; ownership and distribution ran through Atlantic Records until the 1968 split, then through an increasingly strained deal with CBS until the label's 1975 bankruptcy.",
+  "politics": "Rarely stated outright in the music itself, but the label's day-to-day integration, and its staff's own awareness of operating inside a segregated city, is a constant, well-documented backdrop to its history.",
+  "memberIds": [
+    "isaac-hayes",
+    "the-charmels"
+  ],
+  "palette": {
+    "ink": "#2b1810",
+    "paper": "#f0e6d2",
+    "accent": "#c9922a",
+    "accent2": "#6b2d2d"
+  },
+  "motif": "vinyl-stack"
+}

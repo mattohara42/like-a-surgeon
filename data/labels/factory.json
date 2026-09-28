@@ -1,0 +1,17 @@
+{
+  "id": "factory",
+  "name": "Factory Records",
+  "type": "label",
+  "lineage": "rock",
+  "foundedYear": 1978,
+  "closedYear": 1992,
+  "city": "Manchester",
+  "founders": "Tony Wilson, Alan Erasmus",
+  "ownershipStory": "Founded in Manchester in 1978 by television presenter Tony Wilson and Alan Erasmus, Factory Records became as well known for its design ethos (every release, and even the label's nightclub, was numbered as a catalogue item) as for its music, and signed Joy Division on a famously artist-friendly contract that gave the band full ownership of their own recordings, unusual for the era. The label went bankrupt in 1992.",
+  "hook": "A Manchester label that gave its bands complete ownership of their own records, and folded partly because of it.",
+  "blurb": {
+    "age7": "Factory Records was a record label in Manchester that let its bands, including Joy Division, keep ownership of their own music.",
+    "age13": "Tony Wilson started Factory Records in 1978 and ran it on unusually generous, artist-friendly contracts. It released Joy Division's records before going bankrupt in 1992.",
+    "adult": "Factory's artist-ownership model was a direct, generous contrast to the standard major-label contracts running through most of this dataset's British labels, and its eventual bankruptcy is often told as a cautionary tale about how far that generosity could be pushed without a sustainable business underneath it."
+  }
+}

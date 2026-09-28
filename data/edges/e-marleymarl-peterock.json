@@ -1,0 +1,32 @@
+{
+  "id": "e-marleymarl-peterock",
+  "from": "marley-marl",
+  "to": "pete-rock",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1989,
+  "crossLineage": false,
+  "evidence": "Pete Rock has said he met Marley Marl through his cousin Heavy D and was brought in as a backup DJ on Marl's WBLS radio show 'In Control with Marley Marl' after one of Marl's DJs was injured in a car accident. Archived broadcasts of the show featuring both, dated 1989 and 1990, are held on the Internet Archive.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Marley Marl",
+      "title": "The Symphony, produced for the Juice Crew",
+      "year": 1988,
+      "search": "Marley Marl The Symphony"
+    },
+    "later": {
+      "artist": "Pete Rock and CL Smooth",
+      "title": "They Reminisce Over You (T.R.O.Y.)",
+      "year": 1992
+    },
+    "whatToListenFor": "Both are built on one short loop running under the vocals, and both keep the drums heavy and forward. Then listen to what Pete Rock added to Marl's approach. On 'The Symphony' the loop is hard and the drums dominate, leaving four MCs to fight over it. On 'T.R.O.Y.' the loop is a saxophone phrase from a Tom Scott jazz record, over a bassline that sounds rounded and dark. It is the same way of building a beat, turned warm and mournful."
+  },
+  "explanation": {
+    "age7": "Pete Rock learned by DJing on Marley Marl's radio show when he was a teenager.",
+    "age13": "Pete Rock was a teenager when his cousin Heavy D introduced him to Marley Marl. Marl needed a DJ for his radio show on WBLS, and Pete Rock got the job, playing records on New York radio every weekend. He picked up Marl's way of building beats from loops and went on to make his own, softer version of it.",
+    "adult": "An apprenticeship edge. Marl's radio show was a public workshop for the sample-based style, and recordings of it survive. Pete Rock's later sound is not a copy of Marl's, and the trackPair is chosen to show both the inheritance (loop construction, drum weight) and the departure (jazz sources, filtered bass)."
+  },
+  "tags": [
+    "production"
+  ]
+}

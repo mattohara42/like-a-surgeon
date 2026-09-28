@@ -1,0 +1,31 @@
+{
+  "id": "e-daedelus-madlib",
+  "from": "daedelus",
+  "to": "madlib",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 2004,
+  "crossLineage": true,
+  "evidence": "Madvillain's 'Accordion' (2004), produced by Madlib, samples Daedelus's 'Experience' from Invention (2002). Daedelus has described writing the melody in a piano class and recording it on a Magnus electric chord organ.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Daedelus",
+      "title": "Experience",
+      "year": 2002
+    },
+    "later": {
+      "artist": "Madvillain",
+      "title": "Accordion",
+      "year": 2004
+    },
+    "whatToListenFor": "Listen to 'Experience': a wheezy, reedy melody that really does sound like an accordion, played on a cheap electric chord organ. Madlib loops it and hands it to MF DOOM. Listen for how much of the track's character comes from the choice of loop alone."
+  },
+  "explanation": {
+    "age7": "Madlib took a tune played on a small organ and made it the loop for 'Accordion'.",
+    "age13": "Daedelus recorded a tune on a cheap electric organ in 2002. Madlib heard it and looped it for Madvillain's 'Accordion'. Because the organ sounds like an accordion, that's what the song got called.",
+    "adult": "A sample between contemporaries in the same Los Angeles scene, rather than a rediscovered old record. The target is Madlib, as the producer who made the sampling choice, since Madvillain is a duo and not a node."
+  },
+  "tags": [
+    "production"
+  ]
+}

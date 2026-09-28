@@ -1,0 +1,31 @@
+{
+  "id": "e-zeppelin-beastieboys",
+  "from": "led-zeppelin",
+  "to": "beastie-boys",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1986,
+  "crossLineage": true,
+  "evidence": "'Rhymin & Stealin' on Licensed to Ill (1986), produced by Rick Rubin and the Beastie Boys, is built on John Bonham's drums from 'When the Levee Breaks' (1971), as recorded in the song's sample credits. Accounts say the loop was made on a reel-to-reel tape machine because they had no sampler, which comes from later retellings. The group sampled the same record again on Paul's Boutique (1989).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Led Zeppelin",
+      "title": "When the Levee Breaks",
+      "year": 1971
+    },
+    "later": {
+      "artist": "Beastie Boys",
+      "title": "Rhymin & Stealin",
+      "year": 1986
+    },
+    "whatToListenFor": "Listen to how huge Bonham's drums sound at the start of 'When the Levee Breaks': slow and heavy, with a long echo after every hit, because they were recorded at the bottom of a stairwell with microphones high above. Then hear that same beat looped under the Beastie Boys, even heavier and scratched up. The room around the drums comes along with them, which is why this beat sounds bigger than any drum machine."
+  },
+  "explanation": {
+    "age7": "The Beastie Boys used Led Zeppelin's giant drum sound in one of their songs.",
+    "age13": "Led Zeppelin's drummer John Bonham recorded 'When the Levee Breaks' in a stairwell so his drums would echo and sound gigantic. The Beastie Boys looped that drum beat for 'Rhymin & Stealin' in 1986. Because they didn't have a sampler, they reportedly made the loop with tape.",
+    "adult": "Cross-lineage and doubly fitting: Zeppelin, repeatedly challenged for borrowing from blues writers, became sample material for a rap group whose producer, Rubin, came from rock. The Levee drums are a case where the recording space is the thing being sampled."
+  },
+  "tags": [
+    "production"
+  ]
+}

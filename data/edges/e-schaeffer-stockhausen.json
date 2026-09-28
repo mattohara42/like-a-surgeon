@@ -1,0 +1,31 @@
+{
+  "id": "e-schaeffer-stockhausen",
+  "from": "pierre-schaeffer",
+  "to": "karlheinz-stockhausen",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1952,
+  "crossLineage": false,
+  "evidence": "Stockhausen went to Paris in January 1952 to study with Messiaen, and Schaeffer gave him use of the musique concrète studio at French radio, where he made his Konkrete Etüde that year. Recorded in the standard biographies and in the Stockhausen literature on his opus 1/5.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Pierre Schaeffer",
+      "title": "Étude aux chemins de fer",
+      "year": 1948
+    },
+    "later": {
+      "artist": "Karlheinz Stockhausen",
+      "title": "Konkrete Etüde",
+      "year": 1952
+    },
+    "whatToListenFor": "Schaeffer's piece is built from what the microphone caught: engine chuffs, whistles, wheels on joins, looped until they swing. Stockhausen's study is three minutes long and sounds far more controlled. He recorded short, struck sounds and cut them into precise lengths on tape, so the piece is about duration and order rather than about trains. Listen for the same razor-blade method used by two different minds: one looking for rhythm in noise, the other imposing a plan on it."
+  },
+  "explanation": {
+    "age7": "A young German composer went to Paris to learn how to make music out of tape.",
+    "age13": "Stockhausen was 23 when he went to Paris in 1952. Schaeffer let him use the radio studio, and he made his first tape piece there. He took the method home to Cologne, where he became the most famous electronic composer of his time.",
+    "adult": "The first link in a chain this map follows into rock: Paris to Cologne, Cologne to Can and to the Beatles' interest in tape. Stockhausen soon sided with Cologne's pure-electronic approach against Schaeffer's recorded sound, so this is influence by method, followed by a split."
+  },
+  "tags": [
+    "technology"
+  ]
+}

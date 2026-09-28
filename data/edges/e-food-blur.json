@@ -1,0 +1,31 @@
+{
+  "id": "e-food-blur",
+  "from": "food-records",
+  "to": "blur",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1993,
+  "crossLineage": false,
+  "evidence": "Band and label histories of 'Modern Life Is Rubbish' (1993), including David Cavanagh's account, agree on the sequence. By late 1992 Blur were in debt, 'Popscene' (1992) had missed the UK top 30, and Food was close to dropping them. Balfe had argued against Albarn's plan for a self-consciously English guitar-pop record and relented only warily. When the band delivered the finished album in December 1992, Food rejected it and told them to record more potential singles. Albarn wrote 'For Tomorrow' on Christmas Day, and it became the album's opening track and first single. The band's American label, SBK, separately asked for more, which produced 'Chemical World'.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Blur",
+      "title": "Popscene",
+      "year": 1992
+    },
+    "later": {
+      "artist": "Blur",
+      "title": "For Tomorrow",
+      "year": 1993
+    },
+    "whatToListenFor": "'Popscene' already has the English guitar-pop idea, but it comes at you fast and loud: a blaring brass section, a sprinting tempo, and no chorus built to be sung back. 'For Tomorrow' slows down and opens up: a la-la-la chorus sung by female backing singers, a string quartet (the band's first), and a lyric that takes a drive up to Primrose Hill in north London. The Englishness is the same. The difference is a song written to order for a label that wanted a single."
+  },
+  "explanation": {
+    "age7": "Blur's record company listened to their new album and said it didn't have a hit song on it, so the singer went home and wrote a new song on Christmas Day.",
+    "age13": "By the end of 1992 Blur were in trouble: they owed money, their last single had flopped, and their label, Food, was thinking about dropping them. When they handed in their second album, Food said no and asked for songs that could be hit singles. Damon Albarn wrote 'For Tomorrow' on Christmas Day, and it opened the album when it came out in 1993.",
+    "adult": "A label edge that corrects the Britpop origin story rather than repeating it. The turn toward pointedly English songwriting was Albarn's, and Food's owner argued against it. What the label actually did was reject the finished record and demand singles, so its causal claim is narrower and better documented: 'For Tomorrow', the song that opens 'Modern Life Is Rubbish', exists because Food sent the album back."
+  },
+  "tags": [
+    "labels"
+  ]
+}

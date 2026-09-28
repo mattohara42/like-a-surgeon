@@ -1,0 +1,32 @@
+{
+  "id": "e-tubby-gangoffour",
+  "from": "king-tubby",
+  "to": "gang-of-four",
+  "type": "direct",
+  "confidence": "consensus",
+  "evidence": "Critics and reference sources consistently describe Gang of Four's 'Entertainment!' as drawing directly on dub reggae's bass-and-space structural approach alongside funk and punk, though no specific Gill or King interview naming King Tubby individually anchors the claim at documented tier.",
+  "year": 1979,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "King Tubby",
+      "title": "King Tubby Meets Rockers Uptown",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Gang of Four",
+      "title": "Damaged Goods",
+      "year": 1978
+    },
+    "whatToListenFor": "Listen to how much of \"Damaged Goods\" is empty: guitar stabs land in the gaps a dub mixer would leave for echo. Gang of Four never actually uses a dub production style, but the structural habit, thin out everything except bass and rhythm, is the same one Tubby's records established."
+  },
+  "explanation": {
+    "age7": "Gang of Four used a lot of empty space in their songs, the same trick Jamaican dub producers like King Tubby had already discovered.",
+    "age13": "Gang of Four's sound is regularly described as drawing on dub reggae's approach to space and bass, alongside funk and punk, even though the band never sounds much like an actual dub record.",
+    "adult": "Consensus tier: a structural-lineage claim repeated across critical writing on the album, not a specific documented citation of King Tubby by name."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

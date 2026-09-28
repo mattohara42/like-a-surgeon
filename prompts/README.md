@@ -26,3 +26,26 @@ five or six rounds to reach the M1 targets.
 
 Read `data/seed.json` and hand-rewrite two `whatToListenFor` fields in your own
 words. This is the highest-leverage ten minutes in the project.
+
+## Original kickoff message
+
+The message that started M1, moved here from the README when the README
+was rewritten to describe the built project. Kept verbatim.
+
+> Read CLAUDE.md, SPEC.md, BUILD_PLAN.md, and data/SCHEMA.md before doing
+> anything. Then read data/seed.json carefully, because it is the quality bar
+> for everything you will write.
+>
+> You are starting M1. Do not write any UI code, any renderer, or any scratch
+> visualization. M1 is the data layer and nothing else.
+>
+> Start by proposing the sharded file layout and the manifest format, and by
+> solving the file:// fetch problem with a stdlib-only dev server and a bundling
+> step. Show me that plan before you build it.
+>
+> Then expand the dataset toward the M1 targets in BUILD_PLAN.md, in batches of
+> about twenty artists with their edges, pausing after each batch so I can read
+> a sample. Lead with the dub, electro, Detroit, and Chicago material.
+>
+> The single thing I will judge you on is the quality of edge.evidence and
+> trackPair.whatToListenFor. Never invent a quotation. Tier confidence honestly.

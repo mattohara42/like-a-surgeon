@@ -1,0 +1,30 @@
+{
+  "id": "e-chessrecords-ledzeppelin",
+  "from": "chess-records",
+  "to": "led-zeppelin",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1969,
+  "crossLineage": true,
+  "evidence": "Willie Dixon was a full-time Chess employee from 1951 as staff songwriter, session bassist, arranger and talent scout, working sessions for Muddy Waters, Howlin' Wolf and others. Muddy Waters recorded Dixon's 'You Need Love' at Chess in 1962. Led Zeppelin's 'Whole Lotta Love' (1969) adapted its lyrics from 'You Need Love' without credit; Dixon sued in January 1985 and settled out of court in 1987, and Led Zeppelin began crediting him from 1999 (Wikipedia's articles on 'Whole Lotta Love' and 'You Need Love').",
+  "trackPair": {
+    "earlier": {
+      "artist": "Muddy Waters",
+      "title": "You Need Love",
+      "year": 1962
+    },
+    "later": {
+      "artist": "Led Zeppelin",
+      "title": "Whole Lotta Love",
+      "year": 1969
+    },
+    "whatToListenFor": "'You Need Love' is a slow, spoken-sung blues, Muddy Waters half-talking Willie Dixon's words over a loping band. 'Whole Lotta Love' takes many of the same words and turns them into a hard rock riff, shouted rather than spoken, with a long psychedelic noise breakdown in the middle. Listen to the opening lines of each. The words are close enough that a court eventually agreed they were the same song."
+  },
+  "explanation": {
+    "age13": "Led Zeppelin's 'Whole Lotta Love' borrowed its words from 'You Need Love', a blues song Willie Dixon wrote and Muddy Waters recorded at Chess Records. Dixon wasn't credited or paid until he sued in 1985, and Led Zeppelin settled and started crediting him only from 1999.",
+    "adult": "The edge runs from the label because Dixon wrote and arranged the song as a Chess staff writer, and Muddy Waters recorded it there; Dixon himself isn't a node on this map. The uncredited use, the lawsuit and the decades-long delay before crediting Dixon are as much a part of the record as the riff."
+  },
+  "tags": [
+    "labels"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "e-delasoul-tribecalledquest",
+  "from": "de-la-soul",
+  "to": "a-tribe-called-quest",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1989,
+  "crossLineage": false,
+  "evidence": "De La Soul's 1989 debut established the sample-collage, wordplay-heavy style and public identity later named the 'Native Tongues', which A Tribe Called Quest, whose own debut came a year later, is consistently described as sharing and extending. Q-Tip appears alongside De La Soul, Jungle Brothers, Queen Latifah and Monie Love on the 1989 'Buddy' remix, credited on the single's own release, months before A Tribe Called Quest's first album. Critics and historians name the two groups together as founding members of the same loosely affiliated collective, without a single first-person statement from either side calling it direct influence.",
+  "trackPair": {
+    "earlier": {
+      "artist": "De La Soul",
+      "title": "3 Feet High and Rising",
+      "year": 1989
+    },
+    "later": {
+      "artist": "A Tribe Called Quest",
+      "title": "People's Instinctive Travels and the Paths of Rhythm",
+      "year": 1990
+    }
+  },
+  "explanation": {
+    "age7": "De La Soul and A Tribe Called Quest were friends who made music the same relaxed, playful way. De La Soul's first album came out a year before Tribe's.",
+    "age13": "De La Soul's 1989 album came out a year before A Tribe Called Quest's first record, and both were part of a loose group of rap acts called the Native Tongues, who shared a warm, sample-heavy sound and a friendly attitude. Q-Tip from Tribe even rapped on a De La Soul remix, 'Buddy', before his own group's album came out.",
+    "adult": "The Native Tongues were never a label or a formal group, just a shared identity among acts (De La Soul, A Tribe Called Quest, Jungle Brothers, Queen Latifah, Monie Love and later others) who supported each other's records and shared a sound. De La Soul got there first, and this edge is best read as a collective identity forming around a style De La Soul introduced, not a specific, named act of transmission, which is why it sits at consensus."
+  },
+  "tags": ["production"]
+}

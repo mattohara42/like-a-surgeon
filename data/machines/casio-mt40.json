@@ -1,0 +1,19 @@
+{
+  "id": "casio-mt40",
+  "name": "Casio MT-40",
+  "type": "machine",
+  "kind": "instrument",
+  "lineage": "other",
+  "maker": "Casio",
+  "releasedYear": 1981,
+  "discontinuedYear": 1982,
+  "originalPurpose": "A cheap home keyboard with built-in preset rhythms and instrument sounds, sold to hobbyists rather than professional musicians.",
+  "whatActuallyHappened": "Its built-in 'rock' rhythm preset, designed by Casio engineer Hiroko Okuda, became the entire backing track of Wayne Smith's 'Under Mi Sleng Teng' (1985), produced by Prince Jammy, after musician Noel Davey reached for it because he could not afford the Yamaha DX7 he wanted. The riddim it created has since been re-recorded by more Jamaican artists than any other in reggae history and began the genre's fully computerized era.",
+  "priceStory": "A budget home keyboard, around 150 US dollars new, next to a professional synthesizer costing several times that; the record it created came directly out of that price gap.",
+  "hook": "A cheap home keyboard's demo button ended dub's analogue era.",
+  "blurb": {
+    "age7": "A toy-like home keyboard had a built-in beat that one musician used to make a reggae song, and that song changed reggae music forever.",
+    "age13": "The Casio MT-40 was a budget home keyboard with built-in rhythm patterns, sold to people who could never afford a real studio synthesizer. In 1985, musician Noel Davey used its 'rock' preset, unable to afford the synthesizer he originally wanted, to build the backing track for Wayne Smith's 'Under Mi Sleng Teng', produced by Prince Jammy. It became one of the most re-recorded rhythms in reggae history and began the genre's digital era.",
+    "adult": "The MT-40's rock preset, designed by a Casio engineer for a mass-market home keyboard with no reggae application in mind, is this dataset's clearest case of a machine's 'home' lineage, a hobbyist consumer product, crossing into a genre it was never built for. Its price, a small fraction of the professional synthesizer Davey originally wanted, is the direct cause of the record existing at all."
+  }
+}

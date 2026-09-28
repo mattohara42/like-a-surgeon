@@ -1,0 +1,32 @@
+{
+  "id": "e-pistols-pil",
+  "from": "sex-pistols",
+  "to": "public-image-ltd",
+  "type": "reaction-against",
+  "confidence": "documented",
+  "evidence": "John Lydon has said directly and repeatedly, including in numerous interviews, that he formed Public Image Ltd in mid-1978 as a deliberate break from the Sex Pistols' punk formula and from punk's growing commercial conformity.",
+  "year": 1978,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Sex Pistols",
+      "title": "Anarchy in the U.K.",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Public Image Ltd",
+      "title": "Public Image",
+      "year": 1978
+    },
+    "whatToListenFor": "Same singer, opposite record. \"Anarchy\" is a three-chord shout. \"Public Image\" opens with a huge, un-punk guitar chime, and Lydon sings about his own manufactured persona rather than trying to provoke the audience."
+  },
+  "explanation": {
+    "age7": "After leaving the Sex Pistols, John Lydon started a new band on purpose to sound nothing like his old one.",
+    "age13": "Lydon has said plainly that he built PiL to get away from what the Sex Pistols, and punk generally, had become.",
+    "adult": "One of the more directly self-documented reaction-against edges in this dataset: Lydon is on record, many times, about the intent."
+  },
+  "tags": [
+    "production",
+    "politics"
+  ]
+}

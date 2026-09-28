@@ -1,0 +1,31 @@
+{
+  "id": "e-rubin-beastieboys",
+  "from": "rick-rubin",
+  "to": "beastie-boys",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1986,
+  "crossLineage": true,
+  "evidence": "Licensed to Ill (Def Jam and Columbia, 1986) was produced by Rick Rubin and the Beastie Boys. On 'No Sleep till Brooklyn' Rubin played the guitar riffs and Slayer's Kerry King played the solo, which King has discussed in interviews. The album was the first rap album to reach number one on the Billboard 200.",
+  "trackPair": {
+    "earlier": {
+      "artist": "LL Cool J",
+      "title": "I Can't Live Without My Radio",
+      "year": 1985
+    },
+    "later": {
+      "artist": "Beastie Boys",
+      "title": "No Sleep till Brooklyn",
+      "year": 1986
+    },
+    "whatToListenFor": "Same producer, a year apart. On LL's record Rubin cut everything down to a booming drum machine and a voice. On 'No Sleep till Brooklyn' he keeps the booming drums and adds the other thing he loved: heavy metal guitar, riffs he played himself and a solo from Slayer's Kerry King. Listen for the moment the solo tears through. Rap and metal on one track, from a producer making Slayer's album in the same period."
+  },
+  "explanation": {
+    "age7": "Rick Rubin helped the Beastie Boys go from a punk band to a rap group, and put heavy metal guitar on their songs.",
+    "age13": "The Beastie Boys started as a punk band, and Rick Rubin came from the same scene. He produced their first album, Licensed to Ill, which was the first rap album to reach number one in America. On 'No Sleep till Brooklyn' Rubin played the guitar riffs himself, and Kerry King from the metal band Slayer played a wild guitar solo.",
+    "adult": "Cross-lineage because Rubin is filed under rock (A120). This is the purest statement of his rock-into-rap idea: the same producer was working with Slayer and the Beastie Boys at once."
+  },
+  "tags": [
+    "production"
+  ]
+}

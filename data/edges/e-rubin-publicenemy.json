@@ -1,0 +1,30 @@
+{
+  "id": "e-rubin-publicenemy",
+  "from": "rick-rubin",
+  "to": "public-enemy",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1987,
+  "crossLineage": true,
+  "evidence": "Rubin heard Chuck D's 'Public Enemy Number One' through Andre 'Doctor Dré' Brown and set out to sign him to Def Jam, and Bill Stephney joined the label around 1986 partly to help make it happen. Rubin is credited as executive producer on 'Yo! Bum Rush the Show' (Def Jam/Columbia, March 1987) and worked on its mixing, with production credited to Stephney and the Bomb Squad (Wikipedia's articles on Public Enemy and the album). The widely told story that Chuck D resisted for months because he felt too old to start a rap career is not sourced here.",
+  "trackPair": {
+    "earlier": {
+      "artist": "LL Cool J",
+      "title": "Rock the Bells",
+      "year": 1985
+    },
+    "later": {
+      "artist": "Public Enemy",
+      "title": "Public Enemy No. 1",
+      "year": 1987
+    },
+    "whatToListenFor": "'Rock the Bells', produced by Rubin for Def Jam, is the label's early sound at its barest: loud drum-machine beats, scratching and a voice, with almost nothing else. 'Public Enemy No. 1' keeps that stripped frame of heavy beat and forceful voice, then adds one thing that does not belong in it, a squealing synthesiser sample looping over the top. You can hear Def Jam's hardness in it, and the first sign of the noise the Bomb Squad would pile on a year later."
+  },
+  "explanation": {
+    "age13": "Rick Rubin, who ran Def Jam, heard a tape of Chuck D and wanted to sign him. Public Enemy's first album came out on Def Jam in 1987, with Rubin as executive producer. The Bomb Squad made the beats, but Rubin's label gave them the chance.",
+    "adult": "The edge is typed production for the executive-producer credit, but what Rubin mainly supplied was access: Def Jam and Columbia's distribution for a group whose sound was built elsewhere, by the Bomb Squad. The LL Cool J pairing is here because Rubin's stripped-down Def Jam records were the house sound Public Enemy arrived into, and the first album is audibly still close to it. By 'It Takes a Nation of Millions to Hold Us Back' the next year they had left it behind."
+  },
+  "tags": [
+    "labels"
+  ]
+}

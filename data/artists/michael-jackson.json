@@ -1,0 +1,34 @@
+{
+  "id": "michael-jackson",
+  "name": "Michael Jackson",
+  "sortName": "Jackson, Michael",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1964,
+  "activeTo": 2009,
+  "originCity": "Gary, Indiana",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Quincy Jones"
+  ],
+  "hook": "A Motown child star whose 1982 album is still the best-selling record ever made, and whose personal history includes two rounds of child sexual abuse allegations that remain part of how he is remembered.",
+  "blurb": {
+    "age7": "Michael Jackson was a singer and dancer who became one of the most famous musicians ever. He was also accused of hurting children, which many people still think about when they hear his music.",
+    "age13": "Michael Jackson joined his brothers' group, the Jackson 5, as a child star in the 1960s, then became a solo star. His 1982 album 'Thriller' is still the best-selling album ever made. Its song 'Human Nature', produced by Quincy Jones, has been sampled by many rap producers, including Large Professor for Nas's 'It Ain't Hard to Tell' (1994). Jackson also faced serious allegations that he sexually abused children: a 1993 lawsuit settled without criminal charges, and a 2005 criminal trial where a jury found him not guilty on every count. After his death in 2009, a 2019 documentary, 'Leaving Neverland', brought new accusations from two men who said Jackson had abused them as boys; his estate has denied the claims and sued over the film. Both his huge musical influence and these allegations are part of why he is remembered the way he is.",
+    "adult": "Jackson's career runs from Motown child stardom to 'Thriller' (1982), which sold roughly 70 million copies worldwide and remains the best-selling album in history; its track 'Human Nature', co-written by Steve Porcaro and John Bettis and produced by Quincy Jones, is one of the most sampled Jackson-era recordings in hip-hop, including on Nas's 'It Ain't Hard to Tell' (1994). Jackson was also the subject of two rounds of child sexual abuse allegations: a 1993 civil suit settled out of court in 1994 with no criminal charges filed, and a 2003-2005 criminal trial on charges of child molestation, on which a jury acquitted him on all counts in 2005. The 2019 HBO documentary 'Leaving Neverland' presented accounts from two men, Wade Robson and James Safechuck, alleging abuse as children; Jackson's estate has denied the allegations and sued HBO, a dispute that continued through appeals courts. Per this map's own rule that historical importance is not endorsement, these facts are stated without resolving how they should be weighed against his musical influence."
+  },
+  "signatureTracks": [
+    {
+      "title": "Human Nature",
+      "year": 1982,
+      "whyThisOne": "From 'Thriller'; its hook is the source for Nas's 'It Ain't Hard to Tell'."
+    },
+    {
+      "title": "Billie Jean",
+      "year": 1983,
+      "whyThisOne": "The single that made 'Thriller' inescapable, and one of the most imitated bass lines in pop."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-minimoog-parliamentfunkadelic",
+  "from": "minimoog",
+  "to": "parliament-funkadelic",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1977,
+  "crossLineage": true,
+  "evidence": "Parliament's 'Flash Light', recorded in 1977 for 'Funkentelechy Vs. the Placebo Syndrome' and released as a single on 28 January 1978, carries a bassline Bernie Worrell built from at least three, possibly four, linked Minimoogs. Bootsy Collins played drums on it and had originally rejected Worrell's bass part. It was Parliament's first number one on Billboard's R&B chart and reached 16 on the pop chart (Wikipedia's article on the song).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Moog Music",
+      "title": "Minimoog Model D",
+      "year": 1970,
+      "search": false
+    },
+    "later": {
+      "artist": "Parliament",
+      "title": "Flash Light",
+      "year": 1977
+    },
+    "whatToListenFor": "The bass on 'Flash Light' is not a bass guitar. It is a thick, rubbery synthesiser line that climbs and falls in a chromatic line with a fat, buzzing tone no string could make, and it carries the whole song. Listen for how it swaggers: Worrell plays it with a funk bassist's feel, so it sounds human and machine at once. Funk had always been built on the bass guitar. Here the most important part in a number one funk record is played on a keyboard."
+  },
+  "explanation": {
+    "age13": "Parliament's biggest hit, 'Flash Light', has a bassline played on synthesisers instead of a bass guitar. Bernie Worrell linked three or four Minimoogs together to make that deep, bouncing sound. Bootsy Collins, the band's famous bass player, played drums on it instead.",
+    "adult": "'Flash Light' put a synthesiser bass at the centre of a number one R&B record in 1978, played with a funk player's feel rather than Kraftwerk's evenness, which is the other Minimoog edge on the map. The two edges together show one instrument used in opposite ways."
+  },
+  "tags": [
+    "technology"
+  ]
+}

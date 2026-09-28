@@ -1,0 +1,33 @@
+{
+  "id": "e-sp1200-peterock",
+  "from": "emu-sp-1200",
+  "to": "pete-rock",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1992,
+  "crossLineage": true,
+  "evidence": "Pete Rock has said the rapper Freddie Foxx gave him an E-mu SP-1200 when he was seventeen and that he learned to make beats on it, and the SP-1200 is consistently named as his principal machine in interviews and equipment histories. The edge claims the instrument he learned and worked on. The sources consulted do not specify the equipment used on 'They Reminisce Over You' itself.",
+  "trackPair": {
+    "earlier": {
+      "artist": "E-mu Systems",
+      "title": "SP-1200, ten seconds of sampling time",
+      "year": 1987,
+      "search": false
+    },
+    "later": {
+      "artist": "Pete Rock and CL Smooth",
+      "title": "They Reminisce Over You (T.R.O.Y.)",
+      "year": 1992
+    },
+    "whatToListenFor": "Listen for the grain of the SP-1200's twelve-bit sound on the drums, a slight crunch on the snare and hi-hats. Then listen to the bass: it sounds rounded and dark, as if the top has been cut off. Cutting the top end is how producers of the period pulled a bassline out of a full record, and Pete Rock is one of the best known for it. The short memory still sets the structure: one horn phrase, over and over, with changes made by dropping parts in and out."
+  },
+  "explanation": {
+    "age7": "Pete Rock was given an SP-1200 when he was seventeen and taught himself to make beats on it.",
+    "age13": "The rapper Freddie Foxx gave Pete Rock an SP-1200 when he was seventeen. It could only hold a few seconds of sound, and everything it recorded came out a little rough. Pete Rock learned to work inside those limits, finding one perfect horn line or bass part and building a whole song from it.",
+    "adult": "Documented as a learning and working relationship, in the same way as e-ms10-atkins: the claim rests on the producer's own account of his instrument, not on a session sheet for a particular record. Together with e-sp1200-marleymarl it shows the machine's aesthetic passing from one generation of New York producers to the next."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

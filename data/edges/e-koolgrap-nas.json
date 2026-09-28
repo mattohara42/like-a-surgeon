@@ -1,0 +1,28 @@
+{
+  "id": "e-koolgrap-nas",
+  "from": "kool-g-rap",
+  "to": "nas",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1995,
+  "crossLineage": false,
+  "evidence": "Nas appeared on Kool G Rap's track 'Fast Life' from the album '4, 5, 6' (1995). Rolling Stone describes Nas as 'hugely influenced by G Rap on his early records,' and writer Peter Shapiro credits Kool G Rap with creating 'the blueprint for Nas, Biggie and everyone who followed in their path,' citing his street narrative style, which came to define later Queens MCs including Nas (Wikipedia's article on Kool G Rap).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Kool G Rap",
+      "title": "Road to the Riches",
+      "year": 1989
+    },
+    "later": {
+      "artist": "Nas",
+      "title": "N.Y. State of Mind",
+      "year": 1994
+    },
+    "whatToListenFor": "Kool G Rap's 'Road to the Riches' tells a detailed street story in dense, internally rhyming lines, delivered fast and precise. 'N.Y. State of Mind', from 'Illmatic', tells a similarly detailed street story with the same density of internal rhyme, though at a more measured pace. Listen for how much narrative detail each packs into a verse. That density, applied to crime and consequence rather than boasting, is the technique critics trace from G Rap to Nas."
+  },
+  "explanation": {
+    "age13": "Kool G Rap, from the Juice Crew, is often credited with inventing the dense, cinematic style of street storytelling that Nas became famous for. Rolling Stone has called Nas 'hugely influenced' by him, and in 1995 Nas guested on one of G Rap's own songs.",
+    "adult": "The edge is dated to their actual collaboration, 'Fast Life' (1995), a year after 'Illmatic', since it's the only fixed date the evidence supports; the influence itself is described as running earlier, shaping Nas's 'early records'. Kool G Rap's Juice Crew membership already links him to Nas's own scene edge, and this fills in the direct line the scene edge alone doesn't carry."
+  },
+  "tags": []
+}

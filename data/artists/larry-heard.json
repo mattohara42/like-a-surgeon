@@ -1,0 +1,40 @@
+{
+  "id": "larry-heard",
+  "name": "Larry Heard",
+  "sortName": "Heard, Larry",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1983,
+  "activeTo": null,
+  "originCity": "Chicago",
+  "originCountry": "USA",
+  "scenes": [
+    "chicago-house"
+  ],
+  "labels": [
+    {
+      "labelId": "trax",
+      "from": 1986,
+      "to": 1986
+    }
+  ],
+  "keyProducers": [],
+  "hook": "Recorded \"Can You Feel It\" on two cassette decks in one pass, and invented deep house almost by accident.",
+  "blurb": {
+    "age7": "Larry Heard, also called Mr. Fingers, made slow, dreamy electronic music that people now call deep house.",
+    "age13": "Heard recorded \"Can You Feel It\" in 1984 using just a synthesizer, a drum machine, and two cassette decks to layer the parts, since he had no multitrack recorder. Released under the name Mr. Fingers in 1986, it was softer and jazzier than most house records of the time, and it started the deep house sound.",
+    "adult": "\"Can You Feel It\" is often placed alongside Derrick May's \"Strings of Life\" as the genre's other emotional landmark, deep house to techno's equivalent claim. Heard's group Fingers Inc. released \"Another Side\" in 1988, arguably the first house album built as a coherent long-form work rather than a collection of club tracks; like many Trax-era artists, Heard later pursued the label in court over unpaid royalties."
+  },
+  "signatureTracks": [
+    {
+      "title": "Can You Feel It (Mr. Fingers)",
+      "year": 1986,
+      "whyThisOne": "Recorded in a single pass across two cassette decks in 1984; the melodic, unhurried template for deep house."
+    },
+    {
+      "title": "Mystery of Love (Mr. Fingers)",
+      "year": 1985,
+      "whyThisOne": "A slower prototype from the same session that produced \"Can You Feel It,\" showing the two tracks as siblings rather than one being a copy of the other."
+    }
+  ]
+}

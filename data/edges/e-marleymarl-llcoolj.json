@@ -1,0 +1,32 @@
+{
+  "id": "e-marleymarl-llcoolj",
+  "from": "marley-marl",
+  "to": "ll-cool-j",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1990,
+  "crossLineage": false,
+  "evidence": "Mama Said Knock You Out (Def Jam and Columbia, 1990) credits production to Marley Marl, with co-production from Bobcat and LL Cool J. The album followed Walking with a Panther (1989), which had been poorly received.",
+  "trackPair": {
+    "earlier": {
+      "artist": "LL Cool J",
+      "title": "I Can't Live Without My Radio",
+      "year": 1985
+    },
+    "later": {
+      "artist": "LL Cool J",
+      "title": "Mama Said Knock You Out",
+      "year": 1990
+    },
+    "whatToListenFor": "Same rapper, same label, five years apart, and a different source for the drums. On 'Radio' they are drum machine hits, clean and identical each time. On 'Mama Said Knock You Out' the beat is built from pieces of older recordings, so the drums carry grit and room sound, and the loop has a live, rolling weight the machine never had."
+  },
+  "explanation": {
+    "age7": "LL Cool J's first album used a drum machine. Five years later Marley Marl made his beats from old records, and his career took off again.",
+    "age13": "By 1989 people thought LL Cool J was finished. For his next album he worked with Marley Marl, who built beats from sampled pieces of other records instead of a drum machine. Put 'Radio' next to 'Mama Said Knock You Out' and you can hear what changed in hip-hop between 1985 and 1990: the drums stopped sounding like a machine and started sounding like records.",
+    "adult": "The pairing is a near-controlled comparison, holding artist and label constant across the shift from drum-machine to sample-based production. It also shows that the shift ran through particular producers: LL's commercial recovery came by moving to the producer most associated with the new method."
+  },
+  "tags": [
+    "production",
+    "technology"
+  ]
+}

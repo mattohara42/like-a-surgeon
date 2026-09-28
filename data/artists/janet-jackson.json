@@ -1,0 +1,35 @@
+{
+  "id": "janet-jackson",
+  "name": "Janet Jackson",
+  "sortName": "Jackson, Janet",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1982,
+  "activeTo": null,
+  "originCity": "Gary, Indiana",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Jimmy Jam",
+    "Terry Lewis"
+  ],
+  "hook": "Michael Jackson's younger sister, who personally called Joni Mitchell to ask permission for a sample nobody thought a singer-songwriter would ever clear.",
+  "blurb": {
+    "age7": "Janet Jackson is a singer, Michael Jackson's younger sister. For one of her songs, she called up another singer, Joni Mitchell, and asked to use a piece of her music, and Joni said yes.",
+    "age13": "Janet Jackson built a solo career distinct from her brother Michael's, working closely with producers Jimmy Jam and Terry Lewis on albums like 'Rhythm Nation 1814' (1989). For 'Got 'til It's Gone' (1997), Jam suggested sampling Joni Mitchell's 1970 song 'Big Yellow Taxi'. Jackson called Mitchell herself to ask permission, which people around her doubted would work, and Mitchell agreed, recording new guest vocals for the track alongside the sample.",
+    "adult": "'Got 'til It's Gone' (1997), from 'The Velvet Rope' and produced by Jackson with Jam and Lewis, pairs a sampled hook from Mitchell's 'Big Yellow Taxi' with new guest vocals Mitchell recorded for the track after Jackson asked her directly, a rare case of a source artist becoming a credited collaborator rather than a cleared but silent name in the credits."
+  },
+  "signatureTracks": [
+    {
+      "title": "Got 'til It's Gone",
+      "year": 1997,
+      "whyThisOne": "Built on a personally cleared Joni Mitchell sample and new guest vocals from Mitchell herself."
+    },
+    {
+      "title": "Rhythm Nation",
+      "year": 1989,
+      "whyThisOne": "The Jam-and-Lewis-produced title track of the album that established her as a solo force apart from her brother."
+    }
+  ]
+}

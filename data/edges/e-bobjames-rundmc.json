@@ -1,0 +1,29 @@
+{
+  "id": "e-bobjames-rundmc",
+  "from": "bob-james",
+  "to": "run-dmc",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1986,
+  "crossLineage": true,
+  "evidence": "Run-D.M.C.'s 'Peter Piper' (from 'Raising Hell', 1986) samples the bell pattern and drum break from Bob James's 'Take Me to the Mardi Gras' (1975), credited on sample-database entries and widely discussed by both artists; Run-D.M.C. referred to the bells in the beat as 'Hell's Bells.'",
+  "trackPair": {
+    "earlier": {
+      "artist": "Bob James",
+      "title": "Take Me to the Mardi Gras",
+      "year": 1975
+    },
+    "later": {
+      "artist": "Run-D.M.C.",
+      "title": "Peter Piper",
+      "year": 1986
+    },
+    "whatToListenFor": "James's original is a laid-back jazz-funk instrumental with a chiming bell pattern buried in the arrangement. Run-D.M.C. pulls just the bells and the break to the front, loops them, and raps directly over the loop, with nothing else in the mix competing with it."
+  },
+  "explanation": {
+    "age7": "Run-D.M.C.'s song 'Peter Piper' uses the bell sound from an old Bob James jazz record, looped over and over.",
+    "age13": "'Take Me to the Mardi Gras' (1975) by jazz musician Bob James has a distinctive bell sound that Run-D.M.C. looped for 'Peter Piper' (1986). Producers nicknamed the loop 'Hell's Bells,' and it went on to appear in dozens of other hip-hop records.",
+    "adult": "One of the clearest single-source sample lineages on this map: one specific 1975 jazz-funk recording, one specific 1986 rap record, both widely acknowledged and disputed by neither party."
+  },
+  "tags": ["production"]
+}

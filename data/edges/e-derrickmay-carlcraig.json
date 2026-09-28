@@ -1,0 +1,30 @@
+{
+  "id": "e-derrickmay-carlcraig",
+  "from": "derrick-may",
+  "to": "carl-craig",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1989,
+  "crossLineage": false,
+  "evidence": "Craig has described discovering electronic music through May's WJLB radio show 'Street Beat' and becoming his assistant at Transmat before starting Planet E in 1991. Consistently described this way across multiple biographical sources (Wikipedia, Detroit Historical Society, Red Bull Music Academy).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Derrick May (Rhythim Is Rhythim)",
+      "title": "Nude Photo",
+      "year": 1987
+    },
+    "later": {
+      "artist": "Psyche (Carl Craig)",
+      "title": "Elements",
+      "year": 1989
+    },
+    "whatToListenFor": "Both records share Transmat's repeating-figure discipline, but 'Elements' pulls the tempo down and lets the chords hang longer, the mark of an assistant absorbing his mentor's vocabulary and then bending it somewhere else."
+  },
+  "explanation": {
+    "age13": "Carl Craig first heard electronic music on Derrick May's radio show, then became May's assistant, learning the equipment and the label before making records of his own.",
+    "adult": "This is the second documented case on this map of Detroit techno's founding generation training its own successor directly (alongside King Tubby's line of engineers on the dub side): May's radio show recruited a listener, and his label gave that listener a studio and an outlet before Craig had built either for himself."
+  },
+  "tags": [
+    "production"
+  ]
+}

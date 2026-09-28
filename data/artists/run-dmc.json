@@ -1,0 +1,36 @@
+{
+  "id": "run-dmc",
+  "name": "Run-D.M.C.",
+  "sortName": "Run-D.M.C.",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1983,
+  "activeTo": 2002,
+  "originCity": "Hollis, Queens, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Larry Smith",
+    "Russell Simmons",
+    "rick-rubin"
+  ],
+  "hook": "Took the band off rap records, left only a drum machine, two voices and a DJ, and made that the new sound of the form.",
+  "blurb": {
+    "age7": "Three friends from Queens: two rappers and a DJ. Their records were just loud drums and shouting, and they became the biggest rap group in the world.",
+    "age13": "Joseph Simmons, Darryl McDaniels and Jason Mizell (Jam Master Jay) came from Hollis, Queens. Before them, most rap records had a full band playing behind the rappers. Their first single in 1983 had only a drum machine and their two voices trading lines. It sounded hard and bare, and it made the earlier style sound old. In 1986 their version of Aerosmith's 'Walk This Way', with the rock band playing on it, put rap on rock radio and MTV. The group ended in 2002 when Jam Master Jay was shot and killed in his Queens studio.",
+    "adult": "Run-D.M.C. mark the break between the Sugar Hill model, where a label's house band replayed disco and funk behind assembled acts, and a leaner, drum-machine-first aesthetic produced by Larry Smith and Russell Simmons. They also moved rap's image from party costume to street clothes, and 'Walk This Way' reached number four on the Billboard Hot 100 in 1986. Mizell was shot dead in October 2002, and the case remained unsolved for more than twenty years before two men were convicted of his murder in 2024."
+  },
+  "signatureTracks": [
+    {
+      "title": "Sucker M.C.'s",
+      "year": 1983,
+      "whyThisOne": "The B-side that stripped rap down to a drum machine and two voices, and the template for everything bare and hard that followed."
+    },
+    {
+      "title": "Walk This Way (with Aerosmith)",
+      "year": 1986,
+      "whyThisOne": "Rap and hard rock on one record, produced by Rick Rubin, and the moment rap reached rock radio and MTV."
+    }
+  ]
+}

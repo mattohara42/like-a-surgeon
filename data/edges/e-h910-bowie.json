@@ -1,0 +1,33 @@
+{
+  "id": "e-h910-bowie",
+  "from": "eventide-h910",
+  "to": "david-bowie",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1977,
+  "crossLineage": true,
+  "evidence": "Tony Visconti has described in interviews feeding Dennis Davis's snare drum through the H910 on 'Low', with the pitch set to shift downward and the feedback turned up. His often-repeated description of the device to Bowie and Eno, as something that tampers with time itself, appears in many accounts of the sessions.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Eventide",
+      "title": "H910 Harmonizer",
+      "year": 1975,
+      "search": false
+    },
+    "later": {
+      "artist": "David Bowie",
+      "title": "Breaking Glass",
+      "year": 1977
+    },
+    "whatToListenFor": "Listen only to the snare drum. Each hit is followed by a fast smear that drops in pitch, a thud that seems to fall away underneath itself. The Harmonizer shifted each echo down and fed it back in, so every repeat went lower than the last. On a normal record the snare is the most solid thing in the mix. Here it sounds like it is collapsing."
+  },
+  "explanation": {
+    "age7": "A machine made the drums on this album sound like they were falling down stairs.",
+    "age13": "The Harmonizer could change a sound's pitch without changing its speed. On Bowie's album 'Low', the producer set it so each echo of the snare drum dropped lower. The drum sounds like it is tumbling downward every time it is hit. It was a new sound, and lots of producers copied it.",
+    "adult": "'Low' is often credited with a drum sound that producers spent years chasing, and the H910 is a documented part of how it was made. The broader point is that digital processing arrived in the studio as an instrument for making unfamiliar sounds, not as a tool for accuracy."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

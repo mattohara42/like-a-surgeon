@@ -1,0 +1,33 @@
+{
+  "id": "britpop",
+  "name": "Britpop",
+  "type": "scene",
+  "lineage": "rock",
+  "yearFrom": 1993,
+  "yearTo": 1997,
+  "city": "London",
+  "country": "UK",
+  "hook": "Guitar bands turned ordinary English life, class, place, and boredom, into chart pop, then watched the press turn two of them into a rivalry bigger than the music.",
+  "blurb": {
+    "age7": "In the 1990s, British bands wrote catchy songs about everyday English life. Two of the biggest bands, Blur and Oasis, released singles on the very same day to see who would win.",
+    "age13": "Britpop bands wrote guitar pop about specifically English subjects: class, small towns, ordinary jobs, in contrast to the American grunge dominating rock radio at the time. Blur (London) and Oasis (Manchester, not yet on this map) became the scene's biggest rivalry, releasing singles on the same day in August 1995, a chart battle the press called the Battle of Britpop. Pulp, from Sheffield, and The Verve, from Wigan, both had their commercial peak in the same few years.",
+    "adult": "Britpop's guitar-pop revival, running roughly from Blur and Suede's early-1990s records to 1997, was explicitly framed by British music press as a nationalist answer to American grunge, and its bands wrote pointedly English lyrics about class and place rather than the era's dominant alienated-outsider mode. The scene's geography was never really one city (London's Blur, Sheffield's Pulp, Wigan's The Verve), which the Battle of Britpop's London-versus-Manchester framing tended to flatten into a two-band story the wider scene didn't really have."
+  },
+  "geopolitics": "Britpop rose during the last years of John Major's Conservative government and peaked around Tony Blair's 1997 election, whose New Labour campaign courted the scene's biggest names directly (an Oasis-Blair Downing Street reception in 1997 is the most cited instance); the press label 'Cool Britannia' packaged the music alongside British fashion, art and film as evidence of a confident national mood, a framing several of the scene's own artists later distanced themselves from.",
+  "whatWasNew": "Guitar pop that named specific English class markers and places directly, in normal spoken vocabulary, rather than through American-inflected rock language or punk's more abstract anger: a dog track and a tower block in Blur's 'Parklife', a council house and a class-tourist's slumming holiday in Pulp's 'Common People'.",
+  "production": "A mix of major labels and their subsidiaries: Blur on Food Records (distributed through EMI), Pulp on Island Records from 1994, The Verve on Hut Recordings, a Virgin Records subsidiary, from 1991.",
+  "labels": "No single label defined the scene the way Factory did for post-punk; its acts were split across several major and major-distributed labels competing for the same commercial moment.",
+  "politics": "Explicitly about English identity and class rather than the era's American alternative-rock alienation, though rarely programmatic: Pulp's 'Common People' is the scene's most pointed class statement, and the Britpop-New-Labour association was largely a media and political framing that some of the musicians involved later rejected.",
+  "memberIds": [
+    "blur",
+    "pulp",
+    "the-verve"
+  ],
+  "palette": {
+    "ink": "#1a1a2e",
+    "paper": "#f2ede4",
+    "accent": "#c8102e",
+    "accent2": "#00247d"
+  },
+  "motif": "parklife-collage"
+}

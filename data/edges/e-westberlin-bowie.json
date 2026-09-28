@@ -1,0 +1,33 @@
+{
+  "id": "e-westberlin-bowie",
+  "from": "west-berlin",
+  "to": "david-bowie",
+  "type": "scene",
+  "confidence": "documented",
+  "year": 1977,
+  "crossLineage": true,
+  "evidence": "Bowie moved to West Berlin with Iggy Pop in 1976 to get away from Los Angeles and his cocaine addiction. 'Low' (1977) was begun at the Château d'Hérouville in France and finished at Hansa Studios in Berlin, and '\"Heroes\"' (1977) was recorded entirely at Hansa, about 150 metres from the Wall. The title song's image of lovers by the Wall came, by Bowie's own account, from seeing producer Tony Visconti with backing singer Antonia Maass from the studio window (Wikipedia's articles on the Berlin Trilogy and Hansa Tonstudio).",
+  "trackPair": {
+    "earlier": {
+      "artist": "David Bowie",
+      "title": "Station to Station",
+      "year": 1976,
+      "search": "David Bowie Station to Station"
+    },
+    "later": {
+      "artist": "David Bowie",
+      "title": "\"Heroes\"",
+      "year": 1977,
+      "search": "David Bowie Heroes"
+    },
+    "whatToListenFor": "'Station to Station' was made in Los Angeles: long, but still a rock band playing funk-inflected grooves with a big lead vocal on top. '\"Heroes\"' was made at Hansa a year later. Listen for the guitar feedback that sustains through the whole song, the drums that barely change, and Bowie singing quietly at first and then straining at the top of his range in the last verses. The record sounds like a big hall, because Hansa's Meistersaal was one. The move is audible as less groove and more atmosphere."
+  },
+  "explanation": {
+    "age13": "Bowie moved to West Berlin in 1976 to stop taking drugs. He recorded most of 'Low' and all of '\"Heroes\"' there, at a studio right next to the Berlin Wall. The city is inside the music: the song '\"Heroes\"' is about two lovers meeting by the Wall.",
+    "adult": "The city was a retreat before it was a theme. Bowie went to Berlin to get sober, and the anonymity and cheap space it offered are part of why the records got stranger. Hansa's proximity to the Wall is not just legend-making: the song '\"Heroes\"' is set there, and the studio's hall sound is on the record. Brian Eno and Kraftwerk, both already linked to Bowie on this map, account for much of the method. This edge is for the place."
+  },
+  "tags": [
+    "politics",
+    "production"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "stax",
+  "name": "Stax Records",
+  "type": "label",
+  "lineage": "funk",
+  "foundedYear": 1957,
+  "closedYear": 1975,
+  "city": "Memphis",
+  "founders": [
+    "Jim Stewart",
+    "Estelle Axton"
+  ],
+  "ownershipStory": "Jim Stewart and his sister Estelle Axton founded the label in 1957 as Satellite Records, renaming it Stax in 1961, based on McLemore Avenue in a majority-Black Memphis neighborhood; the label and its integrated house band, Booker T. and the MGs, operated across the city's segregation throughout the 1960s. Atlantic Records' 1967 sale to Warner Bros. led to a dispute over an old distribution contract clause, and in May 1968 Stax lost its entire back catalogue to Atlantic outright. Executive Al Bell responded by ordering nearly the whole roster to record new material at once, including soul-jazz keyboardist and staff songwriter Isaac Hayes. A later distribution collapse with CBS, and mounting debt, forced Stax into bankruptcy; federal marshals closed the studio by court order in December 1975.",
+  "hook": "A racially integrated label in segregated Memphis that lost its entire catalogue overnight in 1968, then panic-ordered a wave of new solo albums to survive.",
+  "blurb": {
+    "age13": "Stax Records, started in Memphis in 1957, built its sound around an integrated house band, Booker T. and the MGs, at a time when the city itself was segregated. In 1968 the label lost its entire back catalogue in a contract dispute with Atlantic Records, and executive Al Bell ordered almost every artist on the roster to record new material fast. Isaac Hayes, whose own 1968 debut had flopped, agreed to try again only if he got total creative control, and made 'Hot Buttered Soul' (1969), one of soul music's most influential albums.",
+    "adult": "The 1968 catalogue loss to Atlantic is the hinge of Stax's whole story: Al Bell's response, an almost-instant slate of new albums across the roster, is what produced 'Hot Buttered Soul' specifically, since Hayes agreed to record again only on condition of full creative control after his conventional 1968 debut had gone nowhere. Stax itself didn't survive its own later distribution collapse with CBS, closed by federal court order in December 1975."
+  }
+}

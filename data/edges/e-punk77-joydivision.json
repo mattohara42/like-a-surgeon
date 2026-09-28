@@ -1,0 +1,31 @@
+{
+  "id": "e-punk77-joydivision",
+  "from": "uk-punk-77",
+  "to": "joy-division",
+  "type": "scene",
+  "confidence": "consensus",
+  "year": 1976,
+  "crossLineage": false,
+  "evidence": "Bernard Sumner and Peter Hook separately attended the Sex Pistols' show at the Lesser Free Trade Hall in Manchester on 4 June 1976, took to the band's simplicity, speed and aggression, and formed the group that became Joy Division (Wikipedia's article on Unknown Pleasures). The gig is one of the most retold in British music, but it reaches the map here through a secondary source, so consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Sex Pistols",
+      "title": "Anarchy in the U.K.",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Joy Division",
+      "title": "Warsaw",
+      "year": 1978,
+      "search": "Joy Division Warsaw An Ideal for Living"
+    },
+    "whatToListenFor": "The Pistols' record is the sound of the gig that started them. 'Warsaw', from the band's self-released first EP, is them still playing at that speed, a count-in and a fast, blunt song. The change came after this, with Hannett and Factory. Listen for how directly the first record copies the energy, before the band found out what else they could do."
+  },
+  "explanation": {
+    "age13": "In June 1976 the Sex Pistols played a small hall in Manchester. Two people in the audience, Bernard Sumner and Peter Hook, went home and started a band. It became Joy Division.",
+    "adult": "Joy Division are filed under post-punk, but their start is a punk-scene edge, and a famous one. The scene, not any single record, is what reached them: a band on a stage showing that you didn't need to be good to begin."
+  },
+  "tags": [
+    "production"
+  ]
+}

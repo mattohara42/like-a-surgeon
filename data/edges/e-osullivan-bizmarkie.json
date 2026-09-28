@@ -1,0 +1,32 @@
+{
+  "id": "e-osullivan-bizmarkie",
+  "from": "gilbert-osullivan",
+  "to": "biz-markie",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1991,
+  "crossLineage": true,
+  "evidence": "Biz Markie's 'Alone Again' (1991) loops about ten seconds of piano from Gilbert O'Sullivan's 'Alone Again (Naturally)' (1972). The licence was sought and refused. O'Sullivan's publisher won Grand Upright Music v. Warner Bros. Records (S.D.N.Y., 17 December 1991), and the album was withdrawn from sale.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Gilbert O'Sullivan",
+      "title": "Alone Again (Naturally)",
+      "year": 1972
+    },
+    "later": {
+      "artist": "Biz Markie",
+      "title": "Alone Again",
+      "year": 1991
+    },
+    "whatToListenFor": "Listen to O'Sullivan's piano, then to Biz's loop of it. It's only a few bars, repeated, and still instantly recognisable. That's the whole case in one sound: a sample carries its author with it. The Cold Chillin' edge covers the label's decision, and this edge is the sound that decision was about."
+  },
+  "explanation": {
+    "age7": "Biz Markie used a piece of Gilbert O'Sullivan's song without permission, and O'Sullivan won in court.",
+    "age13": "Biz Markie looped about ten seconds of piano from Gilbert O'Sullivan's 1972 hit. O'Sullivan had said no, and he sued when the record came out. The court agreed with him, and the ruling changed hip-hop: after that, you had to get permission for every sample.",
+    "adult": "Paired with e-coldchillin-bizmarkie. That edge carries the label's decision and this one the source, so the story reads from both ends: the record that was taken, and the company that released it."
+  },
+  "tags": [
+    "production",
+    "labels"
+  ]
+}

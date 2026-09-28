@@ -14,7 +14,6 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = join(ROOT, 'data');
 const STRICT = process.argv.includes('--strict');
 
-const LINEAGES = ['rock', 'electronic', 'hiphop', 'dub', 'funk', 'other'];
 const EDGE_TYPES = [
   'direct',
   'production',
@@ -38,6 +37,7 @@ const MACHINE_KINDS = [
 
 // Shard directory name -> expected `type` field value.
 const SHARD_TO_TYPE = {
+  lineages: 'lineage',
   artists: 'artist',
   machines: 'machine',
   scenes: 'scene',
@@ -63,6 +63,7 @@ const REGISTER_FIELDS = {
 };
 
 const REQUIRED_FIELDS = {
+  lineages: ['id', 'name', 'color', 'order'],
   artists: [
     'id', 'name', 'sortName', 'type', 'lineage', 'activeFrom', 'activeTo',
     'originCity', 'originCountry', 'scenes', 'labels', 'keyProducers',
@@ -90,6 +91,14 @@ const REQUIRED_FIELDS = {
   threads: ['id', 'title', 'subtitle', 'intro', 'steps', 'outro'],
 };
 
+// The end-year field per node shard, for the endUnknown check (Q20).
+const END_FIELDS = {
+  artists: 'activeTo',
+  machines: 'discontinuedYear',
+  scenes: 'yearTo',
+  labels: 'closedYear',
+};
+
 const errors = [];
 const warnings = [];
 function fail(msg) { errors.push(msg); }
@@ -114,6 +123,24 @@ for (const shard of SHARD_TYPES) {
       fail(`${shard}/${id}.json: filename does not match id "${record.id}"`);
     }
     records[shard].set(id, record);
+  }
+}
+
+// The legal lineage values are whatever data/lineages/ holds, so adding a
+// lineage is one file there and nothing here.
+const LINEAGES = [...records.lineages.keys()];
+const lineageOrders = new Map();
+for (const [id, lineage] of records.lineages) {
+  const where = `lineages/${id}.json`;
+  if (typeof lineage.color !== 'string' || !/^#[0-9a-f]{6}$/i.test(lineage.color)) {
+    fail(`${where}: color must be a six-digit hex colour like "#5fa8ff"`);
+  }
+  if (!Number.isFinite(lineage.order)) {
+    fail(`${where}: order must be a number`);
+  } else if (lineageOrders.has(lineage.order)) {
+    fail(`${where}: order ${lineage.order} is already used by "${lineageOrders.get(lineage.order)}"`);
+  } else {
+    lineageOrders.set(lineage.order, id);
   }
 }
 
@@ -174,6 +201,20 @@ for (const shard of SHARD_TYPES) {
     if (shard === 'machines' && record.kind !== undefined && !MACHINE_KINDS.includes(record.kind)) {
       fail(`${where}: illegal machine kind "${record.kind}"`);
     }
+
+    // Q20: `endUnknown: true` separates "the end is unsourced" from a plain
+    // null end, which means "still going". It only makes sense beside a
+    // null end year.
+    if ('endUnknown' in record) {
+      const endField = END_FIELDS[shard];
+      if (!endField) {
+        fail(`${where}: endUnknown is only allowed on artists, machines, scenes and labels`);
+      } else if (record.endUnknown !== true) {
+        fail(`${where}: endUnknown must be true when present (omit it otherwise)`);
+      } else if (record[endField] !== null) {
+        fail(`${where}: endUnknown is set but ${endField} is ${record[endField]}, not null`);
+      }
+    }
   }
 }
 
@@ -206,6 +247,18 @@ for (const [id, artist] of records.artists) {
   const trackCount = (artist.signatureTracks || []).length;
   if (trackCount < 2 || trackCount > 3) {
     warn(`${where}: signatureTracks has ${trackCount} entries, expected 2 to 3`);
+  }
+}
+
+// label references: songsAboutLabel[].artist follows the same convention as
+// artist.keyProducers above (an id when the artist is on the map, a plain
+// name otherwise), so an unresolved value is a warning, not an error.
+for (const [id, label] of records.labels) {
+  const where = `labels/${id}.json`;
+  for (const song of label.songsAboutLabel || []) {
+    if (!records.artists.has(song.artist)) {
+      warn(`${where}: songsAboutLabel entry "${song.title}" artist "${song.artist}" does not resolve to an artist id (may be a plain name)`);
+    }
   }
 }
 
@@ -243,6 +296,16 @@ for (const [id, edge] of records.edges) {
     fail(`${where}: illegal confidence tier "${edge.confidence}"`);
   }
   checkDemoId(where, edge.demoId);
+  // trackPair side `search` (Q17, A78): absent means "artist title", a
+  // non-empty string replaces the query, false means no link. Anything else
+  // would quietly draw a wrong link, so it is a hard error.
+  for (const side of ['earlier', 'later']) {
+    const search = edge.trackPair?.[side]?.search;
+    if (search === undefined || search === false) continue;
+    if (typeof search !== 'string' || !search.trim()) {
+      fail(`${where}: trackPair.${side}.search must be a non-empty string or false, got ${JSON.stringify(search)}`);
+    }
+  }
   if (fromNode && toNode && typeof edge.crossLineage === 'boolean') {
     const expected = fromNode.lineage !== toNode.lineage;
     if (edge.crossLineage !== expected) {

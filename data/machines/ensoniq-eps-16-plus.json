@@ -1,0 +1,19 @@
+{
+  "id": "ensoniq-eps-16-plus",
+  "name": "Ensoniq EPS-16 Plus",
+  "type": "machine",
+  "kind": "sampler",
+  "lineage": "electronic",
+  "maker": "Ensoniq",
+  "releasedYear": 1990,
+  "discontinuedYear": 1992,
+  "originalPurpose": "A keyboard sampling workstation: sixteen-bit sampling, filters, effects and an eight-track sequencer, sold to musicians as a more affordable alternative to studio samplers.",
+  "whatActuallyHappened": "RZA traded in his SP-1200 for one and used it to build the long, melancholy loops of Wu-Tang Clan's first album, including 'C.R.E.A.M.'. He later sold it to the Wu-affiliated producer True Master, who made more Wu records on it. Ensoniq's cheaper samplers put the whole-phrase loop within reach of producers without a studio budget.",
+  "priceStory": "It launched at 1,795 pounds in the UK. No US launch price is sourced here. Ensoniq's selling point from the Mirage onward was a lower price than the big studio samplers, which is how its machines reached home producers.",
+  "hook": "The keyboard sampler RZA used to build Wu-Tang's first album, after he traded his SP-1200 for it.",
+  "blurb": {
+    "age7": "A keyboard that could record sounds and play them back. RZA used one to make the first Wu-Tang Clan album.",
+    "age13": "The EPS-16 Plus was a keyboard that could record short pieces of sound and loop them. It had more memory and a cleaner sound than the SP-1200. RZA of the Wu-Tang Clan swapped his SP-1200 for one and started making loops two and four bars long, whole musical phrases instead of single hits. The sad piano on 'C.R.E.A.M.' came out of this machine.",
+    "adult": "The EPS-16 Plus marks a shift from the SP-1200's short, gritty fragments to longer, cleaner phrase loops. RZA's account of trading one machine for the other is the clearest single example. The end year here is the arrival of its successor, the ASR-10, in 1992. That's a proxy for the end of production, not a documented date, as with the Simmons SDS-V (A111)."
+  }
+}

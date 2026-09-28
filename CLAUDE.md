@@ -41,6 +41,10 @@ When you catch yourself wanting to add a feature mid-milestone, write it in
   (Note: `file://` blocks `fetch`. Data loads via a tiny dev server script for
   development, and the release path is a single-command bundling of JSON into a
   JS module. Solve this in M1, not later.)
+- The one exception to "no build step" is `npm run build`, which writes the
+  offline release to `dist/` and flattens code and data into classic scripts
+  because `file://` blocks module loads too (A18, A84). It exists for the
+  release copy only. Source stays ES modules, and dev never runs it.
 - SVG for the graph. Canvas only if profiling proves SVG cannot hold 60fps at
   500+ visible nodes, and only after raising it.
 - All tuning values live in one exported `CONFIG` object in `config.js`. No
@@ -101,6 +105,24 @@ changed, that belongs in the adult register as fact, not as adjective.
    Those sentences are some of the best content in the project.
 5. Log every unasked decision in `ASSUMPTIONS.md`. Log every question for Matt
    in `QUESTIONS.md`.
+
+## Staying in sync
+
+Each session's container is cloned once, at the start. Nothing tells it when
+`main` moves underneath it, and more than one session has now spent its whole
+run building against a tree that had stopped existing hours earlier.
+
+- `.claude/hooks/session-start.sh` runs at session start and prints how far
+  behind `origin/main` the checkout is, what landed, and which other branches
+  are in flight. **Read it before planning anything.** If it says the checkout
+  is behind, merge `origin/main` first; what you were about to build may
+  already exist.
+- Before opening a PR, fetch again. A branch cut from a stale base produces a
+  merge conflict and a PR description that describes a world that has moved on.
+- When a session runs long, re-check. The hook only fires once.
+- Parallel sessions are fine. Silently parallel sessions are not: if the hook
+  lists another branch in flight, say so before starting work that could
+  collide with it.
 
 ## Working style
 

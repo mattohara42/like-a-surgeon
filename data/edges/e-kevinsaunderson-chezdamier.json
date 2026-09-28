@@ -1,0 +1,32 @@
+{
+  "id": "e-kevinsaunderson-chezdamier",
+  "from": "kevin-saunderson",
+  "to": "chez-damier",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1988,
+  "crossLineage": false,
+  "evidence": "Damier and Saunderson were both part of the Music Institute's circle from its 1988 opening (Saunderson among its regular DJs, Damier a co-owner), and Damier went on to work A&R for Saunderson's KMS. Widely described this way in retrospectives (Red Bull Music Academy, the Music Origins Project), though no single first-person account from either man specifies what Saunderson's mentorship directly changed in Damier's own productions, so this sits at consensus rather than documented.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Music Institute",
+      "title": "Club residencies, 1988-89",
+      "year": 1988,
+      "search": false
+    },
+    "later": {
+      "artist": "Chez Damier",
+      "title": "Can You Feel It",
+      "year": 1992,
+      "search": "Chez Damier Can You Feel It"
+    },
+    "whatToListenFor": "There is no early Damier record to compare against; the claim here is about proximity, not a specific production choice. 'Can You Feel It' arrived four years after the two men shared a DJ booth, made inside the label Saunderson ran."
+  },
+  "explanation": {
+    "age13": "Kevin Saunderson and Chez Damier knew each other from the same Detroit club, and Damier later worked for Saunderson's record label before making his own records.",
+    "adult": "The weaker, person-to-person half of the KMS story: Saunderson's own label edge to Damier documents an institutional relationship (A&R, then artist), while this edge tries to name the personal one underneath it and can only do so at consensus, since neither man has stated specifically what changed in Damier's music because of Saunderson."
+  },
+  "tags": [
+    "production"
+  ]
+}

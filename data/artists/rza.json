@@ -1,0 +1,32 @@
+{
+  "id": "rza",
+  "name": "RZA",
+  "sortName": "RZA",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1991,
+  "activeTo": null,
+  "originCity": "Staten Island, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "The Wu-Tang Clan's producer and strategist, who made the group's sound and the deal that spread it.",
+  "blurb": {
+    "age7": "The leader and beat-maker of the Wu-Tang Clan.",
+    "age13": "Robert Diggs was born in Brooklyn and grew up partly on Staten Island. His first solo record, as Prince Rakeem, came out on Tommy Boy in 1991 and did not sell. He then planned the Wu-Tang Clan with his cousins GZA and Ol' Dirty Bastard, and produced nearly all their early music. He traded his SP-1200 for an Ensoniq EPS-16 Plus and used it to make long, sad loops like the one on 'C.R.E.A.M.'. He later wrote music for films, including Jim Jarmusch's Ghost Dog.",
+    "adult": "RZA is both a producer node and the author of the Wu-Tang business model, and both roles come from the same idea: one central sound, spread through many outlets. His production style of dusty soul loops, detuned piano and film dialogue defined the group's first wave of solo albums. His early failure at Tommy Boy is part of the story he tells about why the group was structured the way it was."
+  },
+  "signatureTracks": [
+    {
+      "title": "C.R.E.A.M. (Wu-Tang Clan)",
+      "year": 1993,
+      "whyThisOne": "Made on the EPS-16 Plus, built on a Charmels soul record."
+    },
+    {
+      "title": "Liquid Swords (GZA)",
+      "year": 1995,
+      "whyThisOne": "His production for a Wu solo album, dark and cinematic."
+    }
+  ]
+}

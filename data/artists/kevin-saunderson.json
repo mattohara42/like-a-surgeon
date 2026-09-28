@@ -1,0 +1,40 @@
+{
+  "id": "kevin-saunderson",
+  "name": "Kevin Saunderson",
+  "sortName": "Saunderson, Kevin",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1985,
+  "activeTo": null,
+  "originCity": "Belleville, Michigan",
+  "originCountry": "USA",
+  "scenes": [
+    "detroit-techno"
+  ],
+  "labels": [
+    {
+      "labelId": "kms",
+      "from": 1987,
+      "to": null
+    }
+  ],
+  "keyProducers": [],
+  "hook": "The third Belleville Three member, whose Inner City records were the ones that actually charted.",
+  "blurb": {
+    "age7": "Kevin Saunderson made techno songs that regular radio stations played, with a group called Inner City.",
+    "age13": "The youngest of the Belleville Three, Saunderson founded KMS Records in 1987 after watching Atkins and May run their own labels. His group Inner City, with singer Paris Grey, turned techno's machine sound into a pop hit with \"Big Fun\" in 1988, reaching the UK top ten.",
+    "adult": "Saunderson is the Belleville Three member most associated with techno's crossover into commercial dance-pop. \"Big Fun,\" first pressed on his own KMS before being licensed to a Virgin subsidiary for the \"Techno! The New Dance Sound of Detroit\" compilation, is one of the tracks that carried the word \"techno\" itself into wider use as a genre name."
+  },
+  "signatureTracks": [
+    {
+      "title": "Big Fun (Inner City)",
+      "year": 1988,
+      "whyThisOne": "Techno's clearest pop crossover to that point: a full vocal hook over a 909 groove, first pressed on Saunderson's own KMS."
+    },
+    {
+      "title": "Good Life (Inner City)",
+      "year": 1988,
+      "whyThisOne": "Inner City's second hit the same year, confirming Big Fun wasn't a one-off."
+    }
+  ]
+}

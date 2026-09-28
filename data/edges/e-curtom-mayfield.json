@@ -1,0 +1,30 @@
+{
+  "id": "e-curtom-mayfield",
+  "from": "curtom",
+  "to": "curtis-mayfield",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1968,
+  "crossLineage": false,
+  "evidence": "Mayfield and manager Eddie Thomas founded Curtom in March 1968; its first release was the Impressions' album 'This Is My Country' that November, produced by Mayfield (Wikipedia's article on the label and album, corroborated by the Songwriters Hall of Fame profile).",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Impressions",
+      "title": "This Is My Country",
+      "year": 1968
+    },
+    "later": {
+      "artist": "Curtis Mayfield",
+      "title": "Freddie's Dead",
+      "year": 1972
+    },
+    "whatToListenFor": "'This Is My Country' is a group record, the Impressions' harmonies still carrying most of the weight. By 'Freddie's Dead', four years into owning his own label, Mayfield is billed alone, and the arrangement, strings, wah-wah guitar, his own falsetto lead, sounds like someone with nobody left to answer to about the record."
+  },
+  "explanation": {
+    "age13": "Curtis Mayfield started Curtom Records in 1968 so he could own his own recordings. Its first release was an Impressions album, and by 1972 it was putting out Mayfield's own solo work, including the 'Super Fly' soundtrack.",
+    "adult": "Founding Curtom is the causal event behind everything else in Mayfield's catalogue being his own property, part of this dataset's recurring pattern of artist-owned labels and one of the clearer cases of that ownership translating into a specific creative shift, from a vocal group's harmonies to a credited solo auteur's arrangements, within a few years."
+  },
+  "tags": [
+    "labels"
+  ]
+}

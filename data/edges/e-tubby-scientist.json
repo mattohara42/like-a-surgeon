@@ -1,0 +1,32 @@
+{
+  "id": "e-tubby-scientist",
+  "from": "king-tubby",
+  "to": "scientist",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1981,
+  "crossLineage": false,
+  "evidence": "Scientist (Hopeton 'Overton' Brown) began working around King Tubby's Waterhouse studio as a teenager in the mid-1970s, first repairing equipment, and became one of Tubby's lead mixing engineers by the early 1980s; Tubby is widely credited as the source of his nickname. Documented in Wikipedia's article on Scientist and multiple reggae biography sources (AllMusic, Enkis Music).",
+  "trackPair": {
+    "earlier": {
+      "artist": "King Tubby",
+      "title": "Home-built mixing desk, Waterhouse",
+      "year": 1968,
+      "search": false
+    },
+    "later": {
+      "artist": "Scientist",
+      "title": "Scientist Rids the World of the Evil Curse of the Vampires",
+      "year": 1981
+    },
+    "whatToListenFor": "Tubby's own dub instrumentals treat the desk as an instrument played live, dropping instruments in and out and pushing the spring reverb hard. A decade later, mixing at the same studio, Scientist applies the identical toolkit, echo, filtering, sudden drop-outs, to a new decade's rhythms, with a themed album concept built on top."
+  },
+  "explanation": {
+    "age13": "Scientist started out fixing King Tubby's equipment as a teenager and became one of his chief mixing engineers. His own dub albums in the early 1980s used the techniques he learned at Tubby's desk.",
+    "adult": "A direct production and mentorship lineage inside a single studio: Scientist's early-1980s work is Tubby's toolkit carried forward by an engineer Tubby trained, applied to a new generation of Kingston bands after Tubby's own studio work had slowed."
+  },
+  "tags": [
+    "production",
+    "technology"
+  ]
+}

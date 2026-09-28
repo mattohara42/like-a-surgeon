@@ -1,0 +1,30 @@
+{
+  "id": "e-kraftwerk-joydivision",
+  "from": "kraftwerk",
+  "to": "joy-division",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1979,
+  "crossLineage": true,
+  "evidence": "Wikipedia's Joy Division article reports that the band played Kraftwerk's 'Trans-Europe Express' over the PA before going on stage to build momentum, and that they admired Kraftwerk's marriage of humans and machines. Both points come from band members' later accounts rather than contemporary sources, and the effect on Joy Division's own records is a critical reading, so the tier is consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Kraftwerk",
+      "title": "Trans-Europe Express",
+      "year": 1977
+    },
+    "later": {
+      "artist": "Joy Division",
+      "title": "Isolation",
+      "year": 1980
+    },
+    "whatToListenFor": "'Trans-Europe Express' rolls on a steady, metallic, machine-made pulse that never varies. 'Isolation', from 'Closer', is Joy Division at their most mechanical: the drums are fast and even, a synthesiser line runs through it, and the guitar is pushed back. Listen for how little the rhythm moves. That is the part of Kraftwerk a rock band could borrow without owning a sequencer."
+  },
+  "explanation": {
+    "age13": "Joy Division played Kraftwerk's 'Trans-Europe Express' over the speakers before they went on stage. Band members have said they loved how Kraftwerk mixed people and machines. On a song like 'Isolation' their drums and synthesiser sound almost like a machine too.",
+    "adult": "The PA ritual is the vivid detail, but the substance is the band's admiration for Kraftwerk's man-machine idea, which Joy Division could only approximate with a drummer. After Curtis's death the surviving members became New Order and used sequencers directly. That later step is outside this edge, which is tiered consensus because the evidence is retrospective."
+  },
+  "tags": [
+    "technology"
+  ]
+}

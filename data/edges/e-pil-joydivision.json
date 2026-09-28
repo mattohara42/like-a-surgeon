@@ -1,0 +1,31 @@
+{
+  "id": "e-pil-joydivision",
+  "from": "public-image-ltd",
+  "to": "joy-division",
+  "type": "scene",
+  "confidence": "consensus",
+  "evidence": "PiL and Joy Division are both foundational to the 1978-80 UK post-punk moment, both moving past punk's simple format toward bass-forward, atmospheric arrangements, though Joy Division's formation (after a 1976 Sex Pistols gig) and production (Martin Hannett) are independently documented without a specific citation of direct PiL influence.",
+  "year": 1979,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Public Image Ltd",
+      "title": "Public Image",
+      "year": 1978
+    },
+    "later": {
+      "artist": "Joy Division",
+      "title": "Transmission",
+      "year": 1979
+    },
+    "whatToListenFor": "Both push the bass into the lead role a guitar or vocal would normally hold, leaving space around it rather than filling every bar, even though the two basslines sound nothing alike."
+  },
+  "explanation": {
+    "age7": "PiL and Joy Division were both part of the same period right after punk, when bands started giving the bass guitar the biggest role in the song.",
+    "age13": "The two bands are part of the same post-punk moment, both built around a dominant bass sound, though not from any documented direct contact between them.",
+    "adult": "Scene-level claim: shared moment and shared bass-forward structural choice, not a documented act of direct influence."
+  },
+  "tags": [
+    "production"
+  ]
+}

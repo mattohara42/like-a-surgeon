@@ -3,15 +3,15 @@
   "name": "Pye Records",
   "type": "label",
   "lineage": "rock",
-  "foundedYear": null,
-  "closedYear": null,
+  "foundedYear": 1953,
+  "closedYear": 1980,
   "city": "London",
   "founders": "Pye Ltd (electronics manufacturer)",
-  "ownershipStory": "A UK label run as an arm of the Pye electronics company, and the label the Kinks signed to in 1964. Pye's contract terms and royalty accounting became a lasting grievance for Ray Davies, part of why the band spent much of the mid-1960s in business disputes even as their singles charted. Exact founding and closing dates for the label are not confirmed here and are left null rather than guessed.",
-  "hook": "Signed the Kinks and then spent years disputing what it owed them.",
+  "ownershipStory": "Founded in 1953 when the Pye electronics company, better known for making radios and televisions, bought the independent label Nixa and turned it into Pye Nixa. It signed the Kinks in the mid-1960s on a standard-for-the-era contract that gave the band little long-term control over their masters. In 1980 the rights to the Pye name ran out and the label carried on as PRT (Precision Records and Tapes), which is why the map ends Pye there. The Pye name was bought and relaunched as a small label in 2024.",
+  "hook": "A television and radio manufacturer that happened to also make some of the biggest British Invasion records.",
   "blurb": {
-    "age7": "This company put out the Kinks' records, but argued with them a lot about money.",
-    "age13": "Pye Records signed the Kinks in 1964. The band had hit after hit, but arguments with Pye over money and rights took up a lot of their time and energy in those years.",
-    "adult": "Pye's relationship with the Kinks is a period-typical case of a British Invasion-era label extracting long-term value from a band whose control over royalties and publishing lagged well behind their commercial success."
+    "age7": "Pye Records was started by a company that made TVs and radios, and it released some of the biggest British bands of the 1960s.",
+    "age13": "Pye began in 1953 as the record label of an electronics manufacturer, and by the mid-1960s it was releasing hits by bands like the Kinks, usually on contracts that gave the band little control over their own recordings.",
+    "adult": "Pye's corporate origin (an electronics manufacturer diversifying into records) is a reminder that Britain's 1960s guitar-band boom was still built on the same standard, artist-unfriendly major-label contract structure as the rest of the era's pop industry."
   }
 }

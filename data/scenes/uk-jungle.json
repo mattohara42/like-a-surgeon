@@ -1,0 +1,32 @@
+{
+  "id": "uk-jungle",
+  "name": "UK Jungle and Drum and Bass",
+  "type": "scene",
+  "lineage": "electronic",
+  "yearFrom": 1991,
+  "yearTo": 1997,
+  "city": "London",
+  "country": "UK",
+  "hook": "Pirate radio and Black British sound-system culture chopped breakbeat rave into something faster, darker, and entirely new.",
+  "blurb": {
+    "age7": "In London, DJs on illegal radio stations played a new, very fast kind of music made from chopped-up drum breaks and reggae bass.",
+    "age13": "Jungle grew out of London's early-1990s rave scene, sped up and reshaped by producers who blended breakbeat hardcore with reggae and ragga basslines and vocal styles. It spread mainly through pirate radio stations like Kool FM, which championed records like Shy FX's 'Original Nuttah', and through club nights like Goldie's Metalheadz residency, before the Criminal Justice and Public Order Act 1994 pushed outdoor raves toward licensed clubs and made pirate radio even more central to the scene.",
+    "adult": "Jungle's infrastructure was largely illegal and largely Black British: pirate stations broadcasting from tower blocks, dubplates pressed for a single DJ's set before wider release, and a sound built from Jamaican sound-system bass culture as much as from rave's breakbeat hardcore. The Criminal Justice and Public Order Act 1994, which criminalized outdoor gatherings playing music 'characterised by the emission of a succession of repetitive beats,' hit outdoor raves directly but left pirate radio and club nights as the scene's main channels, if anything strengthening their importance."
+  },
+  "geopolitics": "The Criminal Justice and Public Order Act 1994 (royal assent 3 November 1994) targeted outdoor raves by name, forcing much of UK dance culture into licensed venues; jungle's roots in Black British and Caribbean diaspora communities also meant it drew on sound-system culture's own long history of operating outside licensed, mainstream infrastructure.",
+  "whatWasNew": "Breakbeat hardcore's fast tempo combined with reggae and ragga basslines, vocal chatting, and the Amen break chopped and timestretched into rhythms no drummer could play, a specifically British hybrid with no direct American or Jamaican equivalent.",
+  "production": "Pirate radio stations, especially Kool FM (broadcasting from 1991), functioned as the scene's real distribution network ahead of legal radio or the music press. Small independent labels pressed dubplates for club and radio play before any wider release.",
+  "labels": "No major label defined the scene; it ran through independents including Goldie's Metalheadz (founded 1994) and Shy FX's SOUR.",
+  "politics": "Rarely programmatic, but its illegal broadcast infrastructure and roots in Black British diaspora communities made the scene's very existence a quiet act of operating outside licensed, state-sanctioned channels, sharpened by the 1994 Act's direct targeting of the culture's outdoor gatherings.",
+  "memberIds": [
+    "goldie",
+    "shy-fx"
+  ],
+  "palette": {
+    "ink": "#0a0a12",
+    "paper": "#e0dbc8",
+    "accent": "#2e8b57",
+    "accent2": "#b8860b"
+  },
+  "motif": "turntable-circles"
+}

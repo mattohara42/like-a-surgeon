@@ -1,0 +1,32 @@
+{
+  "id": "e-stax-isaachayes",
+  "from": "stax",
+  "to": "isaac-hayes",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1969,
+  "crossLineage": false,
+  "evidence": "After Stax lost its entire back catalogue to Atlantic Records in May 1968, executive Al Bell ordered a rapid slate of new recordings across the roster. Isaac Hayes, whose conventional 1968 debut 'Presenting Isaac Hayes' had sold poorly, agreed to record again only on condition of full creative control, which Bell granted; the result, 'Hot Buttered Soul' (1969), stretched songs into long, orchestral, spoken-word pieces unlike anything else on the label, as documented in standard soul-music histories.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Isaac Hayes",
+      "title": "Precious, Precious (Presenting Isaac Hayes)",
+      "year": 1968
+    },
+    "later": {
+      "artist": "Isaac Hayes",
+      "title": "Walk On By (Hot Buttered Soul)",
+      "year": 1969
+    },
+    "whatToListenFor": "The 1968 debut is a competent, conventional soul session, short songs, tight arrangements, nothing that announces a distinct voice. A year later, the same singer stretches a Burt Bacharach song past eleven minutes, opening with strings and a wah-wah guitar solo before the vocal even arrives. The difference is what a label desperate enough to hand over full control actually sounds like."
+  },
+  "explanation": {
+    "age7": "Isaac Hayes's record company lost all its old music by accident, so it told him to make a new album, and let him do it exactly his own way this time.",
+    "age13": "Stax Records lost its entire catalogue in 1968 in a dispute with Atlantic Records, and rushed its artists to record new material. Isaac Hayes, whose first album hadn't sold well, agreed only if he got total creative control. He used it to make 'Hot Buttered Soul' (1969), stretching songs far longer and stranger than anything expected from a soul singer at the time.",
+    "adult": "A label edge under the A69 convention where the decision is desperation rather than strategy: Stax's catalogue crisis is what forced Bell to grant Hayes control he likely wouldn't have gotten otherwise, and the record that resulted reshaped what a solo soul album could sound like."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

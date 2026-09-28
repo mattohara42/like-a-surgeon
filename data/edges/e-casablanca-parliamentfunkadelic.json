@@ -1,0 +1,31 @@
+{
+  "id": "e-casablanca-parliamentfunkadelic",
+  "from": "casablanca",
+  "to": "parliament-funkadelic",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1976,
+  "crossLineage": false,
+  "evidence": "Casablanca signed Parliament in 1974, releasing 'Up for the Down Stroke' as the label's first Parliament album that July. Following 1975's 'Mothership Connection', Casablanca founder Neil Bogart agreed to fund a roughly $1 million stage prop, a spaceship called the Mothership that 'landed' onstage, for Parliament's 1976 tour, as George Clinton himself has described in interviews and as reported by Rolling Stone and other outlets covering the label's history.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Parliament",
+      "title": "Up for the Down Stroke",
+      "year": 1974
+    },
+    "later": {
+      "artist": "Parliament",
+      "title": "Mothership Connection (Star Child)",
+      "year": 1975
+    },
+    "whatToListenFor": "'Up for the Down Stroke' is the sound of a band finding its commercial footing on a new label. A year later, with Casablanca's money behind the show as well as the record, 'Mothership Connection' sells an entire cosmology, alien mythology, a spaceship, a whole stage production, that the earlier single doesn't yet attempt."
+  },
+  "explanation": {
+    "age13": "Casablanca Records signed Parliament in 1974, and after 'Mothership Connection' became a hit, the label's founder paid for a giant fake spaceship, the Mothership, to land onstage during the band's tours.",
+    "adult": "A label decision that shaped the music itself, not just its marketing: Casablanca's willingness to fund an outlandish stage show gave Clinton's mythology a physical prop and a budget it would not have had on a more conservative label, and the mythology became the substance of the following albums."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "daedelus",
+  "name": "Daedelus",
+  "sortName": "Daedelus",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 2002,
+  "activeTo": null,
+  "originCity": "Los Angeles, California",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A Los Angeles electronic musician whose chord-organ tune became the loop of Madvillain's 'Accordion'.",
+  "blurb": {
+    "age7": "A musician from Los Angeles. A tune he played on an old organ became a famous MF DOOM song.",
+    "age13": "Alfred Darlington, who records as Daedelus, came up with a melody in a piano class at the University of Southern California in the late 1990s. In 2002 he recorded it on a Magnus electric chord organ, a cheap home instrument, for a track called 'Experience' on his first album, Invention. Madlib sampled it for Madvillain's 'Accordion' in 2004. That's why the famous 'accordion' sound isn't an accordion.",
+    "adult": "Daedelus is a sample hub (Q21) from inside the same Los Angeles beat scene Madlib worked in, which makes this a sample between contemporaries rather than a rediscovery of an old record. The instrument detail is kept because it corrects a widely repeated assumption carried in the song's own title."
+  },
+  "signatureTracks": [
+    {
+      "title": "Experience",
+      "year": 2002,
+      "whyThisOne": "From Invention. The chord-organ melody in 'Accordion'."
+    }
+  ]
+}

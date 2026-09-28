@@ -1,0 +1,32 @@
+{
+  "id": "e-elektra-mfdoom",
+  "from": "elektra",
+  "to": "mf-doom",
+  "type": "label",
+  "confidence": "consensus",
+  "year": 1994,
+  "crossLineage": true,
+  "evidence": "Elektra released KMD's debut 'Mr. Hood' (1991) and scheduled their second album, 'Black Bastards', for May 1994, assigning it a catalogue number and sending out promotional copies and a single. It then cancelled the release and dropped the group, reportedly over the cover art, which showed a Sambo caricature being hanged. DJ Subroc, Zev Love X's brother and fellow KMD member, had been killed by a car shortly before the album was finished. The album stayed unreleased until 2000. The cancellation is documented. The link from it to the masked MF DOOM persona that Daniel Dumile introduced in the late 1990s rests on his own interviews, where he described the character as a villain taking revenge on the industry that had damaged him, and on critics who read the persona that way. That is why the edge sits at consensus rather than documented.",
+  "trackPair": {
+    "earlier": {
+      "artist": "KMD",
+      "title": "Peachfuzz",
+      "year": 1990
+    },
+    "later": {
+      "artist": "MF DOOM",
+      "title": "Doomsday",
+      "year": 1999
+    },
+    "whatToListenFor": "On 'Peachfuzz' Dumile is Zev Love X: young, bright-voiced and trading lines inside a group, on their first single for a major label. Nine years later the same man is alone on the record, producing it himself, his voice lower, flatter and unhurried over a looped slice of Sade. Between the two sit a shelved album, a dead brother and several years out of music. The voice is the easiest place to hear the distance."
+  },
+  "explanation": {
+    "age7": "Daniel Dumile's record company refused to put out his group's album, just after his brother died. He disappeared for years, then came back wearing a metal mask as MF DOOM.",
+    "age13": "Daniel Dumile rapped as Zev Love X in KMD with his brother Subroc, on the label Elektra. In 1993 Subroc was hit by a car and killed. In 1994 Elektra cancelled the group's second album, reportedly because of its cover, which showed a racist cartoon character being hanged, and dropped the group. Dumile vanished from music. When he came back in the late 1990s he wore a metal mask and called himself MF DOOM, a villain, which he said was about getting back at the music business.",
+    "adult": "A label edge where the decision was a refusal. The cover of 'Black Bastards' used a racist caricature to attack the caricature, and Elektra, reportedly under outside pressure, chose not to release it at all. The persona Dumile built on his return (anonymous, masked, a villain with a grudge against the industry) is widely read as a direct answer to that year, and he encouraged the reading. The event is documented. The causal reading comes from the artist and his critics."
+  },
+  "tags": [
+    "labels",
+    "politics"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "e-tangerinedream-bowie",
+  "from": "tangerine-dream",
+  "to": "david-bowie",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1977,
+  "crossLineage": true,
+  "evidence": "Wikipedia's Berlin Trilogy article lists Tangerine Dream with Kraftwerk and Neu! among the German acts that shaped the trilogy's sound. Unlike the Kraftwerk and Neu! links, already on this map as documented, I found no specific Bowie statement about Tangerine Dream to cite, so this is tiered consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Tangerine Dream",
+      "title": "Phaedra",
+      "year": 1974,
+      "search": "Tangerine Dream Phaedra"
+    },
+    "later": {
+      "artist": "David Bowie",
+      "title": "Warszawa",
+      "year": 1977,
+      "search": "David Bowie Warszawa"
+    },
+    "whatToListenFor": "'Phaedra' is a side-long piece built on a synthesiser sequencer: a burbling pattern that repeats while slow washes of sound change around it. 'Warszawa', on side two of 'Low', has no sequencer and no drums at all, just slow synth chords, a melody that moves like a hymn and singing in an invented language. What they share is the decision to make a whole piece out of slowly changing electronic texture with no song structure. What is missing from Bowie's version is the pulse, which tells you he took the mood more than the machinery."
+  },
+  "explanation": {
+    "age13": "Tangerine Dream were the best-known electronic band from West Berlin when Bowie moved there. Writers often list them as one of the German bands that shaped his Berlin albums, alongside Kraftwerk and Neu!. You can hear it in the slow synth pieces on the second side of 'Low'.",
+    "adult": "This is the weakest of Bowie's three German links on the map, and the tier says so. Kraftwerk and Neu! rest on things Bowie said. Tangerine Dream rests on the critical consensus that the Berlin records drew on the Berlin School, which fits what the instrumental side of 'Low' sounds like but has no single statement behind it that I could find."
+  },
+  "tags": []
+}

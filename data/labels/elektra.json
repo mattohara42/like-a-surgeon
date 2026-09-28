@@ -1,0 +1,19 @@
+{
+  "id": "elektra",
+  "name": "Elektra Records",
+  "type": "label",
+  "lineage": "rock",
+  "foundedYear": 1950,
+  "closedYear": null,
+  "city": "New York",
+  "founders": [
+    "Jac Holzman",
+    "Paul Rickolt"
+  ],
+  "ownershipStory": "Jac Holzman and Paul Rickolt started Elektra in 1950 in Holzman's college dorm room, with $300 each. Through the 1950s and early 1960s it was a folk label (Judy Collins, Phil Ochs, Tom Paxton, and Josh White while he was blacklisted), then in the mid-1960s it signed the Doors, Love, the Stooges and MC5. Holzman sold it to Kinney, the company that became Warner, in 1970. Under Bob Krasnow in the 1980s and 1990s it ranged from Metallica to the Cure to Brand Nubian and KMD. Warner merged it into Atlantic in 2004. It lay dormant until 2009, was revived as an Atlantic imprint, and has been reorganised several times since. It is still a Warner label.",
+  "hook": "A folk label that became the home of the Doors and the Stooges, and decades later refused to release a rap album because of its cover.",
+  "blurb": {
+    "age13": "Elektra started in 1950 as a small folk label, then in the 1960s signed rock bands like the Doors and the Stooges, and later became part of Warner. In the early 1990s it signed the Long Island rap group KMD. In 1994 it cancelled KMD's second album, reportedly because the cover showed a racist cartoon character being hanged, and dropped the group. One of KMD's members, Daniel Dumile, came back years later as MF DOOM.",
+    "adult": "Elektra's long history as a label that took chances, from blacklisted folk singers to the Stooges, is the background to the decision that puts it on this map, which was a retreat. It cancelled KMD's 'Black Bastards' in 1994 after promotional copies had gone out. Contemporary reports tied the decision to the cover, a caricature the group meant as an attack on the caricature itself. The Stooges and MC5 are not yet on the map, and when they arrive Elektra is where their edges will run from."
+  }
+}

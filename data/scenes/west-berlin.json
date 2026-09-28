@@ -1,0 +1,31 @@
+{
+  "id": "west-berlin",
+  "name": "West Berlin",
+  "type": "scene",
+  "lineage": "electronic",
+  "yearFrom": 1968,
+  "yearTo": 1989,
+  "city": "West Berlin",
+  "country": "West Germany",
+  "hook": "A walled-in half city, subsidised to keep people living there, became a refuge for German experimental musicians and then for a British rock star trying to quit cocaine.",
+  "blurb": {
+    "age13": "After the Second World War, Berlin was split in two, and from 1961 a wall ran around the western half, cutting it off inside East Germany. West Germany paid people to keep living there, rents were cheap, and young men who lived there did not have to do military service, so the city filled with students and artists. In 1968 the Zodiak Free Arts Lab opened in Kreuzberg, and bands played long experimental sets there. Tangerine Dream, started by Edgar Froese in 1967, played there often, and went on to build their music out of electronic sequencers. In 1976 David Bowie moved to West Berlin with Iggy Pop to get away from his cocaine addiction in Los Angeles. He recorded '\"Heroes\"' in 1977 at Hansa Studios, about 150 metres from the Wall. The Wall came down in 1989.",
+    "adult": "West Berlin was an enclave: surrounded by the Wall from 1961, legally anomalous, and heavily subsidised by Bonn to stop it emptying out. Its residents were exempt from West German conscription, so it drew young men avoiding the draft along with students and artists, and cheap space was easy to find. The Zodiak Free Arts Lab, opened in Kreuzberg in spring 1968 by Conrad Schnitzler, Hans-Joachim Roedelius and Boris Schaak, lasted only until early 1969 but hosted Tangerine Dream, Klaus Schulze and Ash Ra Tempel in their formative months. From that circle came the Berlin School of long, sequencer-driven electronic pieces, Tangerine Dream's 'Phaedra' (1974) its best-known record. In 1976 David Bowie moved to West Berlin with Iggy Pop to get out of Los Angeles and its cocaine. 'Low' was begun at the Château d'Hérouville in France and finished at Hansa Studios, and '\"Heroes\"' was made entirely at Hansa, about 150 metres from the Wall. The scene's end date is the Wall's fall in 1989."
+  },
+  "geopolitics": "West Berlin sat about 160 kilometres inside East Germany from 1949, and was walled in from August 1961. The Federal Republic subsidised its economy and residents to keep it populated, and West Berlin residents were exempt from the Bundeswehr draft, so the city drew young men avoiding military service. Cheap rents in half-empty districts like Kreuzberg, next to the Wall, made space for clubs, squats and studios.",
+  "whatWasNew": "Long electronic pieces built on repeating sequencer patterns rather than on riffs or songs, and, from Bowie's side, a major rock star putting whole album sides of wordless synthesiser music on a record label's main release.",
+  "production": "The Zodiak's divided black and white rooms in Kreuzberg in 1968 to 1969, Moog modular synthesisers and sequencers for Tangerine Dream, and Hansa Tonstudio at Köthener Strasse 38, whose Meistersaal hall and Wall-side location became part of the legend of 'Heroes'.",
+  "labels": "Ohr, run by Rolf-Ulrich Kaiser, released Tangerine Dream's first albums. Virgin, then a young British label, signed Tangerine Dream for 'Phaedra'. Bowie's Berlin records came out on RCA.",
+  "politics": "The Zodiak scene came out of the 1968 student movement and its break with the parents' generation that had lived through Nazism. For Bowie, Berlin was a retreat as much as a statement. The division of the city runs through '\"Heroes\"', a song about lovers meeting by the Wall.",
+  "memberIds": [
+    "tangerine-dream",
+    "david-bowie"
+  ],
+  "palette": {
+    "ink": "#1b1b22",
+    "paper": "#e6e3dd",
+    "accent": "#8f9aa6",
+    "accent2": "#c23b2a"
+  },
+  "motif": "sequencer-grid"
+}

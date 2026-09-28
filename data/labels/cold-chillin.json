@@ -1,0 +1,20 @@
+{
+  "id": "cold-chillin",
+  "name": "Cold Chillin' Records",
+  "type": "label",
+  "lineage": "hiphop",
+  "foundedYear": 1986,
+  "closedYear": 1998,
+  "city": "New York",
+  "founders": [
+    "Tyrone Williams",
+    "Len Fichtelberg"
+  ],
+  "ownershipStory": "Started in 1986 by Tyrone Williams, who managed the Juice Crew, and Len Fichtelberg, whose Prism Records it absorbed. It was the Juice Crew's label, with Marley Marl as its in-house producer, and released Biz Markie, Big Daddy Kane, Roxanne Shanté and MC Shan. A five-year distribution deal with Warner Bros. ran from 1988 to 1993. In December 1991 a federal court ruled against Warner over a sample on a Biz Markie album the label had released without permission, and the album was pulled from sale. The label was defunct by 1998.",
+  "hook": "The Juice Crew's label, and the one that lost the court case that made every hip-hop sample something you have to pay for.",
+  "blurb": {
+    "age7": "A record company in New York for a group of rappers called the Juice Crew. It lost a famous court case about using pieces of other people's songs.",
+    "age13": "Cold Chillin' was the label for the Juice Crew, the group of rappers around producer Marley Marl in Queensbridge. In 1991 it put out a Biz Markie album with a song built on a piece of Gilbert O'Sullivan's 1972 hit. Biz had asked O'Sullivan for permission and been told no, and the label released it anyway. O'Sullivan sued and won. The album was pulled from the shops, and from then on anyone who wanted to sample a record had to ask first and usually pay.",
+    "adult": "Cold Chillin's place on the map is the decision that produced Grand Upright Music v. Warner Bros. Records (S.D.N.Y., 17 December 1991). Permission for the O'Sullivan sample had been sought and refused, and the record came out regardless. The ruling ended the period in which hip-hop producers could treat recorded music as freely available material. Clearing samples became a legal and budget line on every record, which made the dense collage of the late 1980s commercially impractical. The label's own collapse came later and is not attributed here to the case."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "e-rubin-rundmc",
+  "from": "rick-rubin",
+  "to": "run-dmc",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1986,
+  "crossLineage": true,
+  "evidence": "Raising Hell (1986) credits production to Russell Simmons and Rick Rubin, and Steven Tyler and Joe Perry of Aerosmith perform on 'Walk This Way'. The widely told account that the cover was Rubin's idea, that the group initially resisted it, and that Jam Master Jay had long cut up the original's drum break in his DJ sets is consistent across retellings but rests on later interviews, so it is not what this edge's tier rests on.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Aerosmith",
+      "title": "Walk This Way",
+      "year": 1975
+    },
+    "later": {
+      "artist": "Run-D.M.C.",
+      "title": "Walk This Way (with Aerosmith)",
+      "year": 1986,
+      "search": "Run DMC Aerosmith Walk This Way"
+    },
+    "whatToListenFor": "Start with the first seconds of each. Aerosmith's opens on a drummer's short, dry break, then the guitar riff. Run-D.M.C.'s opens on that same break, then Jam Master Jay cutting the guitar riff back and forth on a turntable, the way a DJ had been using the record at parties for years. Then the real guitar and Steven Tyler's voice arrive and sit next to the rapping. You are hearing a rock record the way hip-hop had always used it, as material, before its band walks in and joins."
+  },
+  "explanation": {
+    "age7": "A punk-loving producer got Run-D.M.C. and a rock band to make a song together. It became a huge hit.",
+    "age13": "Rick Rubin, who came from punk, produced Run-D.M.C.'s third album. On 'Walk This Way' he put them together with Aerosmith, the rock band who had first recorded the song in 1975. The record starts the way a hip-hop DJ would play the old one, cutting up the guitar riff, then the rock band joins in. It reached the top five in America and put rap on rock radio and MTV.",
+    "adult": "Filed as cross-lineage because Rubin is filed under rock (see his record), and this is the record where his rock sensibility and rap meet most literally. The production credit is documented. The origin story is consensus, and the adult reader should know that the group's own accounts describe reluctance, which makes this as much Rubin's intervention as their choice."
+  },
+  "tags": [
+    "production"
+  ]
+}

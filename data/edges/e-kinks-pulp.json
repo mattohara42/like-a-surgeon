@@ -1,0 +1,31 @@
+{
+  "id": "e-kinks-pulp",
+  "from": "the-kinks",
+  "to": "pulp",
+  "type": "direct",
+  "confidence": "consensus",
+  "evidence": "Music critics have repeatedly and specifically compared Jarvis Cocker's wit and observational persona to Ray Davies (one widely repeated framing casts Pulp as \"the Kinks\" to Blur and Oasis's Beatles and Stones), and Cocker has cited 1960s British Invasion acts among his formative listening, though without the same first-person specificity as the Albarn/Kinks edge.",
+  "year": 1995,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "The Kinks",
+      "title": "Waterloo Sunset",
+      "year": 1967
+    },
+    "later": {
+      "artist": "Pulp",
+      "title": "Common People",
+      "year": 1995
+    },
+    "whatToListenFor": "Same technique: pick one character in one specific situation (a student \"slumming it,\" two people on a bridge) and let the details, not a chorus making a general statement, carry the song."
+  },
+  "explanation": {
+    "age7": "People who write about music often compare Jarvis Cocker's songwriting to Ray Davies from the Kinks.",
+    "age13": "Critics regularly place Pulp in the same observational-songwriting tradition as the Kinks, though Cocker has been less specific in interviews about it than Albarn.",
+    "adult": "Consensus tier: a widely repeated critical framing rather than a first-person citation as direct as the Albarn/Kinks edge."
+  },
+  "tags": [
+    "production"
+  ]
+}

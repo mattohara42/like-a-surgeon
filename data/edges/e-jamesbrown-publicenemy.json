@@ -1,0 +1,32 @@
+{
+  "id": "e-jamesbrown-publicenemy",
+  "from": "james-brown",
+  "to": "public-enemy",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1989,
+  "crossLineage": true,
+  "evidence": "'Fight the Power' (1989), produced by the Bomb Squad, samples 'Funky Drummer' among more than a dozen sources, including Syl Johnson, the Isley Brothers, Sly and the Family Stone and the J.B.'s, as recorded in the song's sample credits.",
+  "trackPair": {
+    "earlier": {
+      "artist": "James Brown",
+      "title": "Funky Drummer",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Public Enemy",
+      "title": "Fight the Power",
+      "year": 1989
+    },
+    "whatToListenFor": "LL Cool J's producer used the break as a clean bed. The Bomb Squad buries it. Listen for Stubblefield's rolling hi-hat and snare somewhere underneath, then for everything piled on top: shouts, horn stabs, scratches and fragments from a dozen other records, all at once, rubbing against each other. It's a wall of sound built from other people's recordings, two years before a court ruling made that kind of record almost impossible to afford."
+  },
+  "explanation": {
+    "age7": "Public Enemy's most famous song mixes James Brown's drum beat with lots of other bits of records.",
+    "age13": "'Fight the Power' was made for Spike Lee's film Do the Right Thing. Its beat is built from more than a dozen pieces of other records stacked on top of each other, including the 'Funky Drummer' break. Public Enemy wanted it to sound loud, crowded and urgent, to match what the song was saying.",
+    "adult": "The same break as e-jamesbrown-llcoolj, used in the opposite way: a hidden layer in a collage rather than the foundation of the track. After Grand Upright (1991), clearing a dozen samples per song made this approach commercially unworkable."
+  },
+  "tags": [
+    "production",
+    "politics"
+  ]
+}

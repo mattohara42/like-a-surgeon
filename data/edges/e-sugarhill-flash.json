@@ -1,0 +1,30 @@
+{
+  "id": "e-sugarhill-flash",
+  "from": "sugar-hill",
+  "to": "grandmaster-flash",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1982,
+  "crossLineage": false,
+  "evidence": "'The Message' (Sugar Hill Records, released 1 July 1982), credited to Grandmaster Flash and the Furious Five, was written by Duke Bootee and Melle Mel and recorded at Sweet Mountain studio in Englewood, New Jersey, with label owner Sylvia Robinson as co-producer and co-writer. Duke Bootee handled most of the production and Grandmaster Flash's involvement was limited. It reached number 62 on the Hot 100 but number 8 in the UK, and in 2002 became the first hip-hop recording added to the Library of Congress National Recording Registry (Wikipedia's article on the song).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Grandmaster Flash and the Furious Five",
+      "title": "Freedom",
+      "year": 1980
+    },
+    "later": {
+      "artist": "Grandmaster Flash and the Furious Five",
+      "title": "The Message",
+      "year": 1982
+    },
+    "whatToListenFor": "'Freedom' is a party record: fast, boastful, built to move a crowd. 'The Message' slows down and turns grim, describing rats, rent and a life closing in, over a bare, tense drum machine loop. Melle Mel has said the group didn't want to make it at first. Listen for how little space there is for boasting once the words are about the actual conditions the rappers lived in."
+  },
+  "explanation": {
+    "age13": "Sugar Hill Records pushed Grandmaster Flash and the Furious Five to record 'The Message' in 1982, even though the group wanted to keep making party records. Sylvia Robinson, who ran the label, co-wrote and co-produced it. It became one of the most important rap records ever made.",
+    "adult": "The credit hides who actually made the record: Duke Bootee wrote and produced most of it, Melle Mel supplied the best verse, and Grandmaster Flash himself did little on the track that bears his group's name. The label edge is here because Sylvia Robinson is the reason the song exists at all. That authorship dispute is already carried at Duke Bootee's own entry."
+  },
+  "tags": [
+    "labels"
+  ]
+}

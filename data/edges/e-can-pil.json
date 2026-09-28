@@ -1,0 +1,29 @@
+{
+  "id": "e-can-pil",
+  "from": "can",
+  "to": "public-image-ltd",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1979,
+  "crossLineage": false,
+  "evidence": "John Lydon played Can on his guest programme on Capital Radio on 16 July 1977, alongside dub and other records, and has named them as a favourite in interviews. Accounts of Metal Box routinely give Can, with dub, as a model for the band's long, bass-led pieces. Jah Wobble has also cited Czukay and Liebezeit.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Can",
+      "title": "Halleluhwah",
+      "year": 1971
+    },
+    "later": {
+      "artist": "Public Image Ltd",
+      "title": "Albatross",
+      "year": 1979
+    },
+    "whatToListenFor": "Both run over ten minutes on one groove that barely changes. In 'Halleluhwah' Liebezeit's drum pattern loops for most of eighteen minutes, and the bass sits under it, patient, while guitar and voice come and go. In 'Albatross', which opens Metal Box, Wobble's bass repeats one dark figure the whole way through and Levene's guitar scrapes over it. Listen for the rhythm section refusing to go anywhere, and for how that makes everything on top sound unsettled."
+  },
+  "explanation": {
+    "age7": "The singer of PiL loved Can, and PiL's songs are long and repeat, just like Can's.",
+    "age13": "John Lydon played Can records on the radio in 1977, while he was still in the Sex Pistols. When he formed Public Image Ltd, the band made long songs built on one bassline that repeats and repeats. That came partly from Can and partly from reggae and dub.",
+    "adult": "Consensus tier because the claim is about a band's sound, which several influences explain. Lydon's taste is documented. The debt of Metal Box to Can in particular is a critical consensus the musicians haven't disputed. The dub side is already on the map through PiL's existing edges."
+  },
+  "tags": []
+}

@@ -11,7 +11,8 @@
     "earlier": {
       "artist": "Roland",
       "title": "TB-303 as intended",
-      "year": 1981
+      "year": 1981,
+      "search": false
     },
     "later": {
       "artist": "Phuture",

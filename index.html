@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lineage</title>
+<!-- Inline so the offline build has no external request to make, and so a
+     console check isn't permanently noisy with a favicon 404. -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2304060d'/%3E%3Ccircle cx='9' cy='20' r='3.5' fill='%233ddfa4'/%3E%3Ccircle cx='23' cy='11' r='3.5' fill='%23ff6f55'/%3E%3Cpath d='M9 20 Q16 20 23 11' stroke='%235fa8ff' stroke-width='1.6' fill='none'/%3E%3C/svg%3E" />
+<style>
+  :root {
+    --void: #04060d;
+    --ink: #eaf0ff;
+    --dim: #7e8ca8;
+    --hairline: rgba(150, 180, 235, 0.12);
+    --ui: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    /* System serif only: no font files to license or fetch. */
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --body: #c3cfe6;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; height: 100%;
+    background: var(--void); color: var(--ink);
+    font-family: var(--ui); overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  #app { position: fixed; inset: 0; background: var(--void); }
+  .dust-layer { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+
+  .graph-svg { display: block; position: relative; cursor: grab; touch-action: none; }
+  .graph-svg.dragging { cursor: grabbing; }
+  .graph-svg:focus { outline: none; }
+
+  .node { cursor: pointer; }
+  .node-name, .node-hook { pointer-events: none; user-select: none; }
+  .edge { cursor: pointer; }
+  .band-label { pointer-events: none; user-select: none; letter-spacing: 0.18em; }
+  .axis-label { pointer-events: none; user-select: none; font-family: var(--mono); }
+  .cursor-layer { pointer-events: none; }
+  .scene-nebula { pointer-events: none; }
+
+  /* The year cursor has not reached this yet. Present, but clearly not
+     here yet -- which is the whole point of being able to drag it. */
+  .unborn { opacity: 0.085; }
+  .unborn .node-name, .unborn .node-hook { opacity: 0; }
+  .node, .node-labels, .edge { transition: opacity 240ms ease; }
+
+  /* Atmosphere. Fixed overlays that never pan, which is what sells the
+     idea that you are looking into a volume rather than across a plane. */
+  #veil, #grain { position: fixed; inset: 0; pointer-events: none; }
+  #veil {
+    background:
+      radial-gradient(125% 85% at 50% 38%, transparent 30%, rgba(3,5,12,0.5) 72%, rgba(3,5,12,0.94) 100%),
+      linear-gradient(180deg, rgba(95,168,255,0.05), transparent 34%);
+  }
+  #grain {
+    inset: -50%; opacity: 0.3; mix-blend-mode: overlay;
+    animation: grain-jitter 0.75s steps(1) infinite;
+  }
+  @keyframes grain-jitter {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(-1.4%, 1%); }
+    50%  { transform: translate(1%, -1.4%); }
+    75%  { transform: translate(-1%, -1%); }
+  }
+
+  /* ---- transport ---------------------------------------------------- */
+  #transport {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 6;
+    padding: 18px 30px 22px; display: flex; align-items: center; gap: 20px;
+    background: linear-gradient(180deg, transparent, rgba(4,6,13,0.85) 42%);
+  }
+  #transport-play {
+    flex: 0 0 auto; width: 46px; height: 46px; border-radius: 50%;
+    border: 1px solid rgba(150,180,235,0.3); background: rgba(150,180,235,0.07);
+    color: var(--ink); cursor: pointer; font-size: 14px; line-height: 1;
+    display: grid; place-items: center;
+    transition: background 200ms, border-color 200ms;
+  }
+  #transport-play:hover { background: rgba(150,180,235,0.18); border-color: rgba(150,180,235,0.6); }
+  #transport-scrub { flex: 1 1 auto; position: relative; height: 46px; cursor: ew-resize; }
+  #transport-scrub:focus-visible { outline: 1px solid rgba(150,180,235,0.6); outline-offset: 4px; border-radius: 4px; }
+  #transport-scrub .track {
+    position: absolute; left: 0; right: 0; top: 50%; height: 2px;
+    background: var(--hairline); transform: translateY(-50%);
+  }
+  #transport-scrub .elapsed {
+    position: absolute; left: 0; top: 50%; height: 2px; transform: translateY(-50%);
+    background: linear-gradient(90deg, rgba(95,168,255,0.25), rgba(234,240,255,0.85));
+  }
+  #transport-scrub .pip {
+    position: absolute; top: 50%; width: 3px; height: 3px; border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #transport-scrub .head {
+    position: absolute; top: 50%; width: 13px; height: 13px; border-radius: 50%;
+    background: var(--ink); transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px 3px rgba(190,215,255,0.65);
+  }
+  #transport-year {
+    flex: 0 0 auto; font-family: var(--mono); font-size: 25px;
+    letter-spacing: 0.06em; min-width: 82px; text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  #transport-arrivals {
+    flex: 0 0 220px; font-size: 12px; line-height: 1.4; color: var(--dim);
+    display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  #layers {
+    position: fixed; top: 40px; left: 18px; z-index: 6;
+    display: flex; gap: 7px; flex-wrap: wrap;
+  }
+  .layer-toggle {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--dim); cursor: pointer;
+    background: rgba(140,170,220,0.05); border: 1px solid var(--hairline);
+    border-radius: 999px; padding: 5px 12px;
+    transition: color 200ms, border-color 200ms, background 200ms;
+  }
+  .layer-toggle:hover { color: var(--ink); border-color: rgba(150,180,235,0.34); }
+  .layer-toggle[aria-pressed="true"] {
+    color: #05070f; background: var(--ink); border-color: var(--ink);
+  }
+  .layer-toggle:focus-visible { outline: 1px solid rgba(150,180,235,0.7); outline-offset: 3px; }
+
+  #registers, #arrange {
+    position: fixed; left: 18px; z-index: 6;
+    display: flex; gap: 7px; align-items: center;
+  }
+  #registers { top: 76px; }
+  #arrange { top: 110px; }
+
+  /* A scene or label lane title is a button (Arrange by, Q19). */
+  /* Names, not category headings, so ordinary letter-spacing: the wide
+     tracking suits a six-letter "ROCK" and stretches "Kingston Sound
+     Systems and Dub" across half the map. */
+  .band-label.band-link { pointer-events: auto; cursor: pointer; letter-spacing: 0.02em; }
+  .band-label.band-link:hover, .band-label.band-link:focus-visible {
+    text-decoration: underline; outline: none;
+  }
+  .register-caption {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--dim); margin-right: 3px;
+  }
+
+  /* What the reader is reading about stays marked on the map. */
+  .node.selected .node-ring { stroke: var(--ink); stroke-opacity: 0.95; }
+  .node-labels.selected .node-name { fill: #fff; }
+  .edge.selected .edge-line { stroke-opacity: 1; }
+
+  /* ---- the reading drawer (docs/m3-architecture.md, section 4) ------- */
+  #panel {
+    position: fixed; top: 0; right: 0; z-index: 10;
+    background: rgba(6, 10, 22, 0.88);
+    backdrop-filter: blur(22px) saturate(1.3); -webkit-backdrop-filter: blur(22px) saturate(1.3);
+    border-left: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline);
+    transform: translateX(102%); transition-property: transform;
+    transition-timing-function: cubic-bezier(.16, 1, .3, 1);
+    overflow-y: auto; overscroll-behavior: contain; padding: 30px 32px 40px;
+  }
+  #panel.open { transform: none; }
+  .panel-controls { display: flex; justify-content: space-between; align-items: center; min-height: 28px; margin-bottom: 10px; }
+  .panel-back, .panel-close {
+    background: none; border: 0; color: var(--dim); cursor: pointer; font-family: var(--ui);
+  }
+  .panel-back { font-size: var(--t-control); padding: 4px 0; }
+  .panel-close { font-size: 24px; line-height: 1; padding: 0 4px; margin-left: auto; }
+  .panel-back:hover, .panel-close:hover { color: var(--ink); }
+  .panel-back:focus-visible, .panel-close:focus-visible, .chip:focus-visible, .link-row:focus-visible {
+    outline: 1px solid rgba(150,180,235,0.7); outline-offset: 3px;
+  }
+
+  .panel-body .kicker {
+    font-family: var(--mono); font-size: var(--t-kicker); letter-spacing: 0.22em;
+    text-transform: uppercase; margin-bottom: 12px;
+  }
+  .panel-body h2 {
+    margin: 0 0 6px; font-family: var(--serif); font-weight: 400;
+    font-size: var(--t-title); line-height: 1.15;
+  }
+  .panel-body h2:focus { outline: none; }
+  .panel-body h2 .arrow { color: var(--dim); }
+  .panel-body .meta {
+    font-family: var(--mono); font-size: var(--t-meta); color: var(--dim); margin-bottom: 20px;
+    display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  }
+  .panel-body .hook {
+    font-family: var(--serif); font-size: var(--t-hook); line-height: var(--lh-hook); font-style: italic;
+    color: #d3def3; margin: 0 0 18px;
+  }
+  .panel-body p.body { font-size: var(--t-body); line-height: var(--lh-body); color: var(--body); margin: 0 0 14px; }
+  .panel-body p.note { font-size: var(--t-note); line-height: var(--lh-note); color: var(--dim); margin: 0 0 12px; }
+  .panel-body p.listen {
+    font-family: var(--serif); font-size: var(--t-listen); line-height: var(--lh-listen); color: var(--ink);
+    margin: 14px 0 6px; padding-left: 14px; border-left: 2px solid rgba(150,180,235,0.35);
+  }
+  .panel-body h3 {
+    font-family: var(--mono); font-size: var(--t-heading); letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--dim); font-weight: 500; margin: 28px 0 12px; padding-top: 16px;
+    border-top: 1px solid var(--hairline);
+  }
+  .track { margin-bottom: 10px; }
+  .track .t { font-size: var(--t-track); color: var(--ink); }
+  .track .year { color: var(--dim); font-family: var(--mono); font-size: var(--t-meta); }
+  .track p.w { font-size: var(--t-note); line-height: var(--lh-note); color: var(--dim); margin: 3px 0 0; }
+
+  .search-link {
+    display: inline-block; margin-top: 4px; font-family: var(--mono); font-size: var(--t-link);
+    letter-spacing: 0.06em; color: #9fc2ff; text-decoration: none;
+    border-bottom: 1px solid rgba(159,194,255,0.35);
+  }
+  .search-link:hover { color: #cfe0ff; border-bottom-color: #cfe0ff; }
+  .search-link:focus-visible { outline: 1px solid rgba(150,180,235,0.7); outline-offset: 3px; }
+
+  .tier { display: inline-flex; align-items: center; gap: 6px; color: var(--ink); }
+  .tier-swatch { width: 24px; height: 6px; color: var(--ink); flex: 0 0 auto; }
+  .tier-explain .tier { font-size: var(--t-control); margin-bottom: 6px; }
+
+  .chips { display: flex; gap: 7px; flex-wrap: wrap; }
+  .chip {
+    font-family: var(--ui); font-size: var(--t-chip); color: var(--ink);
+    background: rgba(140,170,220,0.06); border: 1px solid var(--hairline);
+    border-radius: 999px; padding: 5px 12px; cursor: pointer;
+    transition: border-color 200ms, background 200ms;
+  }
+  .chip:hover { border-color: rgba(150,180,235,0.4); background: rgba(140,170,220,0.12); }
+  .chip-static { cursor: default; color: var(--dim); }
+  .chip-static:hover { border-color: var(--hairline); background: rgba(140,170,220,0.06); }
+
+  .link-row {
+    display: flex; width: 100%; justify-content: space-between; align-items: baseline; gap: 12px;
+    text-align: left; background: none; border: 0; border-bottom: 1px solid var(--hairline);
+    cursor: pointer; padding: 10px 0; color: var(--ink); font-size: var(--t-row); font-family: var(--ui);
+  }
+  .link-row:hover .link-name { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  .link-meta, .link-dir {
+    font-family: var(--mono); font-size: var(--t-kicker); letter-spacing: 0.08em; color: var(--dim);
+    display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+  }
+  .link-dir { text-transform: uppercase; letter-spacing: 0.16em; min-width: 42px; }
+  .link-name { flex: 1 1 auto; }
+
+  /* ---- search (docs/m3-architecture.md, section 6) ------------------ */
+  /* Top centre: the first place anyone looks for a search box, and clear
+     of both the drawer on the right and the controls on the left. */
+  #search {
+    position: fixed; top: 14px; left: 50%; transform: translateX(-50%);
+    z-index: 8; width: min(360px, 40vw);
+  }
+  #search-input {
+    width: 100%; padding: 9px 14px; border-radius: 999px;
+    font-family: var(--ui); font-size: 14px; color: var(--ink);
+    background: rgba(6, 10, 22, 0.8); border: 1px solid rgba(150,180,235,0.22);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  }
+  #search-input::placeholder { color: var(--dim); }
+  #search-input:focus { outline: none; border-color: rgba(150,180,235,0.6); }
+  #search-results {
+    margin-top: 6px; max-height: min(60vh, 440px); overflow-y: auto;
+    background: rgba(6, 10, 22, 0.94); border: 1px solid var(--hairline); border-radius: 12px;
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 6px 0;
+  }
+  .search-group {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--dim); padding: 10px 14px 4px;
+  }
+  .search-option {
+    display: flex; align-items: center; gap: 10px; padding: 8px 14px; cursor: pointer;
+    font-size: 14px; color: var(--ink);
+  }
+  .search-option[aria-selected="true"] { background: rgba(140,170,220,0.14); }
+  .search-dot { width: 8px; height: 8px; border-radius: 50%; flex: 0 0 auto; }
+  .search-name { flex: 1 1 auto; }
+  .search-meta { font-family: var(--mono); font-size: 10.5px; color: var(--dim); white-space: nowrap; }
+  .search-empty { padding: 10px 14px; font-size: 13.5px; color: var(--dim); }
+
+  /* ---- confidence legend (docs/m3-architecture.md, section 5) ------ */
+  #legend {
+    position: fixed; left: 18px; z-index: 7; max-width: 300px;
+    padding: 12px 14px 10px; border-radius: 10px;
+    background: rgba(6, 10, 22, 0.78); border: 1px solid var(--hairline);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  }
+  .legend-toggle {
+    display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 12px;
+    background: none; border: 0; padding: 0; cursor: pointer; color: var(--ink);
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+  }
+  .legend-toggle:focus-visible { outline: 1px solid rgba(150,180,235,0.7); outline-offset: 4px; }
+  .legend-caret { color: var(--dim); font-size: 14px; letter-spacing: 0; }
+  .legend-intro { font-size: var(--t-legend); line-height: 1.5; color: var(--body); margin: 10px 0 8px; }
+  .legend-row { margin: 8px 0 0; }
+  .legend-row .tier { font-size: 13px; }
+  .legend-explain { font-size: var(--t-legend-note); line-height: 1.45; color: var(--dim); margin: 3px 0 0 30px; }
+  .legend-compact { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 9px; font-size: 12px; }
+  .legend-stamp {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--dim);
+    margin: 10px 0 0; padding-top: 8px; border-top: 1px solid var(--hairline);
+  }
+
+  #status {
+    position: fixed; top: 14px; left: 18px; z-index: 6;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--dim); pointer-events: none;
+  }
+  #status.error { color: #ff8f7a; text-transform: none; letter-spacing: 0; font-size: 13px; }
+
+  /* All motion here is decoration over a layout that is already complete
+     and readable. Someone who does not want it loses nothing. */
+  @media (prefers-reduced-motion: reduce) {
+    #grain { animation: none; }
+    #panel { transition: none; }
+    .node, .node-labels, .edge { transition: none; }
+    .dust-layer { display: none; }
+  }
+</style>
+</head>
+<body>
+  <div id="app"></div>
+  <svg id="grain" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <filter id="grain-noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#grain-noise)" />
+  </svg>
+  <div id="veil"></div>
+  <div id="status">Loading&hellip;</div>
+  <div id="layers" role="group" aria-label="Which records to show"></div>
+  <div id="registers" role="group"></div>
+  <div id="arrange" role="group"></div>
+  <div id="search" role="search"></div>
+  <div id="transport"></div>
+  <aside id="panel"></aside>
+  <div id="legend"></div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

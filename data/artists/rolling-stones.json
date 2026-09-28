@@ -1,0 +1,34 @@
+{
+  "id": "rolling-stones",
+  "name": "The Rolling Stones",
+  "sortName": "Rolling Stones, The",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1962,
+  "activeTo": null,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [
+    "swinging-london"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Studied American blues records closely enough to become, for a while, the most dangerous-seeming band in Britain.",
+  "blurb": {
+    "age7": "The Rolling Stones took old American blues songs and turned them into loud, exciting rock and roll.",
+    "age13": "Formed in London in 1962 around Brian Jones's classified ad for blues musicians, the Rolling Stones built their early sound on close study of Chess Records blues artists like Muddy Waters, who they were even named after. They became Britain's other essential 1960s band, positioned as the dangerous, rebellious counterpart to the more approachable Beatles.",
+    "adult": "The Stones' early career is a clean case study in the British R&B scene's core mechanic: deep, deliberate study of American blues and R&B records that were hard to find in Britain, filtered through young musicians with more technical seriousness than the 'good-time' image the press later assigned the scene. Brian Jones, the band's founder, was pushed out in 1969 amid drug and health problems and drowned weeks later."
+  },
+  "signatureTracks": [
+    {
+      "title": "(I Can't Get No) Satisfaction",
+      "year": 1965,
+      "whyThisOne": "The fuzz-guitar riff that, alongside the Kinks' \"You Really Got Me\" the year before, helped establish distortion as a hit-single hook rather than a mistake."
+    },
+    {
+      "title": "Come On",
+      "year": 1963,
+      "whyThisOne": "Their debut single, a Chuck Berry cover, showing the direct blues-and-R&B-covers starting point before the band developed its own writing voice."
+    }
+  ]
+}

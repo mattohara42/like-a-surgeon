@@ -1,0 +1,31 @@
+{
+  "id": "e-chicagohouse-may",
+  "from": "chicago-house",
+  "to": "derrick-may",
+  "type": "scene",
+  "confidence": "consensus",
+  "year": 1983,
+  "crossLineage": false,
+  "evidence": "Derrick May regularly made the trip from Detroit to Chicago to hear Frankie Knuckles at the Warehouse and Ron Hardy at the Music Box (Wikipedia's article on Frankie Knuckles, which dates Knuckles's purchase of his first drum machine from May to around 1983). The machine going the other way is e-may-knuckles. Held at consensus because the trips are told through secondary sources.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Frankie Knuckles",
+      "title": "Warehouse DJ sets",
+      "year": 1982,
+      "search": false
+    },
+    "later": {
+      "artist": "Rhythim Is Rhythim",
+      "title": "Strings of Life",
+      "year": 1987
+    },
+    "whatToListenFor": "There is no record of what May heard in those clubs, so the earlier side is the rooms themselves. 'Strings of Life' is made for a room like them: no singer, no verse or chorus, piano chords cut into loops and pushed along by a drum machine. Listen for a track that expects a DJ and a crowd to supply everything a song usually has."
+  },
+  "explanation": {
+    "age13": "Derrick May, from Detroit, used to drive to Chicago to hear the DJs Frankie Knuckles and Ron Hardy play in their clubs. What he heard there shaped the music he made back home.",
+    "adult": "The Chicago-Detroit traffic ran both ways: May sold Knuckles a drum machine, and Chicago's clubs showed May what a dance record was for. This edge is the second half. It is drawn from the scene, not from Knuckles or Hardy alone, because the accounts put the two clubs together."
+  },
+  "tags": [
+    "production"
+  ]
+}

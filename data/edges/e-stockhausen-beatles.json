@@ -1,0 +1,31 @@
+{
+  "id": "e-stockhausen-beatles",
+  "from": "karlheinz-stockhausen",
+  "to": "the-beatles",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1968,
+  "crossLineage": true,
+  "evidence": "McCartney's listening to Stockhausen in 1966 is recorded in the standard Beatles histories, including Barry Miles's authorised biography of McCartney. Stockhausen appears on the Sgt. Pepper cover (1967). Ian MacDonald, in Revolution in the Head, suggested Hymnen specifically as a model for 'Revolution 9'. That particular pairing is his critical reading, not a documented statement by the band.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Karlheinz Stockhausen",
+      "title": "Hymnen",
+      "year": 1967
+    },
+    "later": {
+      "artist": "The Beatles",
+      "title": "Revolution 9",
+      "year": 1968
+    },
+    "whatToListenFor": "Both pieces are made of fragments that arrive, overlap and vanish: radio noise, snatches of orchestral music, voices. In 'Revolution 9' listen for the loop of a voice repeating 'number nine', the crowd noise, the reversed tape and the stretches where several unrelated recordings play at once. That layering of found sound, with no beat and no tune to hold it together, is the Cologne studio's method in the middle of the best-selling band in the world."
+  },
+  "explanation": {
+    "age7": "The Beatles liked Stockhausen's music and made one very strange track in a similar way, out of bits of tape.",
+    "age13": "McCartney was listening to Stockhausen in 1966, and Stockhausen's face is on the Sgt. Pepper cover. In 1968 Lennon, with Yoko Ono and George Harrison, made 'Revolution 9' out of dozens of tape loops, voices and sound effects laid over each other. It's the most-heard piece of tape collage ever released.",
+    "adult": "Consensus tier. The Beatles' interest in Stockhausen is well documented. The specific model for 'Revolution 9' is a critic's inference, and Ono's own background in the New York avant-garde is an equally strong route to the same method. The edge names Stockhausen because the band did."
+  },
+  "tags": [
+    "technology"
+  ]
+}

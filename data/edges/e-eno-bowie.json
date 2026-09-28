@@ -1,0 +1,31 @@
+{
+  "id": "e-eno-bowie",
+  "from": "brian-eno",
+  "to": "david-bowie",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1977,
+  "crossLineage": false,
+  "evidence": "Eno collaborated on and co-wrote tracks for Low and \"Heroes\" (both 1977), which Bowie co-produced with Tony Visconti. The songwriting credits on the sleeves record Eno's share, including 'Warszawa'. Accounts of the Low sessions describe Eno starting 'Warszawa' while Bowie was away.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Brian Eno",
+      "title": "Discreet Music",
+      "year": 1975
+    },
+    "later": {
+      "artist": "David Bowie",
+      "title": "Warszawa",
+      "year": 1977
+    },
+    "whatToListenFor": "'Discreet Music' is slow synth phrases repeating through tape echo, with no beat and nothing asking for attention. 'Warszawa' opens the ambient second side of Low with a single held note and slow, heavy chords, no drums, and Bowie singing in a made-up language late in the piece. Listen for the same patience: sounds that last a long time and change slowly. It's the most Eno-like thing on a Bowie record, and the side a rock audience least expected."
+  },
+  "explanation": {
+    "age7": "Brian Eno helped Bowie make two albums in 1977, including slow, quiet songs with no drums.",
+    "age13": "Bowie made Low and '\"Heroes\"' with Brian Eno in 1977. Tony Visconti produced them with Bowie. Eno brought his ideas about slow, repeating, calm music. Half of Low has no normal songs at all, just long pieces of synthesizer and atmosphere.",
+    "adult": "Eno is often called the producer of the Berlin records. The credits say otherwise: Bowie and Visconti produced, and Eno collaborated and co-wrote. The edge is typed direct, not production, to match. Eno had recorded with Harmonia in 1976, which ties the German scene into these records through him as well as through Bowie's own listening."
+  },
+  "tags": [
+    "production"
+  ]
+}

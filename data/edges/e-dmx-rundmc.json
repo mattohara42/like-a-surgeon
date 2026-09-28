@@ -1,0 +1,32 @@
+{
+  "id": "e-dmx-rundmc",
+  "from": "oberheim-dmx",
+  "to": "run-dmc",
+  "type": "technological",
+  "confidence": "consensus",
+  "year": 1983,
+  "crossLineage": true,
+  "evidence": "Secondary accounts of Larry Smith's work (a Cuepoint profile of Smith, and standard histories of the single) agree that 'It's Like That' and 'Sucker M.C.'s' were programmed on an Oberheim DMX, and that Smith rebuilt the drum pattern from Orange Krush's 'Action', played by drummer Trevor Gale, reusing it on several later Run-D.M.C. tracks. No first-person account from Smith was consulted, so this is held at consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Orange Krush",
+      "title": "Action",
+      "year": 1982
+    },
+    "later": {
+      "artist": "Run-D.M.C.",
+      "title": "Sucker M.C.'s",
+      "year": 1983
+    },
+    "whatToListenFor": "On 'Action' the beat is played by a drummer inside a band, with bass, keys and a singer around it. On 'Sucker M.C.'s' the same pattern comes back out of a drum machine and everything else is gone. There is no bassline and no melody. Listen for how much reverb sits on the snare, so each hit booms out into the empty space, and for the two voices passing lines back and forth where a band used to be. The emptiness is the arrangement."
+  },
+  "explanation": {
+    "age7": "A producer taught a drum machine a real drummer's beat, then made a rap song with nothing else in it.",
+    "age13": "Larry Smith took a beat a drummer had played on a band's record and programmed it into an Oberheim DMX. Then he left out the band. 'Sucker M.C.'s' is just the machine, a lot of echo on the drums, and Run and DMC trading lines. Earlier rap records had full bands, so this sounded shockingly bare, and very quickly it sounded like the future.",
+    "adult": "The edge is about arrangement as much as timbre. Replacing the drummer with a machine was already common by 1983. Removing the rest of the band was the break, and within a few years the Sugar Hill house-band model sounded dated. The DMX's sampled voices, bright and loud, were enough to carry a track alone. Consensus tier, because the programming account comes from secondary sources."
+  },
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

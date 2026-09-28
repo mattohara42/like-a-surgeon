@@ -1,0 +1,31 @@
+{
+  "id": "native-tongues",
+  "name": "Native Tongues",
+  "type": "scene",
+  "lineage": "hiphop",
+  "yearFrom": 1988,
+  "yearTo": 1996,
+  "city": "New York",
+  "country": "USA",
+  "hook": "A loose collective of New York rap groups who sampled jazz and oddball records, rapped about ideas instead of threats, and showed that rap could be playful without being a novelty.",
+  "blurb": {
+    "age13": "Native Tongues started around 1988 when three groups, the Jungle Brothers, De La Soul and A Tribe Called Quest, became friends and began working together. Queen Latifah, Monie Love, Black Sheep and Chi-Ali joined later. They took the name from a song by the band New Birth about people whose languages were taken from them. They were close to Afrika Bambaataa's Universal Zulu Nation. Their records used samples from jazz, soft rock and children's records, and their words were about African history, everyday life and jokes, not violence. By 1993 the groups were drifting apart. Many later rappers, including the Roots, have been described as following their lead.",
+    "adult": "Native Tongues formed around 1988 when the Jungle Brothers, De La Soul and A Tribe Called Quest found common ground, with Queen Latifah, Monie Love, Black Sheep and Chi-Ali added by 1989. The name comes from a line in New Birth's 'African Cry' about dispossession, the loss of a native language. The collective was closely tied to the Universal Zulu Nation and is described as carrying on Afrika Bambaataa's spirit. Musically it widened the sample pool well past funk breaks, into jazz, soft rock and educational records, and lyrically it made Afrocentrism, humour and introspection commercially viable. By 1993 cohesion had gone, and De La Soul's Trugoy publicly declared the movement dead. The later alternative-rap wave, the Roots among it, is widely traced to it."
+  },
+  "geopolitics": "The groups came up in the late 1980s, when the dominant commercial stories about Black youth in American media were crack and crime. Afrocentric ideas, from Nation of Islam offshoots to the Five Percenters to the Zulu Nation, were a live part of New York rap, and Native Tongues took the gentler, more educational end of that.",
+  "whatWasNew": "Jazz and soft-rock samples used as the main musical bed rather than as an occasional flourish, and rappers presenting themselves as odd, bookish or funny rather than tough, at a time when that was a commercial risk.",
+  "production": "Prince Paul's production on De La Soul's '3 Feet High and Rising' (1989) and A Tribe Called Quest's in-house production by Q-Tip and Ali Shaheed Muhammad set the sound: dense sample collages and relaxed jazz loops, built on samplers of the period.",
+  "labels": "Tommy Boy (De La Soul, Queen Latifah), Warner Bros. (Jungle Brothers' second album), Jive (A Tribe Called Quest) and Mercury (Black Sheep). The collective was never a label, which is part of why it came apart as each group's career pulled in its own direction.",
+  "politics": "Afrocentric and anti-violence in its stated values, with lyrics about African history, community and self-respect, alongside a refusal of the gangster posture that was taking over the charts.",
+  "memberIds": [
+    "de-la-soul",
+    "a-tribe-called-quest"
+  ],
+  "palette": {
+    "ink": "#27301f",
+    "paper": "#f4ecd4",
+    "accent": "#e2a531",
+    "accent2": "#3f7a4a"
+  },
+  "motif": "vinyl-stack"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "e-bronx-theclash",
+  "from": "south-bronx",
+  "to": "the-clash",
+  "type": "scene",
+  "confidence": "documented",
+  "year": 1980,
+  "crossLineage": true,
+  "evidence": "The Clash recorded 'The Magnificent Seven' at Electric Lady Studios in New York in April 1980, inspired directly by Grandmaster Flash & the Furious Five and the Sugarhill Gang; Mick Jones carried a boombox around the city absorbing the sound, earning the nickname 'Whack Attack.' Documented in the song's Wikipedia article and multiple Clash biographies/retrospectives.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Grandmaster Flash and the Furious Five",
+      "title": "Superrappin'",
+      "year": 1979
+    },
+    "later": {
+      "artist": "The Clash",
+      "title": "The Magnificent Seven",
+      "year": 1980
+    },
+    "whatToListenFor": "'The Magnificent Seven' is a British rock band attempting rap for the first time: a looped bassline, spoken verses, and a chorus that owes more to the sound Jones heard on the street than to anything in punk. It is usually credited as the first rap song by a rock band."
+  },
+  "explanation": {
+    "age13": "The Clash visited New York in 1979 and 1980 and heard the new South Bronx style of rapping over records everywhere they went. They tried it themselves on 'The Magnificent Seven,' one of the first times a rock band ever attempted rap.",
+    "adult": "A rare early instance on this map of hip-hop's influence crossing back into rock this quickly: within about a year of hearing it on the street, a major rock band had absorbed the form closely enough to be credited as making the first rock band's rap record."
+  },
+  "tags": [
+    "production"
+  ]
+}

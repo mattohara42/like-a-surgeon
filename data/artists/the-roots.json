@@ -1,0 +1,34 @@
+{
+  "id": "the-roots",
+  "name": "The Roots",
+  "sortName": "Roots, The",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1987,
+  "activeTo": null,
+  "originCity": "Philadelphia, Pennsylvania",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Questlove"
+  ],
+  "hook": "A hip-hop group with a live band, whose drummer learned to play the way J Dilla programmed.",
+  "blurb": {
+    "age7": "A rap group from Philadelphia that plays real instruments instead of using samples. Their drummer is called Questlove.",
+    "age13": "Ahmir 'Questlove' Thompson and Tariq 'Black Thought' Trotter met at the Philadelphia High School for Creative and Performing Arts and started The Roots in 1987. Most rap groups built their music from samples. The Roots played theirs on real instruments, with Questlove on drums. After hearing J Dilla's beats, Questlove started playing slightly off the beat on purpose, the way Dilla's machine did. Since 2009 The Roots have been the house band on Jimmy Fallon's television shows.",
+    "adult": "The Roots invert the sampling story. Instead of producers lifting drummers off records, a drummer learned to reproduce a producer's programmed feel by hand. Questlove has described J Dilla's timing as the turning point in his playing, and the late-1990s records made by the circle known as the Soulquarians (The Roots, D'Angelo, Common, Erykah Badu, with Dilla and Questlove at the centre) are where that feel moved from programmed beats into live playing."
+  },
+  "signatureTracks": [
+    {
+      "title": "What They Do",
+      "year": 1996,
+      "whyThisOne": "From Illadelph Halflife, their clearest early statement of live-band hip-hop."
+    },
+    {
+      "title": "You Got Me",
+      "year": 1999,
+      "whyThisOne": "From Things Fall Apart, with Erykah Badu and Eve. Their biggest hit."
+    }
+  ]
+}

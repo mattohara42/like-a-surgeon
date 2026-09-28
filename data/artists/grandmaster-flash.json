@@ -4,39 +4,31 @@
   "sortName": "Flash, Grandmaster",
   "type": "artist",
   "lineage": "hiphop",
-  "activeFrom": 1973,
+  "activeFrom": 1975,
   "activeTo": null,
   "originCity": "South Bronx, New York",
   "originCountry": "USA",
   "scenes": [
     "south-bronx"
   ],
-  "labels": [
-    {
-      "labelId": "sugar-hill",
-      "from": 1979,
-      "to": null
-    }
-  ],
-  "keyProducers": [
-    "Sylvia Robinson"
-  ],
-  "hook": "Worked out how to extend a drum break by hand, then named and taught the whole vocabulary of turntablism.",
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Turned two turntables and a mixer into an instrument with its own technique, before hip-hop had a name for what he was doing.",
   "blurb": {
-    "age7": "Flash figured out how to use two record players to keep just the drum part playing over and over, by hand.",
-    "age13": "In the mid-1970s Flash developed 'quick mixing,' cueing and cutting between two copies of the same record by ear and by hand, so a DJ could extend a short drum break indefinitely and cut precisely on the beat. He later formalized and named several of the core turntablist techniques and recorded some of the first records to document them directly.",
-    "adult": "Flash's technical contribution is specific and verifiable: cueing by placing a finger on the record and back-cueing, cutting cleanly between two copies of a break, and later scratching, techniques he is widely credited with systematizing even though sound system and mobile DJ culture in the Bronx was collectively inventive rather than the work of one person alone."
+    "age7": "Grandmaster Flash figured out how to use two record players like a musical instrument, cutting and mixing records live.",
+    "age13": "Born Joseph Saddler, Flash developed techniques like the quick-mix and backspin, methods for cutting between two copies of the same record so the crowd never heard the song stop. His 1981 record \"The Adventures of Grandmaster Flash on the Wheels of Steel\" is a recording of that technique itself, mixing Chic, Queen, and Blondie live.",
+    "adult": "Flash formalized DJ techniques (the quick-mix theory, the backspin, punch phrasing) that had been developing informally at Bronx park jams into a repeatable, teachable method. \"Wheels of Steel\" documents the technique directly rather than a song built from it, which is why it is treated as a foundational hip-hop text even though it predates most rapping on record."
   },
   "signatureTracks": [
     {
       "title": "The Adventures of Grandmaster Flash on the Wheels of Steel",
       "year": 1981,
-      "whyThisOne": "A single continuous turntable performance, cutting across multiple records, recorded essentially as documentation of a live DJ set."
+      "whyThisOne": "A recording of the DJ technique itself: three turntables, no rapping, Flash cutting between Chic, Queen, and Blondie in real time."
     },
     {
-      "title": "The Message",
+      "title": "The Message (Grandmaster Flash and the Furious Five)",
       "year": 1982,
-      "whyThisOne": "Credited to Grandmaster Flash and the Furious Five, though largely written and performed by Melle Mel and Sugar Hill's in-house talent. Shifted hip-hop's subject matter toward direct social commentary."
+      "whyThisOne": "Credited to Flash and the group, though written mainly by Melle Mel, Duke Bootee, and Sugar Hill staff; a useful case of a group name carrying more authorship weight than the credits reflect."
     }
   ]
 }

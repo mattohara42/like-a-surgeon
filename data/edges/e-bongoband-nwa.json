@@ -1,0 +1,28 @@
+{
+  "id": "e-bongoband-nwa",
+  "from": "incredible-bongo-band",
+  "to": "nwa",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1991,
+  "crossLineage": true,
+  "evidence": "N.W.A's 'Real Niggaz Don't Die', from 'Niggaz4Life' (1991), samples the Incredible Bongo Band's 'Bongo Rock' album, per WhoSampled's catalogue of the album's samples.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Incredible Bongo Band",
+      "title": "Bongo Rock",
+      "year": 1973
+    },
+    "later": {
+      "artist": "N.W.A",
+      "title": "Real Niggaz Don't Die",
+      "year": 1991
+    },
+    "whatToListenFor": "'Bongo Rock' is congas and bongos locked into a driving, insistent pattern with a rock band behind them. 'Real Niggaz Don't Die' takes that percussion and buries it under thick West Coast production, so it works as texture rather than as the lead instrument it was on the original. The same drums that powered Kool Herc's earliest Bronx parties are still turning up in gangsta rap two decades later."
+  },
+  "explanation": {
+    "age13": "N.W.A sampled the Incredible Bongo Band's 'Bongo Rock', the same record that gave Kool Herc his earliest breaks in the Bronx in the 1970s, for a track on their final album in 1991.",
+    "adult": "This edge shows how far 'Bongo Rock' travelled from its first use: not just Herc's foundational breaks, but still being sampled by West Coast gangsta rap two decades on. It's a separate, later use from the Herc edge, not the same event."
+  },
+  "tags": []
+}

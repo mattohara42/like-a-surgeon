@@ -1,0 +1,34 @@
+{
+  "id": "prince-jammy",
+  "name": "Prince Jammy",
+  "sortName": "Prince Jammy",
+  "type": "artist",
+  "lineage": "dub",
+  "activeFrom": 1976,
+  "activeTo": null,
+  "originCity": "Montego Bay",
+  "originCountry": "Jamaica",
+  "scenes": [
+    "kingston-dub"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Trained as King Tubby's engineer, then a decade later ended dub's analogue era himself with a rhythm built from a $50 keyboard's demo button.",
+  "blurb": {
+    "age7": "Prince Jammy learned to make dub music by working as King Tubby's assistant. Years later he made a hit song using only a cheap electronic keyboard, and it changed reggae music.",
+    "age13": "Lloyd James, known as Prince Jammy, had been repairing electronics and building amplifiers from his mother's house in Kingston's Waterhouse district when he joined King Tubby's studio in 1976. By 1977 he was mixing most of the rhythms that passed through Tubby's desk. In 1979 he released his own dub album, 'Kamikazi Dub', with musicians including Sly and Robbie and Augustus Pablo. In 1985, now recording under the name King Jammy, he produced Wayne Smith's 'Under Mi Sleng Teng' built entirely around a rock rhythm preset on a Casio MT-40 home keyboard, which made it one of the first fully computerized reggae records and set off a wave of digital dancehall.",
+    "adult": "Jammy's career has two distinct hinge points on this map: his 1970s apprenticeship under King Tubby, alongside Scientist, and his own 1985 production of 'Under Mi Sleng Teng', which did to analogue dub what digital synthesis and sampling were doing to popular music generally in the same decade, only using a $50 preset rather than a dedicated studio instrument. The riddim has since been re-recorded by more artists than any other in reggae history."
+  },
+  "signatureTracks": [
+    {
+      "title": "Kamikazi Dub",
+      "year": 1979,
+      "whyThisOne": "His breakthrough solo dub album, recorded before he left Tubby's studio to work independently."
+    },
+    {
+      "title": "Under Mi Sleng Teng (Wayne Smith)",
+      "year": 1985,
+      "whyThisOne": "Built from a Casio MT-40 preset rhythm; the record that began reggae's digital era."
+    }
+  ]
+}

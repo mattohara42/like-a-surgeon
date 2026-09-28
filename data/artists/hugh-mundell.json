@@ -1,0 +1,42 @@
+{
+  "id": "hugh-mundell",
+  "name": "Hugh Mundell",
+  "sortName": "Mundell, Hugh",
+  "type": "artist",
+  "lineage": "dub",
+  "activeFrom": 1976,
+  "activeTo": 1983,
+  "originCity": "Kingston",
+  "originCountry": "Jamaica",
+  "scenes": [
+    "kingston-dub"
+  ],
+  "labels": [
+    {
+      "labelId": "rockers-international",
+      "from": 1976,
+      "to": 1983
+    }
+  ],
+  "keyProducers": [
+    "augustus-pablo"
+  ],
+  "hook": "A lawyer's teenage son who met Augustus Pablo at a studio, wrote a five-star debut album while still a minor, and was shot dead at 21.",
+  "blurb": {
+    "age7": "Hugh Mundell wrote and recorded serious, hopeful songs starting when he was only a teenager, working closely with the producer Augustus Pablo.",
+    "age13": "Hugh Mundell met the producer Augustus Pablo at a Kingston studio as a young teenager, and between 1976 and 1978 the two recorded what became Mundell's debut album, 'Africa Must Be Free By 1983,' released on Pablo's Rockers International label when Mundell was still only 16. He wrote every song on it himself. He kept recording with Pablo, including the 1979 album 'Blackman's Foundation,' before being shot and killed in Kingston in 1983 at age 21.",
+    "adult": "Mundell's entire recorded career ran through Augustus Pablo, who produced and released his work on Rockers International starting when Mundell was a young teenager. 'Africa Must Be Free By 1983' (1978) received a five-star review from Rolling Stone and is now regarded as a roots reggae landmark. Mundell was shot dead in his car in Kingston on 14 October 1983; Junior Reid, who was in the back seat and went on to his own career including a stint fronting Black Uhuru, was a direct witness."
+  },
+  "signatureTracks": [
+    {
+      "title": "Africa Must Be Free By 1983",
+      "year": 1978,
+      "whyThisOne": "His debut album, written entirely by a teenager and produced by Augustus Pablo, and the record that established him."
+    },
+    {
+      "title": "Blackman's Foundation",
+      "year": 1979,
+      "whyThisOne": "His second album with Pablo, co-produced by Mundell himself as he grew into the studio relationship."
+    }
+  ]
+}

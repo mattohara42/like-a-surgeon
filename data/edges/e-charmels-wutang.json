@@ -1,0 +1,31 @@
+{
+  "id": "e-charmels-wutang",
+  "from": "the-charmels",
+  "to": "wu-tang-clan",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1993,
+  "crossLineage": true,
+  "evidence": "'C.R.E.A.M.' (1993), produced by RZA, samples The Charmels' 'As Long as I've Got You' (Volt, 1967), written by Isaac Hayes and David Porter, as recorded in the song's sample credits and discussed in accounts of the track.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Charmels",
+      "title": "As Long as I've Got You",
+      "year": 1967
+    },
+    "later": {
+      "artist": "Wu-Tang Clan",
+      "title": "C.R.E.A.M.",
+      "year": 1993
+    },
+    "whatToListenFor": "Hear the sad, slow piano in the Charmels' single. RZA lifts a phrase of it, loops it, and slows the mood even further, so it hangs over Raekwon's and Inspectah Deck's verses about growing up broke. Listen for how a love song's introduction becomes a lament about money."
+  },
+  "explanation": {
+    "age7": "The Wu-Tang Clan's 'C.R.E.A.M.' uses the sad piano from an old soul song.",
+    "age13": "'As Long as I've Got You' was a 1967 song by the Charmels, a girl group from Memphis who never had a big hit. RZA took the sad piano from its start and looped it for 'C.R.E.A.M.'. The Wu-Tang song is about poverty and money, and the piano makes it feel heavy and sad.",
+    "adult": "A rediscovery through sampling: an obscure Stax single became the mood of a famous record. Writers on the sample note that it pushed hardcore rap toward atmosphere and mournfulness."
+  },
+  "tags": [
+    "production"
+  ]
+}

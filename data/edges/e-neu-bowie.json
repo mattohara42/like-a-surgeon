@@ -1,0 +1,30 @@
+{
+  "id": "e-neu-bowie",
+  "from": "neu",
+  "to": "david-bowie",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1977,
+  "crossLineage": true,
+  "evidence": "Bowie invited Michael Rother to play on the 'Heroes' album in 1977, which Rother has described in several interviews. The album's title is widely noted as a nod to 'Hero' on Neu! '75. Bowie spoke publicly about his admiration for Neu! in the Berlin years.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Neu!",
+      "title": "Hero",
+      "year": 1975
+    },
+    "later": {
+      "artist": "David Bowie",
+      "title": "\"Heroes\"",
+      "year": 1977,
+      "search": "David Bowie Heroes"
+    },
+    "whatToListenFor": "'Hero' is fast and ragged: Dinger's motorik beat pounding under his own hoarse, shouting vocal. '\"Heroes\"' borrows the drive and slows the tempo. Listen for the same idea of a beat that doesn't change while everything above it builds. The drone of guitar feedback held for the whole song, the vocal climbing from calm to shouting, the steady drums never reacting. And the quotation marks in Bowie's title, which undercut the heroism, just as Dinger's voice does."
+  },
+  "explanation": {
+    "age7": "David Bowie liked Neu! and named his song '\"Heroes\"' after their song 'Hero'.",
+    "age13": "When Bowie was making records in Berlin, he was listening to German bands like Neu! and Kraftwerk. He asked Neu!'s Michael Rother to play on his album. Rother didn't end up doing it. Bowie still named the album and its title song after Neu!'s 'Hero'.",
+    "adult": "Joins with e-bowie-kraftwerk and e-eno-bowie to make the Berlin trilogy the densest meeting point between German electronic music and rock on the map. Rother's non-participation is well documented from his side. Accounts differ about why it fell through."
+  },
+  "tags": []
+}

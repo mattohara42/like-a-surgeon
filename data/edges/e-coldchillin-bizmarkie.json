@@ -1,0 +1,32 @@
+{
+  "id": "e-coldchillin-bizmarkie",
+  "from": "cold-chillin",
+  "to": "biz-markie",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1991,
+  "crossLineage": false,
+  "evidence": "Grand Upright Music Ltd. v. Warner Bros. Records Inc., 780 F. Supp. 182 (S.D.N.Y., decided 17 December 1991). The opinion records that a licence for the Gilbert O'Sullivan sample had been sought and not granted, and that the album was released anyway. The court found infringement, referred the matter for possible criminal prosecution, and the album was withdrawn from sale. Biz Markie's next album, in 1993, was titled All Samples Cleared!",
+  "trackPair": {
+    "earlier": {
+      "artist": "Gilbert O'Sullivan",
+      "title": "Alone Again (Naturally)",
+      "year": 1972
+    },
+    "later": {
+      "artist": "Biz Markie",
+      "title": "Alone Again",
+      "year": 1991
+    },
+    "whatToListenFor": "Listen to O'Sullivan's piano, then to Biz's track, which loops a few bars of it, about ten seconds, under his rapping. Notice how little was taken and how instantly you recognise it anyway. That recognisability is the legal problem in one sound. A sample brings its author along with it, and after this case the author had to be asked, and usually paid."
+  },
+  "explanation": {
+    "age7": "Biz Markie's record company put out a song using part of another man's song without permission. A court said that was stealing.",
+    "age13": "Biz Markie looped a piece of Gilbert O'Sullivan's piano from a 1972 hit. He asked O'Sullivan for permission and was told no, and Cold Chillin' released the album anyway. O'Sullivan sued and won in December 1991, and the album was pulled from the shops. From then on, every hip-hop producer had to clear samples, which costs money and time. Biz called his next album All Samples Cleared!",
+    "adult": "A label edge under the A69 convention: the label's decision (releasing after a refused licence) changed the artist's output, visibly so in the title of his next record, and changed every other sample-based artist's output too. Before the ruling, dense collage records built from dozens of uncleared samples were commercially possible. After it, sample budgets and clearance became part of production, pushing producers toward fewer, shorter, disguised or replayed sources. The case is often retold with its opening line quoted. This record describes it instead: the judgment opened by citing the commandment against theft."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

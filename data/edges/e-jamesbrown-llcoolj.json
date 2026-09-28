@@ -1,0 +1,32 @@
+{
+  "id": "e-jamesbrown-llcoolj",
+  "from": "james-brown",
+  "to": "ll-cool-j",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1990,
+  "crossLineage": true,
+  "evidence": "'Mama Said Knock You Out' (1990), produced by Marley Marl, samples Clyde Stubblefield's break from James Brown's 'Funky Drummer', as recorded in the song's sample credits and in accounts of Stubblefield's career.",
+  "trackPair": {
+    "earlier": {
+      "artist": "James Brown",
+      "title": "Funky Drummer",
+      "year": 1970
+    },
+    "later": {
+      "artist": "LL Cool J",
+      "title": "Mama Said Knock You Out",
+      "year": 1990
+    },
+    "whatToListenFor": "In 'Funky Drummer', wait for the moment the band drops out and Clyde Stubblefield plays alone. Listen to the hi-hat running steadily, and to the quiet snare taps between the loud ones, ghost notes that make the beat feel like it's rolling. Then hear those same few seconds looped under LL Cool J twenty years later. The ghost notes are why a sampled beat felt alive in a way a drum machine's didn't."
+  },
+  "explanation": {
+    "age7": "A drummer's short solo from 1970 is the beat under LL Cool J's big comeback song.",
+    "age13": "In 1970 Clyde Stubblefield, James Brown's drummer, played a short solo on 'Funky Drummer'. Marley Marl sampled it for LL Cool J's 'Mama Said Knock You Out' in 1990. It's one of more than a thousand songs that use that same break. Stubblefield was never paid for any of them.",
+    "adult": "The hub's most-used record, reaching the map through Marl's production for LL. That links this edge to e-marleymarl-llcoolj, where the shift from drum machine to sampled drums is the subject. The credit went to Brown, as bandleader and writer. The drummer who played the pattern received nothing."
+  },
+  "tags": [
+    "production",
+    "labels"
+  ]
+}

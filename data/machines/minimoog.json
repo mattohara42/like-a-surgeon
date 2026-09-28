@@ -1,0 +1,19 @@
+{
+  "id": "minimoog",
+  "name": "Minimoog Model D",
+  "type": "machine",
+  "kind": "synth",
+  "lineage": "electronic",
+  "maker": "Moog Music",
+  "releasedYear": 1970,
+  "discontinuedYear": 1981,
+  "originalPurpose": "Moog's modular system boiled down into one wooden box with a keyboard and no patch cables, built so that a synthesizer could be carried to a gig.",
+  "whatActuallyHappened": "Removing the patch cables removed the need for a specialist. Over twelve thousand were built across eleven years, which made it the first synthesizer many musicians ever touched, and its filter and its thick unison bass became what most people meant by the word synthesizer. Ralf Hutter bought one and used it for the basslines on 'Autobahn'.",
+  "priceStory": "1,495 US dollars in 1970. Expensive for an individual musician and trivial next to the modular systems it replaced, which is exactly how synthesis moved out of universities and studios and into working bands.",
+  "hook": "The synthesizer that stopped needing an engineer to operate it.",
+  "blurb": {
+    "age7": "The first synthesizer you could carry to a concert and play like an ordinary keyboard.",
+    "age13": "Before this, a synthesizer was a wall of modules joined by cables, and you needed to understand it to get a sound out of it at all. Moog took the useful parts, wired them together permanently, and put a keyboard on the front. Now a musician could buy one, carry it, and play it. That decision is why synthesizers ended up in ordinary bands rather than only in universities.",
+    "adult": "A design decision with a social consequence. Hardwiring the signal path traded away the modular system's open-endedness for immediacy, and immediacy is what opened synthesis to musicians without technical training. The Minimoog's specific filter behaviour and its oscillator drift are still being modelled half a century later, but its real effect was on who was allowed to use one."
+  }
+}

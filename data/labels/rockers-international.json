@@ -1,0 +1,19 @@
+{
+  "id": "rockers-international",
+  "name": "Rockers International",
+  "type": "label",
+  "lineage": "dub",
+  "foundedYear": 1972,
+  "closedYear": null,
+  "city": "Kingston",
+  "founders": [
+    "Augustus Pablo"
+  ],
+  "ownershipStory": "Augustus Pablo started Rockers International in 1972, the same year his instrumental 'Java' broke through, to release his own melodica-led productions and those of musicians around him. Like Atkins, May, and Kraftwerk elsewhere in this dataset, Pablo kept ownership of his own catalogue rather than working purely as a hired voice for someone else's label.",
+  "hook": "Augustus Pablo used his first hit's momentum to start his own label rather than sign away the next one.",
+  "blurb": {
+    "age7": "Augustus Pablo started his own record label so he could put out his own music his way.",
+    "age13": "Rockers International is the label Augustus Pablo founded in 1972, right after his instrumental 'Java' became a hit, so he could keep control of his own recordings.",
+    "adult": "Another instance of the artist-owned-label pattern that recurs across this dataset's most self-directed nodes, here inside a Kingston scene where session musicians were usually paid a flat fee and owned nothing afterward."
+  }
+}

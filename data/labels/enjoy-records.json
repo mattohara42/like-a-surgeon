@@ -1,0 +1,17 @@
+{
+  "id": "enjoy-records",
+  "name": "Enjoy Records",
+  "type": "label",
+  "lineage": "hiphop",
+  "foundedYear": 1962,
+  "closedYear": null,
+  "endUnknown": true,
+  "city": "New York",
+  "founders": "Bobby Robinson",
+  "ownershipStory": "Bobby Robinson, who had already run a string of Harlem R&B labels (Red Robin from 1952, Whirlin' Disc, Fury and Everlast from 1957, Sue with Juggy Murray in 1957), founded Enjoy Records in 1962. In 1979 he recorded Grandmaster Flash and the Furious Five's first single, 'Superrappin'', but Enjoy's distribution only reached New York, and the group left for Sugar Hill Records the same year to reach a national audience. Robinson remained active into the mid-1980s; the label's exact closing date isn't documented.",
+  "hook": "The Harlem label that made Grandmaster Flash's first record, then watched him leave within the year because it could only sell it in New York.",
+  "blurb": {
+    "age13": "Bobby Robinson had already run several Harlem record labels when he started Enjoy Records in 1962. In 1979 he recorded 'Superrappin'', the first single by Grandmaster Flash and the Furious Five, but Enjoy could only get the record heard in New York. The group left for Sugar Hill Records that same year, looking for a label that could sell nationally.",
+    "adult": "Enjoy's limits, not its judgment, are the story: Robinson correctly bet on Grandmaster Flash and the Furious Five, but a small label built for the New York R&B market in the 1960s and 70s had no machinery to distribute a record nationally in 1979, and the group moved on within months of 'Superrappin''s release for exactly that reason."
+  }
+}

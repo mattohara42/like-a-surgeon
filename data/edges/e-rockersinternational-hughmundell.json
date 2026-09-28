@@ -1,0 +1,31 @@
+{
+  "id": "e-rockersinternational-hughmundell",
+  "from": "rockers-international",
+  "to": "hugh-mundell",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1978,
+  "crossLineage": false,
+  "evidence": "Augustus Pablo produced and released Hugh Mundell's debut album, 'Africa Must Be Free By 1983,' on his Rockers label in 1978, when Mundell was 16. Documented in Mundell's Wikipedia biography and corroborated by Discogs release data and contemporary reviews (Rolling Stone gave the album five stars on release).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Augustus Pablo",
+      "title": "King Tubby Meets Rockers Uptown",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Hugh Mundell",
+      "title": "Africa Must Be Free By 1983",
+      "year": 1978
+    },
+    "whatToListenFor": "Pablo's own melodica records made the label's reputation; two years later he put that same production behind a teenager's songwriting instead of his own instrument, and 'Africa Must Be Free By 1983' is a vocal album built on the same spacious, echo-heavy platform."
+  },
+  "explanation": {
+    "age13": "Augustus Pablo ran his own record label, Rockers International, and used it to release an album he produced for a teenage singer named Hugh Mundell, who wrote every song on it himself.",
+    "adult": "A non-founder case of the label-shapes-output claim this dataset requires: Rockers International existed to release Pablo's own productions, and its decision to put a full album behind an unknown teenager, rather than another Pablo instrumental, is what put Mundell's songwriting on record at all."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "e-isley-publicenemy",
+  "from": "the-isley-brothers",
+  "to": "public-enemy",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1989,
+  "crossLineage": true,
+  "evidence": "Public Enemy's 'Fight the Power' (1989), produced by the Bomb Squad for Spike Lee's 'Do the Right Thing', takes both its title and part of its rhythm track from The Isley Brothers's 1975 song of the same name, as catalogued in sample-credit databases and noted in standard histories of the record.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Isley Brothers",
+      "title": "Fight the Power (Part 1)",
+      "year": 1975
+    },
+    "later": {
+      "artist": "Public Enemy",
+      "title": "Fight the Power",
+      "year": 1989
+    },
+    "whatToListenFor": "The Isleys' original is a smooth, horn-driven funk protest song about censorship on the radio. Public Enemy keeps the title and a fragment of the groove but buries both under the Bomb Squad's usual density, turning a specific, contained complaint into a much broader, louder one."
+  },
+  "explanation": {
+    "age7": "Public Enemy's song 'Fight the Power' borrowed its name and a piece of its music from an older Isley Brothers song with the same title.",
+    "age13": "The Isley Brothers released their own 'Fight the Power' in 1975, a funk song about censored radio. Public Enemy's 1989 song of the same title, made for Spike Lee's film 'Do the Right Thing', reuses part of its groove alongside the dozen-plus other sources the Bomb Squad piled on top.",
+    "adult": "Confirms the Isley Brothers credit this map's e-jamesbrown-publicenemy evidence field already named in passing: the Bomb Squad's 'Fight the Power' collage draws on the Isleys' record for more than its title, per sample-credit databases."
+  },
+  "tags": ["production"]
+}

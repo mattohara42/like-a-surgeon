@@ -1,0 +1,19 @@
+{
+  "type": "machine",
+  "id": "mellotron",
+  "name": "Mellotron",
+  "kind": "instrument",
+  "lineage": "other",
+  "maker": "Streetly Electronics",
+  "releasedYear": 1963,
+  "discontinuedYear": null,
+  "originalPurpose": "A keyboard for the home. Under every key is a strip of recorded tape: a real violin, flute or choir holding a note. Press the key and the tape plays for about eight seconds, then a spring pulls it back. It was sold as a way to have an orchestra in the living room, and was built in Streetly, near Birmingham, on an idea licensed from the American Harry Chamberlin's tape instrument.",
+  "whatActuallyHappened": "Rock bands bought them instead of families. The tapes wobble, the notes run out after eight seconds, and the strings never quite sound like real strings. That slightly haunted, not-quite-right orchestra became the sound of psychedelic and progressive rock from 1967 on. Original production ended in the 1980s, and new Mellotrons are made again today.",
+  "priceStory": "Around 1,000 pounds in 1963, a very large sum. At first that put it with the wealthy households it was marketed to. Bands with record-company money could afford one, and a band that could not hire an orchestra could now fake one.",
+  "hook": "A living-room orchestra made of tape, which rock bands turned into the sound of the uncanny.",
+  "blurb": {
+    "age7": "A keyboard with a tiny tape recording under every key, so each key plays a real violin or flute note.",
+    "age13": "Every key has a strip of tape under it with a real instrument recorded on it. Press the key and the tape plays, for about eight seconds, then springs back. It was meant for rich people's homes. Instead rock bands bought them, because it let them add strings and flutes without hiring an orchestra. The tapes sound a little wobbly and ghostly, and that ghostliness became part of late-1960s rock.",
+    "adult": "Functionally a sampler twenty years early, built from analogue tape and springs. Its limits (the eight-second note, the pitch wobble, the fixed library) are what gave it a character. A real string section cannot sound that fragile. The design was a licensed copy of the Chamberlin, and the two companies' tangled history over the idea is its own story."
+  }
+}

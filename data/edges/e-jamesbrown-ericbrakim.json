@@ -1,0 +1,31 @@
+{
+  "id": "e-jamesbrown-ericbrakim",
+  "from": "james-brown",
+  "to": "eric-b-and-rakim",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1986,
+  "crossLineage": true,
+  "evidence": "'Eric B. Is President' (Zakia, June 1986) samples James Brown's 'Funky President (People It's Bad)' (1974), per Wikipedia's article on the single, which also lists the Honey Drippers and Mountain as sources.",
+  "trackPair": {
+    "earlier": {
+      "artist": "James Brown",
+      "title": "Funky President (People It's Bad)",
+      "year": 1974,
+      "search": "James Brown Funky President"
+    },
+    "later": {
+      "artist": "Eric B. & Rakim",
+      "title": "Eric B. Is President",
+      "year": 1986
+    },
+    "whatToListenFor": "'Funky President' opens with a drum break and then a tight, punchy funk groove. The title of Eric B. & Rakim's single is a joke on its two main sources, 'Funky President' and 'Impeach the President', and the track stitches pieces of Brown's record together with the Honey Drippers' drums. Listen for how little of each source is used: a few bars each, looped, so the pieces lock together into a new groove."
+  },
+  "explanation": {
+    "age13": "The same first single also used a piece of James Brown's 'Funky President'. James Brown is the most sampled artist in hip-hop, and this was one of many early records built from his music.",
+    "adult": "The title joke, a single called 'Eric B. Is President' built from 'Funky President' and 'Impeach the President', is the kind of crate-digger's wit that became standard in sample-based production. Brown's catalogue was the default source of the period, and this edge records one of the records that made Eric B. & Rakim's reputation."
+  },
+  "tags": [
+    "production"
+  ]
+}

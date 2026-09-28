@@ -1,0 +1,31 @@
+{
+  "id": "e-peterock-dilla",
+  "from": "pete-rock",
+  "to": "j-dilla",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 2000,
+  "crossLineage": false,
+  "evidence": "Dan Charnas's biography Dilla Time (2022), based on interviews with Dilla's family and collaborators, describes Pete Rock as the young producer's idol, and describes Dilla calling Pete Rock for inspiration when he was stuck. Pete Rock's influence on Dilla's early work is widely stated in retrospectives. No first-person statement from Dilla was consulted, so this is held at consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Pete Rock and CL Smooth",
+      "title": "They Reminisce Over You (T.R.O.Y.)",
+      "year": 1992
+    },
+    "later": {
+      "artist": "Slum Village",
+      "title": "Fall in Love",
+      "year": 2000
+    },
+    "whatToListenFor": "Both build the beat from a soft, melancholy sample of an older jazz record, filtered warm, with the drums rather than the melody carrying the energy. That much Dilla took from Pete Rock. Now listen to the timing. On 'T.R.O.Y.' the drums sit where you expect them. On 'Fall in Love' the kicks land early or late against the loop, so the beat seems to lean. That lean is where the student stopped copying the teacher."
+  },
+  "explanation": {
+    "age7": "J Dilla's hero was Pete Rock. He started by trying to sound like him and ended up sounding like nobody else.",
+    "age13": "When James Yancey was starting out in Detroit, Pete Rock was the producer he most wanted to be. You can hear it in his early beats, which are warm and jazzy like Pete Rock's. But Dilla's drums began landing slightly off the beat, on purpose, and that feel became his own. His biographer says that later the influence ran both ways.",
+    "adult": "A teacher-to-student edge where the influence is audible and also where it ends. The claim that the influence later became mutual is Charnas's reporting, held at the same consensus tier. The pairing is chosen to put the shared palette and the diverging rhythm side by side."
+  },
+  "tags": [
+    "production"
+  ]
+}

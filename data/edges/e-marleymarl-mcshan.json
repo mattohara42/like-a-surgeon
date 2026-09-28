@@ -1,0 +1,32 @@
+{
+  "id": "e-marleymarl-mcshan",
+  "from": "marley-marl",
+  "to": "mc-shan",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1986,
+  "crossLineage": false,
+  "evidence": "'The Bridge' (1986) was produced by Marley Marl for MC Shan, released on Cold Chillin', and entered the Billboard Hot R&B/Hip-Hop Songs chart, as recorded in standard hip-hop histories and the two men's own accounts.",
+  "trackPair": {
+    "earlier": {
+      "artist": "MC Shan",
+      "title": "The Bridge",
+      "year": 1986
+    },
+    "later": {
+      "artist": "Boogie Down Productions",
+      "title": "The Bridge Is Over",
+      "year": 1987,
+      "search": false
+    },
+    "whatToListenFor": "'The Bridge' is a proud, unhurried borough anthem, MC Shan naming names and places over Marl's beat. 'The Bridge Is Over', KRS-One's answer a year later, borrows the same title and subject and turns it into an attack, faster and meaner, ending with a mocking sung outro aimed straight at Shan and Marl. Same beat-and-borough format, opposite intent."
+  },
+  "explanation": {
+    "age7": "Marley Marl made the music for MC Shan's song about his neighbourhood, Queensbridge. Another rapper thought it was bragging too much and wrote an angry song back.",
+    "age13": "Marley Marl produced MC Shan's 'The Bridge' (1986), telling the story of their Queensbridge crew. Many listeners heard it as claiming Queensbridge invented hip-hop, and the Bronx's KRS-One answered with 'South Bronx' and then 'The Bridge Is Over', starting the Bridge Wars.",
+    "adult": "A straightforward production credit whose consequence, not its content, is the interesting part: this record's reception, not its actual lyrics, is what launched hip-hop's first well-documented borough rivalry."
+  },
+  "tags": [
+    "production"
+  ]
+}

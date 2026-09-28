@@ -1,0 +1,35 @@
+{
+  "id": "marshall-jefferson",
+  "name": "Marshall Jefferson",
+  "sortName": "Jefferson, Marshall",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1985,
+  "activeTo": null,
+  "originCity": "Chicago",
+  "originCountry": "USA",
+  "scenes": [
+    "chicago-house"
+  ],
+  "labels": [
+    {
+      "labelId": "trax",
+      "from": 1986,
+      "to": 1986
+    }
+  ],
+  "keyProducers": [],
+  "hook": "Heard house music at the Music Box, decided it needed a piano, and wrote the genre's first real anthem.",
+  "blurb": {
+    "age7": "Marshall Jefferson heard house music at a club and made a song with a piano in it that became one of the most famous house songs ever.",
+    "age13": "Jefferson was exposed to Ron Hardy's DJ sets at the Music Box in 1983 and started making his own tracks. \"Move Your Body,\" released on Trax Records in 1986, was one of the first house records to use a piano, and its popularity outside Chicago helped the genre travel.",
+    "adult": "\"Move Your Body,\" also released as \"The House Music Anthem,\" circulated on cassette among Chicago dancers for a year before Trax would press it, and Ron Hardy mixed the released version himself. Its piano hook became a genre signature almost overnight, and it is one of the clearest cases in Chicago house of a DJ's live reaction (Hardy playing dubs off reel-to-reel) driving what got recorded."
+  },
+  "signatureTracks": [
+    {
+      "title": "Move Your Body (The House Music Anthem)",
+      "year": 1986,
+      "whyThisOne": "The piano chord that opens the track is often cited as the moment house music got its own instrumental signature, distinct from the disco and electro it grew out of."
+    }
+  ]
+}

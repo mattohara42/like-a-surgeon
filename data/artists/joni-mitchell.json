@@ -1,0 +1,32 @@
+{
+  "id": "joni-mitchell",
+  "name": "Joni Mitchell",
+  "sortName": "Mitchell, Joni",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1968,
+  "activeTo": null,
+  "originCity": "Fort Macleod, Alberta",
+  "originCountry": "Canada",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A Canadian singer-songwriter whose 1970 environmental anthem became, because she personally said yes, a Janet Jackson hit twenty-seven years later.",
+  "blurb": {
+    "age7": "Joni Mitchell writes and sings her own songs. One of her songs from 1970 was used, with her permission, in a Janet Jackson song almost thirty years later.",
+    "age13": "Joni Mitchell, born in Alberta, Canada, became one of the most admired singer-songwriters of the 1960s and 70s, known for albums like 'Blue' (1971) and for lyrics that mixed personal detail with sharp observation. Her 1970 song 'Big Yellow Taxi', about a parking lot paved over a paradise, was sampled for Janet Jackson's 'Got 'til It's Gone' (1997) after Jackson called Mitchell directly to ask permission, which Mitchell gave.",
+    "adult": "Mitchell's songwriting, especially 'Blue' (1971), set a standard for confessional lyric-writing in rock and folk that outlasted the singer-songwriter movement she came up in. 'Big Yellow Taxi' (1970), a comparatively minor single in her own catalogue, became her best-known crossover into hip-hop and R&B production through Janet Jackson's 'Got 'til It's Gone' (1997), a cleared sample she agreed to and sang new vocals for herself."
+  },
+  "signatureTracks": [
+    {
+      "title": "Big Yellow Taxi",
+      "year": 1970,
+      "whyThisOne": "The source of the hook Janet Jackson sampled, and personally sang new vocals for, on 'Got 'til It's Gone'."
+    },
+    {
+      "title": "Blue",
+      "year": 1971,
+      "whyThisOne": "The title track of the album most often cited as her masterpiece."
+    }
+  ]
+}

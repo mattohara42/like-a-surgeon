@@ -1,0 +1,32 @@
+{
+  "id": "paris-musique-concrete",
+  "name": "Paris musique concrète",
+  "type": "scene",
+  "lineage": "other",
+  "yearFrom": 1948,
+  "yearTo": 1958,
+  "city": "Paris",
+  "country": "France",
+  "hook": "French state radio paid engineers to cut recorded noise into music, and invented the working method of every sampler that followed.",
+  "blurb": {
+    "age7": "In Paris, people at the radio station recorded everyday sounds and cut up the tape to make music.",
+    "age13": "After the Second World War, French national radio had a studio, recording equipment and staff with time to experiment. Pierre Schaeffer recorded trains, pans and voices, and cut and looped them into music in 1948. Composers came from all over Europe to try it, including the young Karlheinz Stockhausen in 1952.",
+    "adult": "Musique concrète was made possible by a state broadcaster's equipment and budget, not by a market. Nobody bought these records in numbers. The methods travelled instead: to the Cologne studio through visitors like Stockhausen, and to the BBC through engineers who heard the broadcasts. The years span Schaeffer's first broadcast to the founding of the GRM in 1958, which carried on the work under a new name."
+  },
+  "geopolitics": "Postwar France rebuilt its national broadcaster as a cultural institution, and the Resistance-era Studio d'Essai, where Schaeffer had worked, gave him a studio and a staff. Disc cutters and, from about 1951, tape recorders were expensive and scarce, and were available only to institutions like this one.",
+  "whatWasNew": "Music made from recordings rather than from notation. The sound comes first and the structure is found in it, which is the reverse of how Western composition had worked.",
+  "production": "Disc lathes with locked grooves at first, then magnetic tape, cut and spliced by hand, and machines like the phonogène that changed tape speed and so pitch.",
+  "labels": "Broadcast, not sold. Records came later and in small numbers. The audience was radio listeners, and then composers.",
+  "politics": "A quarrel with the Cologne studio over whether music should start from recorded sound or from pure electronic tones. Mostly a quarrel between composers, though it shaped what each studio made.",
+  "memberIds": [
+    "pierre-schaeffer",
+    "karlheinz-stockhausen"
+  ],
+  "palette": {
+    "ink": "#15120e",
+    "paper": "#ece5d6",
+    "accent": "#b0412e",
+    "accent2": "#6d665a"
+  },
+  "motif": "tape-reel"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-trax-phuture",
+  "from": "trax",
+  "to": "phuture",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1987,
+  "crossLineage": false,
+  "evidence": "Trax released Phuture's 'Acid Tracks' in 1987, with Marshall Jefferson, then in A&R at the label, facilitating the release (Wikipedia's article on the record). The track had been circulating as bootleg copies of Ron Hardy's plays of it, called 'Ron Hardy's Acid Track', before the official release took that name. The earlier side of the pair is dated to the release year because I found no date for Hardy's first plays. In 2020 Trax artists including Larry Heard sued, alleging they had signed away valuable rights for little money (Wikipedia's Trax article).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Phuture",
+      "title": "Acid Tracks, as played by Ron Hardy at the Music Box",
+      "year": 1987,
+      "search": false
+    },
+    "later": {
+      "artist": "Phuture",
+      "title": "Acid Tracks",
+      "year": 1987
+    },
+    "whatToListenFor": "The record is a long TB-303 bassline twisting and squelching over a drum machine, with the filter being opened and closed by hand as it plays. Listen for how the same short pattern keeps changing tone without changing notes. That squelch had been heard only at Ron Hardy's Music Box on bootleg tapes until Trax put it on vinyl and made it available everywhere."
+  },
+  "explanation": {
+    "age13": "Phuture's 'Acid Tracks' was first heard when DJ Ron Hardy played it at his club, and fans made bootleg copies. Trax Records released it properly in 1987. That release spread the squelchy acid house sound around the world.",
+    "adult": "Trax turned a club-only phenomenon into a record anyone could buy, which is how acid house reached Britain in 1987 to 1988. The label's treatment of its artists, including the 2020 suits, is part of the same story and is recorded here rather than left out."
+  },
+  "tags": [
+    "labels"
+  ]
+}

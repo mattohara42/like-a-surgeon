@@ -4,9 +4,9 @@
   "sortName": "May, Derrick",
   "type": "artist",
   "lineage": "electronic",
-  "activeFrom": 1987,
+  "activeFrom": 1985,
   "activeTo": null,
-  "originCity": "Detroit",
+  "originCity": "Belleville, Michigan",
   "originCountry": "USA",
   "scenes": [
     "detroit-techno"
@@ -19,22 +19,22 @@
     }
   ],
   "keyProducers": [],
-  "hook": "Took the same rigid machine grid Atkins built and poured a gospel piano line over it.",
+  "hook": "The second of the Belleville Three, whose \"Strings of Life\" is the record most often used to explain techno's emotional range.",
   "blurb": {
-    "age7": "Derrick May took the hard, robotic beat his friend Juan Atkins was making and put a beautiful piano tune on top of it.",
-    "age13": "May was one of Juan Atkins' closest friends and, with Atkins and Kevin Saunderson, part of what people later called the Belleville Three, three friends from the same Detroit suburb who each built a different strand of techno. May's own records, especially 'Strings of Life' in 1987, kept techno's rigid machine rhythm but added a driving, almost gospel piano part that made it feel less cold.",
-    "adult": "May's importance lies in demonstrating that techno's rigidity was a choice rather than a limitation of the form. 'Strings of Life' pairs an unyielding drum-machine grid with a piano line closer to house and gospel, and the record is widely credited by DJs and critics as bridging Detroit techno with Chicago house's warmer, more vocal dance-music lineage."
+    "age7": "Derrick May made electronic music with real feeling in it, not just machine sounds, and his friends called him techno's \"Innovator.\"",
+    "age13": "May grew up in Belleville, Michigan with Juan Atkins and Kevin Saunderson, and the three of them are called the Belleville Three for starting Detroit techno together. Recording as Rhythim Is Rhythim, May's 1987 track \"Strings of Life\" used string-like synth sounds to make electronic music feel warm instead of cold, on his own label, Transmat.",
+    "adult": "May is usually cast as techno's emotional counterweight to Atkins' conceptual rigor: \"Strings of Life,\" released on his own Transmat in 1987, took the genre's machine palette and pushed it toward the euphoric, string-drenched sound that helped drive the UK's 1987-88 house explosion. Transmat also became a launching label for later Detroit and Chicago-adjacent producers."
   },
   "signatureTracks": [
     {
-      "title": "Strings of Life",
+      "title": "Strings of Life (Rhythim Is Rhythim)",
       "year": 1987,
-      "whyThisOne": "As Rhythim Is Rhythim. The clearest example in the dataset of warmth added onto a rigid machine grid."
+      "whyThisOne": "Synthetic string stabs over a stripped drum pattern; the record most credited with giving techno an emotional register beyond function."
     },
     {
-      "title": "Nude Photo",
+      "title": "Nude Photo (Rhythim Is Rhythim)",
       "year": 1987,
-      "whyThisOne": "As Rhythim Is Rhythim, on May's own Transmat label. A colder, more purely rhythmic counterpart to 'Strings of Life' from the same year."
+      "whyThisOne": "Transmat's first release, and a harder, more functional counterpart to \"Strings of Life\" from the same sessions."
     }
   ]
 }

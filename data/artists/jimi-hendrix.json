@@ -1,0 +1,41 @@
+{
+  "id": "jimi-hendrix",
+  "name": "Jimi Hendrix",
+  "sortName": "Hendrix, Jimi",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1966,
+  "activeTo": 1970,
+  "originCity": "Seattle, Washington",
+  "originCountry": "USA",
+  "scenes": [
+    "swinging-london"
+  ],
+  "labels": [],
+  "keyProducers": [
+    "Chas Chandler"
+  ],
+  "hook": "An American guitarist who had to go to London to become famous, and who changed what an electric guitar could sound like in four years.",
+  "blurb": {
+    "age7": "A guitar player from Seattle who made the electric guitar sound wild and new. He became famous in London.",
+    "age13": "Jimi Hendrix grew up in Seattle and played guitar in other people's backing bands in the United States. In 1966 Chas Chandler of the Animals brought him to London, where he formed the Jimi Hendrix Experience and became a star within months. He used feedback, distortion and effects pedals as part of the music, and recorded guitar parts backwards on tape. Hip-hop producers later sampled him: Cypress Hill looped a guitar lick from 'Are You Experienced?'. He died in London in 1970, aged 27.",
+    "adult": "Hendrix's route to fame ran through London's scene rather than America's, which is why his edge on this map comes from Swinging London. His use of the studio (backwards guitar, stereo movement, effects as composition) makes him a studio-as-instrument figure alongside the Beatles. He is also a sample source for hip-hop. His career as a headliner lasted under four years."
+  },
+  "signatureTracks": [
+    {
+      "title": "Purple Haze",
+      "year": 1967,
+      "whyThisOne": "The fuzz-guitar single that made him famous in Britain."
+    },
+    {
+      "title": "Are You Experienced?",
+      "year": 1967,
+      "whyThisOne": "Backwards guitar, later looped by Cypress Hill."
+    },
+    {
+      "title": "Voodoo Child (Slight Return)",
+      "year": 1968,
+      "whyThisOne": "Wah-wah pedal and feedback as the song itself."
+    }
+  ]
+}

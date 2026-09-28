@@ -1,0 +1,32 @@
+{
+  "id": "e-elpico-kinks",
+  "from": "davies-elpico-amp",
+  "to": "the-kinks",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1964,
+  "crossLineage": true,
+  "evidence": "Dave Davies has described slashing the Elpico's speaker cone with a razor blade many times across decades, in print interviews and on camera, and has named 'You Really Got Me' as the record that carried the sound. Some accounts add that he ran the damaged amp into a larger Vox, which he has also described.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Dave Davies",
+      "title": "Elpico amplifier with a slashed speaker",
+      "year": 1964,
+      "search": false
+    },
+    "later": {
+      "artist": "The Kinks",
+      "title": "You Really Got Me",
+      "year": 1964
+    },
+    "whatToListenFor": "The riff is two chords, a step apart, played over and over. Listen to the edges of each chord rather than the notes: a papery rattle and crackle rides on top of it, loudest as each chord dies away. That is a torn speaker cone flapping. When the song lifts the riff higher, the grit comes along with it. Nothing in the chain was built to sound like that."
+  },
+  "explanation": {
+    "age7": "The guitarist cut his speaker with a razor blade, and that rough sound is the song.",
+    "age13": "Dave Davies wanted his guitar to sound dirtier than any amplifier would let it. So he cut up the speaker. The buzzing, crackling chords on 'You Really Got Me' come straight from that damage, and a lot of loud rock guitar after it chases the same sound with gear built to make it.",
+    "adult": "A rare case where the machine and the event are the same thing: one amplifier, damaged once, on purpose. The later industry of distortion pedals and high-gain amplifiers can be read as a way of selling what Davies got with a razor blade."
+  },
+  "tags": [
+    "technology"
+  ]
+}

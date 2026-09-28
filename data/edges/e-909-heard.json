@@ -1,0 +1,32 @@
+{
+  "id": "e-909-heard",
+  "from": "tr-909",
+  "to": "larry-heard",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1984,
+  "crossLineage": false,
+  "evidence": "The same accounts that document the Juno-60 purchase name the TR-909 as the other half of Heard's setup when he recorded 'Can You Feel It', 'Mystery of Love' and 'Washing Machine' in 1984.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Roland",
+      "title": "TR-909",
+      "year": 1983,
+      "search": false
+    },
+    "later": {
+      "artist": "Mr. Fingers",
+      "title": "Washing Machine",
+      "year": 1986
+    },
+    "whatToListenFor": "The drum machine carries this record almost on its own. Listen to the hi-hats: bright and metallic, ticking in a perfectly even grid over a synthetic kick. The 909's cymbals were short digital recordings, which is why they sound harder and more real than the rest of the kit. Then play 'Can You Feel It', made on the same two machines in the same few days, and hear how differently they can be used."
+  },
+  "explanation": {
+    "age7": "The same drum machine Frankie Knuckles used, in the hands of Larry Heard.",
+    "age13": "Larry Heard's drum machine was a Roland 909, the same model that reached Frankie Knuckles from Detroit that same year. On 'Washing Machine' the 909 is almost the whole song. Comparing it with 'Can You Feel It' shows how one small setup could make very different records.",
+    "adult": "Two Chicago edges from the 909 in the same year, Knuckles and Heard, show the machine arriving by different routes: a DJ's live tool in one case and a bedroom composer's instrument in the other. That pairing is part of why house has both a club lineage and an introspective one."
+  },
+  "tags": [
+    "technology"
+  ]
+}

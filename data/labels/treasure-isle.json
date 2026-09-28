@@ -1,0 +1,20 @@
+{
+  "id": "treasure-isle",
+  "name": "Treasure Isle",
+  "type": "label",
+  "lineage": "dub",
+  "foundedYear": 1962,
+  "closedYear": null,
+  "endUnknown": true,
+  "city": "Kingston",
+  "founders": [
+    "Duke Reid"
+  ],
+  "ownershipStory": "Duke Reid, a former police officer who ran a Kingston liquor store with his wife Lucille, named his sound system and later his record label Treasure Isle after the shop. The label became the home of rocksteady in the mid-1960s and, from 1970, of the first toasting hits by U-Roy. Reid sold Treasure Isle to fellow producer Sonia Pottinger in 1974, shortly before his death from cancer in January 1975; Pottinger kept the catalogue in print through her own label operations. What became of Treasure Isle's ownership after that is not clearly established in the sources checked here.",
+  "hook": "A liquor-store owner's sound system grew into the label that gave rocksteady, and then toasting, their biggest hits.",
+  "blurb": {
+    "age7": "Treasure Isle was a Jamaican record label started by Duke Reid, named after his liquor store. It put out some of the biggest early reggae and toasting records.",
+    "age13": "Duke Reid named his record label Treasure Isle after the liquor store he ran with his wife. The label was central to rocksteady in the mid-1960s and released U-Roy's first hit singles in 1970. Reid sold the label to producer Sonia Pottinger in 1974, not long before he died.",
+    "adult": "Treasure Isle's two eras, Reid's own rocksteady productions and the toasting singles that opened U-Roy's career, both ran through the same small operation before it changed hands in the year before Reid's death, a reminder of how personally these Kingston labels were tied to one producer's ear and one producer's studio time."
+  }
+}

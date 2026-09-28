@@ -1,0 +1,205 @@
+// Content for a node's panel: artist, machine, scene, or label.
+//
+// `ctx` carries the reader's register and the ways out of this panel:
+//   register, nodesById, neighbours, sceneMembers(id),
+//   goNode(id), goEdge(id)
+
+import { COPY, KIND_LABELS, EDGE_TYPE_LABELS } from './copy.js';
+import { lineageColor, lineageName } from '../render/lineages.js';
+import { h, tierSwatch } from './dom.js';
+import { pick } from './registers.js';
+import { youtubeLink } from './links.js';
+
+// A null end means "still going" unless the record says the end is
+// unknown (Q20), which prints as a question mark instead of "now".
+export function yearSpan(from, to, endUnknown = false) {
+  return `${from ?? '?'}–${to ?? (endUnknown ? '?' : 'now')}`;
+}
+
+function heading(key, register) {
+  return h('h3', {}, pick(COPY.headings[key], register));
+}
+
+function metaLine(node) {
+  const r = node.raw;
+  switch (node.kind) {
+    case 'artist':
+      return [[r.originCity, r.originCountry].filter(Boolean).join(', '), yearSpan(r.activeFrom, r.activeTo, r.endUnknown)];
+    case 'machine':
+      return [r.maker, yearSpan(r.releasedYear, r.discontinuedYear, r.endUnknown)];
+    case 'scene':
+      return [[r.city, r.country].filter(Boolean).join(', '), yearSpan(r.yearFrom, r.yearTo, r.endUnknown)];
+    case 'label':
+      return [r.city, yearSpan(r.foundedYear, r.closedYear, r.endUnknown)];
+    default:
+      return [];
+  }
+}
+
+// A button to another record when it exists on the map, plain text when it
+// does not (keyProducers may be plain names; scenes and labels may not be
+// authored yet, A26).
+function nodeRef(id, fallbackText, ctx) {
+  const target = ctx.nodesById.get(id);
+  if (!target) return fallbackText ? h('span', { class: 'chip chip-static' }, fallbackText) : null;
+  return h('button', { type: 'button', class: 'chip', onClick: () => ctx.goNode(target.id) }, target.name);
+}
+
+function chipRow(refs) {
+  const present = refs.filter(Boolean);
+  return present.length ? h('div', { class: 'chips' }, present) : null;
+}
+
+function para(text, cls = 'body') {
+  return text ? h('p', { class: cls }, text) : null;
+}
+
+export function connectionRow(edge, other, ctx) {
+  return h(
+    'button',
+    { type: 'button', class: 'link-row', onClick: () => ctx.goEdge(edge.id) },
+    h('span', { class: 'link-name' }, other.name),
+    h(
+      'span',
+      { class: 'link-meta' },
+      EDGE_TYPE_LABELS[edge.type] ?? edge.type,
+      edge.year ? ` · ${edge.year}` : '',
+      tierSwatch(edge.confidence),
+    ),
+  );
+}
+
+// Shared by an artist's signature tracks and a label's songs-about-it list:
+// a title, an optional year, a line of prose, and a YouTube search link.
+function trackRow(title, year, note, ytQuery, reg, lead = null) {
+  return h(
+    'div',
+    { class: 'track' },
+    h(
+      'div',
+      { class: 't' },
+      lead,
+      `“${title}”`,
+      year ? h('span', { class: 'year' }, ` ${year}`) : null,
+    ),
+    para(note, 'w'),
+    youtubeLink(ytQuery, reg),
+  );
+}
+
+function artistSections(r, ctx) {
+  const reg = ctx.register;
+  return [
+    r.signatureTracks?.length
+      ? [
+          heading('listenTo', reg),
+          r.signatureTracks.map((t) => trackRow(t.title, t.year, t.whyThisOne, `${r.name} ${t.title}`, reg)),
+        ]
+      : null,
+    r.scenes?.length ? [heading('scenes', reg), chipRow(r.scenes.map((id) => nodeRef(id, null, ctx)))] : null,
+    r.labels?.length
+      ? [heading('labels', reg), chipRow(r.labels.map((l) => nodeRef(l.labelId, null, ctx)))]
+      : null,
+    r.keyProducers?.length
+      ? [heading('producers', reg), chipRow(r.keyProducers.map((p) => nodeRef(p, p, ctx)))]
+      : null,
+  ];
+}
+
+function machineSections(r, ctx) {
+  const reg = ctx.register;
+  return [
+    r.originalPurpose ? [heading('whatItWasFor', reg), para(r.originalPurpose)] : null,
+    r.whatActuallyHappened ? [heading('whatHappened', reg), para(r.whatActuallyHappened)] : null,
+    r.priceStory ? [heading('whatItCost', reg), para(r.priceStory)] : null,
+  ];
+}
+
+// The five backing fields are adult-only by schema (SCHEMA.md, Q7): they
+// inform the blurb, which carries the same facts at every level.
+function sceneSections(node, ctx) {
+  const r = node.raw;
+  const reg = ctx.register;
+  const members = ctx.sceneMembers(node.id);
+  const backing = reg === 'adult'
+    ? [
+        ['geopolitics', r.geopolitics],
+        ['whatWasNew', r.whatWasNew],
+        ['production', r.production],
+        ['sceneLabels', r.labels],
+        ['politics', r.politics],
+      ].map(([key, text]) => (text ? [heading(key, reg), para(text)] : null))
+    : [];
+  return [
+    members.length
+      ? [heading('members', reg), chipRow(members.map((m) => nodeRef(m.id, null, ctx)))]
+      : null,
+    backing,
+  ];
+}
+
+function labelSections(r, ctx) {
+  const reg = ctx.register;
+  const founders = Array.isArray(r.founders) ? r.founders : [r.founders].filter(Boolean);
+  return [
+    founders.length ? [heading('founders', reg), para(founders.join(', '))] : null,
+    r.ownershipStory ? [heading('ownership', reg), para(r.ownershipStory)] : null,
+    r.songsAboutLabel?.length
+      ? [
+          heading('songsAboutLabel', reg),
+          r.songsAboutLabel.map((s) => {
+            const artistNode = ctx.nodesById.get(s.artist);
+            const artistName = artistNode ? artistNode.name : s.artist;
+            return trackRow(s.title, s.year, s.note, `${artistName} ${s.title}`, reg, [
+              nodeRef(s.artist, s.artist, ctx),
+              ' — ',
+            ]);
+          }),
+        ]
+      : null,
+  ];
+}
+
+function connectionSections(node, ctx) {
+  const reg = ctx.register;
+  const { outbound, inbound } = ctx.neighbours.of(node.id);
+  if (!outbound.length && !inbound.length) {
+    return [h('h3', {}, pick(COPY.headings.changed, reg)), para(pick(COPY.headings.noConnections, reg), 'note')];
+  }
+  return [
+    outbound.length
+      ? [heading('changed', reg), outbound.map((e) => connectionRow(e, e.to, ctx))]
+      : null,
+    inbound.length
+      ? [heading('changedBy', reg), inbound.map((e) => connectionRow(e, e.from, ctx))]
+      : null,
+  ];
+}
+
+export function renderNodePanel(node, ctx) {
+  const r = node.raw;
+  const reg = ctx.register;
+  const kindSections = {
+    artist: () => artistSections(r, ctx),
+    machine: () => machineSections(r, ctx),
+    scene: () => sceneSections(node, ctx),
+    label: () => labelSections(r, ctx),
+  }[node.kind];
+
+  return h(
+    'article',
+    { class: 'panel-body' },
+    h(
+      'div',
+      { class: 'kicker', style: `color:${lineageColor(node.lineage)}` },
+      `${KIND_LABELS[node.kind] ?? node.kind} · ${lineageName(node.lineage)}`,
+    ),
+    h('h2', {}, node.name),
+    h('div', { class: 'meta' }, metaLine(node).filter(Boolean).join(' · ')),
+    para(r.hook, 'hook'),
+    para(pick(r.blurb, reg)),
+    node.startYear === null ? para(pick(COPY.headings.offMap, reg), 'note') : null,
+    kindSections ? kindSections() : null,
+    connectionSections(node, ctx),
+  );
+}

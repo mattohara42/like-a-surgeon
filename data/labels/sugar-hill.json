@@ -4,14 +4,17 @@
   "type": "label",
   "lineage": "hiphop",
   "foundedYear": 1979,
-  "closedYear": null,
+  "closedYear": 1986,
   "city": "Englewood, New Jersey",
-  "founders": "Sylvia Robinson, Joe Robinson",
-  "ownershipStory": "Founded by Sylvia and Joe Robinson, Sugar Hill released 'Rapper's Delight' in 1979 and 'The Message' in 1982, effectively creating the commercial market for recorded hip-hop. The label became widely known for disputed songwriting credits and unpaid royalties, and several of its artists, including members of Grandmaster Flash and the Furious Five, later sued over compensation. Its exact closing date is not confirmed here and is left null rather than guessed.",
-  "hook": "Made hip-hop a record-store genre, and became one of its earliest cautionary tales about who got paid.",
+  "founders": [
+    "Sylvia Robinson",
+    "Joe Robinson"
+  ],
+  "ownershipStory": "Founded in 1979 by Sylvia and Joe Robinson, who had run All Platinum before it. Sugar Hill put rap on record first and dominated it for about five years, using a house band rather than DJs and assembling acts rather than signing them. It signed a distribution deal with MCA in 1983 that collapsed into litigation. The label filed for Chapter 11 bankruptcy protection in November 1985 and stopped operating around 1986, when the Robinsons sued MCA for fraud. That suit settled in 1990. Rhino bought the masters in 1995. The Englewood studio burned down in 2002.",
+  "hook": "The label that proved rap could be sold, and set the industry's habits around it in the process.",
   "blurb": {
-    "age7": "This company put out some of the very first hip-hop records, including 'Rapper's Delight' and 'The Message.'",
-    "age13": "Sugar Hill Records put out 'Rapper's Delight' in 1979, the record that proved hip-hop could sell outside the Bronx, and 'The Message' in 1982. The label was also known for not paying artists fairly, and some of them later sued over it.",
-    "adult": "Sugar Hill created the commercial template for recorded hip-hop while replicating the same royalty and credit disputes seen elsewhere in this dataset, Trax and King Records among them. Several Furious Five members later took legal action over compensation."
+    "age7": "The record company that made the first rap hit, run by a singer who had been famous twenty years earlier.",
+    "age13": "Sugar Hill worked out how to turn a live Bronx party form into a three-minute product. Instead of recording a DJ, they had a house band replay the music, and instead of signing a real crew they put a group together themselves. It worked: 'Rapper's Delight' sold millions. For about five years Sugar Hill was where rap records came from, then a distribution deal with a bigger company went wrong, the lawyers took over, and the label closed in 1986.",
+    "adult": "Sugar Hill is the first full worked example in this dataset of a label as a causal actor rather than a credit line. Its decisions, house band over turntables, assembled acts over existing crews, and a willingness to push material the artists themselves resisted, shaped both the sound and the authorship conventions of recorded rap. Its collapse, in a distribution dispute with a major, is also the first instance of a pattern the map will hit repeatedly."
   }
 }

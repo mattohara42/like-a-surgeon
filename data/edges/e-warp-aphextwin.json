@@ -1,0 +1,31 @@
+{
+  "id": "e-warp-aphextwin",
+  "from": "warp",
+  "to": "aphex-twin",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1992,
+  "crossLineage": false,
+  "evidence": "Warp opened Artificial Intelligence (July 1992) with 'Polygon Window' by The Dice Man, one of James's aliases. The sleeve and the series' own subtitle described the music as electronic listening music. James went on to release on Warp as Polygon Window (Surfing on Sine Waves, 1993) and as Aphex Twin.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Aphex Twin",
+      "title": "Xtal",
+      "year": 1992
+    },
+    "later": {
+      "artist": "Polygon Window",
+      "title": "Quoth",
+      "year": 1993
+    },
+    "whatToListenFor": "'Xtal' is soft and hazy: a gentle beat, a floating voice, and hiss from the cassette it was made on. 'Quoth', from the Polygon Window album on Warp, keeps the home-made feel but puts it in a harder frame. One pounding, tuneless drum pattern repeats, and the sound is layered like a record made for headphones, not a club. Listen for the difference between a track that happens to be quiet and one released on purpose to be listened to closely."
+  },
+  "explanation": {
+    "age7": "A record label put out Aphex Twin's music and said it was for listening to at home, not for dancing.",
+    "age13": "Warp's Artificial Intelligence compilation told buyers that this electronic music was for listening, not dancing. Aphex Twin's track came first on it, under another name. He then made records for Warp under several names, and the label's framing shaped how people heard him.",
+    "adult": "A label edge under A69: the label's decision to frame this work as listening music changed how it was received, and changed what kind of records the artists went on to make for it. The track pair uses 'Quoth' from Surfing on Sine Waves rather than the AI track because the edge is about the Warp releases that followed."
+  },
+  "tags": [
+    "labels"
+  ]
+}

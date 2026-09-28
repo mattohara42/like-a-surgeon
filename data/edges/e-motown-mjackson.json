@@ -1,0 +1,32 @@
+{
+  "id": "e-motown-mjackson",
+  "from": "motown",
+  "to": "michael-jackson",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1969,
+  "crossLineage": false,
+  "evidence": "'I Want You Back' (1969), the Jackson 5's first single and first number one, was written and produced by Motown's in-house team The Corporation (Freddie Perren, Fonce Mizell, Deke Richards and Berry Gordy). The song was originally developed for Gladys Knight; Gordy heard it, made changes, and reassigned it to the Jackson 5, as documented in Motown's own retrospectives and standard music histories.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Jackson 5",
+      "title": "I Want You Back",
+      "year": 1969
+    },
+    "later": {
+      "artist": "The Jackson 5",
+      "title": "ABC",
+      "year": 1970
+    },
+    "whatToListenFor": "Both records run the same Corporation formula: a driving bassline, call-and-response vocals, and Michael's lead pushed forward in the mix well beyond what an eleven-year-old would normally be given on a major label. Listen for how deliberately the arrangement is built to showcase one specific voice."
+  },
+  "explanation": {
+    "age7": "The record company Motown wrote and built the Jackson 5's first big hit song specially for them, using a team of writers instead of leaving it to just one person.",
+    "age13": "Motown's own songwriting and production team, The Corporation, wrote 'I Want You Back' (1969) for another singer first, then Berry Gordy reworked it and gave it to the Jackson 5 instead. It became their first number one and launched Michael Jackson's career as a lead singer while still a child.",
+    "adult": "A label edge under the A69 convention, but the decision here is internal and creative rather than about distribution or contracts: Motown's staff-songwriter system and Gordy's personal reassignment of a song built for one act to another is what put an eleven-year-old Michael Jackson at the center of a number-one record."
+  },
+  "tags": [
+    "production",
+    "labels"
+  ]
+}

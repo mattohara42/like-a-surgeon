@@ -1,0 +1,30 @@
+{
+  "id": "e-metroplex-saunderson",
+  "from": "metroplex",
+  "to": "kevin-saunderson",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1986,
+  "crossLineage": false,
+  "evidence": "Kevin Saunderson's first record, 'Triangle of Love' by Kreem (Juan Atkins and Kevin Saunderson), was released on Atkins's Metroplex label in 1986 as M-007. Saunderson reissued it in 1987 as KMS 007 once he had his own label (Discogs release listings and artist credits). Saunderson's account of founding KMS after watching Atkins run Metroplex is carried by e-atkins-saunderson.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Model 500",
+      "title": "No UFO's",
+      "year": 1985
+    },
+    "later": {
+      "artist": "Kreem",
+      "title": "Triangle of Love",
+      "year": 1986
+    },
+    "whatToListenFor": "The first Metroplex record and the seventh. 'No UFO's' is Atkins alone. 'Triangle of Love' is the first record Saunderson made, with Atkins, and the 12-inch carries a vocal version, a dub and an instrumental. Play the vocal and the dub one after the other: the same track with the song taken out, so that a DJ gets a tool as well as a tune."
+  },
+  "explanation": {
+    "age13": "Juan Atkins started Metroplex to put out his own records. In 1986 it released the first record Kevin Saunderson made, working with Atkins. A year later Saunderson started his own label, KMS, and put the same record out again there.",
+    "adult": "A label edge rather than a friendship edge: the claim is that Saunderson's first release existed because Atkins's label put it out, and the reissue on KMS shows him taking the model with him. The friendship, and the direct influence, are e-atkins-saunderson."
+  },
+  "tags": [
+    "labels"
+  ]
+}

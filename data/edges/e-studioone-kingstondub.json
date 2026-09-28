@@ -1,0 +1,33 @@
+{
+  "id": "e-studioone-kingstondub",
+  "from": "studio-one",
+  "to": "kingston-dub",
+  "type": "label",
+  "confidence": "consensus",
+  "year": 1968,
+  "crossLineage": false,
+  "evidence": "Studio One's house rhythms, recorded by its in-house session musicians for a flat fee and owned by the label, are widely described in reggae journalism and reference sources as the most re-recorded, or 'versioned', catalogue in Jamaican music, providing much of the raw rhythm-track material Kingston's dub engineers later stripped down and remixed. This is a label-to-scene edge on the pattern A177 set for Trax and the Chicago house scene: a claim about how the scene's records were made, not about one artist's output, held at consensus because the account is a broad, secondary one rather than a single traceable citation.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Studio One house band",
+      "title": "Studio One rhythm sessions",
+      "year": 1963,
+      "search": false
+    },
+    "later": {
+      "artist": "King Tubby",
+      "title": "Dub versions of Studio One rhythms",
+      "year": 1973,
+      "search": false
+    },
+    "whatToListenFor": "Neither side of this pair is one record to search for; it is a claim about supply. Studio One's session players cut rhythm tracks the label then owned outright, and Kingston's dub engineers, working for many different producers over the following decades, kept coming back to that same catalogue as the raw material to strip down, echo out and rebuild."
+  },
+  "explanation": {
+    "age13": "Studio One's musicians recorded rhythm tracks that the label owned and could license out. Dub engineers across Kingston kept reusing and remixing those same rhythms for years afterward, which is part of why the label's back catalogue matters so much to the wider dub scene.",
+    "adult": "The scene's records existed as reusable raw material largely because one label owned an especially deep, especially cheaply acquired catalogue of rhythm tracks. Both facts are the label's decisions, and an edge to the scene rather than to any one dub engineer is the honest shape for a claim about a whole catalogue's role rather than one production credit."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

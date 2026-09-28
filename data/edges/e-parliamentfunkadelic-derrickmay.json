@@ -1,0 +1,28 @@
+{
+  "id": "e-parliamentfunkadelic-derrickmay",
+  "from": "parliament-funkadelic",
+  "to": "derrick-may",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1987,
+  "crossLineage": true,
+  "evidence": "May has described his own music as Hi-Tek Soul, and as George Clinton meeting Kraftwerk in an elevator, a description repeated in Wikipedia's article on him and in many histories of Detroit techno. Where and when he first said it is not established in the sources checked, so the evidence is his repeated self-description, not a dated interview.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Parliament",
+      "title": "Flash Light",
+      "year": 1977
+    },
+    "later": {
+      "artist": "Rhythim Is Rhythim",
+      "title": "Strings of Life",
+      "year": 1987
+    },
+    "whatToListenFor": "'Flash Light' hands its bassline to Bernie Worrell's synthesiser, a funk band letting a machine play the most important part. 'Strings of Life' has no band at all: drum machines and stabbing piano and string chords, rushing forward. Listen for the feeling rather than the instruments. May's point was that his machines were meant to carry the emotion and the funk of records like this, played through Kraftwerk's equipment."
+  },
+  "explanation": {
+    "age13": "Derrick May, one of the three founders of Detroit techno, has described his music as George Clinton meeting Kraftwerk in an elevator: the funk of Parliament-Funkadelic mixed with the machine sound of the German band. Kraftwerk's side is already on the map. This line is Clinton's side.",
+    "adult": "Kraftwerk's influence on Detroit is well represented here. This edge adds the other half of May's own formula, the Detroit funk of Parliament-Funkadelic. It is documented as May's self-description, which is the evidence for influence that matters, but it is a description of an aesthetic, so it does not claim any sample or specific borrowing."
+  },
+  "tags": []
+}

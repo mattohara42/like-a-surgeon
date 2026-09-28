@@ -1,0 +1,20 @@
+{
+  "id": "curtom",
+  "name": "Curtom Records",
+  "type": "label",
+  "lineage": "funk",
+  "foundedYear": 1968,
+  "closedYear": 1980,
+  "city": "Chicago",
+  "founders": [
+    "Curtis Mayfield",
+    "Eddie Thomas"
+  ],
+  "ownershipStory": "Curtis Mayfield and his manager Eddie Thomas founded Curtom in March 1968 so Mayfield could own his own recordings rather than sign them to someone else's label, the same move several other self-directed artists on this map made. The label had its commercial peak with the 1972 'Super Fly' soundtrack, but a string of short-lived distribution deals through the late 1970s, and losses from Mayfield's own film-soundtrack investments as disco displaced the sound Curtom was built on, wore the company down until Mayfield closed it in 1980.",
+  "hook": "Curtis Mayfield's own label, built so he would never again have to hand his masters to someone else.",
+  "blurb": {
+    "age7": "Curtom was Curtis Mayfield's own record label, which he started so he could own his own music instead of giving it to another company.",
+    "age13": "Curtis Mayfield and manager Eddie Thomas started Curtom in 1968 so Mayfield could keep control of his own recordings. It released his most famous work, including the 'Super Fly' soundtrack, before money troubles closed it in 1980.",
+    "adult": "Curtom belongs to this dataset's pattern of Black artists founding their own labels to control their masters, alongside Ariwa, Rockers International, and Kling Klang. Its closure, driven by shifting distribution deals and the commercial risk of Mayfield's own film-scoring ambitions, is a reminder that artist ownership solved one problem, who kept the copyright, without solving the underlying difficulty of running a record company through a changing market."
+  }
+}

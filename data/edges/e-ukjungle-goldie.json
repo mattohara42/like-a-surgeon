@@ -1,0 +1,31 @@
+{
+  "id": "e-ukjungle-goldie",
+  "from": "uk-jungle",
+  "to": "goldie",
+  "type": "scene",
+  "confidence": "documented",
+  "year": 1994,
+  "crossLineage": false,
+  "evidence": "Goldie's Metalheadz club residency and label (founded 1994) grew directly out of the pirate-radio and dubplate ecosystem the wider jungle scene had already built; 'Timeless' (1995) reached the audience it did because that infrastructure, Kool FM's championing of jungle records, club nights, tape-trading, already existed to carry it.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Goldie (as Rufige Kru)",
+      "title": "Terminator",
+      "year": 1992
+    },
+    "later": {
+      "artist": "Goldie",
+      "title": "Inner City Life",
+      "year": 1994
+    },
+    "whatToListenFor": "'Terminator' is scene music: a dubplate built for one DJ's set, its timestretched break more experiment than song. Two years later, the same techniques carry a full vocal and string arrangement into the UK singles chart. The scene's infrastructure, not a change in Goldie's technique, is what let the second record travel so much further than the first."
+  },
+  "explanation": {
+    "age7": "Goldie's music grew out of the same pirate radio stations and clubs that all jungle music came from. That scene helped his song 'Inner City Life' become a hit.",
+    "age13": "Goldie's early jungle records were dubplates played mostly on pirate radio and in clubs. By 1994, the same scene's infrastructure, Kool FM's airplay, dedicated club nights, an audience already primed for jungle, carried his more ambitious 'Inner City Life' onto the UK charts.",
+    "adult": "A scene-to-artist edge in the `e-swinginglondon-hendrix` and `e-britpop-pulp` mould: the scene supplied the distribution and the audience, not the musical idea itself, which Goldie had already been developing since 1992."
+  },
+  "tags": [
+    "production"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-clinton-dre",
+  "from": "george-clinton",
+  "to": "dr-dre",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1992,
+  "crossLineage": true,
+  "evidence": "Dr. Dre's 'Fuck Wit Dre Day (And Everybody's Celebratin')' (from 'The Chronic', 1992) samples the 'bow wow wow, yippee yo, yippee yay' chant from George Clinton's solo single 'Atomic Dog' (1982), as documented on sample-database entries; the track draws on several other Parliament-Funkadelic recordings alongside it.",
+  "trackPair": {
+    "earlier": {
+      "artist": "George Clinton",
+      "title": "Atomic Dog",
+      "year": 1982
+    },
+    "later": {
+      "artist": "Dr. Dre",
+      "title": "Fuck Wit Dre Day (And Everybody's Celebratin')",
+      "year": 1992
+    },
+    "whatToListenFor": "Clinton's original chant floats over a loose, synth-driven groove, half sung and half spoken, more strange than tough. Dre tightens everything around it: a slower, heavier low end, a cleaner beat, and the chant now sitting inside a much harder, more menacing record. The words barely change. The mood around them does completely."
+  },
+  "explanation": {
+    "age7": "Dr. Dre's song uses the famous 'bow wow wow' chant from George Clinton's song 'Atomic Dog'.",
+    "age13": "George Clinton's 1982 solo hit 'Atomic Dog' has a chant that became one of the most sampled hooks in West Coast rap. Dr. Dre built it into 'Fuck Wit Dre Day' (1992), from 'The Chronic', the album that made this heavy, funk-sampling style, called G-funk, the sound of the early 1990s West Coast.",
+    "adult": "One sample among many: 'The Chronic' draws on P-Funk's catalogue across nearly every track, and this edge stands for that whole relationship through its single clearest, most quotable instance."
+  },
+  "tags": [
+    "production"
+  ]
+}
