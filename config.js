@@ -233,6 +233,17 @@ export const CONFIG = {
     sceneFramePaddingPx: 90,
   },
 
+  // The first-run card and its goal chip (reading/welcome.js).
+  welcome: {
+    storageKey: 'lineage.welcome.v1',
+    // How long the "found it" line stays before the chip goes.
+    foundLingerMs: 9000,
+    // Screen padding kept around the opening frame's records, and the
+    // closest the opening view may zoom in.
+    openingPaddingPx: 70,
+    openingMaxScale: 1.3,
+  },
+
   // Search (docs/m3-architecture.md section 6). A linear scan, no index:
   // at the thousand-artist scale that is still well under a frame.
   search: {
