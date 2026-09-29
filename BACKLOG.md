@@ -46,6 +46,15 @@ correct response to a good idea arriving mid-milestone.
   or mainstream-pop batch (Nirvana, Coolio, Madonna) would give it the
   range the idea needs. Build it with the same evidence discipline as
   every other edge, not as an exception to it.
+  **A third anchor landed:** Nirvana joins with `e-weirdal-nirvana`
+  ("Smells Like Nirvana" parodying "Smells Like Teen Spirit"), and also
+  a real, non-parody `e-bowie-nirvana` (their 1993 MTV Unplugged cover
+  of "The Man Who Sold the World"), which connects Nirvana into the map
+  through more than the novelty edge alone. Coolio and Madonna are still
+  waiting; either would round out the thread's range further. Nirvana
+  itself has no scene yet (no Seattle/grunge scene is authored), so its
+  `scenes` is left empty, a natural next scene to write once a second
+  grunge-era artist arrives.
 
 - **Follow the producer (Q21).** Select a producer and see everything
   they touched lit up across the map, or an "Arrange by producer" lane

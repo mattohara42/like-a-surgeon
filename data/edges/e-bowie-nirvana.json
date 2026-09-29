@@ -1,0 +1,31 @@
+{
+  "id": "e-bowie-nirvana",
+  "from": "david-bowie",
+  "to": "nirvana",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "Nirvana performed 'The Man Who Sold the World' (1970) on MTV Unplugged in New York, recorded November 1993 and broadcast and released in 1994; Cobain named it as one of his favorite Bowie songs in interviews around the taping.",
+  "year": 1994,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "David Bowie",
+      "title": "The Man Who Sold the World",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Nirvana",
+      "title": "The Man Who Sold the World",
+      "year": 1994
+    },
+    "whatToListenFor": "Bowie's original is glam-adjacent art rock with a clean, almost detached vocal. Nirvana's version, acoustic guitars and Cobain's rawer, more strained voice, turns the same melody considerably more haunted, recorded only months before his death."
+  },
+  "explanation": {
+    "age7": "Nirvana played a David Bowie song on an acoustic TV special, not long before their singer died.",
+    "age13": "Nirvana covered David Bowie's 'The Man Who Sold the World' on MTV Unplugged in 1993, released in 1994. Many listeners only learned it was a cover afterward, since Nirvana's version became better known than Bowie's original to a new generation.",
+    "adult": "The cover's timing, recorded months before Cobain's death, has shaped how it's heard in hindsight, and it introduced a Bowie deep cut to an audience who mostly knew Nirvana rather than glam rock."
+  },
+  "tags": [
+    "production"
+  ]
+}
