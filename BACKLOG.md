@@ -202,6 +202,7 @@ correct response to a good idea arriving mid-milestone.
   `#4a8cf0`, jazz `#ff9ad6`, blues `#8fc43c`, other `#66758e`. It changes
   the map's identity colours, so it waits for Matt. Applying it is five
   one-line edits in `data/lineages/`.
+  **Applied** (A259) at Matt's request.
 - Reduced-motion handling. All three prototypes animate continuously and
   none of them respect `prefers-reduced-motion`. Whichever direction wins
   needs a still version that loses no information.

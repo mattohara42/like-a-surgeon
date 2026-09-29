@@ -2712,3 +2712,16 @@ small and worth having in front of Matt alongside everything else here.
   is recorded in BACKLOG. It was not applied, because the palette is the
   visual identity Matt chose (design/ 03 Strata), not a tuning value.
   This is analysis only, and no file under `data/lineages/` changed.
+
+- **A259. The colour-vision palette is applied.** Matt approved the
+  candidate from A258. The five lineage colours change in
+  `data/lineages/`: hip-hop `#bd82ff` to `#e0b8ff`, electronic `#5fa8ff`
+  to `#4a8cf0`, jazz `#ff86c8` to `#ff9ad6`, blues `#b4e05a` to
+  `#8fc43c`, and other `#8fa6c8` to `#66758e`. Rock, dub and funk are
+  unchanged. Under the A258 simulation, the closest pair is now 10 under
+  deuteranopia (was 0, hip-hop and electronic), 12 under protanopia (was
+  4, jazz and other) and 17 under tritanopia, against 24 under normal
+  vision. Those gaps are clearer but not wide. Lane titles and lane
+  position remain the primary lineage cue, and colour is the backup.
+  `config.js` keeps `#8fa6c8` for UI greys (fallback and band labels),
+  which are not lineage colours, and the favicon keeps its original blue.
