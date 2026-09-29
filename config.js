@@ -428,6 +428,28 @@ export const CONFIG = {
       releaseMs: 200,
     },
 
+    // Native-node effects (audio/fx.js). A demo's controls are 0..1, and
+    // these set what 1 means.
+    fx: {
+      tapeEcho: {
+        // A step count for the delay time keeps every repeat on the grid.
+        stepsMin: 1,
+        stepsMax: 8,
+        // Below 1, so repeats die away on their own. The tanh stage in the
+        // loop squashes whatever builds up, as tape does.
+        feedbackMax: 0.85,
+        // Where the high-pass into the echo and the low-pass in its loop
+        // may be set, in Hz. Cutting lows keeps the kick out of the
+        // repeats; the loop's low-pass darkens each repeat as tape does.
+        lowCutHz: { min: 20, max: 2000 },
+        highCutHz: { min: 500, max: 12000 },
+        saturationDrive: 1.5,
+        // Tape wobble: a slow sine on the delay time.
+        wowHz: 0.6,
+        wowDepthS: 0.0012,
+      },
+    },
+
     // Main-thread 303 values (the worklet's own are under dsp.VOICE303).
     // From SQUELCH: GATE_FRACTION, NOTE_MIN, NOTE_MAX.
     voice303: {

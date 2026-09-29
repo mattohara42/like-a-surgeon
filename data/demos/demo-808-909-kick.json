@@ -1,0 +1,50 @@
+{
+  "id": "demo-808-909-kick",
+  "title": "The 808's kick against the 909's",
+  "kind": "ab",
+  "params": {
+    "a": {
+      "label": {
+        "age13": "TR-808",
+        "adult": "TR-808"
+      },
+      "pattern": {
+        "bpm": 120,
+        "steps": 16,
+        "parts": {
+          "tr-808": {
+            "bd": "x...x...x...x...",
+            "cp": "....x.......x...",
+            "oh": "..x...x...x...x."
+          }
+        }
+      }
+    },
+    "b": {
+      "label": {
+        "age13": "TR-909",
+        "adult": "TR-909"
+      },
+      "pattern": {
+        "bpm": 120,
+        "steps": 16,
+        "parts": {
+          "tr-909": {
+            "bd": "x...x...x...x...",
+            "cp": "....x.......x...",
+            "oh": "..x...x...x...x."
+          }
+        }
+      }
+    },
+    "note": "Both sides play the same original four-on-the-floor pattern at the same tempo, so the only thing that changes is the machine. Synthesized with SQUELCH's 808 and 909 worklets."
+  },
+  "caption": {
+    "age7": "Same beat, two drum machines. Listen to how the big drum changes.",
+    "age13": "Same beat, same speed, two Roland drum machines. The 808's kick is a round, soft boom. The 909's starts with a hard click and punches, and its open hi-hat is brighter. The 909 is the machine Knuckles played under records in his DJ sets.",
+    "adult": "Only the machine changes between A and B. The 909's kick adds an attack click and a shorter, harder body, and on the real machine the hi-hats and cymbals were samples while the drums were analog circuits. Both kits here are synthesized, including the 909's hats."
+  },
+  "safety": {
+    "maxGain": 0.7
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "demo-tape-echo",
+  "title": "Echo that keeps time",
+  "kind": "fx-chain",
+  "params": {
+    "pattern": {
+      "bpm": 76,
+      "steps": 16,
+      "parts": {
+        "tr-808": {
+          "bd": "........x.......",
+          "rs": "........X.....x.",
+          "ch": "x.x.x.x.x.x.x.x."
+        }
+      }
+    },
+    "dry": {
+      "label": {
+        "age13": "Dry",
+        "adult": "Dry"
+      }
+    },
+    "wet": {
+      "label": {
+        "age13": "With the echo",
+        "adult": "Through the tape echo"
+      }
+    },
+    "chain": [
+      {
+        "fx": "tape-echo",
+        "steps": 3,
+        "lowCutHz": 400,
+        "highCutHz": 2500
+      }
+    ],
+    "controls": [
+      {
+        "target": "tape-echo.feedback",
+        "min": 0,
+        "max": 1,
+        "default": 0.55
+      },
+      {
+        "target": "tape-echo.level",
+        "min": 0,
+        "max": 1,
+        "default": 0.8
+      }
+    ],
+    "note": "An original one-drop pattern (kick and rimshot together on beat three) on the 808 kit, standing in for a band's drummer. The echo is native Web Audio: a delay three sixteenth-notes long, a high-pass on the way in so the kick stays dry, and a low-pass and soft saturation in the feedback loop, which is roughly what a tape echo's repeats do. Not a model of the RE-201's circuit."
+  },
+  "caption": {
+    "age7": "Press the echo button and the drums start answering themselves.",
+    "age13": "Switch the echo in while it plays. Each repeat comes three sixteenth-notes after the hit, so it lands on the beat grid, where a drummer could have played. That is how Tubby used echo: as part of the rhythm. Turn the repeats up to hear it build.",
+    "adult": "A send, not an insert: the dry drums never change, and the echo is added beside them, as a dub engineer would throw a channel into the delay and pull it back. The delay is set to a whole number of steps, so the repeats reinforce the groove instead of blurring it. When the echo is switched out, the repeats already in the loop ring on and fade."
+  },
+  "safety": {
+    "maxGain": 0.6
+  }
+}
