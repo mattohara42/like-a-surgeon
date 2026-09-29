@@ -77,6 +77,18 @@ correct response to a good idea arriving mid-milestone.
   hub. It's a schema, validator, layout and panel change, so it's
   deferred until the data shows it's needed.
 
+- **Golden edges to find.** A handful of edges shimmer faintly gold and the
+  welcome card hints that they are hidden on the map, with a small count of
+  how many the reader has found. Proposed alongside the ripple (A251) and
+  backlogged by Matt. Needs a rule for what counts as golden that does not
+  editorialize, for example documented cross-lineage edges only, which
+  should come back to Matt before any build.
+- **Parallax starfield and node glints.** A multi-layer starfield drifting
+  at several depths as the reader pans, plus a slow twinkle and specular
+  glint on the most connected nodes. Proposed alongside the ripple (A251)
+  and backlogged by Matt. The dust's zoom response (A250) is the small
+  version of the first half.
+
 ## Deferred data
 
 - Jazz and blues beyond what later music traces back to. Both are now
@@ -143,6 +155,10 @@ correct response to a good idea arriving mid-milestone.
   **Update:** the index exists now (`reading/neighbours.js`, M3 step 1). It
   would need moving or re-exporting for `render/` to use it, since the
   graph never imports from `reading/` (A73).
+  **Shipped** as the influence ripple (A251), downstream only, with its own
+  one-direction adjacency built in `render/graph.js` rather than moving the
+  neighbour index. An upstream ripple ("what changed this") is not built.
+  Hover still does not trigger it: selection does.
 - **Thread playback.** `data/threads/` is loaded and unused. The prototypes
   played a thread as a camera tour; M5 owns this properly.
 - **Reduced motion.** `prefers-reduced-motion` now drops the dust layer,

@@ -307,6 +307,30 @@ export const CONFIG = {
     cursorWashMaxContentPx: 220,
   },
 
+  // Transient light (render/sparks.js): the ripple a selected node sends
+  // through what it changed, and the ignition of nodes and edges as the
+  // year cursor reaches them.
+  sparks: {
+    // Live effects at once. Past this, new ones are skipped, not queued.
+    maxLive: 140,
+    // The white at the centre of every spark.
+    hotColor: '#fffaf0',
+    flare: { ringRadiusPx: 72, bloomRadiusPx: 64, coreRadiusPx: 9, ringWidthPx: 2, durationMs: 1500 },
+    pulse: { lengthPx: 56, widthPx: 2.4, glowWidthFactor: 4, glowOpacity: 0.45, durationMs: 900 },
+    ripple: {
+      // Hops downstream from the selected node, the time each hop takes,
+      // and the most edges one ripple lights.
+      maxHops: 3,
+      hopMs: 900,
+      maxEdges: 60,
+    },
+    ignite: {
+      // A cursor jump bigger than this (a click far along the scrubber)
+      // reveals quietly instead of setting off everything it passed.
+      maxStepYears: 3,
+    },
+  },
+
   // How far past the map's content the lanes, axis and floor run before
   // they have faded to nothing (render/depth.js), in content px. At the
   // widest zoom this is about 300 screen px, enough that no edge of the
