@@ -2442,3 +2442,17 @@ small and worth having in front of Matt alongside everything else here.
   0 errors, 44 warnings throughout (caught and fixed a real error along
   the way: `e-weirdal-nirvana` was first written `crossLineage: false`,
   which the validator correctly rejected given the lineage mismatch).
+
+- **A245. Madonna joins, a fourth Weird Al thread anchor, and the source
+  of this project's own repo name.** `e-madonna-weirdal` ("Like a
+  Surgeon" parodying "Like a Virgin") follows the established Weird Al
+  edge pattern (direction runs original-artist-to-Yankovic, type
+  `cover`), `crossLineage: true` since Madonna is filed `funk` (matching
+  the Michael Jackson/Sylvia Robinson precedent for pop and R&B-adjacent
+  artists, since the lineage enum has no pop value) against Yankovic's
+  `other`. Madonna's approval of the parody was straightforward, unlike
+  the Coolio case `BACKLOG.md` now flags as a different, genuinely
+  disputed kind of addition for a future batch. As with recent batches,
+  no live source-verification tool was available this session; these
+  facts come from general knowledge of well-documented pop history.
+  `node tools/validate.js`: 0 errors, 44 warnings throughout.

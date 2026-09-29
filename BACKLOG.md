@@ -50,11 +50,19 @@ correct response to a good idea arriving mid-milestone.
   ("Smells Like Nirvana" parodying "Smells Like Teen Spirit"), and also
   a real, non-parody `e-bowie-nirvana` (their 1993 MTV Unplugged cover
   of "The Man Who Sold the World"), which connects Nirvana into the map
-  through more than the novelty edge alone. Coolio and Madonna are still
-  waiting; either would round out the thread's range further. Nirvana
-  itself has no scene yet (no Seattle/grunge scene is authored), so its
-  `scenes` is left empty, a natural next scene to write once a second
-  grunge-era artist arrives.
+  through more than the novelty edge alone. Nirvana itself has no scene
+  yet (no Seattle/grunge scene is authored), so its `scenes` is left
+  empty, a natural next scene to write once a second grunge-era artist
+  arrives.
+  **A fourth anchor:** Madonna joins with `e-madonna-weirdal` ("Like a
+  Surgeon" parodying "Like a Virgin"), which is also where this
+  project's own repo name comes from. Coolio is still waiting, and his
+  edge (`e-coolio-weirdal`, "Amish Paradise" parodying "Gangsta's
+  Paradise") would be a different kind of addition: the permission
+  story is genuinely disputed, Coolio said publicly he never personally
+  approved it, which is exactly the CLAUDE.md rule 4 case worth a
+  sentence rather than the clean approvals the other three anchors
+  have.
 
 - **Follow the producer (Q21).** Select a producer and see everything
   they touched lit up across the map, or an "Arrange by producer" lane
