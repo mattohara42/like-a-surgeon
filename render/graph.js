@@ -15,6 +15,7 @@ import { createEdgeElement, updateEdgeElement, setEdgeHovered, isBeam } from './
 import { createSubstrateDefs, drawSubstrate, updateSubstrateScale } from './substrate.js';
 import { createEdgeGradients, createHaloGradients, trailGradientId, beamGradientId, colorFor } from './gradients.js';
 import { createDustLayer, createNebulaDefs, drawNebulae } from './atmosphere.js';
+import { createDepthDefs, depthExtent } from './depth.js';
 import { createCursorLayer, createCursorDefs, updateCursor, createTransport } from './transport.js';
 
 function clampYear(year, min, max) {
@@ -26,9 +27,10 @@ function clampYear(year, min, max) {
 // is shared by id rather than instantiated per element -- viewport culling
 // creates and destroys elements constantly while panning, and per-element
 // defs would mean churning the <defs> subtree on every frame.
-function createDefs() {
+function createDefs(layout) {
   const defs = svgEl('defs');
   defs.append(
+    ...createDepthDefs(layout),
     ...createEdgeGradients(),
     ...createHaloGradients(),
     ...createSubstrateDefs(),
@@ -67,6 +69,7 @@ function computeDegreeFactors(nodes, edges) {
 // shrinking to nothing zoomed out or ballooning zoomed in.
 
 function drawAxis(axisG, layout) {
+  const extent = depthExtent(layout);
   const span = layout.maxYear - layout.minYear;
   const step = span <= 40 ? 5 : span <= 100 ? 10 : 20;
   const startYear = Math.ceil(layout.timeScale.year0 / step) * step;
@@ -77,8 +80,8 @@ function drawAxis(axisG, layout) {
         class: 'axis-tick',
         x1: x,
         x2: x,
-        y1: 0,
-        y2: layout.totalHeight,
+        y1: extent.y0 - extent.fade,
+        y2: extent.y1 + extent.fade,
         stroke: CONFIG.colors.axisLine,
       }),
     );
@@ -112,13 +115,20 @@ function drawBands(bandsG, titlesG, layout, onSelectGroup) {
     trackingEm: isGroup ? CONFIG.arrange.titleTrackingEm.group : CONFIG.arrange.titleTrackingEm.lane,
   });
 
-  for (const lane of layout.lanes) {
+  // Bands run past both ends of the axis, and the outermost lanes past the
+  // top and bottom, into the fade (render/depth.js). The floor, when drawn,
+  // is the bottom edge instead.
+  const { fade, x0, x1 } = depthExtent(layout);
+  const lastIndex = layout.lanes.length - 1;
+  layout.lanes.forEach((lane, index) => {
+    const top = index === 0 ? lane.y - fade : lane.y;
+    const bottom = lane.y + lane.height + (index === lastIndex && !layout.substrate ? fade : 0);
     bandsG.appendChild(
       svgEl('rect', {
-        x: originX,
-        y: lane.y,
-        width: layout.totalWidth,
-        height: lane.height,
+        x: x0 - fade,
+        y: top,
+        width: x1 - x0 + fade * 2,
+        height: bottom - top,
         fill: lane.color,
         opacity: 0.024,
       }),
@@ -151,7 +161,7 @@ function drawBands(bandsG, titlesG, layout, onSelectGroup) {
       });
     }
     titlesG.appendChild(label);
-  }
+  });
 
   if (!layout.substrate) return titleSpecs;
 
@@ -258,7 +268,7 @@ export function createGraph(container, data, callbacks = {}) {
   const dust = createDustLayer(container);
 
   const root = svgEl('svg', { class: 'graph-svg', width: '100%', height: '100%' });
-  const defs = createDefs();
+  const defs = createDefs(layout);
   const viewportG = svgEl('g', { class: 'viewport' });
   const nebulaG = svgEl('g', { class: 'nebula-layer' });
   const bandsG = svgEl('g', { class: 'bands-layer' });
@@ -271,7 +281,10 @@ export function createGraph(container, data, callbacks = {}) {
   // a name, and below the lane titles.
   const labelsG = svgEl('g', { class: 'labels-layer' });
   const cursorG = createCursorLayer(layout);
-  viewportG.append(nebulaG, bandsG, floorG, axisG, edgesG, nodesG, labelsG, titlesG, cursorG);
+  // The layers that run past the content, under one fade (render/depth.js).
+  const fieldG = svgEl('g', { class: 'field-layer', mask: 'url(#depth-fade)' });
+  fieldG.append(nebulaG, bandsG, floorG, axisG);
+  viewportG.append(fieldG, edgesG, nodesG, labelsG, titlesG, cursorG);
   root.append(defs, viewportG);
   container.appendChild(root);
 

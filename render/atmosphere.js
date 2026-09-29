@@ -5,7 +5,11 @@
 // thing SVG genuinely handles badly, and none of it is interactive. It
 // parallaxes against the graph's pan, which is what makes the field read
 // as a volume you are looking *into* rather than a plane you are looking
-// across.
+// across. It also answers zoom: motes spread from the centre as the reader
+// zooms in and gather as they zoom out, nearer motes more than farther
+// ones, so pulling back feels like pulling back through space. The field
+// wraps, so gathering in makes it denser rather than leaving the screen
+// edges bare.
 
 import { CONFIG } from '../config.js';
 import { svgEl } from './svg.js';
@@ -42,17 +46,29 @@ export function createDustLayer(container) {
 
   function frame(t) {
     ctx.clearRect(0, 0, width, height);
-    const { parallax, driftAmplitudePx } = CONFIG.atmosphere.dust;
+    const { parallax, driftAmplitudePx, zoomParallax } = CONFIG.atmosphere.dust;
     const ox = (vpRef?.tx ?? 0) * parallax;
     const oy = (vpRef?.ty ?? 0) * parallax;
+    const zoomLog = Math.log((vpRef?.scale ?? CONFIG.zoom.initial) / CONFIG.zoom.initial);
+    const cx = width / 2;
+    const cy = height / 2;
+    const wrap = (value, size) => ((value % size) + size) % size;
     for (const m of motes) {
-      const x = (((m.x + ox * m.z) % width) + width) % width;
+      const spread = Math.exp(zoomLog * zoomParallax * m.z);
       const drift = Math.sin(t / 4000 + m.phase) * driftAmplitudePx;
-      const y = (((m.y + oy * m.z + drift) % height) + height) % height;
+      const u = cx + (m.x - cx) * spread + ox * m.z;
+      const v = cy + (m.y - cy) * spread + oy * m.z + drift;
       const alpha = (0.09 + 0.3 * m.z) * (0.6 + 0.4 * Math.sin(t / 1500 + m.phase * 3));
       ctx.fillStyle = `rgba(175,205,255,${alpha.toFixed(3)})`;
       const size = m.z < 0.6 ? 1 : 1.6;
-      ctx.fillRect(x, y, size, size);
+      // Gathered in (spread under 1), one screen of motes no longer covers
+      // the screen, so the field repeats at its shrunken size. Each depth
+      // shrinks by a different amount, so the repeat never reads as a tile.
+      const tileW = width * Math.min(1, spread);
+      const tileH = height * Math.min(1, spread);
+      for (let x = wrap(u, tileW); x < width; x += tileW) {
+        for (let y = wrap(v, tileH); y < height; y += tileH) ctx.fillRect(x, y, size, size);
+      }
     }
     rafId = requestAnimationFrame(frame);
   }

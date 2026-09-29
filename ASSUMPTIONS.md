@@ -2547,3 +2547,22 @@ small and worth having in front of Matt alongside everything else here.
     `passing` class). This is the actual cause of the "wall of vertical
     lines": long cross-lane edges crossing the view with nothing on screen
     to attach them to. It applies at every zoom, not only on first load.
+
+- **A250. The map's edges fade into the field instead of stopping.** Matt
+  asked for zooming all the way out to feel infinite rather than showing
+  the map's bounding box, and chose that over clamping the zoom. Lane
+  bands, axis ticks, the machine floor and the scene clouds now run
+  `CONFIG.depth.fadePx` past the content on every side, under one SVG mask
+  (`render/depth.js`) that fades them to nothing. One mask rather than one
+  per layer, because a mask repaints with everything under it on every pan
+  frame. Measured in headless Chromium at minimum zoom, `render()`
+  averaged 13.6 to 18.0 ms with it against 16.9 ms without, which is
+  within that environment's noise. The dust layer also answers zoom now
+  (`atmosphere.dust.zoomParallax`): motes spread when zooming in and
+  gather, repeating to fill the screen, when zooming out. That is the
+  "gentle parallax" part of Matt's choice. The fuller multi-layer
+  starfield he backlogged is a separate item. Pan is still unlimited, so a
+  reader can drag the map right off screen into the field. That is
+  consistent with "infinite", but it is noted in BACKLOG in case readers
+  get lost. Numbered A250 because A249 is taken by the welcome card PR,
+  which was open at the same time.
