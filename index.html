@@ -59,6 +59,14 @@
   .edge:not(.lit):not(:hover) .edge-comet-ghost { visibility: hidden; }
   /* Neither end on screen: only passing through, so fainter again. */
   .edge.passing:not(.lit):not(.unborn):not(:hover) { opacity: 0.14; }
+  /* Golden edges (A263) stay findable while quiet, and shimmer. */
+  .edge.golden:not(.lit):not(.unborn):not(:hover) { opacity: 0.75; }
+  .edge-gold { pointer-events: none; animation: gold-shimmer 3.2s ease-in-out infinite; }
+  @keyframes gold-shimmer {
+    0%, 100% { stroke-opacity: 0.18; }
+    50% { stroke-opacity: 0.62; }
+  }
+  .welcome .golden p.body { color: var(--body); font-style: normal; font-family: var(--ui); }
 
   /* Atmosphere. Fixed overlays that never pan, which is what sells the
      idea that you are looking into a volume rather than across a plane. */
@@ -391,6 +399,7 @@
     #panel { transition: none; }
     .node, .node-labels, .edge { transition: none; }
     .dust-layer { display: none; }
+    .edge-gold { animation: none; stroke-opacity: 0.45; }
   }
 </style>
 </head>

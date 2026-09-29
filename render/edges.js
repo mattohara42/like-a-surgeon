@@ -97,8 +97,11 @@ export function isBeam(edge) {
   return edge.from.kind === 'machine' && edge.to.kind !== 'machine';
 }
 
-export function createEdgeElement(edge, onSelect, onHover) {
-  const g = svgEl('g', { class: `edge ${isBeam(edge) ? 'edge-beam' : 'edge-trail'}`, 'data-edge-id': edge.id });
+export function createEdgeElement(edge, onSelect, onHover, golden = false) {
+  const g = svgEl('g', {
+    class: ['edge', isBeam(edge) ? 'edge-beam' : 'edge-trail', golden && 'golden'].filter(Boolean).join(' '),
+    'data-edge-id': edge.id,
+  });
 
   const hitPath = svgEl('path', { class: 'edge-hit', stroke: 'transparent', fill: 'none' });
   g.appendChild(hitPath);
@@ -109,11 +112,14 @@ export function createEdgeElement(edge, onSelect, onHover) {
   // putting machines under the music.
   if (isBeam(edge)) g.appendChild(svgEl('path', { class: 'edge-beam-shape', stroke: 'none' }));
 
-  g.append(
+  g.append(...[
     svgEl('path', { class: 'edge-line', fill: 'none' }),
+    // A golden edge (A263) carries a gold sheen over its own colours, so
+    // the lineage gradient still reads underneath.
+    golden ? svgEl('path', { class: 'edge-gold', fill: 'none' }) : null,
     svgEl('path', { class: 'edge-comet-ghost', fill: 'none' }),
     svgEl('path', { class: 'edge-comet', fill: 'none' }),
-  );
+  ].filter(Boolean));
 
   g.addEventListener('click', () => onSelect(edge));
   g.addEventListener('mouseenter', () => onHover(edge, true));
@@ -172,6 +178,16 @@ export function updateEdgeElement(g, edge, anchors, scale, gradientIds) {
     'stroke-linecap': 'round',
     'stroke-opacity': baseOpacity,
   });
+
+  const gold = g.querySelector('.edge-gold');
+  if (gold) {
+    setAttrs(gold, {
+      d,
+      stroke: CONFIG.golden.color,
+      'stroke-width': baseWidth * CONFIG.golden.widthFactor,
+      'stroke-linecap': 'round',
+    });
+  }
 
   const comet = g.querySelector('.edge-comet');
   const ghost = g.querySelector('.edge-comet-ghost');

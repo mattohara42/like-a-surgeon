@@ -116,9 +116,22 @@ async function main() {
     showProduced: (id) => graph.showTouched(id, producedBy(id)),
   });
 
+  // Golden edges (A263): the documented crossings between lineages that
+  // reach furthest across time, earlier record to later record. A rule,
+  // not a choice, so nothing here is editorial; ties break by id so the
+  // set is stable between loads.
+  const goldenIds = new Set(
+    data.edges
+      .filter((e) => e.confidence === 'documented' && e.crossLineage && Number.isFinite(e.leapYears))
+      .sort((a, b) => b.leapYears - a.leapYears || a.id.localeCompare(b.id))
+      .slice(0, CONFIG.golden.count)
+      .map((e) => e.id),
+  );
+
   const welcome = createWelcome(goalEl, {
     nodesById,
     edgesById,
+    goldenIds,
     openCard: () => panel.open({ kind: 'welcome', id: 'welcome' }),
   });
 
@@ -263,6 +276,7 @@ async function main() {
       // Only the first build frames the way in. A later rebuild without a
       // camera (Arrange by) re-fits the whole map, as it always has.
       openingFrameIds: opening ? OPENING_FRAME_IDS : [],
+      goldenIds,
       // The graph has already flown the camera; the panel only opens.
       onSelectNode: (node) => panel.open({ kind: 'node', id: node.id }),
       onSelectEdge: (edge) => panel.open({ kind: 'edge', id: edge.id }),

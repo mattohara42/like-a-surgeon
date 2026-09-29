@@ -320,6 +320,15 @@ export const CONFIG = {
     cursorWashMaxContentPx: 220,
   },
 
+  // Golden edges (A263): the documented cross-lineage edges that reach
+  // furthest across time, record to record. `count` of them shimmer gold
+  // for the reader to find.
+  golden: {
+    count: 7,
+    color: '#f3dfa6',
+    widthFactor: 1.8,
+  },
+
   // Transient light (render/sparks.js): the ripple a selected node sends
   // through what it changed, and the ignition of nodes and edges as the
   // year cursor reaches them.

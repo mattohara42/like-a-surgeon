@@ -181,6 +181,15 @@ export const COPY = {
       },
     },
     skip: { age13: 'Just let me explore', adult: 'Explore on my own' },
+    golden: {
+      heading: { age13: 'Golden threads', adult: 'Golden threads' },
+      hint: {
+        age13: 'A few lines on the map shimmer gold. They are the longest leaps here: one record reaching decades forward into a different kind of music. Open a gold line to collect it.',
+        adult: 'Gold lines mark the longest documented leaps between lineages, measured from the earlier record to the later one. Open one to collect it.',
+      },
+      found: { age13: 'found', adult: 'found' },
+      flash: { age13: 'Golden thread collected', adult: 'Golden thread collected' },
+    },
   },
 
   links: {
