@@ -403,6 +403,16 @@ export const CONFIG = {
     shuffleMaxFraction: 0.3,
     scheduler: { tickMs: 25, lookaheadS: 0.12 },
 
+    // Main-thread 303 values (the worklet's own are under dsp.VOICE303).
+    // From SQUELCH: GATE_FRACTION, NOTE_MIN, NOTE_MAX.
+    voice303: {
+      // A note without a slide releases this far through its step, which
+      // is the 303's short, plucked articulation.
+      gateFraction: 0.6,
+      noteMin: 20,
+      noteMax: 72,
+    },
+
     // The master chain every sound passes through (docs/m4-architecture.md
     // section 4): input bus -> limiter -> volume -> safety -> mute ->
     // speakers.

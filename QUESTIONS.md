@@ -4,6 +4,25 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
+- **Q30. A source for the Planet Rock melody.** The A/B demo is to play
+  the melody 'Planet Rock' shares with 'Trans-Europe Express' (Q26). I
+  cannot write it note for note from a source, so the demo is a draft
+  (A270). Options: (a) **Recommended.** Matt names a published score or
+  transcription, or plays the line into a note list, and the demo is
+  built from that. (b) Keep it a draft until one turns up, and let
+  another demo take its place in the ten. The two M1 tempos (124 and
+  130 bpm) also need a source, or should be removed.
+
+- **Q31. Is the 808 kick "tuned"?** `machines/tr-808.json` says the kick
+  "could be tuned so long it became a bass note" and calls it "the
+  tunable long-decay kick". The 808's bass drum has level, tone and
+  decay controls and no tuning control (the 909's has one). Tuned 808
+  kicks came later, from samplers and modifications. Options: (a)
+  **Recommended.** Reword to "a kick whose decay could be set so long it
+  became a bass note", and mention that later producers tuned sampled
+  808 kicks, if a source supports it. (b) Keep "tuned" in the loose
+  sense of "adjusted". The step 3 demo caption already says decay.
+
 - **Q25 to Q29. M4 sign-off.** Five questions gate the audio engine. The
   full text, with options and a recommendation for each, is in
   `docs/m4-architecture.md` section 10:

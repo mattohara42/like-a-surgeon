@@ -182,6 +182,12 @@ an unresolved `demoId` does now.
 Adding a demo is still one file, plus the `demoId` on its edge or machine.
 No player code changes unless a demo needs a new effect or machine.
 
+**Built in step 3 (A270).** The format as built is in `data/SCHEMA.md`
+under "demo". Two differences from the sketch above: every control value
+is 0..1 in the data, converted by `audio/instruments.js`, and a demo can
+be `"status": "draft"` with a `pending` reason when it cannot play yet
+(the Planet Rock A/B, Q30).
+
 ## 6. The demo block and visual feedback
 
 `reading/demoBlock.js` takes the place of the "arrives with the audio

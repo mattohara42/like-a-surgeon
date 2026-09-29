@@ -229,6 +229,14 @@ correct response to a good idea arriving mid-milestone.
 
 ## Observed problems
 
+- **SQUELCH: the 808 kick's decay knob gives a click (A270).**
+  `js/worklets/drum808.js` reads `params.decay` for the kick as
+  milliseconds, while `js/panelDrum.js` sends every knob as 0..1, so any
+  decay setting gives a kick of about 2 ms. The oh and cy lanes convert
+  0..1 to their range; the kick does not. Fix in SQUELCH (convert with
+  `decayMinMs`/`decayMaxMs` as the other lanes do), then re-port and
+  drop the workaround in `audio/instruments.js`.
+
 - **Inline DSP literals in the ported worklets (A268).** SQUELCH's
   drum and 303 processors carry a handful of unnamed numbers in their
   render code: mix weights, filter corners, and the default hit level.

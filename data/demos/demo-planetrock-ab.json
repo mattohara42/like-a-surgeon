@@ -2,6 +2,8 @@
   "id": "demo-planetrock-ab",
   "title": "One melody, two records",
   "kind": "ab",
+  "status": "draft",
+  "pending": "Needs the shared melody as notes from a sourced transcription before it can play (Q30). The two tempos in params were written in M1 and are unverified.",
   "params": {
     "a": {
       "label": "1977 tempo and timbre",

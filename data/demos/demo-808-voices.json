@@ -3,29 +3,46 @@
   "title": "The three sounds everyone stole",
   "kind": "machine-voice",
   "params": {
-    "voices": [
-      "kick",
-      "snare",
-      "clap",
-      "cowbell",
-      "hat"
+    "machine": "tr-808",
+    "pads": [
+      "bd",
+      "sd",
+      "cp",
+      "cb",
+      "ch"
     ],
-    "controls": {
-      "kickTuning": [
-        30,
-        120
-      ],
-      "kickDecay": [
-        0.1,
-        2
-      ]
+    "controls": [
+      {
+        "target": "bd.decay",
+        "min": 0,
+        "max": 1,
+        "default": 0.4
+      },
+      {
+        "target": "bd.tone",
+        "min": 0,
+        "max": 1,
+        "default": 0.5
+      }
+    ],
+    "pattern": {
+      "bpm": 118,
+      "steps": 16,
+      "parts": {
+        "tr-808": {
+          "bd": "x.....x.x.......",
+          "cp": "....x.......x...",
+          "cb": "..x....x..x...x.",
+          "ch": "x.x.x.x.x.x.x.x."
+        }
+      }
     },
-    "note": "Synthesized recreation. Kick is a tuned sine with a fast pitch envelope, snare a tuned body plus filtered noise, clap a burst of noise gated three times then a tail."
+    "note": "Synthesized recreation (SQUELCH's 808 worklet). The beat is an original electro-style pattern, not taken from any record. The kick is a sine with a fast pitch drop, the snare a tuned body plus filtered noise, the clap a burst of noise gated three times then a tail."
   },
   "caption": {
     "age7": "Press the buttons. These are the drum sounds from a machine, not a real drum kit.",
-    "age13": "Turn the kick tuning down and the decay up. It stops being a drum and becomes a bass note. That single trick is most of hip-hop's low end.",
-    "adult": "Synthesized approximation of the TR-808 voice architecture. The tunable long-decay kick is the specific parameter that reframed the machine's perceived weakness as its value."
+    "age13": "Turn the kick's decay all the way up. It stops sounding like a drum hit and rings on like a bass note. That trick is behind a lot of hip-hop's low end.",
+    "adult": "Synthesized approximation of the TR-808 voice architecture. The 808's kick has tone and decay controls but no tuning; the long decay is the specific parameter that reframed the machine's perceived weakness as its value."
   },
   "safety": {
     "maxGain": 0.7

@@ -206,21 +206,64 @@ tags            ["production","labels","politics","technology"] for overlays
 
 ## demo
 
-A synthesized, in-browser demonstration. No audio files, ever.
+A synthesized, in-browser demonstration. No audio files, ever. Checked by
+`tools/demoSchema.js` (M4, docs/m4-architecture.md section 5).
 
 ```
 id, title, kind
 kind is one of:
-  "machine-voice"   trigger and tweak a synthesized recreation
+  "machine-voice"   trigger and tweak a synthesized recreation   (playable)
+  "ab"              two patterns, switchable mid-playback          (playable)
   "fx-chain"        dry stem, then the same stem through a processing chain,
-                    switchable live
-  "pattern"         a rhythmic or melodic pattern on synthesized voices
-  "ab"              two patterns or timbres, switchable mid-playback
+                    switchable live                                (M4 step 5)
+  "pattern"         a rhythmic pattern straight, then chopped      (M4 step 5)
   "morph"           a sequence that transforms from one era's sound to another
-params            kind-specific, engine-defined
+                                                                   (M5)
+params            kind-specific, below
 caption           three registers, what to listen for
-safety            { maxGain }    a kid is wearing headphones
+safety            { maxGain }    above 0, at most 1: a kid is wearing headphones
+status            optional, "draft": planned but cannot play yet. A draft
+                  needs `pending`, a sentence saying what it waits for, and
+                  its params are not checked.
+note              optional, prose for maintainers: how it is synthesized
 ```
+
+machine-voice params:
+
+```
+machine     a machine id that has a player: tr-808, tr-909, tb-303
+            (audio/instruments.js)
+pads        drum machines only, optional: lanes to show as buttons, e.g.
+            ["bd", "sd", "cp"]
+controls    optional: [{ target, min, max, default }]. target is
+            "lane.knob" on a drum machine ("bd.decay"; every lane has
+            "level") or a parameter name on the 303 ("cutoff"). Values are
+            0..1; the player converts to the machine's own units.
+pattern     optional on a drum machine that has pads, required otherwise
+```
+
+ab params:
+
+```
+a, b        each { label (register object), pattern }
+```
+
+A pattern (audio/pattern.js):
+
+```
+bpm         60 to 200
+steps       16 (the scheduler loops at that length)
+parts       { machineId: part }
+  drum part     { lane: "x...X..." }  one character per step:
+                "." rest, "x" hit, "X" accented hit
+  303 part      { notes: [45, null, ...], accent: "X...", slide: "..s." }
+                one MIDI note (20 to 72) or null per step. A slide on step
+                N glides into step N+1. A rest cannot carry either flag.
+```
+
+Patterns and melodies here are original unless the demo says otherwise.
+A demo that reproduces a specific record's melody needs a sourced
+transcription (CLAUDE.md accuracy rules).
 
 ## thread
 
