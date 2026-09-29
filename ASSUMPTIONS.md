@@ -2512,3 +2512,28 @@ small and worth having in front of Matt alongside everything else here.
   graph rather than added a genuine gap-fill. As with recent batches, no
   live source-verification tool was available this session.
   `node tools/validate.js`: 43 warnings, unchanged.
+
+- **A251. The influence ripple and timeline ignition.** Matt asked for
+  "something to sparkle or shine" and picked two of four proposals (the
+  other two went to BACKLOG). Both live in `render/sparks.js`, a layer of
+  one-shot effects above the markers and below the names.
+  - Ripple: selecting a node, by click or from a panel link, runs a pulse
+    of light down each of its outgoing edges, and each target flares as
+    the pulse arrives, out to `sparks.ripple.maxHops` hops. Downstream only,
+    because "what did this change" is the question the map is built
+    around. It only travels edges the year cursor has reached, so it never
+    runs ahead of the reader's year, and each record lights once.
+  - Ignition: when the year moves forward by at most
+    `sparks.ignite.maxStepYears` (playing, stepping, or dragging the
+    scrubber slowly), every on-screen node the cursor reached flares and
+    every on-screen edge it reached pulses once. A bigger jump reveals
+    quietly, so one click far along the scrubber does not set off decades
+    at once. Moving backwards never ignites anything.
+  - No effect plays under `prefers-reduced-motion`, and `sparks.maxLive`
+    caps live effects: past it, new ones are skipped rather than queued.
+  - The pulse's glow is a wide low-opacity stroke under a narrow white one
+    rather than a blur filter, to keep it cheap during a camera flight.
+  - This is new motion ahead of M6's "transitions" polish, logged as a
+    feature Matt asked for mid-milestone. Checked only in headless
+    Chromium by freezing the animations at set times. How it feels at
+    speed needs Matt's eyes in a real browser.
