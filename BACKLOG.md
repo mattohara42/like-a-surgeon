@@ -229,6 +229,13 @@ correct response to a good idea arriving mid-milestone.
 
 ## Observed problems
 
+- **Inline DSP literals in the ported worklets (A268).** SQUELCH's
+  drum and 303 processors carry a handful of unnamed numbers in their
+  render code: mix weights, filter corners, and the default hit level.
+  They were kept so the port matches upstream. Name them in SQUELCH's
+  `CFG` first, then re-port into `CONFIG.audio.dsp`, so the two repos
+  do not drift.
+
 - ~~`render/loader.js` loads every record before anything renders.~~
   **Fixed** (A235): startup loads a skeleton index and each record's full
   text loads when its panel opens. Still open: the time from click to text

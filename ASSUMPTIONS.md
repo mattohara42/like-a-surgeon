@@ -2868,3 +2868,31 @@ small and worth having in front of Matt alongside everything else here.
   processor file self-contained (no imports, CONFIG values passed in
   through `processorOptions`), and has `tools/bundle.js` inline them as
   data: URLs. Firefox and Safari are untested here (Q27).
+
+- **A268. M4 step 1: how the SQUELCH port reaches CONFIG.** Four
+  choices, made while porting:
+  - Worklets get their constants as a `const CFG = {…}` line prepended
+    to their source (`audio/workletSource.js`), not through
+    `processorOptions` as the M4 plan first said. The 303 reads its
+    parameter ranges when the module loads, before any node exists, so
+    `processorOptions` would arrive too late.
+  - `CONFIG.audio.dsp` keeps SQUELCH's key names (`VOICE303`,
+    `CUTOFF_MAX_HZ`) instead of the camelCase the rest of CONFIG uses.
+    The DSP files then differ from upstream by their import lines only,
+    so a fix made in SQUELCH can be carried over by diff.
+  - Only the values the worklets and scheduler read came across. The
+    303's piano-roll, sequencer and UI values stay in SQUELCH until a
+    demo needs them.
+  - The DSP keeps a few inline literals from SQUELCH (mix weights such
+    as 0.6 and 0.8, a 1 kHz snare noise filter, the default hit level
+    0.8). CLAUDE.md says no magic numbers in logic. Moving them would
+    make the ported files diverge from upstream, and the SQUELCH tests
+    check the current behaviour. Logged in BACKLOG "Observed problems"
+    rather than changed.
+
+  The four SQUELCH tests run under `npm test` and in CI. SQUELCH's 303
+  test also compared against its frozen M0 spike, which was not ported.
+  A deliberate break (accent boost set to 0) makes the 303 test fail
+  with exit 1, so the harness does catch regressions. In headless
+  Chromium from file://, all three assembled worklets load from data:
+  URLs and render finite, audible output.
