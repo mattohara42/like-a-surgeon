@@ -56,7 +56,8 @@ line from him settles it (Q25).
 ```
 audio/
   engine.js      the one AudioContext, master chain, unlock on first press, mute, volume
-  worklets.js    registers worklet modules: by path in dev, by data: URL in the release
+  worklets.js    registers worklet modules, always from a data: URL (section 3)
+  workletSource.js  assembles each worklet's source text: CFG prelude, helpers, processor
   scheduler.js   SQUELCH's lookahead scheduler, CONFIG instead of CFG
   kits.js        wraps the 808 and 909 worklets as step-playable instruments
   voice303.js    wraps the 303 worklet: notes, slides, accents, knob params
@@ -68,9 +69,10 @@ audio/
     technique.js
     pattern.js
   worklets/
-    voice303.proc.js   the processors themselves, self-contained (section 3)
+    voice303.proc.js   the processors themselves, with no imports (section 3)
     drum808.proc.js
     drum909.proc.js
+    dsp-utils.proc.js  noise and filter helpers shared by the two drum machines
 reading/
   demoBlock.js   the demo UI inside a panel: play/stop, A/B, sliders, caption
 ```
@@ -95,18 +97,22 @@ processor loaded three ways:
 So the release copy has to hand each worklet to `addModule` as a
 `data:` URL. The design:
 
-- Each processor file is **self-contained**: no `import`. SQUELCH's
-  worklets import its `config.js`. The port moves those values into
-  `CONFIG.audio` and passes them in through `processorOptions` when the
-  node is created, so CONFIG stays the single home for tuning values and
-  the DSP code does not change.
-- In dev, `audio/worklets.js` passes the file path, and the dev server
-  serves it like any other file.
-- `tools/bundle.js` reads each `audio/worklets/*.proc.js` as text and
-  writes `window.LINEAGE_WORKLETS = { name: 'data:text/javascript,…' }`
-  into the release. `audio/worklets.js` uses that map when it exists.
-  This is about thirty lines of bundler, the same kind of change the
-  data and code flattening already needed.
+- Each processor file has **no `import`**. SQUELCH's worklets import its
+  `config.js`. The port moves those values into `CONFIG.audio.dsp`, and
+  `audio/workletSource.js` prepends them to the processor's text as
+  `const CFG = {…}`, followed by the shared helpers for the drums. CONFIG
+  stays the single home for tuning values, and the DSP code does not
+  change. (This plan first said `processorOptions`. That cannot work,
+  because the 303 reads its parameter ranges when the module loads,
+  before any node exists. Built in step 1, A268.)
+- Every mode loads the same assembled text as a data: URL. Only where the
+  file text comes from differs: in dev `audio/worklets.js` fetches the
+  files from the dev server, in the release `tools/bundle.js` inlines
+  them, and the Node tests read them from disk.
+- `tools/bundle.js` writes the file texts into the release, and
+  `audio/worklets.js` uses them when they exist. This is about thirty
+  lines of bundler, the same kind of change the data and code flattening
+  already needed.
 
 **Not tested:** Firefox and Safari. Only Chromium is installed here. Both
 support AudioWorklet and data: URLs, but I have not seen this path work
@@ -245,7 +251,10 @@ the dispute with Kraftwerk's publishers was settled.
   through an `OfflineAudioContext` for two seconds, then asserts that
   the output is not silent, that no sample exceeds `CONFIG.audio.peakCeiling`,
   and that the data: URL path loads. The same check runs against
-  `dist/` from file://.
+  `dist/` from file://. An offline render can finish before port
+  messages reach the processor. In the step 1 smoke test an unwaited
+  render came back silent, and a 200 ms wait fixed it. A fixed wait is
+  fragile, so step 2 has to find a signal to wait on instead.
 - **By ear:** Matt's. No automated check can say the 909 sounds like a
   909.
 
