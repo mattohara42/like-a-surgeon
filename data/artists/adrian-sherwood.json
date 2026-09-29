@@ -9,7 +9,13 @@
   "originCity": "London",
   "originCountry": "UK",
   "scenes": [],
-  "labels": [],
+  "labels": [
+    {
+      "labelId": "on-u-sound",
+      "from": 1979,
+      "to": null
+    }
+  ],
   "keyProducers": [],
   "hook": "A London teenager who took the Jamaican dub studio's tricks and built a British label out of them.",
   "blurb": {

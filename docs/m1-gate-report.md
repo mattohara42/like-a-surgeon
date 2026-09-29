@@ -8,11 +8,11 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 129 | 120 | met |
+| artists | 131 | 120 | met |
 | machines | 31 | 25 | met |
 | scenes | 20 | 20 | met |
-| labels | 30 | 30 | met |
-| edges | 255 | 350 | 73% |
+| labels | 31 | 30 | met |
+| edges | 257 | 350 | 73% |
 | threads | 2 | 5 | 40% |
 | crossLineageEdges | 99 | 60 | met |
 | edgesWithDemo | 5 | 30 | 17% |
@@ -27,8 +27,8 @@ Every node type, since machines, scenes and labels carry a lineage too.
 | electronic | 48 |
 | rock | 37 |
 | other | 24 |
+| dub | 21 |
 | funk | 21 |
-| dub | 18 |
 | jazz | 7 |
 | blues | 1 |
 
@@ -40,7 +40,7 @@ Artists alone:
 | rock | 24 |
 | electronic | 22 |
 | funk | 15 |
-| dub | 11 |
+| dub | 13 |
 | other | 8 |
 | jazz | 7 |
 
@@ -50,7 +50,7 @@ Artists alone:
 |---|---:|
 | direct | 57 |
 | technological | 47 |
-| production | 41 |
+| production | 43 |
 | label | 40 |
 | sample | 34 |
 | scene | 28 |
@@ -62,7 +62,7 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 185 |
+| documented | 187 |
 | consensus | 69 |
 | asserted | 1 |
 
@@ -236,126 +236,126 @@ Evidence: The Sex Pistols and the Clash are the two foundational bands of the 19
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 254 edges that carry one.
+Drawn with seed 1 from the 256 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-kraftwerk-warp`
+### 1. `e-knuckles-atkins`
 
-Kraftwerk, "Autobahn" (1974) to Various Artists, "Artificial Intelligence" (1992)
+Frankie Knuckles, "Warehouse-era DJ sets" (1982) to Model 500 (Juan Atkins), "No UFOs" (1985)
 
-'Autobahn' is on the compilation's own cover, propped against the android's hi-fi. Listen to how far the series carries that record's idea, electronic music made for sitting and listening rather than dancing, into the early-90s British bedroom-producer sound of Aphex Twin and Autechre.
+Detroit techno's four-on-the-floor structure owes something to house records like Knuckles' sets reaching Detroit via radio and record pools; listen for how close the underlying drum pattern is, even as the two genres' moods diverge sharply.
 
-### 2. `e-eps16-rza`
+### 2. `e-marshall-who`
 
-Ensoniq, "EPS-16 Plus, sixteen-bit keyboard sampler" (1990) to Wu-Tang Clan, "C.R.E.A.M." (1993)
+Marshall, "JTM45, and the 100-watt version built for Townshend" (1965) to The Who, "My Generation" (1965)
 
-Listen to the length of the loop. The piano phrase in 'C.R.E.A.M.' runs for bars, a whole musical sentence repeating, which the SP-1200's ten seconds made hard. The sound is also cleaner at the top, without the SP's crunch, though RZA kept it dusty and dark. That's the machine allowing the long, sad phrase to become the song's whole mood.
+Skip to the last stretch of the song, where it stops behaving like a song. The guitar howls with feedback, notes hang on far longer than a string alone would let them, and the drums crash around underneath. Feedback like that needs a guitar held near a very loud amplifier. The Who built their live show on that volume, and this record brings it into the studio.
 
-### 3. `e-clinton-dre`
+### 3. `e-pistols-clash`
 
-George Clinton, "Atomic Dog" (1982) to Dr. Dre, "Fuck Wit Dre Day (And Everybody's Celebratin')" (1992)
+Sex Pistols, "Anarchy in the U.K." (1976) to The Clash, "White Riot" (1977)
 
-Clinton's original chant floats over a loose, synth-driven groove, half sung and half spoken, more strange than tough. Dre tightens everything around it: a slower, heavier low end, a cleaner beat, and the chant now sitting inside a much harder, more menacing record. The words barely change. The mood around them does completely.
+Both are built from the same three-chord urgency, but listen to how directly "White Riot" addresses a specific real event (the 1976 Notting Hill Carnival riot) where "Anarchy in the U.K." stays in the realm of general provocation.
 
-### 4. `e-stylophone-bowie`
-
-Dubreq, "Stylophone" (1968) to David Bowie, "Space Oddity" (1969)
-
-Listen in the gaps between the sung lines for a thin, reedy, buzzing melody. It plays one note at a time, with no chords and no warmth. It is exactly the sound of the toy, and it is placed at the centre of a record about a man alone in space. The cheapness is part of what makes it sound lonely.
-
-### 5. `e-jamesbrown-parliamentfunkadelic`
-
-James Brown, "Say It Loud - I'm Black and I'm Proud" (1968) to Parliament, "Mothership Connection" (1975)
-
-Listen to the horns. On the James Brown record they punch in short, tight stabs that lock to the drums like another percussion instrument. On 'Mothership Connection' the same kind of arranging is stretched over a slower, spacier groove, with room left around each hit. Fred Wesley arranged horns for both records. The difference is the band he was arranging them into.
-
-### 6. `e-moog-tangerinedream`
-
-R. A. Moog Co., "Moog modular synthesizer with 960 sequencer" (1965) to Tangerine Dream, "Phaedra" (1974)
-
-Wait for the pulse. A short row of bass notes repeats, bubbling, while its brightness slowly opens and closes as someone turns a filter knob. Nobody is playing those notes. The sequencer is. The musicians play over it: drifting Mellotron, echoing synth lines. Listen for the loop slightly changing pitch and tone over minutes, which is the hand on the knob, and for how long it keeps going without ever settling into a song.
-
-### 7. `e-plank-eno`
-
-Cluster, "Sowiesoso" (1976) to Cluster & Eno, "Cluster & Eno" (1977)
-
-'Sowiesoso' is Cluster alone: two synthesiser players building slow, softly overlapping tones with no clear beat. 'Cluster & Eno', made a year later in Plank's Cologne studio, keeps that same unhurried pace but adds Eno's clearer melodic sense, so tones resolve into something closer to a tune. Plank recorded and shaped both records, and the difference between them is the extra voice in the room.
-
-### 8. `e-808-mantronix`
+### 4. `e-808-mantronix`
 
 Roland, "TR-808 factory voices" (1980) to Mantronix, "Fresh Is the Word" (1985)
 
 The 808 carries almost the entire track: a hard, dry kick-and-hi-hat pattern with almost no live instrumentation layered over it, an early example of hip-hop production built to sound like a machine rather than to disguise one.
 
-### 9. `e-fuzztone-stones`
+### 5. `e-beatles-beastieboys`
 
-Marty Robbins, "Don't Worry" (1961) to The Rolling Stones, "(I Can't Get No) Satisfaction" (1965)
+The Beatles, "The End" (1969) to Beastie Boys, "The Sounds of Science" (1989)
 
-Start with the Robbins record and wait for the instrumental break, where a bass line suddenly comes out torn and buzzing. That accident is what the Fuzz-Tone was built to repeat. Then play 'Satisfaction'. The riff comes in alone, and each note swells and holds with a raspy buzz instead of ringing out and fading like a clean guitar. Hum it and it phrases like a horn line, which is what Richards has said it was meant to become.
+'The End' is the Beatles' farewell on Abbey Road: Ringo's short drum solo, then three guitarists trading solos. On 'The Sounds of Science' the Beastie Boys and the Dust Brothers cut pieces of it, and of Sgt. Pepper, into a collage that switches sections abruptly. Listen for Beatles guitar and drums arriving in fragments and then vanishing. It's a band famous for studio experiments, taken apart by a studio experiment of their own.
 
-### 10. `e-baker-bambaataa`
+### 6. `e-hendrix-parliamentfunkadelic`
+
+The Jimi Hendrix Experience, "Machine Gun" (1970) to Funkadelic, "Maggot Brain" (1971)
+
+'Machine Gun', from 'Band of Gypsys', is Hendrix stretching single notes into long, screaming, feedback-drenched lines over a slow groove. 'Maggot Brain' is ten minutes of Eddie Hazel doing the same over a quiet, repeating accompaniment, with long sustained notes that cry and break up. Listen for the guitar held on the edge of feedback. That was Hendrix's sound, and Funkadelic took it into a Black funk band's record.
+
+### 7. `e-jamal-nas`
+
+Ahmad Jamal, "I Love Music" (1970) to Nas, "The World Is Yours" (1994)
+
+Listen to Jamal's piano: unhurried, with room between the phrases. Pete Rock picks a few notes of it and loops them, so a phrase that drifts in the original circles steadily in the new track. Under Nas's ambition the loop sounds wistful, and Jamal's restraint becomes the song's emotional weight.
+
+### 8. `e-baker-bambaataa`
 
 Afrika Bambaataa and the Jazzy 5, "Jazzy Sensation" (1981) to Afrika Bambaataa and the Soulsonic Force, "Planet Rock" (1982)
 
 Both records are Baker productions for Bambaataa on Tommy Boy, and both are built the same way: somebody else's music, replayed in the studio instead of sampled. The 'Jazzy Sensation' sleeve credits the song to Kenton Nix, who wrote Gwen Guthrie's 'Funky Sensation', and the music to a studio band. A year later 'Planet Rock' does the same thing to two Kraftwerk records, with a Roland TR-808 doing the drumming. Listen for the borrowed tune in each, and for how much harder and emptier the 1982 record sounds.
 
-### 11. `e-foster-tribe`
+### 9. `e-bambaataa-nativetongues`
 
-Ronnie Foster, "Mystic Brew" (1972) to A Tribe Called Quest, "Electric Relaxation" (1993)
+Afrika Bambaataa & the Soulsonic Force, "Planet Rock" (1982) to Jungle Brothers, "I'll House You" (1988)
 
-Listen for the melancholy keyboard phrase in 'Mystic Brew', then hear Tribe loop it. The phrase that drifts in the original becomes a steady cycle, with soft drums sitting quietly under it. It's so relaxed that Q-Tip and Phife seem to be talking over it rather than rapping on top of it. The mood of a 1972 jazz record becomes the whole identity of the song.
+'Planet Rock' puts rapping over a Kraftwerk melody and a drum machine, music nobody in the Bronx was supposed to like. 'I'll House You' does the same trick six years later with Chicago and New York house: a four-on-the-floor kick, a house bassline and piano stabs under rapping. Listen for the kick drum. Almost all rap in 1988 swung on a broken beat, and this one runs straight like a dance record. The shared idea is that a rap group can take whatever dance music is around and rap over it.
 
-### 12. `e-swinginglondon-hendrix`
+### 10. `e-h910-bowie`
 
-The Who, "My Generation" (1965) to The Jimi Hendrix Experience, "Purple Haze" (1967)
+Eventide, "H910 Harmonizer" (1975) to David Bowie, "Breaking Glass" (1977)
 
-London in 1965 was already playing loud: listen to the feedback and the smashed chords at the end of 'My Generation'. Then play 'Purple Haze' a year and a half later. An American who arrived in that scene took the same noise, the fuzz and the feedback, and made it melodic, with the distortion carrying the tune instead of wrecking it. The scene gave him an audience ready for that.
+Listen only to the snare drum. Each hit is followed by a fast smear that drops in pitch, a thud that seems to fall away underneath itself. The Harmonizer shifted each echo down and fed it back in, so every repeat went lower than the last. On a normal record the snare is the most solid thing in the mix. Here it sounds like it is collapsing.
 
-### 13. `e-chess-stones`
-
-The Rolling Stones, "It's All Over Now" (1964) to The Rolling Stones, "(I Can't Get No) Satisfaction" (1965)
-
-'It's All Over Now', cut in the same Chess sessions, is still a cover, a Bobby Womack song reworked. 'Satisfaction', less than a year later, is the band's own riff and words, written not long after standing in the room where the blues records they'd been copying were actually made.
-
-### 14. `e-kinks-blur`
-
-The Kinks, "Waterloo Sunset" (1967) to Blur, "Parklife" (1994)
-
-Both zoom in on one small, specific English scene (a couple crossing a bridge; a man walking his dog in a park) rather than making a generalized statement, and both use a talky, almost-spoken vocal delivery over a fairly simple melody.
-
-### 15. `e-island-slyrobbie`
-
-Black Uhuru, "General Penitentiary" (1979) to Grace Jones, "Private Life" (1980)
-
-'General Penitentiary' is Sly and Robbie at home: a Kingston roots record for Kingston listeners, with a heavy, rolling bass line and a hard, steady drum pattern under Black Uhuru's close harmonies. A year later the same drummer and bassist are playing under a Pretenders song, sung coolly by a former disco star, with synthesizer and rock guitar around them. The rhythm is still recognisably theirs. What changed is who they were playing for, and that was Blackwell's decision.
-
-### 16. `e-bdp-mcshan`
-
-MC Shan, "The Bridge" (1986) to Boogie Down Productions, "The Bridge Is Over" (1987)
-
-Shan's original is an unhurried, proud borough anthem. BDP's answer keeps the same subject, hip-hop's origin, and even echoes the title, but turns it faster, meaner, and ends with a mocking sung outro aimed directly at Shan and Marley Marl. Same format, opposite intent.
-
-### 17. `e-madlib-mfdoom`
-
-MF DOOM, "Doomsday" (1999) to Madvillain, "Accordion" (2004)
-
-On 'Doomsday' DOOM produces himself, looping a smooth, sweet phrase from Sade's 'Kiss of Life' under his flat, unhurried voice. On 'Accordion' Madlib gives him something stranger: a wheezing, reedy loop that sounds like an accordion but was played on a cheap electric chord organ. Listen for how the rougher, odder beat pushes DOOM's rhyming, dense chains of internal rhyme packed into a short verse over one repeating figure.
-
-### 18. `e-cokelarock-robinson`
+### 11. `e-cokelarock-robinson`
 
 Coke La Rock, "shout-outs over Herc's records at Bronx parties" (1973) to The Sugarhill Gang, "Rapper's Delight" (1979)
 
 Listen to 'Rapper's Delight' for how much of it is stock phrasing rather than anything written for the record. The hotel-motel lines, the call-and-response, the way the rappers hand off to each other: none of that was invented in a studio in New Jersey in 1979. It was the common language of Bronx parties, being recorded for the first time by people who mostly were not the ones who built it.
 
-### 19. `e-isley-publicenemy`
+### 12. `e-re201-tubby`
 
-The Isley Brothers, "Fight the Power (Part 1)" (1975) to Public Enemy, "Fight the Power" (1989)
+Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to King Tubby, "Dub from the Roots" (1974)
 
-The Isleys' original is a smooth, horn-driven funk protest song about censorship on the radio. Public Enemy keeps the title and a fragment of the groove but buries both under the Bomb Squad's usual density, turning a specific, contained complaint into a much broader, louder one.
+Compare the echo here with Perry's. Tubby's repeats are cleaner and more rhythmic, placed so they land where a drum would have landed, so the delay becomes part of the pattern rather than a haze over it. Same kind of box, opposite instinct: Perry lets it flood, Tubby uses it to keep time.
 
-### 20. `e-re201-perry`
+### 13. `e-food-blur`
 
-Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to Lee "Scratch" Perry, "Revolution Dub" (1975)
+Blur, "Popscene" (1992) to Blur, "For Tomorrow" (1993)
 
-Pick one snare hit and follow it. It repeats, and each repeat is slightly duller and slightly less in tune than the one before, because it is a tape loop wearing the sound down every pass. Then listen for the places where the repeats stop dying away and start feeding on themselves, piling up into a howl before somebody pulls them back. That is a hand on a knob, decided in the moment.
+'Popscene' already has the English guitar-pop idea, but it comes at you fast and loud: a blaring brass section, a sprinting tempo, and no chorus built to be sung back. 'For Tomorrow' slows down and opens up: a la-la-la chorus sung by female backing singers, a string quartet (the band's first), and a lyric that takes a drive up to Primrose Hill in north London. The Englishness is the same. The difference is a song written to order for a label that wanted a single.
+
+### 14. `e-hardy-phuture`
+
+Ron Hardy, "Music Box DJ sets" (1986) to Phuture, "Acid Tracks" (1987)
+
+'Acid Tracks' was reportedly played at the Music Box on cassette for months before release; Hardy's sets are part of why a twelve-minute record built from one squelching filter sweep had an audience ready for it.
+
+### 15. `e-peterock-nas`
+
+Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992) to Nas, "The World Is Yours" (1994)
+
+Two years apart and the same idea from Pete Rock: a soft jazz phrase looped under heavy drums, turned melancholy. On 'T.R.O.Y.' it's a saxophone. On 'The World Is Yours' it's a gentle piano from an Ahmad Jamal record. Listen for how the piano keeps circling while Nas talks about ambition, the sweetness of the loop working against the hardness of the words.
+
+### 16. `e-marleymarl-koolgrap`
+
+Kool G Rap and DJ Polo, "It's a Demo" (1986) to Kool G Rap and DJ Polo, "Road to the Riches" (1989)
+
+'It's a Demo', recorded in Marl's living room, is a rapper announcing his technical range: fast, dense, still finding its subject. Three years later, 'Road to the Riches' keeps the same rhyme density but points it at a specific story, an immigrant hustler's rise and fall, years before 'mafioso rap' had a name.
+
+### 17. `e-kraftwerk-may`
+
+Kraftwerk, "Numbers" (1981) to Rhythim Is Rhythim, "Strings of Life" (1987)
+
+Kraftwerk's rhythm is rigid and repeats without variation. May keeps the rigidity in the drums but layers a string figure that swells and falls, funk phrasing riding on top of a Kraftwerk-style engine.
+
+### 18. `e-kinks-pulp`
+
+The Kinks, "Waterloo Sunset" (1967) to Pulp, "Common People" (1995)
+
+Same technique: pick one character in one specific situation (a student "slumming it," two people on a bridge) and let the details, not a chorus making a general statement, carry the song.
+
+### 19. `e-sly-parliamentfunkadelic`
+
+Sly and the Family Stone, "Thank You (Falettinme Be Mice Elf Agin)" (1969) to Parliament, "Up for the Down Stroke" (1974)
+
+On 'Thank You', Larry Graham's bass is thumped and plucked so hard it becomes the lead instrument, and the vocal lines pass between several singers instead of staying with one. 'Up for the Down Stroke' does the same with a bigger crowd: the bass is up front, and the vocals are chants and call-and-response from the whole group. The idea of the band as a gang of voices, with the bass in charge, is what P-Funk took from Sly.
+
+### 20. `e-kraftwerk-joydivision`
+
+Kraftwerk, "Trans-Europe Express" (1977) to Joy Division, "Isolation" (1980)
+
+'Trans-Europe Express' rolls on a steady, metallic, machine-made pulse that never varies. 'Isolation', from 'Closer', is Joy Division at their most mechanical: the drums are fast and even, a synthesiser line runs through it, and the guitar is pushed back. Listen for how little the rhythm moves. That is the part of Kraftwerk a rock band could borrow without owning a sequencer.

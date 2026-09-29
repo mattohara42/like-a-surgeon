@@ -1,0 +1,40 @@
+{
+  "id": "african-head-charge",
+  "name": "African Head Charge",
+  "sortName": "African Head Charge",
+  "type": "artist",
+  "lineage": "dub",
+  "activeFrom": 1981,
+  "activeTo": null,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "on-u-sound",
+      "from": 1981,
+      "to": null
+    }
+  ],
+  "keyProducers": [
+    "adrian-sherwood"
+  ],
+  "hook": "On-U Sound's debut act, built around a Ghanaian percussionist and Adrian Sherwood's mixing desk rather than a fixed lineup.",
+  "blurb": {
+    "age7": "African Head Charge was the first group to release music on Adrian Sherwood's label, mixing drumming with dub-style echo and effects.",
+    "age13": "Formed around percussionist Bonjo Iyabinghi Noah and producer Adrian Sherwood, African Head Charge released On-U Sound's debut album, 'My Life in a Hole in the Ground', in 1981, layering African and Caribbean percussion under heavy dub production.",
+    "adult": "African Head Charge is less a fixed band than a project name for whatever collaborators Sherwood assembled around Bonjo Iyabinghi Noah's percussion at a given session, which makes it a clean early demonstration of On-U Sound's whole working method: dub technique applied to a rotating cast rather than a stable lineup."
+  },
+  "signatureTracks": [
+    {
+      "title": "My Life in a Hole in the Ground",
+      "year": 1981,
+      "whyThisOne": "On-U Sound's debut release, and the founding statement of the label's dub-plus-percussion approach."
+    },
+    {
+      "title": "Off the Beaten Track",
+      "year": 1986,
+      "whyThisOne": "A later, denser record showing the project's dub production growing more layered across the decade."
+    }
+  ]
+}
