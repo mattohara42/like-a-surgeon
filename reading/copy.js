@@ -60,6 +60,55 @@ export const COPY = {
     from: { age13: 'From', adult: 'From' },
   },
 
+  // The first-run card (reading/welcome.js). Every door and the goal point
+  // at records already on the map, and the text only says what those
+  // records say.
+  welcome: {
+    kicker: { age13: 'Start here', adult: 'Start here' },
+    title: { age13: 'Where do you want to start?', adult: 'Three ways in' },
+    intro: {
+      age13: 'Every dot is an artist, a machine or a label, placed at the year it started. Every line says one of them changed another.',
+      adult: 'Dots are artists, machines and labels, placed by the year they began. Lines are claims of influence.',
+    },
+    doors: {
+      herc: {
+        title: { age13: 'Where did hip-hop start?', adult: 'The break as a unit' },
+        line: {
+          age13: 'A party in the Bronx in August 1973, and a DJ who played the drums twice.',
+          adult: 'DJ Kool Herc, 1520 Sedgwick Avenue, August 1973.',
+        },
+      },
+      machine: {
+        title: { age13: 'The machine nobody wanted', adult: 'The Roland TR-808' },
+        line: {
+          age13: 'A drum machine that flopped, got cheap, and landed with the right people.',
+          adult: 'How a commercial failure became cheap enough to reshape several genres.',
+        },
+      },
+      tubby: {
+        title: { age13: 'Who turned records into raw material?', adult: "King Tubby's desk" },
+        line: {
+          age13: 'A radio repairman in Kingston who rewired his own mixing desk.',
+          adult: 'Dub, version sides, and a modified MCI board in Waterhouse, Kingston.',
+        },
+      },
+    },
+    goalHeading: { age13: 'Your mission', adult: 'One to find' },
+    goal: {
+      age13: 'Find the 1982 record that joins a German band, a Bronx DJ and a Japanese drum machine.',
+      adult: 'Find the 1982 record where Düsseldorf, the Bronx and a Roland drum machine meet.',
+    },
+    chip: {
+      age13: 'Mission: find the 1982 record that joins Germany, the Bronx and a drum machine',
+      adult: 'To find: the 1982 record where Düsseldorf meets the Bronx',
+    },
+    found: {
+      age13: 'Found it. Three sources welded into one record. There are crossings like this all over the map.',
+      adult: 'Found. This is the densest crossing on the map, and not the only one.',
+    },
+    skip: { age13: 'Just let me explore', adult: 'Explore on my own' },
+  },
+
   links: {
     youtube: { age13: 'Search YouTube', adult: 'Search YouTube' },
     newTab: { age13: 'opens in a new tab', adult: 'opens in a new tab' },
