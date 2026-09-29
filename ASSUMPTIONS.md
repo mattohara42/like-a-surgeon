@@ -3039,3 +3039,32 @@ small and worth having in front of Matt alongside everything else here.
     four of them (Kool Herc, Coke La Rock, Grand Wizzard Theodore, Ron
     Hardy) are DJs known for playing records rather than making them
     (Q32).
+
+- **A275. A second signature track for eight artists.** Each was checked
+  against Wikipedia (W) or MusicBrainz (MB) before writing:
+  - George Clinton, "Loopzilla" (1982): first single from *Computer
+    Games*, R&B top 20 before "Atomic Dog" (W, *Computer Games*).
+  - Gilbert O'Sullivan, "Clair" (1972): first single from *Back to
+    Front*, one of his biggest sellers (W, "Clair").
+  - Marshall Jefferson, "That's the Way Love Is" by Ten City (1989):
+    he produced Ten City's first two albums (W, Jefferson); US dance
+    number 1, UK number 8 (W, Ten City).
+  - MC Shan, "Kill That Noise" (1987): the Juice Crew's reply to "South
+    Bronx", answered by "The Bridge Is Over" (W, MC Shan).
+  - Roxanne Shanté, "Have a Nice Day" (1987): named as a hit (W), single
+    dated 1987 (MB).
+  - Ronnie Foster, "Alone Again (Naturally)" (1973): track A5 on *Sweet
+    Revival* (MB). It links him to Gilbert O'Sullivan, who is already on
+    the map.
+  - Stan Getz and Luiz Bonfá, "Só Danço Samba" (1963): on *Jazz Samba
+    Encore!* (MB); a Jobim composition (W), and the album mixes Jobim
+    standards with Bonfá originals (W, album).
+  - Tom Scott, Wings' "Listen to What the Man Said" (1975): soprano sax
+    part, US number 1 (W, the single).
+
+  **Left at one, on purpose.** Daedelus: *Exquisite Corpse* features MF
+  DOOM (W), which would tie to Madvillain, but MB credits every track to
+  Daedelus alone, so the track cannot be named. The Charmels: MB lists
+  only the one Volt single and a 2012 compilation. The Honey Drippers:
+  MB's only other release is a 1974 single with nothing on record about
+  it. Q32 now covers these three alongside the DJs.
