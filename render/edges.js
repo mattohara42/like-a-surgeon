@@ -45,7 +45,7 @@ function controlPoint(anchors, edgeId) {
   return { x: midX - (dy / dist) * bow, y: midY + (dx / dist) * bow };
 }
 
-function curvePath(anchors, edgeId) {
+export function curvePath(anchors, edgeId) {
   const c = controlPoint(anchors, edgeId);
   return `M ${anchors.x1},${anchors.y1} Q ${c.x},${c.y} ${anchors.x2},${anchors.y2}`;
 }
@@ -53,7 +53,7 @@ function curvePath(anchors, edgeId) {
 // Arc length of the quadratic, by sampling. Deliberately not
 // getTotalLength(): that forces a synchronous layout reflow, and edges are
 // created and destroyed constantly by viewport culling while panning.
-function approxCurveLength(anchors, edgeId, samples = 16) {
+export function approxCurveLength(anchors, edgeId, samples = 16) {
   const c = controlPoint(anchors, edgeId);
   let length = 0;
   let px = anchors.x1;

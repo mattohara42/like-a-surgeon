@@ -11,7 +11,8 @@ import { zoomLevelForScale } from './zoomLevels.js';
 import { attachPanZoomHandlers } from './interactions.js';
 import { svgEl, setAttrs } from './svg.js';
 import { createNodeElement, updateNodeElement, setNodeHovered } from './nodes.js';
-import { createEdgeElement, updateEdgeElement, setEdgeHovered, isBeam } from './edges.js';
+import { createEdgeElement, updateEdgeElement, setEdgeHovered, isBeam, curvePath, approxCurveLength } from './edges.js';
+import { createSparks } from './sparks.js';
 import { createSubstrateDefs, drawSubstrate, updateSubstrateScale } from './substrate.js';
 import { createEdgeGradients, createHaloGradients, trailGradientId, beamGradientId, colorFor } from './gradients.js';
 import { createDustLayer, createNebulaDefs, drawNebulae } from './atmosphere.js';
@@ -265,8 +266,10 @@ export function createGraph(container, data, callbacks = {}) {
   // Every node's name and hook, above all the markers so no dot paints over
   // a name, and below the lane titles.
   const labelsG = svgEl('g', { class: 'labels-layer' });
+  // Transient light over the markers and under the names (render/sparks.js).
+  const fxG = svgEl('g', { class: 'fx-layer' });
   const cursorG = createCursorLayer(layout);
-  viewportG.append(nebulaG, bandsG, floorG, axisG, edgesG, nodesG, labelsG, titlesG, cursorG);
+  viewportG.append(nebulaG, bandsG, floorG, axisG, edgesG, nodesG, fxG, labelsG, titlesG, cursorG);
   root.append(defs, viewportG);
   container.appendChild(root);
 
@@ -281,6 +284,9 @@ export function createGraph(container, data, callbacks = {}) {
     ? createTransport(transportEl, layout, graphNodes, graphEdges, () => scheduleRender(), initialYear)
     : null;
   const currentYear = () => transport?.year() ?? layout.timeScale.yearEnd;
+  // The year the last frame drew, for ignition. Null until the first frame,
+  // so opening the map (or a rebuild) never sets everything off at once.
+  let lastYear = null;
 
   // Node position and edge anchors are both static once computed (nodes
   // don't move, edge.year doesn't change), so both are precomputed once
@@ -303,6 +309,51 @@ export function createGraph(container, data, callbacks = {}) {
       maxY: Math.max(entry.anchors.y1, entry.anchors.y2),
     }))
     .sort((a, b) => a.minX - b.minX);
+
+  const sparks = createSparks(fxG);
+
+  // Outgoing edges per node, for the ripple. Built here rather than taken
+  // from reading/neighbours.js, since the graph never imports from
+  // reading/ (A73), and it only needs one direction.
+  const outgoing = new Map();
+  for (const entry of boundEdges) {
+    const from = entry.edge.from.id;
+    if (!outgoing.has(from)) outgoing.set(from, []);
+    outgoing.get(from).push(entry);
+  }
+
+  function pulseEdge({ edge, anchors }, delayMs, durationMs) {
+    sparks.pulse(curvePath(anchors, edge.id), approxCurveLength(anchors, edge.id), colorFor(edge.to.lineage), vp.scale, delayMs, durationMs);
+  }
+
+  // Light running out from a node through what it changed, hop by hop:
+  // its own edges first, then theirs. Only through edges the year cursor
+  // has reached, so the ripple never runs ahead of the reader's year.
+  // Each record lights once, so a cycle or two routes to the same artist
+  // do not double up.
+  function ripple(startId) {
+    const { maxHops, hopMs, maxEdges } = CONFIG.sparks.ripple;
+    const year = currentYear();
+    const reached = new Set([startId]);
+    let frontier = [startId];
+    let lit = 0;
+    for (let hop = 0; hop < maxHops && frontier.length && lit < maxEdges; hop++) {
+      const next = [];
+      for (const id of frontier) {
+        for (const entry of outgoing.get(id) ?? []) {
+          const target = entry.edge.to;
+          if (entry.edge.year > year || reached.has(target.id) || lit >= maxEdges) continue;
+          reached.add(target.id);
+          next.push(target.id);
+          lit++;
+          pulseEdge(entry, hop * hopMs, hopMs);
+          const pos = positionById.get(target.id);
+          if (pos) sparks.flare(pos.x1, pos.y, target.lineage, vp.scale, (hop + 1) * hopMs);
+        }
+      }
+      frontier = next;
+    }
+  }
 
   const nodeElements = new Map();
   const edgeElements = new Map();
@@ -419,6 +470,7 @@ export function createGraph(container, data, callbacks = {}) {
     selectedId = item.id;
     onSelect(item);
     flyToContent(contentX, contentY, CONFIG.zoom.flyToScale);
+    if (positionById.has(item.id)) ripple(item.id);
   }
 
   // Programmatic selection, for panel links and (later) search. Same camera
@@ -431,6 +483,7 @@ export function createGraph(container, data, callbacks = {}) {
     transport?.ensureVisible(entry.node.startYear);
     selectedId = id;
     flyToContent(entry.pos.x1, entry.pos.y, CONFIG.zoom.flyToScale);
+    ripple(id);
     return true;
   }
 
@@ -508,6 +561,14 @@ export function createGraph(container, data, callbacks = {}) {
 
     const year = currentYear();
     updateCursor(cursorG, layout, year, vp.scale);
+    // The cursor moved forward a little since the last frame: whatever it
+    // reached in between ignites, if it is on screen. A big jump reveals
+    // quietly, and moving backwards never ignites anything.
+    const ignitingFrom = lastYear !== null && year > lastYear && year - lastYear <= CONFIG.sparks.ignite.maxStepYears
+      ? lastYear
+      : null;
+    lastYear = year;
+    const ignites = (y) => ignitingFrom !== null && y > ignitingFrom && y <= year;
 
     const level = zoomLevelForScale(vp.scale);
     const range = visibleContentRange(vp, containerRect.width, containerRect.height);
@@ -543,6 +604,7 @@ export function createGraph(container, data, callbacks = {}) {
         continue;
       }
       const visible = nodeVisible(pos, range);
+      if (visible && ignites(node.startYear)) sparks.flare(pos.x1, pos.y, node.lineage, vp.scale);
       const degreeFactor = degreeFactorById.get(node.id) ?? CONFIG.node.degreeRadiusFactor.min;
       if (visible) {
         if (!el) {
@@ -582,6 +644,7 @@ export function createGraph(container, data, callbacks = {}) {
         continue;
       }
       const visible = maxX >= range.x1 && maxY >= range.y1 && minY <= range.y2;
+      if (visible && ignites(edge.year)) pulseEdge({ edge, anchors }, 0, CONFIG.sparks.pulse.durationMs);
       if (visible) {
         if (!el) {
           const midX = (anchors.x1 + anchors.x2) / 2;
