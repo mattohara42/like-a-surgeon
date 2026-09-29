@@ -71,6 +71,10 @@ correct response to a good idea arriving mid-milestone.
   option beside Lineage, Scene and Label. The data for it is `production`
   edges from producer nodes, which the hip-hop batches are adding now.
   Deferred until the M3 gate passes, per Matt's call on Q21.
+  **Shipped** (A262) as a panel button that frames and rings every act a
+  record produced. "Arrange by producer" as a lane option is not built.
+  Framing does not yet keep clear of the legend, so a produced act can sit
+  behind it.
 - **Record nodes (Q21).** If the sampled-artist-as-hub approach stops
   working (for example a single record sampled by fifty acts crowds its
   artist's node), a `record` node type would let the break itself be the
