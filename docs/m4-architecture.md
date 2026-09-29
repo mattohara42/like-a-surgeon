@@ -123,26 +123,29 @@ in either (Q27).
 A 13-year-old with headphones on is the listener this section is for.
 There are four layers, and every number lives in `CONFIG.audio`.
 
-1. **Master chain:**
+1. **Master chain** (built in step 2, A269):
    ```
-   every demo -> master gain -> DynamicsCompressor (limiter settings) -> destination
+   every demo -> limiter -> volume -> safety -> mute -> destination
    ```
-   SQUELCH's `MASTER_LIMITER` settings are the starting point: threshold
-   -3 dB, ratio 20, attack 3 ms. A DynamicsCompressorNode is not a true
-   brickwall, so a fast transient can overshoot its threshold slightly.
-   The master gain sits low enough that measured peaks stay under
-   `CONFIG.audio.peakCeiling`, and the end-to-end test (section 8)
-   measures them rather than trusting the settings.
+   The limiter is a DynamicsCompressorNode with SQUELCH's settings
+   (threshold -3 dB, ratio 20, attack 3 ms). Measured in step 2, it is
+   not a ceiling: four times more input raised its output by about 40%.
+   It keeps loudness even. The **safety** stage holds the ceiling. It is
+   a waveshaper whose curve is a straight line up to a knee (80% of the
+   ceiling) and then bends into `CONFIG.audio.master.peakCeiling`
+   without passing it, so no input, however loud, leaves above the
+   ceiling. The top of the volume slider is set low enough that a loud
+   demo stays under the knee, where the safety stage changes nothing.
 2. **Per-demo cap:** the existing `safety.maxGain` in every demo file
    clamps that demo's output before it reaches the master.
 3. **Volume:** the slider starts at half. Its top position is the
-   master gain that section 8 proves stays under the ceiling.
+   gain that section 8 proves keeps a loud demo under the safety knee.
 4. **No surprises:**
    - every start and stop ramps over a few milliseconds, so there are
      no clicks;
    - resonance and feedback controls have ceilings below
      self-oscillation, except where the self-oscillation is the point
-     (the dub delay's runaway), and even there the limiter holds;
+     (the dub delay's runaway), and even there the safety stage holds;
    - closing the panel stops the sound.
 
 **Mute** is one button, always on screen next to "Start here", and it
@@ -152,7 +155,7 @@ play button and never before. That satisfies autoplay rules, and it means
 a reader who never presses play never starts an audio thread.
 
 We cannot control the device's own volume, and this plan does not claim
-to. The limiter keeps our own output from spiking above a known level.
+to. The safety stage keeps our own output from going above a known level.
 The volume a teenager sets on his laptop is still up to him.
 
 ## 5. Demo data
@@ -247,14 +250,17 @@ the dispute with Kraftwerk's publishers was settled.
 - **DSP:** port the SQUELCH Node harnesses for the three worklets with
   the code. They run the processors headless in Node and assert on the
   output. They need a runner (Q28).
-- **End to end:** a headless Chromium check. It renders each demo
-  through an `OfflineAudioContext` for two seconds, then asserts that
-  the output is not silent, that no sample exceeds `CONFIG.audio.peakCeiling`,
-  and that the data: URL path loads. The same check runs against
-  `dist/` from file://. An offline render can finish before port
-  messages reach the processor. In the step 1 smoke test an unwaited
-  render came back silent, and a 200 ms wait fixed it. A fixed wait is
-  fragile, so step 2 has to find a signal to wait on instead.
+- **End to end:** `npm run audio:check` (tools/audio-check.js, built in
+  step 2). It opens the real app in headless Chromium, starts the
+  engine, and measures the master output with an AnalyserNode on a
+  running AudioContext: loud input stays under the safety knee, extreme
+  input under the ceiling, mute silences, and each worklet loads and
+  sounds. It runs against the dev server and against `dist/` from
+  file://. A running context replaced the `OfflineAudioContext` first
+  planned, because an offline render can finish before port messages
+  reach a processor (the step 1 smoke test came back silent that way).
+  It needs Playwright, which the project does not depend on, so it runs
+  by hand, not in CI. Step 4 adds each demo to it.
 - **By ear:** Matt's. No automated check can say the 909 sounds like a
   909.
 
@@ -266,7 +272,9 @@ Each step is one PR, merged before the next starts.
    the CONFIG move and the SQUELCH tests. No UI yet.
 2. `engine.js` master chain, mute and volume, `worklets.js` loader, and
    the `bundle.js` data: URL step. Proven with one test tone, in dev and
-   in `dist/` from file://.
+   in `dist/` from file://. Mute and volume are engine settings here;
+   their on-screen controls arrive in step 4, with the first thing to
+   hear.
 3. The demo schema, the validator checks, and rewriting the three
    existing demo files into the new params.
 4. `demoBlock.js` and the two players the existing demos need
