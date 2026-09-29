@@ -200,6 +200,31 @@ async function main() {
   // every artist below them. Rebuilding the whole graph is the honest way
   // to do that, and at this size it is imperceptible. The reader's camera,
   // year and selection are carried across so it doesn't feel like a reload.
+  // The fixed controls drawn over the top-left of the map, which lane
+  // titles step clear of. Measured when they change size (a layer toggle,
+  // the legend collapsing, a resize), never per frame.
+  let overlayRects = [];
+  function measureOverlays() {
+    const rect = (el) => {
+      const r = el.getBoundingClientRect();
+      return { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
+    };
+    const controls = [layersEl, registersEl, arrangeEl].map(rect).filter((r) => r.right > r.left);
+    const cluster = controls.length
+      ? controls.reduce((a, b) => ({
+          left: Math.min(a.left, b.left),
+          top: Math.min(a.top, b.top),
+          right: Math.max(a.right, b.right),
+          bottom: Math.max(a.bottom, b.bottom),
+        }))
+      : null;
+    overlayRects = [cluster, rect(legendEl)].filter(Boolean);
+    graph?.rerender();
+  }
+  const overlayObserver = new ResizeObserver(measureOverlays);
+  for (const el of [layersEl, registersEl, arrangeEl, legendEl]) overlayObserver.observe(el);
+  window.addEventListener('resize', measureOverlays);
+
   function build({ opening = false } = {}) {
     const carried = graph
       ? { viewport: { ...graph.viewport }, year: graph.transport?.year() ?? null, selected: graph.selectedId() }
@@ -216,6 +241,7 @@ async function main() {
       rightInset: () => panel.coveredWidth(),
       // The opening view starts clear of the legend (M3 step 5).
       leftInset: () => legendEl.offsetLeft + legendEl.offsetWidth,
+      overlays: () => overlayRects,
       // Only the first build frames the way in. A later rebuild without a
       // camera (Arrange by) re-fits the whole map, as it always has.
       openingFrameIds: opening ? OPENING_FRAME_IDS : [],
