@@ -3000,5 +3000,5 @@ small and worth having in front of Matt alongside everything else here.
   long-decay kick". `e-808-planetrock` says the kick's decay "is set
   long so it rings on like a bass note". `data/seed.json` keeps the old
   wording, because it is the frozen M1 reference copy the app does not
-  read (A6 notes, README). The demo caption's "no tuning" stays: it
+  read (README, `data/seed.json` row). The demo caption's "no tuning" stays: it
   says what the 808's controls are, which is the point.
