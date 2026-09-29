@@ -1,0 +1,31 @@
+{
+  "id": "e-madonna-weirdal",
+  "from": "madonna",
+  "to": "weird-al-yankovic",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "'Like a Surgeon' (1985, from 'Dare to Be Stupid') parodies Madonna's 'Like a Virgin' (1984). Yankovic has described Madonna approving the parody without objection, unlike some artists' more complicated reactions to being parodied elsewhere in his catalogue.",
+  "year": 1985,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Madonna",
+      "title": "Like a Virgin",
+      "year": 1984
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "Like a Surgeon",
+      "year": 1985
+    },
+    "whatToListenFor": "Yankovic's band rebuilds the Nile Rodgers-produced disco-pop arrangement closely, down to the vocal phrasing, and swaps the words for a squeamish comedy premise about operating-room anxiety."
+  },
+  "explanation": {
+    "age7": "Weird Al made a funny version of Madonna's 'Like a Virgin' about a nervous surgeon, and Madonna was fine with it.",
+    "age13": "'Like a Surgeon' rebuilds 'Like a Virgin' closely and swaps the words for a joke about a nervous surgeon. Madonna approved it without the friction that surrounded some of Yankovic's other parody requests.",
+    "adult": "Consistent with Yankovic's permission-first method documented elsewhere on this map, and notable mainly for how uncomplicated Madonna's approval was by comparison."
+  },
+  "tags": [
+    "production"
+  ]
+}
