@@ -29,7 +29,8 @@ function metaLine(node) {
     case 'machine':
       return [r.maker, yearSpan(r.releasedYear, r.discontinuedYear, r.endUnknown)];
     case 'scene':
-      return [[r.city, r.country].filter(Boolean).join(', '), yearSpan(r.yearFrom, r.yearTo, r.endUnknown)];
+      // A scene's city may be a list (SCHEMA.md): "London · Manchester · Leeds, UK".
+      return [[[r.city].flat().join(' · '), r.country].filter(Boolean).join(', '), yearSpan(r.yearFrom, r.yearTo, r.endUnknown)];
     case 'label':
       return [r.city, yearSpan(r.foundedYear, r.closedYear, r.endUnknown)];
     default:
@@ -82,6 +83,13 @@ function producerButton(node, ctx) {
   );
 }
 
+// A signature track's search (SCHEMA.md): its own `search` when set, else
+// "<artist> <title>", or no link at all when `search` is false.
+function signatureQuery(r, t) {
+  if (t.search === false) return null;
+  return typeof t.search === 'string' ? t.search : `${r.name} ${t.title}`;
+}
+
 // Shared by an artist's signature tracks and a label's songs-about-it list:
 // a title, an optional year, a line of prose, and a YouTube search link.
 function trackRow(title, year, note, ytQuery, reg, lead = null) {
@@ -106,7 +114,7 @@ function artistSections(r, ctx) {
     r.signatureTracks?.length
       ? [
           heading('listenTo', reg),
-          r.signatureTracks.map((t) => trackRow(t.title, t.year, t.whyThisOne, `${r.name} ${t.title}`, reg)),
+          r.signatureTracks.map((t) => trackRow(t.title, t.year, t.whyThisOne, signatureQuery(r, t), reg)),
         ]
       : null,
     r.scenes?.length ? [heading('scenes', reg), chipRow(r.scenes.map((id) => nodeRef(id, null, ctx)))] : null,

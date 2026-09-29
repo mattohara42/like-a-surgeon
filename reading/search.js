@@ -43,9 +43,10 @@ function matchRank(haystack, needle) {
 // city, or (for labels, which carry no country) the city alone.
 function placeParts(node) {
   const r = node.raw;
-  const city = r.originCity ?? r.city ?? '';
+  // A scene's city may be a list, each entry its own place to match.
+  const cities = [r.originCity ?? r.city ?? ''].flat();
   const country = r.originCountry ?? r.country ?? '';
-  return [...String(city).split(','), String(country)]
+  return [...cities.flatMap((city) => String(city).split(',')), String(country)]
     .map((text) => text.trim())
     .filter(Boolean)
     .map((text) => ({ text, folded: fold(text) }));

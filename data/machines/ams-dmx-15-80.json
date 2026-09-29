@@ -2,7 +2,7 @@
   "type": "machine",
   "id": "ams-dmx-15-80",
   "name": "AMS DMX 15-80",
-  "kind": "studio-technique",
+  "kind": "effect",
   "lineage": "other",
   "maker": "AMS (Advanced Music Systems)",
   "releasedYear": 1978,

@@ -2,7 +2,7 @@
   "type": "machine",
   "id": "eventide-h910",
   "name": "Eventide H910 Harmonizer",
-  "kind": "studio-technique",
+  "kind": "effect",
   "lineage": "other",
   "maker": "Eventide",
   "releasedYear": 1975,

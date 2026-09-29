@@ -21,12 +21,14 @@
     {
       "title": "C.R.E.A.M. (Wu-Tang Clan)",
       "year": 1993,
-      "whyThisOne": "Made on the EPS-16 Plus, built on a Charmels soul record."
+      "whyThisOne": "Made on the EPS-16 Plus, built on a Charmels soul record.",
+      "search": "Wu-Tang Clan C.R.E.A.M."
     },
     {
       "title": "Liquid Swords (GZA)",
       "year": 1995,
-      "whyThisOne": "His production for a Wu solo album, dark and cinematic."
+      "whyThisOne": "His production for a Wu solo album, dark and cinematic.",
+      "search": "GZA Liquid Swords"
     }
   ]
 }
