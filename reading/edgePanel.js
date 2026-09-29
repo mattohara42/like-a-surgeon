@@ -7,6 +7,7 @@ import { lineageColor } from '../render/lineages.js';
 import { h, tierSwatch } from './dom.js';
 import { pick } from './registers.js';
 import { trackPairQuery, youtubeLink } from './links.js';
+import { renderDemoBlock } from './demoBlock.js';
 
 function trackLine(side, register) {
   if (!side) return null;
@@ -65,6 +66,7 @@ export function renderEdgePanel(edge, ctx) {
           tp.whatToListenFor ? h('p', { class: 'listen' }, tp.whatToListenFor) : null,
         ]
       : null,
+    edge.demoId ? renderDemoBlock(ctx.demos?.[edge.demoId], ctx) : null,
 
     heading('howWeKnow'),
     h(
@@ -74,7 +76,6 @@ export function renderEdgePanel(edge, ctx) {
       h('p', { class: 'note' }, pick(tier?.explain, reg)),
     ),
     edge.evidence ? h('p', { class: 'body' }, edge.evidence) : null,
-    edge.demoId ? h('p', { class: 'note' }, pick(COPY.headings.demoLater, reg)) : null,
 
     heading('eitherEnd'),
     endRow('from', edge.from, ctx),

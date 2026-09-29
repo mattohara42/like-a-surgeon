@@ -23,6 +23,8 @@ import { COPY } from './reading/copy.js';
 import { createWelcome, OPENING_FRAME_IDS } from './reading/welcome.js';
 import { h } from './reading/dom.js';
 import { createEngine } from './audio/engine.js';
+import { createSoundControls } from './reading/soundControls.js';
+import { stopDemo } from './reading/demoBlock.js';
 
 const statusEl = document.getElementById('status');
 const appEl = document.getElementById('app');
@@ -32,13 +34,15 @@ const panelEl = document.getElementById('panel');
 const legendEl = document.getElementById('legend');
 const searchEl = document.getElementById('search');
 const arrangeEl = document.getElementById('arrange');
-const goalEl = document.getElementById('goal');
+const goalEl = document.getElementById('goal-chip');
+const soundEl = document.getElementById('sound');
 
 // One audio engine for the page. It creates nothing until a play button
 // calls start(), so building it here costs nothing for a reader who never
 // presses play.
 const audio = createEngine();
 window.__audio = audio; // for manual/automated inspection (tools/audio-check.js)
+const sound = createSoundControls(soundEl, audio);
 
 // Which layer toggle has to be on for a node of this kind to be drawn.
 // Artists are always drawn, and scenes are framed through their members.
@@ -120,6 +124,8 @@ async function main() {
   const panelContext = () => ({
     register, nodesById, neighbours, sceneMembers, goNode, goEdge,
     producedBy,
+    audio,
+    demos: data.demos,
     showProduced: (id) => graph.showTouched(id, producedBy(id)),
   });
 
@@ -146,6 +152,8 @@ async function main() {
   // panel loads the full record, then draws it over the skeleton so the
   // resolved from/to nodes and normalized years stay as the map has them.
   function renderTarget(target) {
+    // A demo belongs to the panel it was opened from.
+    stopDemo();
     if (target.kind === 'welcome') return welcome.render({ ...panelContext(), close: () => panel.close() });
     if (target.kind === 'node') {
       const node = nodesById.get(target.id);
@@ -178,7 +186,10 @@ async function main() {
     renderLoading: (target) => panelNotice(target, 'loading'),
     renderFailed: (target) => panelNotice(target, 'loadFailed'),
     onNavigate: focusTarget,
-    onClose: () => graph?.clearSelection(),
+    onClose: () => {
+      stopDemo();
+      graph?.clearSelection();
+    },
   });
   // Stops above the transport bar, so the year and play button stay usable
   // while reading.
@@ -247,7 +258,7 @@ async function main() {
       const r = el.getBoundingClientRect();
       return { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
     };
-    const controls = [layersEl, registersEl, arrangeEl].map(rect).filter((r) => r.right > r.left);
+    const controls = [layersEl, registersEl, arrangeEl, soundEl].map(rect).filter((r) => r.right > r.left);
     const cluster = controls.length
       ? controls.reduce((a, b) => ({
           left: Math.min(a.left, b.left),
@@ -260,7 +271,7 @@ async function main() {
     graph?.rerender();
   }
   const overlayObserver = new ResizeObserver(measureOverlays);
-  for (const el of [layersEl, registersEl, arrangeEl, legendEl]) overlayObserver.observe(el);
+  for (const el of [layersEl, registersEl, arrangeEl, soundEl, legendEl]) overlayObserver.observe(el);
   window.addEventListener('resize', measureOverlays);
 
   function build({ opening = false } = {}) {
@@ -326,6 +337,7 @@ async function main() {
     legend.setRegister(register);
     search.setRegister(register);
     welcome.setRegister(register);
+    sound.setRegister(register);
   }
 
   createLayerToggles(layersEl, layers, applyLayers);
@@ -334,6 +346,7 @@ async function main() {
   legend.setRegister(register);
   search.setRegister(register);
   welcome.setRegister(register);
+  sound.setRegister(register);
   // The card opens before the first build so the opening frame can leave
   // room for the drawer it sits in.
   if (welcome.shouldOpen()) {

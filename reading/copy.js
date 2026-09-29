@@ -192,6 +192,34 @@ export const COPY = {
     },
   },
 
+  // The demo block (reading/demoBlock.js) and the sound controls beside
+  // "Start here" (reading/soundControls.js).
+  demo: {
+    heading: { age13: 'Try it', adult: 'Hear it' },
+    play: { age13: 'Play', adult: 'Play' },
+    stop: { age13: 'Stop', adult: 'Stop' },
+    pads: { age13: 'Hit one', adult: 'Single hits' },
+    version: { age13: 'Switch between', adult: 'Compare' },
+    synthesized: {
+      age13: 'Made live in your browser. This is not a recording.',
+      adult: 'Synthesized in the browser, not a recording.',
+    },
+    draft: {
+      age13: 'A demo for this is being built.',
+      adult: 'A demo for this is planned and not playable yet.',
+    },
+    failed: {
+      age13: 'Sound could not start in this browser.',
+      adult: 'Audio could not start in this browser.',
+    },
+  },
+  sound: {
+    heading: { age13: 'Sound', adult: 'Sound' },
+    on: { age13: 'On', adult: 'On' },
+    muted: { age13: 'Off', adult: 'Muted' },
+    volume: { age13: 'Volume', adult: 'Volume' },
+  },
+
   links: {
     youtube: { age13: 'Search YouTube', adult: 'Search YouTube' },
     newTab: { age13: 'opens in a new tab', adult: 'opens in a new tab' },
@@ -223,10 +251,6 @@ export const COPY = {
     noConnections: {
       age13: 'Nothing on the map connects here yet.',
       adult: 'No edges touch this record yet.',
-    },
-    demoLater: {
-      age13: 'There is a playable demo for this. It arrives with the audio engine.',
-      adult: 'A playable demo is defined for this edge and arrives with the audio engine (M4).',
     },
     loading: {
       age13: 'Loading…',
@@ -262,4 +286,16 @@ export const EDGE_TYPE_LABELS = {
   'reaction-against': 'Reaction against',
   rediscovery: 'Rediscovery',
   cover: 'Cover',
+};
+
+// Drum lane and control names in the demo block. Names, not prose.
+export const LANE_LABELS = {
+  bd: 'Kick', sd: 'Snare', lt: 'Low tom', mt: 'Mid tom', ht: 'High tom', rs: 'Rimshot',
+  cp: 'Clap', cb: 'Cowbell', ch: 'Closed hat', oh: 'Open hat', cy: 'Cymbal', ma: 'Maracas',
+  cc: 'Crash', rc: 'Ride',
+};
+
+export const CONTROL_LABELS = {
+  level: 'level', tone: 'tone', decay: 'decay', snappy: 'snap', tune: 'tuning', attack: 'attack',
+  cutoff: 'cutoff', resonance: 'resonance', envMod: 'envelope', accent: 'accent',
 };

@@ -10,6 +10,7 @@ import { lineageColor, lineageName } from '../render/lineages.js';
 import { h, tierSwatch } from './dom.js';
 import { pick } from './registers.js';
 import { youtubeLink } from './links.js';
+import { renderDemoBlock } from './demoBlock.js';
 
 // A null end means "still going" unless the record says the end is
 // unknown (Q20), which prints as a question mark instead of "now".
@@ -133,6 +134,7 @@ function machineSections(r, ctx) {
     r.originalPurpose ? [heading('whatItWasFor', reg), para(r.originalPurpose)] : null,
     r.whatActuallyHappened ? [heading('whatHappened', reg), para(r.whatActuallyHappened)] : null,
     r.priceStory ? [heading('whatItCost', reg), para(r.priceStory)] : null,
+    r.demoId ? renderDemoBlock(ctx.demos?.[r.demoId], ctx) : null,
   ];
 }
 
