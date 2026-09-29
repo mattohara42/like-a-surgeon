@@ -1,0 +1,31 @@
+{
+  "id": "e-onu-africanheadcharge",
+  "from": "on-u-sound",
+  "to": "african-head-charge",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1981,
+  "crossLineage": false,
+  "evidence": "African Head Charge's records were released on On-U Sound from 1981, the label Adrian Sherwood founded to release his own productions. Wikipedia's On-U Sound entry lists them among the label's acts, and this map's African Head Charge record already named On-U in its `labels` field without an edge.",
+  "trackPair": {
+    "earlier": {
+      "artist": "On-U Sound",
+      "title": "Adrian Sherwood's label, founded 1979",
+      "year": 1979,
+      "search": false
+    },
+    "later": {
+      "artist": "African Head Charge",
+      "title": "My Life in a Hole in the Ground",
+      "year": 1981
+    },
+    "whatToListenFor": "Listen for the label's working method rather than a band sound: layered hand percussion at the centre, and Sherwood's mixing desk doing the rest, with echo and dropouts applied the way Jamaican dub engineers applied them."
+  },
+  "explanation": {
+    "age13": "On-U Sound was Adrian Sherwood's own record label in London. African Head Charge was one of its acts: percussion players plus Sherwood at the mixing desk, released on his label from 1981.",
+    "adult": "On-U Sound worked more like a production house than a conventional label, and African Head Charge shows why: a project name for whoever Sherwood gathered around Bonjo Iyabinghi Noah's percussion, released on Sherwood's own label. The edge makes visible a relationship both records already stated."
+  },
+  "tags": [
+    "labels"
+  ]
+}
