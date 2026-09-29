@@ -51,6 +51,16 @@ export function curvePath(anchors, edgeId) {
   return `M ${anchors.x1},${anchors.y1} Q ${c.x},${c.y} ${anchors.x2},${anchors.y2}`;
 }
 
+// A point along the curve, t from 0 (cause) to 1 (effect).
+export function curvePoint(anchors, edgeId, t) {
+  const c = controlPoint(anchors, edgeId);
+  const mt = 1 - t;
+  return {
+    x: mt * mt * anchors.x1 + 2 * mt * t * c.x + t * t * anchors.x2,
+    y: mt * mt * anchors.y1 + 2 * mt * t * c.y + t * t * anchors.y2,
+  };
+}
+
 // Arc length of the quadratic, by sampling. Deliberately not
 // getTotalLength(): that forces a synchronous layout reflow, and edges are
 // created and destroyed constantly by viewport culling while panning.
@@ -99,7 +109,7 @@ export function isBeam(edge) {
 
 export function createEdgeElement(edge, onSelect, onHover, golden = false) {
   const g = svgEl('g', {
-    class: ['edge', isBeam(edge) ? 'edge-beam' : 'edge-trail', golden && 'golden'].filter(Boolean).join(' '),
+    class: ['edge', isBeam(edge) ? 'edge-beam' : 'edge-trail', golden && 'golden', edge.demoId && 'has-demo'].filter(Boolean).join(' '),
     'data-edge-id': edge.id,
   });
 
@@ -120,6 +130,15 @@ export function createEdgeElement(edge, onSelect, onHover, golden = false) {
     svgEl('path', { class: 'edge-comet-ghost', fill: 'none' }),
     svgEl('path', { class: 'edge-comet', fill: 'none' }),
   ].filter(Boolean));
+
+  // An edge with a playable demo carries a small mark on its curve
+  // (docs/m4-architecture.md section 6), in its own colour, so the palette
+  // and its colour-vision check (A258) are untouched.
+  if (edge.demoId) {
+    const mark = svgEl('text', { class: 'edge-demo-mark', 'aria-hidden': 'true', 'text-anchor': 'middle', 'dominant-baseline': 'central' });
+    mark.textContent = CONFIG.edge.demoMark.glyph;
+    g.appendChild(mark);
+  }
 
   g.addEventListener('click', () => onSelect(edge));
   g.addEventListener('mouseenter', () => onHover(edge, true));
@@ -209,6 +228,18 @@ export function updateEdgeElement(g, edge, anchors, scale, gradientIds) {
       'stroke-width': baseWidth * CONFIG.edge.comet.ghostWidthFactor,
       'stroke-linecap': 'round',
       'stroke-opacity': CONFIG.edge.comet.ghostOpacity,
+    });
+  }
+
+  const mark = g.querySelector('.edge-demo-mark');
+  if (mark) {
+    const at = curvePoint(anchors, edge.id, CONFIG.edge.demoMark.at);
+    setAttrs(mark, {
+      x: at.x,
+      y: at.y,
+      fill: gradientIds.toColor,
+      'font-size': CONFIG.edge.demoMark.fontPx / scale,
+      'stroke-width': CONFIG.edge.demoMark.haloPx / scale,
     });
   }
 

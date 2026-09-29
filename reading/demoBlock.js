@@ -50,6 +50,7 @@ export function renderDemoBlock(demo, ctx) {
   const steps = h('div', { class: 'demo-steps', 'aria-hidden': 'true' }, cells);
   let lit = null;
   player.onStep((i) => {
+    if (i === 0) ctx.onDemoBar?.(demo.id);
     lit?.classList.remove('on');
     lit = i >= 0 ? cells[i] : null;
     lit?.classList.add('on');
