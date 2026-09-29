@@ -2861,3 +2861,10 @@ small and worth having in front of Matt alongside everything else here.
   LinnDrum on *Thriller* (disputed, and the "Billie Jean" drums are
   credited to a live drummer), and the TR-606 (no source better than
   forum posts).
+- **A267. Worklets reach the release copy as data: URLs.** Tested in
+  headless Chromium before writing the M4 plan. From file://, `addModule`
+  fails for both a relative path and a blob: URL, and succeeds for a
+  data: URL. Over http, all three work. So the M4 plan keeps each
+  processor file self-contained (no imports, CONFIG values passed in
+  through `processorOptions`), and has `tools/bundle.js` inline them as
+  data: URLs. Firefox and Safari are untested here (Q27).
