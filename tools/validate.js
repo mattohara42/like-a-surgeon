@@ -91,6 +91,15 @@ const REQUIRED_FIELDS = {
   threads: ['id', 'title', 'subtitle', 'intro', 'steps', 'outro'],
 };
 
+// The start-year field per node shard. A record without one cannot be
+// placed on the time axis, so the map skips it (render/loader.js).
+const START_FIELDS = {
+  artists: 'activeFrom',
+  machines: 'releasedYear',
+  scenes: 'yearFrom',
+  labels: 'foundedYear',
+};
+
 // The end-year field per node shard, for the endUnknown check (Q20).
 const END_FIELDS = {
   artists: 'activeTo',
@@ -195,6 +204,15 @@ for (const shard of SHARD_TYPES) {
       if (record[field] !== undefined) checkRegisterObject(where, field, record[field]);
     }
 
+    // A warning, not an error: an unsourced founding year stays null
+    // rather than being invented (CLAUDE.md accuracy rule 2), and the map
+    // copes by leaving the record off the axis. But it is invisible there,
+    // so it should be seen here.
+    const startField = START_FIELDS[shard];
+    if (startField && record[startField] == null) {
+      warn(`${where}: ${startField} is null, so the record cannot be placed on the time axis and does not draw`);
+    }
+
     if (record.lineage !== undefined && !LINEAGES.includes(record.lineage)) {
       fail(`${where}: illegal lineage "${record.lineage}"`);
     }
@@ -244,6 +262,22 @@ for (const [id, artist] of records.artists) {
       warn(`${where}: keyProducers entry "${producer}" does not resolve to an artist id (may be a plain name)`);
     }
   }
+  // Entry shapes. A malformed entry otherwise surfaces only indirectly
+  // (an unresolved "undefined" label) or not at all (a track with no
+  // whyThisOne, which is reader-facing text).
+  for (const [i, labelRef] of (artist.labels || []).entries()) {
+    if (!labelRef || typeof labelRef.labelId !== 'string') {
+      warn(`${where}: labels[${i}] must be an object with a string labelId`);
+    }
+  }
+  for (const [i, track] of (artist.signatureTracks || []).entries()) {
+    if (typeof track?.title !== 'string' || !track.title.trim()) {
+      warn(`${where}: signatureTracks[${i}] has no title`);
+    }
+    if (typeof track?.whyThisOne !== 'string' || !track.whyThisOne.trim()) {
+      warn(`${where}: signatureTracks[${i}] ("${track?.title}") has no whyThisOne`);
+    }
+  }
   const trackCount = (artist.signatureTracks || []).length;
   if (trackCount < 2 || trackCount > 3) {
     warn(`${where}: signatureTracks has ${trackCount} entries, expected 2 to 3`);
@@ -263,11 +297,33 @@ for (const [id, label] of records.labels) {
 }
 
 // scene references
+//
+// Membership is written on both sides (artist.scenes and scene.memberIds)
+// and nothing kept them in step, so each side is checked against the other.
+// The reading surface unions the two (main.js sceneMembers), so a mismatch
+// loses no one on screen, but it is still a record that disagrees with
+// itself. Membership without a scene-to-artist edge is deliberately not
+// checked: a scene edge is a specific causal claim, most members have none,
+// and membership stays out of the graph like other roster relationships
+// (A69, A254).
 for (const [id, scene] of records.scenes) {
   const where = `scenes/${id}.json`;
   for (const memberId of scene.memberIds || []) {
-    if (!records.artists.has(memberId)) {
+    const artist = records.artists.get(memberId);
+    if (!artist) {
       fail(`${where}: memberIds references unresolved artist "${memberId}"`);
+      continue;
+    }
+    if (!(artist.scenes || []).includes(id)) {
+      warn(`${where}: memberIds lists "${memberId}", but artists/${memberId}.json does not list this scene`);
+    }
+  }
+}
+for (const [id, artist] of records.artists) {
+  for (const sceneId of artist.scenes || []) {
+    const scene = records.scenes.get(sceneId);
+    if (scene && !(scene.memberIds || []).includes(id)) {
+      warn(`artists/${id}.json: lists scene "${sceneId}", but scenes/${sceneId}.json does not list this artist in memberIds`);
     }
   }
 }
@@ -305,6 +361,12 @@ for (const [id, edge] of records.edges) {
     if (typeof search !== 'string' || !search.trim()) {
       fail(`${where}: trackPair.${side}.search must be a non-empty string or false, got ${JSON.stringify(search)}`);
     }
+  }
+  // tools/report.js flags this at gate review. Flagging it here catches
+  // it while the edge is being written.
+  const pair = edge.trackPair;
+  if (pair?.earlier?.year != null && pair?.later?.year != null && pair.earlier.year > pair.later.year) {
+    warn(`${where}: trackPair runs backwards (earlier ${pair.earlier.year} is after later ${pair.later.year})`);
   }
   if (fromNode && toNode && typeof edge.crossLineage === 'boolean') {
     const expected = fromNode.lineage !== toNode.lineage;
