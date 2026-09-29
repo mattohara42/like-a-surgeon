@@ -150,6 +150,9 @@ correct response to a good idea arriving mid-milestone.
   neighbour index and a render path that can dim culled-but-adjacent
   elements, which is real work rather than a style change. The neighbour
   index now exists (see Spread-on-click). The render path does not.
+  **Shipped** in a lighter form (A253): every edge is quiet until the
+  reader hovers or selects a node, and then that node's edges light up in
+  full. Nodes and neighbours are not dimmed, only edges.
 - **Spread-on-click.** Influence propagating outward hop by hop from a
   clicked node. Wanted, and cheap once there is a neighbour index.
   **Update:** the index exists now (`reading/neighbours.js`, M3 step 1). It
