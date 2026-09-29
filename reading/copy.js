@@ -94,17 +94,91 @@ export const COPY = {
       },
     },
     goalHeading: { age13: 'Your mission', adult: 'One to find' },
-    goal: {
-      age13: 'Find the 1982 record that joins a German band, a Bronx DJ and a Japanese drum machine.',
-      adult: 'Find the 1982 record where Düsseldorf, the Bronx and a Roland drum machine meet.',
+    progress: { age13: 'Mission', adult: 'Mission' },
+    foundHeading: { age13: 'Found so far', adult: 'Found' },
+    allFound: {
+      age13: 'You found them all. There are dozens more crossings like these: look for lines that change colour as they go, because those join two different kinds of music.',
+      adult: 'All found. Lines that change colour along their length are crossings between lineages, and the map has dozens more.',
     },
-    chip: {
-      age13: 'Mission: find the 1982 record that joins Germany, the Bronx and a drum machine',
-      adult: 'To find: the 1982 record where Düsseldorf meets the Bronx',
-    },
-    found: {
-      age13: 'Found it. Three sources welded into one record. There are crossings like this all over the map.',
-      adult: 'Found. This is the densest crossing on the map, and not the only one.',
+    // One entry per mission in reading/welcome.js. `title` names the
+    // crossing once found; `goal` sits on the card, `chip` under the
+    // search, and `found` shows for a moment when the reader gets there.
+    missions: {
+      planetRock: {
+        title: { age13: "'Planet Rock', 1982", adult: "'Planet Rock', 1982" },
+        goal: {
+          age13: 'Find the 1982 record that joins a German band, a Bronx DJ and a Japanese drum machine.',
+          adult: 'Find the 1982 record where Düsseldorf, the Bronx and a Roland drum machine meet.',
+        },
+        chip: {
+          age13: 'Mission: find the 1982 record that joins Germany, the Bronx and a drum machine',
+          adult: 'To find: the 1982 record where Düsseldorf meets the Bronx',
+        },
+        found: {
+          age13: 'Found it. Three sources welded into one record. There are crossings like this all over the map.',
+          adult: 'Found. This is the densest crossing on the map, and not the only one.',
+        },
+      },
+      stylophone: {
+        title: { age13: "'Space Oddity' and a toy", adult: "'Space Oddity' and the Stylophone" },
+        goal: {
+          age13: 'Find the toy, played with a metal pen, that a 1969 hit was written around.',
+          adult: 'Find the toy synthesiser a 1969 hit was written around.',
+        },
+        chip: {
+          age13: 'Mission: find the toy a 1969 hit was written around',
+          adult: 'To find: the toy behind a 1969 hit',
+        },
+        found: {
+          age13: "Found it. Bowie wrote 'Space Oddity' around a Stylophone, a children's gadget.",
+          adult: 'Found. A single-voice toy, used as itself rather than disguised.',
+        },
+      },
+      amen: {
+        title: { age13: 'The Amen break', adult: 'The Amen break' },
+        goal: {
+          age13: 'Find six seconds of drumming from 1969 that ended up in Compton rap and then in British jungle.',
+          adult: 'Find the 1969 drum break that runs from a soul record to Compton and then to British jungle.',
+        },
+        chip: {
+          age13: 'Mission: find six seconds of 1969 drumming that crossed an ocean',
+          adult: 'To find: the 1969 break behind Compton rap and British jungle',
+        },
+        found: {
+          age13: "Found it. Gregory Coleman's drum solo on 'Amen, Brother'. The man who owned the song's rights never got paid.",
+          adult: 'Found. One recording, retimed into the basis of a whole genre two decades later.',
+        },
+      },
+      elpico: {
+        title: { age13: 'A slashed speaker', adult: "'You Really Got Me' and a slashed speaker" },
+        goal: {
+          age13: 'Find the guitarist who cut up his own amplifier to make his guitar sound dirtier.',
+          adult: 'Find the 1964 record whose distortion came from a deliberately damaged speaker.',
+        },
+        chip: {
+          age13: 'Mission: find who cut up an amplifier to get a dirtier sound',
+          adult: 'To find: the 1964 slashed speaker',
+        },
+        found: {
+          age13: "Found it. Dave Davies cut the speaker, and 'You Really Got Me' got its buzz.",
+          adult: 'Found. One amplifier, damaged once, on purpose.',
+        },
+      },
+      slengTeng: {
+        title: { age13: "'Under Mi Sleng Teng'", adult: "'Under Mi Sleng Teng' and the MT-40" },
+        goal: {
+          age13: 'Find the cheap keyboard setting that became the whole backing track of a 1985 reggae hit.',
+          adult: 'Find the 1985 record that moved reggae toward fully computerised production.',
+        },
+        chip: {
+          age13: 'Mission: find the keyboard setting that became a reggae hit',
+          adult: 'To find: the preset that computerised reggae',
+        },
+        found: {
+          age13: "Found it. A Casio MT-40's built-in 'rock' rhythm became 'Under Mi Sleng Teng'.",
+          adult: "Found. A consumer keyboard's preset, and Prince Jammy's break from analogue technique.",
+        },
+      },
     },
     skip: { age13: 'Just let me explore', adult: 'Explore on my own' },
   },

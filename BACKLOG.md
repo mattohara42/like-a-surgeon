@@ -218,9 +218,9 @@ fixing them inline.)
   (`layout.minYear` to `layout.maxYear`, currently 1948 to 2026) instead
   of the axis, which is padded by `layout.marginYears` on each side. The
   padding is still drawn, but the cursor cannot reach it.
-- **The welcome card cannot be reopened once the goal is found.** The goal
-  chip is the only way back to it (A249). A small "Start here" control
-  would fix that, if readers turn out to want it.
+- ~~**The welcome card cannot be reopened once the goal is found.**~~
+  **Fixed** (A252): a "Start here" button beside the mission chip is always
+  on screen, and the single goal became a chain of five missions.
 - **The map can be panned right off screen.** Since A250 the field around
   the map fades out rather than stopping, so there is no edge to bump
   into, and a reader can drag the whole map out of view into empty dust.

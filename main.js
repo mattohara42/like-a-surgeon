@@ -100,6 +100,7 @@ async function main() {
 
   const welcome = createWelcome(goalEl, {
     nodesById,
+    edgesById,
     openCard: () => panel.open({ kind: 'welcome', id: 'welcome' }),
   });
 
