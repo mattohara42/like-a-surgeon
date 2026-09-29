@@ -274,6 +274,8 @@ Each step is one PR, merged before the next starts.
   ASSUMPTIONS records it. (b) Add an MIT LICENSE to SQUELCH itself first.
   (c) The ported files keep a header naming their origin and a separate
   licence.
+  **Resolved 2026-09-29: (b).** Matt is adding an MIT LICENSE to SQUELCH.
+  Step 1 waits until that LICENSE is on SQUELCH's main branch.
 - **Q26. The Planet Rock demo's melody.** (a) **Recommended.** Keep the
   A/B about tempo, timbre and drums, and play an original four-note
   figure on both sides, so the lesson (the notes stay, the treatment
@@ -292,3 +294,5 @@ Each step is one PR, merged before the next starts.
   the SQUELCH harnesses as runnable scripts only.
 - **Q29. The ten.** Is the table in section 7 the right ten? Swaps are
   cheap before step 5 and expensive after.
+  **Deferred 2026-09-29.** Matt reviews the list later. Steps 1 to 4 do
+  not depend on it, and step 5 does not start until it is answered.

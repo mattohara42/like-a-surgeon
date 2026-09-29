@@ -7,11 +7,13 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 - **Q25 to Q29. M4 sign-off.** Five questions gate the audio engine. The
   full text, with options and a recommendation for each, is in
   `docs/m4-architecture.md` section 10:
-  - Q25: may the SQUELCH code be used here under MIT?
+  - Q25: may the SQUELCH code be used here under MIT? **Resolved: yes.**
+    Matt is adding an MIT LICENSE to SQUELCH itself.
   - Q26: should the Planet Rock demo play the shared melody?
   - Q27: which browsers must pass before the gate?
   - Q28: should the repo get `npm test`?
-  - Q29: are these the right ten demos?
+  - Q29: are these the right ten demos? **Deferred.** Matt reviews
+    later, before step 5 (the demo data PRs).
 
 - **Q24. Should parody be its own edge type?** Weird Al's two edges
   (A232) are typed `cover`. That is close, but a parody keeps the
