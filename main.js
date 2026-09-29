@@ -96,7 +96,25 @@ async function main() {
     onSelectYear: (year) => graph.focusYear(year),
   });
 
-  const panelContext = () => ({ register, nodesById, neighbours, sceneMembers, goNode, goEdge });
+  // Follow the producer: everyone a record's production edges reach, plus
+  // any artist naming it in keyProducers (which can exist without an edge).
+  function producedBy(id) {
+    const ids = new Set();
+    for (const edge of data.edges) {
+      if (edge.type === 'production' && edge.from.id === id) ids.add(edge.to.id);
+    }
+    for (const node of data.nodes) {
+      if (node.kind === 'artist' && node.raw.keyProducers?.includes(id)) ids.add(node.id);
+    }
+    ids.delete(id);
+    return [...ids].filter((nid) => nodesById.has(nid));
+  }
+
+  const panelContext = () => ({
+    register, nodesById, neighbours, sceneMembers, goNode, goEdge,
+    producedBy,
+    showProduced: (id) => graph.showTouched(id, producedBy(id)),
+  });
 
   const welcome = createWelcome(goalEl, {
     nodesById,

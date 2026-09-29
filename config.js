@@ -237,6 +237,8 @@ export const CONFIG = {
     // padding kept around its members.
     sceneMaxScale: 2,
     sceneFramePaddingPx: 90,
+    // Follow the producer shows its button from this many acts produced.
+    followProducerMin: 2,
   },
 
   // The first-run card and its goal chip (reading/welcome.js).

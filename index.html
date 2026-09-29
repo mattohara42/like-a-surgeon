@@ -162,6 +162,16 @@
 
   /* What the reader is reading about stays marked on the map. */
   .node.selected .node-ring { stroke: var(--ink); stroke-opacity: 0.95; }
+  /* Follow the producer: the acts the selected producer touched. */
+  .node.touched .node-ring { stroke: #f3dfa6; stroke-opacity: 0.9; }
+  .node-labels.touched .node-name { fill: #f3dfa6; }
+  .follow-producer {
+    display: inline-block; margin: 0 0 18px; padding: 7px 14px; border-radius: 999px; cursor: pointer;
+    font-family: var(--ui); font-size: var(--t-chip); color: #f3dfa6;
+    background: rgba(40,32,10,0.55); border: 1px solid rgba(243,223,166,0.3);
+  }
+  .follow-producer:hover { border-color: rgba(243,223,166,0.65); }
+  .follow-producer:focus-visible { outline: 1px solid rgba(243,223,166,0.7); outline-offset: 3px; }
   .node-labels.selected .node-name { fill: #fff; }
   .edge.selected .edge-line { stroke-opacity: 1; }
 

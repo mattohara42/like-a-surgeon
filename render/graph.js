@@ -287,6 +287,9 @@ export function createGraph(container, data, callbacks = {}) {
   let selectedId = initialSelectedId;
   // The node under the pointer, whose edges light up like a selection's.
   let hoveredNodeId = null;
+  // Nodes ringed as "what the selected node touched", for Follow the
+  // producer. Cleared whenever the selection moves.
+  let touchedIds = new Set();
 
   // Which record types draw, from the reader's layer toggles. Scenes render
   // as atmosphere and so never take a lane row even when on; labels and
@@ -559,6 +562,7 @@ export function createGraph(container, data, callbacks = {}) {
     // to it. Flying to a node and leaving it dimmed would be absurd.
     transport?.ensureVisible(item.startYear ?? item.year);
     selectedId = item.id;
+    touchedIds = new Set();
     onSelect(item);
     flyToContent(contentX, contentY, scaleFor());
     if (positionById.has(item.id)) ripple(item.id);
@@ -573,6 +577,7 @@ export function createGraph(container, data, callbacks = {}) {
     if (!entry) return false;
     transport?.ensureVisible(entry.node.startYear);
     selectedId = id;
+    touchedIds = new Set();
     flyToContent(entry.pos.x1, entry.pos.y, CONFIG.zoom.flyToScale);
     ripple(id);
     return true;
@@ -703,9 +708,11 @@ export function createGraph(container, data, callbacks = {}) {
       nodeElements.delete(id);
     };
     const setNodeState = (el, unborn, selected) => {
+      const touched = touchedIds.has(el.__node?.id);
       for (const target of [el, el.__labels]) {
         target.classList.toggle('unborn', unborn);
         target.classList.toggle('selected', selected);
+        target.classList.toggle('touched', touched);
       }
     };
 
@@ -872,8 +879,18 @@ export function createGraph(container, data, callbacks = {}) {
     arrange,
     yearBounds: () => ({ min: layout.minYear, max: layout.maxYear }),
     selectedId: () => selectedId,
+    // Follow the producer: keep `id` selected, ring every node in `ids`,
+    // and frame them all together.
+    showTouched(id, ids) {
+      if (!frameNodes([id, ...ids])) return false;
+      selectedId = id;
+      touchedIds = new Set(ids);
+      scheduleRender();
+      return true;
+    },
     clearSelection: () => {
       selectedId = null;
+      touchedIds = new Set();
       scheduleRender();
     },
     destroy: () => {
