@@ -47,9 +47,15 @@
   .unborn { opacity: 0.085; }
   .unborn .node-name, .unborn .node-hook { opacity: 0; }
   .node, .node-labels, .edge { transition: opacity 240ms ease; }
-  /* Neither end of this edge is on screen: it is only passing through.
-     Faint, so the edges that touch what the reader is looking at win. */
-  .edge.passing:not(.selected):not(:hover) { opacity: 0.22; }
+  /* Edges are quiet until the reader looks at something (A253): faint,
+     with no comet running. The selected edge, and the edges of the
+     selected or hovered node, get the class `lit` and draw in full.
+     :not(.unborn) keeps "not yet" fainter still. */
+  .edge:not(.lit):not(.unborn):not(:hover) { opacity: 0.3; }
+  .edge:not(.lit):not(:hover) .edge-comet,
+  .edge:not(.lit):not(:hover) .edge-comet-ghost { visibility: hidden; }
+  /* Neither end on screen: only passing through, so fainter again. */
+  .edge.passing:not(.lit):not(.unborn):not(:hover) { opacity: 0.14; }
 
   /* Atmosphere. Fixed overlays that never pan, which is what sells the
      idea that you are looking into a volume rather than across a plane. */
