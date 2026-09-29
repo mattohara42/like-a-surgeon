@@ -4,6 +4,7 @@
 //   register, nodesById, neighbours, sceneMembers(id),
 //   goNode(id), goEdge(id)
 
+import { CONFIG } from '../config.js';
 import { COPY, KIND_LABELS, EDGE_TYPE_LABELS } from './copy.js';
 import { lineageColor, lineageName } from '../render/lineages.js';
 import { h, tierSwatch } from './dom.js';
@@ -67,6 +68,18 @@ export function connectionRow(edge, other, ctx) {
       edge.year ? ` · ${edge.year}` : '',
       tierSwatch(edge.confidence),
     ),
+  );
+}
+
+// Follow the producer: when a record produced two or more acts on the map,
+// one button frames all of them and rings each one.
+function producerButton(node, ctx) {
+  const produced = ctx.producedBy?.(node.id) ?? [];
+  if (produced.length < CONFIG.panel.followProducerMin) return null;
+  return h(
+    'button',
+    { type: 'button', class: 'follow-producer', onClick: () => ctx.showProduced(node.id) },
+    `${pick(COPY.headings.followProducer, ctx.register)} (${produced.length})`,
   );
 }
 
@@ -207,6 +220,7 @@ export function renderNodePanel(node, ctx) {
     para(r.hook, 'hook'),
     para(pick(r.blurb, reg)),
     node.startYear === null ? para(pick(COPY.headings.offMap, reg), 'note') : null,
+    producerButton(node, ctx),
     kindSections ? kindSections() : null,
     connectionSections(node, ctx),
   );

@@ -190,6 +190,7 @@ export const COPY = {
 
   headings: {
     whatToListenFor: { age13: 'What to listen for', adult: 'What to listen for' },
+    followProducer: { age13: 'Show everyone they produced', adult: 'Show every production on the map' },
     howWeKnow: { age13: 'How we know', adult: 'How we know' },
     eitherEnd: { age13: 'Either end', adult: 'Either end' },
     changed: { age13: 'Changed', adult: 'Influenced' },

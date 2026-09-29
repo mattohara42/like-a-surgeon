@@ -2762,3 +2762,18 @@ small and worth having in front of Matt alongside everything else here.
     each city, so "Leeds" now finds UK Post-Punk. Only `uk-post-punk` uses
     a list so far, the case BACKLOG named, with London, Manchester and
     Leeds already in its prose.
+
+- **A262. Follow the producer.** Matt asked for it now rather than after
+  the M3 gate. Quiet-by-default edges (A253) already lit a producer's own
+  edges on selection, so what was missing was seeing the whole body of
+  work together. An artist panel now shows "Show everyone they produced
+  (N)" whenever N is at least `panel.followProducerMin` (2). It frames the
+  producer with every act they touched, keeps the producer selected, and
+  rings each act in gold until the selection moves. "Touched" means a
+  `production` edge from the producer, or an artist naming them in
+  `keyProducers`. The second part catches credits with no edge yet, so
+  `keyProducers` is now in the startup index (`tools/skeleton.js`). Marley
+  Marl shows 9, Rick Rubin 4. Any artist can have the button, not only
+  records thought of as producers, because the data decides: Madlib or
+  George Clinton qualify through their own credits. The "Arrange by
+  producer" lane option from Q21 is not built.

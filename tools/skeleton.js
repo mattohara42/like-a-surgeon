@@ -22,7 +22,7 @@ const PERIOD = ['endUnknown'];
 
 export const SKELETON_FIELDS = {
   artists: ['id', 'type', 'lineage', 'name', 'sortName', 'hook', 'activeFrom', 'activeTo', ...PERIOD,
-    'originCity', 'originCountry', 'scenes', 'labels'],
+    'originCity', 'originCountry', 'scenes', 'labels', 'keyProducers'],
   machines: ['id', 'type', 'lineage', 'name', 'sortName', 'hook', 'releasedYear', 'discontinuedYear', ...PERIOD],
   scenes: ['id', 'type', 'lineage', 'name', 'sortName', 'hook', 'yearFrom', 'yearTo', ...PERIOD,
     'city', 'country', 'memberIds', 'palette', 'motif'],
