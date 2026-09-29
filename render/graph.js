@@ -279,6 +279,9 @@ export function createGraph(container, data, callbacks = {}) {
     // them; an empty list, or none of them on the map, falls back to the
     // fit.
     openingFrameIds = [],
+    // Edge ids drawn gold for the reader to find (A263). Chosen by the
+    // caller from the data.
+    goldenIds = new Set(),
   } = callbacks;
 
   // The node or edge the reader is reading about, highlighted on the map.
@@ -787,6 +790,7 @@ export function createGraph(container, data, callbacks = {}) {
               const current = edgeElements.get(e.id);
               if (current) setEdgeHovered(current, e, hovered);
             },
+            goldenIds.has(edge.id),
           );
           edgesG.appendChild(created);
           edgeElements.set(edge.id, created);

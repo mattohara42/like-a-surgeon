@@ -2777,3 +2777,31 @@ small and worth having in front of Matt alongside everything else here.
   records thought of as producers, because the data decides: Madlib or
   George Clinton qualify through their own credits. The "Arrange by
   producer" lane option from Q21 is not built.
+
+- **A263. Golden edges: the longest documented leaps.** Matt picked the
+  rule "longest documented jumps". Two measures were compared on the
+  data. From the influencer's start year to the edge year, the top picks
+  included career spans rather than leaps (Quincy Jones producing Michael
+  Jackson, 31). From the earlier record's year to the later record's
+  year, in the edge's own `trackPair`, the picks are real reaches across
+  time. That measure is used. It is derived at index time as `leapYears`
+  (`tools/skeleton.js`), so the client needs no track text. Golden edges
+  are the `golden.count` (7) documented, cross-lineage edges with the
+  largest `leapYears`, ties broken by id. Today's seven, a clean cut
+  (the eighth is 24):
+  - Fairlight CMI to Afrika Bambaataa, 72 years: the Firebird orchestra
+    hit, Stravinsky 1910 into 'Planet Rock' 1982.
+  - Stan Getz and Luiz Bonfá to J Dilla, 32.
+  - Joni Mitchell to Janet Jackson, 27.
+  - The Charmels to Wu-Tang Clan, 26.
+  - Sly and the Family Stone to Cypress Hill, 25.
+  - Tom Scott to Pete Rock, 25.
+  - The Winstons to Shy FX, 25.
+
+  Because it is a rule, the set changes as data grows, with no list to
+  maintain. A golden edge draws a gold sheen over its own gradient, stays
+  at 0.75 opacity while other edges are quiet, and shimmers (it holds
+  still under reduced motion). Opening one collects it. The welcome card
+  counts "Golden threads · n / 7 found", and the chip flashes when one is
+  collected. The Amen break edge is both a mission and golden, so the
+  mission's own line shows and both count.

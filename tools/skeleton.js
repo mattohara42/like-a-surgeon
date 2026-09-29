@@ -96,6 +96,12 @@ export function readDataset(dataDir) {
     index[shard] = {};
     for (const [id, record] of Object.entries(records[shard])) {
       index[shard][id] = fields ? pickFields(record, fields) : record;
+      // How far an edge reaches across time, record to record, for golden
+      // edges (A263). Derived here so the client needs no track pair text.
+      const pair = shard === 'edges' ? record.trackPair : null;
+      if (pair?.earlier?.year != null && pair?.later?.year != null) {
+        index[shard][id].leapYears = pair.later.year - pair.earlier.year;
+      }
     }
   }
   return { index, records };
