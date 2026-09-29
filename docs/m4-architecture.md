@@ -230,11 +230,12 @@ it is part of the composition, and a composition is protected on its
 own. Demo 6 plays a drum pattern, which is fine. Demos 8 and 9 play an
 original riff, not the Stones' or the Kinks'. Demo 5 plays a rhythm in
 the style of a Casio preset, not the 'Sleng Teng' bassline. The existing
-Planet Rock demo raises a question it cannot settle alone (Q26): its
-file says it plays "the shared melodic contour" of 'Trans-Europe
-Express' and 'Planet Rock'. The edge's own text records that 'Planet
-Rock' used that melody without a licence in advance, and that the
-dispute with Kraftwerk's publishers was settled.
+Planet Rock demo is the one exception, by Matt's decision (Q26): it
+plays "the shared melodic contour" of 'Trans-Europe Express' and
+'Planet Rock' on synthesized voices. The edge's own text records that
+'Planet Rock' used that melody without a licence in advance, and that
+the dispute with Kraftwerk's publishers was settled, so the demo
+teaches the very thing the dispute was about.
 
 ## 8. Testing
 
@@ -261,7 +262,7 @@ Each step is one PR, merged before the next starts.
 3. The demo schema, the validator checks, and rewriting the three
    existing demo files into the new params.
 4. `demoBlock.js` and the two players the existing demos need
-   (machine-voice, ab). Demos 1 and 2 play. Planet Rock waits on Q26.
+   (machine-voice, ab). Demos 1, 2 and the Planet Rock A/B play.
 5. `fx.js`, and the technique and pattern players. Demos 3 to 10, in
    two or three data PRs.
 6. Visual feedback on the map (section 6).
