@@ -3002,3 +3002,21 @@ small and worth having in front of Matt alongside everything else here.
   wording, because it is the frozen M1 reference copy the app does not
   read (README, `data/seed.json` row). The demo caption's "no tuning" stays: it
   says what the 808's controls are, which is the point.
+
+- **A273. M4 step 6: demos show on the map.**
+  - **Pulse.** While a demo plays, every edge that carries it gets one
+    pulse of light, cause to effect, on each bar's downbeat (the 808 demo
+    pulses its three edges together). It reuses `sparks.pulse` (A251),
+    so reduced motion and the live-effect cap already apply.
+    `CONFIG.sparks.demoPulseMs` (700) is shorter than a bar at the 200
+    bpm maximum, so pulses never stack. Measured: nine pulses in 4.5 s
+    of the 808 demo, three bars times three edges.
+  - **Mark.** An edge with a demo carries a ♪ at the midpoint of its
+    curve, in the colour of its target lineage and haloed like the lane
+    titles (A257). No new colour, so the colour-vision check (A258)
+    stands.
+  - **Emphasis.** At rest a quiet edge draws at 30% opacity (A253),
+    which made the mark hard to find. SPEC.md says edges with a demo get
+    visual emphasis, so a demo edge now rests at 65%, between a quiet
+    edge and a lit one. The mark's size (18 px) is a first guess worth a
+    look.

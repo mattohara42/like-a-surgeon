@@ -288,7 +288,9 @@ Each step is one PR, merged before the next starts.
    A271).
 5. `fx.js`, and the technique and pattern players. Demos 3 to 10, in
    two or three data PRs.
-6. Visual feedback on the map (section 6).
+6. Visual feedback on the map (section 6). Built (A273): a pulse per
+   bar on the demo's edges, a ♪ mark on every demo edge, and demo edges
+   resting brighter than quiet ones.
 7. The gate: ten demos, heard by Matt.
 
 ## 10. Questions for Matt (also in QUESTIONS.md)
