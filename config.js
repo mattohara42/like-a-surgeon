@@ -392,4 +392,74 @@ export const CONFIG = {
     // target size, simulated by duplication rather than real records.
     gateDuplicationFactor: 2,
   },
+
+  // M4 audio (docs/m4-architecture.md). Values from SQUELCH, tuned by ear
+  // there.
+  audio: {
+    tempo: { minBpm: 60, maxBpm: 200, defaultBpm: 130 },
+    stepsPerPattern: 16,
+    // Shuffle swings the even 16ths (odd step index, 0-based) later by this
+    // fraction of a step at full depth.
+    shuffleMaxFraction: 0.3,
+    scheduler: { tickMs: 25, lookaheadS: 0.12 },
+
+    // What the worklets read, injected into each one as `CFG` by
+    // audio/workletSource.js. SQUELCH's key names are kept as they are, so
+    // the ported DSP stays line-for-line comparable with upstream (A268).
+    dsp: {
+      VOICE303: {
+        RESONANCE_MAX_K: 4.2,
+        ENV_MOD_MAX_OCT: 3.6,
+        DECAY_MIN_MS: 200,
+        DECAY_MAX_MS: 2000,
+        ACCENT_DECAY_MS: 200,
+        ACCENT_BOOST_GAIN: 0.9,
+        RELEASE_MS: 30,
+        WOW_MAX_MS: 15,
+        OVERSAMPLE: 2,
+        HPF_HZ: 40,
+        TRIM: 0.85,
+        CLAMP: 0.98,
+        CUTOFF_MIN_HZ: 100,
+        CUTOFF_MAX_HZ: 4000,
+        GLIDE_MS: 35,
+      },
+      DRUM808: {
+        ACCENT_BOOST_GAIN: 0.8,
+        METALLIC_OSC_FREQS_HZ: [205.3, 304.4, 369.6, 522.7, 619.8, 845.4],
+        LANES: {
+          bd: { baseFreqHz: 55, pitchSweepHz: 150, pitchTauMs: 40, decayMinMs: 150, decayMaxMs: 800, decayDefaultMs: 400, toneDefault: 0.5 },
+          sd: { toneFreqsHz: [180, 330], tonalDecayMs: 220, noiseDecayMinMs: 50, noiseDecayMaxMs: 400, noiseDecayDefaultMs: 150, toneDefault: 0.5, snappyDefault: 0.5 },
+          lt: { freqHz: 90, decayMs: 300 },
+          mt: { freqHz: 130, decayMs: 280 },
+          ht: { freqHz: 180, decayMs: 250 },
+          rs: { toneFreqHz: 400, decayMs: 15 },
+          cp: { burstGapMs: 8, burstCount: 3, tailDecayMs: 150, bandHz: 1200 },
+          cb: { freqsHz: [540, 800], decayMs: 300 },
+          ch: { decayMs: 50, hpHz: 6000 },
+          oh: { decayMinMs: 100, decayMaxMs: 500, decayDefaultMs: 250, hpHz: 5000 },
+          cy: { decayMinMs: 300, decayMaxMs: 1500, decayDefaultMs: 700, hpHz: 3000 },
+          ma: { decayMs: 20, bpHz: 6000 },
+        },
+      },
+      DRUM909: {
+        ACCENT_BOOST_GAIN: 0.8,
+        METALLIC_OSC_FREQS_HZ: [239, 347.5, 419, 590, 700, 973],
+        TUNE_RANGE_SEMITONES: 12,
+        LANES: {
+          bd: { baseFreqHz: 50, pitchSweepHz: 120, pitchTauMs: 35, decayMinMs: 150, decayMaxMs: 700, decayDefaultMs: 350, attackDefault: 0.5, attackClickMs: 3 },
+          sd: { toneFreqsHz: [190, 340], tonalDecayMs: 180, noiseDecayMinMs: 40, noiseDecayMaxMs: 350, noiseDecayDefaultMs: 130, toneDefault: 0.5, snappyDefault: 0.5 },
+          lt: { baseFreqHz: 100, decayMinMs: 150, decayMaxMs: 500, decayDefaultMs: 280 },
+          mt: { baseFreqHz: 140, decayMinMs: 150, decayMaxMs: 500, decayDefaultMs: 260 },
+          ht: { baseFreqHz: 190, decayMinMs: 150, decayMaxMs: 500, decayDefaultMs: 240 },
+          rs: { toneFreqHz: 420, decayMs: 12 },
+          cp: { burstGapMs: 7, burstCount: 3, tailDecayMs: 130, bandHz: 1300 },
+          ch: { bufferLengthMs: 150, decayMs: 60, hpHz: 7000 },
+          oh: { bufferLengthMs: 800, decayMinMs: 100, decayMaxMs: 500, decayDefaultMs: 250, hpHz: 6000 },
+          cc: { bufferLengthMs: 2500, decayMs: 1800, hpHz: 4000 },
+          rc: { bufferLengthMs: 1800, decayMs: 1200, hpHz: 3500 },
+        },
+      },
+    },
+  },
 };
