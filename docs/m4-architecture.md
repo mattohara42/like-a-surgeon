@@ -62,12 +62,10 @@ audio/
   kits.js        wraps the 808 and 909 worklets as step-playable instruments
   voice303.js    wraps the 303 worklet: notes, slides, accents, knob params
   fx.js          native-node effects: tape delay, spring reverb, high-pass, fuzz, cone rattle, bit-crush
-  demos/
-    index.js     demo kind -> player module
-    machineVoice.js
-    ab.js
-    technique.js
-    pattern.js
+  player.js      plays one demo: machine-voice and A/B today (A271)
+  instruments.js playable machines, their lanes and controls, 0..1 -> worklet units
+  pattern.js     the demo pattern format and its parser
+  seq303.js      SQUELCH's 303 gate and slide semantics
   worklets/
     voice303.proc.js   the processors themselves, with no imports (section 3)
     drum808.proc.js
@@ -148,7 +146,8 @@ There are four layers, and every number lives in `CONFIG.audio`.
      (the dub delay's runaway), and even there the safety stage holds;
    - closing the panel stops the sound.
 
-**Mute** is one button, always on screen next to "Start here", and it
+**Mute** is one button, always on screen in the top-left control stack
+(moved there from beside "Start here" in step 4, A271), and it
 remembers its state in localStorage with the same guarded access
 `registers.js` uses. The AudioContext is created on the first press of a
 play button and never before. That satisfies autoplay rules, and it means
@@ -285,6 +284,8 @@ Each step is one PR, merged before the next starts.
    existing demo files into the new params.
 4. `demoBlock.js` and the two players the existing demos need
    (machine-voice, ab). Demos 1, 2 and the Planet Rock A/B play.
+   Built: demos 1 and 2 play; the Planet Rock A/B waits on Q30 (A270,
+   A271).
 5. `fx.js`, and the technique and pattern players. Demos 3 to 10, in
    two or three data PRs.
 6. Visual feedback on the map (section 6).
