@@ -229,7 +229,8 @@ correct response to a good idea arriving mid-milestone.
 
 ## Observed problems
 
-- **SQUELCH: the 808 kick's decay knob gives a click (A270).**
+- ~~**SQUELCH: the 808 kick's decay knob gives a click (A270).**~~
+  **Fixed** upstream in SQUELCH #8 and re-ported (A276).
   `js/worklets/drum808.js` reads `params.decay` for the kick as
   milliseconds, while `js/panelDrum.js` sends every knob as 0..1, so any
   decay setting gives a kick of about 2 ms. The oh and cy lanes convert

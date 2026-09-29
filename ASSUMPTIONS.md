@@ -3068,3 +3068,15 @@ small and worth having in front of Matt alongside everything else here.
   only the one Volt single and a 2012 compilation. The Honey Drippers:
   MB's only other release is a 1974 single with nothing on record about
   it. Q32 now covers these three alongside the DJs.
+
+- **A276. The 808 kick fix, re-ported from SQUELCH.** Matt merged SQUELCH
+  #8, which makes `drum808.js` map the kick's 0..1 decay knob onto
+  `decayMinMs..decayMaxMs` like every other lane. `audio/worklets/
+  drum808.proc.js` is re-ported from SQUELCH 0dff3f9 (the diff against
+  the old port is exactly that fix), and SQUELCH's new regression test
+  came with it into `test/drum808.test.js`. The Lineage workaround in
+  `audio/instruments.js` (A270) is gone: `drumKnobValue` now passes
+  values through. The conversion the workaround did is the one the
+  worklet now does, so the 808 demo sounds the same. `npm run
+  audio:check` measures the same peaks as before (0.358 at its loudest,
+  0.175 at the default volume).
