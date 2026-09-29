@@ -206,6 +206,8 @@ correct response to a good idea arriving mid-milestone.
   either the founding year or an explicit decision that undated records are
   acceptable and should render somewhere. `tools/validate.js` does not
   currently treat a missing year as worth flagging.
+  **Half closed** (A254): the validator now warns on any node with no start
+  year. Brunswick's founding year itself is still unsourced.
 
 (Claude Code: record code smells and architectural concerns here rather than
 fixing them inline.)
@@ -420,6 +422,9 @@ fixing them inline.)
   scene vs. scene-lists-member), so this passes silently. Worth adding
   that consistency check to the validator, and backfilling the four
   missing memberIds, in a tooling-focused pass.
+  **Closed** (A254): the validator now checks membership both ways, and
+  eight missing `memberIds` were backfilled across `kingston-dub`,
+  `detroit-techno` and `chicago-house`.
 - This session's own Track D batch (8 artists, 6 labels, 2 scenes) turned
   out to duplicate work from two other Track D batches that merged into
   `main` first. Reconciled by keeping `main`'s versions of everything both
@@ -494,6 +499,7 @@ fixing them inline.)
   gap applies to `labels` entries, where a malformed object surfaces only
   indirectly as an unresolved-reference warning for `"undefined"`. Worth a
   shape check on both in the next tooling pass. See A70.
+  **Closed** (A254): both are shape-checked now, as warnings.
 - Two labels this batch wanted and did not author: Enjoy Records (Bobby
   Robinson), where Grandmaster Flash recorded 'Superrappin'' before Sugar
   Hill, and Cold Chillin' (1986), Marley Marl's home as in-house producer.
@@ -664,6 +670,7 @@ fixing them inline.)
   the pair look fine to both tools (A158). A validator warning would
   catch the first kind at authoring time. Nothing but source checking
   catches the second.
+  **Closed** (A254): the validator warns on the first kind now.
 - **Built** as `tools/crosscheck.js` (A173). The source verification pass (A155 onward) was run from throwaway
   scripts: a Wikidata diff of every node, a MusicBrainz year check of
   every track, and Discogs credit checks. They could live in `tools/`
@@ -717,3 +724,9 @@ fixing them inline.)
   A `memberIds` entry with no corresponding edge is exactly the kind of
   silent, structural gap the validator exists to catch, and right now it
   can only be found by hand.
+  **Decided against** (A254): the check was built and found 53 members
+  with no scene edge, most of the dataset. That makes it the convention,
+  not a gap. A scene edge is a specific causal claim, and membership stays
+  out of the graph like other roster relationships (A69). Autechre's edge
+  was worth adding because the claim was already written in its blurb, not
+  because it was a member.

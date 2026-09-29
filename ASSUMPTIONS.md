@@ -2635,3 +2635,22 @@ small and worth having in front of Matt alongside everything else here.
     year the influence happened. That year is still on the edge (its
     panel, "not yet" dimming, the ignition timing), just not in the
     geometry. Steep edges fell from 174 to 85 of 200.
+
+- **A254. Validator checks from the backlog, and one that was dropped.**
+  `tools/validate.js` now warns on: a node with no start year (it cannot
+  draw); `labels[]` entries without a string `labelId`; `signatureTracks`
+  entries without a `title` or `whyThisOne`; a `trackPair` whose earlier
+  record is dated after the later one; and scene membership that
+  disagrees between `artist.scenes` and `scene.memberIds`, in either
+  direction. All are warnings, not errors, so Track D batches in progress
+  stay green. On today's data they found Brunswick's null `foundedYear`
+  (known) and eight artists missing from their scene's `memberIds`, which
+  were backfilled: Augustus Pablo, Bunny Lee and Sly and Robbie in
+  `kingston-dub`; Carl Craig, Chez Damier, Kevin Saunderson and Underground
+  Resistance in `detroit-techno`; Ron Hardy in `chicago-house`. Each
+  artist's own record already declared the scene, so this changes no
+  claim. The BACKLOG also asked for a warning on a member with no scene
+  edge. That check was built, found 53 cases (most members of most
+  scenes) and was removed: a scene edge is a specific causal claim, and
+  membership stays out of the graph like other roster relationships
+  (A69).
