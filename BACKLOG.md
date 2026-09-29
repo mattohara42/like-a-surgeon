@@ -104,6 +104,16 @@ correct response to a good idea arriving mid-milestone.
 - Classical minimalism into electronic music.
 - Regional scenes outside the US, UK, Jamaica, and Germany.
 - The full label ownership and catalogue-sale history, which is a project on its own.
+- Machines researched for the TR-707 batch (A266) and held back:
+  - TR-707 on Mr. Fingers, 'Washing Machine'. Some gear lists name it,
+    but `e-909-heard` documents a 909 on that record, recorded in 1984,
+    and the 707 came out in 1985. Needs a primary account before either
+    edge changes.
+  - LM-1 or LinnDrum on *Thriller*. Often repeated, but the "Billie Jean"
+    drums are credited to Ndugu Chancler playing live, with a drum machine
+    possibly layered in. Disputed; worth an edge only with a sourced
+    account of which machine did what, and then as a rule-4 sentence.
+  - TR-606. No source better than forum posts for any specific record.
 
 ## Open design questions
 
