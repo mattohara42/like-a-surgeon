@@ -12,6 +12,8 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   built from that. (b) Keep it a draft until one turns up, and let
   another demo take its place in the ten. The two M1 tempos (124 and
   130 bpm) also need a source, or should be removed.
+  **Deferred 2026-09-29.** Matt: skip the Planet Rock melody for now. The
+  demo stays a draft.
 
 - **Q31. Is the 808 kick "tuned"?** `machines/tr-808.json` says the kick
   "could be tuned so long it became a bass note" and calls it "the
@@ -22,6 +24,9 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   became a bass note", and mention that later producers tuned sampled
   808 kicks, if a source supports it. (b) Keep "tuned" in the loose
   sense of "adjusted". The step 3 demo caption already says decay.
+  **Resolved 2026-09-29.** Matt: remove "tunable" as a term. Done in the
+  TR-808 record and the Planet Rock 808 edge (A272). The later-sampler
+  clause was not added, since no source was checked for it.
 
 - **Q25 to Q29. M4 sign-off.** Five questions gate the audio engine. The
   full text, with options and a recommendation for each, is in
