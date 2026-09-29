@@ -233,6 +233,17 @@ export const CONFIG = {
     sceneFramePaddingPx: 90,
   },
 
+  // The first-run card and its goal chip (reading/welcome.js).
+  welcome: {
+    storageKey: 'lineage.welcome.v1',
+    // How long the "found it" line stays before the chip goes.
+    foundLingerMs: 9000,
+    // Screen padding kept around the opening frame's records, and the
+    // closest the opening view may zoom in.
+    openingPaddingPx: 70,
+    openingMaxScale: 1.3,
+  },
+
   // Search (docs/m3-architecture.md section 6). A linear scan, no index:
   // at the thousand-artist scale that is still well under a frame.
   search: {
@@ -320,8 +331,18 @@ export const CONFIG = {
     },
   },
 
+  // How far past the map's content the lanes, axis and floor run before
+  // they have faded to nothing (render/depth.js), in content px. At the
+  // widest zoom this is about 300 screen px, enough that no edge of the
+  // map is ever a hard line.
+  depth: {
+    fadePx: 1500,
+  },
+
   atmosphere: {
-    dust: { count: 480, parallax: 0.2, driftAmplitudePx: 8 },
+    // zoomParallax: how strongly motes spread and gather with zoom, as a
+    // power of the zoom ratio. 0 turns it off.
+    dust: { count: 480, parallax: 0.2, driftAmplitudePx: 8, zoomParallax: 0.45 },
     nebula: { blurStdDev: 56, opacity: 0.15, parallax: 0.9, minRadiusPx: 160, paddingPx: 150 },
   },
 

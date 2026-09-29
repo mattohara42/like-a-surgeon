@@ -2513,6 +2513,60 @@ small and worth having in front of Matt alongside everything else here.
   live source-verification tool was available this session.
   `node tools/validate.js`: 43 warnings, unchanged.
 
+- **A249. A first-run card, an opening frame, and a goal, ahead of M6.**
+  Matt asked for these in chat while the M3 gate is still open. A guided
+  first run is M6 work in `BUILD_PLAN.md`, so this is logged as a feature
+  shipped ahead of its milestone, at his request. What shipped, and the
+  calls made without asking:
+  - The card is a reading-drawer target (`{ kind: 'welcome' }`) rather than
+    a modal. The drawer already insets the camera and keeps a back stack,
+    so a reader who opens a door can step back to the card.
+  - It opens by itself once per browser (`lineage.welcome.v1` in
+    localStorage). A reader who dismisses it can reopen it from the goal
+    chip until the goal is found.
+  - The three doors are Kool Herc, the TR-808 and King Tubby, all chosen
+    because the lines under them already say what the doors promise:
+    Herc's blurb gives the 1973 Sedgwick Avenue party, the 808's thread
+    intro gives the failure-to-cheapness chain, and Tubby's blurb gives the
+    rewired desk. The Tubby door does not repeat his hook's "invented the
+    remix", since the card is a teaser and that claim deserves the panel's
+    context.
+  - Matt asked for "something hidden or a goal". The hidden version
+    (golden edges to find) went to BACKLOG, so the goal is a question whose
+    answer is a real edge: 'Planet Rock', reached through either
+    `e-kraftwerk-planetrock` or `e-808-planetrock`. The wording follows that
+    edge's own Teen explanation.
+  - The opening view frames King Tubby, U-Roy, Kool Herc, Grandmaster
+    Flash and Afrika Bambaataa: Kingston's sound systems and the first
+    Bronx generation, which is the stretch the first door leads into and
+    where dub, hip-hop and the machines floor all show. Lee Perry was
+    tried and dropped, because his 1963 start widened the frame back into
+    a wall. Only the first build uses it: an Arrange-by rebuild still
+    re-fits the whole map.
+  - Edges with neither end on screen are drawn at 0.22 opacity (the
+    `passing` class). This is the actual cause of the "wall of vertical
+    lines": long cross-lane edges crossing the view with nothing on screen
+    to attach them to. It applies at every zoom, not only on first load.
+
+- **A250. The map's edges fade into the field instead of stopping.** Matt
+  asked for zooming all the way out to feel infinite rather than showing
+  the map's bounding box, and chose that over clamping the zoom. Lane
+  bands, axis ticks, the machine floor and the scene clouds now run
+  `CONFIG.depth.fadePx` past the content on every side, under one SVG mask
+  (`render/depth.js`) that fades them to nothing. One mask rather than one
+  per layer, because a mask repaints with everything under it on every pan
+  frame. Measured in headless Chromium at minimum zoom, `render()`
+  averaged 13.6 to 18.0 ms with it against 16.9 ms without, which is
+  within that environment's noise. The dust layer also answers zoom now
+  (`atmosphere.dust.zoomParallax`): motes spread when zooming in and
+  gather, repeating to fill the screen, when zooming out. That is the
+  "gentle parallax" part of Matt's choice. The fuller multi-layer
+  starfield he backlogged is a separate item. Pan is still unlimited, so a
+  reader can drag the map right off screen into the field. That is
+  consistent with "infinite", but it is noted in BACKLOG in case readers
+  get lost. Numbered A250 because A249 is taken by the welcome card PR,
+  which was open at the same time.
+
 - **A251. The influence ripple and timeline ignition.** Matt asked for
   "something to sparkle or shine" and picked two of four proposals (the
   other two went to BACKLOG). Both live in `render/sparks.js`, a layer of

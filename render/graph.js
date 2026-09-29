@@ -6,7 +6,7 @@
 import { CONFIG } from '../config.js';
 import { computeLayout } from './layout.js';
 import { buildLanePlan } from './arrange.js';
-import { createViewportState, transformString, visibleContentRange, flyTo } from './viewport.js';
+import { createViewportState, transformString, visibleContentRange, screenToContent, flyTo } from './viewport.js';
 import { zoomLevelForScale } from './zoomLevels.js';
 import { attachPanZoomHandlers } from './interactions.js';
 import { svgEl, setAttrs } from './svg.js';
@@ -16,6 +16,7 @@ import { createSparks } from './sparks.js';
 import { createSubstrateDefs, drawSubstrate, updateSubstrateScale } from './substrate.js';
 import { createEdgeGradients, createHaloGradients, trailGradientId, beamGradientId, colorFor } from './gradients.js';
 import { createDustLayer, createNebulaDefs, drawNebulae } from './atmosphere.js';
+import { createDepthDefs, depthExtent } from './depth.js';
 import { createCursorLayer, createCursorDefs, updateCursor, createTransport } from './transport.js';
 
 function clampYear(year, min, max) {
@@ -27,9 +28,10 @@ function clampYear(year, min, max) {
 // is shared by id rather than instantiated per element -- viewport culling
 // creates and destroys elements constantly while panning, and per-element
 // defs would mean churning the <defs> subtree on every frame.
-function createDefs() {
+function createDefs(layout) {
   const defs = svgEl('defs');
   defs.append(
+    ...createDepthDefs(layout),
     ...createEdgeGradients(),
     ...createHaloGradients(),
     ...createSubstrateDefs(),
@@ -68,6 +70,7 @@ function computeDegreeFactors(nodes, edges) {
 // shrinking to nothing zoomed out or ballooning zoomed in.
 
 function drawAxis(axisG, layout) {
+  const extent = depthExtent(layout);
   const span = layout.maxYear - layout.minYear;
   const step = span <= 40 ? 5 : span <= 100 ? 10 : 20;
   const startYear = Math.ceil(layout.timeScale.year0 / step) * step;
@@ -78,8 +81,8 @@ function drawAxis(axisG, layout) {
         class: 'axis-tick',
         x1: x,
         x2: x,
-        y1: 0,
-        y2: layout.totalHeight,
+        y1: extent.y0 - extent.fade,
+        y2: extent.y1 + extent.fade,
         stroke: CONFIG.colors.axisLine,
       }),
     );
@@ -113,13 +116,20 @@ function drawBands(bandsG, titlesG, layout, onSelectGroup) {
     trackingEm: isGroup ? CONFIG.arrange.titleTrackingEm.group : CONFIG.arrange.titleTrackingEm.lane,
   });
 
-  for (const lane of layout.lanes) {
+  // Bands run past both ends of the axis, and the outermost lanes past the
+  // top and bottom, into the fade (render/depth.js). The floor, when drawn,
+  // is the bottom edge instead.
+  const { fade, x0, x1 } = depthExtent(layout);
+  const lastIndex = layout.lanes.length - 1;
+  layout.lanes.forEach((lane, index) => {
+    const top = index === 0 ? lane.y - fade : lane.y;
+    const bottom = lane.y + lane.height + (index === lastIndex && !layout.substrate ? fade : 0);
     bandsG.appendChild(
       svgEl('rect', {
-        x: originX,
-        y: lane.y,
-        width: layout.totalWidth,
-        height: lane.height,
+        x: x0 - fade,
+        y: top,
+        width: x1 - x0 + fade * 2,
+        height: bottom - top,
         fill: lane.color,
         opacity: 0.024,
       }),
@@ -152,7 +162,7 @@ function drawBands(bandsG, titlesG, layout, onSelectGroup) {
       });
     }
     titlesG.appendChild(label);
-  }
+  });
 
   if (!layout.substrate) return titleSpecs;
 
@@ -223,6 +233,11 @@ export function createGraph(container, data, callbacks = {}) {
     // legend. Only the fit uses it: once the reader pans, the legend is an
     // overlay like any other.
     leftInset = () => 0,
+    // Records the very first view frames, instead of fitting the whole
+    // map. Only the caller knows what makes a good way in, so it names
+    // them; an empty list, or none of them on the map, falls back to the
+    // fit.
+    openingFrameIds = [],
   } = callbacks;
 
   // The node or edge the reader is reading about, highlighted on the map.
@@ -254,7 +269,7 @@ export function createGraph(container, data, callbacks = {}) {
   const dust = createDustLayer(container);
 
   const root = svgEl('svg', { class: 'graph-svg', width: '100%', height: '100%' });
-  const defs = createDefs();
+  const defs = createDefs(layout);
   const viewportG = svgEl('g', { class: 'viewport' });
   const nebulaG = svgEl('g', { class: 'nebula-layer' });
   const bandsG = svgEl('g', { class: 'bands-layer' });
@@ -269,7 +284,10 @@ export function createGraph(container, data, callbacks = {}) {
   // Transient light over the markers and under the names (render/sparks.js).
   const fxG = svgEl('g', { class: 'fx-layer' });
   const cursorG = createCursorLayer(layout);
-  viewportG.append(nebulaG, bandsG, floorG, axisG, edgesG, nodesG, fxG, labelsG, titlesG, cursorG);
+  // The layers that run past the content, under one fade (render/depth.js).
+  const fieldG = svgEl('g', { class: 'field-layer', mask: 'url(#depth-fade)' });
+  fieldG.append(nebulaG, bandsG, floorG, axisG);
+  viewportG.append(fieldG, edgesG, nodesG, fxG, labelsG, titlesG, cursorG);
   root.append(defs, viewportG);
   container.appendChild(root);
 
@@ -447,6 +465,34 @@ export function createGraph(container, data, callbacks = {}) {
     vp.ty = pad + Math.max(0, (usableH - contentH * vp.scale) / 2);
   }
 
+  // The opening view: frames `ids` in the screen left over between the
+  // legend, the drawer and the transport bar, instantly rather than as a
+  // flight, since there is nowhere to fly from. Returns false when none of
+  // the records is on the map.
+  function frameOpening(ids, widthPx, heightPx) {
+    const wanted = new Set(ids);
+    const entries = positionedNodes.filter((e) => wanted.has(e.node.id));
+    if (entries.length === 0) return false;
+    const xs = entries.map((e) => e.pos.x1);
+    const ys = entries.map((e) => e.pos.y);
+    const { openingPaddingPx: pad, openingMaxScale } = CONFIG.welcome;
+    const left = leftInset();
+    const right = rightInset();
+    const usableW = Math.max(1, widthPx - left - right - pad * 2);
+    const usableH = Math.max(1, heightPx - CONFIG.viewport.fitBottomInsetPx - pad * 2);
+    const scale = Math.min(
+      openingMaxScale,
+      usableW / Math.max(1, Math.max(...xs) - Math.min(...xs)),
+      usableH / Math.max(1, Math.max(...ys) - Math.min(...ys)),
+    );
+    vp.scale = Math.min(CONFIG.zoom.max, Math.max(CONFIG.zoom.min, scale));
+    const midX = (Math.min(...xs) + Math.max(...xs)) / 2;
+    const midY = (Math.min(...ys) + Math.max(...ys)) / 2;
+    vp.tx = left + (widthPx - left - right) / 2 - midX * vp.scale;
+    vp.ty = (heightPx - CONFIG.viewport.fitBottomInsetPx) / 2 - midY * vp.scale;
+    return true;
+  }
+
   // Cached and only refreshed on resize. Calling getBoundingClientRect()
   // inside render() would force a synchronous layout reflow on every single
   // pan/zoom frame right after mutating the SVG transform (classic layout
@@ -572,6 +618,13 @@ export function createGraph(container, data, callbacks = {}) {
 
     const level = zoomLevelForScale(vp.scale);
     const range = visibleContentRange(vp, containerRect.width, containerRect.height);
+    // The screen itself, without the culling margin. An edge with neither
+    // end in here is only passing through the view, and is drawn faintly
+    // so the lines that touch what the reader is looking at stand out.
+    // Without this, long cross-lane edges read as a wall of verticals.
+    const onScreenMin = screenToContent(vp, 0, 0);
+    const onScreenMax = screenToContent(vp, containerRect.width, containerRect.height);
+    const onScreen = (x, y) => x >= onScreenMin.x && x <= onScreenMax.x && y >= onScreenMin.y && y <= onScreenMax.y;
 
     // Sorted by x1/minX ascending: once an item starts after the visible
     // range's right edge, every remaining item (all with an even later
@@ -644,6 +697,7 @@ export function createGraph(container, data, callbacks = {}) {
         continue;
       }
       const visible = maxX >= range.x1 && maxY >= range.y1 && minY <= range.y2;
+      const passing = !onScreen(anchors.x1, anchors.y1) && !onScreen(anchors.x2, anchors.y2);
       if (visible && ignites(edge.year)) pulseEdge({ edge, anchors }, 0, CONFIG.sparks.pulse.durationMs);
       if (visible) {
         if (!el) {
@@ -662,10 +716,12 @@ export function createGraph(container, data, callbacks = {}) {
           updateEdgeElement(created, edge, anchors, vp.scale, gradientIdsFor(edge));
           created.classList.toggle('unborn', edge.year > year);
           created.classList.toggle('selected', edge.id === selectedId);
+          created.classList.toggle('passing', passing);
         } else {
           updateEdgeElement(el, edge, anchors, vp.scale, gradientIdsFor(edge));
           el.classList.toggle('unborn', edge.year > year);
           el.classList.toggle('selected', edge.id === selectedId);
+          el.classList.toggle('passing', passing);
         }
       } else if (el) {
         el.remove();
@@ -701,7 +757,9 @@ export function createGraph(container, data, callbacks = {}) {
 
   // A rebuild (a layer toggle) keeps the reader where they were rather than
   // yanking the camera back to the opening view.
-  if (!initialViewport) fitToContent(containerRect.width, containerRect.height);
+  if (!initialViewport && !frameOpening(openingFrameIds, containerRect.width, containerRect.height)) {
+    fitToContent(containerRect.width, containerRect.height);
+  }
   dust.start(vp);
   timedRender();
 

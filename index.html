@@ -47,6 +47,9 @@
   .unborn { opacity: 0.085; }
   .unborn .node-name, .unborn .node-hook { opacity: 0; }
   .node, .node-labels, .edge { transition: opacity 240ms ease; }
+  /* Neither end of this edge is on screen: it is only passing through.
+     Faint, so the edges that touch what the reader is looking at win. */
+  .edge.passing:not(.selected):not(:hover) { opacity: 0.22; }
 
   /* Atmosphere. Fixed overlays that never pan, which is what sells the
      idea that you are looking into a volume rather than across a plane. */
@@ -303,6 +306,40 @@
     margin: 10px 0 0; padding-top: 8px; border-top: 1px solid var(--hairline);
   }
 
+  /* ---- welcome card and goal (reading/welcome.js) -------------------- */
+  .doors { display: flex; flex-direction: column; gap: 8px; margin: 16px 0 4px; }
+  .door {
+    display: flex; flex-direction: column; gap: 4px; text-align: left; cursor: pointer;
+    padding: 11px 16px; border-radius: 10px; color: var(--ink); font-family: var(--ui);
+    background: rgba(140,170,220,0.06); border: 1px solid var(--hairline);
+    transition: border-color 200ms, background 200ms, transform 200ms;
+  }
+  .door:hover { border-color: rgba(150,180,235,0.45); background: rgba(140,170,220,0.12); transform: translateX(3px); }
+  .door:focus-visible, .welcome-skip:focus-visible, #goal button:focus-visible {
+    outline: 1px solid rgba(150,180,235,0.7); outline-offset: 3px;
+  }
+  .door-title { font-family: var(--serif); font-size: var(--t-hook); line-height: 1.25; }
+  .door-line { font-size: var(--t-note); line-height: var(--lh-note); color: var(--dim); }
+  .welcome .goal h3 { margin-top: 18px; }
+  .welcome .goal p.body { font-family: var(--serif); font-style: italic; color: #f3dfa6; }
+  .welcome-skip {
+    margin-top: 8px; background: none; border: 0; padding: 4px 0; cursor: pointer;
+    font-family: var(--mono); font-size: var(--t-link); letter-spacing: 0.06em; color: var(--dim);
+  }
+  .welcome-skip:hover { color: var(--ink); }
+  #goal {
+    position: fixed; top: 58px; left: 50%; transform: translateX(-50%); z-index: 8;
+    width: max-content; max-width: min(420px, 34vw); text-align: center;
+  }
+  #goal .goal-text {
+    display: inline-block; padding: 5px 14px; border-radius: 999px;
+    font-family: var(--ui); font-size: 12px; line-height: 1.4; color: #f3dfa6;
+    background: rgba(40,32,10,0.55); border: 1px solid rgba(243,223,166,0.28);
+  }
+  #goal button.goal-text { cursor: pointer; }
+  #goal button.goal-text:hover { border-color: rgba(243,223,166,0.6); }
+  #goal.found .goal-text { box-shadow: 0 0 24px 2px rgba(243,223,166,0.35); }
+
   #status {
     position: fixed; top: 14px; left: 18px; z-index: 6;
     font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
@@ -334,6 +371,7 @@
   <div id="registers" role="group"></div>
   <div id="arrange" role="group"></div>
   <div id="search" role="search"></div>
+  <div id="goal" aria-live="polite" hidden></div>
   <div id="transport"></div>
   <aside id="panel"></aside>
   <div id="legend"></div>
