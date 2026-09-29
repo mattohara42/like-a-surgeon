@@ -256,6 +256,16 @@ fixing them inline.)
   by rough name match, and flagged the near-misses for a human to confirm,
   would catch cases like this one. Not fixed here since it is pre-existing
   data outside this session's task.
+  **Partly closed, twice.** `the-clash.json`/`lee-perry` fixed in the
+  Juice Crew batch. A producer batch then gave five more plain-name
+  entries their own artist records and resolved them: George Martin (the
+  Beatles), Quincy Jones (Michael Jackson), Tony Visconti (David Bowie),
+  Chas Chandler (Jimi Hendrix), and Martin Hannett (Joy Division). Each
+  got at least one real production edge rather than arriving as a bare
+  fix. Many more plain names remain (Shel Talmy-style producers with a
+  single credited act each: Larry Smith, the Bomb Squad, Q-Tip as a
+  producer credit, etc.), each a candidate for the same treatment when
+  there's a real edge to write, not just a name to resolve.
 
 - The SessionStart hook cannot protect a session whose branch was created
   from a commit older than the hook itself. This session's branch pointed

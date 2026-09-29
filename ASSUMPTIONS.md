@@ -2380,3 +2380,29 @@ small and worth having in front of Matt alongside everything else here.
   credits on both records and the 1966 contract dispute are widely
   repeated in British Invasion histories, tiered `documented` on that
   basis. `node tools/validate.js` warnings: 51 to 48.
+
+- **A242. A producer batch: five artists, five production edges.** George
+  Martin (the Beatles), Quincy Jones (Michael Jackson), Tony Visconti
+  (David Bowie), Chas Chandler (Jimi Hendrix), and Martin Hannett (Joy
+  Division) all resolve plain-text `keyProducers` entries that already
+  existed on their respective artist records, following the pattern the
+  Shel Talmy batch set: only add a producer when a real edge is
+  available, not just a name to resolve. Quincy Jones is filed `jazz`
+  (his career started as a big-band trumpeter and arranger well before
+  the Michael Jackson records), which makes `e-jones-mjackson` a genuine
+  cross-lineage edge rather than a same-genre credit; the other four are
+  `rock`. Added Visconti to `west-berlin`, Chandler to `swinging-london`,
+  and Hannett to `uk-post-punk`, each alongside the artist they produced
+  there.
+
+  One deliberate correction while researching: A117 already flagged that
+  a web search once wrongly credited Visconti with producing Bowie's
+  'Space Oddity' (it was Gus Dudgeon). 'Young Americans' (1975) and
+  '"Heroes"' (1977) are used as his signature tracks and trackPair
+  instead, both genuine Visconti credits, to avoid repeating that error.
+
+  As with A240 and A241, no live source-verification tool was available
+  this session; all five producer credits and the general biographical
+  facts (Chandler's 1996 death, Hannett's 1991 death, Quincy Jones' 2024
+  death) come from general knowledge of well-documented music history.
+  `node tools/validate.js` warnings: 48 to 43.

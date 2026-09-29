@@ -1,0 +1,32 @@
+{
+  "id": "george-martin",
+  "name": "George Martin",
+  "sortName": "Martin, George",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1955,
+  "activeTo": 2016,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Called 'the fifth Beatle' for good reason: a classically trained producer who turned the studio itself into an instrument for a rock band.",
+  "blurb": {
+    "age7": "George Martin was the Beatles' producer. He knew about orchestras and tape tricks, and he helped the band make sounds nobody had made before.",
+    "age13": "Martin became head of EMI's Parlophone label in 1955 and signed the Beatles in 1962. As the band grew more ambitious, he brought classical arranging, tape loops, and orchestras into their records, turning ideas like John Lennon's 'make my voice sound like the Dalai Lama chanting on a mountaintop' into actual studio techniques.",
+    "adult": "Martin's classical training and EMI engineering background gave the Beatles technical vocabulary they didn't have themselves, and the gap between 'Love Me Do' (1962) and 'Tomorrow Never Knows' (1966), four years, same producer, same band, is one of the clearest documented growth arcs in popular music."
+  },
+  "signatureTracks": [
+    {
+      "title": "Tomorrow Never Knows (produced for the Beatles)",
+      "year": 1966,
+      "whyThisOne": "Tape loops, a Leslie-speaker-processed vocal, and a single droning chord: the clearest evidence of how far the Martin/Beatles studio partnership had traveled from their first single."
+    },
+    {
+      "title": "A Day in the Life (produced for the Beatles)",
+      "year": 1967,
+      "whyThisOne": "The orchestral crescendo Martin arranged and conducted, building from a single note to chaos on his own cue."
+    }
+  ]
+}

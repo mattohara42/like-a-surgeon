@@ -1,0 +1,32 @@
+{
+  "id": "e-chandler-hendrix",
+  "from": "chas-chandler",
+  "to": "jimi-hendrix",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Chas Chandler discovered Jimi Hendrix at the Cafe Wha? in Greenwich Village in 1966, brought him to London as his manager, and is credited as producer on 'Hey Joe' (1966) and 'Are You Experienced' (1967), as documented in both men's accounts and standard rock histories.",
+  "year": 1967,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Jimi Hendrix",
+      "title": "Hey Joe",
+      "year": 1966,
+      "search": false
+    },
+    "later": {
+      "artist": "Jimi Hendrix",
+      "title": "Purple Haze",
+      "year": 1967
+    },
+    "whatToListenFor": "'Hey Joe' is a relatively straightforward cover, Chandler and Hendrix's first single together. A year later 'Purple Haze' is fuzz, feedback, and an entirely new guitar vocabulary, the sound Chandler's decision to bring Hendrix to London had time to fully develop into."
+  },
+  "explanation": {
+    "age7": "Chas Chandler found Jimi Hendrix playing in a small New York club and brought him to London, where Hendrix became famous.",
+    "age13": "Chandler quit his own band, the Animals, after seeing Hendrix play in Greenwich Village in 1966, and brought him to London as manager and producer, working on 'Hey Joe' and the album 'Are You Experienced'.",
+    "adult": "Chandler functions as the entire transmission mechanism in this edge: without his specific decision to relocate Hendrix, the London scene that made him famous never encounters him at all."
+  },
+  "tags": [
+    "production"
+  ]
+}

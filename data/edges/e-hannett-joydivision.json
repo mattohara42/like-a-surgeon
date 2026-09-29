@@ -1,0 +1,33 @@
+{
+  "id": "e-hannett-joydivision",
+  "from": "martin-hannett",
+  "to": "joy-division",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Martin Hannett is credited as producer on both Joy Division studio albums, 'Unknown Pleasures' (1979) and 'Closer' (1980), and his unconventional recording techniques are extensively documented, including by surviving band members who have discussed the extent to which the records reflect his vision as much as their own.",
+  "year": 1979,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Joy Division",
+      "title": "Unknown Pleasures",
+      "year": 1979,
+      "search": false
+    },
+    "later": {
+      "artist": "Joy Division",
+      "title": "Closer",
+      "year": 1980,
+      "search": false
+    },
+    "whatToListenFor": "Both albums share Hannett's spacious, gated drum sound and heavy use of artificial reverb and echo, built in the studio rather than captured from the band's live performances, which by several accounts sounded considerably rawer and faster."
+  },
+  "explanation": {
+    "age7": "Martin Hannett produced Joy Division's two albums, using echo and space to make them sound cold and eerie.",
+    "age13": "Hannett produced both Joy Division albums, using unusual studio techniques, isolating and gating the drums, layering reverb, to build a sound starker than the band's live shows.",
+    "adult": "Hannett's contribution is genuinely contested: some band members have said the albums sound more like his production vision than their own live identity at the time, which is worth stating as an open question rather than settled fact."
+  },
+  "tags": [
+    "production"
+  ]
+}

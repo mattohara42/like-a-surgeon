@@ -1,0 +1,33 @@
+{
+  "id": "e-martin-beatles",
+  "from": "george-martin",
+  "to": "the-beatles",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "George Martin is credited as producer on every Beatles studio album, and his role in arranging, orchestrating, and realizing studio effects the band asked for in non-technical language is extensively documented in his own memoirs and in band members' accounts.",
+  "year": 1966,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "The Beatles",
+      "title": "Love Me Do",
+      "year": 1962,
+      "search": false
+    },
+    "later": {
+      "artist": "The Beatles",
+      "title": "Tomorrow Never Knows",
+      "year": 1966
+    },
+    "whatToListenFor": "Same producer, same band, four years apart. 'Love Me Do' is a competent beat-group single. 'Tomorrow Never Knows' is tape loops, a droning single chord, and a vocal run through a Leslie speaker. The distance between them is the story of what a producer and a band can build together once trust and ambition both grow."
+  },
+  "explanation": {
+    "age7": "George Martin helped the Beatles turn strange ideas into real sounds, using tape loops and studio tricks.",
+    "age13": "Martin produced every Beatles album, and as the band's ambitions grew, he supplied the technical and orchestral knowledge to realize ideas they could only describe in non-musical terms, like wanting a vocal to sound like a chanting monk on a mountaintop.",
+    "adult": "Martin's classical training and EMI engineering background gave the Beatles a vocabulary they didn't have themselves. The relationship is unusually well documented from both sides, in Martin's own books and in decades of band interviews."
+  },
+  "tags": [
+    "production",
+    "technology"
+  ]
+}
