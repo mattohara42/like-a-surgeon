@@ -3080,3 +3080,42 @@ small and worth having in front of Matt alongside everything else here.
   worklet now does, so the 808 demo sounds the same. `npm run
   audio:check` measures the same peaks as before (0.358 at its loudest,
   0.175 at the default volume).
+
+- **A277. Fixes from Matt's first listen.**
+  - **Demo badge.** The ♪ was too small, and on the 808 it sat near two
+    lines. It is now a 32 px badge with a pulsing ring (still under
+    reduced motion), in its own layer above lines and dots. Its click
+    target has a 24 px radius and always opens its own edge. Badges
+    that would overlap slide along their own curves until they have
+    room. The three 808 edges leave one machine, and their midpoints
+    landed on top of each other. Checked in the browser: with 4 badges
+    on screen, a click at each one's centre lands on that badge. Only
+    playable demos get a badge and the brighter resting line, since a
+    badge promises sound. The draft Planet Rock demo has neither.
+  - **Demo from the artist too.** An artist panel shows the first
+    playable demo on any edge touching that artist, so a demo is
+    reachable from the machine, the artist, or the line. There is one
+    per panel, since only one demo plays at a time.
+  - **808 mix.** Matt heard a harsh high sound and could barely hear the
+    rest. Measured per lane (RMS of the first 100 ms at level 0.8): kick
+    0.50, cowbell 0.44, snare 0.34, clap 0.10, closed hat 0.02. The
+    cowbell (two square waves ringing 300 ms, four times a bar) was the
+    harsh sound. A new optional demo field, `params.levels`, sets
+    per-lane starting levels on a drum machine. The 808 demo uses it:
+    cowbell 0.25, clap 1.0, hat 0.8, kick 1.0. Kick tone now starts at
+    0.7, giving more of the audible pitch drop, because its 55 Hz body
+    is below what most laptop speakers play. Peak levels are unchanged
+    (the kick sets the peak), and the audio check still passes.
+  - **Flashing at full zoom.** Standing still, nothing on the page
+    changes. Moving the mouse lit and unlit edge sets constantly. The
+    cause: a node's click target ran the length of its active span,
+    which at 8x zoom is up to 26,000 px wide, so the pointer was always
+    over some artist and every move changed which one was hovered. The
+    target is now centred on the dot at a fixed screen size
+    (`CONFIG.node.hit`, 180 px wide at full zoom). Measured over 3 s of
+    mouse movement at full zoom: edge light toggles went from 10 to 0.
+    Real-mouse clicks on dots still open them at the opening zoom and
+    at full zoom. Label text is also written only when it changes; it
+    had been rewritten on every pan frame. Not changed: edges still fade
+    to the "passing" style as both ends leave the screen (about 3 a
+    second while panning), which is the designed behaviour.
