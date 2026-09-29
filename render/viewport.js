@@ -4,6 +4,7 @@
 // screen = content * scale + translate.
 
 import { CONFIG } from '../config.js';
+import { reducedMotion } from './motion.js';
 
 function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
@@ -59,7 +60,8 @@ export function flyTo(vp, contentX, contentY, targetScale, viewportWidthPx, view
   const startScale = vp.scale;
   const endTx = viewportWidthPx / 2 - contentX * clampedScale;
   const endTy = viewportHeightPx / 2 - contentY * clampedScale;
-  const durationMs = CONFIG.zoom.flyToDurationMs;
+  // Under reduced motion the camera cuts rather than flies.
+  const durationMs = reducedMotion() ? 0 : CONFIG.zoom.flyToDurationMs;
   const startTime = performance.now();
 
   let cancelled = false;
@@ -71,7 +73,7 @@ export function flyTo(vp, contentX, contentY, targetScale, viewportWidthPx, view
 
   function step(now) {
     if (cancelled) return;
-    const t = Math.min(1, (now - startTime) / durationMs);
+    const t = durationMs > 0 ? Math.min(1, (now - startTime) / durationMs) : 1;
     const eased = easeInOutCubic(t);
     vp.tx = startTx + (endTx - startTx) * eased;
     vp.ty = startTy + (endTy - startTy) * eased;

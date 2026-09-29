@@ -15,6 +15,7 @@
 // by the current scale to counteract the group transform.
 
 import { CONFIG } from '../config.js';
+import { reducedMotion } from './motion.js';
 import { svgEl, setAttrs } from './svg.js';
 import { haloGradientId, colorFor } from './gradients.js';
 
@@ -35,7 +36,9 @@ function hashId(id) {
   return h >>> 0;
 }
 
+// Decoration only, so under reduced motion it simply does not start.
 function breathe(el, id) {
+  if (reducedMotion()) return null;
   const seed = hashId(id);
   const spread = CONFIG.node.breath.maxMs - CONFIG.node.breath.minMs;
   const duration = CONFIG.node.breath.minMs + (seed % 1000) / 1000 * spread;
