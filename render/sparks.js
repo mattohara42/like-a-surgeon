@@ -19,8 +19,8 @@
 import { CONFIG } from '../config.js';
 import { svgEl } from './svg.js';
 import { haloGradientId, colorFor } from './gradients.js';
+import { reducedMotion } from './motion.js';
 
-const reducedMotion = () => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
 
 export function createSparks(fxG) {
   const canPlay = () => !reducedMotion() && fxG.childElementCount < CONFIG.sparks.maxLive;

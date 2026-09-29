@@ -17,6 +17,7 @@
 
 import { CONFIG } from '../config.js';
 import { svgEl, setAttrs } from './svg.js';
+import { reducedMotion } from './motion.js';
 
 function scaleDasharray(pattern, scale) {
   if (pattern === 'none') return 'none';
@@ -125,10 +126,18 @@ export function createEdgeElement(edge, onSelect, onHover) {
 // Culling destroys and recreates elements as they leave and re-enter the
 // viewport, so this runs on creation only, and a restart is never visible
 // because it happens off screen.
+//
+// The comet is how the map shows which way an influence ran, so reduced
+// motion keeps it as a still dash parked near the target end rather than
+// dropping it: the direction survives without the movement.
 function runComet(path, contentLength, scale, delayMs = 0) {
   const dash = contentLength * CONFIG.edge.comet.lengthFraction;
   const durationMs = (contentLength / CONFIG.edge.comet.contentPxPerSecond) * 1000;
   path.setAttribute('stroke-dasharray', `${dash / scale},${contentLength * 2}`);
+  if (reducedMotion()) {
+    path.setAttribute('stroke-dashoffset', -contentLength * CONFIG.edge.comet.stillPosition);
+    return null;
+  }
   return path.animate(
     [{ strokeDashoffset: dash / scale }, { strokeDashoffset: -contentLength }],
     { duration: Math.max(600, durationMs), iterations: Infinity, easing: 'linear', delay: -delayMs },

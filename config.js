@@ -106,6 +106,9 @@ export const CONFIG = {
     comet: {
       contentPxPerSecond: 150,
       lengthFraction: 0.16,
+      // Under reduced motion the comet holds still at this fraction of the
+      // way along its edge, near the target, so direction still reads.
+      stillPosition: 0.72,
       opacity: 0.55,
       crossLineageOpacity: 0.92,
       // Cross-lineage edges get a second, wider comet in the *source*

@@ -168,6 +168,8 @@ correct response to a good idea arriving mid-milestone.
   the grain animation and the fade transitions. Node breathing and the edge
   comets are still running under it: both are Web Animations started in JS
   and need a matchMedia check, not a CSS rule.
+  **Closed** (A255): breathing does not start, comets hold still near
+  their target end, the camera cuts instead of flying, and sparks stay off.
 - **Beam overlap.** Two machines close together on the time axis put two
   vertical shafts through the same space. Fine at two machines; wants
   attention before the machine roster grows.
@@ -190,6 +192,8 @@ correct response to a good idea arriving mid-milestone.
 - Reduced-motion handling. All three prototypes animate continuously and
   none of them respect `prefers-reduced-motion`. Whichever direction wins
   needs a still version that loses no information.
+  **Closed** for the app (A255). The comet was the one animation carrying
+  information (direction), and it keeps that as a still dash.
 
 ## Observed problems
 
