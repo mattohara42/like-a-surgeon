@@ -191,6 +191,12 @@ correct response to a good idea arriving mid-milestone.
 (Claude Code: record code smells and architectural concerns here rather than
 fixing them inline.)
 
+- **The map can be panned right off screen.** Since A250 the field around
+  the map fades out rather than stopping, so there is no edge to bump
+  into, and a reader can drag the whole map out of view into empty dust.
+  If readers get lost, a soft pull back toward the content when it leaves
+  the screen, or a "back to the map" control, would fix it.
+
 - `j-dilla.json`'s adult text states "Donuts was mostly made in hospital" as
   plain fact. Researching the new `stones-throw` label for this batch turned
   up Dan Charnas's biography 'Dilla Time' (2022, built on nearly 200
