@@ -207,12 +207,12 @@ correct response to a good idea arriving mid-milestone.
 (Claude Code: record code smells and architectural concerns here rather than
 fixing them inline.)
 
-- **Focusing a long edge shows an empty map.** `focusEdge` flies to the
-  edge's midpoint at `flyToScale`, so a cross-lane edge like
-  Kraftwerk → Afrika Bambaataa lands the camera in the empty space between
-  two lanes with neither end on screen. Framing both endpoints (as
-  `frameNodes` does) would fix it. Seen while testing the welcome goal
-  (A249).
+- ~~**Focusing a long edge shows an empty map.**~~ **Fixed:** focusing or
+  clicking an edge now zooms out as far as it needs to keep both ends on
+  screen beside the drawer (`edgeFrameScale` in `render/graph.js`). A short
+  edge still gets the `flyToScale` close-up. It was seen while testing the
+  welcome goal (A249), where Kraftwerk → Afrika Bambaataa landed the camera
+  between two lanes with neither end in view.
 - **The year readout opens at 2028.** The transport starts at
   `timeScale.yearEnd`, which is the last record's year plus
   `marginYears` of layout padding, so the reader's first sight of the year
