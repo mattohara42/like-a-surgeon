@@ -5,7 +5,7 @@
   "lineage": "rock",
   "yearFrom": 1978,
   "yearTo": 1984,
-  "city": "London",
+  "city": ["London", "Manchester", "Leeds"],
   "country": "UK",
   "hook": "Punk's negation turned into experimentation: dub bass, funk rhythm, and art-school theory smuggled back into guitar music punk had tried to strip bare.",
   "blurb": {

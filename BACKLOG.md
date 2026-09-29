@@ -110,6 +110,8 @@ correct response to a good idea arriving mid-milestone.
   and named the other two in the prose fields instead. `city` as an array,
   or a looser `region` concept, would fix this properly; jazz, if it's ever
   added, will hit the same wall across several US cities.
+  **Closed** (A261): `scene.city` may now be a list. `uk-post-punk` reads
+  London, Manchester, Leeds.
 - Whether historically important but indefensible artists need a data flag, or
   whether careful `hook` writing is sufficient. Starting with writing only.
 - `edge.type: "label"` still has no worked example anywhere in the dataset
@@ -292,6 +294,8 @@ fixing them inline.)
   from them is looser than it could be. Either the same optional `search`
   field trackPair has (A78), or moving the credit into its own field, would
   tighten it. A schema change, so it waits for a decision (A93).
+  **Closed** (A261): `signatureTracks[].search`, same rules as trackPair,
+  set on 69 tracks whose titles carry a credit note.
 
 - The map barely distinguishes `documented` from `consensus`: the only
   difference is stroke width, 2px against 1.5px (`CONFIG.edge.strokeWidth`),
@@ -473,6 +477,9 @@ fixing them inline.)
   the Harmonizer, the AMS delay and the Mu-Tron as well, and two
   guitar amplifiers are filed as `instrument` for want of anything better
   (A109). An `effect` kind and an `amplifier` kind would cover all of them.
+  **Closed** (A261): `effect` and `amplifier` kinds added. Five effects and
+  two amplifiers refiled. The TEAC 4-track and Tubby's console keep their
+  old kinds, since no one asked to move them.
 - The lineage enum has no disco value, so the 12-inch single is filed under
   `funk` (A57). Disco is load-bearing for house, for the remix as an
   authored object, and for a large part of what the map will eventually

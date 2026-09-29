@@ -2738,3 +2738,27 @@ small and worth having in front of Matt alongside everything else here.
   the fade is untouched and only the content has to stay in reach. The
   animation is shared with `flyTo` through a new `animateTo`, so any
   gesture interrupts it the same way.
+
+- **A261. Three schema changes Matt chose from BACKLOG.**
+  - **Machine kinds `effect` and `amplifier`.** An effect is a unit sound
+    passes through, and an amplifier is a guitar or instrument amp.
+    Refiled as effects: the AMS DMX 15-80, Eventide H910, Maestro
+    Fuzz-Tone, Mu-Tron Bi-Phase and Roland Space Echo (all formerly
+    `studio-technique`). Refiled as amplifiers: the slashed Elpico and the
+    Marshall JTM45 (formerly `instrument`). The TEAC A-3340 stays a studio
+    technique and Tubby's MCI console an instrument (A58), since the
+    request named only effects and amps. No renderer reads `kind`, so
+    nothing on screen changes.
+  - **`signatureTracks[].search`.** It uses the same three-way rule as
+    `trackPair` (Q17): absent means "<artist> <title>", a string replaces
+    it, and false means no link. A malformed value is a validator error,
+    like its trackPair twin. It is set on 69 tracks whose titles carry a
+    credit note ("(Inner City)", "(produced for Joy Division)", "(with
+    Aerosmith)"), each searching the credited act and the clean title.
+    Titles whose parentheses are part of the real title ("Voodoo Child
+    (Slight Return)", "(I Can't Get No) Satisfaction") keep the default.
+  - **`scene.city` as a string or a list.** Every existing string stays
+    valid. The panel joins a list with " · ", and place search indexes
+    each city, so "Leeds" now finds UK Post-Punk. Only `uk-post-punk` uses
+    a list so far, the case BACKLOG named, with London, Manchester and
+    Leeds already in its prose.

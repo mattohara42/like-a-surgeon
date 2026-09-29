@@ -33,6 +33,8 @@ const MACHINE_KINDS = [
   'studio-technique',
   'format',
   'instrument',
+  'effect',
+  'amplifier',
 ];
 
 // Shard directory name -> expected `type` field value.
@@ -277,6 +279,12 @@ for (const [id, artist] of records.artists) {
     if (typeof track?.whyThisOne !== 'string' || !track.whyThisOne.trim()) {
       warn(`${where}: signatureTracks[${i}] ("${track?.title}") has no whyThisOne`);
     }
+    // Same rule as trackPair search: a bad value would quietly draw a
+    // wrong link, so it is an error.
+    const search = track?.search;
+    if (search !== undefined && search !== false && (typeof search !== 'string' || !search.trim())) {
+      fail(`${where}: signatureTracks[${i}].search must be a non-empty string or false, got ${JSON.stringify(search)}`);
+    }
   }
   const trackCount = (artist.signatureTracks || []).length;
   if (trackCount < 2 || trackCount > 3) {
@@ -294,6 +302,16 @@ for (const [id, label] of records.labels) {
       warn(`${where}: songsAboutLabel entry "${song.title}" artist "${song.artist}" does not resolve to an artist id (may be a plain name)`);
     }
   }
+}
+
+// scene city: one name, or a list of names for a scene spread across
+// several cities.
+for (const [id, scene] of records.scenes) {
+  const city = scene.city;
+  const ok = typeof city === 'string'
+    ? city.trim() !== ''
+    : Array.isArray(city) && city.length > 0 && city.every((c) => typeof c === 'string' && c.trim());
+  if (!ok) fail(`scenes/${id}.json: city must be a non-empty string or a non-empty list of strings`);
 }
 
 // scene references

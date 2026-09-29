@@ -2,7 +2,7 @@
   "type": "machine",
   "id": "marshall-jtm45",
   "name": "Marshall JTM45",
-  "kind": "instrument",
+  "kind": "amplifier",
   "lineage": "rock",
   "maker": "Marshall",
   "releasedYear": 1963,

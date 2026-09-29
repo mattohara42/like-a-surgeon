@@ -2,7 +2,7 @@
   "type": "machine",
   "id": "maestro-fz-1",
   "name": "Maestro FZ-1 Fuzz-Tone",
-  "kind": "studio-technique",
+  "kind": "effect",
   "lineage": "other",
   "maker": "Gibson (Maestro brand)",
   "releasedYear": 1962,

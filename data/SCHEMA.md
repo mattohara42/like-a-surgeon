@@ -87,7 +87,11 @@ labels        [ { labelId, from, to } ]    the ones that mattered
 keyProducers  [artist ids or plain names]
 hook          one sentence, why this node exists on the map
 blurb         three registers
-signatureTracks [ { title, year, whyThisOne } ]   2 to 3
+signatureTracks [ { title, year, whyThisOne, search? } ]   2 to 3
+              search is optional, as on trackPair (Q17): absent means
+              "<artist name> <title>", a string replaces that query, false
+              means no link. Use it when the title carries a credit note,
+              like "Big Fun (Inner City)".
 ```
 
 ## machine
@@ -98,7 +102,9 @@ because for long stretches of this history it is the protagonist.
 ```
 id, name, type: "machine"
 kind          "drum-machine" | "synth" | "sampler" | "studio-technique" |
-              "format" | "instrument"
+              "format" | "instrument" | "effect" | "amplifier"
+              effect: a unit sound passes through (fuzz, delay, phaser,
+              pitch shift). amplifier: a guitar or instrument amp.
 lineage       a lineage id, one of the files in data/lineages/
               the machine's home lineage, for crossLineage checks on edges
               that touch it
@@ -118,7 +124,9 @@ id, name, type: "scene"
 lineage       a lineage id, one of the files in data/lineages/
               the scene's home lineage, for crossLineage checks on edges
               that touch it
-yearFrom, yearTo, city, country
+yearFrom, yearTo, country
+city          a city name, or a list of them when the scene genuinely
+              spanned several (UK post-punk: London, Manchester, Leeds)
 hook          one sentence, why this scene exists on the map
 blurb         three registers
 geopolitics   concrete, not vibes. Conscription, unemployment, rent, race and

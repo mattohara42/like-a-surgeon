@@ -2,7 +2,7 @@
   "type": "machine",
   "id": "davies-elpico-amp",
   "name": "Dave Davies's slashed Elpico amp",
-  "kind": "instrument",
+  "kind": "amplifier",
   "lineage": "other",
   "maker": "Elpico",
   "releasedYear": 1964,

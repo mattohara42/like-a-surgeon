@@ -23,12 +23,14 @@
     {
       "title": "Hey Joe (produced for Jimi Hendrix)",
       "year": 1966,
-      "whyThisOne": "Hendrix's debut UK single, produced by Chandler within months of discovering him."
+      "whyThisOne": "Hendrix's debut UK single, produced by Chandler within months of discovering him.",
+      "search": "Jimi Hendrix Hey Joe"
     },
     {
       "title": "Purple Haze (produced for Jimi Hendrix)",
       "year": 1967,
-      "whyThisOne": "The breakthrough single that made Hendrix a star in Britain, a year after Chandler brought him over."
+      "whyThisOne": "The breakthrough single that made Hendrix a star in Britain, a year after Chandler brought him over.",
+      "search": "Jimi Hendrix Purple Haze"
     }
   ]
 }
