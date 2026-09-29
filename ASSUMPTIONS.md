@@ -2456,3 +2456,22 @@ small and worth having in front of Matt alongside everything else here.
   no live source-verification tool was available this session; these
   facts come from general knowledge of well-documented pop history.
   `node tools/validate.js`: 0 errors, 44 warnings throughout.
+
+- **A246. Coolio joins, closing out the Weird Al thread anchors, and the
+  first `consensus`-tier Weird Al edge.** `e-coolio-weirdal` ("Amish
+  Paradise" parodying "Gangsta's Paradise") is tiered `consensus` rather
+  than `documented`, unlike every other Weird Al parody edge on this
+  map, because Yankovic's and Coolio's own public accounts of the
+  permission story conflict: Yankovic says clearance came through
+  Coolio's label, Coolio said for years he was never personally asked
+  and objected to the parody. Both sides are stated in the edge's
+  evidence and explanation rather than treating either as settled,
+  per CLAUDE.md rule 4. Added Coolio to `los-angeles-gangsta-rap`'s
+  `memberIds` (his `activeFrom` of 1994 and 'Gangsta's Paradise''s 1995
+  both fall inside the scene's 1986-1996 window). Left the Stevie Wonder
+  'Pastime Paradise' sample underlying 'Gangsta's Paradise' itself
+  unaddressed, a natural addition once Stevie Wonder is a node. As with
+  recent batches, no live source-verification tool was available this
+  session; these facts, including Coolio's September 2022 death, come
+  from general knowledge of well-documented music history.
+  `node tools/validate.js`: 0 errors, 44 warnings throughout.
