@@ -73,8 +73,11 @@ function arrivalsByYear(nodes, edges) {
 }
 
 export function createTransport(root, layout, nodes, edges, onYearChange, initialYear = null) {
-  const minYear = layout.timeScale.year0;
-  const maxYear = layout.timeScale.yearEnd;
+  // The records' own span, not the axis: the axis is padded by
+  // `layout.marginYears` on each side for breathing room, and a cursor that
+  // could reach the padding opened on a year that has not happened yet.
+  const minYear = layout.minYear;
+  const maxYear = layout.maxYear;
   const arrivals = arrivalsByYear(nodes, edges);
 
   root.innerHTML = `
