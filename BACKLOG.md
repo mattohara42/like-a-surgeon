@@ -110,8 +110,8 @@ correct response to a good idea arriving mid-milestone.
     and the 707 came out in 1985. Needs a primary account before either
     edge changes.
   - LM-1 or LinnDrum on *Thriller*. Often repeated, but the "Billie Jean"
-    drums are credited to Ndugu Chancler playing live, with a drum machine
-    possibly layered in. Disputed; worth an edge only with a sourced
+    drums are credited to Ndugu Chancler playing live, and the sources we
+    found disagree about any machine's part. Disputed; worth an edge only with a sourced
     account of which machine did what, and then as a rule-4 sentence.
   - TR-606. No source better than forum posts for any specific record.
 
