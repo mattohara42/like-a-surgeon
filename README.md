@@ -20,14 +20,15 @@ pull request gets its own Netlify preview.
   #21). The gate is still open: it passes when Matt's 13-year-old uses the
   map without instruction and gets somewhere. `docs/m3-gate-notes.md` is the
   guide for that session.
-- **Track D (data):** machines reached their 25 target in PR #23. Q21's
-  three batches followed PR #24's 80s hip-hop: the 90s groups and their
-  producers, the most-sampled breaks with their artists as hubs, and
-  classic rock (the Beatles, Led Zeppelin, Hendrix, the Verve), most of it
-  joined to hip-hop through samples. Then outré electronic: musique
-  concrète, the Radiophonic Workshop, Can and Neu!, Eno, and early Warp.
-  The rest are still short: 92 of 120 artists, 141 of 350 edges, 10 of 20
-  scenes, 17 of 30 labels, 2 of 5 threads, 4 of 30 edges with a demo.
+- **Track D (data):** ongoing. Artists (135 of 120), machines (31 of 25),
+  scenes (20 of 20), labels (31 of 30) and cross-lineage edges (103 of 60)
+  have all passed their old M1 targets. Still short: 263 of 350 edges,
+  2 of 5 threads, and 5 of 30 edges with a demo. Recent batches were
+  edge-only passes between artists already on the map, the Juice Crew and
+  Sherwood's On-U Sound circle, producers (George Martin, Quincy Jones,
+  Tony Visconti and others), and the Weird Al parody edges (Nirvana,
+  Madonna, Coolio, Rick Derringer). `npm run report` has the exact
+  distance.
 - **Open question:** Q20 in `QUESTIONS.md`. A null end year can't
   currently tell "still made" from "unknown", so some machines read as
   still on sale.

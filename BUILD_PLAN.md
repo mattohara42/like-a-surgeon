@@ -111,7 +111,8 @@ guided tour, bundling, offline verification, then a hosting path.
 ## Track D — Data expansion (parallel, ungated, never finished)
 
 Runs alongside every milestone from M1 forward. Adding an artist is one file
-plus one manifest line. Each expansion batch is its own commit with its own
+(`data/manifest.json` is generated, so there is no manifest line to edit).
+Each expansion batch is its own commit with its own
 validator run and its own confidence-tier report.
 
 Suggested batch order after M1:
@@ -135,7 +136,7 @@ nodes (A189), and a sample-hub/Native Tongues batch (A191) that added
 Isaac Hayes, the Isley Brothers, Bob James, Syl Johnson, De La Soul,
 Prince Paul and Mantronix, plus the Casio MT-40 machine. Batch 5 is
 half done. Machines exceeded 25 in PR #23 and again this batch, and
-labels are still short. A small label batch added Stones Throw Records,
+labels later reached their target too. A small label batch added Stones Throw Records,
 closing a gap already visible in Madlib's, MF DOOM's and J Dilla's own
 blurbs, plus Stan Getz and Luiz Bonfá as a sample hub into J Dilla's
 'Runnin''. An overnight run then closed out the last Q21 sample-hub
@@ -154,7 +155,7 @@ pattern in reverse. A batch bringing MC Shan, Kool G Rap and Roxanne
 Shanté onto the map, each with a documented Marley Marl production
 edge, brought the artist count to 120 and **met the M1 target** for the
 first time; the Juice Crew is nearly closed out too (only Craig G still
-waits). A `chess-records` label batch followed, giving the rock spine
+waited, and A240 later closed that). A `chess-records` label batch followed, giving the rock spine
 its first blues-label edge (the Rolling Stones' 1964 Chicago sessions),
 then `sheffield-idm` joined Aphex Twin and Autechre as a scene built
 around a label's marketing decision (Warp's 1992 "Artificial
@@ -182,7 +183,14 @@ added five more, including two label edges an artist's own record
 already implied (Ariwa, Sugar Hill) and the 1975 move of James Brown's
 horn section into P-Funk (A238). A fourth batch added six more,
 including the Willie Dixon/Chess Records credit dispute behind 'Whole Lotta
-Love' and Kool G Rap's line into Nas (A239). `npm run report` has the current
+Love' and Kool G Rap's line into Nas (A239). A run of smaller batches then closed named waits in BACKLOG:
+Craig G and Boogie Down Productions (A240), Shel Talmy and the Brunswick
+orphan (A241), five producers (A242), On-U Sound with African Head Charge
+and Tackhead (A243), and Nirvana, Madonna, Coolio and Rick Derringer
+(A244 to A247), which anchored the Weird Al parody edges and closed the
+last plain-name `keyProducers` entries on his record. The most recent
+batch gave Autechre the Sheffield IDM scene edge Aphex Twin already had
+(A248). `npm run report` has the current
 distance on every remaining target.
 
 ## Definition of done for any milestone
