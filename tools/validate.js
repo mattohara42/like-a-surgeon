@@ -9,6 +9,7 @@ import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { writeManifest, SHARD_TYPES } from './manifest.js';
+import { checkDemo } from './demoSchema.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = join(ROOT, 'data');
@@ -344,6 +345,14 @@ for (const [id, artist] of records.artists) {
       warn(`artists/${id}.json: lists scene "${sceneId}", but scenes/${sceneId}.json does not list this artist in memberIds`);
     }
   }
+}
+
+// demo params: what a player needs to make the demo sound
+// (tools/demoSchema.js, docs/m4-architecture.md section 5)
+for (const [id, demo] of records.demos) {
+  const where = `demos/${id}.json`;
+  const errs = checkDemo(demo, (field, value) => checkRegisterObject(where, field, value));
+  for (const e of errs) fail(`${where}: ${e}`);
 }
 
 // machine/edge/thread demoId references
