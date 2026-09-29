@@ -56,13 +56,15 @@ correct response to a good idea arriving mid-milestone.
   arrives.
   **A fourth anchor:** Madonna joins with `e-madonna-weirdal` ("Like a
   Surgeon" parodying "Like a Virgin"), which is also where this
-  project's own repo name comes from. Coolio is still waiting, and his
-  edge (`e-coolio-weirdal`, "Amish Paradise" parodying "Gangsta's
-  Paradise") would be a different kind of addition: the permission
-  story is genuinely disputed, Coolio said publicly he never personally
-  approved it, which is exactly the CLAUDE.md rule 4 case worth a
-  sentence rather than the clean approvals the other three anchors
-  have.
+  project's own repo name comes from.
+  **A fifth, and the disputed one:** Coolio joins with `e-coolio-weirdal`
+  ("Amish Paradise" parodying "Gangsta's Paradise"), tiered `consensus`
+  rather than `documented` since Yankovic's and Coolio's own accounts of
+  the permission story conflict, the CLAUDE.md rule 4 case this note
+  had flagged. Both sides are stated in the edge's evidence rather than
+  picking one. All five thread anchors (Michael Jackson, Rolling Stones,
+  Nirvana, Madonna, Coolio) are now on the map; the thread player itself
+  is still M5 work.
 
 - **Follow the producer (Q21).** Select a producer and see everything
   they touched lit up across the map, or an "Arrange by producer" lane

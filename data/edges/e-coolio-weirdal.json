@@ -1,0 +1,31 @@
+{
+  "id": "e-coolio-weirdal",
+  "from": "coolio",
+  "to": "weird-al-yankovic",
+  "type": "cover",
+  "confidence": "consensus",
+  "evidence": "'Amish Paradise' (1996, from 'Bad Hair Day') parodies Coolio's 'Gangsta's Paradise' (1995). Yankovic's account is that clearance was obtained through Coolio's label; Coolio said in interviews at the time that he was never personally asked and objected to the parody, a dispute the two men gave differing public accounts of for years afterward. Because the two sides of the permission story conflict, this sits at consensus rather than documented, unlike Yankovic's other parody edges on this map.",
+  "year": 1996,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Coolio",
+      "title": "Gangsta's Paradise",
+      "year": 1995
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "Amish Paradise",
+      "year": 1996
+    },
+    "whatToListenFor": "Yankovic's band rebuilds the somber, minor-key arrangement closely, including the Stevie Wonder-derived hook, and swaps Coolio's reflection on violence and mortality for a broad comedy premise about Amish farm life."
+  },
+  "explanation": {
+    "age7": "Weird Al made a funny farming song using the music from Coolio's serious song, and Coolio was upset because nobody had really asked him first.",
+    "age13": "'Amish Paradise' copies the music of 'Gangsta's Paradise' closely and swaps the words for jokes about Amish farm life. Coolio said he was never personally asked for permission and was unhappy about it, unlike most artists Yankovic has parodied.",
+    "adult": "This is the map's clearest case of Yankovic's usual permission-first method breaking down: his side describes clearance through the label, Coolio's side describes never being personally consulted, and the two accounts do not agree. Both are stated here rather than one being treated as settled."
+  },
+  "tags": [
+    "production"
+  ]
+}

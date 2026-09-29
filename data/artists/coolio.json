@@ -1,0 +1,34 @@
+{
+  "id": "coolio",
+  "name": "Coolio",
+  "sortName": "Coolio",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1994,
+  "activeTo": 2022,
+  "originCity": "Compton, California",
+  "originCountry": "USA",
+  "scenes": [
+    "los-angeles-gangsta-rap"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A G-funk-era rapper whose biggest hit, built on a Stevie Wonder sample, became so famous it got parodied into an Amish comedy song against his wishes.",
+  "blurb": {
+    "age7": "Coolio was a rapper whose song 'Gangsta's Paradise' was so famous that a comedy singer made a joke version of it, which Coolio did not like at first.",
+    "age13": "Coolio's 'Gangsta's Paradise' (1995), built around a sample of Stevie Wonder's 'Pastime Paradise' and written for the film 'Dangerous Minds', became one of the biggest hits of the decade. Its fame made it an obvious target for a Weird Al Yankovic parody, 'Amish Paradise' (1996), but unlike most of Yankovic's targets, Coolio said publicly that he had not personally approved it and was upset when he first heard it, feeling his serious song had been turned into a joke.",
+    "adult": "'Gangsta's Paradise' sits at the more reflective end of mid-1990s G-funk, its lyrics addressing violence and mortality rather than celebrating them, which is part of why Coolio's objection to 'Amish Paradise' carried real weight: the parody's premise treats the source as generic rather than engaging with what the song was actually about. Yankovic's team says clearance was obtained through Coolio's label; Coolio maintained for years that he was never personally asked and would have said no. Coolio died in September 2022."
+  },
+  "signatureTracks": [
+    {
+      "title": "Gangsta's Paradise",
+      "year": 1995,
+      "whyThisOne": "Built on a Stevie Wonder sample, written for 'Dangerous Minds', and one of the biggest-selling singles of the 1990s."
+    },
+    {
+      "title": "Fantastic Voyage",
+      "year": 1994,
+      "whyThisOne": "His breakthrough single, built on a Lakeside sample, and a lighter, party-oriented counterpart to his later, darker signature hit."
+    }
+  ]
+}
