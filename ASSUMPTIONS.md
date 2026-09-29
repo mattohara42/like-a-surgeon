@@ -2805,3 +2805,42 @@ small and worth having in front of Matt alongside everything else here.
   counts "Golden threads · n / 7 found", and the chip flashes when one is
   collected. The Amen break edge is both a mission and golden, so the
   mission's own line shows and both count.
+
+- **A264. `originCity` is a person's birthplace.** Matt settled the
+  convention (Q-style, in chat): for a person, `originCity` is where they
+  were born, and for a band, group or duo it is where they formed.
+  SCHEMA.md now says so. Every artist was matched to Wikidata through its
+  English Wikipedia article. Wikidata says whether the entity is a human
+  (P31 Q5) and where they were born (P19). The results:
+  - Of 83 people, 49 already matched their birthplace.
+  - The rest were either the same place at a different grain (Brixton for
+    London, the Bronx for South Bronx, a hospital in Gary), left as they
+    were, or a real difference.
+  - 21 real differences were changed: Aphex Twin (Limerick, Ireland),
+    Billy Cobham (Colón, Panama), Coolio (Monessen, Pennsylvania),
+    Daedelus (Santa Monica), Daphne Oram (Devizes), Derrick May (Detroit),
+    Duke Bootee (Elizabeth, New Jersey), Frankie Knuckles (the Bronx),
+    Grandmaster Flash (Bridgetown, Barbados), Karlheinz Stockhausen
+    (Mödrath, Germany), Kevin Saunderson (Brooklyn), Lee Perry (Kendal,
+    Jamaica), MF DOOM (London), Nas (Brooklyn), Pete Rock (the Bronx),
+    Pierre Schaeffer (Nancy), Rick Derringer (Celina, Ohio), Rick Rubin
+    (Lido Beach, New York), RZA (Brownsville, Brooklyn), Biz Markie and
+    Sylvia Robinson (Harlem).
+  - Where a blurb mentions birth or upbringing, it agrees with these, and
+    the formative city stays in the prose ("born in Harlem, grew up on
+    Long Island").
+  - Left alone: Tom Scott (the first match was a different Tom Scott, and
+    the saxophonist's entry gives Los Angeles, as the record already
+    had), Coke La Rock (Wikidata's "Jamaica" could be the country or
+    Queens, so unconfirmed), Ron Hardy (no birthplace on Wikidata) and
+    Chez Damier (no article).
+
+  One side effect: place search groups records by `originCity`, so
+  "Kingston" no longer finds Lee Perry and "Bridgetown" now finds Flash.
+  That is the point of the change for `e-kingston-bronx`: Caribbean birth
+  across the founding Bronx generation is now visible in the data.
+
+- **A265. Brunswick's founding year stays null.** Matt asked for it to be
+  filled only from a solid source. None was found this session. See the
+  BACKLOG entry for the three candidate years (late 1920s, about 1932,
+  1934) and why none can be used yet.

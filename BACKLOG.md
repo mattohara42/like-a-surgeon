@@ -234,6 +234,15 @@ correct response to a good idea arriving mid-milestone.
   currently treat a missing year as worth flagging.
   **Half closed** (A254): the validator now warns on any node with no start
   year. Brunswick's founding year itself is still unsourced.
+  **Researched, left null** (A265). No single year holds up for "Brunswick
+  (UK)". British Brunswick Ltd issued American Brunswick masters in Britain
+  from the late 1920s. British Decca took over the UK Brunswick business in
+  the early 1930s, with 1932 given in secondary summaries but not stated
+  in Wikipedia's own Decca Records article. It could only carry American
+  Decca recordings once US Decca existed (1934). Which of those is the
+  founding of the imprint this record describes is itself a judgement,
+  and none of them is solidly sourced yet. A primary source (a Decca
+  history or a label discography with dates) would settle it.
 
 (Claude Code: record code smells and architectural concerns here rather than
 fixing them inline.)
@@ -531,6 +540,8 @@ fixing them inline.)
   part of the evidence for `e-kingston-bronx` and the map currently hides
   it for one of the three people it most applies to. Left alone rather than
   edited inline, because it is a convention decision and not a typo.
+  **Closed** (A264): birthplace for people, formation city for groups.
+  Flash is Bridgetown, Barbados.
 - `tools/validate.js` counts `signatureTracks` entries but never checks
   their shape, so an entry missing `whyThisOne` passes clean. That is
   reader-facing text, and four records shipped from this batch's first pass
