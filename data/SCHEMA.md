@@ -215,8 +215,8 @@ kind is one of:
   "machine-voice"   trigger and tweak a synthesized recreation   (playable)
   "ab"              two patterns, switchable mid-playback          (playable)
   "fx-chain"        dry stem, then the same stem through a processing chain,
-                    switchable live                                (M4 step 5)
-  "pattern"         a rhythmic pattern straight, then chopped      (M4 step 5)
+                    switchable live                                (playable)
+  "pattern"         a rhythmic pattern straight, then chopped      (playable)
   "morph"           a sequence that transforms from one era's sound to another
                                                                    (M5)
 params            kind-specific, below
@@ -249,6 +249,32 @@ ab params:
 
 ```
 a, b        each { label (register object), pattern }
+```
+
+pattern params (a chop switches on the next bar):
+
+```
+pattern     one pattern
+versions    two or more { label (register object), order (optional) }.
+            A version without `order` plays the pattern straight. `order`
+            lists, for each step, the step number (1-based) to play in its
+            place, or null for silence: [1, 2, 3, 4, 13, 14, ...]
+controls    optional, as machine-voice, targeting any drum lane in the
+            pattern
+```
+
+fx-chain params (the effect is a send: the dry sound never changes, and
+switching the effect in or out is immediate, so its tail rings on):
+
+```
+pattern     one pattern
+dry, wet    each { label (register object) }
+chain       effects in order, each { fx, ...settings in real units }
+            (audio/fx.js). "tape-echo": steps (1 to 8, the delay time in
+            sixteenth-notes), lowCutHz (into the echo), highCutHz (in its
+            feedback loop). Each effect may appear once.
+controls    optional, as machine-voice. Targets are "fx.knob"
+            ("tape-echo.feedback", "tape-echo.level") or a drum lane knob.
 ```
 
 A pattern (audio/pattern.js):

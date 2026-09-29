@@ -1,5 +1,6 @@
 // The demo inside a panel (docs/m4-architecture.md section 6): play and
-// stop, the A/B switch, pads, sliders, a row of step lights, and the
+// stop, the switch between versions (A/B, straight or chopped, dry or
+// through an effect), pads, sliders, a row of step lights, and the
 // caption in the reader's register.
 //
 // Controls are native buttons and range inputs, so keyboard, touch and
@@ -8,7 +9,7 @@
 // One demo plays at a time. Opening another panel, or closing this one,
 // stops it: main.js calls stopDemo() on every panel change.
 
-import { COPY, LANE_LABELS, CONTROL_LABELS } from './copy.js';
+import { COPY, LANE_LABELS, CONTROL_LABELS, FX_LABELS } from './copy.js';
 import { h } from './dom.js';
 import { pick } from './registers.js';
 import { createPlayer } from '../audio/player.js';
@@ -25,7 +26,7 @@ const capitalise = (text) => text.charAt(0).toUpperCase() + text.slice(1);
 
 function controlLabel(target) {
   const [a, b] = target.split('.');
-  return b ? `${LANE_LABELS[a] ?? a} ${CONTROL_LABELS[b] ?? b}` : capitalise(CONTROL_LABELS[a] ?? a);
+  return b ? `${LANE_LABELS[a] ?? FX_LABELS[a] ?? a} ${CONTROL_LABELS[b] ?? b}` : capitalise(CONTROL_LABELS[a] ?? a);
 }
 
 export function renderDemoBlock(demo, ctx) {
@@ -45,14 +46,15 @@ export function renderDemoBlock(demo, ctx) {
       failed.hidden = false;
     });
 
-  // Step lights.
+  // Step lights. Each lights the step of the pattern being played, so a
+  // chop's lights jump about.
   const cells = Array.from({ length: CONFIG.audio.stepsPerPattern }, () => h('span', { class: 'demo-step' }));
   const steps = h('div', { class: 'demo-steps', 'aria-hidden': 'true' }, cells);
   let lit = null;
-  player.onStep((i) => {
+  player.onStep((i, _side, played) => {
     if (i === 0) ctx.onDemoBar?.(demo.id);
     lit?.classList.remove('on');
-    lit = i >= 0 ? cells[i] : null;
+    lit = played >= 0 ? cells[played] : null;
     lit?.classList.add('on');
     if (i < 0) setPlaying(false);
   });
@@ -65,6 +67,7 @@ export function renderDemoBlock(demo, ctx) {
   }
   setPlaying(false);
   const hasLoop = Boolean(params.pattern || params.a);
+  const letters = 'ABCDEFGH';
   playButton.addEventListener('click', () => {
     if (player.playing) {
       player.stop();
@@ -75,20 +78,19 @@ export function renderDemoBlock(demo, ctx) {
     }
   });
 
-  // A/B.
+  // Versions: A/B, straight and chopped, dry and wet.
   let sides = null;
-  if (demo.kind === 'ab') {
-    const buttons = ['a', 'b'].map((key) =>
+  if (player.versions.length) {
+    const buttons = player.versions.map((v, idx) =>
       h(
         'button',
-        { type: 'button', class: 'demo-side', 'aria-pressed': String(key === 'a') },
-        `${key.toUpperCase()} · ${pick(params[key].label, reg)}`,
+        { type: 'button', class: 'demo-side', 'aria-pressed': String(idx === 0) },
+        `${letters[idx]} · ${pick(v.label, reg)}`,
       ),
     );
     buttons.forEach((button, idx) =>
       button.addEventListener('click', () => {
-        const key = idx === 0 ? 'a' : 'b';
-        player.setSide(key);
+        player.setSide(player.versions[idx].key);
         buttons.forEach((b, j) => b.setAttribute('aria-pressed', String(j === idx)));
       }),
     );

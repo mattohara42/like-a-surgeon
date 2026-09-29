@@ -9,7 +9,8 @@
 //   worklets  each AudioWorklet processor loads and makes audible sound
 //   demos     every playable demo, opened through its panel as a reader
 //             would, with every slider at the top and every pad hit, at
-//             full volume: it sounds, and stays under the safety knee so
+//             full volume, and in every version it offers (A/B, chopped,
+//             through an effect): it sounds, and stays under the safety knee so
 //             the safety stage never colours it. At the default volume it
 //             is still clearly audible. Closing the panel silences it.
 //
@@ -181,7 +182,17 @@ async function measureDemo(page, host, volume, loudest) {
   if (await page.locator('.demo-play').count()) await page.click('.demo-play');
   const pads = page.locator('.demo-pad');
   for (let i = 0; i < (await pads.count()); i++) await pads.nth(i).click();
-  const peak = await page.evaluate(pagePeak, 2500);
+  let peak = await page.evaluate(pagePeak, 2500);
+  // Every other version, at its loudest. A switch can wait for the next
+  // bar, which is over 3 s at the slowest demo tempo, so each is measured
+  // for longer than that.
+  if (loudest) {
+    const sides = page.locator('.demo-side');
+    for (let i = 1; i < (await sides.count()); i++) {
+      await sides.nth(i).click();
+      peak = Math.max(peak, await page.evaluate(pagePeak, 4500));
+    }
+  }
   // Closing the panel must stop it.
   await page.click('.panel-close');
   await page.waitForTimeout(400);

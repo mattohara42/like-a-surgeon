@@ -8,9 +8,11 @@
 
 import { INSTRUMENTS, controlTargets } from '../audio/instruments.js';
 import { parsePattern } from '../audio/pattern.js';
+import { FX, fxTargets } from '../audio/fx.js';
+import { CONFIG } from '../config.js';
 
-// Kinds with a player. technique and pattern arrive with step 5.
-export const DEMO_KINDS = ['machine-voice', 'ab'];
+// Kinds with a player (audio/player.js).
+export const DEMO_KINDS = ['machine-voice', 'ab', 'pattern', 'fx-chain'];
 
 export function checkDemo(demo, checkRegister = () => {}) {
   const errors = [];
@@ -42,6 +44,28 @@ export function checkDemo(demo, checkRegister = () => {}) {
     return parsed;
   };
 
+  // Sliders: each targets something `targets` lists, once, with an ordered
+  // 0..1 range that holds its default.
+  const controls = (targets, on) => {
+    const seen = new Set();
+    for (const [i, c] of (params.controls ?? []).entries()) {
+      const where = `params.controls[${i}]`;
+      if (!targets.includes(c?.target)) {
+        errors.push(`${where}.target: ${JSON.stringify(c?.target)} is not a control on ${on}`);
+        continue;
+      }
+      if (seen.has(c.target)) errors.push(`${where}: ${c.target} appears twice`);
+      seen.add(c.target);
+      const { min, max } = c;
+      if (!(Number.isFinite(min) && Number.isFinite(max) && min >= 0 && max <= 1 && min < max)) {
+        errors.push(`${where}: needs 0 <= min < max <= 1`);
+      } else if (!(Number.isFinite(c.default) && c.default >= min && c.default <= max)) {
+        errors.push(`${where}.default must lie between min and max`);
+      }
+    }
+  };
+  const machineTargets = (parsed) => (parsed ? Object.keys(parsed.parts).flatMap(controlTargets) : []);
+
   if (demo.kind === 'machine-voice') {
     const inst = INSTRUMENTS[params.machine];
     if (!inst) {
@@ -68,23 +92,7 @@ export function checkDemo(demo, checkRegister = () => {}) {
         }
       }
     }
-    const targets = controlTargets(params.machine);
-    const seen = new Set();
-    for (const [i, c] of (params.controls ?? []).entries()) {
-      const where = `params.controls[${i}]`;
-      if (!targets.includes(c?.target)) {
-        errors.push(`${where}.target: ${JSON.stringify(c?.target)} is not a control on ${params.machine}`);
-        continue;
-      }
-      if (seen.has(c.target)) errors.push(`${where}: ${c.target} appears twice`);
-      seen.add(c.target);
-      const { min, max } = c;
-      if (!(Number.isFinite(min) && Number.isFinite(max) && min >= 0 && max <= 1 && min < max)) {
-        errors.push(`${where}: needs 0 <= min < max <= 1`);
-      } else if (!(Number.isFinite(c.default) && c.default >= min && c.default <= max)) {
-        errors.push(`${where}.default must lie between min and max`);
-      }
-    }
+    controls(controlTargets(params.machine), params.machine);
     if (params.pattern !== undefined) {
       const parsed = pattern(params.pattern, 'params.pattern');
       if (parsed && !parsed.parts[params.machine]) errors.push(`params.pattern has no part for ${params.machine}`);
@@ -105,6 +113,66 @@ export function checkDemo(demo, checkRegister = () => {}) {
       checkRegister(`params.${side}.label`, s.label);
       pattern(s.pattern, `params.${side}.pattern`);
     }
+  }
+
+  // One pattern, heard in two or more step orders. A version without an
+  // `order` plays the pattern straight. An order lists, for each step, the
+  // step number (1-based, as a musician counts) to play there, or null
+  // for silence.
+  if (demo.kind === 'pattern') {
+    const parsed = pattern(params.pattern, 'params.pattern');
+    if (!Array.isArray(params.versions) || params.versions.length < 2) {
+      errors.push('params.versions must list at least two versions');
+    } else {
+      for (const [i, v] of params.versions.entries()) {
+        const where = `params.versions[${i}]`;
+        checkRegister(`${where}.label`, v?.label);
+        if (v?.order === undefined) continue;
+        const steps = parsed?.steps ?? CONFIG.audio.stepsPerPattern;
+        if (!Array.isArray(v.order) || v.order.length !== steps) {
+          errors.push(`${where}.order must list ${steps} step numbers or nulls`);
+          continue;
+        }
+        v.order.forEach((n, j) => {
+          if (n !== null && !(Number.isInteger(n) && n >= 1 && n <= steps)) {
+            errors.push(`${where}.order: step ${j + 1} must be a step number from 1 to ${steps} or null, got ${JSON.stringify(n)}`);
+          }
+        });
+      }
+    }
+    controls(machineTargets(parsed), 'this demo');
+  }
+
+  // One pattern, dry or sent through an effect chain.
+  if (demo.kind === 'fx-chain') {
+    const parsed = pattern(params.pattern, 'params.pattern');
+    checkRegister('params.dry.label', params.dry?.label);
+    checkRegister('params.wet.label', params.wet?.label);
+    const ids = [];
+    if (!Array.isArray(params.chain) || !params.chain.length) {
+      errors.push('params.chain must list at least one effect');
+    } else {
+      for (const [i, entry] of params.chain.entries()) {
+        const where = `params.chain[${i}]`;
+        const fx = FX[entry?.fx];
+        if (!fx) {
+          errors.push(`${where}.fx must be one of ${Object.keys(FX).join(', ')}, got ${JSON.stringify(entry?.fx)}`);
+          continue;
+        }
+        if (ids.includes(entry.fx)) errors.push(`${where}: ${entry.fx} appears twice, so its controls would be ambiguous`);
+        ids.push(entry.fx);
+        for (const key of Object.keys(entry)) {
+          if (key !== 'fx' && !(key in fx.settings)) errors.push(`${where}.${key}: not a setting of ${entry.fx}`);
+        }
+        for (const [key, range] of Object.entries(fx.settings)) {
+          const v = entry[key];
+          if (!Number.isFinite(v) || v < range.min || v > range.max || (range.integer && !Number.isInteger(v))) {
+            errors.push(`${where}.${key} must be ${range.integer ? 'a whole number' : 'a number'} from ${range.min} to ${range.max}, got ${JSON.stringify(v)}`);
+          }
+        }
+      }
+    }
+    controls([...machineTargets(parsed), ...ids.flatMap(fxTargets)], 'this demo');
   }
   return errors;
 }

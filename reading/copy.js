@@ -297,5 +297,10 @@ export const LANE_LABELS = {
 
 export const CONTROL_LABELS = {
   level: 'level', tone: 'tone', decay: 'decay', snappy: 'snap', tune: 'tuning', attack: 'attack',
-  cutoff: 'cutoff', resonance: 'resonance', envMod: 'envelope', accent: 'accent',
+  cutoff: 'cutoff', resonance: 'resonance', envMod: 'envelope', accent: 'accent', feedback: 'repeats',
+};
+
+// Effect names in the demo block's control labels (audio/fx.js).
+export const FX_LABELS = {
+  'tape-echo': 'Echo',
 };

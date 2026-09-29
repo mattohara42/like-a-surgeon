@@ -6,6 +6,7 @@ import { CONFIG } from '../config.js';
 import { checkDemo } from '../tools/demoSchema.js';
 import { parsePattern } from '../audio/pattern.js';
 import { controlTargets, drumKnobValue, voiceParamValue } from '../audio/instruments.js';
+import { demoVersions } from '../audio/player.js';
 
 const STEPS = CONFIG.audio.stepsPerPattern;
 const rest = '.'.repeat(STEPS);
@@ -115,4 +116,56 @@ test('303 controls map onto the worklet parameter ranges', () => {
   assert.ok(Math.abs(voiceParamValue('cutoff', 1) - V.CUTOFF_MAX_HZ) < 1e-6);
   assert.strictEqual(voiceParamValue('decay', 1), V.DECAY_MAX_MS);
   assert.strictEqual(voiceParamValue('resonance', 0.4), 0.4);
+});
+
+const label = { age13: 'x', adult: 'x' };
+const loop = { bpm: 100, steps: STEPS, parts: { 'tr-909': { bd: four } } };
+const chopDemo = (versions) => ({ id: 'demo-c', kind: 'pattern', safety: { maxGain: 0.7 }, params: { pattern: loop, versions } });
+const echoDemo = (chain, controls = []) => ({
+  id: 'demo-e',
+  kind: 'fx-chain',
+  safety: { maxGain: 0.6 },
+  params: { pattern: loop, dry: { label }, wet: { label }, chain, controls },
+});
+const echo = { fx: 'tape-echo', steps: 3, lowCutHz: 400, highCutHz: 2500 };
+const order = Array.from({ length: STEPS }, (_, i) => STEPS - i);
+
+test('a pattern demo needs two versions, and orders of 1-based steps or nulls', () => {
+  assert.deepStrictEqual(checkDemo(chopDemo([{ label }, { label, order }])), []);
+  assert.ok(checkDemo(chopDemo([{ label }])).some((e) => e.includes('at least two versions')));
+  const zero = [...order];
+  zero[0] = 0;
+  assert.ok(checkDemo(chopDemo([{ label }, { label, order: zero }])).some((e) => e.includes('step 1 must be a step number')));
+  assert.ok(checkDemo(chopDemo([{ label }, { label, order: [1, 2] }])).some((e) => e.includes(`must list ${STEPS}`)));
+  const silent = [...order];
+  silent[3] = null;
+  assert.deepStrictEqual(checkDemo(chopDemo([{ label }, { label, order: silent }])), []);
+});
+
+test('a chop plays the step it names, 0-based in the player, null for silence', () => {
+  const o = [...order];
+  o[1] = null;
+  const [straight, chopped] = demoVersions(chopDemo([{ label }, { label, order: o }]));
+  assert.strictEqual(straight.order, null);
+  assert.strictEqual(chopped.order[0], STEPS - 1);
+  assert.strictEqual(chopped.order[1], null);
+});
+
+test('an fx-chain demo names known effects with settings in range', () => {
+  assert.deepStrictEqual(checkDemo(echoDemo([echo], [{ target: 'tape-echo.feedback', min: 0, max: 1, default: 0.5 }])), []);
+  assert.ok(checkDemo(echoDemo([])).some((e) => e.includes('at least one effect')));
+  assert.ok(checkDemo(echoDemo([{ ...echo, fx: 'reverb' }])).some((e) => e.includes('params.chain[0].fx')));
+  assert.ok(checkDemo(echoDemo([{ ...echo, steps: 2.5 }])).some((e) => e.includes('steps must be a whole number')));
+  assert.ok(checkDemo(echoDemo([{ ...echo, wobble: 1 }])).some((e) => e.includes('not a setting')));
+  assert.ok(checkDemo(echoDemo([echo, echo])).some((e) => e.includes('appears twice')));
+});
+
+test('fx-chain controls reach effect knobs and drum lanes, nothing else', () => {
+  assert.deepStrictEqual(checkDemo(echoDemo([echo], [{ target: 'bd.decay', min: 0, max: 1, default: 0.5 }])), []);
+  const errs = checkDemo(echoDemo([echo], [{ target: 'tape-echo.time', min: 0, max: 1, default: 0.5 }]));
+  assert.ok(errs.some((e) => e.includes('"tape-echo.time" is not a control')), errs.join('\n'));
+});
+
+test('an fx-chain demo is dry first, then wet', () => {
+  assert.deepStrictEqual(demoVersions(echoDemo([echo])).map((v) => v.wet), [false, true]);
 });
