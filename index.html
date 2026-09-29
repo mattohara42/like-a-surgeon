@@ -36,7 +36,10 @@
   .node { cursor: pointer; }
   .node-name, .node-hook { pointer-events: none; user-select: none; }
   .edge { cursor: pointer; }
-  .band-label { pointer-events: none; user-select: none; letter-spacing: 0.18em; }
+  .band-label {
+    pointer-events: none; user-select: none; letter-spacing: 0.18em;
+    paint-order: stroke; stroke: rgba(4, 6, 13, 0.85); stroke-linejoin: round;
+  }
   .axis-label { pointer-events: none; user-select: none; font-family: var(--mono); }
   .cursor-layer { pointer-events: none; }
   .scene-nebula { pointer-events: none; }

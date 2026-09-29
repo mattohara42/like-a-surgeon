@@ -305,6 +305,10 @@ fixing them inline.)
   Either the lane stack should reserve the transport's height, or the
   transport should not overlap the plot. Not touched, since it's layout
   work outside Track D.
+  **No longer applies** (A257): the map opens on a framed stretch rather
+  than trying to fit every lane (A249), and pan is unlimited (A250), so any
+  lane can be brought above the transport. The transport stays a
+  translucent overlay, like the legend.
 - `label.founders` holds plain names ("Juan Atkins") rather than ids, so the
   label panel prints founders as text while the artist panel links the same
   person. Resolving names to ids at render time would be guesswork. An id
@@ -667,6 +671,9 @@ fixing them inline.)
 - At 1280x800 in the lineage arrangement, the "ROCK" lane title draws
   under the reading-level toggle, so "ADULT" and "ROCK" overlap. Lane
   titles give way to node names (A106) but not to the fixed controls.
+  **Closed** (A257): a lane title that would sit under a fixed control (the
+  top-left toggles or the legend) steps right to clear it, and every lane
+  title has a dark halo so it still reads if it lands on a marker.
 
 - An inverted track pair (the earlier record dated after the later one)
   is flagged by `tools/report.js` but not by `tools/validate.js`, so it

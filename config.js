@@ -269,6 +269,11 @@ export const CONFIG = {
   // map is sorted into. Lane titles here are plain uppercase, like the
   // lineage lane titles and "THE MACHINES".
   arrange: {
+    // Screen px a lane title keeps from a fixed control it steps past.
+    titleOverlayGapPx: 10,
+    // A dark halo behind lane titles, in screen px, so a title that steps
+    // onto a marker still reads.
+    titleHaloPx: 3.5,
     options: [
       { key: 'lineage', label: 'Lineage' },
       { key: 'scene', label: 'Scene' },

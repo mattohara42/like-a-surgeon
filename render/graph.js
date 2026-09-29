@@ -106,6 +106,9 @@ function drawBands(bandsG, titlesG, layout, onSelectGroup) {
   const originX = layout.timeScale.toX(layout.timeScale.year0);
   const titleSpecs = [];
   const spec = (x, y, text, { isGroup = false, atContent = false } = {}) => ({
+    // Screen px the title is pushed right this frame to clear a fixed
+    // control drawn over it (updateTitleShifts).
+    shiftPx: 0,
     x,
     y,
     chars: text.length,
@@ -148,7 +151,8 @@ function drawBands(bandsG, titlesG, layout, onSelectGroup) {
       'text-anchor': atContent ? 'end' : 'start',
     });
     label.textContent = isGroup ? `${lane.title} ›` : lane.title;
-    titleSpecs.push(spec(atContent ? lane.firstX : originX, lane.y, label.textContent, { isGroup, atContent }));
+    label.__spec = spec(atContent ? lane.firstX : originX, lane.y, label.textContent, { isGroup, atContent });
+    titleSpecs.push(label.__spec);
     if (isGroup) {
       label.setAttribute('tabindex', '0');
       label.setAttribute('role', 'button');
@@ -175,8 +179,36 @@ function drawBands(bandsG, titlesG, layout, onSelectGroup) {
   });
   floorLabel.textContent = 'THE MACHINES';
   titlesG.appendChild(floorLabel);
-  titleSpecs.push(spec(originX, layout.substrate.horizonY + CONFIG.substrate.labelOffset, floorLabel.textContent));
+  floorLabel.__spec = spec(originX, layout.substrate.horizonY + CONFIG.substrate.labelOffset, floorLabel.textContent);
+  titleSpecs.push(floorLabel.__spec);
   return titleSpecs;
+}
+
+// A lane title at the axis origin can land under a fixed control (the
+// layer and reading toggles, the legend), where it prints through them as
+// a collision. Each frame, a title that would sit under one steps right to
+// just past it. Titles placed beside their content (scene and label views)
+// already sit clear of the origin and are left alone. `overlays` are screen
+// rects, cached by the caller, so this reads no layout.
+function updateTitleShifts(titleSpecs, vp, overlays) {
+  const { labelCharWidthEm } = CONFIG.node;
+  const gap = CONFIG.arrange.titleOverlayGapPx;
+  for (const t of titleSpecs) {
+    t.shiftPx = 0;
+    if (t.anchorEnd) continue;
+    const width = t.chars * t.fontPx * (labelCharWidthEm + t.trackingEm);
+    const baseline = t.y * vp.scale + vp.ty + t.dyPx;
+    const top = baseline - t.fontPx;
+    // Two passes, so stepping past one control can still clear the next.
+    for (let pass = 0; pass < 2; pass++) {
+      const x = t.x * vp.scale + vp.tx + t.dxPx + t.shiftPx;
+      for (const o of overlays) {
+        if (top < o.bottom && baseline > o.top && x < o.right && x + width > o.left) {
+          t.shiftPx += o.right + gap - x;
+        }
+      }
+    }
+  }
 }
 
 // Re-applies counter-scaled font-size/stroke-width/offsets to the
@@ -194,8 +226,9 @@ function updateStaticLayerScale(axisG, titlesG, scale) {
     const isGroup = label.classList.contains('band-link');
     const atContent = label.classList.contains('band-at-content');
     label.setAttribute('font-size', (isGroup ? CONFIG.arrange.groupTitleFontSize : 11) / scale);
-    label.setAttribute('dx', (atContent ? -CONFIG.arrange.groupTitleLeadPx : 4) / scale);
+    label.setAttribute('dx', ((atContent ? -CONFIG.arrange.groupTitleLeadPx : 4) + (label.__spec?.shiftPx ?? 0)) / scale);
     label.setAttribute('dy', (isGroup ? 18 : 14) / scale);
+    label.setAttribute('stroke-width', CONFIG.arrange.titleHaloPx / scale);
   }
 }
 
@@ -238,6 +271,9 @@ export function createGraph(container, data, callbacks = {}) {
     // legend. Only the fit uses it: once the reader pans, the legend is an
     // overlay like any other.
     leftInset = () => 0,
+    // Screen rects of fixed controls drawn over the map, which lane titles
+    // step clear of. Cached by the caller: this runs every frame.
+    overlays = () => [],
     // Records the very first view frames, instead of fitting the whole
     // map. Only the caller knows what makes a good way in, so it names
     // them; an empty list, or none of them on the map, falls back to the
@@ -415,7 +451,7 @@ export function createGraph(container, data, callbacks = {}) {
     // would print over one waits for more room instead.
     const placed = titleSpecs.map((t) => {
       const width = t.chars * t.fontPx * (labelCharWidthEm + t.trackingEm);
-      const x = t.x * vp.scale + vp.tx + t.dxPx;
+      const x = t.x * vp.scale + vp.tx + t.dxPx + t.shiftPx;
       const baseline = t.y * vp.scale + vp.ty + t.dyPx;
       return { x0: t.anchorEnd ? x - width : x, x1: t.anchorEnd ? x : x + width, y0: baseline - t.fontPx, y1: baseline + labelPadPx };
     });
@@ -618,6 +654,7 @@ export function createGraph(container, data, callbacks = {}) {
 
   function render() {
     viewportG.setAttribute('transform', transformString(vp));
+    updateTitleShifts(titleSpecs, vp, overlays());
     updateStaticLayerScale(axisG, titlesG, vp.scale);
     if (layout.substrate) updateSubstrateScale(floorG, vp.scale);
 
