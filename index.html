@@ -36,13 +36,19 @@
   .node { cursor: pointer; }
   .node-name, .node-hook { pointer-events: none; user-select: none; }
   .edge { cursor: pointer; }
-  /* A playable demo on this edge (render/edges.js). Haloed like the lane
-     titles (A257) so it reads over any line or dot behind it. */
-  .edge-demo-mark {
-    font-family: var(--ui); font-weight: 700; user-select: none;
-    paint-order: stroke; stroke: rgba(4, 6, 13, 0.9); stroke-linejoin: round;
+  /* A playable demo on this edge (render/edges.js, createDemoBadge). */
+  .demo-badge { cursor: pointer; }
+  .demo-badge-disc { fill: rgba(4, 6, 13, 0.92); }
+  .demo-badge-glyph { font-family: var(--ui); font-weight: 700; pointer-events: none; user-select: none; }
+  .demo-badge-ring {
+    transform-box: fill-box; transform-origin: center; pointer-events: none;
+    animation: demo-badge-pulse 2.2s ease-out infinite;
   }
-  .band-label {
+  @keyframes demo-badge-pulse {
+    0% { transform: scale(1); opacity: 0.85; }
+    100% { transform: scale(2.1); opacity: 0; }
+  }
+  .demo-badge:hover .demo-badge-disc { fill: rgba(20, 28, 48, 0.95); }  .band-label {
     pointer-events: none; user-select: none; letter-spacing: 0.18em;
     paint-order: stroke; stroke: rgba(4, 6, 13, 0.85); stroke-linejoin: round;
   }
@@ -449,6 +455,7 @@
     .node, .node-labels, .edge { transition: none; }
     .dust-layer { display: none; }
     .edge-gold { animation: none; stroke-opacity: 0.45; }
+    .demo-badge-ring { animation: none; opacity: 0.5; transform: scale(1.35); }
   }
 </style>
 </head>

@@ -155,12 +155,18 @@ export function updateNodeElement(g, node, position, zoomLevel, scale, degreeFac
   // the breathing scale inside it stays about the node's own centre.
   place.setAttribute('transform', `translate(${position.x1},${position.y})`);
 
-  const hitHeight = (zoomLevel === 'detail' ? 26 : 18) / scale;
-  const hitPadEnd = (zoomLevel === 'collapsed' ? 4 : 140) / scale;
+  // The click target covers the dot and its name, centred on the dot, at
+  // a fixed size on screen. It used to run the length of the active span,
+  // which at full zoom is tens of thousands of pixels: the pointer was
+  // always over some artist, and every move lit and unlit its edges,
+  // which read as flashing (A277).
+  const hit = CONFIG.node.hit[zoomLevel] ?? CONFIG.node.hit.mid;
+  const hitHalfWidth = Math.max(hit.halfWidthPx / scale, radius + 2 / scale);
+  const hitHeight = hit.heightPx / scale;
   setAttrs(hitArea, {
-    x: position.x1 - radius - 2 / scale,
+    x: position.x1 - hitHalfWidth,
     y: position.y - hitHeight / 2,
-    width: Math.max(position.x2 - position.x1, 0) + radius * 2 + hitPadEnd,
+    width: hitHalfWidth * 2,
     height: hitHeight,
   });
 
@@ -240,7 +246,10 @@ export function updateNodeElement(g, node, position, zoomLevel, scale, degreeFac
       'stroke-width': 3.5 / scale,
       'stroke-linejoin': 'round',
     });
-    label.textContent = truncate(node.name, CONFIG.node.labelMaxChars);
+    // Only when it changes: rewriting the same text every frame replaced
+    // the text node on every pan frame.
+    const name = truncate(node.name, CONFIG.node.labelMaxChars);
+    if (label.textContent !== name) label.textContent = name;
   }
 
   hook.style.display = showHook ? '' : 'none';
@@ -256,7 +265,8 @@ export function updateNodeElement(g, node, position, zoomLevel, scale, degreeFac
       'stroke-width': 3 / scale,
       'stroke-linejoin': 'round',
     });
-    hook.textContent = truncate(node.hook, CONFIG.node.hookMaxChars);
+    const hookText = truncate(node.hook, CONFIG.node.hookMaxChars);
+    if (hook.textContent !== hookText) hook.textContent = hookText;
   }
 }
 

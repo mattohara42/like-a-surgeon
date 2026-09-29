@@ -11,7 +11,7 @@ import { zoomLevelForScale } from './zoomLevels.js';
 import { attachPanZoomHandlers } from './interactions.js';
 import { svgEl, setAttrs } from './svg.js';
 import { createNodeElement, updateNodeElement, setNodeHovered } from './nodes.js';
-import { createEdgeElement, updateEdgeElement, setEdgeHovered, isBeam, curvePath, approxCurveLength } from './edges.js';
+import { createEdgeElement, updateEdgeElement, setEdgeHovered, isBeam, curvePath, approxCurveLength, createDemoBadge, updateDemoBadge, curvePoint } from './edges.js';
 import { createSparks } from './sparks.js';
 import { createSubstrateDefs, drawSubstrate, updateSubstrateScale } from './substrate.js';
 import { createEdgeGradients, createHaloGradients, trailGradientId, beamGradientId, colorFor } from './gradients.js';
@@ -282,6 +282,9 @@ export function createGraph(container, data, callbacks = {}) {
     // Edge ids drawn gold for the reader to find (A263). Chosen by the
     // caller from the data.
     goldenIds = new Set(),
+    // Demo ids that can actually play. An edge whose demo is a draft
+    // gets no badge: a badge promises sound.
+    playableDemoIds = new Set(),
   } = callbacks;
 
   // The node or edge the reader is reading about, highlighted on the map.
@@ -327,6 +330,10 @@ export function createGraph(container, data, callbacks = {}) {
   const axisG = svgEl('g', { class: 'axis-layer' });
   const edgesG = svgEl('g', { class: 'edges-layer' });
   const nodesG = svgEl('g', { class: 'nodes-layer' });
+  // Demo badges: above every edge and node, so a click on a badge always
+  // opens its own demo edge (Matt: a badge sitting near a node or a second
+  // line must not be ambiguous). A badge is small; it hides little.
+  const badgesG = svgEl('g', { class: 'demo-badges-layer' });
   // Every node's name and hook, above all the markers so no dot paints over
   // a name, and below the lane titles.
   const labelsG = svgEl('g', { class: 'labels-layer' });
@@ -336,7 +343,7 @@ export function createGraph(container, data, callbacks = {}) {
   // The layers that run past the content, under one fade (render/depth.js).
   const fieldG = svgEl('g', { class: 'field-layer', mask: 'url(#depth-fade)' });
   fieldG.append(nebulaG, bandsG, floorG, axisG);
-  viewportG.append(fieldG, edgesG, nodesG, fxG, labelsG, titlesG, cursorG);
+  viewportG.append(fieldG, edgesG, nodesG, badgesG, fxG, labelsG, titlesG, cursorG);
   root.append(defs, viewportG);
   container.appendChild(root);
 
@@ -425,6 +432,7 @@ export function createGraph(container, data, callbacks = {}) {
 
   const nodeElements = new Map();
   const edgeElements = new Map();
+  const badgeElements = new Map();
   const positionById = new Map(positionedNodes.map((e) => [e.node.id, e.pos]));
 
   // Label placement (M3 step 5). Names and hooks are drawn at a constant
@@ -766,14 +774,40 @@ export function createGraph(container, data, callbacks = {}) {
     const litNodes = new Set([selectedId, hoveredNodeId].filter((id) => id && positionById.has(id)));
     const isLit = (edge) => edge.id === selectedId || litNodes.has(edge.from.id) || litNodes.has(edge.to.id);
 
+    // Demo badges placed so far this frame, in screen px. A badge that would
+    // overlap one slides along its own curve until it has room, so two
+    // demo edges leaving the same machine never share a spot.
+    const placedBadges = [];
+    const badgeGapPx = CONFIG.edge.demoMark.radiusPx * CONFIG.edge.demoMark.minGapFactor;
+    function badgePoint(edge, anchors) {
+      let fallback = null;
+      for (const t of CONFIG.edge.demoMark.tries) {
+        const at = curvePoint(anchors, edge.id, t);
+        const sx = at.x * vp.scale + vp.tx;
+        const sy = at.y * vp.scale + vp.ty;
+        fallback ??= { at, sx, sy };
+        if (placedBadges.every((q) => Math.hypot(q.sx - sx, q.sy - sy) >= badgeGapPx)) {
+          placedBadges.push({ sx, sy });
+          return at;
+        }
+      }
+      placedBadges.push(fallback);
+      return fallback.at;
+    }
+
     let pastEdgeRange = false;
     for (const { edge, anchors, minX, maxX, minY, maxY } of boundEdges) {
       if (!pastEdgeRange && minX > range.x2) pastEdgeRange = true;
       const el = edgeElements.get(edge.id);
+      const badge = badgeElements.get(edge.id);
       if (pastEdgeRange) {
         if (el) {
           el.remove();
           edgeElements.delete(edge.id);
+        }
+        if (badge) {
+          badge.remove();
+          badgeElements.delete(edge.id);
         }
         continue;
       }
@@ -792,6 +826,7 @@ export function createGraph(container, data, callbacks = {}) {
               if (current) setEdgeHovered(current, e, hovered);
             },
             goldenIds.has(edge.id),
+            playableDemoIds.has(edge.demoId),
           );
           edgesG.appendChild(created);
           edgeElements.set(edge.id, created);
@@ -810,6 +845,24 @@ export function createGraph(container, data, callbacks = {}) {
       } else if (el) {
         el.remove();
         edgeElements.delete(edge.id);
+      }
+
+      // The demo badge follows its edge in and out of view, and waits
+      // like the edge does until the year cursor reaches it.
+      const wantBadge = visible && playableDemoIds.has(edge.demoId) && edge.year <= year;
+      if (wantBadge) {
+        let b = badge;
+        if (!b) {
+          const midX = (anchors.x1 + anchors.x2) / 2;
+          const midY = (anchors.y1 + anchors.y2) / 2;
+          b = createDemoBadge(edge, (e) => selectAndFlyTo(e, midX, midY, onSelectEdge, () => edgeFrameScale(anchors)));
+          badgesG.appendChild(b);
+          badgeElements.set(edge.id, b);
+        }
+        updateDemoBadge(b, badgePoint(edge, anchors), vp.scale, colorFor(edge.to.lineage));
+      } else if (badge) {
+        badge.remove();
+        badgeElements.delete(edge.id);
       }
     }
   }

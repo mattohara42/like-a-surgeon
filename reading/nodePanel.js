@@ -111,7 +111,12 @@ function trackRow(title, year, note, ytQuery, reg, lead = null) {
 
 function artistSections(r, ctx) {
   const reg = ctx.register;
+  // A demo reached from the artist (Matt: from the machine, the artist, or
+  // the line). The first playable demo on any edge touching this artist;
+  // one per panel, since only one demo plays at a time.
+  const demo = ctx.demoForNode?.(r.id);
   return [
+    demo ? renderDemoBlock(demo, ctx) : null,
     r.signatureTracks?.length
       ? [
           heading('listenTo', reg),

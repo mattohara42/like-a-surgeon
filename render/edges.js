@@ -107,9 +107,9 @@ export function isBeam(edge) {
   return edge.from.kind === 'machine' && edge.to.kind !== 'machine';
 }
 
-export function createEdgeElement(edge, onSelect, onHover, golden = false) {
+export function createEdgeElement(edge, onSelect, onHover, golden = false, hasDemo = false) {
   const g = svgEl('g', {
-    class: ['edge', isBeam(edge) ? 'edge-beam' : 'edge-trail', golden && 'golden', edge.demoId && 'has-demo'].filter(Boolean).join(' '),
+    class: ['edge', isBeam(edge) ? 'edge-beam' : 'edge-trail', golden && 'golden', hasDemo && 'has-demo'].filter(Boolean).join(' '),
     'data-edge-id': edge.id,
   });
 
@@ -130,15 +130,6 @@ export function createEdgeElement(edge, onSelect, onHover, golden = false) {
     svgEl('path', { class: 'edge-comet-ghost', fill: 'none' }),
     svgEl('path', { class: 'edge-comet', fill: 'none' }),
   ].filter(Boolean));
-
-  // An edge with a playable demo carries a small mark on its curve
-  // (docs/m4-architecture.md section 6), in its own colour, so the palette
-  // and its colour-vision check (A258) are untouched.
-  if (edge.demoId) {
-    const mark = svgEl('text', { class: 'edge-demo-mark', 'aria-hidden': 'true', 'text-anchor': 'middle', 'dominant-baseline': 'central' });
-    mark.textContent = CONFIG.edge.demoMark.glyph;
-    g.appendChild(mark);
-  }
 
   g.addEventListener('click', () => onSelect(edge));
   g.addEventListener('mouseenter', () => onHover(edge, true));
@@ -231,18 +222,6 @@ export function updateEdgeElement(g, edge, anchors, scale, gradientIds) {
     });
   }
 
-  const mark = g.querySelector('.edge-demo-mark');
-  if (mark) {
-    const at = curvePoint(anchors, edge.id, CONFIG.edge.demoMark.at);
-    setAttrs(mark, {
-      x: at.x,
-      y: at.y,
-      fill: gradientIds.toColor,
-      'font-size': CONFIG.edge.demoMark.fontPx / scale,
-      'stroke-width': CONFIG.edge.demoMark.haloPx / scale,
-    });
-  }
-
   // Only start the animations once per element, not on every pan frame.
   if (!g.__cometRunning) {
     runComet(comet, length, scale);
@@ -254,6 +233,39 @@ export function updateEdgeElement(g, edge, anchors, scale, gradientIds) {
     comet.setAttribute('stroke-dasharray', `${dash},${length * 2}`);
     if (edge.crossLineage) ghost.setAttribute('stroke-dasharray', `${dash * 1.4},${length * 2}`);
   }
+}
+
+// The badge on an edge that has a playable demo (docs/m4-architecture.md
+// section 6). It lives in its own layer above every edge (graph.js), not
+// inside the edge's group, so no neighbouring edge's hit area can sit on
+// top of it: clicking the badge always opens its own edge. A ring pulses
+// out of it (CSS, still under reduced motion) so it can be found.
+export function createDemoBadge(edge, onSelect) {
+  const g = svgEl('g', { class: 'demo-badge', 'data-edge-id': edge.id });
+  g.append(
+    svgEl('circle', { class: 'demo-badge-hit', fill: 'transparent' }),
+    svgEl('circle', { class: 'demo-badge-ring', fill: 'none' }),
+    svgEl('circle', { class: 'demo-badge-disc' }),
+  );
+  const glyph = svgEl('text', { class: 'demo-badge-glyph', 'text-anchor': 'middle', 'dominant-baseline': 'central', 'aria-hidden': 'true' });
+  glyph.textContent = CONFIG.edge.demoMark.glyph;
+  g.appendChild(glyph);
+  g.addEventListener('click', (event) => {
+    event.stopPropagation();
+    onSelect(edge);
+  });
+  return g;
+}
+
+// `at` is where the badge goes, in content coordinates (graph.js chooses
+// it so badges never overlap).
+export function updateDemoBadge(g, at, scale, color) {
+  const M = CONFIG.edge.demoMark;
+  g.setAttribute('transform', `translate(${at.x},${at.y})`);
+  setAttrs(g.querySelector('.demo-badge-hit'), { r: M.hitRadiusPx / scale });
+  setAttrs(g.querySelector('.demo-badge-ring'), { r: M.radiusPx / scale, stroke: color, 'stroke-width': M.ringPx / scale });
+  setAttrs(g.querySelector('.demo-badge-disc'), { r: M.radiusPx / scale, stroke: color, 'stroke-width': M.ringPx / scale });
+  setAttrs(g.querySelector('.demo-badge-glyph'), { fill: color, 'font-size': M.fontPx / scale });
 }
 
 export function setEdgeHovered(g, edge, hovered) {
