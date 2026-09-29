@@ -1,0 +1,32 @@
+{
+  "id": "e-707-jefferson",
+  "from": "tr-707",
+  "to": "marshall-jefferson",
+  "type": "technological",
+  "confidence": "consensus",
+  "year": 1986,
+  "crossLineage": false,
+  "evidence": "Histories of the TR-707, including its Wikipedia article, name it as the drum machine on 'Move Your Body', and later interviews with Jefferson are cited for the same. We have not read a primary statement ourselves, so this stays consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Roland",
+      "title": "TR-707",
+      "year": 1985,
+      "search": false
+    },
+    "later": {
+      "artist": "Marshall Jefferson",
+      "title": "Move Your Body (The House Music Anthem)",
+      "year": 1986
+    },
+    "whatToListenFor": "The piano gets the attention, so listen past it to the drums. They are bright, short and tidy, with none of the booming low end of an 808. That thin, clean kit is the 707."
+  },
+  "explanation": {
+    "age7": "The drums on a famous house song came from a small Roland drum machine.",
+    "age13": "'Move Your Body' is remembered for its piano, but its drums came from a Roland TR-707. It was one of the machines Chicago producers could actually get in 1986.",
+    "adult": "The house anthem's rhythm track is a 707, not the 808 or 909 that dominate the machine story. It is one of the edges that shows the Chicago toolkit as it was, a mixed set of Roland boxes, rather than as later legend tidied it."
+  },
+  "tags": [
+    "technology"
+  ]
+}
