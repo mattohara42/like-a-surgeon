@@ -56,6 +56,18 @@ export function checkDemo(demo, checkRegister = () => {}) {
         if (new Set(params.pads).size !== params.pads.length) errors.push('params.pads lists a lane twice');
       }
     }
+    // Per-lane starting levels, for balancing a kit (A277). A lane's
+    // `level` control, if the demo has one, starts from its own default.
+    if (params.levels !== undefined) {
+      if (inst.kind !== 'drums') errors.push('params.levels: only a drum machine has lane levels');
+      else if (!params.levels || typeof params.levels !== 'object') errors.push('params.levels must map lanes to 0..1');
+      else {
+        for (const [lane, v] of Object.entries(params.levels)) {
+          if (!(lane in inst.lanes)) errors.push(`params.levels: no lane "${lane}" on ${params.machine}`);
+          else if (!Number.isFinite(v) || v < 0 || v > 1) errors.push(`params.levels.${lane} must be 0..1`);
+        }
+      }
+    }
     const targets = controlTargets(params.machine);
     const seen = new Set();
     for (const [i, c] of (params.controls ?? []).entries()) {

@@ -46,6 +46,15 @@ test('unknown lanes, machines and control targets are caught', () => {
   assert.ok(bad.some((e) => e.includes('"bd.tune" is not a control on tr-808')), bad.join('\n'));
 });
 
+test('lane levels are drum-only, known lanes, 0..1 (A277)', () => {
+  assert.deepStrictEqual(checkDemo(drums({ levels: { cb: 0.25, ch: 0.8 } })), []);
+  assert.ok(checkDemo(drums({ levels: { zz: 0.5 } })).some((e) => e.includes('no lane "zz"')));
+  assert.ok(checkDemo(drums({ levels: { cb: 2 } })).some((e) => e.includes('must be 0..1')));
+  const v = voice({ notes: notes() });
+  v.params.levels = { bd: 1 };
+  assert.ok(checkDemo(v).some((e) => e.includes('only a drum machine')));
+});
+
 test('control ranges must be ordered and hold their default', () => {
   const errs = checkDemo(drums({ controls: [{ target: 'bd.decay', min: 0.8, max: 0.2, default: 0.5 }] }));
   assert.ok(errs.some((e) => e.includes('0 <= min < max <= 1')));

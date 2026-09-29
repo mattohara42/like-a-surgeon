@@ -239,6 +239,9 @@ controls    optional: [{ target, min, max, default }]. target is
             "lane.knob" on a drum machine ("bd.decay"; every lane has
             "level") or a parameter name on the 303 ("cutoff"). Values are
             0..1; the player converts to the machine's own units.
+levels      drum machines only, optional: { lane: 0..1 } starting level per
+            lane, to balance the kit. A lane's level control starts from
+            its own default instead.
 pattern     optional on a drum machine that has pads, required otherwise
 ```
 
