@@ -403,6 +403,12 @@ export const CONFIG = {
     shuffleMaxFraction: 0.3,
     scheduler: { tickMs: 25, lookaheadS: 0.12 },
 
+    player: {
+      // How long a demo's nodes stay connected after it is let go, so its
+      // fade-out (rampS) and any decaying hit finish before they are cut.
+      releaseMs: 200,
+    },
+
     // Main-thread 303 values (the worklet's own are under dsp.VOICE303).
     // From SQUELCH: GATE_FRACTION, NOTE_MIN, NOTE_MAX.
     voice303: {
@@ -423,12 +429,15 @@ export const CONFIG = {
       // loudness even, and the safety stage below holds the ceiling.
       limiter: { threshold: -3, knee: 0, ratio: 20, attack: 0.003, release: 0.1 },
       // Linear gain at the top of the volume slider. Chosen by
-      // measurement: a loud input (four full-scale square waves) at full
-      // volume stays under the safety knee, so the safety stage never
-      // colours a demo.
-      volumeMaxGain: 0.3,
-      // Where the slider starts for a reader who has never moved it.
-      volumeDefault: 0.5,
+      // measurement (tools/audio-check.js): the loudest demo, every
+      // slider at the top, at full volume peaks just under the safety
+      // knee, so the safety stage never colours a demo (A271).
+      volumeMaxGain: 0.42,
+      // Where the slider starts for a reader who has never moved it. At
+      // 0.5 the demos sat about 30 dB below full scale, quiet enough that
+      // a reader would turn the laptop up and be blasted by the next
+      // YouTube link (A271).
+      volumeDefault: 0.7,
       // The slider is squared before it becomes gain, so equal slider
       // steps sound closer to equal loudness steps.
       volumeCurve: 2,
