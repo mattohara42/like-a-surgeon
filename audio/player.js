@@ -33,7 +33,12 @@ export function createPlayer(engine, demo) {
 
   // Control values as the reader has set them, 0..1, starting from each
   // control's default.
-  const values = new Map((params.controls ?? []).map((c) => [c.target, c.default]));
+  // A drum demo's per-lane `levels` seed each lane's level first, so a
+  // level control, where the demo has one, still wins.
+  const values = new Map([
+    ...Object.entries(params.levels ?? {}).map(([lane, v]) => [`${lane}.level`, v]),
+    ...(params.controls ?? []).map((c) => [c.target, c.default]),
+  ]);
 
   let ctx = null;
   let out = null;

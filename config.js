@@ -51,6 +51,14 @@ export const CONFIG = {
   },
 
   node: {
+    // A node's click target, in screen px, centred on its dot. Wide
+    // enough to cover the name drawn above it at each zoom level; heights
+    // are the ones the span-long target used before (A277).
+    hit: {
+      collapsed: { halfWidthPx: 6, heightPx: 18 },
+      mid: { halfWidthPx: 70, heightPx: 18 },
+      detail: { halfWidthPx: 90, heightPx: 26 },
+    },
     radius: { collapsed: 3, mid: 7, detail: 10 },
     strokeWidth: 1.5,
     hoverStrokeWidth: 3,
@@ -85,7 +93,11 @@ export const CONFIG = {
   edge: {
     // The mark on an edge that has a playable demo (render/edges.js).
     // `at` is how far along the curve it sits, cause (0) to effect (1).
-    demoMark: { glyph: '♪', at: 0.5, fontPx: 18, haloPx: 3.5 },
+    // Screen px. The hit circle is larger than the drawn badge, so it is
+    // easy to click or tap (Matt: the first mark was too small to find).
+    // `tries` are positions along the curve, cause (0) to effect (1), tried
+    // in order until a badge is at least minGapFactor radii from the others.
+    demoMark: { glyph: '♪', tries: [0.5, 0.62, 0.38, 0.74, 0.26, 0.85], minGapFactor: 3.4, radiusPx: 15, hitRadiusPx: 24, ringPx: 2, fontPx: 19 },
     // The three confidence tiers must be told apart at a glance, because
     // telling "someone said so" from "critics agree" from "our reading" is
     // part of what the map teaches (SPEC.md). Width alone did not do it:

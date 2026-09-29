@@ -126,6 +126,15 @@ async function main() {
     producedBy,
     audio,
     demos: data.demos,
+    // The first playable demo on an edge touching this node, else a
+    // draft, else nothing. Used by artist panels; a machine shows its own.
+    demoForNode: (id) => {
+      const found = data.edges
+        .filter((e) => e.demoId && (e.from.id === id || e.to.id === id))
+        .map((e) => data.demos[e.demoId])
+        .filter(Boolean);
+      return found.find((d) => d.status !== 'draft') ?? found[0] ?? null;
+    },
     // Once a bar, every edge that carries the playing demo pulses.
     onDemoBar: (demoId) => {
       for (const edge of data.edges) if (edge.demoId === demoId) graph?.pulseEdge(edge.id);
@@ -299,6 +308,7 @@ async function main() {
       // camera (Arrange by) re-fits the whole map, as it always has.
       openingFrameIds: opening ? OPENING_FRAME_IDS : [],
       goldenIds,
+      playableDemoIds: new Set(Object.values(data.demos).filter((d) => d.status !== 'draft').map((d) => d.id)),
       // The graph has already flown the camera; the panel only opens.
       onSelectNode: (node) => panel.open({ kind: 'node', id: node.id }),
       onSelectEdge: (edge) => panel.open({ kind: 'edge', id: edge.id }),
