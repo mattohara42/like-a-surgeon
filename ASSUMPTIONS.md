@@ -2666,3 +2666,20 @@ small and worth having in front of Matt alongside everything else here.
   changing the system setting applies to anything drawn after the change
   without a reload. Elements already on screen keep whatever they started
   with until culling redraws them.
+
+- **A257. Lane titles step clear of the fixed controls.** At 1280x800 the
+  lineage lane titles, drawn at the axis origin, could land under the
+  top-left toggles ("ROCK" under "ADULT") or under the legend
+  ("HIP-HOP"), where they printed through as a collision. Each frame,
+  `updateTitleShifts` in `render/graph.js` moves a title that would sit
+  under one of these fixed controls to `arrange.titleOverlayGapPx` past its
+  right edge, and label placement uses the shifted position. The control
+  rects are measured in `main.js` only when a control changes size (a
+  ResizeObserver, plus window resize), never per frame, so this adds no
+  layout reads to the render loop. Titles placed beside their content
+  (scene and label views) are left alone. A title that steps right can
+  land on a marker, so every lane title now has a dark halo
+  (`arrange.titleHaloPx`, counter-scaled like its font). The separate
+  BACKLOG note about the bottom lane sitting under the transport no
+  longer applies: the opening view is a framed stretch (A249) and pan is
+  unlimited (A250).
