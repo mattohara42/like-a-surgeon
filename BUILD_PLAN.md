@@ -78,6 +78,11 @@ shipped in PRs #16 to #21, plus Arrange by (Q19), which Matt asked for
 mid-milestone. `docs/m3-gate-notes.md` covers how to run the gate session.
 M4 does not open until the gate is passed.
 
+**Gate passed.** Matt passed M3 in chat on 2026-09-29 and opened M4. The
+work since the build closed (welcome card and missions, quiet dot-to-dot
+edges, the ripple, depth fade, reduced motion, the colour-vision palette)
+is logged in A249 to A259.
+
 ---
 
 ## M4 — Audio engine
@@ -88,6 +93,9 @@ chain, pattern playback, A/B switching. Demo definitions load from
 that a kid cannot blow his ears out with.
 
 **Gate:** ten demos across three lineages, each tied to a real edge.
+
+**Opened** 2026-09-29. The design goes to `docs/m4-architecture.md` for
+sign-off before any `audio/` code is written, as M1 to M3 did.
 
 ---
 

@@ -2725,3 +2725,16 @@ small and worth having in front of Matt alongside everything else here.
   position remain the primary lineage cue, and colour is the backup.
   `config.js` keeps `#8fa6c8` for UI greys (fallback and band labels),
   which are not lineage colours, and the favicon keeps its original blue.
+
+- **A260. A map dragged off screen eases back.** Matt chose a soft
+  pull-back over a "back to the map" button or leaving pan unlimited. When
+  a gesture settles (a drag ends, or `viewport.pullBack.settleDelayMs`
+  after the last wheel or arrow key), `pullBackIntoView` checks the
+  content rectangle: the records' own year span across, and the lanes plus
+  the machine floor down. The faded field around it doesn't count. If
+  less than `keepVisiblePx` (160) of it is on screen on either axis, the
+  camera eases back by the smallest move that shows that much, and under
+  reduced motion it cuts. Zooming out still reads as infinite, because
+  the fade is untouched and only the content has to stay in reach. The
+  animation is shared with `flyTo` through a new `animateTo`, so any
+  gesture interrupts it the same way.

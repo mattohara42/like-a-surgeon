@@ -53,15 +53,21 @@ function easeInOutCubic(t) {
 // Calls onFrame() after each mutation (the caller schedules a render from
 // it) and onDone() once the animation completes or is interrupted.
 export function flyTo(vp, contentX, contentY, targetScale, viewportWidthPx, viewportHeightPx, onFrame, onDone) {
-  cancelAnimation(vp);
   const clampedScale = clamp(targetScale, CONFIG.zoom.min, CONFIG.zoom.max);
+  const endTx = viewportWidthPx / 2 - contentX * clampedScale;
+  const endTy = viewportHeightPx / 2 - contentY * clampedScale;
+  animateTo(vp, endTx, endTy, clampedScale, CONFIG.zoom.flyToDurationMs, onFrame, onDone);
+}
+
+// Animates the transform itself to (endTx, endTy, endScale). flyTo and the
+// pull-back both go through here. Under reduced motion the camera cuts
+// rather than moves.
+function animateTo(vp, endTx, endTy, clampedScale, durationMsIfMoving, onFrame, onDone) {
+  cancelAnimation(vp);
   const startTx = vp.tx;
   const startTy = vp.ty;
   const startScale = vp.scale;
-  const endTx = viewportWidthPx / 2 - contentX * clampedScale;
-  const endTy = viewportHeightPx / 2 - contentY * clampedScale;
-  // Under reduced motion the camera cuts rather than flies.
-  const durationMs = reducedMotion() ? 0 : CONFIG.zoom.flyToDurationMs;
+  const durationMs = reducedMotion() ? 0 : durationMsIfMoving;
   const startTime = performance.now();
 
   let cancelled = false;
@@ -87,6 +93,32 @@ export function flyTo(vp, contentX, contentY, targetScale, viewportWidthPx, view
     }
   }
   rafId = requestAnimationFrame(step);
+}
+
+// If less than `keepPx` of the content rectangle (content coordinates) is
+// on screen, eases the camera back by the smallest move that shows that
+// much again. The map fades into the field at its edges (A250), so there
+// is nothing to bump into, and without this a reader can drag it out of
+// sight entirely. Returns true when it moved.
+export function pullBackIntoView(vp, bounds, viewportWidthPx, viewportHeightPx, onFrame) {
+  const keep = CONFIG.viewport.pullBack.keepVisiblePx;
+  const left = bounds.x0 * vp.scale + vp.tx;
+  const right = bounds.x1 * vp.scale + vp.tx;
+  const top = bounds.y0 * vp.scale + vp.ty;
+  const bottom = bounds.y1 * vp.scale + vp.ty;
+  // How far each axis needs to move so that `keep` px of content overlaps
+  // the screen (or all of it, when the content is smaller than that).
+  const need = (lo, hi, span) => {
+    const k = Math.min(keep, hi - lo);
+    if (hi < k) return k - hi;
+    if (lo > span - k) return span - k - lo;
+    return 0;
+  };
+  const dx = need(left, right, viewportWidthPx);
+  const dy = need(top, bottom, viewportHeightPx);
+  if (dx === 0 && dy === 0) return false;
+  animateTo(vp, vp.tx + dx, vp.ty + dy, vp.scale, CONFIG.viewport.pullBack.durationMs, onFrame);
+  return true;
 }
 
 export function transformString(vp) {
