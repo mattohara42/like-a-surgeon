@@ -301,7 +301,7 @@ export function createGraph(container, data, callbacks = {}) {
   const transport = transportEl
     ? createTransport(transportEl, layout, graphNodes, graphEdges, () => scheduleRender(), initialYear)
     : null;
-  const currentYear = () => transport?.year() ?? layout.timeScale.yearEnd;
+  const currentYear = () => transport?.year() ?? layout.maxYear;
   // The year the last frame drew, for ignition. Null until the first frame,
   // so opening the map (or a rebuild) never sets everything off at once.
   let lastYear = null;
@@ -564,7 +564,7 @@ export function createGraph(container, data, callbacks = {}) {
   // axis, for a year typed into search. Vertically it centres the whole
   // map, since a year is a slice through every lane at once.
   function focusYear(year) {
-    const clamped = clampYear(year, layout.timeScale.year0, layout.timeScale.yearEnd);
+    const clamped = clampYear(year, layout.minYear, layout.maxYear);
     transport?.setYear(clamped);
     const spanPx = CONFIG.search.yearFrameSpanYears * CONFIG.layout.pxPerYear;
     const scale = Math.min(CONFIG.zoom.flyToScale, viewWidth() / spanPx);
@@ -805,7 +805,7 @@ export function createGraph(container, data, callbacks = {}) {
     frameNodes,
     focusYear,
     arrange,
-    yearBounds: () => ({ min: layout.timeScale.year0, max: layout.timeScale.yearEnd }),
+    yearBounds: () => ({ min: layout.minYear, max: layout.maxYear }),
     selectedId: () => selectedId,
     clearSelection: () => {
       selectedId = null;

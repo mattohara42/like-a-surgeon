@@ -213,11 +213,11 @@ fixing them inline.)
   edge still gets the `flyToScale` close-up. It was seen while testing the
   welcome goal (A249), where Kraftwerk → Afrika Bambaataa landed the camera
   between two lanes with neither end in view.
-- **The year readout opens at 2028.** The transport starts at
-  `timeScale.yearEnd`, which is the last record's year plus
-  `marginYears` of layout padding, so the reader's first sight of the year
-  display is a year that has not happened. It should probably open at the
-  latest real year, or the current one.
+- ~~**The year readout opens at 2028.**~~ **Fixed:** the transport, the
+  year search and the cursor now run over the records' own span
+  (`layout.minYear` to `layout.maxYear`, currently 1948 to 2026) instead
+  of the axis, which is padded by `layout.marginYears` on each side. The
+  padding is still drawn, but the cursor cannot reach it.
 - **The welcome card cannot be reopened once the goal is found.** The goal
   chip is the only way back to it (A249). A small "Start here" control
   would fix that, if readers turn out to want it.
