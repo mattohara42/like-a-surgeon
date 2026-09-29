@@ -1,0 +1,34 @@
+{
+  "id": "chas-chandler",
+  "name": "Chas Chandler",
+  "sortName": "Chandler, Chas",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1966,
+  "activeTo": 1996,
+  "originCity": "Newcastle upon Tyne",
+  "originCountry": "UK",
+  "scenes": [
+    "swinging-london"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Quit his own band to manage and produce an unknown American guitarist he'd just seen play a Greenwich Village club.",
+  "blurb": {
+    "age7": "Chas Chandler used to play bass in a band called the Animals. Then he found Jimi Hendrix playing in a small club in New York and brought him to London to become famous.",
+    "age13": "Chandler was the bassist in the Animals until 1966, when he saw Jimi Hendrix playing in a small New York club, quit the band, and brought Hendrix to London as his manager and producer. He produced Hendrix's debut single 'Hey Joe' (1966) and the album 'Are You Experienced' (1967) before their working relationship ended in 1968.",
+    "adult": "Chandler's move from performer to manager-producer for a single artist he'd just discovered is a clean case of one person acting as the entire transmission mechanism between two scenes: an American guitarist working the US club circuit, and the London scene that actually made him a star."
+  },
+  "signatureTracks": [
+    {
+      "title": "Hey Joe (produced for Jimi Hendrix)",
+      "year": 1966,
+      "whyThisOne": "Hendrix's debut UK single, produced by Chandler within months of discovering him."
+    },
+    {
+      "title": "Purple Haze (produced for Jimi Hendrix)",
+      "year": 1967,
+      "whyThisOne": "The breakthrough single that made Hendrix a star in Britain, a year after Chandler brought him over."
+    }
+  ]
+}

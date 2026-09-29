@@ -1,0 +1,33 @@
+{
+  "id": "e-visconti-bowie",
+  "from": "tony-visconti",
+  "to": "david-bowie",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Tony Visconti is credited as producer on David Bowie's 'Young Americans' (1975) and, alongside Brian Eno, on 'Low' and '\"Heroes\"' (both 1977), and has discussed the decades-long working relationship extensively in his own memoir and in interviews.",
+  "year": 1977,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "David Bowie",
+      "title": "Young Americans",
+      "year": 1975,
+      "search": false
+    },
+    "later": {
+      "artist": "David Bowie",
+      "title": "\"Heroes\"",
+      "year": 1977,
+      "search": false
+    },
+    "whatToListenFor": "'Young Americans' is Visconti working in a horn-driven, American soul idiom. Two years later, at Hansa Studios in Berlin, the same producer is building a title track around Robert Fripp's treated guitar and Eno's synthesizer textures. Same producer, same artist, almost unrecognizably different palette."
+  },
+  "explanation": {
+    "age7": "Tony Visconti produced David Bowie's records for many years, including ones made in a soul style and later ones made in Berlin.",
+    "age13": "Visconti produced Bowie's 'Young Americans' (1975) and, with Brian Eno, 'Low' and '\"Heroes\"' (1977), covering a huge stylistic range across one working partnership.",
+    "adult": "The Visconti-Bowie relationship, on and off across decades, is one of this dataset's clearest examples of a producer partnership outlasting any single genre both people passed through."
+  },
+  "tags": [
+    "production"
+  ]
+}
