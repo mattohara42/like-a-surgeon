@@ -251,6 +251,7 @@ fixing them inline.)
   into, and a reader can drag the whole map out of view into empty dust.
   If readers get lost, a soft pull back toward the content when it leaves
   the screen, or a "back to the map" control, would fix it.
+  **Closed** (A260): Matt picked the soft pull-back.
 
 - `j-dilla.json`'s adult text states "Donuts was mostly made in hospital" as
   plain fact. Researching the new `stones-throw` label for this batch turned
