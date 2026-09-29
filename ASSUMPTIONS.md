@@ -2955,3 +2955,41 @@ small and worth having in front of Matt alongside everything else here.
     is `"status": "draft"` with a `pending` reason until a sourced
     transcription exists (Q30). Its M1 tempos (124 and 130 bpm) are
     also unverified.
+
+- **A271. M4 step 4: the first demos you can hear.** The 808 and 303
+  demos play from their edge panels and from the TR-808 and TB-303
+  machine panels. The Planet Rock draft shows "planned, not playable
+  yet" in place of the old "arrives with the audio engine" line.
+  - **Levels, re-measured.** Step 2 set the top of the volume slider so
+    that four full-scale square waves stayed under the safety knee. With
+    real demos playing, that left the default volume about 30 dB below
+    full scale (the 303 peaked at 0.034). That is its own hazard: a
+    reader turns the laptop up, and the next YouTube link is far too
+    loud. The setting now comes from the demos themselves. With every
+    slider at the top and every pad hit, the loudest demo (the 808)
+    peaks at 0.358 at full volume, under the 0.4 knee, with
+    `volumeMaxGain` 0.42. `volumeDefault` went from 0.5 to 0.7, so a
+    first press peaks at 0.175 (808) and 0.094 (303). The safety stage
+    still holds 0.5 for any input, and `npm run audio:check` now checks
+    every playable demo against the knee, the default-volume floor, and
+    closing its panel.
+  - **Sound controls moved.** The plan put mute beside "Start here". In
+    the top centre they crowded the mission chip, and the volume slider
+    slid under the open drawer. They are now a fourth row in the
+    top-left stack ("Sound: On", then a slider), styled like the rows
+    above it, never covered by the drawer, and part of the overlay set
+    that lane titles step clear of (A257).
+  - **One player, not two.** `audio/player.js` runs both machine-voice
+    and A/B demos. An A/B demo is the same loop with a second pattern,
+    so separate modules would have duplicated it. The A/B switch and
+    its tempo change land on the next bar.
+  - **One demo at a time.** Opening another panel, closing the drawer,
+    or redrawing the panel (a register change) stops the demo that was
+    playing.
+  - **Ported with the player:** SQUELCH's `seq303.js` (303 gate and
+    slide semantics) and its test.
+  - **Not in this step:** the map pulse on each bar and the demo marker
+    on edges are step 6. No speaker or headphone warning copy was
+    added. The per-demo `safety.maxGain` values are the M1 ones (0.7
+    for the 808, 0.6 for the 303), which leaves the 303 about 5 dB
+    quieter than the 808. That may deserve a look by ear.
