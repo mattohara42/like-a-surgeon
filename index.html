@@ -329,16 +329,34 @@
   .welcome-skip:hover { color: var(--ink); }
   #goal {
     position: fixed; top: 58px; left: 50%; transform: translateX(-50%); z-index: 8;
-    width: max-content; max-width: min(420px, 34vw); text-align: center;
+    width: max-content; max-width: min(400px, 32vw);
+    display: flex; align-items: flex-start; justify-content: center; gap: 8px;
+  }
+  #goal .goal-text, #goal .start-here {
+    display: inline-block; padding: 5px 14px; border-radius: 999px;
+    font-family: var(--ui); font-size: 12px; line-height: 1.4;
   }
   #goal .goal-text {
-    display: inline-block; padding: 5px 14px; border-radius: 999px;
-    font-family: var(--ui); font-size: 12px; line-height: 1.4; color: #f3dfa6;
+    text-align: center; color: #f3dfa6;
     background: rgba(40,32,10,0.55); border: 1px solid rgba(243,223,166,0.28);
   }
-  #goal button.goal-text { cursor: pointer; }
+  /* Always on screen, so the card is one click away after the missions. */
+  #goal .start-here {
+    flex: 0 0 auto; cursor: pointer; color: var(--dim);
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase;
+    background: rgba(140,170,220,0.05); border: 1px solid var(--hairline);
+    padding: 6px 12px;
+  }
+  #goal .start-here:hover { color: var(--ink); border-color: rgba(150,180,235,0.4); }
+  #goal button { cursor: pointer; }
   #goal button.goal-text:hover { border-color: rgba(243,223,166,0.6); }
-  #goal.found .goal-text { box-shadow: 0 0 24px 2px rgba(243,223,166,0.35); }
+  #goal .goal-text.found { box-shadow: 0 0 24px 2px rgba(243,223,166,0.35); }
+  .welcome .found-list { margin: 10px 0 6px; }
+  .welcome .found-heading {
+    font-family: var(--mono); font-size: var(--t-kicker); letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--dim); margin-bottom: 2px;
+  }
+  .welcome .found-list .link-name { color: #f3dfa6; }
 
   #status {
     position: fixed; top: 14px; left: 18px; z-index: 6;

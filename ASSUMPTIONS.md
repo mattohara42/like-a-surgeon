@@ -2591,3 +2591,25 @@ small and worth having in front of Matt alongside everything else here.
     feature Matt asked for mid-milestone. Checked only in headless
     Chromium by freezing the animations at set times. How it feels at
     speed needs Matt's eyes in a real browser.
+
+- **A252. The welcome goal became a chain of missions, and the card is
+  always one click away.** Matt asked for a way back to the card, or a
+  new version of it that encourages more exploration, and got both. A
+  "Start here" button sits beside the mission chip permanently. The single
+  Planet Rock goal (A249) is now the first of five missions in
+  `reading/welcome.js`: Planet Rock, the Stylophone behind 'Space Oddity',
+  the Amen break (either of its two edges counts), Dave Davies's slashed
+  speaker, and the Casio MT-40 preset behind 'Under Mi Sleng Teng'. All
+  five are documented, cross-lineage edges, chosen to spread across
+  decades (1964 to 1994) and lineages, and to favour machines and
+  accidents, the stories this map tells best. Every mission sentence
+  restates only what that edge's own explanation says. Missions count in
+  any order when their edge's panel opens, and the chip shows the first
+  one still unfound. The card shows progress ("Mission 2 / 5"), the
+  current mission and a list of found crossings that reopen their edges.
+  Once all are found, it points at colour-changing lines, which are the
+  cross-lineage edges (their trail gradient runs source colour to target
+  colour), as the rest of the map to explore. A mission whose edges are
+  all missing from the data is skipped, so removing a record cannot strand
+  the chain. The storage key stays `lineage.welcome.v1`, and its old
+  `found: true` carries over as Planet Rock found.
