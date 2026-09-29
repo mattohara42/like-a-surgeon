@@ -224,12 +224,12 @@ two new ones filled the freed slots.
 |---|---|---|---|---|---|
 | 1 | 808 voices, the long kick | machine-voice | `e-808-planetrock`, `e-808-manparrish`, `e-808-mantronix` | SQUELCH 808 | plays |
 | 2 | Turn the 303's knob while it plays | machine-voice | `e-303-phuture` | SQUELCH 303 | plays |
-| 3 | 808 kick against 909 kick | ab | `e-909-knuckles` | SQUELCH 808 and 909 | to build |
-| 4 | A dry stem, then the Space Echo | technique | `e-re201-tubby` | native delay with feedback and filtering | to build |
+| 3 | 808 kick against 909 kick | ab | `e-909-knuckles` | SQUELCH 808 and 909 | plays (A278) |
+| 4 | A dry stem, then the Space Echo | fx-chain | `e-re201-tubby` | native delay with feedback and filtering | plays (A278) |
 | 5 | A preset rhythm, then a riddim (original rhythm, not the bassline) | ab | `e-mt40-princejammy` | simple square and noise voices | to build |
-| 6 | A funk break straight, then chopped | pattern | `e-winstons-nwa` | SQUELCH 909 kit playing a break pattern | to build |
+| 6 | A funk break straight, then chopped | pattern | `e-winstons-nwa`, `e-winstons-shyfx` | SQUELCH 909 kit playing a break pattern | plays (A278) |
 | 7 | The same loop at full quality and at 12-bit, 26 kHz | ab | `e-sp1200-marleymarl` | native bit-crush and sample-rate reduction | to build |
-| 8 | Clean, then the fuzz box, then the slashed speaker (A/B/C) | technique | `e-fuzztone-stones`, `e-elpico-kinks` | waveshaper; waveshaper plus noise-modulated rattle | to build |
+| 8 | Clean, then the fuzz box, then the slashed speaker (A/B/C) | fx-chain | `e-fuzztone-stones`, `e-elpico-kinks` | waveshaper; waveshaper plus noise-modulated rattle | to build |
 | 9 | The Stylophone: one voice, a metal pen | machine-voice | `e-stylophone-bowie` | native square oscillator | to build |
 | 10 | Herc's Merry-Go-Round: one break, extended across two copies | pattern | `e-jamesbrown-koolherc` | SQUELCH 909 kit, two decks switched | to build |
 | 11 | A synth bass against an electric bass (original line) | ab | `e-minimoog-parliamentfunkadelic` | native mono synth with a ladder-style filter; plucked-string voice | to build |
@@ -288,6 +288,10 @@ Each step is one PR, merged before the next starts.
    A271).
 5. `fx.js`, and the technique and pattern players. Demos 3 to 10, in
    two or three data PRs.
+   First PR built (A278): `fx.js` with the tape echo, the `fx-chain`
+   (the sketch's `technique`, named as SCHEMA.md already had it) and
+   `pattern` kinds in the one player, and demos 3, 4 and 6. Demos 5 and
+   7 to 11 need new native voices or effects and come next.
 6. Visual feedback on the map (section 6). Built (A273): a pulse per
    bar on the demo's edges, a ♪ mark on every demo edge, and demo edges
    resting brighter than quiet ones.

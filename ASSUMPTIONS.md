@@ -3119,3 +3119,56 @@ small and worth having in front of Matt alongside everything else here.
     had been rewritten on every pan frame. Not changed: edges still fade
     to the "passing" style as both ends leave the screen (about 3 a
     second while panning), which is the designed behaviour.
+
+- **A278. M4 step 5, first PR: two new demo kinds and three demos.**
+  - **One player still.** `pattern` and `fx-chain` run through
+    `audio/player.js`, which now plays a list of versions instead of an
+    A/B pair. A/B is two versions with their own patterns, a chop is a
+    version that plays the same pattern's steps in a new order, and an
+    effect is a version that opens a send. The demo block draws one
+    button per version, lettered A, B, C, so demo 8's three-way switch
+    needs no UI work.
+  - **Kind name.** The architecture sketch said `technique`. SCHEMA.md
+    had said `fx-chain` since M1, so the data uses that, and the sketch
+    table now does too.
+  - **Chops are 1-based step numbers**, as a musician counts, and null is
+    a silent step. The step lights show the step being played, so a chop's
+    lights jump about. That is meant as the lesson, not a side effect.
+  - **The effect is a send, switched at once.** A dub engineer throws a
+    channel into the echo mid-bar and the tail rings on after it is
+    pulled back, so an effect switch does not wait for the bar the way a
+    pattern switch does. Demo 8's fuzz will be an insert, and adds that
+    mode when it is built rather than now.
+  - **The tape echo** (`audio/fx.js`) is native nodes: high-pass in,
+    delay set in sixteenth-notes, low-pass and tanh saturation in the
+    feedback loop, and a slow wobble on the delay time. It does not model
+    the RE-201's circuit, and the demo's note says so. Feedback tops out
+    at 0.85 of unity, below runaway. The RE-201 record describes Perry's
+    runaway bloom, but this demo sits on the Tubby edge, which is about
+    the opposite instinct: repeats kept tidy and in time.
+  - **Demo 3, 808 kick against 909 kick** (`e-909-knuckles`). Same
+    original pattern and tempo on both sides, so only the machine
+    changes. The adult caption says the real 909's hats and cymbals
+    were samples and its drums analog, as `machines/tr-909.json` says.
+    I left out the bit depth, because nothing in the repo sources it.
+  - **Demo 4, echo that keeps time** (`e-re201-tubby`). An original
+    one-drop on the 808 kit, echo three steps long so each repeat lands
+    on the grid. The caption says the three steps are the demo's setting,
+    not a claim about Tubby's. Measured above 300 Hz, switching the echo
+    in lifts the level by about 5 dB. Its `maxGain` is 0.6, down from a
+    first 0.7 that peaked at 0.399 against the 0.4 knee. It now peaks
+    at 0.391 at its loudest, since the limiter was already holding the
+    old peak down. That margin is thin, and worth a listen.
+  - **Demo 6, a break looped and then chopped** (`e-winstons-nwa`, and
+    also `e-winstons-shyfx`, which Matt's table did not name). The break
+    is an original funk bar, not the Amen: writing the Amen from memory
+    would be the same problem as the Planet Rock melody (A270), and the
+    caption says it is not the Amen. The demo also sits on the Shy FX
+    edge because chopping is what jungle did to the break. N.W.A looped
+    it.
+  - **Audio check** now measures every version of a demo at its
+    loudest, not only the first. All seven playable demos pass in dev
+    and from `dist/` over file://.
+  - **Not in this PR:** demos 5 and 7 to 11. Each needs a native voice
+    or effect that does not exist yet (square and noise voices, bit
+    crush, fuzz and rattle, Stylophone, mono synth and plucked bass).

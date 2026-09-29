@@ -229,6 +229,15 @@ correct response to a good idea arriving mid-milestone.
 
 ## Observed problems
 
+- **`e-909-knuckles` may put a 1984 machine in the Warehouse.** The
+  edge dates the 909 reaching Knuckles to 1984, names "Warehouse and
+  Power Plant DJ sets" as the later track, and ends its listening note
+  on "what a Warehouse night turned into". My understanding is that
+  Knuckles left the Warehouse around 1982 and opened the Power Plant
+  after that, which would mean a 1984 machine was a Power Plant tool.
+  I have not checked this against a source, so the edge is unchanged
+  (found while writing demo 3, A278; the demo caption names neither club).
+
 - ~~**SQUELCH: the 808 kick's decay knob gives a click (A270).**~~
   **Fixed** upstream in SQUELCH #8 and re-ported (A276).
   `js/worklets/drum808.js` reads `params.decay` for the kick as
