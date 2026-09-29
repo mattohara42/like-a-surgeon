@@ -80,8 +80,11 @@ activeFrom    year
 activeTo      year or null (null = still active)
 endUnknown    optional, true when activeTo is null because the end is
               unsourced, not because the artist is still active (Q20)
-originCity
-originCountry
+originCity    for a person, where they were born; for a band, group or duo,
+              where it formed. The city a person is known for, when it
+              differs, belongs in the blurb ("born in Harlem, grew up on
+              Long Island"). City level, or a neighbourhood with its city.
+originCountry the country of originCity
 scenes        [scene ids]
 labels        [ { labelId, from, to } ]    the ones that mattered
 keyProducers  [artist ids or plain names]
