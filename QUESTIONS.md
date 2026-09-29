@@ -14,6 +14,10 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   in place of the list and the validator accepts. (b) Keep the rule and
   list records they are known for playing (the Herc break records),
   marked as played rather than made. (c) Leave the warnings.
+  Three more sit at one track for a different reason (A275): the
+  Charmels and the Honey Drippers made one record that mattered, and
+  Daedelus's likeliest second track cannot be named from a source yet.
+  Option (a) would cover them too.
 
 - **Q30. A source for the Planet Rock melody.** The A/B demo is to play
   the melody 'Planet Rock' shares with 'Trans-Europe Express' (Q26). I
