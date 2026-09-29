@@ -245,6 +245,8 @@ fixing them inline.)
   no edge in this batch touches Dilla's own record directly enough to carry
   the correction, so it's left as a data fix for the next Dilla-adjacent
   batch rather than edited inline here.
+  **Closed** (A256): the adult blurb now states the dispute and the
+  Donuts track's `whyThisOne` no longer repeats the hospital claim.
 
 - Node labels are placed so they never overlap each other (A100), but they
   can still run under a neighbouring node's marker: each node's group

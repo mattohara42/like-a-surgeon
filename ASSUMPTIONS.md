@@ -2654,3 +2654,21 @@ small and worth having in front of Matt alongside everything else here.
   scenes) and was removed: a scene edge is a specific causal claim, and
   membership stays out of the graph like other roster relationships
   (A69).
+
+- **A256. The Donuts hospital story is now told as disputed.**
+  `j-dilla.json`'s adult blurb stated "Donuts was mostly made in hospital"
+  as fact, and the Donuts track's `whyThisOne` repeated it. This is the
+  CLAUDE.md rule 4 case BACKLOG flagged. It was checked this session
+  against the AV Club's twentieth-anniversary piece on Donuts and
+  Wikipedia's Donuts article, both of which cite Dan Charnas's 'Dilla Time'
+  (2022). The adult text now says the story is often told, then gives
+  Charnas's account: a shorter beat tape made at home in Pro Tools, mostly
+  made before his hospital stays, then expanded by Stones Throw's Jeff Jank
+  after Dilla suggested the label do it. It also keeps the part of the
+  popular story that holds up: he did keep working on it in hospital. No
+  quotation is used. The Teen blurb never made the claim, so it is
+  unchanged. `whyThisOne` now says only that Donuts came out three days
+  before he died, which the Teen blurb already states. The BACKLOG
+  entry's further claims (that the label left the story uncorrected
+  because it helped sales, and that Chris Manak later corrected it) were
+  not confirmed by these sources, so they were left out.
