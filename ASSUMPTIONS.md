@@ -2993,3 +2993,12 @@ small and worth having in front of Matt alongside everything else here.
     added. The per-demo `safety.maxGain` values are the M1 ones (0.7
     for the 808, 0.6 for the 303), which leaves the 303 about 5 dB
     quieter than the 808. That may deserve a look by ear.
+
+- **A272. The 808 kick is not called "tunable" (Q31).** Matt asked for
+  the term to go. `machines/tr-808.json` now says the kick's decay
+  "could be set so long it rang on like a bass note" and calls it "the
+  long-decay kick". `e-808-planetrock` says the kick's decay "is set
+  long so it rings on like a bass note". `data/seed.json` keeps the old
+  wording, because it is the frozen M1 reference copy the app does not
+  read (A6 notes, README). The demo caption's "no tuning" stays: it
+  says what the 808's controls are, which is the point.
