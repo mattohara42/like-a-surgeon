@@ -87,6 +87,8 @@ correct response to a good idea arriving mid-milestone.
   backlogged by Matt. Needs a rule for what counts as golden that does not
   editorialize, for example documented cross-lineage edges only, which
   should come back to Matt before any build.
+  **Shipped** (A263) with Matt's rule: the longest documented
+  cross-lineage leaps, record to record.
 - **Parallax starfield and node glints.** A multi-layer starfield drifting
   at several depths as the reader pans, plus a slow twinkle and specular
   glint on the most connected nodes. Proposed alongside the ripple (A251)

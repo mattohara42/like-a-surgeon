@@ -6,6 +6,9 @@
 // card. It opens by itself once, on the first visit. After that a "Start
 // here" button beside the mission chip, always on screen, opens it again.
 //
+// Golden edges (A263) are a second, open-ended hunt: the card counts how
+// many the reader has opened, and the chip flashes when one is collected.
+//
 // Missions are a chain: each is a crossing to find, and finding one moves
 // the chip on to the next. Any mission counts when its edge is opened, in
 // any order. The one shown is the first still unfound. Once all are found
@@ -51,25 +54,32 @@ function loadState() {
   try {
     const saved = JSON.parse(localStorage.getItem(CONFIG.welcome.storageKey) ?? '{}');
     const found = Array.isArray(saved.found) ? saved.found : saved.found === true ? ['planetRock'] : [];
-    return { seen: saved.seen === true, found: new Set(found) };
+    const golden = Array.isArray(saved.golden) ? saved.golden : [];
+    return { seen: saved.seen === true, found: new Set(found), golden: new Set(golden) };
   } catch {
-    return { seen: false, found: new Set() };
+    return { seen: false, found: new Set(), golden: new Set() };
   }
 }
 
 function saveState(state) {
   try {
-    localStorage.setItem(CONFIG.welcome.storageKey, JSON.stringify({ seen: state.seen, found: [...state.found] }));
+    localStorage.setItem(
+      CONFIG.welcome.storageKey,
+      JSON.stringify({ seen: state.seen, found: [...state.found], golden: [...state.golden] }),
+    );
   } catch {
     // Nothing to do: progress starts over next visit.
   }
 }
 
-export function createWelcome(chipEl, { nodesById, edgesById, openCard }) {
+export function createWelcome(chipEl, { nodesById, edgesById, goldenIds = new Set(), openCard }) {
   const state = loadState();
   const missions = MISSIONS.filter((m) => m.edgeIds.some((id) => edgesById.has(id)));
   let register = null;
   let justFound = null;
+  // A golden edge just collected, shown in the chip like a found mission.
+  let justGolden = false;
+  const goldenCount = () => [...goldenIds].filter((id) => state.golden.has(id)).length;
   let lingerTimer = null;
 
   const current = () => missions.find((m) => !state.found.has(m.key)) ?? null;
@@ -79,6 +89,9 @@ export function createWelcome(chipEl, { nodesById, edgesById, openCard }) {
     const mission = current();
     const text = justFound
       ? h('span', { class: 'goal-text found' }, pick(missionCopy(justFound).found, register))
+      : justGolden
+        ? h('span', { class: 'goal-text found' },
+            `${pick(COPY.welcome.golden.flash, register)}: ${goldenCount()} / ${goldenIds.size}`)
       : mission
         ? h('button', { type: 'button', class: 'goal-text', onClick: openCard }, pick(missionCopy(mission).chip, register))
         : null;
@@ -142,6 +155,14 @@ export function createWelcome(chipEl, { nodesById, edgesById, openCard }) {
               : null,
           )
         : null,
+      goldenIds.size
+        ? h(
+            'div',
+            { class: 'goal golden' },
+            h('h3', {}, `${pick(COPY.welcome.golden.heading, ctx.register)} · ${goldenCount()} / ${goldenIds.size} ${pick(COPY.welcome.golden.found, ctx.register)}`),
+            h('p', { class: 'body' }, pick(COPY.welcome.golden.hint, ctx.register)),
+          )
+        : null,
       h('button', { type: 'button', class: 'welcome-skip', onClick: ctx.close }, pick(COPY.welcome.skip, ctx.register)),
     );
   }
@@ -159,14 +180,19 @@ export function createWelcome(chipEl, { nodesById, edgesById, openCard }) {
     // found line for a moment, then the chip moves on to the next one.
     noticeEdge(id) {
       const mission = missions.find((m) => !state.found.has(m.key) && m.edgeIds.includes(id));
-      if (!mission) return;
-      state.found.add(mission.key);
+      const golden = goldenIds.has(id) && !state.golden.has(id);
+      if (!mission && !golden) return;
+      if (mission) state.found.add(mission.key);
+      if (golden) state.golden.add(id);
       saveState(state);
-      justFound = mission;
+      // A mission's own line wins when one edge is both.
+      justFound = mission ?? null;
+      justGolden = !mission && golden;
       drawChip();
       clearTimeout(lingerTimer);
       lingerTimer = setTimeout(() => {
         justFound = null;
+        justGolden = false;
         drawChip();
       }, CONFIG.welcome.foundLingerMs);
     },
