@@ -2844,3 +2844,11 @@ small and worth having in front of Matt alongside everything else here.
   filled only from a solid source. None was found this session. See the
   BACKLOG entry for the three candidate years (late 1920s, about 1932,
   1934) and why none can be used yet.
+
+- **A267. Worklets reach the release copy as data: URLs.** Tested in
+  headless Chromium before writing the M4 plan. From file://, `addModule`
+  fails for both a relative path and a blob: URL, and succeeds for a
+  data: URL. Over http, all three work. So the M4 plan keeps each
+  processor file self-contained (no imports, CONFIG values passed in
+  through `processorOptions`), and has `tools/bundle.js` inline them as
+  data: URLs. Firefox and Safari are untested here (Q27).
