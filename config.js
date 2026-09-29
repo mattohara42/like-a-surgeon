@@ -403,6 +403,37 @@ export const CONFIG = {
     shuffleMaxFraction: 0.3,
     scheduler: { tickMs: 25, lookaheadS: 0.12 },
 
+    // The master chain every sound passes through (docs/m4-architecture.md
+    // section 4): input bus -> limiter -> volume -> safety -> mute ->
+    // speakers.
+    master: {
+      // A DynamicsCompressorNode set hard, as a limiter. From SQUELCH's
+      // MASTER_LIMITER. It is not a brickwall: measured, four times more
+      // input still raised its output by about 40% (A269). It keeps
+      // loudness even, and the safety stage below holds the ceiling.
+      limiter: { threshold: -3, knee: 0, ratio: 20, attack: 0.003, release: 0.1 },
+      // Linear gain at the top of the volume slider. Chosen by
+      // measurement: a loud input (four full-scale square waves) at full
+      // volume stays under the safety knee, so the safety stage never
+      // colours a demo.
+      volumeMaxGain: 0.3,
+      // Where the slider starts for a reader who has never moved it.
+      volumeDefault: 0.5,
+      // The slider is squared before it becomes gain, so equal slider
+      // steps sound closer to equal loudness steps.
+      volumeCurve: 2,
+      // Linear peak the output must never exceed (0.5 is about -6 dBFS).
+      // The safety stage is a waveshaper whose curve cannot go past it.
+      peakCeiling: 0.5,
+      // The safety curve is a straight line (no effect at all) up to this
+      // fraction of the ceiling, then bends smoothly into the ceiling.
+      safetyKnee: 0.8,
+      safetyCurveSamples: 4096,
+      // Every gain change ramps over this long, so nothing clicks.
+      rampS: 0.005,
+      storageKey: 'lineage.audio',
+    },
+
     // What the worklets read, injected into each one as `CFG` by
     // audio/workletSource.js. SQUELCH's key names are kept as they are, so
     // the ported DSP stays line-for-line comparable with upstream (A268).

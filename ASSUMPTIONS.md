@@ -2896,3 +2896,27 @@ small and worth having in front of Matt alongside everything else here.
   with exit 1, so the harness does catch regressions. In headless
   Chromium from file://, all three assembled worklets load from data:
   URLs and render finite, audible output.
+
+- **A269. M4 step 2: the ceiling is a waveshaper, not the limiter.**
+  The M4 plan relied on SQUELCH's limiter settings plus a low master
+  gain to keep output under a ceiling. Measured in headless Chromium,
+  the DynamicsCompressorNode does not hold one: going from four to
+  sixteen full-scale square waves raised its output from 0.43 to 0.62.
+  So the master chain gained a **safety** stage after the volume: a
+  WaveShaperNode whose curve is the identity up to 80% of
+  `peakCeiling` (0.5, about -6 dBFS) and then bends toward the ceiling
+  without reaching it. Measured: sixteen squares at full volume peak at
+  0.486. `volumeMaxGain` (0.3) keeps four squares at 0.37, under the
+  knee, so a loud demo is not coloured by it.
+
+  Three smaller choices:
+  - `tools/audio-check.js` measures a running AudioContext rather than
+    rendering offline, because an offline render can finish before port
+    messages reach a processor. It needs Playwright, which the project
+    does not depend on, so it is `npm run audio:check` by hand, not CI.
+    The pure parts (the safety curve, the volume curve) are unit tested
+    in `npm test`, which CI does run.
+  - The mute and volume controls on screen wait for step 4. Showing a
+    mute button with nothing to hear would puzzle a first-time reader.
+  - `tools/bundle.js` now understands `export class` (the scheduler
+    uses one) and writes `dist/worklets.js`.
