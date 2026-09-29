@@ -22,6 +22,7 @@ import { applyTypeScale } from './reading/type.js';
 import { COPY } from './reading/copy.js';
 import { createWelcome, OPENING_FRAME_IDS } from './reading/welcome.js';
 import { h } from './reading/dom.js';
+import { createEngine } from './audio/engine.js';
 
 const statusEl = document.getElementById('status');
 const appEl = document.getElementById('app');
@@ -32,6 +33,12 @@ const legendEl = document.getElementById('legend');
 const searchEl = document.getElementById('search');
 const arrangeEl = document.getElementById('arrange');
 const goalEl = document.getElementById('goal');
+
+// One audio engine for the page. It creates nothing until a play button
+// calls start(), so building it here costs nothing for a reader who never
+// presses play.
+const audio = createEngine();
+window.__audio = audio; // for manual/automated inspection (tools/audio-check.js)
 
 // Which layer toggle has to be on for a node of this kind to be drawn.
 // Artists are always drawn, and scenes are framed through their members.
