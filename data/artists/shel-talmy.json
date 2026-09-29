@@ -1,0 +1,34 @@
+{
+  "id": "shel-talmy",
+  "name": "Shel Talmy",
+  "sortName": "Talmy, Shel",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1962,
+  "activeTo": null,
+  "originCity": "Chicago, Illinois",
+  "originCountry": "USA",
+  "scenes": [
+    "swinging-london"
+  ],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "An American who talked his way into a London studio and ended up producing the Kinks and the Who within a year of each other.",
+  "blurb": {
+    "age7": "Shel Talmy was an American record producer who moved to London and helped two of Britain's biggest rock bands make their first hit songs sound the way they do.",
+    "age13": "Talmy was a Chicago-born producer who moved to London in the early 1960s and, according to the widely repeated story, got his first job partly by playing test pressings and letting people assume he had produced them himself. He went on to produce the Kinks' 'You Really Got Me' (1964) and the Who's 'I Can't Explain' (1965), giving both bands a harder, more compressed guitar sound than most British records of the time.",
+    "adult": "Talmy is this dataset's clearest case of a single producer acting as the transmission mechanism for a specific sound across two otherwise unconnected bands. His deal structure also matters as much as his ear: the Who's early contract ran through Decca's UK Brunswick imprint specifically because that was Talmy's arrangement, and the band's split from him in 1966 ended their use of that imprint in the same move."
+  },
+  "signatureTracks": [
+    {
+      "title": "You Really Got Me (produced for the Kinks)",
+      "year": 1964,
+      "whyThisOne": "The slashed-speaker-cone riff, recorded and mixed by Talmy into the hardest guitar sound on British radio that year."
+    },
+    {
+      "title": "I Can't Explain (produced for the Who)",
+      "year": 1965,
+      "whyThisOne": "Talmy's second use of the same compressed, riff-forward template, on a band that had asked for exactly that sound."
+    }
+  ]
+}

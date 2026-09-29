@@ -1,0 +1,34 @@
+{
+  "id": "e-brunswick-talmy",
+  "from": "brunswick",
+  "to": "shel-talmy",
+  "type": "label",
+  "confidence": "documented",
+  "evidence": "Brunswick's own record in this dataset states the imprint carried the Who's early singles and debut album specifically because that was Talmy's contractual arrangement with Decca, and that the band's 1966 split from Talmy ended the imprint's use for their releases.",
+  "year": 1965,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "The Kinks",
+      "title": "You Really Got Me",
+      "year": 1964,
+      "search": false
+    },
+    "later": {
+      "artist": "The Who",
+      "title": "My Generation",
+      "year": 1965,
+      "search": false
+    },
+    "whatToListenFor": "No single record demonstrates this; the claim is contractual rather than sonic. Brunswick's UK catalogue for the Who exists because of Talmy's deal with Decca, not because of any editorial decision by the imprint itself."
+  },
+  "explanation": {
+    "age7": "The company that put out the Who's first records did it because of a deal with their producer, not because they chose the band themselves.",
+    "age13": "Brunswick released the Who's early singles and first album because that was part of producer Shel Talmy's contract with Decca, not because Brunswick signed the band directly. When the band split from Talmy in 1966, their records stopped coming out on Brunswick too.",
+    "adult": "An unusual label edge: the causal claim runs through a producer's contract rather than an editorial decision by the label itself, which is worth stating plainly rather than implying Brunswick shaped the Who's sound directly."
+  },
+  "tags": [
+    "production",
+    "labels"
+  ]
+}

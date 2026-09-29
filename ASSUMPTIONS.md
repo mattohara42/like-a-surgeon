@@ -2361,3 +2361,22 @@ small and worth having in front of Matt alongside everything else here.
   rather than a fresh Wikipedia or Discogs check, tiered `documented` on
   the same basis `e-marleymarl-mcshan.json` already uses for the same
   underlying claim, not upgraded further for being retold here.
+
+- **A241. Shel Talmy closes the Brunswick orphan and two stale keyProducers
+  entries.** `the-kinks.json` and `the-who.json` both already named "Shel
+  Talmy" as a plain-text `keyProducers` entry, exactly the drift pattern
+  fixed for `the-clash.json`/`lee-perry` last batch. Authored
+  `shel-talmy.json` (production edges to both: `e-talmy-kinks`,
+  `e-talmy-who`) and updated both entries to the resolvable id. Also
+  authored `e-brunswick-talmy`, a `label`-type edge running from Brunswick
+  to Talmy rather than to an artist directly, since Brunswick's own
+  causal claim (already written in its `ownershipStory`) is that it
+  carried the Who's early records specifically because that was Talmy's
+  contract with Decca, not an editorial decision about the band. This
+  closes Brunswick's long-standing orphan warning; `BACKLOG.md` had
+  floated merging the label into a note on the Who instead, but a real
+  edge is available now, so the node stays. As with A240, no live
+  source-verification tool was available this session; Talmy's producer
+  credits on both records and the 1966 contract dispute are widely
+  repeated in British Invasion histories, tiered `documented` on that
+  basis. `node tools/validate.js` warnings: 51 to 48.
