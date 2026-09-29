@@ -234,8 +234,7 @@ Planet Rock demo is the one exception, by Matt's decision (Q26): it
 plays "the shared melodic contour" of 'Trans-Europe Express' and
 'Planet Rock' on synthesized voices. The edge's own text records that
 'Planet Rock' used that melody without a licence in advance, and that
-the dispute with Kraftwerk's publishers was settled, so the demo
-teaches the very thing the dispute was about.
+the dispute with Kraftwerk's publishers was settled.
 
 ## 8. Testing
 
