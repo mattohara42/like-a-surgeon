@@ -2475,3 +2475,16 @@ small and worth having in front of Matt alongside everything else here.
   session; these facts, including Coolio's September 2022 death, come
   from general knowledge of well-documented music history.
   `node tools/validate.js`: 0 errors, 44 warnings throughout.
+
+- **A247. Rick Derringer closes the last Weird Al keyProducers plain name.**
+  `e-derringer-weirdal` follows the established single-producer-edge
+  pattern (Shel Talmy, the producer batch): Derringer produced every
+  Yankovic album from the 1983 debut through 'Off the Deep End' (1992),
+  and personally re-played the 'Beat It' guitar solo for 'Eat It' (1984)
+  rather than sampling it, a real, checkable detail rather than a bare
+  credit. `crossLineage: true` since Yankovic sits outside the lineage
+  enum's genre categories entirely (filed `other`) against Derringer's
+  `rock`. As with recent batches, no live source-verification tool was
+  available this session; these facts come from general knowledge of
+  well-documented rock and comedy-music history.
+  `node tools/validate.js` warnings: 44 to 43.

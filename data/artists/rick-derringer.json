@@ -1,0 +1,32 @@
+{
+  "id": "rick-derringer",
+  "name": "Rick Derringer",
+  "sortName": "Derringer, Rick",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1965,
+  "activeTo": null,
+  "originCity": "Fort Recovery, Ohio",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A rock guitarist with his own hits who spent a decade producing comedy records for Weird Al Yankovic.",
+  "blurb": {
+    "age7": "Rick Derringer was a rock guitar player who had his own hit songs, and he also produced Weird Al Yankovic's albums for many years.",
+    "age13": "Derringer had early hits as a teenager with the McCoys ('Hang On Sloopy', 1965) and later as a solo artist with 'Rock and Roll, Hoochie Koo' (1973). From Yankovic's 1983 debut album until 1992, when Yankovic took over producing his own records, Derringer produced every Weird Al album.",
+    "adult": "Derringer's own career, teen pop stardom with the McCoys, session and touring guitar work with Johnny and Edgar Winter, a solo hard rock hit, makes him an unusual match for a decade producing novelty song parodies, but the job mainly called for exactly his skill: rebuilding other people's arrangements closely and convincingly, which is also what a working session guitarist does."
+  },
+  "signatureTracks": [
+    {
+      "title": "Rock and Roll, Hoochie Koo",
+      "year": 1973,
+      "whyThisOne": "His own best-known recording, and the hard rock credibility he brought to a decade of comedy production work."
+    },
+    {
+      "title": "Eat It (produced for \"Weird Al\" Yankovic)",
+      "year": 1984,
+      "whyThisOne": "Derringer re-played the guitar solo from Michael Jackson's 'Beat It' himself for Yankovic's parody, a session guitarist's skill applied directly to the joke."
+    }
+  ]
+}

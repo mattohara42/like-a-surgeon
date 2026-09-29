@@ -8,13 +8,13 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 134 | 120 | met |
+| artists | 135 | 120 | met |
 | machines | 31 | 25 | met |
 | scenes | 20 | 20 | met |
 | labels | 31 | 30 | met |
-| edges | 261 | 350 | 75% |
+| edges | 262 | 350 | 75% |
 | threads | 2 | 5 | 40% |
-| crossLineageEdges | 102 | 60 | met |
+| crossLineageEdges | 103 | 60 | met |
 | edgesWithDemo | 5 | 30 | 17% |
 
 ## Counts by lineage
@@ -25,7 +25,7 @@ Every node type, since machines, scenes and labels carry a lineage too.
 |---|---:|
 | hiphop | 55 |
 | electronic | 48 |
-| rock | 38 |
+| rock | 39 |
 | other | 24 |
 | funk | 22 |
 | dub | 21 |
@@ -37,7 +37,7 @@ Artists alone:
 | lineage | count |
 |---|---:|
 | hiphop | 43 |
-| rock | 25 |
+| rock | 26 |
 | electronic | 22 |
 | funk | 16 |
 | dub | 13 |
@@ -50,7 +50,7 @@ Artists alone:
 |---|---:|
 | direct | 57 |
 | technological | 47 |
-| production | 43 |
+| production | 44 |
 | label | 40 |
 | sample | 34 |
 | scene | 28 |
@@ -62,7 +62,7 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 190 |
+| documented | 191 |
 | consensus | 70 |
 | asserted | 1 |
 
@@ -236,126 +236,126 @@ Evidence: The Sex Pistols and the Clash are the two foundational bands of the 19
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 260 edges that carry one.
+Drawn with seed 1 from the 261 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-rza-wutang`
-
-Wu-Tang Clan, "Protect Ya Neck" (1992) to Wu-Tang Clan, "C.R.E.A.M." (1993)
-
-'Protect Ya Neck' opens on kung fu film dialogue and then runs eight rappers back to back over a raw, clattering loop. It sounds almost homemade, and it was self-released. 'C.R.E.A.M.', a year later, slows everything down: a sad, looping soul piano from a Charmels record, with space around each verse. Listen for RZA moving from chaos to melancholy with the same dusty texture holding both together.
-
-### 2. `e-fuzztone-stones`
-
-Marty Robbins, "Don't Worry" (1961) to The Rolling Stones, "(I Can't Get No) Satisfaction" (1965)
-
-Start with the Robbins record and wait for the instrumental break, where a bass line suddenly comes out torn and buzzing. That accident is what the Fuzz-Tone was built to repeat. Then play 'Satisfaction'. The riff comes in alone, and each note swells and holds with a raspy buzz instead of ringing out and fading like a clean guitar. Hum it and it phrases like a horn line, which is what Richards has said it was meant to become.
-
-### 3. `e-tubby-pil`
-
-King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Public Image Ltd, "Careering" (1979)
-
-Both records put the bass where you would expect the voice and leave large holes elsewhere. In the Tubby track, instruments vanish and reappear. In the PiL track they never arrive in the first place. Same architecture, opposite method.
-
-### 4. `e-knuckles-atkins`
-
-Frankie Knuckles, "Warehouse-era DJ sets" (1982) to Model 500 (Juan Atkins), "No UFOs" (1985)
-
-Detroit techno's four-on-the-floor structure owes something to house records like Knuckles' sets reaching Detroit via radio and record pools; listen for how close the underlying drum pattern is, even as the two genres' moods diverge sharply.
-
-### 5. `e-rockersinternational-hughmundell`
-
-Augustus Pablo, "King Tubby Meets Rockers Uptown" (1976) to Hugh Mundell, "Africa Must Be Free By 1983" (1978)
-
-Pablo's own melodica records made the label's reputation; two years later he put that same production behind a teenager's songwriting instead of his own instrument, and 'Africa Must Be Free By 1983' is a vocal album built on the same spacious, echo-heavy platform.
-
-### 6. `e-herc-cokelarock`
-
-DJ Kool Herc, "the back-to-school jam at 1520 Sedgwick Avenue" (1973) to Coke La Rock, "shout-outs over Herc's records at Bronx parties" (1973)
-
-Nothing was recorded, so listen forward instead. Take any rap record and strip out the rhyme, the meter and the subject, and what is left underneath is a person naming friends in the room over somebody else's drums. That residue is what La Rock was doing, and it is the part that never went away.
-
-### 7. `e-flash-mellemel`
-
-Grandmaster Flash, "Bronx jams with the Furious Five" (1977) to Grandmaster Flash and the Furious Five, "Superrappin'" (1979)
-
-Listen to how the five MCs hand lines to each other, finishing each other's bars and coming in together on the last word. That is choreography built for a live room where the DJ is the main event and the MCs work around him, and you can hear it surviving intact onto a record where there is no room and no crowd.
-
-### 8. `e-winstons-nwa`
-
-The Winstons, "Amen, Brother" (1969) to N.W.A, "Straight Outta Compton" (1988)
-
-Find the six seconds near the middle of 'Amen, Brother' where the band stops and Gregory Coleman plays alone. Listen for the last bars, where the snare shifts off its pattern and lands late. That hitch is what everyone recognises. Then hear it in 'Straight Outta Compton', looped hard under Ice Cube's opening verse. It has the same hitch in the snare, now with the urgency of the whole track riding on it.
-
-### 9. `e-parliamentfunkadelic-publicenemy`
-
-Funkadelic, "Get Off Your Ass and Jam" (1975) to Public Enemy, "Bring the Noise" (1987)
-
-Funkadelic's original is a loose, live-sounding jam built to fill a dance floor. The Bomb Squad chops it into a hard, repeating stab buried under sirens, scratches and Chuck D's vocal, the same move e-jamesbrown-publicenemy describes with 'Funky Drummer': the source record's groove becomes raw material for something faster, louder and more urgent.
-
-### 10. `e-marleymarl-koolgrap`
-
-Kool G Rap and DJ Polo, "It's a Demo" (1986) to Kool G Rap and DJ Polo, "Road to the Riches" (1989)
-
-'It's a Demo', recorded in Marl's living room, is a rapper announcing his technical range: fast, dense, still finding its subject. Three years later, 'Road to the Riches' keeps the same rhyme density but points it at a specific story, an immigrant hustler's rise and fall, years before 'mafioso rap' had a name.
-
-### 11. `e-tubby-pablo`
-
-Augustus Pablo, "Java" (1972) to King Tubby / Augustus Pablo, "King Tubbys Meets Rockers Uptown" (1976)
-
-Pablo's melodica is the constant; what changes across his catalogue is how much of everything else Tubby lets vanish around it. On the 1976 record, whole bars drop to just melodica, echo, and a bass note.
-
-### 12. `e-mt40-princejammy`
-
-Casio, "MT-40 'rock' rhythm preset" (1981) to Wayne Smith, "Under Mi Sleng Teng" (1985)
-
-The entire backing track is the MT-40's unmodified preset: no live drums, no live bass, just a cheap home keyboard's demo rhythm sped up and run underneath the vocal. It sounds nothing like the analogue dub coming out of Jammy's own former workplace, King Tubby's studio, a decade earlier.
-
-### 13. `e-marleymarl-ericbrakim`
+### 1. `e-marleymarl-ericbrakim`
 
 MC Shan, "The Bridge (produced by Marley Marl)" (1986) to Eric B. & Rakim, "Eric B. Is President" (1986)
 
 Play them back to back and compare the drums. Both are built on hard, sampled breaks cut into short, repeating loops, with a heavy low end and very little else, which is the Queensbridge room sound of 1986. Then listen to the voice on top. MC Shan is loud and pushing forward. Rakim is calm, slightly behind the beat, and packs rhymes into the middle of his lines. Same kind of beat, and a completely different way of rapping on it.
 
-### 14. `e-cologne-can`
+### 2. `e-flash-mellemel`
 
-Karlheinz Stockhausen, "Gesang der Jünglinge" (1956) to Can, "Halleluhwah" (1971)
+Grandmaster Flash, "Bronx jams with the Furious Five" (1977) to Grandmaster Flash and the Furious Five, "Superrappin'" (1979)
 
-Stockhausen's piece treats a boy's voice as raw material, cut, layered and processed inside a studio built for exactly that. Fifteen years later and a few miles away, Can builds an eighteen-minute rock groove the same way: recorded loosely, then shaped and trimmed on tape until the editing itself is the composition, a studio-first method the city, not just the man, made available to them.
+Listen to how the five MCs hand lines to each other, finishing each other's bars and coming in together on the last word. That is choreography built for a live room where the DJ is the main event and the MCs work around him, and you can hear it surviving intact onto a record where there is no room and no crowd.
 
-### 15. `e-h910-bowie`
-
-Eventide, "H910 Harmonizer" (1975) to David Bowie, "Breaking Glass" (1977)
-
-Listen only to the snare drum. Each hit is followed by a fast smear that drops in pitch, a thud that seems to fall away underneath itself. The Harmonizer shifted each echo down and fed it back in, so every repeat went lower than the last. On a normal record the snare is the most solid thing in the mix. Here it sounds like it is collapsing.
-
-### 16. `e-virgin-tangerinedream`
-
-Tangerine Dream, "Atem" (1973) to Tangerine Dream, "Phaedra" (1974)
-
-Atem, the last album for their German label, is built from long organ and Mellotron sounds that swell and fade. Phaedra, the first for Virgin, was made with the Moog the Virgin advance paid for, in Virgin's own studio. Listen for the change underneath: a repeating electronic pattern that the machine plays by itself, so the music has a pulse without a drummer.
-
-### 17. `e-flash-theodore`
+### 3. `e-flash-theodore`
 
 Grandmaster Flash, "quick-mix theory at Bronx jams" (1975) to Grand Wizzard Theodore, "the scratch" (1975)
 
 Flash's technique is about making the join invisible: you should not hear the second record arrive. Theodore's does the opposite and makes the hand audible on purpose. Listen for that inversion, because it is the moment the turntable stops pretending to be a playback device and starts admitting it is being operated.
 
-### 18. `e-ariwa-madprofessor`
+### 4. `e-talmy-kinks`
 
-Mad Professor, "early Ariwa dub sides" (1979) to Mad Professor, "Dub Me Crazy" (1982)
+The Kinks, "You Really Got Me" (1964) to The Who, "I Can't Explain" (1965)
 
-There isn't a before-and-after here: Ariwa is the room Mad Professor built to make dub in, so his whole catalogue was made inside it. Listen to any 'Dub Me Crazy' volume for a home studio's dub sound: a small, dry room, echo and reverb doing the work a bigger studio's space would otherwise do.
+Talmy's Kinks production is the template: compressed, riff-led, little separation between the instruments. A year later on the Who record he reaches for the same compression and the same short, repeated riff shape.
 
-### 19. `e-herc-bambaataa`
+### 5. `e-hardy-jefferson`
 
-DJ Kool Herc, "park jams and rec-room parties, the merry-go-round" (1973) to Afrika Bambaataa, "Zulu Nation park jams" (1977)
+Ron Hardy, "Music Box DJ sets" (1983) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
 
-The format is inherited and the record selection is not. Both are playing breaks to a park, but Herc's crates are funk and soul, and Bambaataa's take the same logic somewhere deliberately strange: a rock record, a TV theme, a German electronic album. Listen for how little the technique has to change to absorb material that sounds nothing like the last thing.
+Jefferson's piano hook is the part everyone remembers, but the mix, the sequencing and drum programming Hardy shaped, is what makes it a dancefloor record rather than just a song.
 
-### 20. `e-isley-publicenemy`
+### 6. `e-kraftwerk-dilla`
+
+Kraftwerk, "Trans-Europe Express" (1977) to Jay Dee, "B.B.E. (Big Booty Express)" (2001)
+
+Listen to how Kraftwerk say the title: flat, chanted, treated voices over a clanking rhythm meant to sound like a train. Then listen to how Dilla's track keeps the shape and rhythm of that chant and swaps the words, so the hook is instantly familiar and slightly ridiculous. Underneath, the music is his, not a sample of theirs. It is a Detroit hip-hop producer quoting the record Detroit's techno producers learned from.
+
+### 7. `e-princepaul-delasoul`
+
+Prince Paul, "DJing for Stetsasonic" (1988) to De La Soul, "3 Feet High and Rising" (1989)
+
+Stetsasonic's own records are dense but conventional boom-bap. On De La Soul's album the same production instincts turn playful and collage-like: skits, game-show samples and non-sequitur interludes across a much wider, weirder crate of source records than Paul had used behind Stetsasonic's own mic.
+
+### 8. `e-virgin-tangerinedream`
+
+Tangerine Dream, "Atem" (1973) to Tangerine Dream, "Phaedra" (1974)
+
+Atem, the last album for their German label, is built from long organ and Mellotron sounds that swell and fade. Phaedra, the first for Virgin, was made with the Moog the Virgin advance paid for, in Virgin's own studio. Listen for the change underneath: a repeating electronic pattern that the machine plays by itself, so the music has a pulse without a drummer.
+
+### 9. `e-chessrecords-ledzeppelin`
+
+Muddy Waters, "You Need Love" (1962) to Led Zeppelin, "Whole Lotta Love" (1969)
+
+'You Need Love' is a slow, spoken-sung blues, Muddy Waters half-talking Willie Dixon's words over a loping band. 'Whole Lotta Love' takes many of the same words and turns them into a hard rock riff, shouted rather than spoken, with a long psychedelic noise breakdown in the middle. Listen to the opening lines of each. The words are close enough that a court eventually agreed they were the same song.
+
+### 10. `e-isley-publicenemy`
 
 The Isley Brothers, "Fight the Power (Part 1)" (1975) to Public Enemy, "Fight the Power" (1989)
 
 The Isleys' original is a smooth, horn-driven funk protest song about censorship on the radio. Public Enemy keeps the title and a fragment of the groove but buries both under the Bomb Squad's usual density, turning a specific, contained complaint into a much broader, louder one.
+
+### 11. `e-hannett-joydivision`
+
+Joy Division, "Unknown Pleasures" (1979) to Joy Division, "Closer" (1980)
+
+Both albums share Hannett's spacious, gated drum sound and heavy use of artificial reverb and echo, built in the studio rather than captured from the band's live performances, which by several accounts sounded considerably rawer and faster.
+
+### 12. `e-largepro-tribe`
+
+Main Source, "Looking at the Front Door" (1990) to A Tribe Called Quest, "Check the Rhime" (1991)
+
+Listen for the split the two machines made. The drums have the SP-1200's crunchy, clipped grain, with short decays and a gritty snare. The musical loop above them, from the other sampler, runs longer and sounds cleaner and rounder. The Low End Theory is named for the bass, and on this album the low end is deep and warm rather than punchy. It's a teacher's setup, drums on one machine and loops on the other, used by his student for a different kind of record.
+
+### 13. `e-marleymarl-koolgrap`
+
+Kool G Rap and DJ Polo, "It's a Demo" (1986) to Kool G Rap and DJ Polo, "Road to the Riches" (1989)
+
+'It's a Demo', recorded in Marl's living room, is a rapper announcing his technical range: fast, dense, still finding its subject. Three years later, 'Road to the Riches' keeps the same rhyme density but points it at a specific story, an immigrant hustler's rise and fall, years before 'mafioso rap' had a name.
+
+### 14. `e-tribe-dilla`
+
+A Tribe Called Quest, "Electric Relaxation" (1993) to Janet Jackson, "Got 'til It's Gone (produced by The Ummah)" (1997)
+
+'Electric Relaxation' loops a warm keyboard figure from a Ronnie Foster record under soft drums, mellow and unhurried. 'Got 'til It's Gone' keeps that mood and takes it to pop radio. It loops Joni Mitchell's own voice and guitar from 'Big Yellow Taxi', with Q-Tip rapping and Janet Jackson singing softly over the top. Listen for how soft the drums are and how far back they sit, so the sample and the voices carry the song.
+
+### 15. `e-kane-nas`
+
+Big Daddy Kane, "Ain't No Half-Steppin'" (1988) to Nas, "It Ain't Hard to Tell" (1994)
+
+Kane's verses pack dense internal rhyme into a fast, clean flow with no wasted breath. Six years later, Nas's own debut single stacks images and rhymes just as densely, at a more measured pace, description doing the work Kane's speed did. Same commitment to packing a bar full; different instrument used to do it.
+
+### 16. `e-marshalljefferson-phuture`
+
+Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986) to Phuture, "Acid Tracks" (1987)
+
+'Move Your Body' is bright and busy, with piano, vocals and a quick beat. 'Acid Tracks' strips all of that away to a drum machine and one squelching bassline, and it moves more slowly than Phuture first made it. Listen to the tempo. The slower, heavier walk is the one change everyone agrees Jefferson asked for, and it gives the 303 room to twist.
+
+### 17. `e-stones-weirdal`
+
+The Rolling Stones, "(I Can't Get No) Satisfaction" (1965) to "Weird Al" Yankovic, "The Hot Rocks Polka" (1989)
+
+Listen to the 'Satisfaction' riff first, a fuzzed guitar line over a heavy backbeat, then find it in the medley. The polka puts everything on a bouncing two-beat pulse and hands the melody to the accordion, so a riff built around a fuzz pedal has to survive on a squeezebox. The tune survives the move. The tone and the swagger do not, which tells you how much of the Stones' sound lived in the playing rather than the notes.
+
+### 18. `e-mt40-princejammy`
+
+Casio, "MT-40 'rock' rhythm preset" (1981) to Wayne Smith, "Under Mi Sleng Teng" (1985)
+
+The entire backing track is the MT-40's unmodified preset: no live drums, no live bass, just a cheap home keyboard's demo rhythm sped up and run underneath the vocal. It sounds nothing like the analogue dub coming out of Jammy's own former workplace, King Tubby's studio, a decade earlier.
+
+### 19. `e-tubby-atkins-resemblance`
+
+King Tubby, "various versions" (1976) to Juan Atkins, "No UFO's" (1985)
+
+Both treat the mixing desk as the instrument and the arrangement as something to be performed rather than fixed. This is a resemblance we are pointing out, not a line of transmission we can trace.
+
+### 20. `e-knuckles-jefferson`
+
+Frankie Knuckles, "Warehouse-era DJ sets" (1978) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
+
+Knuckles' sets built the audience and the vocabulary ('house music') that Jefferson's generation of producers was writing directly for by the time they started making records.
