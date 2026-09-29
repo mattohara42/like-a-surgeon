@@ -2613,3 +2613,25 @@ small and worth having in front of Matt alongside everything else here.
   all missing from the data is skipped, so removing a record cannot strand
   the chain. The storage key stays `lineage.welcome.v1`, and its old
   `found: true` carries over as Planet Rock found.
+
+- **A253. Edges are quiet by default and drawn dot to dot.** Matt saw a
+  wall of vertical lines again after A249, in a view the opening frame
+  does not cover. Measured: 167 of 200 edges had both ends at the same
+  year, because `edgeAnchors` pinned both ends to `edge.year`, clamped into
+  each record's span. That made nearly every edge a vertical connector
+  between lanes, at any zoom. A249's through-traffic dimming only reached
+  edges with neither end on screen. Matt chose two changes:
+  - Every edge draws at 0.3 opacity with no comet until it is lit. The
+    selected edge, and every edge touching the selected or hovered node,
+    get the `lit` class and draw in full with comets. Machine beams belong
+    to their edge's group, so they quiet the same way. Through-traffic
+    drops to 0.14 when unlit, and "not yet" (`unborn`) stays fainter than
+    either.
+  - Edges run dot to dot, from the source's marker to the target's
+    marker. The first try kept the target end at the year of influence,
+    but a hover on Afrika Bambaataa showed his lines appearing to end at
+    Arthur Baker's dot, and Matt picked dot to dot from side-by-side
+    screenshots. What this costs: an edge's position no longer shows the
+    year the influence happened. That year is still on the edge (its
+    panel, "not yet" dimming, the ignition timing), just not in the
+    geometry. Steep edges fell from 174 to 85 of 200.

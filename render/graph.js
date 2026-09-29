@@ -203,8 +203,13 @@ function edgeAnchors(edge, layout) {
   const fromPos = layout.positions.get(edge.from.id);
   const toPos = layout.positions.get(edge.to.id);
   if (!fromPos || !toPos) return null;
-  const fromYear = clampYear(edge.year, edge.from.startYear, edge.from.endYear);
-  const toYear = clampYear(edge.year, edge.to.startYear, edge.to.endYear);
+  // Dot to dot: both ends sit on the records' own markers. Pinning both
+  // ends to the year of influence drew almost every edge as a vertical
+  // connector between lanes, and together they read as a wall. Putting
+  // only the target end at that year made lines seem to end at whichever
+  // neighbour sat there. The year stays on the edge's panel (A253).
+  const fromYear = edge.from.startYear;
+  const toYear = edge.to.startYear;
   return {
     x1: layout.timeScale.toX(fromYear),
     y1: fromPos.y,
@@ -244,6 +249,8 @@ export function createGraph(container, data, callbacks = {}) {
   // Carried across rebuilds by the caller, since a layer toggle recreates
   // the whole graph.
   let selectedId = initialSelectedId;
+  // The node under the pointer, whose edges light up like a selection's.
+  let hoveredNodeId = null;
 
   // Which record types draw, from the reader's layer toggles. Scenes render
   // as atmosphere and so never take a lane row even when on; labels and
@@ -684,6 +691,9 @@ export function createGraph(container, data, callbacks = {}) {
             (n, hovered) => {
               const current = nodeElements.get(n.id);
               if (current) setNodeHovered(current, hovered, vp.scale);
+              if (hovered) hoveredNodeId = n.id;
+              else if (hoveredNodeId === n.id) hoveredNodeId = null;
+              scheduleRender();
             },
           );
           nodesG.appendChild(created);
@@ -701,6 +711,12 @@ export function createGraph(container, data, callbacks = {}) {
     }
 
     placeLabels(level);
+
+    // Edges are quiet by default and lit only around what the reader is
+    // looking at: the selected edge, and every edge touching the selected
+    // or hovered node (A253). The quiet and lit looks live in index.html.
+    const litNodes = new Set([selectedId, hoveredNodeId].filter((id) => id && positionById.has(id)));
+    const isLit = (edge) => edge.id === selectedId || litNodes.has(edge.from.id) || litNodes.has(edge.to.id);
 
     let pastEdgeRange = false;
     for (const { edge, anchors, minX, maxX, minY, maxY } of boundEdges) {
@@ -734,11 +750,13 @@ export function createGraph(container, data, callbacks = {}) {
           created.classList.toggle('unborn', edge.year > year);
           created.classList.toggle('selected', edge.id === selectedId);
           created.classList.toggle('passing', passing);
+          created.classList.toggle('lit', isLit(edge));
         } else {
           updateEdgeElement(el, edge, anchors, vp.scale, gradientIdsFor(edge));
           el.classList.toggle('unborn', edge.year > year);
           el.classList.toggle('selected', edge.id === selectedId);
           el.classList.toggle('passing', passing);
+          el.classList.toggle('lit', isLit(edge));
         }
       } else if (el) {
         el.remove();
