@@ -6,7 +6,7 @@
 import { CONFIG } from '../config.js';
 import { computeLayout } from './layout.js';
 import { buildLanePlan } from './arrange.js';
-import { createViewportState, transformString, visibleContentRange, flyTo } from './viewport.js';
+import { createViewportState, transformString, visibleContentRange, screenToContent, flyTo } from './viewport.js';
 import { zoomLevelForScale } from './zoomLevels.js';
 import { attachPanZoomHandlers } from './interactions.js';
 import { svgEl, setAttrs } from './svg.js';
@@ -232,6 +232,11 @@ export function createGraph(container, data, callbacks = {}) {
     // legend. Only the fit uses it: once the reader pans, the legend is an
     // overlay like any other.
     leftInset = () => 0,
+    // Records the very first view frames, instead of fitting the whole
+    // map. Only the caller knows what makes a good way in, so it names
+    // them; an empty list, or none of them on the map, falls back to the
+    // fit.
+    openingFrameIds = [],
   } = callbacks;
 
   // The node or edge the reader is reading about, highlighted on the map.
@@ -409,6 +414,34 @@ export function createGraph(container, data, callbacks = {}) {
     vp.ty = pad + Math.max(0, (usableH - contentH * vp.scale) / 2);
   }
 
+  // The opening view: frames `ids` in the screen left over between the
+  // legend, the drawer and the transport bar, instantly rather than as a
+  // flight, since there is nowhere to fly from. Returns false when none of
+  // the records is on the map.
+  function frameOpening(ids, widthPx, heightPx) {
+    const wanted = new Set(ids);
+    const entries = positionedNodes.filter((e) => wanted.has(e.node.id));
+    if (entries.length === 0) return false;
+    const xs = entries.map((e) => e.pos.x1);
+    const ys = entries.map((e) => e.pos.y);
+    const { openingPaddingPx: pad, openingMaxScale } = CONFIG.welcome;
+    const left = leftInset();
+    const right = rightInset();
+    const usableW = Math.max(1, widthPx - left - right - pad * 2);
+    const usableH = Math.max(1, heightPx - CONFIG.viewport.fitBottomInsetPx - pad * 2);
+    const scale = Math.min(
+      openingMaxScale,
+      usableW / Math.max(1, Math.max(...xs) - Math.min(...xs)),
+      usableH / Math.max(1, Math.max(...ys) - Math.min(...ys)),
+    );
+    vp.scale = Math.min(CONFIG.zoom.max, Math.max(CONFIG.zoom.min, scale));
+    const midX = (Math.min(...xs) + Math.max(...xs)) / 2;
+    const midY = (Math.min(...ys) + Math.max(...ys)) / 2;
+    vp.tx = left + (widthPx - left - right) / 2 - midX * vp.scale;
+    vp.ty = (heightPx - CONFIG.viewport.fitBottomInsetPx) / 2 - midY * vp.scale;
+    return true;
+  }
+
   // Cached and only refreshed on resize. Calling getBoundingClientRect()
   // inside render() would force a synchronous layout reflow on every single
   // pan/zoom frame right after mutating the SVG transform (classic layout
@@ -524,6 +557,13 @@ export function createGraph(container, data, callbacks = {}) {
 
     const level = zoomLevelForScale(vp.scale);
     const range = visibleContentRange(vp, containerRect.width, containerRect.height);
+    // The screen itself, without the culling margin. An edge with neither
+    // end in here is only passing through the view, and is drawn faintly
+    // so the lines that touch what the reader is looking at stand out.
+    // Without this, long cross-lane edges read as a wall of verticals.
+    const onScreenMin = screenToContent(vp, 0, 0);
+    const onScreenMax = screenToContent(vp, containerRect.width, containerRect.height);
+    const onScreen = (x, y) => x >= onScreenMin.x && x <= onScreenMax.x && y >= onScreenMin.y && y <= onScreenMax.y;
 
     // Sorted by x1/minX ascending: once an item starts after the visible
     // range's right edge, every remaining item (all with an even later
@@ -595,6 +635,7 @@ export function createGraph(container, data, callbacks = {}) {
         continue;
       }
       const visible = maxX >= range.x1 && maxY >= range.y1 && minY <= range.y2;
+      const passing = !onScreen(anchors.x1, anchors.y1) && !onScreen(anchors.x2, anchors.y2);
       if (visible) {
         if (!el) {
           const midX = (anchors.x1 + anchors.x2) / 2;
@@ -612,10 +653,12 @@ export function createGraph(container, data, callbacks = {}) {
           updateEdgeElement(created, edge, anchors, vp.scale, gradientIdsFor(edge));
           created.classList.toggle('unborn', edge.year > year);
           created.classList.toggle('selected', edge.id === selectedId);
+          created.classList.toggle('passing', passing);
         } else {
           updateEdgeElement(el, edge, anchors, vp.scale, gradientIdsFor(edge));
           el.classList.toggle('unborn', edge.year > year);
           el.classList.toggle('selected', edge.id === selectedId);
+          el.classList.toggle('passing', passing);
         }
       } else if (el) {
         el.remove();
@@ -651,7 +694,9 @@ export function createGraph(container, data, callbacks = {}) {
 
   // A rebuild (a layer toggle) keeps the reader where they were rather than
   // yanking the camera back to the opening view.
-  if (!initialViewport) fitToContent(containerRect.width, containerRect.height);
+  if (!initialViewport && !frameOpening(openingFrameIds, containerRect.width, containerRect.height)) {
+    fitToContent(containerRect.width, containerRect.height);
+  }
   dust.start(vp);
   timedRender();
 

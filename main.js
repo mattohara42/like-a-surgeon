@@ -20,6 +20,7 @@ import { createLegend } from './reading/legend.js';
 import { createSearch } from './reading/search.js';
 import { applyTypeScale } from './reading/type.js';
 import { COPY } from './reading/copy.js';
+import { createWelcome, OPENING_FRAME_IDS } from './reading/welcome.js';
 import { h } from './reading/dom.js';
 
 const statusEl = document.getElementById('status');
@@ -30,6 +31,7 @@ const panelEl = document.getElementById('panel');
 const legendEl = document.getElementById('legend');
 const searchEl = document.getElementById('search');
 const arrangeEl = document.getElementById('arrange');
+const goalEl = document.getElementById('goal');
 
 // Which layer toggle has to be on for a node of this kind to be drawn.
 // Artists are always drawn, and scenes are framed through their members.
@@ -96,10 +98,16 @@ async function main() {
 
   const panelContext = () => ({ register, nodesById, neighbours, sceneMembers, goNode, goEdge });
 
+  const welcome = createWelcome(goalEl, {
+    nodesById,
+    openCard: () => panel.open({ kind: 'welcome', id: 'welcome' }),
+  });
+
   // The map holds only the skeleton of each record (render/loader.js). A
   // panel loads the full record, then draws it over the skeleton so the
   // resolved from/to nodes and normalized years stay as the map has them.
   function renderTarget(target) {
+    if (target.kind === 'welcome') return welcome.render({ ...panelContext(), close: () => panel.close() });
     if (target.kind === 'node') {
       const node = nodesById.get(target.id);
       return loadRecord(SHARD_FOR_KIND[node.kind], node.id).then((raw) =>
@@ -107,6 +115,7 @@ async function main() {
       );
     }
     const edge = edgesById.get(target.id);
+    welcome.noticeEdge(edge.id);
     return loadRecord('edges', edge.id).then((full) =>
       renderEdgePanel({ ...full, from: edge.from, to: edge.to }, panelContext()),
     );
@@ -148,6 +157,8 @@ async function main() {
   }
 
   function focusTarget(target) {
+    // Stepping back to the welcome card leaves the camera where it is.
+    if (target.kind === 'welcome') return;
     if (target.kind === 'edge') {
       const edge = edgesById.get(target.id);
       if (!edge) return;
@@ -188,7 +199,7 @@ async function main() {
   // every artist below them. Rebuilding the whole graph is the honest way
   // to do that, and at this size it is imperceptible. The reader's camera,
   // year and selection are carried across so it doesn't feel like a reload.
-  function build() {
+  function build({ opening = false } = {}) {
     const carried = graph
       ? { viewport: { ...graph.viewport }, year: graph.transport?.year() ?? null, selected: graph.selectedId() }
       : { viewport: null, year: null, selected: null };
@@ -204,6 +215,9 @@ async function main() {
       rightInset: () => panel.coveredWidth(),
       // The opening view starts clear of the legend (M3 step 5).
       leftInset: () => legendEl.offsetLeft + legendEl.offsetWidth,
+      // Only the first build frames the way in. A later rebuild without a
+      // camera (Arrange by) re-fits the whole map, as it always has.
+      openingFrameIds: opening ? OPENING_FRAME_IDS : [],
       // The graph has already flown the camera; the panel only opens.
       onSelectNode: (node) => panel.open({ kind: 'node', id: node.id }),
       onSelectEdge: (edge) => panel.open({ kind: 'edge', id: edge.id }),
@@ -245,6 +259,7 @@ async function main() {
     panel.redraw();
     legend.setRegister(register);
     search.setRegister(register);
+    welcome.setRegister(register);
   }
 
   createLayerToggles(layersEl, layers, applyLayers);
@@ -252,7 +267,14 @@ async function main() {
   createArrangeControl(arrangeEl, arrange, applyArrange);
   legend.setRegister(register);
   search.setRegister(register);
-  build();
+  welcome.setRegister(register);
+  // The card opens before the first build so the opening frame can leave
+  // room for the drawer it sits in.
+  if (welcome.shouldOpen()) {
+    panel.open({ kind: 'welcome', id: 'welcome' });
+    welcome.markSeen();
+  }
+  build({ opening: true });
 }
 
 main();
