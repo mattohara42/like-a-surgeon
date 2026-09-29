@@ -94,10 +94,8 @@ test('every lane has a level control, and knobs follow the lane map', () => {
   assert.deepStrictEqual(controlTargets('tb-303'), ['cutoff', 'resonance', 'envMod', 'decay', 'accent']);
 });
 
-test('the 808 kick decay knob becomes milliseconds (A270)', () => {
-  const L = CONFIG.audio.dsp.DRUM808.LANES.bd;
-  assert.strictEqual(drumKnobValue('tr-808', 'bd', 'decay', 0), L.decayMinMs);
-  assert.strictEqual(drumKnobValue('tr-808', 'bd', 'decay', 1), L.decayMaxMs);
+test('drum knobs reach the worklets as 0..1 (A276)', () => {
+  assert.strictEqual(drumKnobValue('tr-808', 'bd', 'decay', 0.3), 0.3);
   assert.strictEqual(drumKnobValue('tr-808', 'oh', 'decay', 0.3), 0.3);
   assert.strictEqual(drumKnobValue('tr-909', 'bd', 'decay', 0.3), 0.3);
 });

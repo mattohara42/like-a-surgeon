@@ -31,15 +31,12 @@ export function controlTargets(machineId) {
   return Object.entries(inst.lanes).flatMap(([lane, knobs]) => ['level', ...knobs].map((k) => `${lane}.${k}`));
 }
 
-// A drum knob in 0..1 -> the value drum808/drum909 read for it. Most take
-// 0..1 as they are. The 808 kick's decay is read as milliseconds, which
-// SQUELCH's own panel does not convert (its kick decay knob gives a 2 ms
-// click: A270), so it is converted here.
+// A drum knob in 0..1 -> the value drum808/drum909 read for it. Every
+// drum knob is read as 0..1 by the worklets themselves (SQUELCH #8 fixed
+// the one that was not, the 808 kick's decay: A276), so this passes the
+// value through. It stays as the one place to convert, should a machine
+// ever need it.
 export function drumKnobValue(machineId, lane, knob, value) {
-  if (machineId === 'tr-808' && lane === 'bd' && knob === 'decay') {
-    const L = DSP.DRUM808.LANES.bd;
-    return L.decayMinMs + value * (L.decayMaxMs - L.decayMinMs);
-  }
   return value;
 }
 
