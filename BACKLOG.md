@@ -669,3 +669,12 @@ fixing them inline.)
   settlement are a strong story for The Verve, but as a publishing claim
   rather than a label decision. It probably wants a `sample` edge from
   the Andrew Oldham Orchestra if that record ever becomes a node.
+
+- `tools/validate.js` checks that every id in a scene's `memberIds` array
+  resolves to a real artist, but never checks the reverse: that a matching
+  scene-to-artist edge actually exists. Autechre sat in `sheffield-idm`'s
+  `memberIds` for several batches with no `e-sheffieldidm-*` edge, while
+  Aphex Twin, listed right next to it, had one (fixed this batch, A248).
+  A `memberIds` entry with no corresponding edge is exactly the kind of
+  silent, structural gap the validator exists to catch, and right now it
+  can only be found by hand.

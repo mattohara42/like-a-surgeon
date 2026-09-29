@@ -2488,3 +2488,27 @@ small and worth having in front of Matt alongside everything else here.
   available this session; these facts come from general knowledge of
   well-documented rock and comedy-music history.
   `node tools/validate.js` warnings: 44 to 43.
+
+- **A248. Autechre gets the Sheffield IDM scene edge Aphex Twin already had.**
+  `e-sheffieldidm-autechre` mirrors `e-sheffieldidm-aphextwin` exactly:
+  both artists appear in `sheffield-idm.memberIds` and both blurbs
+  already state the 1992 Warp "Artificial Intelligence" story, but only
+  Aphex Twin had the corresponding scene-to-artist edge. This batch was
+  requested as edge-focused ("connect nodes"), and a systematic scan for
+  under-connected existing artists (Wendy Carlos, Tangerine Dream, Billy
+  Cobham, Bootsy Collins, George Clinton, Curtis Mayfield, Delia
+  Derbyshire among them) turned up mostly edges already covered or too
+  thin to tier honestly. Wendy Carlos to Tangerine Dream was the leading
+  candidate going in, but was dropped: her blurb's claim that Switched-On
+  Bach "sent a generation of musicians looking for Moogs" is a real,
+  well-documented claim about the market for Moog synthesizers generally,
+  not a sourced claim about Tangerine Dream specifically, and asserting
+  a direct link between the two would have been constructing a causal
+  connection rather than reporting one, which CLAUDE.md's accuracy rules
+  do not allow even at `asserted` tier. Delia Derbyshire to the Paris
+  musique concrète scene was also considered and dropped as redundant:
+  that lineage is already carried by `e-musiqueconcrete-oram`, and a
+  second near-identical scene edge for Derbyshire would have padded the
+  graph rather than added a genuine gap-fill. As with recent batches, no
+  live source-verification tool was available this session.
+  `node tools/validate.js`: 43 warnings, unchanged.
