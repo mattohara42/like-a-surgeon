@@ -2844,3 +2844,20 @@ small and worth having in front of Matt alongside everything else here.
   filled only from a solid source. None was found this session. See the
   BACKLOG entry for the three candidate years (late 1920s, about 1932,
   1934) and why none can be used yet.
+
+- **A266. TR-707 batch: one machine, two consensus edges, three skips.**
+  Matt picked "the waiting machines" as the next data batch. What landed:
+  - `tr-707` (1985, Roland's first all-sampled drum machine). Its end
+    year and launch price are unsourced, so `endUnknown` is set and the
+    price story says the figures are not stated.
+  - `e-707-phuture` ('Acid Tracks') and `e-707-jefferson` ('Move Your
+    Body'), both `consensus`. The sources are Roland's own articles and
+    the TR-707's Wikipedia entry, each relaying interviews we could not
+    read first-hand. Neither is upgraded to `documented` on that basis.
+
+  What did not land, with the reason logged in BACKLOG "Deferred data":
+  the 707 on Larry Heard's 'Washing Machine' (conflicts with the
+  documented 909 edge and with the 707's release year), the LM-1 or
+  LinnDrum on *Thriller* (disputed, and the "Billie Jean" drums are
+  credited to a live drummer), and the TR-606 (no source better than
+  forum posts).

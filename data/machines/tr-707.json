@@ -1,0 +1,20 @@
+{
+  "id": "tr-707",
+  "name": "Roland TR-707",
+  "type": "machine",
+  "kind": "drum-machine",
+  "lineage": "electronic",
+  "maker": "Roland",
+  "releasedYear": 1985,
+  "discontinuedYear": null,
+  "endUnknown": true,
+  "originalPurpose": "The drum machine that came after the 909. Roland's first to use only digital recordings of drums for every sound, sold to bands and songwriters who wanted a realistic kit in a small box.",
+  "whatActuallyHappened": "Its sounds were crisp and a little thin, and it had none of the knobs that let you reshape the 808 and 909 voices. In Chicago that did not matter. It was one of the machines early house producers actually owned, and its drums sit under 'Move Your Body' and, beside a TB-303, under 'Acid Tracks'.",
+  "priceStory": "No launch price or production figures are sourced here, so this record does not state them.",
+  "hook": "Roland's first all-sampled drum machine, and one of the boxes early Chicago house was actually made on.",
+  "blurb": {
+    "age7": "A small drum machine from 1985. Some of the first house music songs used its drums.",
+    "age13": "The 707 came out in 1985, after the 909. Every drum sound in it was a short digital recording of a real drum, which was new for Roland. It was not built for dance music, but in Chicago it was one of the machines people could get hold of. Marshall Jefferson used it on 'Move Your Body', and Phuture used it next to their TB-303 on 'Acid Tracks'.",
+    "adult": "The 707 matters less as a design than as an inventory item: it is what was in the room. Early Chicago house is often told as a story about the 808, 909 and 303, but the machines producers actually owned in 1985 to 1987 were a mixed set, and the 707 was among them. Both of its edges here are consensus rather than documented, because the sources are gear histories and secondhand accounts of interviews. When Roland stopped making it is not sourced here, so the map shows its end as unknown."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "e-707-phuture",
+  "from": "tr-707",
+  "to": "phuture",
+  "type": "technological",
+  "confidence": "consensus",
+  "year": 1987,
+  "crossLineage": false,
+  "evidence": "Articles Roland has published on acid house, citing DJ Pierre's interviews, name a TR-707 as the drum machine beside the TB-303 on 'Acid Tracks'. We could not read DJ Pierre's own words directly, so this stays consensus.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Roland",
+      "title": "TR-707",
+      "year": 1985,
+      "search": false
+    },
+    "later": {
+      "artist": "Phuture",
+      "title": "Acid Tracks",
+      "year": 1987
+    },
+    "whatToListenFor": "Ignore the squelch for a minute and listen underneath it. The drums are plain and steady: a kick on every beat, claps, and a hi-hat that never changes. That flat, clean grid is what lets the 303 line move so much without the record falling apart."
+  },
+  "explanation": {
+    "age7": "The drums on the first acid house record came from a small Roland drum machine.",
+    "age13": "Everyone remembers the 303 on 'Acid Tracks', but a record needs drums too. Those came from a Roland TR-707, a plainer and less famous machine than the famous 808 and 909.",
+    "adult": "Acid house's origin story is usually told as one machine, the 303. The drums under it were a 707, a less celebrated box, which is a reminder that the genre was built from whatever Roland gear was to hand rather than from a chosen kit."
+  },
+  "tags": [
+    "technology"
+  ]
+}
