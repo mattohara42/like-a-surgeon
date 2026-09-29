@@ -2920,3 +2920,38 @@ small and worth having in front of Matt alongside everything else here.
     mute button with nothing to hear would puzzle a first-time reader.
   - `tools/bundle.js` now understands `export class` (the scheduler
     uses one) and writes `dist/worklets.js`.
+
+- **A270. M4 step 3: the demo format, and what the three demos became.**
+  - **Format.** Every control value in a demo file is 0..1. The player
+    converts it to the machine's own unit (`audio/instruments.js`), so a
+    demo author never needs to know that the 303's cutoff is in Hz.
+    Patterns are one character per step for drums and one MIDI note per
+    step for the 303, parsed by `audio/pattern.js`. The validator and
+    the players share that parser, so a pattern that validates is a
+    pattern that plays. Machines are named by their record id
+    (`tr-808`), the same name the map uses.
+  - **SQUELCH bug worked around.** SQUELCH's 808 worklet reads the kick's
+    `decay` as milliseconds, but SQUELCH's own panel sends it as 0..1.
+    Measured: no decay gives a kick of about 1070 ms, and decay 0.5
+    gives 2 ms, a click. The Lineage port converts the knob to
+    milliseconds before sending it and leaves the DSP alone. The fix
+    belongs in SQUELCH itself (BACKLOG "Observed problems").
+  - **808 demo.** Pads for kick, snare, clap, cowbell and closed hat,
+    plus kick decay and tone controls, over an original electro-style
+    beat. The M1 file had controls for "kick tuning". The 808's bass
+    drum has tone and decay controls and no tuning control (the 909's
+    has one), so the controls and the teen and adult captions now say
+    decay. The age13 caption's "most of hip-hop's low end" became "a
+    lot of", which is easier to defend. This contradicts the word
+    "tuned" in `machines/tr-808.json` (Q31).
+  - **303 demo.** Five controls (cutoff, resonance capped at 0.9,
+    envelope amount, decay, accent) over an original sixteen-step line
+    with two slides and three accents. The adult caption said
+    "diode-ladder-style filter". SQUELCH models a four-pole ladder, so
+    the caption now says that.
+  - **Planet Rock demo is a draft.** Matt chose to play the shared
+    melody (Q26), but I cannot write that melody note for note from a
+    source. Writing it from memory would be inventing data, so the demo
+    is `"status": "draft"` with a `pending` reason until a sourced
+    transcription exists (Q30). Its M1 tempos (124 and 130 bpm) are
+    also unverified.
