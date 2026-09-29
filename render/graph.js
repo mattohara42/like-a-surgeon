@@ -509,13 +509,15 @@ export function createGraph(container, data, callbacks = {}) {
   // the caller what got selected. Runs against the render() driven directly
   // by the animation's own rAF loop (not the debounced scheduleRender)
   // since flyTo already paces itself frame by frame.
-  function selectAndFlyTo(item, contentX, contentY, onSelect) {
+  // `scaleFor` runs after onSelect, so a scale that depends on the drawer's
+  // width sees the drawer already open.
+  function selectAndFlyTo(item, contentX, contentY, onSelect, scaleFor = () => CONFIG.zoom.flyToScale) {
     // Clicking something the cursor has not reached yet moves the cursor
     // to it. Flying to a node and leaving it dimmed would be absurd.
     transport?.ensureVisible(item.startYear ?? item.year);
     selectedId = item.id;
     onSelect(item);
-    flyToContent(contentX, contentY, CONFIG.zoom.flyToScale);
+    flyToContent(contentX, contentY, scaleFor());
     if (positionById.has(item.id)) ripple(item.id);
   }
 
@@ -533,13 +535,28 @@ export function createGraph(container, data, callbacks = {}) {
     return true;
   }
 
+  // How far to zoom so both ends of an edge are on screen. Flying to the
+  // midpoint at the usual close-up scale left a long cross-lane edge with
+  // both ends off screen and nothing but empty lanes in view. A short edge
+  // still gets the close-up, since this only ever zooms out from it.
+  function edgeFrameScale({ x1, y1, x2, y2 }) {
+    const pad = CONFIG.panel.sceneFramePaddingPx;
+    const usableW = Math.max(1, viewWidth() - pad * 2);
+    const usableH = Math.max(1, containerRect.height - pad * 2 - CONFIG.viewport.fitBottomInsetPx);
+    return Math.min(
+      CONFIG.zoom.flyToScale,
+      usableW / Math.max(1, Math.abs(x2 - x1)),
+      usableH / Math.max(1, Math.abs(y2 - y1)),
+    );
+  }
+
   function focusEdge(id) {
     const entry = boundEdges.find((e) => e.edge.id === id);
     if (!entry) return false;
     transport?.ensureVisible(entry.edge.year);
     selectedId = id;
     const { x1, y1, x2, y2 } = entry.anchors;
-    flyToContent((x1 + x2) / 2, (y1 + y2) / 2, CONFIG.zoom.flyToScale);
+    flyToContent((x1 + x2) / 2, (y1 + y2) / 2, edgeFrameScale(entry.anchors));
     return true;
   }
 
@@ -705,7 +722,7 @@ export function createGraph(container, data, callbacks = {}) {
           const midY = (anchors.y1 + anchors.y2) / 2;
           const created = createEdgeElement(
             edge,
-            (e) => selectAndFlyTo(e, midX, midY, onSelectEdge),
+            (e) => selectAndFlyTo(e, midX, midY, onSelectEdge, () => edgeFrameScale(anchors)),
             (e, hovered) => {
               const current = edgeElements.get(e.id);
               if (current) setEdgeHovered(current, e, hovered);
