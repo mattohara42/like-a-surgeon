@@ -1,0 +1,32 @@
+{
+  "id": "e-sherwood-africanheadcharge",
+  "from": "adrian-sherwood",
+  "to": "african-head-charge",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Adrian Sherwood is credited as producer on African Head Charge's debut album 'My Life in a Hole in the Ground' (1981), On-U Sound's first release, and on the group's subsequent records.",
+  "year": 1981,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "African Head Charge",
+      "title": "My Life in a Hole in the Ground",
+      "year": 1981,
+      "search": false
+    },
+    "later": {
+      "artist": "African Head Charge",
+      "title": "Off the Beaten Track",
+      "year": 1986
+    },
+    "whatToListenFor": "Both records layer African and Caribbean percussion under heavy dub echo and dropout, Sherwood's signature technique. The later record is denser and more processed, five years of the same partnership deepening."
+  },
+  "explanation": {
+    "age7": "Adrian Sherwood produced African Head Charge's drumming-and-echo music from their very first record.",
+    "age13": "Sherwood produced African Head Charge's debut album, On-U Sound's first release, layering dub production techniques under Bonjo Iyabinghi Noah's percussion.",
+    "adult": "A founding production relationship: African Head Charge's debut is also On-U Sound's debut, so this edge documents the label's first working method in miniature."
+  },
+  "tags": [
+    "production"
+  ]
+}

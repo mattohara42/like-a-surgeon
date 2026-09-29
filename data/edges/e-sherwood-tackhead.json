@@ -1,0 +1,34 @@
+{
+  "id": "e-sherwood-tackhead",
+  "from": "adrian-sherwood",
+  "to": "tackhead",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Adrian Sherwood is credited as producer on Tackhead's On-U Sound releases, and the group's formation from Sugar Hill Records' former house rhythm section (Skip McDonald, Doug Wimbish, Keith LeBlanc) under Sherwood's production is documented in standard accounts of both labels.",
+  "year": 1988,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Sugarhill Gang and the Sugar Hill house band",
+      "title": "The Message",
+      "year": 1982,
+      "search": false
+    },
+    "later": {
+      "artist": "Tackhead",
+      "title": "Rebel Discharge Vs Tricky Kid",
+      "year": 1988,
+      "search": false
+    },
+    "whatToListenFor": "The same rhythm section: McDonald, Wimbish, and LeBlanc played on Sugar Hill's most famous records. Six years later, under Sherwood's production, the same muscle drives a much darker, dub-industrial sound with none of the earlier records' pop polish."
+  },
+  "explanation": {
+    "age7": "The musicians who played on Sugar Hill Records' early songs later worked with Adrian Sherwood to make darker, stranger music as Tackhead.",
+    "age13": "Tackhead's rhythm section, Skip McDonald, Doug Wimbish, and Keith LeBlanc, had been Sugar Hill Records' in-house band before reforming in London under Adrian Sherwood's production.",
+    "adult": "This edge connects two labels already on this map through the same three musicians: Sugar Hill's studio muscle finding a second life as On-U Sound's dub-industrial engine once the earlier label's finances collapsed."
+  },
+  "tags": [
+    "production",
+    "labels"
+  ]
+}

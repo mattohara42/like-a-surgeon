@@ -322,6 +322,16 @@ fixing them inline.)
   Pete Holdsworth) but not authored as a label record in batch 1; his
   `labels` field is left empty rather than reference an unauthored label.
   Cheap to add in a later pass.
+  **Closed.** `on-u-sound.json` authored and referenced from
+  `adrian-sherwood.json`'s `labels[]`. No edge touches it directly, per
+  A69's founder-relationships-stay-out-of-the-graph convention (same
+  situation as Kling Klang), so it shows as an orphan warning, expected
+  rather than a gap. Also added African Head Charge and Tackhead, both
+  already named in Sherwood's own `signatureTracks`, each with a real
+  production edge from Sherwood. Tackhead's edge doubles as a documented
+  connection between two labels already on the map: its rhythm section
+  (McDonald, Wimbish, LeBlanc) were Sugar Hill's house band before
+  reforming on On-U Sound.
 - Data batch 2 (UK rock spine: Swinging London through punk, post-punk, and
   into Britpop) authored `swinging-london`, `uk-punk-77`, and `uk-post-punk`
   plus the four originally-dangling labels (`pye`, `brunswick`, `cbs-uk`,

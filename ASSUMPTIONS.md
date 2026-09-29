@@ -2406,3 +2406,22 @@ small and worth having in front of Matt alongside everything else here.
   facts (Chandler's 1996 death, Hannett's 1991 death, Quincy Jones' 2024
   death) come from general knowledge of well-documented music history.
   `node tools/validate.js` warnings: 48 to 43.
+
+- **A243. On-U Sound authored, plus African Head Charge and Tackhead.**
+  Closes a BACKLOG wait: `on-u-sound.json` (founded 1979, Adrian Sherwood
+  and Pete Holdsworth) is referenced from `adrian-sherwood.json`'s
+  `labels[]`. No edge runs to it directly, matching A69's convention that
+  founder relationships stay out of the graph (the same situation as
+  Kling Klang), so it reads as an orphan-node warning by design, not an
+  oversight. Also authored African Head Charge and Tackhead, both
+  already named in Sherwood's own `signatureTracks` as plain track
+  titles, each with a real production edge from Sherwood
+  (`e-sherwood-africanheadcharge`, `e-sherwood-tackhead`). Tackhead's
+  edge is a deliberate two-label connection: its rhythm section (Skip
+  McDonald, Doug Wimbish, Keith LeBlanc) were Sugar Hill Records' house
+  band before reforming on On-U Sound once Sugar Hill's finances
+  collapsed, so the trackPair spans both labels' records. As with the
+  last three batches, no live source-verification tool was available
+  this session; these facts come from general knowledge of dub and
+  post-punk history. `node tools/validate.js` warnings: 43 to 44 (the
+  one new on-u-sound orphan warning, expected).
