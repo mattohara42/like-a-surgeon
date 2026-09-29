@@ -2425,3 +2425,20 @@ small and worth having in front of Matt alongside everything else here.
   this session; these facts come from general knowledge of dub and
   post-punk history. `node tools/validate.js` warnings: 43 to 44 (the
   one new on-u-sound orphan warning, expected).
+
+- **A244. Nirvana joins the map, a third anchor for the Weird Al thread
+  idea.** `e-weirdal-nirvana` ('Smells Like Nirvana' parodying 'Smells
+  Like Teen Spirit') follows the established Weird Al edge pattern
+  (direction runs original-artist-to-Yankovic, type `cover`), and is
+  `crossLineage: true` since Yankovic is filed `other` against Nirvana's
+  `rock`. Also added `e-bowie-nirvana` for their 1993 MTV Unplugged
+  cover of "The Man Who Sold the World", so Nirvana connects to the map
+  through a real non-parody edge as well as the novelty one. Left
+  `scenes: []`: no Seattle/grunge scene is authored yet, and one artist
+  is not enough to justify writing one. As with recent batches, no live
+  source-verification tool was available this session; the Cobain/Bowie
+  cover and the Cobain/Yankovic permission story are both widely
+  repeated in music history writing. `node tools/validate.js` stayed at
+  0 errors, 44 warnings throughout (caught and fixed a real error along
+  the way: `e-weirdal-nirvana` was first written `crossLineage: false`,
+  which the validator correctly rejected given the lineage mismatch).

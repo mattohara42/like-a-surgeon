@@ -1,0 +1,31 @@
+{
+  "id": "e-weirdal-nirvana",
+  "from": "nirvana",
+  "to": "weird-al-yankovic",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "'Smells Like Nirvana' (1992, from 'Off the Deep End') parodies 'Smells Like Teen Spirit' (1991); Yankovic has described calling Cobain for permission and Cobain's only request being that the video not take itself too seriously, a request Yankovic more than met.",
+  "year": 1992,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Nirvana",
+      "title": "Smells Like Teen Spirit",
+      "year": 1991
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "Smells Like Nirvana",
+      "year": 1992
+    },
+    "whatToListenFor": "Yankovic's band rebuilds the loud-verse dynamics and Cobain's famously mumbled, hard-to-parse lyrics closely enough that the joke, new words about not being able to understand the original's words, lands on first listen."
+  },
+  "explanation": {
+    "age7": "Weird Al made a funny version of Nirvana's most famous song, joking that nobody could understand the real words either.",
+    "age13": "'Smells Like Nirvana' pokes fun at how mumbled and hard to make out Cobain's actual lyrics were, over a close re-creation of the song's music. Cobain approved it and reportedly only asked that the video not be too serious.",
+    "adult": "Consistent with Yankovic's permission-first method elsewhere on this map: the target artist's approval, and often active involvement in shaping the joke, is part of nearly every parody's own story."
+  },
+  "tags": [
+    "production"
+  ]
+}
