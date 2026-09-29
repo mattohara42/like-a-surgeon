@@ -6,7 +6,7 @@
 import { CONFIG } from '../config.js';
 import { computeLayout } from './layout.js';
 import { buildLanePlan } from './arrange.js';
-import { createViewportState, transformString, visibleContentRange, screenToContent, flyTo } from './viewport.js';
+import { createViewportState, transformString, visibleContentRange, screenToContent, flyTo, pullBackIntoView } from './viewport.js';
 import { zoomLevelForScale } from './zoomLevels.js';
 import { attachPanZoomHandlers } from './interactions.js';
 import { svgEl, setAttrs } from './svg.js';
@@ -819,7 +819,17 @@ export function createGraph(container, data, callbacks = {}) {
     });
   }
 
-  attachPanZoomHandlers(root, vp, scheduleRender);
+  // The content itself, not the faded field around it: the part a reader
+  // would call "the map".
+  const contentBounds = {
+    x0: layout.timeScale.toX(layout.minYear),
+    x1: layout.timeScale.toX(layout.maxYear),
+    y0: 0,
+    y1: layout.substrate ? layout.substrate.horizonY + layout.substrate.depth : layout.totalHeight,
+  };
+  attachPanZoomHandlers(root, vp, scheduleRender, () =>
+    pullBackIntoView(vp, contentBounds, viewWidth(), containerRect.height, timedRender),
+  );
   const resizeObserver = new ResizeObserver(() => {
     containerRect = container.getBoundingClientRect();
     dust.resize();

@@ -166,6 +166,9 @@ export const CONFIG = {
     // close enough to read a name invites the first click.
     fitPaddingPx: 70,
     fitBottomInsetPx: 104,   // the transport bar
+    // When a pan or zoom leaves less than keepVisiblePx of the map on
+    // screen, the camera eases back that far after settleDelayMs.
+    pullBack: { keepVisiblePx: 160, settleDelayMs: 220, durationMs: 520 },
     fitMaxScale: 1.1,
     // The opening view never fits so far out that it lands in the
     // `collapsed` zoom level, where names are hidden. Reserving room for the

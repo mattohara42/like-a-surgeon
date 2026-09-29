@@ -16,7 +16,15 @@ const KEY_PAN_PX = 60;
 // once a real drag is confirmed, never for a plain click.
 const DRAG_THRESHOLD_PX = 4;
 
-export function attachPanZoomHandlers(svgEl, vp, onChange) {
+// `onSettle` runs once a gesture has finished: when a drag ends, and a
+// short moment after the last wheel or key event. The graph uses it to
+// pull a map that has left the screen back into view.
+export function attachPanZoomHandlers(svgEl, vp, onChange, onSettle = () => {}) {
+  let settleTimer = null;
+  const settleSoon = () => {
+    clearTimeout(settleTimer);
+    settleTimer = setTimeout(onSettle, CONFIG.viewport.pullBack.settleDelayMs);
+  };
   let tracking = false;
   let dragging = false;
   let pointerId = null;
@@ -35,6 +43,7 @@ export function attachPanZoomHandlers(svgEl, vp, onChange) {
       const factor = Math.exp(-e.deltaY * CONFIG.zoom.wheelSensitivity);
       zoomAt(vp, sx, sy, factor);
       onChange();
+      settleSoon();
     },
     { passive: false },
   );
@@ -72,6 +81,7 @@ export function attachPanZoomHandlers(svgEl, vp, onChange) {
   });
 
   const stopDragging = (e) => {
+    if (dragging) settleSoon();
     if (dragging && svgEl.hasPointerCapture(e.pointerId)) svgEl.releasePointerCapture(e.pointerId);
     tracking = false;
     dragging = false;
@@ -110,5 +120,6 @@ export function attachPanZoomHandlers(svgEl, vp, onChange) {
     }
     e.preventDefault();
     onChange();
+    settleSoon();
   });
 }
