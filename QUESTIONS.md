@@ -4,6 +4,17 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
+- **Q32. Signature tracks for DJs who didn't make records.** The schema
+  asks every artist for 2 to 3 signature tracks, and the validator warns
+  below that. Kool Herc, Coke La Rock, Grand Wizzard Theodore and Ron
+  Hardy have none or one, because their importance is in what they
+  played, not what they released. Options: (a) **Recommended.** Allow
+  fewer when the record says why, with a short `signatureTracksNote`
+  field ("Known for his sets, not his records"), which the panel shows
+  in place of the list and the validator accepts. (b) Keep the rule and
+  list records they are known for playing (the Herc break records),
+  marked as played rather than made. (c) Leave the warnings.
+
 - **Q30. A source for the Planet Rock melody.** The A/B demo is to play
   the melody 'Planet Rock' shares with 'Trans-Europe Express' (Q26). I
   cannot write it note for note from a source, so the demo is a draft

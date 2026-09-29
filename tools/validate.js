@@ -173,6 +173,15 @@ function resolveNode(id) {
   return shard ? records[shard].get(id) : undefined;
 }
 
+// keyProducers and songsAboutLabel[].artist take an artist id or a plain
+// name (SCHEMA.md). A plain name ("Hank Shocklee") is valid data and draws
+// as text, so only an id-shaped value (lowercase words joined by hyphens)
+// that resolves to nothing is worth a warning: that is a typo, or a record
+// not yet written.
+function looksLikeId(value) {
+  return typeof value === 'string' && /^[a-z0-9]+(-[a-z0-9]+)*$/.test(value);
+}
+
 function checkRegisterObject(where, fieldName, value) {
   if (value == null || typeof value !== 'object') {
     fail(`${where}: ${fieldName} must be a register object`);
@@ -261,8 +270,8 @@ for (const [id, artist] of records.artists) {
     }
   }
   for (const producer of artist.keyProducers || []) {
-    if (!records.artists.has(producer)) {
-      warn(`${where}: keyProducers entry "${producer}" does not resolve to an artist id (may be a plain name)`);
+    if (looksLikeId(producer) && !records.artists.has(producer)) {
+      warn(`${where}: keyProducers entry "${producer}" looks like an artist id but none exists (a typo, or a record not yet written)`);
     }
   }
   // Entry shapes. A malformed entry otherwise surfaces only indirectly
@@ -299,8 +308,8 @@ for (const [id, artist] of records.artists) {
 for (const [id, label] of records.labels) {
   const where = `labels/${id}.json`;
   for (const song of label.songsAboutLabel || []) {
-    if (!records.artists.has(song.artist)) {
-      warn(`${where}: songsAboutLabel entry "${song.title}" artist "${song.artist}" does not resolve to an artist id (may be a plain name)`);
+    if (looksLikeId(song.artist) && !records.artists.has(song.artist)) {
+      warn(`${where}: songsAboutLabel entry "${song.title}" artist "${song.artist}" looks like an artist id but none exists (a typo, or a record not yet written)`);
     }
   }
 }

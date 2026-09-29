@@ -3020,3 +3020,22 @@ small and worth having in front of Matt alongside everything else here.
     visual emphasis, so a demo edge now rests at 65%, between a quiet
     edge and a lit one. The mark's size (18 px) is a first guess worth a
     look.
+
+- **A274. Backlog cleanup: validator warnings from 44 to 16.**
+  - **Plain producer names stop warning (27).** SCHEMA.md allows
+    `keyProducers` and `songsAboutLabel[].artist` to be an artist id or a
+    plain name, but the validator warned on every plain name, so the
+    list was mostly valid data. It now warns only when a value looks
+    like an id (lowercase words joined by hyphens) and resolves to
+    nothing, which is a typo or a missing record. Checked: changing
+    `dr-dre` to `dr-drre` in `nwa.json` still warns.
+  - **On-U Sound is no longer an orphan (1).** New label edge
+    `e-onu-africanheadcharge` (documented, 1981): the band's records came
+    out on Sherwood's label, per Wikipedia's On-U Sound entry and the
+    band's own `labels` field. Its text restates what the two records
+    already say.
+  - **Left alone:** Brunswick's null founding year (A265). The fifteen
+    signature-track shortfalls are left for a sourced data batch, and
+    four of them (Kool Herc, Coke La Rock, Grand Wizzard Theodore, Ron
+    Hardy) are DJs known for playing records rather than making them
+    (Q32).
