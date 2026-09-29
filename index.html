@@ -36,6 +36,12 @@
   .node { cursor: pointer; }
   .node-name, .node-hook { pointer-events: none; user-select: none; }
   .edge { cursor: pointer; }
+  /* A playable demo on this edge (render/edges.js). Haloed like the lane
+     titles (A257) so it reads over any line or dot behind it. */
+  .edge-demo-mark {
+    font-family: var(--ui); font-weight: 700; user-select: none;
+    paint-order: stroke; stroke: rgba(4, 6, 13, 0.9); stroke-linejoin: round;
+  }
   .band-label {
     pointer-events: none; user-select: none; letter-spacing: 0.18em;
     paint-order: stroke; stroke: rgba(4, 6, 13, 0.85); stroke-linejoin: round;
@@ -61,6 +67,9 @@
   .edge.passing:not(.lit):not(.unborn):not(:hover) { opacity: 0.14; }
   /* Golden edges (A263) stay findable while quiet, and shimmer. */
   .edge.golden:not(.lit):not(.unborn):not(:hover) { opacity: 0.75; }
+  /* SPEC: edges with a demo get visual emphasis. Brighter at rest than a
+     quiet edge, not as bright as a lit one, so its mark can be found. */
+  .edge.has-demo:not(.lit):not(.unborn):not(:hover) { opacity: 0.65; }
   .edge-gold { pointer-events: none; animation: gold-shimmer 3.2s ease-in-out infinite; }
   @keyframes gold-shimmer {
     0%, 100% { stroke-opacity: 0.18; }

@@ -392,6 +392,7 @@ export function createGraph(container, data, callbacks = {}) {
   function pulseEdge({ edge, anchors }, delayMs, durationMs) {
     sparks.pulse(curvePath(anchors, edge.id), approxCurveLength(anchors, edge.id), colorFor(edge.to.lineage), vp.scale, delayMs, durationMs);
   }
+  const boundById = new Map(boundEdges.map((entry) => [entry.edge.id, entry]));
 
   // Light running out from a node through what it changed, hop by hop:
   // its own edges first, then theirs. Only through edges the year cursor
@@ -883,6 +884,13 @@ export function createGraph(container, data, callbacks = {}) {
     arrange,
     yearBounds: () => ({ min: layout.minYear, max: layout.maxYear }),
     selectedId: () => selectedId,
+    // A demo keeping time on the map (docs/m4-architecture.md section 6):
+    // one pulse along the edge, cause to effect. sparks.js already skips it
+    // under reduced motion and caps how many run at once.
+    pulseEdge(id) {
+      const entry = boundById.get(id);
+      if (entry) pulseEdge(entry, 0, CONFIG.sparks.demoPulseMs);
+    },
     // Follow the producer: keep `id` selected, ring every node in `ids`,
     // and frame them all together.
     showTouched(id, ids) {

@@ -126,6 +126,10 @@ async function main() {
     producedBy,
     audio,
     demos: data.demos,
+    // Once a bar, every edge that carries the playing demo pulses.
+    onDemoBar: (demoId) => {
+      for (const edge of data.edges) if (edge.demoId === demoId) graph?.pulseEdge(edge.id);
+    },
     showProduced: (id) => graph.showTouched(id, producedBy(id)),
   });
 

@@ -83,6 +83,9 @@ export const CONFIG = {
   },
 
   edge: {
+    // The mark on an edge that has a playable demo (render/edges.js).
+    // `at` is how far along the curve it sits, cause (0) to effect (1).
+    demoMark: { glyph: '♪', at: 0.5, fontPx: 18, haloPx: 3.5 },
     // The three confidence tiers must be told apart at a glance, because
     // telling "someone said so" from "critics agree" from "our reading" is
     // part of what the map teaches (SPEC.md). Width alone did not do it:
@@ -339,6 +342,10 @@ export const CONFIG = {
     hotColor: '#fffaf0',
     flare: { ringRadiusPx: 72, bloomRadiusPx: 64, coreRadiusPx: 9, ringWidthPx: 2, durationMs: 1500 },
     pulse: { lengthPx: 56, widthPx: 2.4, glowWidthFactor: 4, glowOpacity: 0.45, durationMs: 900 },
+    // A playing demo pulses its edges once a bar. Shorter than a bar at
+    // any demo tempo (a bar at the 200 bpm maximum is 1200 ms), so pulses
+    // never pile up.
+    demoPulseMs: 700,
     ripple: {
       // Hops downstream from the selected node, the time each hop takes,
       // and the most edges one ripple lights.
