@@ -1,0 +1,32 @@
+{
+  "id": "e-derringer-weirdal",
+  "from": "rick-derringer",
+  "to": "weird-al-yankovic",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Rick Derringer is credited as producer on Yankovic's albums from his self-titled 1983 debut through 'Off the Deep End' (1992), after which Yankovic took over production himself; Derringer has discussed re-playing the guitar solo on 'Eat It' (1984) himself rather than sampling it.",
+  "year": 1984,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Rick Derringer",
+      "title": "Rock and Roll, Hoochie Koo",
+      "year": 1973,
+      "search": false
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "Eat It",
+      "year": 1984
+    },
+    "whatToListenFor": "Derringer's own hit is straightforward hard rock guitar. On 'Eat It' he applies the same playing to a note-for-note re-creation of someone else's solo, the session-guitarist skill his solo career doesn't usually call for."
+  },
+  "explanation": {
+    "age7": "Rick Derringer, a rock guitar player, produced Weird Al's albums for about ten years and even replayed a famous guitar solo for one of his songs.",
+    "age13": "Derringer produced every Weird Al Yankovic album from 1983 to 1992, and personally re-played Michael Jackson's 'Beat It' guitar solo for the 'Eat It' parody rather than using a sample.",
+    "adult": "A straightforward producer-to-artist credit spanning nearly a decade, notable mainly for how much of a stylistic detour it was from Derringer's own hard rock catalogue, filed here as crossLineage since Yankovic sits outside the enum's genre lineages entirely."
+  },
+  "tags": [
+    "production"
+  ]
+}
