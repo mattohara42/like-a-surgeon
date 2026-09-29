@@ -1,7 +1,8 @@
 # M4 architecture: the audio engine
 
-> **Status: for sign-off.** No `audio/` code exists yet. Section 10 lists
-> the questions this plan needs answered first.
+> **Status: questions answered, Q29 deferred.** No `audio/` code exists
+> yet. Q25 to Q28 are resolved (section 10). Step 1 starts once SQUELCH's
+> MIT LICENSE is on its main branch. Step 5 waits on Q29, the list of ten.
 
 This plan follows the M1 to M3 pattern. M4 is where the map starts making
 sound. The gate in `BUILD_PLAN.md` asks for ten demos across three
@@ -283,15 +284,19 @@ Each step is one PR, merged before the next starts.
   M1 file intended, on the view that a short synthesized quote is
   teaching rather than copying. (c) Drop the demo from the ten and pick
   a replacement.
+  **Resolved 2026-09-29: (b).** Matt chose the shared melody. The demo
+  plays it on synthesized voices, and its caption keeps saying so.
 - **Q27. Browsers.** Only Chromium can be tested in this container.
   (a) **Recommended.** Ship on Chromium's evidence, and Matt checks
   Safari and Firefox by hand at the gate. (b) Hold the gate until an
   automated check covers all three.
+  **Resolved 2026-09-29: (a).**
 - **Q28. A test runner.** Lineage has no `npm test`. (a)
   **Recommended.** Add `"test": "node --test"` and put the ported
   harnesses in `test/`. It needs no dependencies, and CI runs it next to
   `validate`. (b) Keep tests in the scratchpad as M1 to M3 did, and port
   the SQUELCH harnesses as runnable scripts only.
+  **Resolved 2026-09-29: (a).** Step 1 adds `npm test` and the CI step.
 - **Q29. The ten.** Is the table in section 7 the right ten? Swaps are
   cheap before step 5 and expensive after.
   **Deferred 2026-09-29.** Matt reviews the list later. Steps 1 to 4 do

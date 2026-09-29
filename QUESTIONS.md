@@ -9,9 +9,12 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   `docs/m4-architecture.md` section 10:
   - Q25: may the SQUELCH code be used here under MIT? **Resolved: yes.**
     Matt is adding an MIT LICENSE to SQUELCH itself.
-  - Q26: should the Planet Rock demo play the shared melody?
-  - Q27: which browsers must pass before the gate?
-  - Q28: should the repo get `npm test`?
+  - Q26: should the Planet Rock demo play the shared melody? **Resolved:
+    yes**, on synthesized voices.
+  - Q27: which browsers must pass before the gate? **Resolved:** Chromium
+    automated, Safari and Firefox by hand at the gate.
+  - Q28: should the repo get `npm test`? **Resolved: yes**, `node --test`,
+    run in CI.
   - Q29: are these the right ten demos? **Deferred.** Matt reviews
     later, before step 5 (the demo data PRs).
 
