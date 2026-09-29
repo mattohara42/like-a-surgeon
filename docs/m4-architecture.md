@@ -215,28 +215,28 @@ Two kinds of feedback reach the map, both through `main.js`:
 
 ## 7. The ten demos
 
-Each row is tied to an edge that is on the map today. There are four
-lineages, one more than the gate needs. The three existing demos are
-marked *existing*.
+**Chosen by Matt, 2026-09-29 (Q29).** Every row is tied to an edge on the
+map today. Eleven rows, one past the gate's ten, with the Planet Rock A/B
+on hold for a sourced melody (Q30). The distortion demos became one, and
+two new ones filled the freed slots.
 
-| # | Demo | Kind | Edge | Lineage of the "to" end | Engine |
+| # | Demo | Kind | Edge | Engine | State |
 |---|---|---|---|---|---|
-| 1 | 808 voices, the long kick *existing* | machine-voice | `e-808-planetrock`, `e-808-manparrish`, `e-808-mantronix` | hip-hop, electronic | SQUELCH 808 |
-| 2 | Turn the 303's knob while it plays *existing* | machine-voice | `e-303-phuture` | electronic | SQUELCH 303 |
-| 3 | 808 kick against 909 kick | ab | `e-909-knuckles` | electronic | SQUELCH 808 and 909 |
-| 4 | A dry stem, then the Space Echo | technique | `e-re201-tubby` | dub | native delay with feedback and filtering |
-| 5 | A preset rhythm, then a riddim | ab | `e-mt40-princejammy` | dub | simple square and noise voices |
-| 6 | A funk break straight, then chopped | pattern | `e-winstons-nwa` | hip-hop | SQUELCH 909 kit playing a break pattern |
-| 7 | The same loop at full quality and at 12-bit, 26 kHz | ab | `e-sp1200-marleymarl` | hip-hop | native bit-crush and sample-rate reduction |
-| 8 | Clean guitar-like tone, then the fuzz box | technique | `e-fuzztone-stones` | rock | native waveshaper |
-| 9 | An amp, then the same amp with a slashed speaker | technique | `e-elpico-kinks` | rock | waveshaper plus noise-modulated rattle |
-| 10 | The Stylophone: one voice, a metal pen | machine-voice | `e-stylophone-bowie` | rock | native square oscillator |
+| 1 | 808 voices, the long kick | machine-voice | `e-808-planetrock`, `e-808-manparrish`, `e-808-mantronix` | SQUELCH 808 | plays |
+| 2 | Turn the 303's knob while it plays | machine-voice | `e-303-phuture` | SQUELCH 303 | plays |
+| 3 | 808 kick against 909 kick | ab | `e-909-knuckles` | SQUELCH 808 and 909 | to build |
+| 4 | A dry stem, then the Space Echo | technique | `e-re201-tubby` | native delay with feedback and filtering | to build |
+| 5 | A preset rhythm, then a riddim (original rhythm, not the bassline) | ab | `e-mt40-princejammy` | simple square and noise voices | to build |
+| 6 | A funk break straight, then chopped | pattern | `e-winstons-nwa` | SQUELCH 909 kit playing a break pattern | to build |
+| 7 | The same loop at full quality and at 12-bit, 26 kHz | ab | `e-sp1200-marleymarl` | native bit-crush and sample-rate reduction | to build |
+| 8 | Clean, then the fuzz box, then the slashed speaker (A/B/C) | technique | `e-fuzztone-stones`, `e-elpico-kinks` | waveshaper; waveshaper plus noise-modulated rattle | to build |
+| 9 | The Stylophone: one voice, a metal pen | machine-voice | `e-stylophone-bowie` | native square oscillator | to build |
+| 10 | Herc's Merry-Go-Round: one break, extended across two copies | pattern | `e-jamesbrown-koolherc` | SQUELCH 909 kit, two decks switched | to build |
+| 11 | A synth bass against an electric bass (original line) | ab | `e-minimoog-parliamentfunkadelic` | native mono synth with a ladder-style filter; plucked-string voice | to build |
+| - | Planet Rock A/B | ab | `e-kraftwerk-planetrock` | | draft, waits on Q30 |
 
-Demo 3 needs a new file. Demos 4 to 10 each need one new demo file and a
-`demoId` on the edge. The two not chosen that were considered: the
-Eventide H910 harmoniser (`e-h910-bowie`), because good pitch-shifting
-is real DSP work, and the Minimoog, because nothing on the map yet asks a
-reader to hear it specifically.
+Considered and not chosen: the Eventide H910 harmoniser (`e-h910-bowie`),
+because good pitch-shifting is real DSP work.
 
 **What the demos play.** CLAUDE.md is explicit that a rhythmic pattern
 or a chord movement is not the protected thing. A melody is different:

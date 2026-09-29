@@ -54,8 +54,9 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
     automated, Safari and Firefox by hand at the gate.
   - Q28: should the repo get `npm test`? **Resolved: yes**, `node --test`,
     run in CI.
-  - Q29: are these the right ten demos? **Deferred.** Matt reviews
-    later, before step 5 (the demo data PRs).
+  - Q29: are these the right ten demos? **Resolved 2026-09-29.** Kept
+    3 to 7 and 10; merged the two distortion demos; added Herc's
+    Merry-Go-Round and a Minimoog bass. See docs/m4-architecture.md 7.
 
 - **Q24. Should parody be its own edge type?** Weird Al's two edges
   (A232) are typed `cover`. That is close, but a parody keeps the
