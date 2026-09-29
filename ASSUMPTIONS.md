@@ -2654,3 +2654,15 @@ small and worth having in front of Matt alongside everything else here.
   scenes) and was removed: a scene edge is a specific causal claim, and
   membership stays out of the graph like other roster relationships
   (A69).
+
+- **A255. Reduced motion reaches the JS animations.** Under
+  `prefers-reduced-motion: reduce`, node breathing no longer starts, the
+  camera cuts instead of flying (a zero-duration `flyTo`), and sparks stay
+  off (as before, now through the shared `render/motion.js`). The edge
+  comet is the one animation that carries information: it shows which way
+  an influence ran. So instead of disappearing, it holds still at
+  `edge.comet.stillPosition` (0.72) of the way along its edge, near the
+  target. The preference is read each time an animation would start, so
+  changing the system setting applies to anything drawn after the change
+  without a reload. Elements already on screen keep whatever they started
+  with until culling redraws them.
