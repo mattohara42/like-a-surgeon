@@ -189,6 +189,19 @@ correct response to a good idea arriving mid-milestone.
   motif vocabulary (op-art grids, sound system stacks, sequencer step grids,
   turntable circles) is still completely undrawn.
 - Colour-vision-deficiency check on the proposed lineage palette. See A29.
+  **Checked, and it fails** (A258). Simulated with Machado et al. (2009)
+  matrices and measured as CIE76 distance in Lab. Under deuteranopia,
+  hip-hop (#bd82ff) and electronic (#5fa8ff) are indistinguishable
+  (distance 0) and funk and blues nearly so (3). Under protanopia, jazz
+  and `other` nearly merge (4). For comparison, the closest pair under
+  normal vision is 30. Lane titles and lane position still carry lineage
+  in the Lineage view, but edge colour (source to target gradient) and the
+  scene and label views rely on colour alone. A candidate that keeps every
+  hue and separates the confused pairs by lightness raises the worst pair
+  to 10 (deuteranopia) and 12 (protanopia): hip-hop `#e0b8ff`, electronic
+  `#4a8cf0`, jazz `#ff9ad6`, blues `#8fc43c`, other `#66758e`. It changes
+  the map's identity colours, so it waits for Matt. Applying it is five
+  one-line edits in `data/lineages/`.
 - Reduced-motion handling. All three prototypes animate continuously and
   none of them respect `prefers-reduced-motion`. Whichever direction wins
   needs a still version that loses no information.
@@ -298,6 +311,7 @@ fixing them inline.)
   axis's two margin years, so the year readout shows 2028 in 2026. It reads
   as the map claiming to know the future. The cursor should probably clamp
   to the current year. Not touched, since the transport is not M3 work.
+  **Closed:** a duplicate of the entry further down, fixed there.
 - At 1280x800 the bottom lineage lane (`other`) draws under the timeline
   transport, so Schaeffer, Stockhausen, Oram, Ahmad Jamal and their labels
   sit behind the play bar and are hard to read or click. The outré
@@ -667,6 +681,8 @@ fixing them inline.)
   two years in the future. The margin is right for drawing room. The
   cursor's maximum probably wants to clamp to the current year instead.
   Seen while taking the social preview screenshot.
+  **Closed:** the transport now runs over `layout.minYear` to
+  `layout.maxYear`, so the readout opens at the current year (PR #74).
 
 - At 1280x800 in the lineage arrangement, the "ROCK" lane title draws
   under the reading-level toggle, so "ADULT" and "ROCK" overlap. Lane

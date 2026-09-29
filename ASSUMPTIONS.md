@@ -2701,3 +2701,14 @@ small and worth having in front of Matt alongside everything else here.
   BACKLOG note about the bottom lane sitting under the transport no
   longer applies: the opening view is a framed stretch (A249) and pan is
   unlimited (A250).
+
+- **A258. The lineage palette fails a colour-vision check, and the fix
+  waits for Matt.** The BACKLOG asked for a colour-vision-deficiency check
+  on the lineage palette. It was run by simulating protanopia,
+  deuteranopia and tritanopia (Machado et al. 2009, full severity, in
+  linear RGB) and measuring pairwise CIE76 distance in Lab. Deuteranopia,
+  the most common form, collapses hip-hop into electronic entirely, and
+  funk nearly into blues. A candidate palette that only shifts lightness
+  is recorded in BACKLOG. It was not applied, because the palette is the
+  visual identity Matt chose (design/ 03 Strata), not a tuning value.
+  This is analysis only, and no file under `data/lineages/` changed.
