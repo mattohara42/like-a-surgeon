@@ -1,0 +1,30 @@
+{
+  "id": "e-spector-ramones",
+  "from": "phil-spector",
+  "to": "ramones",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1980,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'End of the Century': produced by Spector, recorded in May 1979 at Gold Star, Excalibur and Devonshire Sound in Los Angeles, and released by Sire on 4 February 1980 on a budget of $200,000, against $6,400 for the debut. It reached 44 in the US and 14 in the UK, the band's highest-charting album, and its cover of the Ronettes' 'Baby, I Love You' with an orchestral arrangement reached 8 in the UK. Band members' accounts of the sessions conflict: Dee Dee and Johnny Ramone described long, repetitive sessions, and Marky Ramone has disputed stories that the band was held at gunpoint, saying they could have left at any time.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Ronettes",
+      "title": "Baby, I Love You",
+      "year": 1963
+    },
+    "later": {
+      "artist": "Ramones",
+      "title": "Baby, I Love You",
+      "year": 1980
+    },
+    "whatToListenFor": "The Ramones' version is not a punk cover. The loud guitars are gone: Joey Ramone sings over strings and a slow beat, very close to Spector's own 1963 arrangement for the Ronettes. Compare it with 'Blitzkrieg Bop' and you hear what a producer can do to a band, for better or worse. Some of the band later said they resented the change."
+  },
+  "explanation": {
+    "age13": "In 1979 the Ramones made an album with Phil Spector, who had produced the Ronettes' records in the early 1960s. It cost about thirty times as much as their first album. Their cover of the Ronettes' 'Baby, I Love You', with strings and no guitars, was their biggest hit in Britain.",
+    "adult": "A production edge with the facts of the sessions disputed by the people in them. The widely repeated gun stories are given here only as what they are: accounts that conflict, including one band member's explicit denial of the hostage version. The documented part is the budget, the chart result, and the sound, which is Spector's 1963 arrangement with a punk singer."
+  },
+  "tags": [
+    "production"
+  ]
+}

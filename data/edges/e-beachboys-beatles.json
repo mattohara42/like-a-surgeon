@@ -1,0 +1,28 @@
+{
+  "id": "e-beachboys-beatles",
+  "from": "the-beach-boys",
+  "to": "the-beatles",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1967,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'Sgt. Pepper's Lonely Hearts Club Band': McCartney identified 'Pet Sounds' as the main musical inspiration for 'Sgt. Pepper', said the Beatles took some of its ideas, admired its harmonic structures and instrumentation, and felt it lacked the avant-garde quality he wanted. Wikipedia's article on 'Pet Sounds': Wilson made it in response to the Beatles' 'Rubber Soul' (1965). 'Sgt. Pepper' was recorded from 6 December 1966 to 21 April 1967 and released on 26 May 1967.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Beach Boys",
+      "title": "God Only Knows",
+      "year": 1966
+    },
+    "later": {
+      "artist": "The Beatles",
+      "title": "Getting Better",
+      "year": 1967
+    },
+    "whatToListenFor": "Listen for the bass. On 'Pet Sounds' the bass often plays its own melody instead of just the root note, moving against the chords. On 'Sgt. Pepper' McCartney's bass does the same, high and melodic, walking around the tune. Listeners often point to this as something the two albums share. Then listen for the rest of 'Sgt. Pepper', the sound effects and tape tricks, which is the avant-garde part McCartney felt 'Pet Sounds' was missing."
+  },
+  "explanation": {
+    "age13": "Brian Wilson made 'Pet Sounds' because the Beatles' 'Rubber Soul' impressed him so much. Then Paul McCartney said 'Pet Sounds' was the main inspiration for 'Sgt. Pepper'. The two bands were answering each other.",
+    "adult": "A two-way exchange documented from both ends, which is rare. The edge is drawn Beach Boys to Beatles for 'Sgt. Pepper'; the 'Rubber Soul' trigger that came first is in the evidence rather than drawn as a second edge. The pairing of 'Getting Better' is chosen for its melodic bass, a commonly noted parallel rather than one McCartney is cited naming. The documented claim is his general one about ideas, harmony and instrumentation."
+  },
+  "tags": []
+}
