@@ -3832,3 +3832,25 @@ small and worth having in front of Matt alongside everything else here.
     The 1977 raid and his mother's death are in both registers.
   - **`e-tonyallen-fela` runs from drummer to bandleader**, since the
     drum language is Allen's and Fela credited him with it.
+
+## Added with the disco batch
+
+- **A304. Nile Rodgers, Giorgio Moroder and Donna Summer.** Three
+  artists and 7 edges (315 to 322 of 350), linking disco to Sugar
+  Hill, Bowie, Madonna, Eno, Casablanca and the Moog modular. An
+  edge-only pass came first and found almost every obvious pair
+  between existing nodes already drawn, which is why this batch adds
+  nodes.
+  - **Rodgers rather than Chic.** The map's producers are people
+    (George Martin, Rick Rubin, Spector), and Rodgers's edges into
+    Bowie and Madonna are his production, not the band's. Chic appears
+    in his blurb and track pairs.
+  - **Lanes.** Rodgers and Summer are in `funk`, beside Madonna.
+    Moroder is in `electronic`, because what reached later music from
+    him is the sequenced synthesizer.
+  - **`e-rodgers-robinson` targets Sylvia Robinson**, who produced
+    'Rapper's Delight', and is typed `sample` for an interpolation, as
+    in A298.
+  - **`e-summer-eno` is consensus.** It rests on Bowie's account of
+    Eno's reaction, and what the reaction changed in Eno's work is not
+    documented.

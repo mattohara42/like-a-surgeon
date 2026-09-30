@@ -1,0 +1,31 @@
+{
+  "id": "e-moogmodular-moroder",
+  "from": "moog-modular",
+  "to": "giorgio-moroder",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1977,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'I Feel Love': recorded at Musicland Studios in Munich with a borrowed Moog modular synthesizer, sequenced and synchronised to 16-track tape using a click track, a method engineer Robby Wedel showed Moroder. The Moog drifted out of tune, so parts were recorded in bursts of 20 to 30 seconds; Keith Forsey's kick drum was the only other played instrument.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Moog modular",
+      "title": "as sold",
+      "year": 1964,
+      "search": false
+    },
+    "later": {
+      "artist": "Donna Summer",
+      "title": "I Feel Love",
+      "year": 1977
+    },
+    "whatToListenFor": "Listen for the bass line: a fast, bubbling pattern of notes, perfectly even, repeating without a single human wobble. That is a sequencer driving a Moog. Around it, the hi-hats and effects come from the same machine. Only the kick drum and the voice are human. Listen for how the pattern never tires and never drifts in time, and imagine how strange that sounded in a club in 1977."
+  },
+  "explanation": {
+    "age13": "'I Feel Love' was made almost entirely with a Moog synthesizer. A machine called a sequencer played the notes in perfect time, and a click track kept it in step with the tape. The only human sounds are Donna Summer's voice and the kick drum.",
+    "adult": "The technological edge that puts sequenced synthesis at the centre of a pop hit. The detail that the Moog kept drifting out of tune, forcing short takes, is the practical story behind a record that sounds effortlessly mechanical."
+  },
+  "tags": [
+    "technology"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "donna-summer",
+  "name": "Donna Summer",
+  "sortName": "Summer, Donna",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1975,
+  "activeTo": 2012,
+  "originCity": "Boston",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "casablanca",
+      "from": 1975,
+      "to": 1980
+    }
+  ],
+  "keyProducers": [
+    "giorgio-moroder",
+    "Pete Bellotte"
+  ],
+  "hook": "A Boston singer working in Munich whose records with Giorgio Moroder, released by Casablanca, set disco's length and then its electronic future.",
+  "blurb": {
+    "age13": "Donna Summer was born LaDonna Gaines in Boston in 1948 and moved to Germany in the late 1960s to sing in the musical 'Hair'. In Munich she worked with the producers Giorgio Moroder and Pete Bellotte. Casablanca Records asked for a 16-minute version of 'Love to Love You Baby' in 1975, and it went to number two in the US. 'I Feel Love' (1977), with its all-synthesizer backing, is one of the most influential dance records ever made. She died in 2012.",
+    "adult": "Born in Boston in 1948; she went to Germany with a production of 'Hair' and built her career in Munich. 'Love to Love You Baby' began as a modest Dutch release before Casablanca's Neil Bogart asked for an extended version; the result ran over 16 minutes, reached number two on the Hot 100 in February 1976, and was not promoted by the BBC because of its moaning vocal. On 'I Feel Love' (1977) she sang in head voice, high and light, over Moroder's sequenced Moog, recorded in a single take. She died in 2012."
+  },
+  "signatureTracks": [
+    {
+      "title": "Love to Love You Baby",
+      "year": 1975,
+      "whyThisOne": "The long version that made disco a side-long form."
+    },
+    {
+      "title": "I Feel Love",
+      "year": 1977,
+      "whyThisOne": "Her voice floating over a machine."
+    }
+  ]
+}
