@@ -269,6 +269,10 @@ export const CONFIG = {
     // Card column: side gutter and the widest it reads at.
     gutterPx: 16,
     maxWidthColumnPx: 560,
+    // A card's title and connection count, against the drawer's title size.
+    titleScale: 1.1,
+    // The Go button on a connection card, against minTargetPx.
+    goTargetScale: 1.2,
   },
 
   // The first-run card and its goal chip (reading/welcome.js).
