@@ -1,0 +1,28 @@
+{
+  "id": "e-coldchillin-koolgrap",
+  "from": "cold-chillin",
+  "to": "kool-g-rap",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1992,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'Live and Let Die', Kool G Rap & DJ Polo's third album, says Warner Bros. Records refused to distribute it under its deal with Cold Chillin' because of the lyrics and the cover art. Cold Chillin' was in legal trouble over Biz Markie, and Warner was dealing with the Ice-T 'Cop Killer' controversy, so both labels held back. The album was shelved while Kool G Rap spent nearly a year rewriting and re-recording, and came out on Cold Chillin' on 24 November 1992. Two earlier cover ideas were dropped: banks refused a bank-robbery surveillance shot, and label policy barred guns on covers. Sir Jinx produced most of the album and Trackmasters three tracks.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Kool G Rap & DJ Polo",
+      "title": "Road to the Riches",
+      "year": 1989
+    },
+    "later": {
+      "artist": "Kool G Rap & DJ Polo",
+      "title": "Ill Street Blues",
+      "year": 1992
+    },
+    "whatToListenFor": "'Road to the Riches' was made in-house at Cold Chillin', produced by Marley Marl, the label's own producer. 'Ill Street Blues' comes from the album the label's distributor would not touch, which was produced mostly by Sir Jinx rather than by the Juice Crew's own producer. Listen for the change in the beats between the two, and for how much of the crime storytelling survived the year of rewriting."
+  },
+  "explanation": {
+    "age13": "In 1992 Kool G Rap made an album about crime called 'Live and Let Die'. Warner Bros., the big company that shipped Cold Chillin's records to shops, refused to handle it because of the words and the cover picture. He spent almost a year rewriting it, and Cold Chillin' finally put it out at the end of 1992.",
+    "adult": "The second Cold Chillin' decision on this map with a legal shadow over it, after the Biz Markie sample case. The label had a distributor, and in 1992 the distributor could say no. Warner's refusal came in the same year as the 'Cop Killer' controversy, so a record company's exposure to political pressure shaped what a New York rap album could say and look like. The album that came out is the rewritten one."
+  },
+  "tags": ["labels", "politics"]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "e-jamesbrown-delasoul",
+  "from": "james-brown",
+  "to": "de-la-soul",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1996,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on the song 'Stakes Is High' (released 17 June 1996, produced by Jay Dee with co-production by De La Soul) says it contains samples from 'Mind Power' by James Brown and 'Swahililand' by Ahmad Jamal. 'Mind Power' is a twelve-minute track on James Brown's double album 'The Payback' (Polydor, December 1973), according to Wikipedia's article on that album.",
+  "trackPair": {
+    "earlier": {
+      "artist": "James Brown",
+      "title": "Mind Power",
+      "year": 1973
+    },
+    "later": {
+      "artist": "De La Soul",
+      "title": "Stakes Is High",
+      "year": 1996
+    },
+    "whatToListenFor": "'Mind Power' runs for about twelve minutes, a long funk track that takes its time. 'Stakes Is High' is built from two sources at once, this and Ahmad Jamal's 'Swahililand'. Listen for which parts come from the funk record and which from the jazz one, and how Jay Dee makes them sit together."
+  },
+  "explanation": {
+    "age13": "James Brown's 'Mind Power' is a twelve-minute funk track from 1973. In 1996 Jay Dee, later called J Dilla, used a piece of it together with a piece of an Ahmad Jamal jazz record for De La Soul's 'Stakes Is High'.",
+    "adult": "The funk half of a two-source beat, paired with Ahmad Jamal's edge into the same song. Most of Brown's edges on this map are famous breaks and singles. This one is a long track from a double album, a different kind of source for the same artist."
+  },
+  "tags": ["production"]
+}
