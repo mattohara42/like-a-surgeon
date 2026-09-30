@@ -122,6 +122,16 @@ which Matt runs with a cold reader; `docs/m5-gate-notes.md` is the script.
 
 ---
 
+## Cards — the phone version (outside the milestone order)
+
+Matt asked for it on 2026-09-30 with the M5 gate still open (A309).
+Design and gate are in `docs/cards-architecture.md`. **Built**
+2026-09-30 (A310). **Gate:** the kids use it on their own phones without
+being shown how, each gets five cards in and can say what one connection
+was about, and it is checked on a real iPhone in Safari.
+
+---
+
 ## M6 — Polish and release
 
 Transitions, keyboard navigation everywhere, empty and error states, a first-run

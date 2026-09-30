@@ -24,6 +24,14 @@ correct response to a good idea arriving mid-milestone.
 - Printable poster export of a thread.
 - Per-scene ambient generative bed that plays while browsing that region.
 - Comparison mode: two artists side by side with their full edge sets.
+- **Cards: open the map on the card's record.** "Open the full map"
+  opens the map at its usual opening view. Passing the card's address
+  through would let the map fly to that record and open its panel.
+- **Cards: show edges that touch an undated record.** The loader drops
+  them because the map cannot place them (A310), but a card needs no
+  year. Only `e-brunswick-talmy` today.
+- **Cards: audio demos,** once the Safari check (Q27) is done
+  (docs/cards-architecture.md section 2, decision 4).
 - A contributor guide so someone other than Claude Code can add an artist.
 - Non-English scene coverage and translated reading levels.
 - Video-free "listening session" mode for a classroom.
@@ -254,6 +262,11 @@ correct response to a good idea arriving mid-milestone.
   captions drop record names. Either would let most machine edges carry
   a demo, which is the fastest route to the 30 edges-with-demo target.
   Not changed: it is a schema choice for Matt.
+
+- **`loadPlaywright` is copied between `tools/audio-check.js` and
+  `tools/cards-check.js`.** Both load Playwright the same way (local,
+  then the global install). A third browser check would make it worth
+  a shared `tools/playwright.js`. Found while writing cards-check.
 
 - **`tools/report.js --out` breaks on an absolute path.** It writes to
   `join(ROOT, opts.out)`, so `--out=/tmp/x.md` becomes

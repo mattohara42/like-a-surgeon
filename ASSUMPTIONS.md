@@ -3952,3 +3952,27 @@ small and worth having in front of Matt alongside everything else here.
   nothing on the map. Matt chose the four options in section 2 of that
   doc in chat: connection card first, a random well-connected opener,
   random over every connected record, and no audio yet.
+
+- **A310. Cards, as built.** Decisions made while building
+  `docs/cards-architecture.md`, none of them asked:
+  - **The Go button appears twice on a connection card,** under the
+    hook and again at the end, so a reader hopping fast does not have
+    to scroll past the evidence, and a reader who read it all does not
+    have to scroll back.
+  - **After a reload, Go points at the edge's later end.** Where the
+    reader came from is kept in memory only, so a reloaded or shared
+    connection card cannot know it.
+  - **An edge touching a record with no start year has no card.**
+    `render/loader.js` drops it for the map, and Cards uses the same
+    loader. Today that is only `e-brunswick-talmy`. Cards need no year,
+    so they could show it (BACKLOG).
+  - **Cards share the map's reading-level setting,** so a reader who
+    picked Adult on one keeps it on the other.
+  - **No card text sizes of their own.** The drawer's type scale
+    already reads well at phone width (checked at 390 px). CONFIG.cards
+    holds only a title scale and the touch sizes.
+  - **The map links to cards from the legend's version line,** the
+    least crowded place on the map that is always visible.
+  - **`sceneMembers` moved from `main.js` to `reading/members.js`,**
+    unchanged, so the two views share it rather than copy it.
+
