@@ -3786,3 +3786,25 @@ small and worth having in front of Matt alongside everything else here.
     datable influence from Presley on another node already on the map
     well enough to draw. A Presley-to-Beatles edge is the obvious gap,
     and it needs a first-hand source rather than the famous paraphrases.
+
+## Added with the Spector and Beach Boys batch
+
+- **A302. Phil Spector and the Beach Boys.** Two artists and 5 edges
+  (305 to 310 of 350), joining the 1950s batch (Chuck Berry) to the
+  Beatles and the Ramones through production. Matt asked in chat on
+  2026-09-30 for batches to be merged automatically once CI is green,
+  so this and later batch PRs are merged by the session.
+  - **Spector's conviction is in both registers (Q2).** The 2009
+    second-degree murder conviction for Lana Clarkson's death, and the
+    19-years-to-life sentence, are stated as fact. His hook states it
+    too, because it is a documented part of why his standing changed.
+  - **The Ramones gun stories are not asserted.** `e-spector-ramones`
+    gives the conflicting band accounts, including Marky Ramone's
+    denial, and draws the edge on the budget, the chart result and the
+    sound.
+  - **`e-beachboys-beatles` pairs 'Getting Better' for its bass.** The
+    documented claim is McCartney's general one about ideas, harmony
+    and instrumentation. The bass parallel is common in criticism and
+    is labelled as that, not as McCartney's.
+  - **`e-chuckberry-beachboys` is typed `cover`**, because the melody is
+    Berry's and only the words are new.
