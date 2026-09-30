@@ -1,0 +1,40 @@
+{
+  "id": "the-stooges",
+  "name": "The Stooges",
+  "sortName": "Stooges, The",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1967,
+  "activeTo": 2016,
+  "originCity": "Ann Arbor, Michigan",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "elektra",
+      "from": 1968,
+      "to": 1971
+    }
+  ],
+  "keyProducers": [
+    "John Cale",
+    "david-bowie"
+  ],
+  "hook": "A Michigan band whose three commercial failures became the template British punk played from.",
+  "blurb": {
+    "age13": "The Stooges formed in Ann Arbor, Michigan, in 1967, with Iggy Pop singing and the Asheton brothers on guitar and drums. Their songs were short, loud and built on two or three chords, and Iggy threw himself into the crowd. None of their first three albums sold well, but a few years later young British punk bands were playing their songs.",
+    "adult": "Signed to Elektra in 1968 almost as an afterthought: Danny Fields was sent to sign the MC5, and both bands got contracts, the MC5 for $20,000 and the Stooges for $5,000 (Wikipedia's article on the band). Their debut (1969) was produced by John Cale of the Velvet Underground. 'Raw Power' (Columbia, 1973), credited to Iggy and the Stooges, was remixed by David Bowie. The band split in 1974, reunited in 2003 and ended in 2016 after the deaths of Scott Asheton and Steve Mackay. The Sex Pistols released 'No Fun' as a B-side in 1977, which is the plainest record of the line from Ann Arbor to London."
+  },
+  "signatureTracks": [
+    {
+      "title": "No Fun",
+      "year": 1969,
+      "whyThisOne": "Produced by John Cale. The Sex Pistols put it on the back of 'Pretty Vacant' eight years later."
+    },
+    {
+      "title": "Search and Destroy",
+      "year": 1973,
+      "whyThisOne": "The opener of 'Raw Power', the album David Bowie remixed in a day."
+    }
+  ]
+}

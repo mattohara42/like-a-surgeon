@@ -8,13 +8,13 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 136 | 120 | met |
+| artists | 141 | 120 | met |
 | machines | 32 | 25 | met |
-| scenes | 20 | 20 | met |
-| labels | 31 | 30 | met |
-| edges | 277 | 350 | 79% |
+| scenes | 21 | 20 | met |
+| labels | 32 | 30 | met |
+| edges | 290 | 350 | 83% |
 | threads | 6 | 5 | met |
-| crossLineageEdges | 110 | 60 | met |
+| crossLineageEdges | 113 | 60 | met |
 | edgesWithDemo | 18 | 30 | 60% |
 
 ## Counts by lineage
@@ -25,8 +25,8 @@ Every node type, since machines, scenes and labels carry a lineage too.
 |---|---:|
 | electronic | 56 |
 | hiphop | 55 |
-| rock | 39 |
-| funk | 22 |
+| rock | 45 |
+| funk | 23 |
 | dub | 21 |
 | other | 18 |
 | jazz | 7 |
@@ -37,9 +37,9 @@ Artists alone:
 | lineage | count |
 |---|---:|
 | hiphop | 43 |
+| rock | 30 |
 | electronic | 27 |
-| rock | 26 |
-| funk | 16 |
+| funk | 17 |
 | dub | 13 |
 | jazz | 7 |
 | other | 4 |
@@ -48,13 +48,13 @@ Artists alone:
 
 | edge type | count |
 |---|---:|
-| direct | 57 |
+| direct | 60 |
 | technological | 50 |
-| production | 45 |
-| label | 44 |
-| sample | 39 |
-| scene | 30 |
-| cover | 8 |
+| label | 47 |
+| production | 47 |
+| sample | 40 |
+| scene | 32 |
+| cover | 10 |
 | reaction-against | 3 |
 | rediscovery | 1 |
 
@@ -62,8 +62,8 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 204 |
-| consensus | 72 |
+| documented | 215 |
+| consensus | 74 |
 | asserted | 1 |
 
 ## The 20 edges to read hardest
@@ -236,126 +236,126 @@ Evidence: The Sex Pistols and the Clash are the two foundational bands of the 19
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 276 edges that carry one.
+Drawn with seed 1 from the 289 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-trax-chicagohouse`
+### 1. `e-simmons-sly`
 
-Frankie Knuckles, "Warehouse DJ sets" (1982) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
+Simmons, "SDS-V electronic drums" (1981) to Black Uhuru, "Anthem" (1983)
 
-Before labels like Trax, this music was mostly heard in the clubs, on DJs' edits and tapes. 'Move Your Body' is the same music as a product you could buy, pressed at the label owner's own plant. Listen to an original Trax pressing if you ever get the chance, and for the surface noise: the cheap, recycled vinyl was part of the sound people bought.
+Listen to the drum fills. In places, instead of the round thud of a drum skin, a tom comes out as a short electronic zap that swoops down in pitch. Underneath it, the groove is still Sly's: the kick and snare placed with a reggae drummer's sense of where the beat should sit. The machine sound, played by a human, is the combination to hear.
 
-### 2. `e-moog-tangerinedream`
+### 2. `e-winstons-nwa`
 
-R. A. Moog Co., "Moog modular synthesizer with 960 sequencer" (1965) to Tangerine Dream, "Phaedra" (1974)
+The Winstons, "Amen, Brother" (1969) to N.W.A, "Straight Outta Compton" (1988)
 
-Wait for the pulse. A short row of bass notes repeats, bubbling, while its brightness slowly opens and closes as someone turns a filter knob. Nobody is playing those notes. The sequencer is. The musicians play over it: drifting Mellotron, echoing synth lines. Listen for the loop slightly changing pitch and tone over minutes, which is the hand on the knob, and for how long it keeps going without ever settling into a song.
+Find the six seconds near the middle of 'Amen, Brother' where the band stops and Gregory Coleman plays alone. Listen for the last bars, where the snare shifts off its pattern and lands late. That hitch is what everyone recognises. Then hear it in 'Straight Outta Compton', looped hard under Ice Cube's opening verse. It has the same hitch in the snare, now with the urgency of the whole track riding on it.
 
-### 3. `e-808-planetrock`
+### 3. `e-publicenemy-rza`
 
-Roland, "TR-808 factory voices" (1980) to Afrika Bambaataa & Soulsonic Force, "Planet Rock" (1982)
+Public Enemy, "Bring the Noise" (1987) to Wu-Tang Clan, "Protect Ya Neck" (1992)
 
-The handclap and the cowbell are unmistakably the machine, straight out of the box with no attempt to hide it. The kick's decay is set long so it rings on like a bass note. Once you know those three sounds you will hear them in a thousand records after this one.
+'Bring the Noise' stacks dense layers of sirens, horn stabs and vocal snatches on top of each other, chaotic on purpose. 'Protect Ya Neck' takes the same cut-up instinct and strips it back to one or two grimy loops, murky and minimal rather than maximal, RZA's own turn on the same technique.
 
-### 4. `e-hayes-publicenemy`
+### 4. `e-princepaul-delasoul`
+
+Prince Paul, "DJing for Stetsasonic" (1988) to De La Soul, "3 Feet High and Rising" (1989)
+
+Stetsasonic's own records are dense but conventional boom-bap. On De La Soul's album the same production instincts turn playful and collage-like: skits, game-show samples and non-sequitur interludes across a much wider, weirder crate of source records than Paul had used behind Stetsasonic's own mic.
+
+### 5. `e-pil-joydivision`
+
+Public Image Ltd, "Public Image" (1978) to Joy Division, "Transmission" (1979)
+
+Both push the bass into the lead role a guitar or vocal would normally hold, leaving space around it rather than filling every bar, even though the two basslines sound nothing alike.
+
+### 6. `e-sire-ramones`
+
+Ramones, "Judy Is a Punk" (1976) to Ramones, "Sheena Is a Punk Rocker" (1977)
+
+The first album was made fast and cheap, and it sounds it: dry drums, guitars panned hard to one side, almost no overdubs. A year later, with Sire now distributed by Warner Bros., 'Sheena Is a Punk Rocker' has a cleaner, fuller sound and a surf-pop chorus aimed at radio. Listen for the label's ambition growing in the sound, while the song stays under three minutes.
+
+### 7. `e-parliamentfunkadelic-publicenemy`
+
+Funkadelic, "Get Off Your Ass and Jam" (1975) to Public Enemy, "Bring the Noise" (1987)
+
+Funkadelic's original is a loose, live-sounding jam built to fill a dance floor. The Bomb Squad chops it into a hard, repeating stab buried under sirens, scratches and Chuck D's vocal, the same move e-jamesbrown-publicenemy describes with 'Funky Drummer': the source record's groove becomes raw material for something faster, louder and more urgent.
+
+### 8. `e-kms-chezdamier`
+
+Kevin Saunderson (Inner City), "Big Fun" (1988) to Chez Damier, "Can You Feel It" (1992)
+
+'Big Fun' is KMS's commercial peak, pop-facing house built to cross over. 'Can You Feel It,' made by the label's own A&R four years later, is rawer and more interior, closer to the deep house Damier and Ron Trent would build Prescription Records around the next year.
+
+### 9. `e-westberlin-bowie`
+
+David Bowie, "Station to Station" (1976) to David Bowie, ""Heroes"" (1977)
+
+'Station to Station' was made in Los Angeles: long, but still a rock band playing funk-inflected grooves with a big lead vocal on top. '"Heroes"' was made at Hansa a year later. Listen for the guitar feedback that sustains through the whole song, the drums that barely change, and Bowie singing quietly at first and then straining at the top of his range in the last verses. The record sounds like a big hall, because Hansa's Meistersaal was one. The move is audible as less groove and more atmosphere.
+
+### 10. `e-stax-isaachayes`
+
+Isaac Hayes, "Precious, Precious (Presenting Isaac Hayes)" (1968) to Isaac Hayes, "Walk On By (Hot Buttered Soul)" (1969)
+
+The 1968 debut is a competent, conventional soul session, short songs, tight arrangements, nothing that announces a distinct voice. A year later, the same singer stretches a Burt Bacharach song past eleven minutes, opening with strings and a wah-wah guitar solo before the vocal even arrives. The difference is what a label desperate enough to hand over full control actually sounds like.
+
+### 11. `e-stones-weirdal`
+
+The Rolling Stones, "(I Can't Get No) Satisfaction" (1965) to "Weird Al" Yankovic, "The Hot Rocks Polka" (1989)
+
+Listen to the 'Satisfaction' riff first, a fuzzed guitar line over a heavy backbeat, then find it in the medley. The polka puts everything on a bouncing two-beat pulse and hands the melody to the accordion, so a riff built around a fuzz pedal has to survive on a squeezebox. The tune survives the move. The tone and the swagger do not, which tells you how much of the Stones' sound lived in the playing rather than the notes.
+
+### 12. `e-marleymarl-craigg`
+
+Craig G, "Droppin' Science" (1986) to Craig G, "The Symphony" (1988)
+
+'Droppin' Science' is a teenager showing off raw speed over a fairly plain Marl beat. Two years later on 'The Symphony', the same fast delivery is deployed with far more control, one verse among four over a single looped horn stab, and it's the verse most often picked out of the four.
+
+### 13. `e-hayes-publicenemy`
 
 Isaac Hayes, "Hyperbolicsyllabicsesquedalymistic" (1969) to Public Enemy, "Black Steel in the Hour of Chaos" (1988)
 
 Hayes's original is a long, orchestral funk-soul groove with strings and a driving bassline stretched over several minutes. The Bomb Squad extracts a fragment of it and buries it inside a dense, chaotic wall of other sources, the same layering approach as e-jamesbrown-publicenemy but a different, less obvious source record.
 
-### 5. `e-flash-mellemel`
+### 14. `e-swinginglondon-hendrix`
 
-Grandmaster Flash, "Bronx jams with the Furious Five" (1977) to Grandmaster Flash and the Furious Five, "Superrappin'" (1979)
+The Who, "My Generation" (1965) to The Jimi Hendrix Experience, "Purple Haze" (1967)
 
-Listen to how the five MCs hand lines to each other, finishing each other's bars and coming in together on the last word. That is choreography built for a live room where the DJ is the main event and the MCs work around him, and you can hear it surviving intact onto a record where there is no room and no crowd.
+London in 1965 was already playing loud: listen to the feedback and the smashed chords at the end of 'My Generation'. Then play 'Purple Haze' a year and a half later. An American who arrived in that scene took the same noise, the fuzz and the feedback, and made it melodic, with the distortion carrying the tune instead of wrecking it. The scene gave him an audience ready for that.
 
-### 6. `e-ukjungle-goldie`
+### 15. `e-zeppelin-beastieboys`
 
-Goldie (as Rufige Kru), "Terminator" (1992) to Goldie, "Inner City Life" (1994)
+Led Zeppelin, "When the Levee Breaks" (1971) to Beastie Boys, "Rhymin & Stealin" (1986)
 
-'Terminator' is scene music: a dubplate built for one DJ's set, its timestretched break more experiment than song. Two years later, the same techniques carry a full vocal and string arrangement into the UK singles chart. The scene's infrastructure, not a change in Goldie's technique, is what let the second record travel so much further than the first.
+Listen to how huge Bonham's drums sound at the start of 'When the Levee Breaks': slow and heavy, with a long echo after every hit, because they were recorded at the bottom of a stairwell with microphones high above. Then hear that same beat looped under the Beastie Boys, even heavier and scratched up. The room around the drums comes along with them, which is why this beat sounds bigger than any drum machine.
 
-### 7. `e-motown-mjackson`
+### 16. `e-derringer-weirdal`
 
-The Jackson 5, "I Want You Back" (1969) to The Jackson 5, "ABC" (1970)
+Rick Derringer, "Rock and Roll, Hoochie Koo" (1973) to "Weird Al" Yankovic, "Eat It" (1984)
 
-Both records run the same Corporation formula: a driving bassline, call-and-response vocals, and Michael's lead pushed forward in the mix well beyond what an eleven-year-old would normally be given on a major label. Listen for how deliberately the arrangement is built to showcase one specific voice.
+Derringer's own hit is straightforward hard rock guitar. On 'Eat It' he applies the same playing to a note-for-note re-creation of someone else's solo, the session-guitarist skill his solo career doesn't usually call for.
 
-### 8. `e-jamesbrown-ericbrakim`
+### 17. `e-eno-bowie`
 
-James Brown, "Funky President (People It's Bad)" (1974) to Eric B. & Rakim, "Eric B. Is President" (1986)
+Brian Eno, "Discreet Music" (1975) to David Bowie, "Warszawa" (1977)
 
-'Funky President' opens with a drum break and then a tight, punchy funk groove. The title of Eric B. & Rakim's single is a joke on its two main sources, 'Funky President' and 'Impeach the President', and the track stitches pieces of Brown's record together with the Honey Drippers' drums. Listen for how little of each source is used: a few bars each, looped, so the pieces lock together into a new groove.
+'Discreet Music' is slow synth phrases repeating through tape echo, with no beat and nothing asking for attention. 'Warszawa' opens the ambient second side of Low with a single held note and slow, heavy chords, no drums, and Bowie singing in a made-up language late in the piece. Listen for the same patience: sounds that last a long time and change slowly. It's the most Eno-like thing on a Bowie record, and the side a rock audience least expected.
 
-### 9. `e-kane-nas`
+### 18. `e-mellotron-beatles`
 
-Big Daddy Kane, "Ain't No Half-Steppin'" (1988) to Nas, "It Ain't Hard to Tell" (1994)
+Mellotron, "flute tape bank, as sold" (1963) to The Beatles, "Strawberry Fields Forever" (1967)
 
-Kane's verses pack dense internal rhyme into a fast, clean flow with no wasted breath. Six years later, Nas's own debut single stacks images and rhymes just as densely, at a more measured pace, description doing the work Kane's speed did. Same commitment to packing a bar full; different instrument used to do it.
+Listen to the opening seconds: a flute that isn't quite a flute. Each key on a Mellotron plays a strip of tape with a real flute note recorded on it, so the sound wobbles slightly and every note stops after about eight seconds. McCartney's chords sound a little out of tune with themselves because the flute recordings don't quite match. That wobble is a recording of a recording, playing back as an instrument.
 
-### 10. `e-mellotron-bowie`
+### 19. `e-foster-tribe`
 
-Streetly Electronics, "Mellotron, sold as a home orchestra" (1963) to David Bowie, "Space Oddity" (1969)
+Ronnie Foster, "Mystic Brew" (1972) to A Tribe Called Quest, "Electric Relaxation" (1993)
 
-This record also has a real string arrangement, which makes it a good listening exercise. Somewhere in the swelling background there are string sounds that start with no bow attack and waver very slightly in pitch. Those are tape, played from a keyboard, sitting inside the real orchestra. Then listen for the Stylophone, which is on the same record.
+Listen for the melancholy keyboard phrase in 'Mystic Brew', then hear Tribe loop it. The phrase that drifts in the original becomes a steady cycle, with soft drums sitting quietly under it. It's so relaxed that Q-Tip and Phife seem to be talking over it rather than rapping on top of it. The mood of a 1972 jazz record becomes the whole identity of the song.
 
-### 11. `e-re201-perry`
+### 20. `e-koolgrap-nas`
 
-Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to Lee "Scratch" Perry, "Revolution Dub" (1975)
+Kool G Rap, "Road to the Riches" (1989) to Nas, "N.Y. State of Mind" (1994)
 
-Pick one snare hit and follow it. It repeats, and each repeat is slightly duller and slightly less in tune than the one before, because it is a tape loop wearing the sound down every pass. Then listen for the places where the repeats stop dying away and start feeding on themselves, piling up into a howl before somebody pulls them back. That is a hand on a knob, decided in the moment.
-
-### 12. `e-herc-cokelarock`
-
-DJ Kool Herc, "the back-to-school jam at 1520 Sedgwick Avenue" (1973) to Coke La Rock, "shout-outs over Herc's records at Bronx parties" (1973)
-
-Nothing was recorded, so listen forward instead. Take any rap record and strip out the rhyme, the meter and the subject, and what is left underneath is a person naming friends in the room over somebody else's drums. That residue is what La Rock was doing, and it is the part that never went away.
-
-### 13. `e-getzbonfa-dilla`
-
-Stan Getz and Luiz Bonfá, "Saudade Vem Correndo" (1963) to The Pharcyde, "Runnin'" (1995)
-
-The bossa nova original moves in a steady, unhurried sway, guitar and flute trading a bright, circling phrase. Dilla chops that phrase down to a few notes and loops it tight against a harder, dustier drum break, so the same figure that once drifted now insists. Listen for how little of the original he needed to take before it was recognisably his.
-
-### 14. `e-stones-verve`
-
-The Rolling Stones, "The Last Time" (1965) to The Verve, "Bitter Sweet Symphony" (1997)
-
-Start with the Stones' 'The Last Time': a jangly guitar riff and a pop song. Then play 'Bitter Sweet Symphony'. The loop isn't from the Stones' record at all but from an orchestral version made by their former manager, a few bars of strings repeating. Listen for the Stones' tune hidden inside the strings. That hidden tune cost the Verve the song for twenty years.
-
-### 15. `e-trax-phuture`
-
-Phuture, "Acid Tracks, as played by Ron Hardy at the Music Box" (1987) to Phuture, "Acid Tracks" (1987)
-
-The record is a long TB-303 bassline twisting and squelching over a drum machine, with the filter being opened and closed by hand as it plays. Listen for how the same short pattern keeps changing tone without changing notes. That squelch had been heard only at Ron Hardy's Music Box on bootleg tapes until Trax put it on vinyl and made it available everywhere.
-
-### 16. `e-sheffieldidm-aphextwin`
-
-Aphex Twin, "Digeridoo" (1992) to Aphex Twin, "Xtal" (1992)
-
-'Digeridoo' is still built for a dancefloor's low end, a club record with a rave lineage. 'Xtal', on the same year's 'Selected Ambient Works 85-92' and the kind of track 'Artificial Intelligence' pointed to, floats without a beat built for dancing at all. The same year, two different destinations.
-
-### 17. `e-baker-bambaataa`
-
-Afrika Bambaataa and the Jazzy 5, "Jazzy Sensation" (1981) to Afrika Bambaataa and the Soulsonic Force, "Planet Rock" (1982)
-
-Both records are Baker productions for Bambaataa on Tommy Boy, and both are built the same way: somebody else's music, replayed in the studio instead of sampled. The 'Jazzy Sensation' sleeve credits the song to Kenton Nix, who wrote Gwen Guthrie's 'Funky Sensation', and the music to a studio band. A year later 'Planet Rock' does the same thing to two Kraftwerk records, with a Roland TR-808 doing the drumming. Listen for the borrowed tune in each, and for how much harder and emptier the 1982 record sounds.
-
-### 18. `e-talmy-who`
-
-The Kinks, "You Really Got Me" (1964) to The Who, "I Can't Explain" (1965)
-
-Same producer, same short riff-and-compression approach, a year apart. The Who ask for the Kinks' sound specifically, and Talmy is the person who could actually supply it.
-
-### 19. `e-memphisstax-charmels`
-
-Sam & Dave, "Hold On, I'm Comin'" (1966) to The Charmels, "As Long as I've Got You" (1967)
-
-Both records come from the same writing room: Hayes and Porter's melodic instinct and a horn-driven Stax arrangement. Sam & Dave's version is a full-band, up-tempo declaration; the Charmels', a year later, slows the same songwriting team's sensibility into a sadder, sparer piano ballad, the version a producer would later go looking for.
-
-### 20. `e-pablo-hughmundell`
-
-Hugh Mundell, "First sessions at Pablo's house" (1976) to Hugh Mundell, "Africa Must Be Free By 1983" (1978)
-
-Pablo's melodica and mixing sensibility, the same spring reverb and space he used on his own instrumental records, sits underneath a teenager's voice and lyrics rather than around Pablo's own playing. Listen for how much room the vocal is given inside a production style built for instrumentals.
+Kool G Rap's 'Road to the Riches' tells a detailed street story in dense, internally rhyming lines, delivered fast and precise. 'N.Y. State of Mind', from 'Illmatic', tells a similarly detailed street story with the same density of internal rhyme, though at a more measured pace. Listen for how much narrative detail each packs into a verse. That density, applied to crime and consequence rather than boasting, is the technique critics trace from G Rap to Nas.

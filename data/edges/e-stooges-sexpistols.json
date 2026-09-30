@@ -1,0 +1,28 @@
+{
+  "id": "e-stooges-sexpistols",
+  "from": "the-stooges",
+  "to": "sex-pistols",
+  "type": "cover",
+  "confidence": "documented",
+  "year": 1977,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'Pretty Vacant': the single was released by Virgin on 1 July 1977 and its B-side was a cover of the Stooges' 'No Fun' (from 'The Stooges', 1969), taken from the band's earlier demo sessions with Dave Goodman rather than a new recording.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Stooges",
+      "title": "No Fun",
+      "year": 1969
+    },
+    "later": {
+      "artist": "Sex Pistols",
+      "title": "No Fun",
+      "year": 1977
+    },
+    "whatToListenFor": "The Stooges' version is slow, loose and bored-sounding on purpose, with handclaps and a guitar solo that wanders off. The Sex Pistols play the same two chords faster and harder, with Johnny Rotten sneering instead of drawling. Listen for how little they changed the song itself. They sped it up and made it angrier, which is close to a one-line description of what British punk did to the Stooges."
+  },
+  "explanation": {
+    "age13": "The Sex Pistols put their version of the Stooges' song 'No Fun' on the back of their single 'Pretty Vacant' in 1977. The Stooges had recorded it eight years earlier in Michigan, and hardly anyone had bought it.",
+    "adult": "A cover edge with a label date on it, which makes it the cleanest documentation on the map of the Stooges-to-London line. The recording came from the Pistols' demo sessions, so it is closer to how they played live than their polished Chris Thomas singles."
+  },
+  "tags": []
+}

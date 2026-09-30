@@ -1,0 +1,44 @@
+{
+  "id": "tom-tom-club",
+  "name": "Tom Tom Club",
+  "sortName": "Tom Tom Club",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1981,
+  "activeTo": null,
+  "originCity": "Nassau",
+  "originCountry": "Bahamas",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "sire-records",
+      "from": 1981,
+      "to": null
+    },
+    {
+      "labelId": "island",
+      "from": 1981,
+      "to": null
+    }
+  ],
+  "keyProducers": [
+    "Steven Stanley"
+  ],
+  "hook": "Talking Heads' rhythm section on a side project, whose 'Genius of Love' became one of the most reused hooks in hip-hop.",
+  "blurb": {
+    "age13": "Tina Weymouth and Chris Frantz, Talking Heads' bass player and drummer, made a side project at Compass Point Studios in the Bahamas between 1980 and 1981. Their song 'Genius of Love' name-checks funk and reggae heroes, and it went to number two on the US R&B chart. Rappers picked it up straight away: Grandmaster Flash and the Furious Five had a band replay it in 1982, and Mariah Carey sampled it in 1995.",
+    "adult": "Recorded at Compass Point Studios in Nassau between November 1980 and April 1981 and produced by Frantz, Weymouth and engineer Steven Stanley, with Tyrone Downie on keyboards and Adrian Belew on guitar. Released on Sire in the US and Island in the UK. 'Genius of Love' reached number one on the US dance chart and number two on the R&B chart, and was interpolated almost at once, by Dr. Jeckyll & Mr. Hyde (1981) and Grandmaster Flash and the Furious Five (1982). Its lyric lists George Clinton, Bootsy Collins, James Brown, Bob Marley and Sly and Robbie among others, several of them on this map. 'Fantasy' (Mariah Carey, 1995) and 'Big Energy' (Latto, 2021) sample it."
+  },
+  "signatureTracks": [
+    {
+      "title": "Genius of Love",
+      "year": 1981,
+      "whyThisOne": "The hook hip-hop kept coming back to."
+    },
+    {
+      "title": "Wordy Rappinghood",
+      "year": 1981,
+      "whyThisOne": "The band's first single, a half-rapped novelty that was a bigger hit in Europe than 'Genius of Love'."
+    }
+  ]
+}

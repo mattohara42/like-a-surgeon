@@ -1,0 +1,43 @@
+{
+  "id": "talking-heads",
+  "name": "Talking Heads",
+  "sortName": "Talking Heads",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1975,
+  "activeTo": 1991,
+  "originCity": "New York",
+  "originCountry": "USA",
+  "scenes": [
+    "new-york-punk"
+  ],
+  "labels": [
+    {
+      "labelId": "sire-records",
+      "from": 1976,
+      "to": 1991
+    }
+  ],
+  "keyProducers": [
+    "brian-eno",
+    "Tony Bongiovi",
+    "Lance Quinn"
+  ],
+  "hook": "An art-school band from the CBGB stage that, with Brian Eno, rebuilt rock songs out of repeating loops played by hand.",
+  "blurb": {
+    "age13": "David Byrne and Chris Frantz met at art school in Rhode Island, then moved to New York with Tina Weymouth. Their first show was at CBGB in June 1975, opening for the Ramones. After their first album, Brian Eno produced their next three. On 'Remain in Light' (1980) they recorded long jams, picked out the best short bits, and learned to play those bits over and over, building songs out of loops the way a producer with a sampler later would.",
+    "adult": "Byrne and Frantz met at the Rhode Island School of Design; with Weymouth they played their first show at CBGB on 5 June 1975, opening for the Ramones, and signed to Sire in November 1976, with Jerry Harrison joining in 1977. Brian Eno produced 'More Songs About Buildings and Food' (1978), 'Fear of Music' (1979) and 'Remain in Light' (1980). The last was modelled on Fela Kuti's Afrobeat records and built from edited jam loops, and its credits caused a lasting dispute: the released sleeve credited the songs to Byrne and Eno, and other members have said they felt cut out of work they did together. Later editions credit the whole band. Talking Heads ended in 1991."
+  },
+  "signatureTracks": [
+    {
+      "title": "Psycho Killer",
+      "year": 1977,
+      "whyThisOne": "From the pre-Eno debut, the CBGB band as it sounded then."
+    },
+    {
+      "title": "Once in a Lifetime",
+      "year": 1980,
+      "whyThisOne": "Built from a loop the band learned to play by hand, produced by Eno."
+    }
+  ]
+}

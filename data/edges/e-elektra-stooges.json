@@ -1,0 +1,31 @@
+{
+  "id": "e-elektra-stooges",
+  "from": "elektra",
+  "to": "the-stooges",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1968,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on the Stooges: Elektra sent Danny Fields to sign the MC5 in 1968, and the trip produced contracts for both bands, $20,000 for the MC5 and $5,000 for the Stooges. Wikipedia's article on 'The Stooges' (album): John Cale produced it at the Hit Factory in April 1969; Elektra rejected Cale's mix and the released mix was done by Iggy Pop and Elektra president Jac Holzman; when Holzman said the band needed more material, they wrote three new songs during the five-day sessions.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The MC5",
+      "title": "Kick Out the Jams",
+      "year": 1969
+    },
+    "later": {
+      "artist": "The Stooges",
+      "title": "I Wanna Be Your Dog",
+      "year": 1969
+    },
+    "whatToListenFor": "Both are Elektra records from 1969 by Michigan bands signed on the same trip. The MC5 is a live record, fast and political. The Stooges' 'I Wanna Be Your Dog' is slower and simpler: three chords, a fuzz guitar, and one piano note struck over and over by the producer, John Cale of the Velvet Underground. Listen for that piano; it is the Velvets' drone carried into Michigan rock by the man who played it in New York."
+  },
+  "explanation": {
+    "age13": "Elektra Records sent someone to Michigan to sign one band, the MC5, and signed the Stooges too, for a quarter of the money. Elektra then chose John Cale from the Velvet Underground to produce their first album, and asked for more songs, so the band wrote three new ones in the studio.",
+    "adult": "The label edge that ties two new nodes together: Elektra's choice of Cale as producer put a Velvet Underground member behind the Stooges' debut. It also shows the label's hand in the finished record, since Elektra rejected Cale's mix and its president remixed the album with Iggy Pop. The $5,000 advance is a fair measure of how little anyone expected."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

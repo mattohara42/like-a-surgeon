@@ -1,0 +1,28 @@
+{
+  "id": "e-velvets-bowie",
+  "from": "the-velvet-underground",
+  "to": "david-bowie",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1966,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'I'm Waiting for the Man': in December 1966 Bowie's manager Kenneth Pitt brought back from New York an acetate of the still-unreleased first Velvet Underground album. Bowie taught the song to his band the Buzz and was playing it live within a week, and recorded it with the Riot Squad on 5 April 1967. 'Queen Bitch' on 'Hunky Dory' (1971) was written as a Velvet Underground tribute, and the album's handwritten sleeve note under the song thanks the V.U. by name (Wikipedia's article on 'Queen Bitch'). Bowie went on to co-produce Lou Reed's 'Transformer' (1972).",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Velvet Underground",
+      "title": "I'm Waiting for the Man",
+      "year": 1967
+    },
+    "later": {
+      "artist": "David Bowie",
+      "title": "Queen Bitch",
+      "year": 1971
+    },
+    "whatToListenFor": "Listen to the guitars. 'I'm Waiting for the Man' is one chord chugged over and over, with a piano hammering the same beat and Lou Reed half-speaking the words. 'Queen Bitch' borrows that flat, deadpan, talked-not-sung delivery and the chugging rhythm guitar, then adds Mick Ronson's bigger, brighter rock sound on top. It is Bowie doing a Velvet Underground song on purpose, and saying so on the sleeve."
+  },
+  "explanation": {
+    "age13": "Bowie's manager brought back an early copy of the Velvet Underground's first album from New York in December 1966, before it was even in the shops. Bowie was playing one of its songs on stage within a week. Five years later he wrote 'Queen Bitch' as a tribute to them and thanked them on the album sleeve.",
+    "adult": "Documented from both ends: the acetate and the live cover date the influence to before the record was released, and the 'Hunky Dory' sleeve acknowledges it in print. The edge is also a reminder that the Velvets' audience was small but included the right people, which is the part of the 30,000-copies legend that holds up."
+  },
+  "tags": []
+}

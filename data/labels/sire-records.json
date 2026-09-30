@@ -1,0 +1,16 @@
+{
+  "id": "sire-records",
+  "name": "Sire Records",
+  "type": "label",
+  "lineage": "rock",
+  "foundedYear": 1966,
+  "closedYear": null,
+  "city": "New York",
+  "founders": "Seymour Stein and Richard Gottehrer",
+  "ownershipStory": "Founded in 1966 by Seymour Stein and Richard Gottehrer, each putting in $10,000, at first to bring British underground bands to American listeners. It signed the Ramones in 1975 and Talking Heads in 1976, took Warner Bros. distribution in 1977, and was bought outright by Warner Bros. in 1978, which is why its biggest act, Madonna, signed in 1982, is a Warner story too. It later moved to Elektra distribution (1994), was briefly independent (1997) and merged with London Records (2000 to 2003) before returning to Warner. Stein left in 2018 after 51 years.",
+  "hook": "A small New York label that signed the Ramones and Talking Heads out of CBGB, then Madonna out of a nightclub.",
+  "blurb": {
+    "age13": "Seymour Stein and Richard Gottehrer started Sire in New York in 1966. In the mid-1970s it signed bands from the CBGB club, including the Ramones and Talking Heads. In 1978 Warner Bros. bought it. In 1982 Sire signed a young singer from the club Danceteria, Madonna, who became its biggest star.",
+    "adult": "Sire's value to this map is its ear for rooms: CBGB in 1975 and 1976, and Danceteria in 1982. It was already owned by Warner Bros. by the time Madonna signed, so its most profitable act made money for a major. Its founders each put in $10,000 in 1966, and Stein stayed with it or its parent for 51 years."
+  }
+}

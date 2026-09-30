@@ -1,0 +1,30 @@
+{
+  "id": "e-bowie-stooges",
+  "from": "david-bowie",
+  "to": "the-stooges",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1972,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'Raw Power': recorded at CBS Studios in London in September and October 1972. Iggy Pop's own mix put most instruments in one channel and the vocal in the other, and Tony DeFries of MainMan, which managed both Bowie and Iggy, had Bowie remix it. Bowie remixed the album in a single day at Western Sound Recorders in Los Angeles in October 1972 for budget reasons. Released by Columbia on 7 February 1973, with Bowie and Iggy Pop credited for the mix.",
+  "trackPair": {
+    "earlier": {
+      "artist": "David Bowie",
+      "title": "The Jean Genie",
+      "year": 1972
+    },
+    "later": {
+      "artist": "Iggy and the Stooges",
+      "title": "Search and Destroy",
+      "year": 1973
+    },
+    "whatToListenFor": "Listen to how thin and sharp 'Raw Power' sounds: the guitars are loud but trebly, the bass is low in the mix, and the whole thing feels crushed together rather than big. That is partly the result of one day's remix on a small budget. Fans have argued about it for fifty years; Iggy remixed it himself in 1997 to sound heavier. Compare 'The Jean Genie', Bowie's own blues-riff single from the same months, which is polished and roomy. Bowie did not make the Stooges sound like him."
+  },
+  "explanation": {
+    "age13": "Iggy Pop's first mix of 'Raw Power' put almost all the instruments on one side of the stereo and his voice on the other. The management company that looked after both him and Bowie had Bowie remix it instead, and he did it in one day in a cheap Los Angeles studio.",
+    "adult": "The production edge is real but narrow: Bowie mixed the record, he did not produce the sessions, and the mix itself was a salvage job done fast under budget pressure from the management company both men were signed to. That constraint is why the record sounds the way it does, and it is why the 1997 Iggy Pop remix exists."
+  },
+  "tags": [
+    "production"
+  ]
+}
