@@ -3727,3 +3727,10 @@ small and worth having in front of Matt alongside everything else here.
   - **Madonna's `labels` array was left empty**, although
     `e-sire-madonna` now exists, because her end date with Sire and
     Warner was not checked. The edge carries the claim.
+- **A299. Source candidates.** Matt asked whether to use Spotify and what
+  other sources exist. The answer is in `docs/sources.md` under
+  "Candidates, not yet used": SecondHandSongs (needs a key), MusicBrainz
+  relationships (reachable, leads only), and four hosts to allow (RBMA,
+  Tape Op, Sound On Sound, the Library of Congress registry). Spotify,
+  WhoSampled, AllMusic, Rate Your Music and Last.fm are recorded as
+  considered and left out, with the reason.

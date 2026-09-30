@@ -43,6 +43,33 @@ already suspect rather than for finding one.
 we do not have. It is the right source for `cover` edges and for who
 recorded a song first, once the key arrives.
 
+## Candidates, not yet used
+
+Proposed on 2026-09-30 (A299). None of these is used yet. The ones marked
+"needs a host" wait for Matt to add the domain to the environment's
+allowed hosts.
+
+| Source | Good for | Status |
+|---|---|---|
+| SecondHandSongs API | `cover` edges, and who recorded a song first | Host reachable. Needs an API key, which Matt would request |
+| MusicBrainz relationships | Producer credits and "samples material" links between recordings, CC0, so a tool could list candidate `sample` and `production` edges in bulk | Reachable now. Leads only: a relationship is a place to look, and the sleeve or an account settles it |
+| Red Bull Music Academy lectures | Long, named, dated interviews with producers and DJs, the kind of first-hand account that can make an edge `documented` | Needs a host (`www.redbullmusicacademy.com`, `daily.redbullmusicacademy.com`) |
+| Tape Op | Producer and engineer interviews, session detail | Needs a host (`tapeop.com`) |
+| Sound On Sound archive | Dated contemporary coverage of gear and studio technique, for machine edges | Needs a host (`www.soundonsound.com`) |
+| Library of Congress National Recording Registry | Short, careful essays on individual records | Needs a host (`www.loc.gov`) |
+
+Considered and left out:
+
+- **Spotify.** Its data is co-listening and popularity, which is not
+  influence. Its related-artists and audio-features endpoints were
+  closed to new apps in November 2024, and the proxy refuses the host.
+- **WhoSampled.** The best sample catalogue, but no public API, terms
+  that restrict scraping, and the proxy refuses the host. Fine as a
+  lead a person follows up by hand, as A191 did.
+- **AllMusic, Rate Your Music, Last.fm.** No usable API or terms that
+  bar scraping, and Last.fm's "similar artists" measures listening,
+  not lineage.
+
 ## Running the checks again
 
 `npm run crosscheck` does the mechanical part of the first pass: it
