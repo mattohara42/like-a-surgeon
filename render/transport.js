@@ -177,12 +177,24 @@ export function createTransport(root, layout, nodes, edges, onYearChange, initia
 
   scrub.addEventListener('keydown', (e) => {
     const step = e.shiftKey ? CONFIG.transport.shiftStepYears : CONFIG.transport.stepYears;
-    if (e.key === 'ArrowLeft') setYear(year - step);
-    else if (e.key === 'ArrowRight') setYear(year + step);
-    else if (e.key === ' ' || e.key === 'Enter') (timer ? stop() : play());
-    else return;
+    // Space and Enter toggle play. Every other key moves the cursor by
+    // hand, which stops play first. (Stopping after the toggle, as this
+    // once did, meant the keyboard could never start play.)
+    if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      if (!e.repeat) timer ? stop() : play();
+      return;
+    }
+    const target =
+      e.key === 'ArrowLeft' ? year - step
+      : e.key === 'ArrowRight' ? year + step
+      : e.key === 'Home' ? minYear
+      : e.key === 'End' ? maxYear
+      : null;
+    if (target === null) return;
     e.preventDefault();
     stop();
+    setYear(target);
   });
 
   paint();
