@@ -1,0 +1,35 @@
+{
+  "id": "the-yardbirds",
+  "name": "The Yardbirds",
+  "sortName": "Yardbirds, The",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1963,
+  "activeTo": 1968,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [
+    "swinging-london"
+  ],
+  "labels": [],
+  "keyProducers": [
+    "Giorgio Gomelsky"
+  ],
+  "hook": "A London blues band that went through Eric Clapton, Jeff Beck and Jimmy Page in five years, and turned into Led Zeppelin.",
+  "blurb": {
+    "age13": "The Yardbirds formed in southwest London in 1963 and took over from the Rolling Stones as the house band at the Crawdaddy Club in Richmond. They backed the American blues singer Sonny Boy Williamson on tour. Three famous guitarists passed through: Eric Clapton, who left in 1965 because the band was going pop; Jeff Beck, who experimented with fuzz and feedback; and Jimmy Page. In 1968 Page's version of the band became the New Yardbirds, and then Led Zeppelin.",
+    "adult": "Formed in southwest London in 1963 out of the Metropolitan Blues Quartet; manager Giorgio Gomelsky made them the Crawdaddy Club's house band after the Rolling Stones and set up tours backing Sonny Boy Williamson in 1963 and 1964. Clapton left in March 1965 over the pop direction of 'For Your Love'; Jeff Beck (1965 to 1966) brought fuzz tone and feedback, and Jimmy Page (1966 to 1968) the bowed guitar. On their first US tour they recorded 'Train Kept A-Rollin'' in Memphis in September 1965 with Sam Phillips engineering. In 1968 the remaining line-up toured Scandinavia as the New Yardbirds and became Led Zeppelin that October."
+  },
+  "signatureTracks": [
+    {
+      "title": "For Your Love",
+      "year": 1965,
+      "whyThisOne": "The pop hit Clapton left over."
+    },
+    {
+      "title": "Train Kept A-Rollin'",
+      "year": 1965,
+      "whyThisOne": "Recorded in Memphis with Sam Phillips at the desk, and the first song Led Zeppelin ever played together."
+    }
+  ]
+}

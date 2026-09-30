@@ -1,0 +1,28 @@
+{
+  "id": "e-yardbirds-ledzeppelin",
+  "from": "the-yardbirds",
+  "to": "led-zeppelin",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1968,
+  "crossLineage": false,
+  "evidence": "Wikipedia's articles on the Yardbirds and 'Train Kept A-Rollin'': after the Yardbirds split in 1968, Jimmy Page and the new members toured Scandinavia as the New Yardbirds and became Led Zeppelin in October 1968. The first song the new line-up played together was the Yardbirds' arrangement of 'Train Kept A-Rollin'', which became their early concert opener.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Yardbirds",
+      "title": "Train Kept A-Rollin'",
+      "year": 1965
+    },
+    "later": {
+      "artist": "Led Zeppelin",
+      "title": "Communication Breakdown",
+      "year": 1969
+    },
+    "whatToListenFor": "The Yardbirds' 'Train Kept A-Rollin'' is a relentless, chugging riff with Jeff Beck's fuzz guitar over a train-like beat. 'Communication Breakdown', on Led Zeppelin's first album, runs on a similar hammering down-stroke riff at speed. Listen for the continuity: the band that played 'Train Kept A-Rollin'' at its first rehearsal kept the same engine and made it heavier."
+  },
+  "explanation": {
+    "age13": "Led Zeppelin began as the last version of the Yardbirds. When the Yardbirds broke up in 1968, Jimmy Page put together a new line-up called the New Yardbirds, and the first song they played together was the Yardbirds' 'Train Kept A-Rollin''. A few months later they renamed themselves Led Zeppelin.",
+    "adult": "A continuity edge more than an influence edge: the same guitarist, the same repertoire at the start, and a new name. It explains why Led Zeppelin arrived fully formed."
+  },
+  "tags": []
+}

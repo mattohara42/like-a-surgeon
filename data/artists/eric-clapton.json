@@ -1,0 +1,31 @@
+{
+  "id": "eric-clapton",
+  "name": "Eric Clapton",
+  "sortName": "Clapton, Eric",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1963,
+  "activeTo": null,
+  "originCity": "Ripley, Surrey",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A blues guitarist who left the Yardbirds for being too pop, was shaken by seeing Jimi Hendrix, and whose 1976 onstage support for Enoch Powell set off Rock Against Racism.",
+  "blurb": {
+    "age13": "Eric Clapton was born in Ripley, Surrey, in 1945. He played in the Yardbirds from 1963 to 1965, then in John Mayall's Bluesbreakers, and formed Cream in 1966. That year Jimi Hendrix sat in with Cream in London, and it changed Clapton's playing. In August 1976, at a concert in Birmingham, Clapton spoke in support of Enoch Powell, a politician known for speeches against immigration, and made racist statements about immigrants. Angry letters in response led to the founding of Rock Against Racism.",
+    "adult": "Born in Ripley in 1945. With the Yardbirds from October 1963, he left in March 1965 because the band was moving towards pop; his time with John Mayall's Bluesbreakers (1965 to 1966) made his name on the club circuit, and Cream (1966 to 1968) with Jack Bruce and Ginger Baker made him a star. Hendrix sat in with Cream at the Central London Polytechnic on 1 October 1966, which Wikipedia's article on Clapton describes as having an immediate and major effect on him. At a Birmingham concert in August 1976 he expressed support for Enoch Powell and made inflammatory statements about immigration; Rock Against Racism's founders cite it as the event that turned their idea into a campaign. That is part of why his name sits on this map beside the punk scene as well as the blues."
+  },
+  "signatureTracks": [
+    {
+      "title": "Crossroads (Cream)",
+      "year": 1968,
+      "whyThisOne": "A Robert Johnson blues played fast and loud: the British blues boom at arena size."
+    },
+    {
+      "title": "Layla (Derek and the Dominos)",
+      "year": 1970,
+      "whyThisOne": "His best-known record outside Cream."
+    }
+  ]
+}

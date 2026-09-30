@@ -1,0 +1,28 @@
+{
+  "id": "alexis-korner",
+  "name": "Alexis Korner",
+  "sortName": "Korner, Alexis",
+  "type": "artist",
+  "lineage": "blues",
+  "activeFrom": 1961,
+  "activeTo": 1984,
+  "originCity": "Paris",
+  "originCountry": "France",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "The bandleader whose London blues club nights were where the Rolling Stones, and half of British rock, learned to play Chicago blues.",
+  "blurb": {
+    "age13": "Alexis Korner was born in Paris in 1928 and grew up partly in London. As a boy he heard a blues piano record during a German air raid and decided the blues was all he wanted to play. In 1961 he and the harmonica player Cyril Davies formed Blues Incorporated. Young musicians came to play with them, including Charlie Watts, Mick Jagger, Keith Richards and Brian Jones, who went on to form the Rolling Stones.",
+    "adult": "Born in Paris in 1928 to an Austrian Jewish father and a mother of Greek, Turkish and Austrian descent. Blues Incorporated, formed with Cyril Davies in 1961, was a training ground: Charlie Watts, Jack Bruce and Ginger Baker played in it, and Jagger, Richards and Jones sat in. 'R&B from the Marquee' (1962) is one of the first British blues albums. He later presented BBC radio programmes, including 'The Rolling Stones Story' (1973), died in 1984, and was inducted into the Rock and Roll Hall of Fame in 2024 for musical influence, with Keith Richards presenting."
+  },
+  "signatureTracks": [
+    {
+      "title": "R&B from the Marquee",
+      "year": 1962,
+      "whyThisOne": "One of the first British blues records, by the band young London musicians learned in.",
+      "search": "Alexis Korner Blues Incorporated R&B from the Marquee"
+    }
+  ],
+  "signatureTracksNote": "Korner mattered more as a bandleader and host than as a recording artist, so one record stands for him here."
+}

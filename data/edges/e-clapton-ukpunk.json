@@ -1,0 +1,31 @@
+{
+  "id": "e-clapton-ukpunk",
+  "from": "eric-clapton",
+  "to": "uk-punk-77",
+  "type": "reaction-against",
+  "confidence": "documented",
+  "year": 1976,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Rock Against Racism: the founders, including Red Saunders and Roger Huddle, say the idea became a campaign in August 1976 after Eric Clapton, at a Birmingham concert, expressed support for Enoch Powell and made inflammatory statements about immigration; David Bowie's remarks admiring fascism in interviews that year were cited too. Their letter to the NME drew hundreds of replies. On 30 April 1978 about 100,000 people marched from Trafalgar Square to Victoria Park, Hackney, for a Rock Against Racism and Anti-Nazi League concert with the Clash, Steel Pulse, X-Ray Spex and the Tom Robinson Band.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Eric Clapton",
+      "title": "Cocaine",
+      "year": 1977,
+      "search": "Eric Clapton Cocaine"
+    },
+    "later": {
+      "artist": "The Clash",
+      "title": "White Riot",
+      "year": 1977
+    },
+    "whatToListenFor": "The two records come from the same year and opposite sides of this story. 'Cocaine' is relaxed, mid-tempo, polished rock by the most successful British guitarist of the day. 'White Riot' is ninety seconds of shouting and slashing guitar. Listen for the gap between them: the edge is not a musical borrowing but a refusal, and the Clash played the Rock Against Racism carnival that Clapton's remarks helped bring about."
+  },
+  "explanation": {
+    "age13": "In August 1976 Eric Clapton told a concert audience in Birmingham that he supported Enoch Powell, a politician who campaigned against immigration, and made racist statements about immigrants. People who were angry about it wrote to a music paper and started Rock Against Racism. In 1978 about 100,000 people marched across London to a free concert with the Clash, Steel Pulse and X-Ray Spex.",
+    "adult": "A reaction-against edge from a musician to a scene. It is on the map because the founders of Rock Against Racism name Clapton's remarks as their trigger, and the campaign shaped how UK punk understood itself politically. Stated as fact, without adjectives, per the project's rule on conduct: Clapton's influence as a guitarist and this episode are both part of the record."
+  },
+  "tags": [
+    "politics"
+  ]
+}

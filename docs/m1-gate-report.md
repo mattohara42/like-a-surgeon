@@ -8,13 +8,13 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 162 | 120 | met |
+| artists | 165 | 120 | met |
 | machines | 32 | 25 | met |
 | scenes | 21 | 20 | met |
 | labels | 35 | 30 | met |
-| edges | 333 | 350 | 95% |
+| edges | 338 | 350 | 97% |
 | threads | 6 | 5 | met |
-| crossLineageEdges | 127 | 60 | met |
+| crossLineageEdges | 128 | 60 | met |
 | edgesWithDemo | 18 | 30 | 60% |
 
 ## Counts by lineage
@@ -24,46 +24,46 @@ Every node type, since machines, scenes and labels carry a lineage too.
 | lineage | count |
 |---|---:|
 | electronic | 60 |
-| rock | 58 |
+| rock | 60 |
 | hiphop | 55 |
 | funk | 27 |
 | dub | 22 |
 | other | 19 |
 | jazz | 7 |
-| blues | 2 |
+| blues | 3 |
 
 Artists alone:
 
 | lineage | count |
 |---|---:|
 | hiphop | 43 |
-| rock | 40 |
+| rock | 42 |
 | electronic | 31 |
 | funk | 21 |
 | dub | 14 |
 | jazz | 7 |
 | other | 5 |
-| blues | 1 |
+| blues | 2 |
 
 ## Counts by edge type
 
 | edge type | count |
 |---|---:|
-| direct | 81 |
+| direct | 84 |
 | label | 54 |
 | production | 54 |
 | technological | 51 |
 | sample | 41 |
-| scene | 32 |
+| scene | 33 |
 | cover | 16 |
-| reaction-against | 3 |
+| reaction-against | 4 |
 | rediscovery | 1 |
 
 ## Counts by confidence tier
 
 | tier | count |
 |---|---:|
-| documented | 254 |
+| documented | 259 |
 | consensus | 78 |
 | asserted | 1 |
 
@@ -237,126 +237,126 @@ Evidence: The Sex Pistols and the Clash are the two foundational bands of the 19
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 332 edges that carry one.
+Drawn with seed 1 from the 337 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-honeydrippers-bizmarkie`
+### 1. `e-moog-carlos`
 
-The Honey Drippers, "Impeach the President" (1973) to Biz Markie, "Make the Music with Your Mouth, Biz" (1986)
+R. A. Moog Co., "Moog modular synthesizer" (1965) to Wendy Carlos, "Brandenburg Concerto No. 3 (Switched-On Bach)" (1968)
 
-The same year and the same producer as 'The Bridge', and the same drums. But on the Biz record they share space with a human beatbox. Listen for the 'Impeach the President' kick and snare, then for Biz's mouth-made drums answering them. It's a sampled drummer from 1973 and a man imitating a drummer in 1986, on one track.
+Listen for the attack of each note. A harpsichord or a violin has its own way of starting a sound. Here each line has a different electronic tone that Carlos set up by hand, then recorded one part at a time, because the machine played only one note at once. The parts are perfectly in time and slightly too clean. That buzzing, reedy brightness was the first synthesizer sound most listeners in 1968 had ever heard.
 
-### 2. `e-fela-talkingheads`
+### 2. `e-madlib-mfdoom`
 
-Fela Kuti, "Afrodisiac" (1973) to Talking Heads, "Born Under Punches (The Heat Goes On)" (1980)
+MF DOOM, "Doomsday" (1999) to Madvillain, "Accordion" (2004)
 
-On 'Afrodisiac', guitars, bass, horns and drums each play a short part over and over, and the song is the way they fit together. 'Born Under Punches' does the same with a New York art-rock band: several small guitar and keyboard parts, each simple, locked together into one moving pattern. Listen for how no single instrument carries the tune. That is the Afrobeat method, borrowed.
+On 'Doomsday' DOOM produces himself, looping a smooth, sweet phrase from Sade's 'Kiss of Life' under his flat, unhurried voice. On 'Accordion' Madlib gives him something stranger: a wheezing, reedy loop that sounds like an accordion but was played on a cheap electric chord organ. Listen for how the rougher, odder beat pushes DOOM's rhyming, dense chains of internal rhyme packed into a short verse over one repeating figure.
 
-### 3. `e-jamesbrown-fela`
+### 3. `e-tubby-pil`
 
-James Brown, "Cold Sweat" (1967) to Fela Kuti, "Zombie" (1976)
+King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Public Image Ltd, "Careering" (1979)
 
-'Cold Sweat' is built on short, choppy guitar and horn figures locked to a drum pattern, with almost no chord changes. 'Zombie' takes the same idea and stretches it out for twelve minutes: two guitars playing small interlocking parts, a horn section punching riffs, and Tony Allen's drums running several patterns at once. Listen for what Afrobeat keeps from funk, the one-chord groove, and what it adds, the length and the layering.
+Both records put the bass where you would expect the voice and leave large holes elsewhere. In the Tubby track, instruments vanish and reappear. In the PiL track they never arrive in the first place. Same architecture, opposite method.
 
-### 4. `e-perry-sherwood`
+### 4. `e-marleymarl-ericbrakim`
 
-Lee "Scratch" Perry, "Black Ark productions" (1976) to African Head Charge, "My Life in a Hole in the Ground" (1981)
+MC Shan, "The Bridge (produced by Marley Marl)" (1986) to Eric B. & Rakim, "Eric B. Is President" (1986)
 
-Both records treat the mix itself as the instrument: sounds appear and vanish, echo is pushed to the point of distortion, and the 'song' is really a shifting arrangement rather than a fixed structure.
+Play them back to back and compare the drums. Both are built on hard, sampled breaks cut into short, repeating loops, with a heavy low end and very little else, which is the Queensbridge room sound of 1986. Then listen to the voice on top. MC Shan is loud and pushing forward. Rakim is calm, slightly behind the beat, and packs rhymes into the middle of his lines. Same kind of beat, and a completely different way of rapping on it.
 
-### 5. `e-sire-ramones`
+### 5. `e-mjackson-nas`
 
-Ramones, "Judy Is a Punk" (1976) to Ramones, "Sheena Is a Punk Rocker" (1977)
+Michael Jackson, "Human Nature" (1982) to Nas, "It Ain't Hard to Tell" (1994)
 
-The first album was made fast and cheap, and it sounds it: dry drums, guitars panned hard to one side, almost no overdubs. A year later, with Sire now distributed by Warner Bros., 'Sheena Is a Punk Rocker' has a cleaner, fuller sound and a surf-pop chorus aimed at radio. Listen for the label's ambition growing in the sound, while the song stays under three minutes.
+Jackson's original glides on a bright, synth-and-guitar hook under a falsetto vocal. Large Professor pulls just that hook, loops it, and drops it under a much harder, dustier drum break, so the same shimmering figure that once sat inside a pop ballad now underlines nineteen-year-old Nas's dense, image-packed verses.
 
-### 6. `e-kevinsaunderson-chezdamier`
+### 6. `e-mpc60-premier`
+
+Akai, "MPC60, sixteen pads and a sequencer" (1988) to Gang Starr, "Moment of Truth" (1998)
+
+Listen to the drums. Each hit is a single, short, tightly trimmed sound, a kick, a snare, a hat, played from the pads rather than looped as a chunk of someone else's drummer. That is why they sound so punchy and separate. Then listen to the sample on top. It has been cut into small pieces and replayed in a new order, so you hear a phrase you almost recognise that never quite goes where the original did.
+
+### 7. `e-mutron-perry`
+
+Musitronics, "Mu-Tron Bi-Phase" (1975) to The Congos, "Heart of the Congos" (1977)
+
+Put on the album and follow the cymbals and hi-hats. At points they begin to swirl, a hollow whoosh like a jet passing overhead, rising and falling at a speed that drifts instead of repeating evenly. That is the phaser, and the uneven speed is a hand on the control rather than a setting.
+
+### 8. `e-kinks-who`
+
+The Kinks, "You Really Got Me" (1964) to The Who, "I Can't Explain" (1965)
+
+The same trick in both: a short chord shape shoved up the neck, no bass movement underneath, and the riff repeated with almost no variation. Then listen to the drums. The Kinks keep time. Keith Moon refuses to, and that difference is the whole future of the Who.
+
+### 9. `e-lagangstarap-nwa`
+
+Ice-T, "6 in the Mornin'" (1986) to N.W.A, "Fuck tha Police" (1988)
+
+'6 in the Mornin'' is a bare drum machine pattern with Ice-T telling a long story in a flat, conversational voice, starting with police at the door at dawn. 'Fuck tha Police' takes the same subject and stages it as a courtroom, with members of the group taking turns as witnesses. The beat is much busier, with sampled funk drums and scratching. Listen for the spoken courtroom interruptions between verses: the record is built like a scene from a film, not just a rap over a beat.
+
+### 10. `e-tubby-scientist`
+
+King Tubby, "Home-built mixing desk, Waterhouse" (1968) to Scientist, "Scientist Rids the World of the Evil Curse of the Vampires" (1981)
+
+Tubby's own dub instrumentals treat the desk as an instrument played live, dropping instruments in and out and pushing the spring reverb hard. A decade later, mixing at the same studio, Scientist applies the identical toolkit, echo, filtering, sudden drop-outs, to a new decade's rhythms, with a themed album concept built on top.
+
+### 11. `e-kevinsaunderson-chezdamier`
 
 The Music Institute, "Club residencies, 1988-89" (1988) to Chez Damier, "Can You Feel It" (1992)
 
 There is no early Damier record to compare against; the claim here is about proximity, not a specific production choice. 'Can You Feel It' arrived four years after the two men shared a DJ booth, made inside the label Saunderson ran.
 
-### 7. `e-kraftwerk-planetrock`
+### 12. `e-warp-aphextwin`
 
-Kraftwerk, "Trans-Europe Express" (1977) to Afrika Bambaataa & Soulsonic Force, "Planet Rock" (1982)
+Aphex Twin, "Xtal" (1992) to Polygon Window, "Quoth" (1993)
 
-Hum the Kraftwerk melody, then play 'Planet Rock'. It is the same line, faster and harder. Underneath, the rhythm is lifted from a different Kraftwerk track entirely, and the drum sounds come from an 808. Three separate sources welded into one record.
+'Xtal' is soft and hazy: a gentle beat, a floating voice, and hiss from the cassette it was made on. 'Quoth', from the Polygon Window album on Warp, keeps the home-made feel but puts it in a harder frame. One pounding, tuneless drum pattern repeats, and the sound is layered like a record made for headphones, not a club. Listen for the difference between a track that happens to be quiet and one released on purpose to be listened to closely.
 
-### 8. `e-mpc3000-dilla`
+### 13. `e-herc-flash`
 
-Akai, "MPC3000, sequencer with quantise" (1994) to Slum Village, "Fall in Love" (2000)
+DJ Kool Herc, "park jams and rec-room parties, the merry-go-round" (1973) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
 
-A quantise setting moves every drum hit onto the nearest point of a grid, so a beat stays perfectly even. Listen to 'Fall in Love' with that in mind. The kick drums do not land where a grid would put them: some come early, some late. The beat seems to stagger and yet it grooves, because the unevenness repeats. That is a person refusing the machine's correction on the machine itself.
+Listen for precision, because that is the whole difference. Herc's idea is that the break repeats. Flash's contribution is that the repeat lands exactly where the next bar would have started, so the loop is seamless and you stop noticing there are two records. On 'Wheels of Steel' the joins are so tight that the record sounds composed rather than performed, which is the point Flash was chasing.
 
-### 9. `e-kraftwerk-may`
+### 14. `e-flash-theodore`
 
-Kraftwerk, "Numbers" (1981) to Rhythim Is Rhythim, "Strings of Life" (1987)
+Grandmaster Flash, "quick-mix theory at Bronx jams" (1975) to Grand Wizzard Theodore, "the scratch" (1975)
 
-Kraftwerk's rhythm is rigid and repeats without variation. May keeps the rigidity in the drums but layers a string figure that swells and falls, funk phrasing riding on top of a Kraftwerk-style engine.
+Flash's technique is about making the join invisible: you should not hear the second record arrive. Theodore's does the opposite and makes the hand audible on purpose. Listen for that inversion, because it is the moment the turntable stops pretending to be a playback device and starts admitting it is being operated.
 
-### 10. `e-mt40-princejammy`
+### 15. `e-littlerichard-beatles`
 
-Casio, "MT-40 'rock' rhythm preset" (1981) to Wayne Smith, "Under Mi Sleng Teng" (1985)
+Little Richard, "Long Tall Sally" (1956) to The Beatles, "Long Tall Sally" (1964)
 
-The entire backing track is the MT-40's unmodified preset: no live drums, no live bass, just a cheap home keyboard's demo rhythm sped up and run underneath the vocal. It sounds nothing like the analogue dub coming out of Jammy's own former workplace, King Tubby's studio, a decade earlier.
+Listen to the singing. Little Richard's 'Long Tall Sally' is shouted at the top of his range, with a scream before the sax solo. Paul McCartney's version copies the shout and the scream almost exactly, and he learned them from the man himself in 1962. The band plays it fast and tight behind him.
 
-### 11. `e-marleymarl-bizmarkie`
+### 16. `e-twotone-madness`
 
-MC Shan, "The Bridge (produced by Marley Marl)" (1986) to Biz Markie, "Make the Music with Your Mouth, Biz" (1986)
+Madness, "The Prince" (1979) to Madness, "One Step Beyond" (1979)
 
-Both records are Marley Marl building on sampled drums in the same year. The difference on the Biz record is that one of the instruments is a person. Listen for the beatboxing: kicks, snares and hisses made with Biz's mouth, sitting alongside the drums Marl has pulled off records. Try to hear where the machine stops and the mouth starts. Part of the joke of the track is that it is sometimes hard to tell.
+'The Prince', the 2 Tone single, is a quick, cheerful ska tribute. 'One Step Beyond', on Stiff a few months later, is bigger and more theatrical. Listen for a band using one single on a sympathetic small label as a launch pad, which is exactly what 2 Tone's contracts were designed to allow.
 
-### 12. `e-tubby-lee`
+### 17. `e-ramones-ukpunk`
 
-King Tubby, "early dub plates for Duke Reid" (1968) to Bunny Lee productions, dubbed by King Tubby, "various" (1974)
+Ramones, "Blitzkrieg Bop" (1976) to The Damned, "New Rose" (1976)
 
-Lee's productions from the mid-1970s onward routinely exist in two forms: a vocal version, and a King Tubby dub cut sold or played separately. The dub cut is where the empty space and echo live.
+'Blitzkrieg Bop' is fast, even and relentless, every chord hit the same way, no guitar solo. 'New Rose', released in October 1976 as the first British punk single, runs at a similar sprint with a drum roll to start and barely a pause after. Listen to the tempo more than anything else. The claim on this edge is about speed: British bands already existed, and the Ramones showed them how fast and short a song could go.
 
-### 13. `e-parliamentfunkadelic-dre`
+### 18. `e-bowie-nirvana`
 
-Parliament, "Mothership Connection (Star Child)" (1976) to Dr. Dre, "Let Me Ride" (1993)
+David Bowie, "The Man Who Sold the World" (1970) to Nirvana, "The Man Who Sold the World" (1994)
 
-Listen for the chorus. Parliament's 'Mothership Connection' ends on a slow, sung chant about swinging down in a chariot. 'Let Me Ride' re-sings that chant as its own hook over a slow, rolling G-funk beat with a high synthesiser whine. The tempo is laid back, the bass is deep, and the P-Funk chorus sits on top like a familiar voice from a car radio. That is G-funk's method: replay and re-sing the funk records rather than just loop them.
+Bowie's original is glam-adjacent art rock with a clean, almost detached vocal. Nirvana's version, acoustic guitars and Cobain's rawer, more strained voice, turns the same melody considerably more haunted, recorded only months before his death.
 
-### 14. `e-jamal-delasoul`
+### 19. `e-808-manparrish`
 
-Ahmad Jamal, "Swahililand" (1974) to De La Soul, "Stakes Is High" (1996)
+Roland, "TR-808 factory voices" (1980) to Man Parrish, "Hip Hop, Be Bop (Don't Stop)" (1982)
 
-'Swahililand' runs for almost ten minutes. Play some of it, then play 'Stakes Is High' and listen for the short piece of it that Jay Dee kept and repeated. Then listen to his drums: they sit slightly off the grid, some hits a little early and some a little late, which is the feel he became known for.
+Almost the entire record is 808 and synthesizer, with the drum machine given none of the studio disguise a live band would demand. Compare the cowbell and clap to 'Planet Rock' and they are close to identical factory sounds.
 
-### 15. `e-lamonteyoung-velvets`
+### 20. `e-bobjames-rundmc`
 
-La Monte Young, "Trio for Strings" (1958) to The Velvet Underground, "Venus in Furs" (1967)
+Bob James, "Take Me to the Mardi Gras" (1975) to Run-D.M.C., "Peter Piper" (1986)
 
-Young's trio holds single notes for a very long time, so you stop hearing a tune and start hearing the sound itself. On 'Venus in Furs' listen for John Cale's viola: it saws away on one high, scraping drone under the whole song, never really playing a melody. That is the Theatre of Eternal Music's held note, amplified and dropped into a rock song.
-
-### 16. `e-metroplex-saunderson`
-
-Model 500, "No UFO's" (1985) to Kreem, "Triangle of Love" (1986)
-
-The first Metroplex record and the seventh. 'No UFO's' is Atkins alone. 'Triangle of Love' is the first record Saunderson made, with Atkins, and the 12-inch carries a vocal version, a dub and an instrumental. Play the vocal and the dub one after the other: the same track with the song taken out, so that a DJ gets a tool as well as a tune.
-
-### 17. `e-chess-stones`
-
-The Rolling Stones, "It's All Over Now" (1964) to The Rolling Stones, "(I Can't Get No) Satisfaction" (1965)
-
-'It's All Over Now', cut in the same Chess sessions, is still a cover, a Bobby Womack song reworked. 'Satisfaction', less than a year later, is the band's own riff and words, written not long after standing in the room where the blues records they'd been copying were actually made.
-
-### 18. `e-radiophonic-oram`
-
-BBC Radiophonic Workshop, "founding, 1958" (1958) to Daphne Oram, "independent Oramics studio" (1959)
-
-There's no shared recording to compare here: Oram fought to get the Workshop opened, then left it almost immediately for a studio of her own. Listen instead to what she built next: Oramics turned drawn shapes on film into sound, with no keyboard or tape splicing at all, a technique nobody else in Britain had. Leaving is what let her build it.
-
-### 19. `e-minimoog-kraftwerk`
-
-Moog Music, "Minimoog Model D" (1970) to Kraftwerk, "Autobahn" (1974)
-
-Listen to the bass and try to find a player in it. There is no fret noise, no finger on a string, no note arriving a fraction late because a hand had to move. Every note has the same attack as the one before. That evenness is not a limitation being worked around, it is the subject: a record about driving, played by something that does not get tired.
-
-### 20. `e-bobjames-tribe`
-
-Bob James, "Nautilus" (1974) to A Tribe Called Quest, "Clap Your Hands" (1993)
-
-Play 'Nautilus' first. It is one of the most-sampled records in hip-hop, so you may know parts of it already from other songs. Then play 'Clap Your Hands' and listen for which piece of 'Nautilus' the group used. The song's credits also name four members of the Meters, which usually means a second sampled record: listen for the parts that do not sound like 'Nautilus'.
+James's original is a laid-back jazz-funk instrumental with a chiming bell pattern buried in the arrangement. Run-D.M.C. pulls just the bells and the break to the front, loops them, and raps directly over the loop, with nothing else in the mix competing with it.
