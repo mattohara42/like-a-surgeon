@@ -6,7 +6,7 @@
   "confidence": "documented",
   "year": 1984,
   "crossLineage": false,
-  "evidence": "Knuckles said in interviews, including with Red Bull Music Academy, that his first drum machine was a TR-909 that reached him from Derrick May in Detroit in 1984, and that May came down to show him how to program it. Whether it was sold or given is told both ways, including by people present at the time.",
+  "evidence": "Knuckles said in interviews, including with Red Bull Music Academy, that his first drum machine was a TR-909 that reached him from Derrick May in Detroit in 1984, and that May came down to show him how to program it. Whether it was sold or given is told both ways, including by people present at the time. Wikipedia's article on Knuckles gives the purchase as around 1983, and says he played the Warehouse until November 1982, when he started his own club, the Power Plant; so on either date the machine arrived after the Warehouse years.",
   "trackPair": {
     "earlier": {
       "artist": "Roland",
@@ -16,16 +16,16 @@
     },
     "later": {
       "artist": "Frankie Knuckles",
-      "title": "Warehouse and Power Plant DJ sets",
+      "title": "Power Plant DJ sets",
       "year": 1984,
       "search": false
     },
-    "whatToListenFor": "Do this as a comparison. Put on a Philadelphia disco record from 1976 and listen to the drums: a person playing, pushing slightly ahead in the chorus, dragging in the verse. Then put on a Chicago house record from 1986. The kick is in exactly the same place in every bar for seven minutes, and above it there is a short, bright, ringing open hi-hat that never varies either. That machine hi-hat, laid under records that were never built for it, is what a Warehouse night turned into."
+    "whatToListenFor": "Do this as a comparison. Put on a Philadelphia disco record from 1976 and listen to the drums: a person playing, pushing slightly ahead in the chorus, dragging in the verse. Then put on a Chicago house record from 1986. The kick is in exactly the same place in every bar for seven minutes, and above it there is a short, bright, ringing open hi-hat that never varies either. That machine hi-hat, laid under records that were never built for it, is what a night at the Power Plant turned into."
   },
   "explanation": {
     "age7": "Somebody gave him a drum machine, and he used it underneath old records to keep people dancing.",
-    "age13": "Knuckles got his first drum machine in 1984, a Roland 909 that came from Derrick May in Detroit. He used it live, playing a steady machine beat underneath disco and soul records, which kept the floor moving through the parts of a record where the drums thin out. House music starts in that gap between an old record and a drum machine holding it up.",
-    "adult": "The transfer is documented and the mechanism matters: the 909 entered Chicago as a DJ's tool for extending existing records, not as a studio instrument for making new ones. That sequence, live augmentation first and production second, is a large part of why house records are built the way they are. Accounts differ on whether May sold or gave him the machine, which is worth stating rather than smoothing over."
+    "age13": "Knuckles got his first drum machine around 1984, a Roland 909 that came from Derrick May in Detroit. By then he had left the Warehouse and was playing at his own club, the Power Plant. He used it live, playing a steady machine beat underneath disco and soul records, which kept the floor moving through the parts of a record where the drums thin out. House music starts in that gap between an old record and a drum machine holding it up.",
+    "adult": "The transfer is documented and the mechanism matters: the 909 entered Chicago as a DJ's tool for extending existing records, not as a studio instrument for making new ones. That sequence, live augmentation first and production second, is a large part of why house records are built the way they are. Accounts differ on whether May sold or gave him the machine, and on the year: 1984 in Knuckles's own interviews, around 1983 in other accounts. Either way it came after he left the Warehouse for the Power Plant in late 1982, so the Warehouse, which named the genre, was a room without a drum machine."
   },
   "demoId": "demo-808-909-kick",
   "tags": [
