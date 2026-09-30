@@ -54,6 +54,6 @@
     "adult": "Every note, accent and drum hit is shared between the two sides, so only the instrument changes. The plucked string decays from the moment it is struck. The synth holds its level for as long as the note is held, and it can glide from note to note, which no fretted string does without a slide. In funk, where the bass had carried the groove, that is a different instrument doing the same job."
   },
   "safety": {
-    "maxGain": 0.6
+    "maxGain": 0.55
   }
 }
