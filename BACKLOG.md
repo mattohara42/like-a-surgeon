@@ -229,6 +229,12 @@ correct response to a good idea arriving mid-milestone.
 
 ## Observed problems
 
+- **`CONFIG.transport.unbornOpacity` is unused.** The "not yet" fade is
+  `.unborn { opacity: 0.085 }` in index.html, the same number written a
+  second time. Changing the CONFIG value does nothing. Either the CSS
+  should read it (as a custom property set from CONFIG) or the CONFIG key
+  should go. Found in M5 step 1 (A283), not changed there.
+
 - **Demo peaks cluster just under the safety knee, whatever their cap
   (A280).** Four of the nine playable demos (tape echo, synth bass,
   distortion, 808 against 909) peak between 0.37 and 0.395 at their

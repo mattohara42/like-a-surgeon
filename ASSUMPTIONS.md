@@ -3310,3 +3310,28 @@ small and worth having in front of Matt alongside everything else here.
     map says how Baker's studio got its 808, so the framing says only
     what the record shows. Kid framing is left for Track D, as the rest
     of the Kid register is.
+
+- **A283. The past recedes while time moves (Q38, option a).**
+  - **What a reader sees.** While the timeline plays, is dragged, or is
+    stepped with the keys, a veil in the map's background colour lies
+    over everything more than twenty years behind the cursor, ending in
+    a four-year fade. It lifts 0.9 s after the cursor stops. At rest the
+    map is whole, including at the opening year of 2026. Jumping the
+    cursor to a selected record (`ensureVisible`) does not count as time
+    moving, since that is a jump, not time passing.
+  - **Why a veil, not a fade on each element.** The first version put a
+    `past` class on every node and edge older than the window and dimmed
+    each one. Measured in headless Chromium, playing through 2006 to 2026
+    with 153 elements receding ran at 9 fps with a CSS filter and 12 to
+    15 fps with plain opacity, against 21 fps on `main`. Toggling the
+    classes without the dimming cost almost nothing (19.7 fps), so the
+    cost was in drawing so many partly transparent elements. The veil is
+    two rectangles whatever the size of the map, and measured 19 to 20
+    fps, within noise of `main`. Headless Chromium renders in software,
+    so the absolute numbers are low, but the comparison is like for like.
+  - **What the veil changes in meaning.** It veils by place on the time
+    axis, not by when a node's activity ended: an artist who started 25
+    years before the cursor and is still active sits under it while time
+    moves. On a map whose horizontal axis is time, "behind the cursor"
+    is where the past is, and the veil lifts as soon as the reader
+    stops, so this reads right.

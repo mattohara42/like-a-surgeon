@@ -13,6 +13,7 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   the cursor stops. Play-forward reads as time passing, and the resting
   map stays whole. (b) Recede by age, but only for nodes whose activity
   ended (47 at rest), with edges left alone. (c) Drop receding.
+  **Resolved 2026-09-30: (a).** Built as a veil over the past (A283).
 
 - **Q32. Signature tracks for DJs who didn't make records.** The schema
   asks every artist for 2 to 3 signature tracks, and the validator warns
