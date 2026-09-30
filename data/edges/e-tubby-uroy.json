@@ -1,0 +1,28 @@
+{
+  "id": "e-tubby-uroy",
+  "from": "king-tubby",
+  "to": "u-roy",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1969,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on U-Roy says that in 1969 he worked on King Tubby's sound system, Tubby's Hometown Hi-Fi, toasting over instrumental dub plates made from existing rocksteady recordings, including a version of the Techniques' 'You Don't Care' where Tubby switched from the original vocal to the stripped-down rhythm while U-Roy toasted. Wikipedia's article on King Tubby says he started the sound system in 1968, that it launched U-Roy's career as its featured toaster, and that Tubby first removed vocals with the faders on Duke Reid's mixing desk when making versions for toasters. The Techniques' song is dated only to their run of hits in 1967 and 1968, so its year is left blank.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Techniques",
+      "title": "You Don't Care",
+      "year": null
+    },
+    "later": {
+      "artist": "U-Roy",
+      "title": "Wake the Town",
+      "year": 1970
+    },
+    "whatToListenFor": "'You Don't Care' is a rocksteady song, sung all the way through. At Tubby's dances the vocal was pulled out and U-Roy talked over the rhythm that was left. No recording of those nights is linked here, so listen to 'Wake the Town' instead: a year later, the same practice on a record, with U-Roy chanting and shouting over a rhythm made for someone else's song."
+  },
+  "explanation": {
+    "age13": "In 1969 King Tubby ran a sound system in Kingston, a giant set of speakers that played at dances. He would take a song, pull the singer's voice out with the faders, and let U-Roy talk over the music that was left. It made U-Roy a star, and a year later he was making records the same way.",
+    "adult": "This is the practice that the Treasure Isle edge then put on record. Tubby's Hometown Hi-Fi supplied the dub plates, with the vocal removed live at the mixing desk, and the toaster filled the space. Wikipedia's article on Tubby puts the start of dub at the same desk: taking vocals out for toasters led him to rework the instrumental tracks themselves. So toasting and dub grew from the same move with the faders."
+  },
+  "tags": ["technology", "production"]
+}

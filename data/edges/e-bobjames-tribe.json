@@ -1,0 +1,28 @@
+{
+  "id": "e-bobjames-tribe",
+  "from": "bob-james",
+  "to": "a-tribe-called-quest",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1993,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on Bob James's 'Nautilus' (from his 1974 album 'One') names A Tribe Called Quest's 'Clap Your Hands' (1993) among the records that sampled it. It gives Ultramagnetic MCs' 'Bait' (1986) as the first sampling, and cites WhoSampled as reporting over 410 songs by 2025. The track listing in Wikipedia's article on 'Midnight Marauders' (released 9 November 1993) credits Bob James among the writers of 'Clap Your Hands', which the group produced themselves, alongside four members of the Meters.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Bob James",
+      "title": "Nautilus",
+      "year": 1974
+    },
+    "later": {
+      "artist": "A Tribe Called Quest",
+      "title": "Clap Your Hands",
+      "year": 1993
+    },
+    "whatToListenFor": "Play 'Nautilus' first. It is one of the most-sampled records in hip-hop, so you may know parts of it already from other songs. Then play 'Clap Your Hands' and listen for which piece of 'Nautilus' the group used. The song's credits also name four members of the Meters, which usually means a second sampled record: listen for the parts that do not sound like 'Nautilus'."
+  },
+  "explanation": {
+    "age13": "Bob James recorded 'Nautilus' in 1974. Rap producers have sampled it more than 400 times. A Tribe Called Quest used it on 'Clap Your Hands' in 1993, on their album 'Midnight Marauders'.",
+    "adult": "Bob James's second sample edge, after 'Take Me to the Mardi Gras' into Run-D.M.C. 'Nautilus' is the larger story: first sampled by Ultramagnetic MCs in 1986 and, by WhoSampled's count, in more than 410 songs since. Tribe's use sits in the middle of that run. The song's writing credits also name four members of the Meters, the New Orleans funk band, which on a sample-based record usually means a second source, so the beat joins a jazz-funk record to a funk one."
+  },
+  "tags": ["production"]
+}
