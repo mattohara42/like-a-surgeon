@@ -1,0 +1,28 @@
+{
+  "id": "e-littlerichard-beatles",
+  "from": "little-richard",
+  "to": "the-beatles",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1962,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Little Richard: in 1962 Brian Epstein arranged for the Beatles to open for him, first at the Tower Ballroom in New Brighton in October and then at the Star-Club in Hamburg in November, and Little Richard taught Paul McCartney his vocal style. The Beatles released 'Long Tall Sally' on an EP in June 1964.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Little Richard",
+      "title": "Long Tall Sally",
+      "year": 1956
+    },
+    "later": {
+      "artist": "The Beatles",
+      "title": "Long Tall Sally",
+      "year": 1964
+    },
+    "whatToListenFor": "Listen to the singing. Little Richard's 'Long Tall Sally' is shouted at the top of his range, with a scream before the sax solo. Paul McCartney's version copies the shout and the scream almost exactly, and he learned them from the man himself in 1962. The band plays it fast and tight behind him."
+  },
+  "explanation": {
+    "age13": "In 1962 the Beatles opened for Little Richard in England and in Hamburg, and he showed Paul McCartney how he sang. Two years later the Beatles recorded his 'Long Tall Sally', with McCartney doing Little Richard's scream.",
+    "adult": "A direct edge rather than only a cover, because the contact is documented: the Beatles shared stages with him and McCartney was coached in person."
+  },
+  "tags": []
+}

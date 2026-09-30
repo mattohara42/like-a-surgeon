@@ -1,0 +1,32 @@
+{
+  "id": "e-sun-elvis",
+  "from": "sun-records",
+  "to": "elvis-presley",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1954,
+  "crossLineage": false,
+  "evidence": "Wikipedia's articles on 'That's All Right' and Sun Records: recorded at Sun Studio on 5 July 1954 with Scotty Moore and Bill Black, after the three began playing Arthur Crudup's song at speed during a break and Sam Phillips had them record it. Released 19 July 1954 as Sun 209 with 'Blue Moon of Kentucky'. Dewey Phillips played the acetate on WHBQ on 7 July. In 1955 Sun sold Presley's contract to RCA Victor for $40,000 to cover the label's financial problems.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Arthur Crudup",
+      "title": "That's All Right",
+      "year": 1946,
+      "search": "Arthur Crudup That's All Right Mama"
+    },
+    "later": {
+      "artist": "Elvis Presley",
+      "title": "That's All Right",
+      "year": 1954
+    },
+    "whatToListenFor": "Crudup's 1946 record is a relaxed Chicago blues at a walking pace. Presley's is at least twice as fast, with Scotty Moore's electric guitar picking bright, clipped fills, Bill Black slapping an upright bass for a beat, and no drums at all. Listen for how thin the band is. Three people in a small room, with Sam Phillips's echo on the voice, and the speed does the rest."
+  },
+  "explanation": {
+    "age13": "In July 1954 Sam Phillips was recording a young singer, Elvis Presley, at Sun Studio. During a break Elvis and the two musicians started playing an old blues song very fast, and Phillips told them to do it again with the tape running. That was Elvis's first record. A year later Sun needed money and sold Elvis's contract to RCA.",
+    "adult": "The label's role is double: Phillips's ear caught the moment in the session, and his balance sheet ended the relationship. Both belong on the edge, because the second is as typical of the independent-label economy of the 1950s as the first is famous."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

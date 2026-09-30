@@ -1,0 +1,30 @@
+{
+  "id": "e-chess-muddywaters",
+  "from": "chess-records",
+  "to": "muddy-waters",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1948,
+  "crossLineage": false,
+  "evidence": "Wikipedia's articles on Muddy Waters and Chess Records: 'I Can't Be Satisfied' and 'I Feel Like Going Home' were hits for Aristocrat in 1948, the label Leonard and Phil Chess bought out and renamed Chess in 1950. By the early 1950s his Chess band included Little Walter, Jimmy Rogers, Otis Spann and staff writer Willie Dixon.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Muddy Waters",
+      "title": "I Can't Be Satisfied",
+      "year": 1948
+    },
+    "later": {
+      "artist": "Muddy Waters",
+      "title": "Hoochie Coochie Man",
+      "year": 1954
+    },
+    "whatToListenFor": "'I Can't Be Satisfied' is nearly a solo record: Muddy's voice, his electric slide guitar, and a string bass. Six years later 'Hoochie Coochie Man' is a full Chess band playing a Willie Dixon song: harmonica through an amplifier, piano, drums, and a stop-time riff where the band hits together and then drops out for the vocal. Listen for the label's house system growing around him, from a man with a guitar to a band and a staff songwriter."
+  },
+  "explanation": {
+    "age13": "Muddy Waters's first hits came out in 1948 on Aristocrat, the Chicago label that the Chess brothers took over and renamed Chess. Over the next few years Chess put a full band around him and gave him songs by its staff writer, Willie Dixon.",
+    "adult": "The label edge at the root of the Chicago blues on this map. Chess's system, a studio band, a staff writer in Dixon, and a roster built around Muddy, is what the Rolling Stones travelled to Chicago to be near in 1964 (e-chess-stones), and what Led Zeppelin borrowed from without credit (e-chessrecords-ledzeppelin)."
+  },
+  "tags": [
+    "labels"
+  ]
+}

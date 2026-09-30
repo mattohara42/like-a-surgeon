@@ -1,0 +1,16 @@
+{
+  "id": "sun-records",
+  "name": "Sun Records",
+  "type": "label",
+  "lineage": "rock",
+  "foundedYear": 1952,
+  "closedYear": null,
+  "city": "Memphis",
+  "founders": "Sam Phillips",
+  "ownershipStory": "Sam Phillips opened the Memphis Recording Service on 3 January 1950 and recorded Black rhythm and blues musicians, leasing masters to other labels; 'Rocket 88' (1951), which he produced and leased to Chess, helped pay for his own label, founded on 1 February 1952. Sun made the first records of Elvis Presley, Johnny Cash, Jerry Lee Lewis, Carl Perkins and Roy Orbison. In 1955, short of money, Phillips sold Presley's contract to RCA Victor for $40,000. Shelby Singleton bought the label in 1969, after which it was mainly a reissue operation. Primary Wave bought it, with its masters, in 2021 for $30 million.",
+  "hook": "A one-room Memphis studio that recorded Black rhythm and blues first and Elvis Presley second, then sold Elvis to keep going.",
+  "blurb": {
+    "age13": "Sam Phillips opened a small recording studio in Memphis in 1950 and started the Sun label in 1952. At first he recorded Black blues and R&B musicians. In 1954 he recorded a young truck driver called Elvis Presley. A year later Sun was short of money, so Phillips sold Elvis's contract to the big company RCA for $40,000. Sun also made the first records of Johnny Cash and Jerry Lee Lewis.",
+    "adult": "Sun's history is a lesson in how the music business worked in the segregated South. Phillips built the studio on Black R&B, which he leased to northern labels, and found his first national success in a white singer performing a Black songwriter's blues at double speed. Selling Presley to RCA in 1955 was a cash-flow decision by a small independent, and it moved rock and roll's biggest act onto a major label within eighteen months of his first record."
+  }
+}

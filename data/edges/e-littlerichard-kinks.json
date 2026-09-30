@@ -1,0 +1,28 @@
+{
+  "id": "e-littlerichard-kinks",
+  "from": "little-richard",
+  "to": "the-kinks",
+  "type": "cover",
+  "confidence": "documented",
+  "year": 1964,
+  "crossLineage": false,
+  "evidence": "The Kinks' first single for Pye, released in February 1964, was a cover of Little Richard's 'Long Tall Sally' (Specialty, 1956). It did not chart (e-pye-kinks).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Little Richard",
+      "title": "Long Tall Sally",
+      "year": 1956
+    },
+    "later": {
+      "artist": "The Kinks",
+      "title": "Long Tall Sally",
+      "year": 1964
+    },
+    "whatToListenFor": "Little Richard's original is pounding piano and a screamed vocal. The Kinks' first single is a guitar band playing it, and it sounds careful next to the original. Listen for how much the band still sounds like everyone else in early 1964. Six months later, with 'You Really Got Me', they didn't."
+  },
+  "explanation": {
+    "age13": "The Kinks' first single, in 1964, was a Little Richard song, 'Long Tall Sally'. It flopped. Their third single, which Ray Davies wrote himself, went to number one.",
+    "adult": "The same song opens both the Beatles' and the Kinks' careers on record in 1964, which shows how standard Little Richard's catalogue was as a British beat-group starting point. For the Kinks it is the starting line e-pye-kinks measures from."
+  },
+  "tags": []
+}
