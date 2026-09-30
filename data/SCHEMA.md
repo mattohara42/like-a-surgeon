@@ -322,7 +322,12 @@ A curated ordered path through the graph. How readers enter.
 ```
 id, title, subtitle
 intro           three registers
-steps           [ { nodeId or edgeId, framing (three registers),
-                    demoId (optional), cameraHint } ]
+steps           at least three: [ { nodeId or edgeId, framing, demoId
+                    (optional) } ]. framing is register text (Teen and
+                    Adult required): two or three sentences in the
+                    thread's own voice, saying why this stop comes next.
+                    It restates what the step's records say and adds no
+                    new facts. The camera frames the record itself, so
+                    there is no camera hint.
 outro           three registers
 ```

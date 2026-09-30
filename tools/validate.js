@@ -10,6 +10,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { writeManifest, SHARD_TYPES } from './manifest.js';
 import { checkDemo } from './demoSchema.js';
+import { CONFIG } from '../config.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = join(ROOT, 'data');
@@ -412,10 +413,19 @@ for (const [id, edge] of records.edges) {
   }
 }
 
-// thread step references
+// thread steps: references, and the framing the thread player shows
+// (docs/m5-architecture.md section 5)
 for (const [id, thread] of records.threads) {
   const where = `threads/${id}.json`;
-  for (const [i, step] of (thread.steps || []).entries()) {
+  const steps = thread.steps || [];
+  if (steps.length < CONFIG.threads.minSteps) {
+    fail(`${where}: a thread needs at least ${CONFIG.threads.minSteps} steps, has ${steps.length}`);
+  }
+  for (const [i, step] of steps.entries()) {
+    checkRegisterObject(where, `steps[${i}].framing`, step.framing);
+    for (const key of Object.keys(step)) {
+      if (!['nodeId', 'edgeId', 'framing', 'demoId'].includes(key)) fail(`${where}: steps[${i}].${key} is not a step field`);
+    }
     const hasNode = step.nodeId !== undefined;
     const hasEdge = step.edgeId !== undefined;
     if (hasNode === hasEdge) {
