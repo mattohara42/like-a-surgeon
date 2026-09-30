@@ -1,0 +1,50 @@
+{
+  "id": "thread-trains-to-the-bronx",
+  "title": "Trains to the Bronx",
+  "subtitle": "Kraftwerk into electro, and on to Detroit",
+  "intro": {
+    "age13": "Kraftwerk made electronic music in Düsseldorf. Follow it to a Bronx party record and then to three friends near Detroit who turned it into techno.",
+    "adult": "Traces one body of German electronic music through two American receptions, electro in the Bronx and techno in Detroit, each hearing something different in it."
+  },
+  "steps": [
+    {
+      "edgeId": "e-kraftwerk-planetrock",
+      "framing": {
+        "age13": "Start with a German band and a Bronx DJ. 'Planet Rock' in 1982 took the melody of Kraftwerk's 'Trans-Europe Express' and the rhythm of their 'Numbers', without asking first.",
+        "adult": "The densest crossing on the map: German electronic pop, a Bronx block-party DJ and a Japanese drum machine in one record, and an interpolation made before anyone had settled the rules for it."
+      }
+    },
+    {
+      "edgeId": "e-808-planetrock",
+      "framing": {
+        "age13": "The drums on the same record come from Roland's TR-808, a machine that had failed because it did not sound like a real drummer. On 'Planet Rock', sounding like a machine is the point.",
+        "adult": "The same record from the machine's side: the 808's defect becomes its value, and that is the electro sound this thread follows."
+      }
+    },
+    {
+      "edgeId": "e-kraftwerk-atkins",
+      "framing": {
+        "age13": "In Detroit, Juan Atkins was hearing Kraftwerk on the radio next to funk records. He put the two together and called what he made techno.",
+        "adult": "Kraftwerk again, received differently: heard in Detroit beside Parliament, and turned into a genre named by the people who made it."
+      }
+    },
+    {
+      "edgeId": "e-atkins-may",
+      "framing": {
+        "age13": "Atkins had two friends from school in Belleville, Michigan: Derrick May and Kevin Saunderson. Atkins recorded and released music first, and May followed his example. This stop is dated 1981, two years before the last one, so the timeline steps back a little.",
+        "adult": "The Belleville Three: one of the most consistently documented origin stories on the map, told near-identically by the men themselves across decades."
+      }
+    },
+    {
+      "edgeId": "e-atkins-saunderson",
+      "framing": {
+        "age13": "Saunderson watched Atkins put out his own records on his own label, Metroplex, and later started his own, KMS. The music came with a way of working: make it yourself and release it yourself.",
+        "adult": "The last stop passes on a method rather than a sound. Saunderson has said that Atkins's example, not only his music, was the model for founding KMS."
+      }
+    }
+  ],
+  "outro": {
+    "age13": "The same records meant different things in different places. In the Bronx they were party music, and in Detroit they became the start of a new kind of music with its own name.",
+    "adult": "The thread ends where reception becomes a method: record it, release it, and name the genre yourselves."
+  }
+}

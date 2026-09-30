@@ -172,7 +172,8 @@ Each step is one PR, merged before the next.
    to its own year.
 4. Where threads are found: panel lines and search (the welcome card's
    list came with step 3). Built (A285).
-5. Three launch threads (data).
+5. Three launch threads (data). Built (A286): Breaks, Trains to the Bronx,
+   Loud Guitars.
 6. Lenses: the control, the dimming, the four intros, and a tag audit of
    the 22 untagged edges.
 7. The gate: a cold reader finishes a thread and explains what they
