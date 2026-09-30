@@ -337,6 +337,14 @@ export const CONFIG = {
     stepYears: 1,
     shiftStepYears: 5,
     unbornOpacity: 0.085,
+    // The past recedes while time is moving (Q38): playing, scrubbing or
+    // stepping. A veil in the background colour covers the map more than
+    // `afterYears` behind the cursor, at `veilOpacity`, and lifts
+    // `settleMs` after the cursor stops. At rest nothing recedes, because
+    // at the opening year of 2026 every edge on the map would. One veil
+    // rather than a class on every element: dimming each element halved
+    // the frame rate during play (A283).
+    recede: { afterYears: 20, settleMs: 900, veilOpacity: 0.62, softEdgeYears: 4 },
     cursorWashWidth: 120,
     cursorWashMaxContentPx: 220,
   },

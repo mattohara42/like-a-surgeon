@@ -21,6 +21,21 @@ export function createCursorLayer(layout) {
     height: layout.totalHeight,
     fill: 'url(#cursor-wash-gradient)',
   });
+  // The past, veiled while time moves (Q38). Drawn first, so the cursor
+  // line and its wash sit on top of it.
+  // The veil ends in a short fade, so its edge never reads as a second
+  // cursor.
+  const veil = svgEl('g', { class: 'recede-veil' });
+  veil.append(
+    svgEl('rect', {
+      class: 'recede-veil-body',
+      y: 0,
+      height: layout.totalHeight,
+      fill: CONFIG.colors.background,
+      'fill-opacity': CONFIG.transport.recede.veilOpacity,
+    }),
+    svgEl('rect', { class: 'recede-veil-edge', y: 0, height: layout.totalHeight, fill: 'url(#recede-edge-gradient)' }),
+  );
   const line = svgEl('line', {
     class: 'cursor-line',
     y1: 0,
@@ -28,21 +43,37 @@ export function createCursorLayer(layout) {
     stroke: CONFIG.colors.cursor,
     'stroke-opacity': 0.55,
   });
-  g.append(wash, line);
+  g.append(veil, wash, line);
   return g;
 }
 
 export function createCursorDefs() {
+  const R = CONFIG.transport.recede;
+  const veilEdge = svgEl('linearGradient', { id: 'recede-edge-gradient', x1: '0', y1: '0', x2: '1', y2: '0' });
+  veilEdge.append(
+    svgEl('stop', { offset: '0%', 'stop-color': CONFIG.colors.background, 'stop-opacity': R.veilOpacity }),
+    svgEl('stop', { offset: '100%', 'stop-color': CONFIG.colors.background, 'stop-opacity': 0 }),
+  );
   const grad = svgEl('linearGradient', { id: 'cursor-wash-gradient', x1: '0', y1: '0', x2: '1', y2: '0' });
   grad.append(
     svgEl('stop', { offset: '0%', 'stop-color': CONFIG.colors.cursor, 'stop-opacity': 0 }),
     svgEl('stop', { offset: '100%', 'stop-color': CONFIG.colors.cursor, 'stop-opacity': 0.07 }),
   );
-  return [grad];
+  return [grad, veilEdge];
 }
 
-export function updateCursor(cursorG, layout, year, scale) {
+export function updateCursor(cursorG, layout, year, scale, moving = false) {
   const x = layout.timeScale.toX(year);
+  // The veil runs from the very start of the axis up to `afterYears`
+  // behind the cursor, and is only shown while time moves.
+  const R = CONFIG.transport.recede;
+  const left = layout.timeScale.toX(layout.timeScale.year0);
+  const edge = layout.timeScale.toX(year - R.afterYears);
+  const soft = layout.timeScale.toX(year - R.afterYears + R.softEdgeYears) - edge;
+  const veil = cursorG.querySelector('.recede-veil');
+  setAttrs(veil.querySelector('.recede-veil-body'), { x: left, width: Math.max(0, edge - left) });
+  setAttrs(veil.querySelector('.recede-veil-edge'), { x: edge, width: edge > left ? soft : 0 });
+  veil.classList.toggle('on', moving);
   // Capped: counter-scaling this all the way down turns the wash into a
   // wide grey slab lying across the map at low zoom, which reads as a
   // rendering fault rather than as light behind the cursor.
@@ -114,6 +145,18 @@ export function createTransport(root, layout, nodes, edges, onYearChange, initia
     ? maxYear
     : Math.max(minYear, Math.min(maxYear, initialYear));
   let timer = null;
+  let scrubbing = false;
+  // Time counts as moving while playing or scrubbing, and for a moment
+  // after any step by hand, so the past recedes as the cursor travels and
+  // comes back once it has stopped (Q38).
+  let movingUntil = 0;
+  let settleTimer = null;
+  function markMoving() {
+    const settle = CONFIG.transport.recede.settleMs;
+    movingUntil = performance.now() + settle;
+    clearTimeout(settleTimer);
+    settleTimer = setTimeout(() => onYearChange(year), settle);
+  }
 
   function setYear(next) {
     const clamped = Math.max(minYear, Math.min(maxYear, Math.round(next)));
@@ -139,6 +182,7 @@ export function createTransport(root, layout, nodes, edges, onYearChange, initia
   }
 
   function stop() {
+    if (timer) markMoving();
     clearInterval(timer);
     timer = null;
     playBtn.innerHTML = '&#9654;';
@@ -152,13 +196,13 @@ export function createTransport(root, layout, nodes, edges, onYearChange, initia
     playBtn.setAttribute('aria-label', 'Pause');
     timer = setInterval(() => {
       if (year >= maxYear) return stop();
+      markMoving();
       setYear(year + 1);
     }, CONFIG.transport.msPerYear);
   }
 
   playBtn.addEventListener('click', () => (timer ? stop() : play()));
 
-  let scrubbing = false;
   scrub.addEventListener('pointerdown', (e) => {
     scrubbing = true;
     stop();
@@ -169,6 +213,7 @@ export function createTransport(root, layout, nodes, edges, onYearChange, initia
     if (scrubbing) setYear(yearFromClientX(e.clientX));
   });
   const endScrub = (e) => {
+    if (scrubbing) markMoving();
     scrubbing = false;
     if (scrub.hasPointerCapture?.(e.pointerId)) scrub.releasePointerCapture(e.pointerId);
   };
@@ -194,6 +239,7 @@ export function createTransport(root, layout, nodes, edges, onYearChange, initia
     if (target === null) return;
     e.preventDefault();
     stop();
+    markMoving();
     setYear(target);
   });
 
@@ -201,6 +247,7 @@ export function createTransport(root, layout, nodes, edges, onYearChange, initia
 
   return {
     year: () => year,
+    moving: () => timer !== null || scrubbing || performance.now() < movingUntil,
     setYear,
     stop,
     // Used when something off the current cursor is selected: the map
