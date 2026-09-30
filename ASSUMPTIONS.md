@@ -3272,3 +3272,22 @@ small and worth having in front of Matt alongside everything else here.
     between 0.370 and 0.384. See BACKLOG on why the cap barely moves the
     peak. All nine playable demos pass the audio check in dev and from
     `dist/`.
+
+- **A282. M5 step 2: thread steps carry framing.**
+  - **Validator.** Every step needs `framing` in Teen and Adult. A thread
+    needs at least `CONFIG.threads.minSteps` (3) steps. A step may hold
+    only `nodeId` or `edgeId`, `framing` and `demoId`, so a stray field
+    fails instead of being silently ignored. Checked by breaking a
+    thread three ways: each break is reported.
+  - **`cameraHint` is gone** from SCHEMA.md and from the Delay Line's
+    first step. Nothing read it, and the camera frames the record itself.
+    The copy in `design/data-snapshot.js` is left alone, since that file
+    is a frozen design snapshot and not app data.
+  - **Framing for the two existing threads**, eight steps. Each restates
+    what the step's own records already say (King Tubby's hook, the edge
+    explanations and evidence, the 808 and 303 machine records), and adds
+    no fact of its own. I left out one claim I first reached for, that
+    the 808 on 'Planet Rock' came cheap and secondhand. Nothing on the
+    map says how Baker's studio got its 808, so the framing says only
+    what the record shows. Kid framing is left for Track D, as the rest
+    of the Kid register is.
