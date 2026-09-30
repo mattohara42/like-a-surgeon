@@ -246,6 +246,15 @@ correct response to a good idea arriving mid-milestone.
   should read it (as a custom property set from CONFIG) or the CONFIG key
   should go. Found in M5 step 1 (A283), not changed there.
 
+- **Demo captions name one edge's record, so a demo cannot travel
+  (A293).** Of four edges that could carry an existing demo, three were
+  blocked only because the caption names another record (Tubby,
+  'Flash Light', Knuckles). Either captions move to the edge (a
+  `demoCaption` on the edge, falling back to the demo's), or demo
+  captions drop record names. Either would let most machine edges carry
+  a demo, which is the fastest route to the 30 edges-with-demo target.
+  Not changed: it is a schema choice for Matt.
+
 - **`tools/report.js --out` breaks on an absolute path.** It writes to
   `join(ROOT, opts.out)`, so `--out=/tmp/x.md` becomes
   `<repo>/tmp/x.md` and fails with ENOENT. `resolve(ROOT, opts.out)`

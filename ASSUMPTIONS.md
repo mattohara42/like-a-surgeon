@@ -3537,3 +3537,52 @@ small and worth having in front of Matt alongside everything else here.
   without code. Framing restates the edges' own evidence and adds no
   facts; the Stones stop claims no permission, since its edge records
   none.
+
+- **A293. An edge batch: six new edges and one demo reuse.** Aimed at
+  nodes with a single edge, since those are where a second edge changes
+  what a reader can reach. Ahmad Jamal, Bob James, Billy Cobham, U-Roy,
+  Massive Attack and Stones Throw each had only one before this batch.
+  All six new edges are `documented`, each
+  from a Wikipedia article that states the connection directly:
+  - `e-cobham-massiveattack`: 'Stratus' (1973) as the main sample in
+    'Safe from Harm' (1991), from the article on Cobham's 'Spectrum'.
+  - `e-hayes-massiveattack`: 'Our Day Will Come' (1970) sampled on
+    'Exchange' and '(Exchange)', from the 'Mezzanine' sample credits.
+  - `e-jamal-delasoul`: 'Swahililand' (1974) in 'Stakes Is High' (1996),
+    produced by Jay Dee, from the song's article. Routed to De La Soul,
+    the credited artist, as `e-syljohnson-delasoul` is, with
+    Jay Dee named in the text.
+  - `e-bobjames-tribe`: 'Nautilus' (1974) in 'Clap Your Hands' (1993),
+    from the article on 'Nautilus', with the writing credit confirmed in
+    the 'Midnight Marauders' track listing.
+  - `e-tubby-uroy`: U-Roy toasting on Tubby's Hometown Hi-Fi in 1969,
+    from the U-Roy and King Tubby articles. Typed `technological`, like
+    `e-tubby-madprofessor`: the claim is about a mixing-desk practice
+    (removing the vocal live), not a record Tubby produced.
+  - `e-stonesthrow-dilla`: the label finishing and releasing 'Donuts'
+    (2006), from the album's article, which cites Dan Charnas. The
+    hospital story is stated as disputed, matching the dispute already in
+    J Dilla's own record.
+  - **Demo reuse, one of four candidates.** `e-sp1200-peterock` now
+    carries `demo-sp1200-grit`, whose caption is general and matches the
+    edge's own listening note. Three others were checked and left alone,
+    because their captions name another edge's record: the tape echo
+    names Tubby (so not `e-re201-perry`), the synth bass names 'Flash
+    Light' (so not `e-minimoog-kraftwerk`), and the 808/909 kick names
+    Knuckles (so not `e-909-heard`). `e-808-marleymarl` is about the
+    snare, and the 808 voices caption steers to the kick. So captions
+    written per edge cap how far a demo can travel; a caption per edge,
+    or a demo-level caption with no record names, would lift that. Noted
+    in BACKLOG.
+  - **Deliberately general listening notes.** I could not check which
+    part of 'Stratus', 'Our Day Will Come', 'Swahililand' or 'Nautilus'
+    each later record uses. Those notes ask the reader to find it rather
+    than name it, as A236 did for two pairs.
+  - **A year left null.** The Techniques' 'You Don't Care' is dated only
+    to their 1967-1968 run of hits, so its `trackPair` year is null, per
+    the accuracy rules.
+  - **Dropped after checking:** Island Records to Lee Perry (Blackwell
+    declining 'Heart of the Congos' and other Black Ark albums). None of
+    the articles on the album, Black Ark or Perry says it. Syl Johnson to
+    Wu-Tang Clan: his article lists Wu-Tang among those who sampled
+    'Different Strokes' but names no song, so there is no track pair.

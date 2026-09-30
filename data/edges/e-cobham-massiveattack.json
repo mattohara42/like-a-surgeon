@@ -1,0 +1,28 @@
+{
+  "id": "e-cobham-massiveattack",
+  "from": "billy-cobham",
+  "to": "massive-attack",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1991,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on Cobham's album 'Spectrum' (released 1 October 1973) says 'Stratus' is the main sample in Massive Attack's 'Safe from Harm'. The song is on 'Blue Lines' (8 April 1991) and was released as a single on 27 May 1991, and its writing credits include William Cobham (Wikipedia's article on 'Blue Lines').",
+  "trackPair": {
+    "earlier": {
+      "artist": "Billy Cobham",
+      "title": "Stratus",
+      "year": 1973
+    },
+    "later": {
+      "artist": "Massive Attack",
+      "title": "Safe from Harm",
+      "year": 1991
+    },
+    "whatToListenFor": "'Stratus' is a jazz-rock jam with four players pushing at once: Cobham on drums, Leland Sklar on bass, Jan Hammer on keyboards and Tommy Bolin on guitar through an Echoplex tape echo. Play it first and notice how much is going on. Then play 'Safe from Harm' and listen for the part of 'Stratus' you recognise. In the jam it was one passage among many. Here it is looped and repeated under the whole song, with space left around it for the voices."
+  },
+  "explanation": {
+    "age13": "In 1973 the jazz drummer Billy Cobham recorded 'Stratus', a busy jam for four players. In 1991 Massive Attack, from Bristol, built 'Safe from Harm' on a loop taken from it. The song is on 'Blue Lines', the album usually called the first trip-hop record.",
+    "adult": "Cobham's second sample edge, after '93 'til Infinity'. Together they show one fusion drummer's catalogue feeding two different places at once: Oakland rap and Bristol trip-hop, from two different records. Bristol came first: 'Safe from Harm' is 1991, '93 'til Infinity' 1993. Massive Attack came out of a Bristol sound system, where playing other people's records was the job."
+  },
+  "tags": ["production"]
+}

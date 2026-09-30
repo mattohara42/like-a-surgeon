@@ -1,0 +1,29 @@
+{
+  "id": "e-stonesthrow-dilla",
+  "from": "stones-throw",
+  "to": "j-dilla",
+  "type": "label",
+  "confidence": "documented",
+  "year": 2006,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'Donuts' says Stones Throw released it on 7 February 2006, Dilla's 32nd birthday, three days before he died. Citing Dan Charnas, it says the album began as Dilla's beat tape of 27 tracks, under thirty minutes long, and was largely finished by Stones Throw's art director Jeff Jank, who placed nine more beats from Dilla towards the end. The released album has 31 tracks in 43 minutes 24 seconds. Stones Throw's deal let the label own 'Donuts' while Dilla could still sell its beats to other artists, and Peanut Butter Wolf was executive producer. The same article gives the widely repeated account that most of it was made in hospital, which Charnas disputes.",
+  "trackPair": {
+    "earlier": {
+      "artist": "J Dilla",
+      "title": "Welcome 2 Detroit",
+      "year": 2001,
+      "search": "J Dilla Welcome 2 Detroit album"
+    },
+    "later": {
+      "artist": "J Dilla",
+      "title": "Don't Cry",
+      "year": 2006
+    },
+    "whatToListenFor": "'Welcome 2 Detroit' was made as an album of songs. 'Donuts' is something else: 31 instrumentals, most of them about a minute to a minute and a half, starting and stopping abruptly. The last track runs straight back into the first, so the album can loop forever. 'Don't Cry' is one of them. Listen for how short it is, and how it cuts off rather than ending."
+  },
+  "explanation": {
+    "age13": "Stones Throw Records put out J Dilla's album 'Donuts' in February 2006, on his birthday, three days before he died. It started as a tape of his beats, and someone at the label helped turn it into the finished album. Critics now count it among the most influential hip-hop albums ever made.",
+    "adult": "A label edge in the strict sense, because the label's hands are on the record. By Charnas's account, Dilla's beat tape was under thirty minutes, and Stones Throw's Jeff Jank expanded and sequenced it into the album, at Dilla's own suggestion (as his artist record says). The popular story that he made it mostly in a hospital bed is disputed by Charnas, though he did keep working on it while in hospital. The label's deal owned the album but left Dilla free to sell its beats to other artists."
+  },
+  "tags": ["labels", "production"]
+}

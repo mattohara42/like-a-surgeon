@@ -1,0 +1,28 @@
+{
+  "id": "e-hayes-massiveattack",
+  "from": "isaac-hayes",
+  "to": "massive-attack",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1998,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Mezzanine' (1998) credits 'Exchange' and '(Exchange)' with samples of 'Our Day Will Come' by Isaac Hayes. Hayes's recording is on '...To Be Continued', released 28 November 1970 on Stax's Enterprise label; the song was written by Bob Hilliard and Mort Garson (Wikipedia's article on '...To Be Continued').",
+  "trackPair": {
+    "earlier": {
+      "artist": "Isaac Hayes",
+      "title": "Our Day Will Come",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Massive Attack",
+      "title": "Exchange",
+      "year": 1998
+    },
+    "whatToListenFor": "Hayes's 'Our Day Will Come' is his own arrangement of a song other people wrote, as many of his solo records were. Play it through, then play 'Exchange' and listen for the piece of Hayes's arrangement that Massive Attack kept, and for what they put around it. They liked it enough to use it twice on the same album: once as 'Exchange' in the middle of 'Mezzanine', and again as '(Exchange)', the album's last track."
+  },
+  "explanation": {
+    "age13": "In 1970 Isaac Hayes recorded his own version of 'Our Day Will Come', a song written by other people. In 1998 Massive Attack sampled it on their album 'Mezzanine' and used it twice, on 'Exchange' and '(Exchange)'.",
+    "adult": "Hayes's second sample edge, after Public Enemy, and the first that leaves hip-hop. His solo albums from 'Hot Buttered Soul' (1969) on stretched songs into long orchestral pieces, which left a great deal of instrumental material for later producers to take from, in Bristol as much as in New York. Massive Attack's use is unusual on this map because one sample carries two tracks of the same album."
+  },
+  "tags": ["production"]
+}
