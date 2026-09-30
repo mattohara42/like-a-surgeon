@@ -171,7 +171,7 @@ Each step is one PR, merged before the next.
    list, so the player can be reached, and each stop setting the timeline
    to its own year.
 4. Where threads are found: panel lines and search (the welcome card's
-   list came with step 3).
+   list came with step 3). Built (A285).
 5. Three launch threads (data).
 6. Lenses: the control, the dimming, the four intros, and a tag audit of
    the 22 untagged edges.
