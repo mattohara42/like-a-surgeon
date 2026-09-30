@@ -11,6 +11,7 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
     narrower than 700 px, with `?view=map` and `?view=cards` overrides.
   - Q40: should each card have its own address (`#/artist/kraftwerk`)?
     Recommended: yes, so the phone's back gesture and sharing both work.
+  **Resolved 2026-09-30: (a) on both.**
 
 - **Q38. Receding, revisited (Q33).** Q33 said material more than about
   twenty years behind the cursor should fade partway. Measured (A281): the

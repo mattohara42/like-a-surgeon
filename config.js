@@ -256,6 +256,21 @@ export const CONFIG = {
     followProducerMin: 2,
   },
 
+  // Cards, the phone version (docs/cards-architecture.md).
+  cards: {
+    // Screens narrower than this open as cards (Q39). Checked once at load.
+    maxWidthPx: 700,
+    // The first card comes from records with at least this many connections.
+    openingMinConnections: 8,
+    // The smallest thing a thumb is asked to hit.
+    minTargetPx: 44,
+    // The bar fixed to the bottom of the screen.
+    barHeightPx: 60,
+    // Card column: side gutter and the widest it reads at.
+    gutterPx: 16,
+    maxWidthColumnPx: 560,
+  },
+
   // The first-run card and its goal chip (reading/welcome.js).
   welcome: {
     storageKey: 'lineage.welcome.v1',

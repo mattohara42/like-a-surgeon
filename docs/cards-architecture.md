@@ -1,8 +1,8 @@
 # Cards: the phone version
 
-> **Status: draft for sign-off.** Matt chose the four options in section 2
-> in chat on 2026-09-30. Q39 and Q40 (section 7) are still open. No code
-> is written until this is signed off, as with M1 to M5.
+> **Status: signed off 2026-09-30.** Matt chose the four options in
+> section 2 and the recommended option on Q39 and Q40 (section 7). Build
+> follows the order of work in section 5.
 
 The map needs a mouse and a wide screen. It has no pinch zoom, and on a
 phone the drawer covers most of the view. Cards is a pared-down way into
