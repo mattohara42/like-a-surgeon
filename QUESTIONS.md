@@ -4,19 +4,6 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
-- **Q33 to Q37. M5 sign-off.** Five questions gate the thread player and
-  the lenses. The full text, with options and a recommendation for each,
-  is in `docs/m5-architecture.md` section 7:
-  - Q33: should material well behind the timeline cursor fade partway, as
-    SPEC says? Recommended: yes, gently, and nothing disappears.
-  - Q34: can a reader wander off mid-thread and come back? Recommended:
-    yes, with a chip that holds their place.
-  - Q35: does a thread play its demos on arrival? Recommended: no, a
-    press starts every sound, as in M4.
-  - Q36: how does a lens look? Recommended: dimming only, no new colour.
-  - Q37: what is the Labels lens, given "Arrange by label" and the Labels
-    layer already exist? Recommended: a lens like the other three.
-
 - **Q32. Signature tracks for DJs who didn't make records.** The schema
   asks every artist for 2 to 3 signature tracks, and the validator warns
   below that. Kool Herc, Coke La Rock, Grand Wizzard Theodore and Ron
@@ -94,6 +81,19 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   (c) Leave them in `other`.
 
 ## Resolved
+
+- **Q33 to Q37. M5 sign-off.** **Resolved 2026-09-30:** Matt took every
+  recommendation. Five questions gated the thread player and the lenses. The full text, with options and a recommendation for each,
+  is in `docs/m5-architecture.md` section 7:
+  - Q33: should material well behind the timeline cursor fade partway, as
+    SPEC says? Recommended: yes, gently, and nothing disappears.
+  - Q34: can a reader wander off mid-thread and come back? Recommended:
+    yes, with a chip that holds their place.
+  - Q35: does a thread play its demos on arrival? Recommended: no, a
+    press starts every sound, as in M4.
+  - Q36: how does a lens look? Recommended: dimming only, no new colour.
+  - Q37: what is the Labels lens, given "Arrange by label" and the Labels
+    layer already exist? Recommended: a lens like the other three.
 
 - **Q20. A null end year means three different things.** Resolved: **the recommendation, (a).** See **A172**. On machines,
   `discontinuedYear: null` currently means "still made" (the Mellotron),

@@ -1,8 +1,7 @@
 # M5 architecture: timeline, threads, overlays
 
-> **Status: draft for sign-off.** No M5 code exists yet. Section 7 lists
-> the questions (Q33 to Q37) that gate it. Build starts when they are
-> answered.
+> **Status: signed off 2026-09-30.** Matt took the recommended option on
+> Q33 to Q37 (section 7). Build follows the order of work in section 6.
 
 `BUILD_PLAN.md` scopes M5 as: timeline scrub with play/pause and keyboard
 stepping; a thread player with framing text and an audio through-line;
@@ -184,18 +183,22 @@ Each step is one PR, merged before the next.
   It makes play-forward read as time passing. (b) No: leave the past at
   full strength, since a reader scrubbing back and forth may find the
   fade distracting.
+  **Resolved 2026-09-30: (a).**
 - **Q34. Can a reader wander off mid-thread?** (a) **Recommended.** Yes.
   A chip holds their place, anything else they click opens as usual, and
   the chip brings them back. (b) No: a thread is a guided tour, and the
   map is locked to it until the reader exits.
+  **Resolved 2026-09-30: (a).**
 - **Q35. Does a thread play its demos on arrival?** (a) **Recommended.**
   No. The demo shows on its step and waits for a press, as M4 decided for
   every sound. (b) Yes, on arrival, as a guided tour would, with the mute
   and volume as they are. This reverses an M4 rule.
+  **Resolved 2026-09-30: (a).**
 - **Q36. How does a lens look?** (a) **Recommended.** Dimming only: lit
   edges keep their lineage colours, and everything else goes quiet. No
   new colour. (b) Recolour: each lens gets its own colour for its edges.
   Four new colours need the colour-vision check redone.
+  **Resolved 2026-09-30: (a).**
 - **Q37. What is the Labels lens?** "Arrange by label" and the "Labels"
   layer toggle already exist. (a) **Recommended.** The Labels lens is a
   lens like the others: it lights edges tagged `labels` and dims the
@@ -203,3 +206,4 @@ Each step is one PR, merged before the next.
   this". (b) Fold it in: choosing the Labels lens also switches to
   Arrange by label. (c) Drop it: three lenses, and the label arrangement
   covers labels.
+  **Resolved 2026-09-30: (a).**
