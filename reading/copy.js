@@ -63,6 +63,48 @@ export const COPY = {
   // The first-run card (reading/welcome.js). Every door and the goal point
   // at records already on the map, and the text only says what those
   // records say.
+  // Lenses (reading/lens.js). Each intro says what its tag covers, in the
+  // words the tag is used with in data/SCHEMA.md.
+  lenses: {
+    caption: { age13: 'Lens', adult: 'Lens' },
+    none: { age13: 'None', adult: 'None' },
+    of: { age13: 'of', adult: 'of' },
+    connections: { age13: 'connections are lit', adult: 'edges lit' },
+    howTo: {
+      age13: 'Lit lines stay bright and the rest go quiet. Click any lit line to read it. Choose None to see everything again.',
+      adult: 'Tagged edges stay lit and the rest go quiet. Choose None to clear the lens.',
+    },
+    clear: { age13: 'Turn the lens off', adult: 'Clear lens' },
+    production: {
+      name: { age13: 'Production', adult: 'Production' },
+      intro: {
+        age13: 'Lights the connections made in the studio: producers, engineers, and the way a record was put together.',
+        adult: 'Influence carried by studio practice: production credits, engineering, and the techniques of putting a record together.',
+      },
+    },
+    labels: {
+      name: { age13: 'Labels', adult: 'Labels' },
+      intro: {
+        age13: 'Lights the connections that ran through record labels: who put out whose records, and which labels built a sound. Try it with Arrange by label.',
+        adult: 'Influence carried by labels and the business of releasing records. Pairs with Arrange by label, which lays the map out by roster.',
+      },
+    },
+    politics: {
+      name: { age13: 'Politics', adult: 'Politics' },
+      intro: {
+        age13: 'Lights the connections where politics is part of the story. There are only a few so far. That is a gap in this map, not a sign that politics did not matter to the music.',
+        adult: 'Edges where politics is part of the causal story. Few are tagged so far, which reflects how far the map has got, not the history itself.',
+      },
+    },
+    technology: {
+      name: { age13: 'Technology', adult: 'Technology' },
+      intro: {
+        age13: 'Lights the connections made by machines: drum machines, samplers, effects, and what people did with them.',
+        adult: 'Influence carried by instruments and equipment, often used in ways their makers did not intend.',
+      },
+    },
+  },
+
   // The thread player (reading/threads.js).
   threads: {
     kicker: { age13: 'A thread', adult: 'Thread' },

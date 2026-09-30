@@ -326,6 +326,14 @@ export const CONFIG = {
   // The year cursor. Not a scrollbar with a graph attached: dragging it is
   // how the map performs its own history, and it is the first thing anyone
   // touches.
+  // Lenses (docs/m5-architecture.md section 4): each lights the edges
+  // carrying one overlay tag (data/SCHEMA.md, edge `tags`) and quiets the
+  // rest. One at a time; remembered like the reading level.
+  lenses: {
+    tags: ['production', 'labels', 'politics', 'technology'],
+    storageKey: 'lineage.lens',
+  },
+
   // Threads (docs/m5-architecture.md section 3).
   threads: {
     // Fewer stops than this is a link, not a route.

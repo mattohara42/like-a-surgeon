@@ -26,6 +26,7 @@ import { createEngine } from './audio/engine.js';
 import { createSoundControls } from './reading/soundControls.js';
 import { stopDemo } from './reading/demoBlock.js';
 import { createThreads } from './reading/threads.js';
+import { loadLens, saveLens, createLensControl, renderLensCard } from './reading/lens.js';
 
 const statusEl = document.getElementById('status');
 const appEl = document.getElementById('app');
@@ -38,6 +39,7 @@ const arrangeEl = document.getElementById('arrange');
 const goalEl = document.getElementById('goal-chip');
 const threadChipEl = document.getElementById('thread-chip');
 const soundEl = document.getElementById('sound');
+const lensEl = document.getElementById('lens');
 
 // One audio engine for the page. It creates nothing until a play button
 // calls start(), so building it here costs nothing for a reader who never
@@ -99,6 +101,7 @@ async function main() {
   let register = loadRegister(registers);
   let layers = loadLayers();
   let arrange = loadArrange();
+  let lens = loadLens();
   let graph = null;
 
   const legend = createLegend(legendEl, data.meta);
@@ -197,6 +200,7 @@ async function main() {
       return welcome.render({ ...ctx, threadList: threads.list().length ? threads.listButtons(threads.list(), ctx) : null });
     }
     if (target.kind === 'thread') return threads.render(target, panelContext());
+    if (target.kind === 'lens') return renderLensCard(target.id, data.edges, { ...panelContext(), clearLens: () => applyLens(null) });
     return renderRecord(target);
   }
 
@@ -260,8 +264,9 @@ async function main() {
   }
 
   function focusTarget(target) {
-    // Stepping back to the welcome card leaves the camera where it is.
-    if (target.kind === 'welcome') return;
+    // Stepping back to the welcome card or a lens card leaves the camera
+    // where it is.
+    if (target.kind === 'welcome' || target.kind === 'lens') return;
     if (target.kind === 'thread') {
       threads.focus(target);
       return;
@@ -315,7 +320,7 @@ async function main() {
       const r = el.getBoundingClientRect();
       return { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
     };
-    const controls = [layersEl, registersEl, arrangeEl, soundEl].map(rect).filter((r) => r.right > r.left);
+    const controls = [layersEl, registersEl, arrangeEl, soundEl, lensEl].map(rect).filter((r) => r.right > r.left);
     const cluster = controls.length
       ? controls.reduce((a, b) => ({
           left: Math.min(a.left, b.left),
@@ -328,13 +333,13 @@ async function main() {
     graph?.rerender();
   }
   const overlayObserver = new ResizeObserver(measureOverlays);
-  for (const el of [layersEl, registersEl, arrangeEl, soundEl, legendEl]) overlayObserver.observe(el);
+  for (const el of [layersEl, registersEl, arrangeEl, soundEl, lensEl, legendEl]) overlayObserver.observe(el);
   window.addEventListener('resize', measureOverlays);
 
   function build({ opening = false } = {}) {
     const carried = graph
-      ? { viewport: { ...graph.viewport }, year: graph.transport?.year() ?? null, selected: graph.selectedId() }
-      : { viewport: null, year: null, selected: null };
+      ? { viewport: { ...graph.viewport }, year: graph.transport?.year() ?? null, selected: graph.selectedId(), path: graph.path() }
+      : { viewport: null, year: null, selected: null, path: null };
     graph?.destroy();
 
     graph = createGraph(appEl, data, {
@@ -358,6 +363,10 @@ async function main() {
       onSelectEdge: (edge) => panel.open({ kind: 'edge', id: edge.id }),
       onSelectGroup: (id) => goNode(id),
     });
+
+    // A rebuild keeps the lens and a thread's route, as it keeps the year.
+    graph.setLens(lens);
+    if (carried.path) graph.setPath(carried.path);
 
     window.__graph = graph; // for manual/automated inspection during dev
 
@@ -387,6 +396,17 @@ async function main() {
     build();
   }
 
+  // A lens relights the map in place; no rebuild. Choosing one opens its
+  // card, and clearing it closes the card if that is what is showing.
+  function applyLens(next) {
+    lens = next;
+    saveLens(lens);
+    createLensControl(lensEl, lens, register, applyLens);
+    graph?.setLens(lens);
+    if (lens) panel.open({ kind: 'lens', id: lens });
+    else if (panel.current()?.kind === 'lens') panel.close();
+  }
+
   function applyRegister(next) {
     register = next;
     saveRegister(register);
@@ -397,11 +417,13 @@ async function main() {
     welcome.setRegister(register);
     threads.setRegister(register);
     sound.setRegister(register);
+    createLensControl(lensEl, lens, register, applyLens);
   }
 
   createLayerToggles(layersEl, layers, applyLayers);
   createRegisterSelector(registersEl, registers, register, applyRegister);
   createArrangeControl(arrangeEl, arrange, applyArrange);
+  createLensControl(lensEl, lens, register, applyLens);
   legend.setRegister(register);
   search.setRegister(register);
   welcome.setRegister(register);

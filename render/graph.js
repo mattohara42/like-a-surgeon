@@ -301,6 +301,10 @@ export function createGraph(container, data, callbacks = {}) {
   // around the map mid-thread, until the thread ends.
   let pathNodeIds = new Set();
   let pathEdgeIds = new Set();
+  // A lens (docs/m5-architecture.md section 4): the tag it lights, and the
+  // nodes that touch at least one lit edge. Null when no lens is chosen.
+  let lens = null;
+  let lensNodeIds = new Set();
 
   // Which record types draw, from the reader's layer toggles. Scenes render
   // as atmosphere and so never take a lane row even when on; labels and
@@ -726,7 +730,9 @@ export function createGraph(container, data, callbacks = {}) {
     };
     const setNodeState = (el, unborn, selected) => {
       const touched = touchedIds.has(el.__node?.id) || pathNodeIds.has(el.__node?.id);
+      const lensOff = lens !== null && !lensNodeIds.has(el.__node?.id);
       for (const target of [el, el.__labels]) {
+        target.classList.toggle('lens-off', lensOff);
         target.classList.toggle('unborn', unborn);
         target.classList.toggle('selected', selected);
         target.classList.toggle('touched', touched);
@@ -838,12 +844,16 @@ export function createGraph(container, data, callbacks = {}) {
           edgeElements.set(edge.id, created);
           updateEdgeElement(created, edge, anchors, vp.scale, gradientIdsFor(edge));
           created.classList.toggle('unborn', edge.year > year);
+          created.classList.toggle('lens-on', lens !== null && Boolean(edge.tags?.includes(lens)));
+          created.classList.toggle('lens-off', lens !== null && !edge.tags?.includes(lens));
           created.classList.toggle('selected', edge.id === selectedId);
           created.classList.toggle('passing', passing);
           created.classList.toggle('lit', isLit(edge));
         } else {
           updateEdgeElement(el, edge, anchors, vp.scale, gradientIdsFor(edge));
           el.classList.toggle('unborn', edge.year > year);
+          el.classList.toggle('lens-on', lens !== null && Boolean(edge.tags?.includes(lens)));
+          el.classList.toggle('lens-off', lens !== null && !edge.tags?.includes(lens));
           el.classList.toggle('selected', edge.id === selectedId);
           el.classList.toggle('passing', passing);
           el.classList.toggle('lit', isLit(edge));
@@ -966,6 +976,22 @@ export function createGraph(container, data, callbacks = {}) {
     setPath({ nodeIds = [], edgeIds = [] } = {}) {
       pathNodeIds = new Set(nodeIds);
       pathEdgeIds = new Set(edgeIds);
+      scheduleRender();
+    },
+    path: () => ({ nodeIds: [...pathNodeIds], edgeIds: [...pathEdgeIds] }),
+    // Lights the edges carrying `tag` and quiets everything else; null
+    // clears it.
+    setLens(tag) {
+      lens = tag ?? null;
+      lensNodeIds = new Set();
+      if (lens) {
+        for (const edge of graphEdges) {
+          if (edge.tags?.includes(lens)) {
+            lensNodeIds.add(edge.from.id);
+            lensNodeIds.add(edge.to.id);
+          }
+        }
+      }
       scheduleRender();
     },
     clearSelection: () => {
