@@ -3483,3 +3483,19 @@ small and worth having in front of Matt alongside everything else here.
     naming a different demo would have been silently ignored. The
     validator now fails it with a message saying which demo the stop
     actually shows. The two threads that use step demos already match.
+- **A290. Knuckles's drum machine was a Power Plant tool, not a Warehouse
+  one.** Checked the BACKLOG suspicion against Wikipedia's article on
+  Frankie Knuckles: he played the Warehouse from 1977 until November 1982,
+  then started his own club, the Power Plant, and bought his first drum
+  machine from Derrick May "around 1983". The edge's own source, his
+  interviews, gives 1984. Either way the machine came after the Warehouse.
+  - **`e-909-knuckles`.** The later side is now "Power Plant DJ sets", the
+    listening note ends at the Power Plant, and the evidence adds the
+    Wikipedia dates. The year stays 1984, the edge's cited source, and the
+    adult text now states the disagreement (1984 against around 1983)
+    instead of choosing, per the accuracy rules.
+  - **`frankie-knuckles`.** The Teen text had him mixing drum-machine
+    beats into his Warehouse sets, and the Adult text had him playing "in
+    one room for a decade". Both now match the dates: the Warehouse from
+    1977 to late 1982, the drum machine later, at the Power Plant. Nothing
+    else in the record changed.
