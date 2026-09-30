@@ -684,7 +684,7 @@ export function createGraph(container, data, callbacks = {}) {
     nebulaG.setAttribute('transform', `translate(${-vp.tx * (drift / vp.scale)},${-vp.ty * (drift / vp.scale)})`);
 
     const year = currentYear();
-    updateCursor(cursorG, layout, year, vp.scale);
+    updateCursor(cursorG, layout, year, vp.scale, Boolean(transport?.moving()));
     // The cursor moved forward a little since the last frame: whatever it
     // reached in between ignites, if it is on screen. A big jump reveals
     // quietly, and moving backwards never ignites anything.
