@@ -65,6 +65,7 @@ correct response to a good idea arriving mid-milestone.
   picking one. All five thread anchors (Michael Jackson, Rolling Stones,
   Nirvana, Madonna, Coolio) are now on the map; the thread player itself
   is still M5 work.
+  **Shipped** (A292) as a six-stop thread into Yankovic in date order.
 
 - **Follow the producer (Q21).** Select a producer and see everything
   they touched lit up across the map, or an "Arrange by producer" lane

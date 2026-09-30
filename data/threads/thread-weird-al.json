@@ -1,0 +1,57 @@
+{
+  "id": "thread-weird-al",
+  "title": "Six Degrees of Weird Al",
+  "subtitle": "One parodist, and the songs everyone already knew",
+  "intro": {
+    "age13": "A parody only works if you already know the song underneath it. Follow \"Weird Al\" Yankovic through twelve years of hits he borrowed, and you get a map of which songs were big enough for everyone to know.",
+    "adult": "Six edges into one artist, in the order they happened. Each borrows a hit the audience already knew, so together they sample what counted as common knowledge in pop from 1984 to 1996. They also show a permission-first method, and the one time the two sides told it differently."
+  },
+  "steps": [
+    {
+      "edgeId": "e-mjackson-weirdal",
+      "framing": {
+        "age13": "Start with the breakthrough. 'Eat It' copied the music of Michael Jackson's 'Beat It' as closely as a different band could, and Jackson said yes to it. It became Yankovic's first big hit in America.",
+        "adult": "The method in its clearest form: the arrangement rebuilt as exactly as possible, new words, and the original artist's approval sought first. Jackson's approval, and later his refusal of a second parody, are both on this stop."
+      }
+    },
+    {
+      "edgeId": "e-derringer-weirdal",
+      "framing": {
+        "age13": "Copying a record that closely takes skill. Rick Derringer, a rock guitarist, produced Yankovic's albums and played the 'Beat It' guitar solo again himself instead of sampling it.",
+        "adult": "The same record from the studio side. The joke depends on the copy being exact, and the producer credited on every album from 1983 to 1992 re-played the solo rather than lift it from Jackson's record."
+      }
+    },
+    {
+      "edgeId": "e-madonna-weirdal",
+      "framing": {
+        "age13": "A year later it was Madonna's turn. 'Like a Surgeon' kept the music of 'Like a Virgin' and swapped the words for a joke about a nervous surgeon, and Madonna was fine with it.",
+        "adult": "A second chart hit in two years, and an uncomplicated approval. Worth comparing with the last stop, where the permission story does not line up."
+      }
+    },
+    {
+      "edgeId": "e-stones-weirdal",
+      "framing": {
+        "age13": "Not every borrowing is a parody. Here Yankovic plays twelve Rolling Stones songs one after another as a fast accordion polka, and you can still recognise every tune.",
+        "adult": "The polka medley, his second recurring form, treats a whole catalogue as raw melody. It reaches back to songs from 1965, so what everyone knew is not only what was in the charts that year."
+      }
+    },
+    {
+      "edgeId": "e-weirdal-nirvana",
+      "framing": {
+        "age13": "By 1992 the song everyone knew was Nirvana's 'Smells Like Teen Spirit'. 'Smells Like Nirvana' copies its music and jokes that nobody could understand the real words. Cobain approved it.",
+        "adult": "The parody follows the chart into a different kind of rock, and the joke is about the original's sound as much as its words. Approval again, as Yankovic describes it."
+      }
+    },
+    {
+      "edgeId": "e-coolio-weirdal",
+      "framing": {
+        "age13": "The last stop is the one where the method broke. Yankovic says permission came through Coolio's record label. Coolio said nobody asked him personally, and he was unhappy about 'Amish Paradise'.",
+        "adult": "The map's clearest case of the two sides telling different stories. Both accounts are stated on this stop, and the edge is tiered consensus rather than documented because they conflict."
+      }
+    }
+  ],
+  "outro": {
+    "age13": "Five records, twelve years, and one big argument at the end. Each artist on this thread leads somewhere else on the map too: open Michael Jackson, the Rolling Stones or Nirvana and follow their other lines out.",
+    "adult": "Read as a set, the stops are a record of ubiquity: a parody was only worth making of a song the audience already knew. Jackson, Madonna and Cobain approved, as the stops describe it, and Coolio's account differs from Yankovic's. The thread leaves both accounts standing."
+  }
+}
