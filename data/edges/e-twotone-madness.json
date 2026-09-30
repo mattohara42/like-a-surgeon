@@ -1,0 +1,30 @@
+{
+  "id": "e-twotone-madness",
+  "from": "two-tone",
+  "to": "madness",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1979,
+  "crossLineage": false,
+  "evidence": "Wikipedia's articles on 2 Tone and Madness: 2 Tone's contracts let acts leave after a single release. Madness's first single, 'The Prince', was released by 2 Tone in 1979 and reached number 16; they then signed to Stiff.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Madness",
+      "title": "The Prince",
+      "year": 1979
+    },
+    "later": {
+      "artist": "Madness",
+      "title": "One Step Beyond",
+      "year": 1979
+    },
+    "whatToListenFor": "'The Prince', the 2 Tone single, is a quick, cheerful ska tribute. 'One Step Beyond', on Stiff a few months later, is bigger and more theatrical. Listen for a band using one single on a sympathetic small label as a launch pad, which is exactly what 2 Tone's contracts were designed to allow."
+  },
+  "explanation": {
+    "age13": "Madness released their first single on 2 Tone in 1979. The label's contracts let bands leave after one single, and Madness did, moving to Stiff Records.",
+    "adult": "A label edge about a contract clause: 2 Tone chose to be a starting point rather than an owner. It is the opposite of the long, restrictive deals elsewhere on the map (e-pye-kinks, e-sun-elvis)."
+  },
+  "tags": [
+    "labels"
+  ]
+}

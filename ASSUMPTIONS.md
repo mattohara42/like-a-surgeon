@@ -3880,3 +3880,21 @@ small and worth having in front of Matt alongside everything else here.
     plural name ("Pixies formed", "Pixies' 'Surfer Rosa'"), keeping
     "the Pixies album" only where "the" belongs to "album". The one
     older line in `nirvana.json` was changed to match.
+
+## Added with the 2 Tone batch
+
+- **A306. Prince Buster, the Specials, Madness and 2 Tone Records.**
+  Three artists, one label and 5 edges (328 to 333 of 350), running
+  Jamaican ska through 1960s Britain into the punk lane.
+  - **Prince Buster is in `dub`**, the map's Jamaican lane, although
+    his records are ska. The lane holds Kingston's whole
+    sound-system lineage, as it does for Studio One and Treasure Isle.
+  - **The Specials and Madness are in `rock`**, beside the Clash and
+    the punk scene they came out of.
+  - **Two claims come from general knowledge, not from a source read
+    in this batch:** that Buster's 'One Step Beyond' dates from 1964,
+    and the opening details of the records named in the listening
+    notes. The crosscheck tool should confirm the year.
+  - **Race and politics are stated through Dammers's own account** of
+    why the band was integrated, not through context this batch did
+    not source.

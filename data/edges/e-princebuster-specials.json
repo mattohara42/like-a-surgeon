@@ -1,0 +1,28 @@
+{
+  "id": "e-princebuster-specials",
+  "from": "prince-buster",
+  "to": "the-specials",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1979,
+  "crossLineage": true,
+  "evidence": "Wikipedia's articles on Prince Buster and 2 Tone: the Specials' first single, 'Gangsters' (1979), drew on Buster's 'Al Capone' (1964), which had reached number 18 in the UK in 1967.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Prince Buster",
+      "title": "Al Capone",
+      "year": 1964
+    },
+    "later": {
+      "artist": "The Specials",
+      "title": "Gangsters",
+      "year": 1979
+    },
+    "whatToListenFor": "'Al Capone' opens with a car screeching and a shouted warning, then a bouncing ska beat with the off-beat guitar chop on every 'and'. 'Gangsters' keeps the idea, the chant, the off-beat chop, the menace, but plays it tighter and harder, with punk urgency and new lyrics. Listen for the off-beat: it is Jamaican, and the Specials kept it exactly."
+  },
+  "explanation": {
+    "age13": "The Specials' first single, 'Gangsters', was built on Prince Buster's 1964 ska hit 'Al Capone', with new words.",
+    "adult": "The founding borrowing of the 2 Tone movement, and it came through the 1960s British records of Jamaican ska that migrants and mods had kept alive, not through Kingston directly. It ties the dub lane's sound-system generation to the UK punk lane."
+  },
+  "tags": []
+}

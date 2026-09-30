@@ -1,0 +1,31 @@
+{
+  "id": "e-twotone-specials",
+  "from": "two-tone",
+  "to": "the-specials",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1979,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 2 Tone Records: Jerry Dammers founded the label in Coventry in 1979, financed by Chrysalis, which agreed to fund up to 15 singles a year and release at least 10 while the label chose its own acts.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Specials",
+      "title": "Gangsters",
+      "year": 1979
+    },
+    "later": {
+      "artist": "The Specials",
+      "title": "Ghost Town",
+      "year": 1981
+    },
+    "whatToListenFor": "'Gangsters' is fast, bright and furious, a punk band playing ska. Two years later 'Ghost Town' is slow and eerie: minor-key organ, a wailing horn line, and voices that sound far away. Listen for what the band's own label let them do: release a strange, dread-filled song as a single, and see it go to number one."
+  },
+  "explanation": {
+    "age13": "Jerry Dammers of the Specials started his own label, 2 Tone, in 1979. A big company, Chrysalis, paid for it, but 2 Tone chose what to release.",
+    "adult": "An artist-run label edge. Dammers controlled the band's releases, the sleeves and the roster, which is why the Specials' political and visual identity was so consistent. Chrysalis's money and 2 Tone's independence were the deal."
+  },
+  "tags": [
+    "labels",
+    "politics"
+  ]
+}

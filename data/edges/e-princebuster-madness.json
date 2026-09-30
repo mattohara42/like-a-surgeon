@@ -1,0 +1,28 @@
+{
+  "id": "e-princebuster-madness",
+  "from": "prince-buster",
+  "to": "madness",
+  "type": "cover",
+  "confidence": "documented",
+  "year": 1979,
+  "crossLineage": true,
+  "evidence": "Wikipedia's articles on Madness and Prince Buster: the band took its name from Buster's song 'Madness' (1963), and its first single, 'The Prince' (2 Tone, 1979), was a tribute to him. The debut album 'One Step Beyond...' (Stiff, 1979) takes its title and opening track from Buster's 'One Step Beyond' (1964).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Prince Buster",
+      "title": "One Step Beyond",
+      "year": 1964
+    },
+    "later": {
+      "artist": "Madness",
+      "title": "One Step Beyond",
+      "year": 1979
+    },
+    "whatToListenFor": "Buster's 'One Step Beyond' is a loose, jaunty ska instrumental with a saxophone line. Madness keep the sax line but add a spoken introduction, a heavier beat and a big, stomping, almost marching feel. Listen for how a London band turned a Kingston dance tune into something closer to a football chant, which is part of why it became a hit."
+  },
+  "explanation": {
+    "age13": "Madness named themselves after a Prince Buster song, made their first single a tribute to him, and started their first album with a version of his 'One Step Beyond'.",
+    "adult": "Three separate acts of homage, the name, the tribute single and the cover, make this one of the most thoroughly documented influence edges on the map. The cover is the one drawn, since it is the one you can hear."
+  },
+  "tags": []
+}
