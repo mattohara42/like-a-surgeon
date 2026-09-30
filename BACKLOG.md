@@ -229,6 +229,13 @@ correct response to a good idea arriving mid-milestone.
 
 ## Observed problems
 
+- **A thread step's `demoId` is validated but never read (A284).** The
+  player shows each stop's record panel, and so that record's own demo.
+  A step `demoId` that named a different demo would pass the validator
+  and never appear. Either the player shows it (one demo per page still
+  holds only if the record has none of its own), or the validator
+  requires it to match the record's demo, or the field goes.
+
 - **`CONFIG.transport.unbornOpacity` is unused.** The "not yet" fade is
   `.unborn { opacity: 0.085 }` in index.html, the same number written a
   second time. Changing the CONFIG value does nothing. Either the CSS

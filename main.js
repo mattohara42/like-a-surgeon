@@ -25,6 +25,7 @@ import { h } from './reading/dom.js';
 import { createEngine } from './audio/engine.js';
 import { createSoundControls } from './reading/soundControls.js';
 import { stopDemo } from './reading/demoBlock.js';
+import { createThreads } from './reading/threads.js';
 
 const statusEl = document.getElementById('status');
 const appEl = document.getElementById('app');
@@ -35,6 +36,7 @@ const legendEl = document.getElementById('legend');
 const searchEl = document.getElementById('search');
 const arrangeEl = document.getElementById('arrange');
 const goalEl = document.getElementById('goal-chip');
+const threadChipEl = document.getElementById('thread-chip');
 const soundEl = document.getElementById('sound');
 
 // One audio engine for the page. It creates nothing until a play button
@@ -161,13 +163,39 @@ async function main() {
     openCard: () => panel.open({ kind: 'welcome', id: 'welcome' }),
   });
 
-  // The map holds only the skeleton of each record (render/loader.js). A
-  // panel loads the full record, then draws it over the skeleton so the
-  // resolved from/to nodes and normalized years stay as the map has them.
+  // The thread player (docs/m5-architecture.md section 3). Its stops are
+  // ordinary node and edge panels, drawn by renderRecord below.
+  const threads = createThreads(threadChipEl, {
+    threads: data.threads,
+    nodesById,
+    edgesById,
+    open: (target) => {
+      panel.open(target);
+      focusTarget(target);
+    },
+    renderRecord: (target) => renderRecord(target),
+    focusRecord: (target) => focusTarget(target),
+    frame: (ids) => graph.frameNodes(ids),
+    setPath: (route) => graph?.setPath(route),
+    setYear: (year) => graph?.setYear(year),
+  });
+
   function renderTarget(target) {
     // A demo belongs to the panel it was opened from.
     stopDemo();
-    if (target.kind === 'welcome') return welcome.render({ ...panelContext(), close: () => panel.close() });
+    threads.noticeTarget(target);
+    if (target.kind === 'welcome') {
+      const ctx = { ...panelContext(), close: () => panel.close() };
+      return welcome.render({ ...ctx, threadList: threads.list().length ? threads.listButtons(threads.list(), ctx) : null });
+    }
+    if (target.kind === 'thread') return threads.render(target, panelContext());
+    return renderRecord(target);
+  }
+
+  // The map holds only the skeleton of each record (render/loader.js). A
+  // panel loads the full record, then draws it over the skeleton so the
+  // resolved from/to nodes and normalized years stay as the map has them.
+  function renderRecord(target) {
     if (target.kind === 'node') {
       const node = nodesById.get(target.id);
       return loadRecord(SHARD_FOR_KIND[node.kind], node.id).then((raw) =>
@@ -202,6 +230,7 @@ async function main() {
     onClose: () => {
       stopDemo();
       graph?.clearSelection();
+      threads.noticeTarget(null);
     },
   });
   // Stops above the transport bar, so the year and play button stay usable
@@ -222,6 +251,10 @@ async function main() {
   function focusTarget(target) {
     // Stepping back to the welcome card leaves the camera where it is.
     if (target.kind === 'welcome') return;
+    if (target.kind === 'thread') {
+      threads.focus(target);
+      return;
+    }
     if (target.kind === 'edge') {
       const edge = edgesById.get(target.id);
       if (!edge) return;
@@ -351,6 +384,7 @@ async function main() {
     legend.setRegister(register);
     search.setRegister(register);
     welcome.setRegister(register);
+    threads.setRegister(register);
     sound.setRegister(register);
   }
 
@@ -360,6 +394,7 @@ async function main() {
   legend.setRegister(register);
   search.setRegister(register);
   welcome.setRegister(register);
+  threads.setRegister(register);
   sound.setRegister(register);
   // The card opens before the first build so the opening frame can leave
   // room for the drawer it sits in.

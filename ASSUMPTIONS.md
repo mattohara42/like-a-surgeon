@@ -3335,3 +3335,45 @@ small and worth having in front of Matt alongside everything else here.
     moves. On a map whose horizontal axis is time, "behind the cursor"
     is where the past is, and the veil lifts as soon as the reader
     stops, so this reads right.
+
+- **A284. M5 step 3: the thread player.**
+  - **Built as designed** (`docs/m5-architecture.md` section 3, Q34, Q35).
+    `reading/threads.js` draws a thread as a panel target
+    (`{ kind: 'thread', id, step }`): an intro, one page per stop (the
+    thread's framing above the stop's own record panel, unchanged), and an
+    outro. Previous and Next are buttons, and the arrow keys work while the
+    page has focus, except inside a slider. Moving between stops replaces
+    the target in place, so the drawer's own Back still returns to
+    wherever the reader was before the thread.
+  - **The route stays drawn.** The graph gained `setPath`, kept apart from
+    selection: route nodes ring gold like touched ones, and route edges
+    draw lit. It survives the reader clicking elsewhere, and clears only
+    when the thread ends.
+  - **Wandering off (Q34).** Opening anything else mid-thread shows a chip
+    beside "Start here", "↩ The Delay Line · 2 of 4", which returns to that
+    stop. Its × ends the thread and clears the route. A first draft hid
+    "Start here" as well, which is meant to be always on screen, and ran
+    to two lines. Now it hides only the mission text, and the full
+    "Back to the thread" wording is the button's accessible label.
+  - **Each stop sets the timeline to its own year.** This goes past the
+    design's wording, which said the cursor moves forward to reveal a
+    stop if it is behind it. At the default year of 2026 that never moves
+    anything, so the thread would not play forward through time as the
+    design intends. Stopping at King Tubby sets 1968, the Clash 1977, PiL
+    1979, and later stops are not yet on the map until they are reached.
+    Previous moves the year back.
+  - **Demos wait for a press (Q35).** Checked on the Machine Nobody Wanted:
+    the 808 stop shows its demo, no AudioContext exists until play is
+    pressed, and moving on stops it.
+  - **The welcome card lists threads** ("Follow a thread"), with ✓ on
+    those finished. This was step 4 in the plan, and moved into step 3 so
+    the player can be reached and tested. Step 4 keeps the other two
+    entry points: the line on a record's panel and search.
+  - **Step `demoId` is not read by the player.** Every stop shows its
+    record's own demo, which is what the two current threads' step demo
+    ids already name. A step demo naming a different demo would be
+    silently ignored (BACKLOG).
+  - **Checked in the browser**, in dev and from `dist/` over file://: the
+    Delay Line from intro to outro by button and by arrow key, wandering
+    off through a link and back through the chip, finishing (stored as
+    finished), and ending from the chip. No page errors.

@@ -296,6 +296,11 @@ export function createGraph(container, data, callbacks = {}) {
   // Nodes ringed as "what the selected node touched", for Follow the
   // producer. Cleared whenever the selection moves.
   let touchedIds = new Set();
+  // A thread's route so far (docs/m5-architecture.md section 3). Kept apart
+  // from the selection, so the route stays drawn while the reader clicks
+  // around the map mid-thread, until the thread ends.
+  let pathNodeIds = new Set();
+  let pathEdgeIds = new Set();
 
   // Which record types draw, from the reader's layer toggles. Scenes render
   // as atmosphere and so never take a lane row even when on; labels and
@@ -720,7 +725,7 @@ export function createGraph(container, data, callbacks = {}) {
       nodeElements.delete(id);
     };
     const setNodeState = (el, unborn, selected) => {
-      const touched = touchedIds.has(el.__node?.id);
+      const touched = touchedIds.has(el.__node?.id) || pathNodeIds.has(el.__node?.id);
       for (const target of [el, el.__labels]) {
         target.classList.toggle('unborn', unborn);
         target.classList.toggle('selected', selected);
@@ -772,7 +777,8 @@ export function createGraph(container, data, callbacks = {}) {
     // looking at: the selected edge, and every edge touching the selected
     // or hovered node (A253). The quiet and lit looks live in index.html.
     const litNodes = new Set([selectedId, hoveredNodeId].filter((id) => id && positionById.has(id)));
-    const isLit = (edge) => edge.id === selectedId || litNodes.has(edge.from.id) || litNodes.has(edge.to.id);
+    const isLit = (edge) =>
+      edge.id === selectedId || pathEdgeIds.has(edge.id) || litNodes.has(edge.from.id) || litNodes.has(edge.to.id);
 
     // Demo badges placed so far this frame, in screen px. A badge that would
     // overlap one slides along its own curve until it has room, so two
@@ -952,6 +958,15 @@ export function createGraph(container, data, callbacks = {}) {
       touchedIds = new Set(ids);
       scheduleRender();
       return true;
+    },
+    // Moves the year cursor, as the timeline would.
+    setYear: (y) => transport?.setYear(y),
+    // Draws a thread's route: its nodes ring gold, its edges draw lit.
+    // Called with nothing to clear it.
+    setPath({ nodeIds = [], edgeIds = [] } = {}) {
+      pathNodeIds = new Set(nodeIds);
+      pathEdgeIds = new Set(edgeIds);
+      scheduleRender();
     },
     clearSelection: () => {
       selectedId = null;

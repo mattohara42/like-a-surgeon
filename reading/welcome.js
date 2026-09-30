@@ -123,6 +123,15 @@ export function createWelcome(chipEl, { nodesById, edgesById, goldenIds = new Se
       h('h2', {}, pick(COPY.welcome.title, ctx.register)),
       h('p', { class: 'body' }, pick(COPY.welcome.intro, ctx.register)),
       h('div', { class: 'doors' }, doors),
+      ctx.threadList
+        ? h(
+            'div',
+            { class: 'goal threads' },
+            h('h3', {}, pick(COPY.threads.listHeading, ctx.register)),
+            h('p', { class: 'body' }, pick(COPY.threads.listLine, ctx.register)),
+            ctx.threadList,
+          )
+        : null,
       missions.length
         ? h(
             'div',

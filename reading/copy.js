@@ -63,6 +63,29 @@ export const COPY = {
   // The first-run card (reading/welcome.js). Every door and the goal point
   // at records already on the map, and the text only says what those
   // records say.
+  // The thread player (reading/threads.js).
+  threads: {
+    kicker: { age13: 'A thread', adult: 'Thread' },
+    listHeading: { age13: 'Follow a thread', adult: 'Threads' },
+    listLine: {
+      age13: 'A thread walks you through the map one stop at a time.',
+      adult: 'Guided routes through the map, a few stops each.',
+    },
+    stops: { age13: 'stops', adult: 'stops' },
+    stop: { age13: 'Stop', adult: 'Stop' },
+    of: { age13: 'of', adult: 'of' },
+    start: { age13: 'Start', adult: 'Begin' },
+    next: { age13: 'Next', adult: 'Next' },
+    previous: { age13: 'Previous', adult: 'Previous' },
+    finish: { age13: 'Finish', adult: 'Finish' },
+    again: { age13: 'Start again', adult: 'Start again' },
+    finished: { age13: 'finished', adult: 'finished' },
+    more: { age13: 'More threads', adult: 'Other threads' },
+    backTo: { age13: 'Back to the thread', adult: 'Return to thread' },
+    end: { age13: 'End the thread', adult: 'End thread' },
+    ended: { age13: 'The end of the thread', adult: 'End of thread' },
+  },
+
   welcome: {
     kicker: { age13: 'Start here', adult: 'Start here' },
     title: { age13: 'Where do you want to start?', adult: 'Three ways in' },

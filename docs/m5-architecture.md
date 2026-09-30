@@ -167,8 +167,11 @@ Each step is one PR, merged before the next.
    question (Q33) answered.
 2. Thread schema and validator, and framing for the two existing threads.
 3. The thread player: the drawer pages, the camera, the path lighting, the
-   thread chip, progress.
-4. Where threads are found: the welcome card, panel lines, search.
+   thread chip, progress. Built (A284), with the welcome card's thread
+   list, so the player can be reached, and each stop setting the timeline
+   to its own year.
+4. Where threads are found: panel lines and search (the welcome card's
+   list came with step 3).
 5. Three launch threads (data).
 6. Lenses: the control, the dimming, the four intros, and a tag audit of
    the 22 untagged edges.
