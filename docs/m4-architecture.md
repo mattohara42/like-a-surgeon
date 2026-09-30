@@ -72,6 +72,8 @@ audio/
     drum808.proc.js
     drum909.proc.js
     dsp-utils.proc.js  noise and filter helpers shared by the two drum machines
+    string.proc.js     Lineage's own: a plucked string, bass and guitar (A280)
+    crusher.proc.js    Lineage's own: sample-rate and bit reduction (A280)
 reading/
   demoBlock.js   the demo UI inside a panel: play/stop, A/B, sliders, caption
 ```
@@ -229,8 +231,8 @@ two new ones filled the freed slots.
 | 4 | A dry stem, then the Space Echo | fx-chain | `e-re201-tubby` | native delay with feedback and filtering | plays (A278) |
 | 5 | A preset rhythm, then a riddim (original rhythm, not the bassline) | ab | `e-mt40-princejammy` | simple square and noise voices | to build |
 | 6 | A funk break straight, then chopped | pattern | `e-winstons-nwa`, `e-winstons-shyfx` | SQUELCH 909 kit playing a break pattern | plays (A278) |
-| 7 | The same loop at full quality and at 12-bit, 26 kHz | ab | `e-sp1200-marleymarl` | native bit-crush and sample-rate reduction | to build |
-| 8 | Clean, then the fuzz box, then the slashed speaker (A/B/C) | fx-chain | `e-fuzztone-stones`, `e-elpico-kinks` | waveshaper; waveshaper plus noise-modulated rattle | to build |
+| 7 | The same loop at full quality and at 12-bit, 26 kHz | fx-chain | `e-sp1200-marleymarl` | crusher worklet: sample-and-hold and bit reduction | plays (A280) |
+| 8 | Clean, then the fuzz box, then the slashed speaker (A/B/C) | fx-chain | `e-fuzztone-stones`, `e-elpico-kinks` | waveshaper; waveshaper plus noise-modulated rattle; string worklet guitar | plays (A280) |
 | 9 | The Stylophone: one voice, a metal pen | machine-voice | `e-stylophone-bowie` | native square oscillator | plays (A279) |
 | 10 | Herc's Merry-Go-Round: one break, extended across two copies | pattern | `e-jamesbrown-koolherc` | SQUELCH 909 kit, two decks switched | to build |
 | 11 | A synth bass against an electric bass (original line) | ab | `e-minimoog-parliamentfunkadelic` | native mono synth with a ladder-style filter; plucked-string voice | plays (A279) |
@@ -297,6 +299,9 @@ Each step is one PR, merged before the next starts.
    9 and 11. Left: 5, 7, 8 and 10. Demo 8's guitar cannot be the native
    plucked string, which tops out near 172 Hz, so it needs a string
    worklet.
+   Third PR built (A280): a string worklet (bass and guitar), a crusher
+   worklet, fuzz and torn-speaker effects, insert routing, and demos 7
+   and 8. Left: 5 and 10.
 6. Visual feedback on the map (section 6). Built (A273): a pulse per
    bar on the demo's edges, a ♪ mark on every demo edge, and demo edges
    resting brighter than quiet ones.

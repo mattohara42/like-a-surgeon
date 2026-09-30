@@ -4,12 +4,15 @@
 // can check demo files against it in Node.
 //
 // Keyed by machine record id (data/machines/), so a demo names the same
-// thing the map does. The one exception is `electric-bass`, a stand-in
-// voice for an instrument the map has no record for.
+// thing the map does. The exceptions are `electric-bass` and
+// `electric-guitar`, stand-in voices for instruments the map has no
+// record for.
 //
-// A voice is either a SQUELCH worklet (`worklet`) or built from native
-// nodes (`voice`, audio/voices.js). A worklet voice's controls go through
-// `toParam` into its own units; a native voice converts them itself.
+// A voice is either a worklet (`worklet`, with `options` passed to it as
+// processorOptions) or built from native nodes (`voice`, audio/voices.js).
+// A worklet voice's controls go through `toParam` into its own units; a
+// native voice converts them itself. `chords` is how many notes a voice
+// can sound at once from one step (a pattern part's `chord`).
 
 import { CONFIG } from '../config.js';
 
@@ -35,7 +38,21 @@ export const INSTRUMENTS = {
   },
   'dubreq-stylophone': { voice: 'stylophone', kind: 'voice', params: [], notes: VOICES.stylophone.notes },
   minimoog: { voice: 'monosynth', kind: 'voice', params: ['cutoff', 'resonance', 'envMod', 'decay'], notes: VOICES.monosynth.notes },
-  'electric-bass': { voice: 'pluck', kind: 'voice', params: [], notes: VOICES.pluck.notes },
+  'electric-bass': {
+    worklet: 'string',
+    kind: 'voice',
+    params: [],
+    notes: VOICES.electricBass.notes,
+    options: VOICES.electricBass.string,
+  },
+  'electric-guitar': {
+    worklet: 'string',
+    kind: 'voice',
+    params: [],
+    notes: VOICES.electricGuitar.notes,
+    chords: CONFIG.audio.dsp.STRING.MAX_STRINGS,
+    options: VOICES.electricGuitar.string,
+  },
 };
 
 // Every control target a machine accepts: "lane.knob" for drums, the

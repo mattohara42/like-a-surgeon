@@ -16,6 +16,8 @@ export const WORKLETS = {
   voice303: ['voice303.proc.js'],
   drum808: ['dsp-utils.proc.js', 'drum808.proc.js'],
   drum909: ['dsp-utils.proc.js', 'drum909.proc.js'],
+  string: ['string.proc.js'],
+  crusher: ['crusher.proc.js'],
 };
 
 // `texts` maps a file name from WORKLETS to its contents. `dsp` is

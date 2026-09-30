@@ -121,11 +121,11 @@ test('303 controls map onto the worklet parameter ranges', () => {
 const label = { age13: 'x', adult: 'x' };
 const loop = { bpm: 100, steps: STEPS, parts: { 'tr-909': { bd: four } } };
 const chopDemo = (versions) => ({ id: 'demo-c', kind: 'pattern', safety: { maxGain: 0.7 }, params: { pattern: loop, versions } });
-const echoDemo = (chain, controls = []) => ({
+const echoDemo = (chain, controls = [], versions = [{ label, fx: [] }, { label, fx: chain.map((c) => c.fx) }], route = 'send') => ({
   id: 'demo-e',
   kind: 'fx-chain',
   safety: { maxGain: 0.6 },
-  params: { pattern: loop, dry: { label }, wet: { label }, chain, controls },
+  params: { pattern: loop, route, chain, versions, controls },
 });
 const echo = { fx: 'tape-echo', steps: 3, lowCutHz: 400, highCutHz: 2500 };
 const order = Array.from({ length: STEPS }, (_, i) => STEPS - i);
@@ -166,8 +166,26 @@ test('fx-chain controls reach effect knobs and drum lanes, nothing else', () => 
   assert.ok(errs.some((e) => e.includes('"tape-echo.time" is not a control')), errs.join('\n'));
 });
 
-test('an fx-chain demo is dry first, then wet', () => {
-  assert.deepStrictEqual(demoVersions(echoDemo([echo])).map((v) => v.wet), [false, true]);
+test('an fx-chain version names the effects it switches in', () => {
+  assert.deepStrictEqual(demoVersions(echoDemo([echo])).map((v) => v.fx), [[], ['tape-echo']]);
+});
+
+const fuzz = { fx: 'fuzz', driveDb: 30, toneHz: 3000, outDb: -12 };
+const torn = { fx: 'torn-speaker', driveDb: 18, rattleHz: 2500, rattleDb: -6, outDb: -10 };
+
+test('an insert chain can switch each effect on its own; a send cannot (A280)', () => {
+  const abc = [{ label, fx: [] }, { label, fx: ['fuzz'] }, { label, fx: ['torn-speaker'] }];
+  assert.deepStrictEqual(checkDemo(echoDemo([fuzz, torn], [], abc, 'insert')), []);
+  assert.ok(checkDemo(echoDemo([fuzz, torn], [], abc, 'send')).some((e) => e.includes('whole chain or none')));
+  assert.ok(checkDemo(echoDemo([fuzz], [], abc, 'insert')).some((e) => e.includes('"torn-speaker" is not in params.chain')));
+  assert.ok(checkDemo(echoDemo([fuzz], [], undefined, 'sideways')).some((e) => e.includes('params.route')));
+  assert.ok(checkDemo(echoDemo([fuzz], [], [{ label, fx: [] }], 'insert')).some((e) => e.includes('at least two versions')));
+});
+
+test('the crusher takes a whole number of bits', () => {
+  const crush = (bits) => checkDemo(echoDemo([{ fx: 'crusher', rateHz: 26040, bits }], [], undefined, 'insert'));
+  assert.deepStrictEqual(crush(12), []);
+  assert.ok(crush(12.5).some((e) => e.includes('bits must be a whole number')));
 });
 
 const voiceOn = (machine, part, extra = {}) => ({
@@ -177,11 +195,10 @@ const voiceOn = (machine, part, extra = {}) => ({
   params: { machine, pattern: { bpm: 100, steps: STEPS, parts: { [machine]: part } }, ...extra },
 });
 
-test('native voices play notes in their own range (A279)', () => {
-  assert.deepStrictEqual(checkDemo(voiceOn('electric-bass', { notes: notes(40) })), []);
-  // Above E3 a plucked string on native nodes cannot hold its pitch.
-  const high = checkDemo(voiceOn('electric-bass', { notes: notes(57) }));
-  assert.ok(high.some((e) => e.includes('from 28 to 52')), high.join('\n'));
+test('voices play notes in their own range (A279, A280)', () => {
+  assert.deepStrictEqual(checkDemo(voiceOn('electric-bass', { notes: notes(57) })), []);
+  const high = checkDemo(voiceOn('electric-bass', { notes: notes(70) }));
+  assert.ok(high.some((e) => e.includes('from 28 to 60')), high.join('\n'));
   assert.deepStrictEqual(checkDemo(voiceOn('minimoog', { notes: notes(28) }, { controls: [{ target: 'cutoff', min: 0, max: 1, default: 0.3 }] })), []);
 });
 
@@ -192,4 +209,21 @@ test('keys belong to a voice, rise, and stay in its range', () => {
   assert.ok(sty([20]).some((e) => e.includes('params.keys[0]')));
   assert.ok(sty([]).some((e) => e.includes('must list 1 to')));
   assert.ok(checkDemo(drums({ keys: [60] })).some((e) => e.includes('only a voice has keys')));
+});
+
+test('chords only on a voice that can play them, and within its range', () => {
+  const g = (part) => checkDemo(voiceOn('electric-guitar', part));
+  assert.deepStrictEqual(g({ notes: notes(43), chord: [0, 7, 12] }), []);
+  assert.ok(g({ notes: notes(43), chord: [0, 7, 12, 19] }).some((e) => e.includes('chord must list')));
+  assert.ok(g({ notes: notes(80), chord: [0, 7, 12] }).some((e) => e.includes('chord reaches above')));
+  const bass = checkDemo(voiceOn('electric-bass', { notes: notes(40), chord: [0, 7] }));
+  assert.ok(bass.some((e) => e.includes('one note at a time')), bass.join('\n'));
+});
+
+test('through names instruments that play in the pattern', () => {
+  const d = echoDemo([fuzz], [], [{ label, fx: [] }, { label, fx: ['fuzz'] }], 'insert');
+  d.params.through = ['tr-909'];
+  assert.deepStrictEqual(checkDemo(d), []);
+  d.params.through = ['electric-guitar'];
+  assert.ok(checkDemo(d).some((e) => e.includes('does not play in params.pattern')));
 });

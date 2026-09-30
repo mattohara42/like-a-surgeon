@@ -16,7 +16,8 @@
 // Drum lanes are one character per step: "." rest, "x" hit, "X" accented
 // hit. A voice part has one MIDI note (or null for a rest) per step, in
 // the voice's own range (INSTRUMENTS[id].notes), and
-// optional accent ("X") and slide ("s") strings. A slide on step N means
+// optional accent ("X") and slide ("s") strings, and on a voice that can,
+// a `chord` of semitones above each note ([0, 7, 12] is a power chord). A slide on step N means
 // "glide into step N+1", SQUELCH's locked 303 semantics (js/seq303.js).
 
 import { CONFIG } from '../config.js';
@@ -94,6 +95,21 @@ function parseVoice(part, inst, steps, where, errors) {
   };
   const accent = flags('accent', 'X');
   const slide = flags('slide', 's');
+  // A chord: semitones above each note, sounded together, on a voice that
+  // can (INSTRUMENTS[id].chords).
+  let chord = null;
+  if (part.chord !== undefined) {
+    const C = CONFIG.audio.chord;
+    if (!inst.chords) errors.push(`${where}.chord: this voice plays one note at a time`);
+    else if (
+      !Array.isArray(part.chord) ||
+      part.chord.length < 2 ||
+      part.chord.length > inst.chords ||
+      part.chord.some((iv) => !Number.isInteger(iv) || iv < 0 || iv > C.maxInterval)
+    ) {
+      errors.push(`${where}.chord must list 2 to ${inst.chords} whole semitone steps from 0 to ${C.maxInterval}`);
+    } else chord = part.chord;
+  }
   return notes.map((n, i) => {
     if (n === null) {
       if (accent[i]) errors.push(`${where}: step ${i + 1} is a rest but has an accent`);
@@ -103,6 +119,9 @@ function parseVoice(part, inst, steps, where, errors) {
     if (!Number.isInteger(n) || n < range.min || n > range.max) {
       errors.push(`${where}.notes: step ${i + 1} must be a whole MIDI note from ${range.min} to ${range.max} or null, got ${JSON.stringify(n)}`);
     }
-    return { g: true, n, a: Boolean(accent[i]), s: Boolean(slide[i]) };
+    if (chord && Number.isInteger(n) && n + Math.max(...chord) > range.max) {
+      errors.push(`${where}: step ${i + 1}'s chord reaches above ${range.max}`);
+    }
+    return chord ? { g: true, n, a: Boolean(accent[i]), s: Boolean(slide[i]), c: chord } : { g: true, n, a: Boolean(accent[i]), s: Boolean(slide[i]) };
   });
 }

@@ -8,7 +8,7 @@
 
 import { INSTRUMENTS, controlTargets } from '../audio/instruments.js';
 import { parsePattern } from '../audio/pattern.js';
-import { FX, fxTargets } from '../audio/fx.js';
+import { FX, ROUTES, fxTargets } from '../audio/fx.js';
 import { CONFIG } from '../config.js';
 
 // Kinds with a player (audio/player.js).
@@ -157,11 +157,15 @@ export function checkDemo(demo, checkRegister = () => {}) {
     controls(machineTargets(parsed), 'this demo');
   }
 
-  // One pattern, dry or sent through an effect chain.
+  // One pattern, and versions that switch the chain's effects in and out.
   if (demo.kind === 'fx-chain') {
     const parsed = pattern(params.pattern, 'params.pattern');
-    checkRegister('params.dry.label', params.dry?.label);
-    checkRegister('params.wet.label', params.wet?.label);
+    if (params.through !== undefined) {
+      const inPattern = parsed ? Object.keys(parsed.parts) : [];
+      if (!Array.isArray(params.through) || !params.through.length) errors.push('params.through must list at least one instrument');
+      else for (const id of params.through) if (!inPattern.includes(id)) errors.push(`params.through: ${JSON.stringify(id)} does not play in params.pattern`);
+    }
+    if (!ROUTES.includes(params.route)) errors.push(`params.route must be one of ${ROUTES.join(', ')}, got ${JSON.stringify(params.route)}`);
     const ids = [];
     if (!Array.isArray(params.chain) || !params.chain.length) {
       errors.push('params.chain must list at least one effect');
@@ -183,6 +187,24 @@ export function checkDemo(demo, checkRegister = () => {}) {
           if (!Number.isFinite(v) || v < range.min || v > range.max || (range.integer && !Number.isInteger(v))) {
             errors.push(`${where}.${key} must be ${range.integer ? 'a whole number' : 'a number'} from ${range.min} to ${range.max}, got ${JSON.stringify(v)}`);
           }
+        }
+      }
+    }
+    if (!Array.isArray(params.versions) || params.versions.length < 2) {
+      errors.push('params.versions must list at least two versions');
+    } else {
+      for (const [i, v] of params.versions.entries()) {
+        const where = `params.versions[${i}]`;
+        checkRegister(`${where}.label`, v?.label);
+        if (!Array.isArray(v?.fx)) {
+          errors.push(`${where}.fx must list the effects this version switches in ([] for none)`);
+          continue;
+        }
+        for (const id of v.fx) if (!ids.includes(id)) errors.push(`${where}.fx: ${JSON.stringify(id)} is not in params.chain`);
+        if (new Set(v.fx).size !== v.fx.length) errors.push(`${where}.fx lists an effect twice`);
+        // A send goes to the whole chain or none of it (audio/fx.js).
+        if (params.route === 'send' && v.fx.length && v.fx.length !== ids.length) {
+          errors.push(`${where}.fx: a send engages the whole chain or none of it`);
         }
       }
     }

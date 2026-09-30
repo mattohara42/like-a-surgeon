@@ -14,24 +14,31 @@
         }
       }
     },
-    "dry": {
-      "label": {
-        "age13": "Dry",
-        "adult": "Dry"
-      }
-    },
-    "wet": {
-      "label": {
-        "age13": "With the echo",
-        "adult": "Through the tape echo"
-      }
-    },
+    "route": "send",
     "chain": [
       {
         "fx": "tape-echo",
         "steps": 3,
         "lowCutHz": 400,
         "highCutHz": 2500
+      }
+    ],
+    "versions": [
+      {
+        "label": {
+          "age13": "Dry",
+          "adult": "Dry"
+        },
+        "fx": []
+      },
+      {
+        "label": {
+          "age13": "With the echo",
+          "adult": "Through the tape echo"
+        },
+        "fx": [
+          "tape-echo"
+        ]
       }
     ],
     "controls": [
@@ -56,6 +63,6 @@
     "adult": "A send, not an insert: the dry drums never change, and the echo is added beside them, as a dub engineer would throw a channel into the delay and pull it back. The delay is set to a whole number of steps, so the repeats reinforce the groove instead of blurring it. When the echo is switched out, the repeats already in the loop ring on and fade."
   },
   "safety": {
-    "maxGain": 0.6
+    "maxGain": 0.55
   }
 }
