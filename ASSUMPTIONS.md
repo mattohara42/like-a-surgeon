@@ -3471,3 +3471,15 @@ small and worth having in front of Matt alongside everything else here.
     social circumstance, not a political act, and the Politics lens
     should stay as strict as its card says it is. A reader who disagrees
     has a clear place to change it: the edge's `tags`.
+
+- **A289. Two backlog smells from M5, fixed.**
+  - **`CONFIG.transport.unbornOpacity` now drives the "not yet" fade.** It
+    was unused, with the same 0.085 written again in index.html.
+    `reading/type.js`, which already publishes CONFIG values to the
+    stylesheet as custom properties, now sets `--unborn-opacity`, and
+    `.unborn` reads it. Measured in the page: 0.085, as before.
+  - **A thread step's `demoId` must match its record's demo.** The player
+    shows each stop's own record panel and that record's demo, so a step
+    naming a different demo would have been silently ignored. The
+    validator now fails it with a message saying which demo the stop
+    actually shows. The two threads that use step demos already match.
