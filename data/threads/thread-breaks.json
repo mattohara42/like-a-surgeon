@@ -1,0 +1,50 @@
+{
+  "id": "thread-breaks",
+  "title": "Breaks",
+  "subtitle": "A few seconds of drums that became the raw material of new music",
+  "intro": {
+    "age13": "A break is the moment in a record when everything drops out except the drums. Follow a few of those moments from Bronx parties to Compton to London, and watch them turn into the raw material of new music.",
+    "adult": "Traces the drum break from a DJ technique to a sampled loop to a chopped and re-sequenced rhythm, and one recording whose owner was never paid for any of its uses."
+  },
+  "steps": [
+    {
+      "edgeId": "e-jamesbrown-koolherc",
+      "framing": {
+        "age13": "Start in the Bronx in 1973. Kool Herc noticed that dancers went wild when a funk record dropped down to just the drums, and James Brown's band had recorded one of the best of those breaks.",
+        "adult": "The thread begins with a performance device, a breakdown recorded to lift a live crowd, and a DJ who heard it as something to repeat."
+      }
+    },
+    {
+      "edgeId": "e-bongoband-herc",
+      "framing": {
+        "age13": "Herc played breaks from two copies of a record, switching between them, so the drums kept going as long as the dancers wanted. The Incredible Bongo Band's 'Apache' had a long bongo and drum section, and it became one of the first great hip-hop records.",
+        "adult": "A record that did not sell on release enters hip-hop through DJ practice rather than sampling. The break as a unit of music comes before the technology to capture it."
+      }
+    },
+    {
+      "edgeId": "e-herc-flash",
+      "framing": {
+        "age13": "Herc found the break by eye, so the joins were rough. Grandmaster Flash cued the second copy on headphones and dropped it in exactly on the beat, which turned a party trick into a technique anyone could learn.",
+        "adult": "Refinement rather than invention: the break as the unit is Herc's, and the clean loop, which is what makes it something to build with, is Flash's."
+      }
+    },
+    {
+      "edgeId": "e-winstons-nwa",
+      "framing": {
+        "age13": "Fifteen years after Herc, the break is sampled rather than played from two records. N.W.A built 'Straight Outta Compton' on six seconds of drums that Gregory Coleman of the Winstons played in 1969.",
+        "adult": "The first sampled use of the Amen break on the map. Richard Spencer, who owned the song's rights, was never paid for this or any later use, and that belongs to the story as much as the sound does."
+      }
+    },
+    {
+      "edgeId": "e-winstons-shyfx",
+      "framing": {
+        "age13": "In Britain the same six seconds were chopped up and sped up. Shy FX's 'Original Nuttah' in 1994 was built on the Amen break, and it reached the British singles chart.",
+        "adult": "The same recording, retimed and cut apart until it is barely recognisable, becomes the basis of a genre two decades and an ocean away from its source."
+      }
+    }
+  ],
+  "outro": {
+    "age13": "The break started as a trick at Bronx parties and ended up as the base of whole kinds of music. On the Amen break's stop, try the demo to hear the difference between looping a break and chopping it.",
+    "adult": "Each stop keeps the previous stop's material and changes what is done with it: repeat it, loop it cleanly, sample it, chop it. That sequence is the thread's argument."
+  }
+}
