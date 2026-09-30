@@ -246,8 +246,8 @@ correct response to a good idea arriving mid-milestone.
   should read it (as a custom property set from CONFIG) or the CONFIG key
   should go. Found in M5 step 1 (A283), not changed there.
 
-- **Demo captions name one edge's record, so a demo cannot travel
-  (A293).** Of four edges that could carry an existing demo, three were
+- ~~**Demo captions name one edge's record, so a demo cannot travel
+  (A293).**~~ **Fixed** (A297): an edge can carry its own `demoCaption`. Of four edges that could carry an existing demo, three were
   blocked only because the caption names another record (Tubby,
   'Flash Light', Knuckles). Either captions move to the edge (a
   `demoCaption` on the edge, falling back to the demo's), or demo

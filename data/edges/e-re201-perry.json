@@ -26,6 +26,11 @@
     "age13": "Inside the Space Echo is a loop of tape and three heads reading it, so a sound comes back several times, each copy a bit more worn than the last. Turn the feedback up far enough and the repeats feed themselves and build into a roar instead of fading. Perry used that as something you do at a particular moment, like hitting a drum, rather than a setting chosen before you start.",
     "adult": "The RE-201 earns a node because its failure mode is musical and its controls are performable. Self-oscillation at high feedback, plus the pitch instability of a tape loop under load, give dub its smearing and its runaway bloom. Roland engineered for stability and reliability and shipped an instrument without meaning to."
   },
+  "demoId": "demo-tape-echo",
+  "demoCaption": {
+    "age13": "Switch the echo in, then turn the repeats up. Each echo comes back a little duller than the one before, the way a tape echo wears the sound down. Push the repeats far enough and they stop fading and start building on each other. Perry used that as something to do at a particular moment, like hitting a drum, not a setting left alone.",
+    "adult": "The echo sits on a send beside the dry drums, with a filter and soft saturation in its feedback loop, roughly what a Space Echo's worn tape does to each repeat. It is not a model of the RE-201's circuit. For Perry the feedback control is the point: ridden by hand, it turns an effect into a part played in the moment."
+  },
   "tags": [
     "technology",
     "production"
