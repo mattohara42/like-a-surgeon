@@ -1,0 +1,34 @@
+{
+  "id": "the-velvet-underground",
+  "name": "The Velvet Underground",
+  "sortName": "Velvet Underground, The",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1965,
+  "activeTo": 1973,
+  "originCity": "New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Andy Warhol",
+    "Tom Wilson"
+  ],
+  "hook": "A New York band that sold few records in the 1960s and turned up, years later, behind Bowie, punk and post-punk.",
+  "blurb": {
+    "age13": "The Velvet Underground formed in New York in 1965 around Lou Reed and John Cale. Andy Warhol managed them and put his name on their first album in 1967. They sang about drugs and city life when almost no one else did, and played loud, droning, repetitive rock. The record did not sell well at first, but musicians heard it: David Bowie was playing one of its songs before it was even released.",
+    "adult": "Formed in New York in 1965 by Lou Reed and John Cale with Sterling Morrison and Maureen Tucker, and managed by Andy Warhol, who is credited as producer of 'The Velvet Underground & Nico' (Verve, 1967) alongside Tom Wilson. Their reputation as the band nobody bought and everybody copied rests largely on a remark Brian Eno made in 1982, that the first album sold about 30,000 copies in five years and every buyer started a band. The number is disputed: Wikipedia's article on the album cites MGM royalty statements showing 58,476 copies sold by February 1969. The influence is real and documented on this map through Bowie and Joy Division; the sales figure in the legend is not. Cale went on to produce the Stooges' first album, and Reed left in 1970; the band continued under Doug Yule until 1973."
+  },
+  "signatureTracks": [
+    {
+      "title": "I'm Waiting for the Man",
+      "year": 1967,
+      "whyThisOne": "The song Bowie learned from an acetate before the album came out."
+    },
+    {
+      "title": "Sister Ray",
+      "year": 1968,
+      "whyThisOne": "Seventeen minutes of one riff and feedback, recorded live in the studio. Joy Division covered it on stage in 1980."
+    }
+  ]
+}

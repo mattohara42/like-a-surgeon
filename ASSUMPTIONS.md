@@ -3686,3 +3686,44 @@ small and worth having in front of Matt alongside everything else here.
     Perry's panels show their own captions, King Tubby's shows the
     demo's, and there are no console errors. `npm run build` carries the
     field in the index.
+
+## Added with the New York batch (Track D batch 4)
+
+- **A298. A New York batch for the rock spine.** Rock had the fewest
+  artists of the three big lanes, and Bowie, Eno, the Sex Pistols and
+  Elektra already pointed at a New York gap. The batch adds the Velvet
+  Underground, the Stooges, the Ramones, Talking Heads and Tom Tom Club,
+  a `new-york-punk` scene built around CBGB, the `sire-records` label,
+  and 13 edges (277 to 290 of the 350 target). Sources were Wikipedia
+  articles read through a web fetch, with no Wikimedia requests from
+  the container (it answered 429 at the start of the session, A174).
+  `npm run crosscheck` was not run on the new ids for the same reason.
+  - **The 30,000-copies legend is in the Velvets' adult text as a
+    dispute (rule 4).** Eno's 1982 remark about first-album sales is
+    described in prose, and Wikipedia's article on the album cites MGM
+    royalty statements showing 58,476 copies by February 1969. No edge
+    from the Velvets to Eno was drawn: the remark is about the band's
+    reach, not about Eno's own music, and nothing found documented the
+    latter well enough.
+  - **`e-ramones-ukpunk` goes to the scene, at consensus, and corrects
+    the popular story.** The Sex Pistols and the Clash were in Sheffield
+    on 4 July 1976, so the Roundhouse cannot be where they saw the
+    Ramones. Dingwalls, the next night, is. The edge targets
+    `uk-punk-77` rather than one band because the claim (bands sped up)
+    is about several of them.
+  - **`e-tomtomclub-flash` is typed `sample` though it is an
+    interpolation**, matching `e-kraftwerk-planetrock`. The evidence and
+    both registers say it was replayed by Sugar Hill's band.
+  - **Tom Tom Club is in the funk lane**, since its significance here is
+    the dance and R&B chart hit and its afterlife in hip-hop, not the
+    parent band. Its `originCity` is Nassau, where the project took
+    shape at Compass Point, although Wikipedia describes it as an
+    American band formed in 1981; Frantz and Weymouth lived in New York.
+    Either reading is defensible and Matt may prefer New York.
+  - **Talking Heads' debut was not produced by Eno.** One fetched
+    summary claimed it was; the album's own article credits Tony
+    Bongiovi and Lance Quinn. The Eno edge starts at 1978 and the
+    evidence says so.
+  - **Madonna's `labels` array was left empty**, although
+    `e-sire-madonna` now exists, because her end date with Sire and
+    Warner was not checked. The edge carries the claim.

@@ -1,0 +1,28 @@
+{
+  "id": "e-nypunk-talkingheads",
+  "from": "new-york-punk",
+  "to": "talking-heads",
+  "type": "scene",
+  "confidence": "documented",
+  "year": 1975,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Talking Heads: their first show was at CBGB on 5 June 1975, opening for the Ramones, and they signed to Sire in November 1976.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Ramones",
+      "title": "Beat on the Brat",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Talking Heads",
+      "title": "Psycho Killer",
+      "year": 1977
+    },
+    "whatToListenFor": "Talking Heads' first show was opening for the Ramones, and the two bands sound almost nothing alike. 'Beat on the Brat' is loud and blunt. 'Psycho Killer' is clean and tense, with a spare bass line from Tina Weymouth, choppy guitar, and David Byrne singing like someone trying too hard to stay calm. Listen for what they share anyway: short songs, no solos to speak of, nothing wasted."
+  },
+  "explanation": {
+    "age13": "Talking Heads played their first ever show at CBGB in June 1975, opening for the Ramones. A year and a half later the same label, Sire, signed them too.",
+    "adult": "Pairs with e-nypunk-ramones. Two very different bands out of the same small room, signed by the same label within a year, is the best evidence that CBGB worked as a scene of opportunity rather than a genre."
+  },
+  "tags": []
+}

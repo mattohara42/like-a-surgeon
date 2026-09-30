@@ -1,0 +1,42 @@
+{
+  "id": "ramones",
+  "name": "Ramones",
+  "sortName": "Ramones",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1974,
+  "activeTo": 1996,
+  "originCity": "Forest Hills, New York",
+  "originCountry": "USA",
+  "scenes": [
+    "new-york-punk"
+  ],
+  "labels": [
+    {
+      "labelId": "sire-records",
+      "from": 1975,
+      "to": 1996
+    }
+  ],
+  "keyProducers": [
+    "Craig Leon",
+    "Tommy Ramone"
+  ],
+  "hook": "Four kids from Queens who made rock songs short and fast on purpose, and whose London shows in July 1976 are where British punk says it learned the speed.",
+  "blurb": {
+    "age13": "The Ramones came from Forest Hills in Queens and started playing in 1974. They all took the surname Ramone, wore the same leather jackets, and played songs that were very fast and almost never longer than two and a half minutes. Their first album was made in about a week for about $6,400. When they played London in July 1976, British bands that saw them started playing faster.",
+    "adult": "Formed in Forest Hills, Queens, in 1974; first CBGB show 16 August 1974; signed to Sire in late 1975 after producer Craig Leon played their demo to Seymour Stein. 'Ramones' (April 1976) was recorded at Plaza Sound in about a week for about $6,400, fourteen songs in 29 minutes, with no song reaching 2:41. The band never had a US top-40 single and ended in 1996. Their importance on this map is less their sales than their speed, which crossed to London in July 1976."
+  },
+  "signatureTracks": [
+    {
+      "title": "Blitzkrieg Bop",
+      "year": 1976,
+      "whyThisOne": "The first track on the first album: a chant, three chords, and done in about two minutes."
+    },
+    {
+      "title": "Judy Is a Punk",
+      "year": 1976,
+      "whyThisOne": "Under a minute and a half, which was the point."
+    }
+  ]
+}

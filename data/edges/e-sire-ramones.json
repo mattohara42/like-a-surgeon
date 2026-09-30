@@ -1,0 +1,31 @@
+{
+  "id": "e-sire-ramones",
+  "from": "sire-records",
+  "to": "ramones",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1975,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'Ramones' (album): producer Craig Leon played the band's demo to Sire president Seymour Stein, who signed them despite the label's earlier focus on European progressive rock. The album was recorded at Plaza Sound in January 1976 in about seven days for about $6,400 and released by Sire on 23 April 1976.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Ramones",
+      "title": "Judy Is a Punk",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Ramones",
+      "title": "Sheena Is a Punk Rocker",
+      "year": 1977
+    },
+    "whatToListenFor": "The first album was made fast and cheap, and it sounds it: dry drums, guitars panned hard to one side, almost no overdubs. A year later, with Sire now distributed by Warner Bros., 'Sheena Is a Punk Rocker' has a cleaner, fuller sound and a surf-pop chorus aimed at radio. Listen for the label's ambition growing in the sound, while the song stays under three minutes."
+  },
+  "explanation": {
+    "age13": "Sire Records was a small New York label. A producer, Craig Leon, played the Ramones' demo to its boss, Seymour Stein, who signed them. Their first album took about a week to make and cost about $6,400.",
+    "adult": "Sire's decision was a cheap bet by a small label on a band from its own city, and the budget shaped the record as much as any aesthetic did. The label's next step, Warner Bros. distribution in 1977, is audible in the band's second and third years."
+  },
+  "tags": [
+    "labels",
+    "production"
+  ]
+}

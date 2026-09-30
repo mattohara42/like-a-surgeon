@@ -1,0 +1,31 @@
+{
+  "id": "new-york-punk",
+  "name": "New York Punk (CBGB)",
+  "type": "scene",
+  "lineage": "rock",
+  "yearFrom": 1974,
+  "yearTo": 1978,
+  "city": "New York",
+  "country": "USA",
+  "hook": "A bar on the Bowery that let unsigned bands play their own songs, in a city that was going broke.",
+  "blurb": {
+    "age13": "CBGB opened in 1973 at 315 Bowery in Manhattan. The owner, Hilly Kristal, had planned it for country, bluegrass and blues, but he let young bands play as long as they carried their own gear and played mostly their own songs. From 1974 bands like Television, the Ramones, Patti Smith, Talking Heads and Blondie played there. New York City was close to bankrupt at the time, and the Bowery was one of its poorest streets, which is part of why a bar there was cheap enough to take the risk.",
+    "adult": "CBGB opened on 10 December 1973 at 315 Bowery, founded by Hilly Kristal. The name stood for country, bluegrass and blues, but the house rules, that bands moved their own equipment and played mostly original songs, made it a room for unsigned acts. Television began there in 1974, the Ramones on 16 August 1974, the Patti Smith Group in early 1975, and Talking Heads on 5 June 1975. The scene shared a venue and an attitude more than a sound: the Ramones' speed, Talking Heads' art-school funk and Patti Smith's poetry have little in common musically. Sire Records signed the Ramones and Talking Heads out of it. CBGB closed in October 2006 after a rent dispute."
+  },
+  "geopolitics": "New York City came close to defaulting in 1975, and federal help was at first refused. Services were cut, and the Bowery was a street of flophouses and men's shelters. Low rents in the East Village and Lower East Side made rehearsal space, apartments and a bar with live music affordable to people with no money.",
+  "whatWasNew": "Stripped-down rock by bands with no record deals, playing original songs in a small room, at a moment when rock on the radio was long, polished and expensive to make.",
+  "production": "Early records were cheap and quick: the Ramones' debut cost about $6,400 and took about a week. Sire's small budgets suited bands whose sound was the opposite of studio polish.",
+  "labels": "Sire Records, Seymour Stein's label, signed the Ramones and Talking Heads and then went to Warner Bros. distribution in 1977; Warner bought it outright the following year. Other CBGB bands went to Private Stock, Arista and Elektra.",
+  "politics": "Less openly political than London punk. The argument was about who got to make records at all: bands who could not play well by the standards of the day, in a club that let them.",
+  "memberIds": [
+    "ramones",
+    "talking-heads"
+  ],
+  "palette": {
+    "ink": "#111111",
+    "paper": "#f2efe6",
+    "accent": "#c8102e",
+    "accent2": "#2b2b2b"
+  },
+  "motif": "monochrome-sleeve"
+}

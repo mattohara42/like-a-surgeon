@@ -1,0 +1,28 @@
+{
+  "id": "e-talkingheads-tomtomclub",
+  "from": "talking-heads",
+  "to": "tom-tom-club",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1981,
+  "crossLineage": true,
+  "evidence": "Wikipedia's articles on Talking Heads and Tom Tom Club: Tom Tom Club was formed in 1981 by Talking Heads' Chris Frantz and Tina Weymouth as a side project. Wikipedia's article on the album 'Tom Tom Club': recorded at Compass Point Studios in Nassau between November 1980 and April 1981, produced by Frantz, Weymouth and Steven Stanley, with Tyrone Downie and Adrian Belew. 'Remain in Light' had been partly recorded at Compass Point in 1980.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Talking Heads",
+      "title": "Once in a Lifetime",
+      "year": 1980
+    },
+    "later": {
+      "artist": "Tom Tom Club",
+      "title": "Genius of Love",
+      "year": 1981
+    },
+    "whatToListenFor": "Listen to the bass and drums on both. On 'Once in a Lifetime' Weymouth and Frantz are one layer among many interlocking loops. On 'Genius of Love' they are the whole point: a slow, rubbery bass line, a dry drum groove, a bright synth hook on top, and a sing-song vocal. It is the rhythm section of an art-rock band making a funk record in the Bahamas, and it sounded good enough to rappers that they used it within months."
+  },
+  "explanation": {
+    "age13": "Talking Heads' bass player, Tina Weymouth, and drummer, Chris Frantz, made their own record at the same Bahamas studio where the band had recorded part of 'Remain in Light'. They called themselves Tom Tom Club, and their song 'Genius of Love' went to number two on the US R&B chart.",
+    "adult": "The edge crosses from the rock lane into dance music through two of the same people. It sits here because it is the route by which the Talking Heads rhythm section, rather than the band, reached hip-hop."
+  },
+  "tags": []
+}

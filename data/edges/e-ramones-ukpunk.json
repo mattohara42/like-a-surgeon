@@ -1,0 +1,29 @@
+{
+  "id": "e-ramones-ukpunk",
+  "from": "ramones",
+  "to": "uk-punk-77",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1976,
+  "crossLineage": false,
+  "evidence": "The Ramones played the Roundhouse in London on 4 July 1976 and Dingwalls on 5 July 1976 (Wikipedia's article on the band). The popular story puts members of the Sex Pistols and the Clash at the Roundhouse; both bands were in fact playing the Black Swan in Sheffield that night, the Clash's first show, supporting the Pistols (udiscovermusic's account of the Roundhouse show, and Wikipedia's list of Ramones concerts). Members of both bands, and of the Damned, are placed at the Dingwalls show the next night. Generation X's Tony James is cited in Wikipedia's article on 'Ramones' describing English bands speeding up overnight. Held at consensus because the influence is told through participants' later accounts, and the most repeated version gets the night wrong.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Ramones",
+      "title": "Blitzkrieg Bop",
+      "year": 1976
+    },
+    "later": {
+      "artist": "The Damned",
+      "title": "New Rose",
+      "year": 1976,
+      "search": "The Damned New Rose"
+    },
+    "whatToListenFor": "'Blitzkrieg Bop' is fast, even and relentless, every chord hit the same way, no guitar solo. 'New Rose', released in October 1976 as the first British punk single, runs at a similar sprint with a drum roll to start and barely a pause after. Listen to the tempo more than anything else. The claim on this edge is about speed: British bands already existed, and the Ramones showed them how fast and short a song could go."
+  },
+  "explanation": {
+    "age13": "The Ramones played two shows in London on 4 and 5 July 1976. Members of the Sex Pistols, the Clash and the Damned saw them, and many British punk musicians later said their own bands started playing faster after that. The popular story says the Pistols and the Clash were at the first show, but they were playing in Sheffield that night. They saw the second one.",
+    "adult": "The influence is well attested; the legend's details are not. The Sex Pistols and the Clash were at the Black Swan in Sheffield on 4 July, so the famous Roundhouse night cannot be where they saw the Ramones. Dingwalls, the following night, is. Worth stating because the corrected version is also more interesting: British punk bands were already formed and gigging, and what crossed the Atlantic was a tempo and a song length, not the idea of punk itself."
+  },
+  "tags": []
+}
