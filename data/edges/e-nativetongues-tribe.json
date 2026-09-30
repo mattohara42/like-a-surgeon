@@ -1,0 +1,28 @@
+{
+  "id": "e-nativetongues-tribe",
+  "from": "native-tongues",
+  "to": "a-tribe-called-quest",
+  "type": "scene",
+  "confidence": "documented",
+  "year": 1988,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on A Tribe Called Quest says the group's name was coined in 1988 by the Jungle Brothers, who had attended the same high school as Q-Tip and Ali Shaheed Muhammad, and that Q-Tip made his first recorded appearances on the Jungle Brothers' songs 'Black Is Black' and 'The Promo'. Phife Dawg's first recorded appearance was on the remix of De La Soul's 'Buddy' (released 11 December 1989), which also features Q-Tip, the Jungle Brothers, Queen Latifah and Monie Love (Wikipedia's article on 'Buddy'). Tribe's own debut, 'People's Instinctive Travels and the Paths of Rhythm', came out on Jive on 17 April 1990.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Jungle Brothers",
+      "title": "Black Is Black",
+      "year": 1988
+    },
+    "later": {
+      "artist": "A Tribe Called Quest",
+      "title": "Can I Kick It?",
+      "year": 1990
+    },
+    "whatToListenFor": "On 'Black Is Black' Q-Tip is a guest on a friend's record, one voice among several. Two years later on 'Can I Kick It?' he is leading his own group. Listen for his voice and delivery on both, and see whether you can pick him out on the earlier record before you know which verse is his."
+  },
+  "explanation": {
+    "age13": "A Tribe Called Quest got their name from their friends the Jungle Brothers in 1988. Q-Tip rapped on the Jungle Brothers' records before Tribe had made any of their own, and Phife Dawg's first recording was on a De La Soul song with the whole crew. Tribe grew up inside the Native Tongues.",
+    "adult": "For Tribe, the collective came before the group: it was named, first recorded and first heard on other members' records before its own debut. The Jungle Brothers' 'Black Is Black' and De La Soul's 'Buddy' remix are where Q-Tip and Phife Dawg first appear on record."
+  },
+  "tags": []
+}

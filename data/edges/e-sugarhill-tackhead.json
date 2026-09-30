@@ -1,0 +1,29 @@
+{
+  "id": "e-sugarhill-tackhead",
+  "from": "sugar-hill",
+  "to": "tackhead",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1987,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on Tackhead says that in the late 1970s Doug Wimbish, Keith LeBlanc and Skip McDonald were members of the house band for Sugar Hill Records, backed the Sugarhill Gang, and played on Grandmaster Flash and the Furious Five's 'The Message' (1982). The same three later produced tracks on Adrian Sherwood's On-U Sound label and formed Tackhead with him. Their first release as Tackhead was 'Tackhead Tape Time' (1987).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Grandmaster Flash and the Furious Five",
+      "title": "The Message",
+      "year": 1982
+    },
+    "later": {
+      "artist": "Tackhead",
+      "title": "Tackhead Tape Time",
+      "year": 1987,
+      "search": "Tackhead Tape Time"
+    },
+    "whatToListenFor": "On 'The Message' the players are anonymous: a label's house band, playing what the record needed. On 'Tackhead Tape Time' the same bass player, drummer and guitarist are the act, with Adrian Sherwood's dub production around them. Listen for the rhythm section on both: in 1982 it sits under the rapping, and in 1987 it is the main thing you hear."
+  },
+  "explanation": {
+    "age13": "Sugar Hill Records kept its own band to play on its rap records, and three of them played on 'The Message'. Later they moved to London's On-U Sound and became a band of their own, Tackhead, with producer Adrian Sherwood.",
+    "adult": "Sugar Hill made its rap records with a house band rather than a DJ's breaks, and that decision kept a rhythm section together for years. As the label's finances collapsed, the three players moved to On-U Sound, where the same playing met dub production. The label edge is about the house-band system: the players Sugar Hill assembled outlived it."
+  },
+  "tags": ["labels", "production"]
+}

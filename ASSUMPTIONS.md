@@ -3586,3 +3586,42 @@ small and worth having in front of Matt alongside everything else here.
     the articles on the album, Black Ark or Perry says it. Syl Johnson to
     Wu-Tang Clan: his article lists Wu-Tang among those who sampled
     'Different Strokes' but names no song, so there is no track pair.
+
+- **A294. A second edge batch: four edges, from scenes and labels.** The
+  first batch (A293) worked on artists; this one gives one-edge scenes and
+  labels somewhere to go. All four are `documented`:
+  - `e-nativetongues-tribe` (scene): the Jungle Brothers named A Tribe
+    Called Quest in 1988, Q-Tip's first recordings were on their 'Black
+    Is Black' and 'The Promo', and Phife Dawg's first was on De La
+    Soul's 'Buddy' remix (1989). From Wikipedia's articles on the group
+    and on 'Buddy'. Native Tongues had only an inbound edge until now.
+    Left untagged, as A288 left other influence edges.
+  - `e-coldchillin-koolgrap` (label): Warner Bros. refused to distribute
+    'Live and Let Die' under its Cold Chillin' deal over the lyrics and
+    cover, the album was shelved and rewritten, and came out on 24
+    November 1992. From the album's article. **Tagged `politics`**, which
+    is a judgement call against A288's strict line: the refusal was a
+    distributor responding to content during the 'Cop Killer'
+    controversy, which I read as a political act on the record rather
+    than social circumstance. Remove the tag if Matt reads it the other
+    way.
+  - `e-jamesbrown-delasoul` (sample): 'Mind Power' (The Payback, 1973) in
+    'Stakes Is High', from the same song article as `e-jamal-delasoul`.
+    It is a second edge from one song, which is deliberate: the song's
+    credits name two sources, and each is its own claim.
+  - `e-sugarhill-tackhead` (label): the Sugar Hill house band's Wimbish,
+    LeBlanc and McDonald, who played on 'The Message', later formed
+    Tackhead with Adrian Sherwood on On-U Sound. From the Tackhead
+    article. Tackhead's own record already framed this link; now the
+    graph carries it.
+  - **Listening notes kept general** for 'Stakes Is High' (which parts
+    come from which source) and 'Ill Street Blues' (its producer is not
+    named per track in the source, so the note says only that Sir Jinx
+    produced most of the album).
+  - **Dropped after checking:** Curtis Mayfield to Hendrix (the Hendrix
+    article does not mention Mayfield); the MPC60 to J Dilla (his article
+    says only "his Akai MPC", with no model); Paris musique concrète to
+    Stockhausen (it would repeat `e-schaeffer-stockhausen`'s substance);
+    Swinging London to The Who (the article lists the band but says
+    nothing about what the scene did to them); Long Island to De La Soul
+    (their Prince Paul edge already carries the Long Island connection).
