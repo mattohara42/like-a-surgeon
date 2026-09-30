@@ -127,7 +127,8 @@ all reading levels."
 - **Thin lenses.** Politics has 14 edges. That is a finding: the map has
   said little about politics so far. The intro says so honestly, and
   tagging more edges is Track D work. The 22 untagged edges get a tag
-  audit in the same data pass.
+  audit in the same data pass. Done (A288): 5 tagged, 17 left untagged
+  because none of the four tags fits them.
 - **Labels.** "Arrange by label" (lanes by label) and the "Labels" layer
   toggle (label records shown) already exist. A Labels lens would be a
   third thing called Labels (Q37).
@@ -176,7 +177,7 @@ Each step is one PR, merged before the next.
    Loud Guitars.
 6. Lenses: the control, the dimming, the four intros, and a tag audit of
    the 22 untagged edges.
-   Built (A287), except the tag audit, which is its own data PR.
+   Built (A287). The tag audit followed as its own data PR (A288).
 7. The gate: a cold reader finishes a thread and explains what they
    learned. Matt runs it. Notes for that session: `docs/m5-gate-notes.md`.
 
