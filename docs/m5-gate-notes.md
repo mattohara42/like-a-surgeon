@@ -17,13 +17,14 @@ lens chosen. Sound on, volume where it starts.
 else. Don't say which thread, what Next does, or what the lit lines on the
 map are. Every question the reader has to ask is a finding.
 
-There are five threads, and they are different lengths and styles:
+There are six threads, and they are different lengths and styles:
 
 | Thread | Stops | Years | Has a demo stop |
 |---|---|---|---|
 | Breaks | 5 | 1973 to 1994 | yes, the Amen break (loop or chop) |
 | The Delay Line | 6 | 1968 to 1995 | yes, King Tubby (the tape echo) |
 | Loud Guitars | 6 | 1964 to 1979 | yes, the first stop (clean, fuzz, slashed) |
+| Six Degrees of Weird Al | 6 | 1984 to 1996 | no |
 | The Machine Nobody Wanted | 4 | 1980 to 1987 | yes, every stop (808, then 303) |
 | Trains to the Bronx | 5 | 1981 to 1983 | yes, 'Planet Rock' (808 pads; the Kraftwerk stop shows the melody demo as planned, not playable) |
 

@@ -3523,3 +3523,17 @@ small and worth having in front of Matt alongside everything else here.
     summary rather than a checked sentence, and a framing line calling
     'No Protection' "one of the best-known albums of the 1990s", which no
     source here says.
+
+- **A292. "Six Degrees of Weird Al" is a hub thread, not a chain.** Matt's
+  backlog idea, built as data now the player exists. Every Yankovic edge
+  on the map points into him, so a true chain of six degrees would have to
+  leave him after one stop and wander (for example Chess to the Stones to
+  him to Nirvana to Bowie). I took the reading that teaches his entry's
+  own point instead: six stops into him in date order (Jackson, Derringer,
+  Madonna, the Stones, Nirvana, Coolio), which together show which songs
+  everyone knew, and a permission method that ends in the Coolio dispute.
+  The name is kept as Matt gave it; the outro points out along the other
+  artists' lines. If Matt wanted the chain, the stops can be swapped
+  without code. Framing restates the edges' own evidence and adds no
+  facts; the Stones stop claims no permission, since its edge records
+  none.
