@@ -209,7 +209,8 @@ export function startCards(data) {
   });
 
   function openFresh() {
-    const target = { kind: 'node', id: pickFrom(openingIds) };
+    // A dataset with no edges at all still opens on something.
+    const target = { kind: 'node', id: pickFrom(openingIds) ?? data.nodes[0].id };
     depth = 0;
     history.replaceState({ depth }, '', routeFor(target, nodesById));
     show(target);
