@@ -1,0 +1,28 @@
+{
+  "id": "e-jamesbrown-fela",
+  "from": "james-brown",
+  "to": "fela-kuti",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1969,
+  "crossLineage": false,
+  "evidence": "Wikipedia's articles on Fela Kuti and Afrobeat: during his 1969 stay in the US Fela absorbed American funk, particularly James Brown's style, which shaped Afrobeat; the name Afrobeat was chosen partly to set his music apart from the soul of American artists such as Brown. Held at consensus because the influence is described by historians rather than in a statement of Fela's cited here, and because Tony Allen and others have argued that the traffic ran at least as much the other way (e-fela-bootsy).",
+  "trackPair": {
+    "earlier": {
+      "artist": "James Brown",
+      "title": "Cold Sweat",
+      "year": 1967
+    },
+    "later": {
+      "artist": "Fela Kuti",
+      "title": "Zombie",
+      "year": 1976
+    },
+    "whatToListenFor": "'Cold Sweat' is built on short, choppy guitar and horn figures locked to a drum pattern, with almost no chord changes. 'Zombie' takes the same idea and stretches it out for twelve minutes: two guitars playing small interlocking parts, a horn section punching riffs, and Tony Allen's drums running several patterns at once. Listen for what Afrobeat keeps from funk, the one-chord groove, and what it adds, the length and the layering."
+  },
+  "explanation": {
+    "age13": "Fela Kuti heard James Brown's funk in the late 1960s, and it was one of the ingredients of Afrobeat, alongside Nigerian highlife, Yoruba music and jazz. Fela named his music Afrobeat partly so it wouldn't be taken for a copy of American soul.",
+    "adult": "Consensus, with a counter-claim that belongs in the text: Tony Allen maintained that Brown's band learned more from the Africans than the Africans learned from them. The map draws both directions, this one and e-fela-bootsy, because both are argued by people who were there."
+  },
+  "tags": []
+}

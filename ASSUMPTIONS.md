@@ -3808,3 +3808,27 @@ small and worth having in front of Matt alongside everything else here.
     is labelled as that, not as McCartney's.
   - **`e-chuckberry-beachboys` is typed `cover`**, because the melody is
     Berry's and only the words are new.
+## Added with the Afrobeat batch (regional scenes, deferred data)
+
+- **A303. Fela Kuti and Tony Allen.** BACKLOG listed regional scenes
+  outside the US, UK, Jamaica and Germany as deferred. Two artists and
+  5 edges (310 to 315 of 350, counting A302's PR). Both are in the
+  `funk` lane: Afrobeat's nearest lane on the map is funk, and a new
+  lineage for one scene would be premature. A `lagos-afrobeat` scene
+  is a natural next record, and it waits until the map has more than
+  two Lagos nodes.
+  - **Both directions of the funk exchange are drawn.**
+    `e-jamesbrown-fela` and `e-fela-bootsy` are both consensus. Tony
+    Allen's claim that Brown's band learned more from Lagos than the
+    reverse is stated as his claim.
+  - **Sources that could not be read.** The Bootsy Collins accounts (a
+    1999 Arthur interview, a later Rolling Stone interview, and
+    felakuti.com) are blocked by the session's network. The edge
+    evidence says it rests on search summaries, and the tier stays at
+    consensus until someone reads them first-hand. Adding those hosts
+    would let a later session upgrade it.
+  - **Conduct and death stated plainly (Q2).** Fela's AIDS denial
+    and death from AIDS-related complications are in his adult text.
+    The 1977 raid and his mother's death are in both registers.
+  - **`e-tonyallen-fela` runs from drummer to bandleader**, since the
+    drum language is Allen's and Fela credited him with it.

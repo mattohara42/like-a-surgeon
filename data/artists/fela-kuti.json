@@ -1,0 +1,31 @@
+{
+  "id": "fela-kuti",
+  "name": "Fela Kuti",
+  "sortName": "Kuti, Fela",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1963,
+  "activeTo": 1997,
+  "originCity": "Abeokuta",
+  "originCountry": "Nigeria",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "The Lagos bandleader who, with Tony Allen, made Afrobeat out of highlife, jazz and James Brown's funk, and whose songs against the military government got his home burned down.",
+  "blurb": {
+    "age13": "Fela Kuti was born in Abeokuta, Nigeria, in 1938. He studied music in London, then led bands in Lagos. After a trip to the United States in 1969, where he met Black Power activists and heard James Brown's funk, he and his drummer Tony Allen created Afrobeat: long songs with interlocking guitars, horns and a drum pattern that never stops. His lyrics attacked Nigeria's military rulers. After his 1976 album 'Zombie' mocked soldiers, about a thousand soldiers attacked his home, burned it, and threw his mother from a window. She died of her injuries.",
+    "adult": "Born in Abeokuta in 1938, son of the feminist activist Funmilayo Ransome-Kuti; he studied at Trinity College of Music in London from 1958 and played a highlife-jazz hybrid in Lagos without much success. A 1969 stay in Los Angeles, where Sandra Izsadore introduced him to Black Power writing, changed his politics and his music, and with Tony Allen he built Afrobeat from Yoruba music, highlife, jazz and James Brown's funk, sung in Nigerian Pidgin so it could travel across Africa. 'Zombie' (1976) mocked the army's obedience; in 1977 about a thousand soldiers raided his Kalakuta Republic compound, burned it, destroyed his studio and tapes, and threw his mother from a window, and she died of her injuries. He carried her coffin to the main barracks in Lagos. He died in 1997 of AIDS-related complications, having publicly denied the disease."
+  },
+  "signatureTracks": [
+    {
+      "title": "Zombie",
+      "year": 1976,
+      "whyThisOne": "The song that mocked the army, and brought the raid on his home."
+    },
+    {
+      "title": "Afrodisiac",
+      "year": 1973,
+      "whyThisOne": "The album Talking Heads used as their template for 'Remain in Light'."
+    }
+  ]
+}
