@@ -11,6 +11,7 @@
     "design:snapshot": "node tools/design-snapshot.js",
     "crosscheck": "node tools/crosscheck.js --out=docs/crosscheck-report.md",
     "test": "node --test test/*.test.js",
-    "audio:check": "node tools/audio-check.js"
+    "audio:check": "node tools/audio-check.js",
+    "cards:check": "node tools/cards-check.js"
   }
 }

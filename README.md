@@ -29,6 +29,10 @@ pull request gets its own Netlify preview.
   Tony Visconti and others), and the Weird Al parody edges (Nirvana,
   Madonna, Coolio, Rick Derringer). `npm run report` has the exact
   distance.
+- **Cards (the phone version):** built, gate open. A screen narrower
+  than 700 px gets one record per card instead of the map, with Random
+  and a web address per card. `?view=map` and `?view=cards` override the
+  choice. See `docs/cards-architecture.md`.
 - **Open question:** Q20 in `QUESTIONS.md`. A null end year can't
   currently tell "still made" from "unknown", so some machines read as
   still on sale.
@@ -55,6 +59,7 @@ pull request gets its own Netlify preview.
 | `index.html`, `main.js` | The app shell and entry point. |
 | `config.js` | Every tuning value in the project. No magic numbers in logic. |
 | `render/` | The graph renderer: layout, lane plans (`arrange.js`), substrate, nodes, edges, gradients, atmosphere, transport, viewport culling, semantic zoom, label placement. |
+| `cards/` | Cards, the phone version: the view switch, card addresses, the opening and random pools, and the card shell. |
 | `reading/` | The reading surface: the drawer and its node and edge panels, reading levels, legend and version stamp, search, YouTube links, interface copy in registers, the type scale. |
 | `docs/` | Milestone designs (`m1-`, `m2-`, `m3-architecture.md`), the M1 gate report, and the M3 gate notes. |
 | `netlify.toml` | Builds `dist/` for the Netlify site and its PR previews. |
@@ -69,6 +74,7 @@ pull request gets its own Netlify preview.
     npm run report     # regenerates docs/m1-gate-report.md
     npm run crosscheck # checks the data against outside sources (needs network)
     npm run build      # writes dist/, the offline release: open dist/index.html directly
+    npm run cards:check # walks the phone view in headless Chromium (needs Playwright and a build)
 
 Scroll to zoom, drag to pan, and drag the year cursor or press play. Click a
 dot or a line to open its panel, and follow the links in the panel sideways.

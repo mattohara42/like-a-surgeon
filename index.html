@@ -410,6 +410,7 @@
     font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--dim);
     margin: 10px 0 0; padding-top: 8px; border-top: 1px solid var(--hairline);
   }
+  .legend-cards { color: inherit; text-underline-offset: 2px; pointer-events: auto; }
 
   /* ---- welcome card and goal (reading/welcome.js) -------------------- */
   .doors { display: flex; flex-direction: column; gap: 8px; margin: 16px 0 4px; }
@@ -502,6 +503,48 @@
     text-transform: uppercase; color: var(--dim); pointer-events: none;
   }
   #status.error { color: #ff8f7a; text-transform: none; letter-spacing: 0; font-size: 13px; }
+
+  /* ---- cards, the phone version (docs/cards-architecture.md) --------- */
+  /* Sizes come from CONFIG.cards as custom properties (cards/app.js). */
+  html.cards-view, html.cards-view body { height: auto; overflow: visible; overflow-x: hidden; }
+  html.cards-view body > :not(#cards):not(.cards-bar) { display: none !important; }
+  .cards {
+    max-width: var(--cards-column); margin: 0 auto;
+    padding: 20px var(--cards-gutter) calc(var(--cards-bar) + 32px + env(safe-area-inset-bottom));
+  }
+  .cards .panel-body { overflow-wrap: anywhere; }
+  .cards .panel-body h2 { font-size: calc(var(--t-title) * var(--cards-title-scale)); }
+  .cards .link-row, .cards .chip { min-height: var(--cards-target); }
+  .cards .link-row { align-items: center; }
+  .cards .search-link { padding: 8px 0; }
+  .cards-count { margin: -8px 0 18px; font-family: var(--mono); font-size: var(--t-meta); color: var(--dim); letter-spacing: 0.08em; }
+  .cards-count-n { font-family: var(--serif); font-size: calc(var(--t-title) * var(--cards-title-scale)); color: var(--ink); letter-spacing: 0; }
+  .cards-go {
+    display: block; width: 100%; min-height: calc(var(--cards-target) * var(--cards-go-scale)); margin: 6px 0 18px;
+    padding: 10px 16px; text-align: left; cursor: pointer;
+    font-family: var(--serif); font-size: var(--t-hook); color: var(--ink);
+    background: rgba(140,170,220,0.08); border: 1px solid var(--hairline); border-left-width: 4px; border-radius: 10px;
+  }
+  .cards-go:last-child { margin-top: 24px; }
+  .cards-foot { margin: 28px 0 0; }
+  .cards-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+    min-height: var(--cards-bar); display: flex; align-items: center; gap: 8px;
+    padding: 8px var(--cards-gutter) calc(8px + env(safe-area-inset-bottom));
+    background: rgba(6, 10, 22, 0.92); border-top: 1px solid var(--hairline);
+    backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  }
+  .cards-button {
+    min-height: var(--cards-target); min-width: var(--cards-target); padding: 0 14px;
+    font-family: var(--ui); font-size: var(--t-control); color: var(--ink); cursor: pointer;
+    background: rgba(140,170,220,0.06); border: 1px solid var(--hairline); border-radius: 999px;
+  }
+  .cards-button:disabled { opacity: 0.35; cursor: default; }
+  .cards-random { flex: 1 1 auto; font-weight: 600; border-color: rgba(150,180,235,0.45); }
+  .cards-registers { display: flex; gap: 4px; }
+  .cards-register { padding: 0 10px; }
+  .cards-register[aria-pressed="true"] { background: rgba(150,180,235,0.22); border-color: rgba(150,180,235,0.6); }
+  .cards-button:focus-visible, .cards-go:focus-visible { outline: 1px solid rgba(150,180,235,0.7); outline-offset: 3px; }
 
   /* All motion here is decoration over a layout that is already complete
      and readable. Someone who does not want it loses nothing. */

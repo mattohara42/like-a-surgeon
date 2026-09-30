@@ -27,6 +27,9 @@ import { createSoundControls } from './reading/soundControls.js';
 import { stopDemo, withEdgeCaption } from './reading/demoBlock.js';
 import { createThreads } from './reading/threads.js';
 import { loadLens, saveLens, createLensControl, renderLensCard } from './reading/lens.js';
+import { createSceneMembers } from './reading/members.js';
+import { chooseView } from './cards/route.js';
+import { startCards } from './cards/app.js';
 
 const statusEl = document.getElementById('status');
 const appEl = document.getElementById('app');
@@ -73,24 +76,18 @@ async function main() {
     return;
   }
 
+  // A phone gets cards instead of the map (docs/cards-architecture.md,
+  // Q39). Decided once, here, so turning the phone does not swap views.
+  if (chooseView(location.search, window.innerWidth, CONFIG.cards.maxWidthPx) === 'cards') {
+    startCards(data);
+    return;
+  }
+
   const nodesById = new Map(data.nodes.map((n) => [n.id, n]));
   const edgesById = new Map(data.edges.map((e) => [e.id, e]));
   const neighbours = buildNeighbours(data.edges);
 
-  // A scene's members are the artists that name it, plus whoever the scene
-  // lists itself. Both directions, because the two are not kept in sync
-  // (BACKLOG, "Observed problems") and a reader should not lose a member
-  // to that gap.
-  function sceneMembers(sceneId) {
-    const ids = new Set(nodesById.get(sceneId)?.raw.memberIds ?? []);
-    for (const node of data.nodes) {
-      if (node.kind === 'artist' && node.raw.scenes?.includes(sceneId)) ids.add(node.id);
-    }
-    return [...ids]
-      .map((id) => nodesById.get(id))
-      .filter(Boolean)
-      .sort((a, b) => (a.startYear ?? 0) - (b.startYear ?? 0));
-  }
+  const sceneMembers = createSceneMembers(data.nodes, nodesById);
 
   // A label's roster: the artists that name it.
   function labelMembers(labelId) {

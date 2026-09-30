@@ -4,6 +4,15 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
+- **Q39 and Q40. Cards (the phone version) sign-off.** Two questions
+  gate the build. The full text, with options and a recommendation for
+  each, is in `docs/cards-architecture.md` section 7:
+  - Q39: when does Cards switch on? Recommended: at load, on screens
+    narrower than 700 px, with `?view=map` and `?view=cards` overrides.
+  - Q40: should each card have its own address (`#/artist/kraftwerk`)?
+    Recommended: yes, so the phone's back gesture and sharing both work.
+  **Resolved 2026-09-30: (a) on both.**
+
 - **Q38. Receding, revisited (Q33).** Q33 said material more than about
   twenty years behind the cursor should fade partway. Measured (A281): the
   map opens with the cursor at 2026, where that covers every edge on the

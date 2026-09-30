@@ -293,6 +293,20 @@ export const COPY = {
     newTab: { age13: 'opens in a new tab', adult: 'opens in a new tab' },
   },
 
+  // Cards, the phone version (docs/cards-architecture.md).
+  cards: {
+    connectionOne: { age13: 'connection', adult: 'connection' },
+    connectionMany: { age13: 'connections', adult: 'connections' },
+    back: { age13: 'Back', adult: 'Back' },
+    random: { age13: 'Random', adult: 'Random' },
+    goTo: { age13: 'Go to', adult: 'Go to' },
+    fullMap: { age13: 'Open the full map', adult: 'Open the full map' },
+    toCards: { age13: 'Card view for phones', adult: 'Card view for phones' },
+    loadFailed: {
+      age13: 'This card did not load. Go back or try Random.',
+      adult: 'This record failed to load. Go back or try Random.',
+    },
+  },
   headings: {
     whatToListenFor: { age13: 'What to listen for', adult: 'What to listen for' },
     followProducer: { age13: 'Show everyone they produced', adult: 'Show every production on the map' },
