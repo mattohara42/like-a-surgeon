@@ -3390,3 +3390,31 @@ small and worth having in front of Matt alongside everything else here.
   - **Checked in the browser:** "delay" finds the Delay Line; King Tubby's
     panel offers stop 1 and opens it; the thread walk from A284 still
     passes.
+
+- **A286. M5 step 5: three launch threads.** SPEC names five launch
+  threads; the map now has all five, each built only from edges already
+  on it, with framing that restates each edge's own explanation and
+  evidence.
+  - **Breaks** (5 stops, 1973 to 1994): James Brown and the Incredible
+    Bongo Band into Kool Herc, Herc into Grandmaster Flash, then the Amen
+    break into N.W.A and into Shy FX. The adult framing on the N.W.A stop
+    names Richard Spencer and that he was never paid, as the edge's
+    evidence does. The Shy FX stop says the record reached the singles
+    chart, and does not repeat the "first jungle record to chart" claim,
+    which the edge itself only calls widely credited.
+  - **Trains to the Bronx** (5 stops): 'Planet Rock' from Kraftwerk's side
+    and the 808's, then Kraftwerk into Juan Atkins, and Atkins into Derrick
+    May and Kevin Saunderson. The two Belleville Three edges are dated
+    1981, before the 1983 Kraftwerk edge, so the timeline steps back at
+    stop 4, and the framing says so. A first draft explained the step
+    back as "the friendship came before the name", which claims when
+    techno was named; nothing on the map sources that, so it went.
+  - **Loud Guitars** (6 stops, 1964 to 1979): the slashed Elpico into the
+    Kinks, the Kinks into the Who, the Who into the Sex Pistols, the
+    Pistols into the Clash and PiL, PiL into Joy Division. Two edges are
+    held at consensus, and their framing says the link is a shared scene
+    or a likeness, not a documented handoff. SPEC runs this thread to OK
+    Go, who are not on the map, so it ends at post-punk and its outro says
+    the later records are still to come.
+  - **Walked in the browser:** all five threads from intro to outro, with
+    the timeline year at each stop, and no page errors.
