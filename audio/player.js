@@ -20,10 +20,11 @@
 // engine.start(), which a press is always behind.
 
 import { CONFIG } from '../config.js';
-import { INSTRUMENTS, drumKnobValue, voiceParamValue } from './instruments.js';
+import { INSTRUMENTS, drumKnobValue } from './instruments.js';
 import { parsePattern } from './pattern.js';
 import { eventsForStep } from './seq303.js';
 import { buildChain } from './fx.js';
+import { createVoice } from './voices.js';
 import { Scheduler } from './scheduler.js';
 
 const RAMP_S = CONFIG.audio.master.rampS;
@@ -84,6 +85,7 @@ export function createPlayer(engine, demo) {
   let scheduler = null;
   let side = versions[0].key;
   let queuedSide = null;
+  let keyHeld = false;
   let ready = null;
   const stepListeners = new Set();
   // Bumped on every stop, so step lights queued before it do not fire
@@ -105,7 +107,8 @@ export function createPlayer(engine, demo) {
     if (!node || INSTRUMENTS[machineId].kind !== 'voice') return;
     for (const [param, value] of values) {
       const audioParam = node.parameters.get(param);
-      if (audioParam) audioParam.setTargetAtTime(voiceParamValue(param, value), ctx.currentTime, RAMP_S);
+      const toParam = INSTRUMENTS[machineId].toParam ?? ((_, v) => v);
+      if (audioParam) audioParam.setTargetAtTime(toParam(param, value), ctx.currentTime, RAMP_S);
     }
   }
 
@@ -127,7 +130,10 @@ export function createPlayer(engine, demo) {
           for (const [target, value] of values) chain.set(target, value);
         }
         for (const id of machineIds) {
-          const node = new AudioWorkletNode(ctx, INSTRUMENTS[id].worklet, { numberOfInputs: 0, outputChannelCount: [1] });
+          const inst = INSTRUMENTS[id];
+          const node = inst.worklet
+            ? new AudioWorkletNode(ctx, inst.worklet, { numberOfInputs: 0, outputChannelCount: [1] })
+            : createVoice(ctx, inst.voice);
           node.connect(bus);
           nodes.set(id, node);
           applyVoiceParams(id);
@@ -202,6 +208,19 @@ export function createPlayer(engine, demo) {
       await ensureReady();
       const machineId = params.machine;
       nodes.get(machineId).port.postMessage({ type: 'hit', time: ctx.currentTime, lane, accent: false, params: laneParams(machineId, lane) });
+    },
+    // A key on the demo's keyboard: the note sounds from now until
+    // keyUp(). Starts the engine on the first press.
+    async keyDown(note) {
+      keyHeld = true;
+      await ensureReady();
+      // Let go before the engine was ready: nothing to sound.
+      if (!keyHeld) return;
+      nodes.get(params.machine).port.postMessage({ type: 'note', time: ctx.currentTime, note, gate: true, accent: false, slide: false });
+    },
+    keyUp() {
+      keyHeld = false;
+      if (ctx) nodes.get(params.machine)?.port.postMessage({ type: 'note', time: ctx.currentTime, gate: false });
     },
     setControl(target, value) {
       values.set(target, value);

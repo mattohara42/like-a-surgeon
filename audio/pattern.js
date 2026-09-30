@@ -14,7 +14,8 @@
 //   }
 //
 // Drum lanes are one character per step: "." rest, "x" hit, "X" accented
-// hit. A voice part has one MIDI note (or null for a rest) per step, and
+// hit. A voice part has one MIDI note (or null for a rest) per step, in
+// the voice's own range (INSTRUMENTS[id].notes), and
 // optional accent ("X") and slide ("s") strings. A slide on step N means
 // "glide into step N+1", SQUELCH's locked 303 semantics (js/seq303.js).
 
@@ -51,7 +52,7 @@ export function parsePattern(raw) {
       continue;
     }
     if (inst.kind === 'drums') parsed[machineId] = parseDrums(part, inst, steps, where, errors);
-    else parsed[machineId] = parseVoice(part, steps, where, errors);
+    else parsed[machineId] = parseVoice(part, inst, steps, where, errors);
   }
   return errors.length ? { pattern: null, errors } : { pattern: { bpm, steps, parts: parsed }, errors };
 }
@@ -76,8 +77,8 @@ function parseDrums(part, inst, steps, where, errors) {
   return out;
 }
 
-function parseVoice(part, steps, where, errors) {
-  const V = CONFIG.audio.voice303;
+function parseVoice(part, inst, steps, where, errors) {
+  const range = inst.notes;
   const notes = part?.notes;
   if (!Array.isArray(notes) || notes.length !== steps) {
     errors.push(`${where}.notes: must be an array of ${steps} MIDI notes or nulls`);
@@ -99,8 +100,8 @@ function parseVoice(part, steps, where, errors) {
       if (slide[i]) errors.push(`${where}: step ${i + 1} is a rest but has a slide`);
       return { g: false };
     }
-    if (!Number.isInteger(n) || n < V.noteMin || n > V.noteMax) {
-      errors.push(`${where}.notes: step ${i + 1} must be a whole MIDI note from ${V.noteMin} to ${V.noteMax} or null, got ${JSON.stringify(n)}`);
+    if (!Number.isInteger(n) || n < range.min || n > range.max) {
+      errors.push(`${where}.notes: step ${i + 1} must be a whole MIDI note from ${range.min} to ${range.max} or null, got ${JSON.stringify(n)}`);
     }
     return { g: true, n, a: Boolean(accent[i]), s: Boolean(slide[i]) };
   });
