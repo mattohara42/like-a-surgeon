@@ -1,0 +1,35 @@
+{
+  "id": "giorgio-moroder",
+  "name": "Giorgio Moroder",
+  "sortName": "Moroder, Giorgio",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1975,
+  "activeTo": null,
+  "originCity": "Ortisei",
+  "originCountry": "Italy",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Pete Bellotte"
+  ],
+  "hook": "A Munich producer who built Donna Summer's 'I Feel Love' almost entirely from a sequenced Moog, which Brian Eno is said to have called the sound of the future.",
+  "blurb": {
+    "age13": "Giorgio Moroder was born in 1940 in Ortisei, a German-speaking town in the Italian Alps, and worked as a producer in Munich. With the lyricist Pete Bellotte he made Donna Summer's records in the 1970s. On 'I Feel Love' (1977), everything except her voice and the kick drum came from a Moog synthesizer playing repeating patterns in exact time. That sound led straight to much of the electronic dance music that followed.",
+    "adult": "Born in Ortisei, South Tyrol, in 1940, he worked from Musicland Studios in Munich. 'I Feel Love' was made there in 1976 and 1977 with Pete Bellotte and the engineer Robby Wedel, who showed Moroder how to lock a sequenced Moog modular to tape with a click track. The Moog, borrowed and prone to drifting out of tune, was recorded in bursts of 20 to 30 seconds; Keith Forsey's kick drum was the only other played part. Bowie's account of Eno arriving at the Berlin sessions saying he had heard the sound of the future is the best-known reaction."
+  },
+  "signatureTracks": [
+    {
+      "title": "I Feel Love (Donna Summer)",
+      "year": 1977,
+      "whyThisOne": "A sequenced Moog under a vocal, and almost nothing else.",
+      "search": "Donna Summer I Feel Love"
+    },
+    {
+      "title": "Love to Love You Baby (Donna Summer)",
+      "year": 1975,
+      "whyThisOne": "The 16-minute version Casablanca asked for.",
+      "search": "Donna Summer Love to Love You Baby"
+    }
+  ]
+}

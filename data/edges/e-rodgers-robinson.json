@@ -1,0 +1,30 @@
+{
+  "id": "e-rodgers-robinson",
+  "from": "nile-rodgers",
+  "to": "sylvia-robinson",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1979,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'Rapper's Delight': produced by Sylvia Robinson and released by Sugar Hill on 16 September 1979, it interpolated Chic's 'Good Times', replaying Bernard Edwards's bass line with the label's studio players. Rodgers heard it played by a DJ at the New York club Leviticus; he and Edwards threatened legal action and were credited as co-writers in a settlement. Typed as sample to match the map's other interpolation edges (e-kraftwerk-planetrock).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Chic",
+      "title": "Good Times",
+      "year": 1979
+    },
+    "later": {
+      "artist": "The Sugarhill Gang",
+      "title": "Rapper's Delight",
+      "year": 1979
+    },
+    "whatToListenFor": "Start both records together. The bass line is the same, the melody Bernard Edwards played on 'Good Times': bouncing, walking up and down, carrying the whole song. On 'Rapper's Delight' a studio band plays it again, and then three rappers talk over it for fifteen minutes. Listen for how little the backing changes. The new thing was entirely the voices."
+  },
+  "explanation": {
+    "age13": "The first hit rap record, 'Rapper's Delight' (1979), was made over the music of Chic's 'Good Times', replayed by a studio band, without asking Chic. Nile Rodgers heard it in a club, and he and Bernard Edwards threatened to sue. They ended up credited as co-writers.",
+    "adult": "The founding interpolation of recorded hip-hop, and a credit dispute that set the terms for later ones. It pairs with e-cokelarock-robinson, where the uncredited party had no lawyers, and with e-sugarhill-mellemel on the label's house-band method."
+  },
+  "tags": [
+    "labels"
+  ]
+}

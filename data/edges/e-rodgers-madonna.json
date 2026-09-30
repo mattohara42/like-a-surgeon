@@ -1,0 +1,30 @@
+{
+  "id": "e-rodgers-madonna",
+  "from": "nile-rodgers",
+  "to": "madonna",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1984,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Nile Rodgers: he produced Madonna's 'Like a Virgin' (1984), which yielded four hit singles including the title track.",
+  "trackPair": {
+    "earlier": {
+      "artist": "David Bowie",
+      "title": "Let's Dance",
+      "year": 1983
+    },
+    "later": {
+      "artist": "Madonna",
+      "title": "Like a Virgin",
+      "year": 1984
+    },
+    "whatToListenFor": "Both were produced by Rodgers within a year. Listen for the same bright, tight rhythm section on 'Like a Virgin': a bouncing bass line, crisp drums, choppy guitar, and nothing wasted. Madonna's first album was built from club drum machines; this one sounds like a band, which was Rodgers's contribution."
+  },
+  "explanation": {
+    "age13": "Nile Rodgers produced Madonna's second album, 'Like a Virgin', in 1984, a year after he produced David Bowie's 'Let's Dance'.",
+    "adult": "Rodgers's production is already in Madonna's own blurb; this edge draws it. With e-sire-madonna, it gives her two routes onto the map: a label that found her in a club, and a disco producer who made her a pop star."
+  },
+  "tags": [
+    "production"
+  ]
+}
