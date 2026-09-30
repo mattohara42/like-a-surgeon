@@ -176,6 +176,7 @@ Each step is one PR, merged before the next.
    Loud Guitars.
 6. Lenses: the control, the dimming, the four intros, and a tag audit of
    the 22 untagged edges.
+   Built (A287), except the tag audit, which is its own data PR.
 7. The gate: a cold reader finishes a thread and explains what they
    learned. Matt runs it.
 

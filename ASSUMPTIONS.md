@@ -3418,3 +3418,32 @@ small and worth having in front of Matt alongside everything else here.
     the later records are still to come.
   - **Walked in the browser:** all five threads from intro to outro, with
     the timeline year at each stop, and no page errors.
+
+- **A287. M5 step 6: lenses.**
+  - **The control** is a fifth row in the top-left stack, "Lens: None,
+    Production, Labels, Politics, Technology", built from
+    `CONFIG.lenses.tags` (the enum in data/SCHEMA.md). One lens at a time,
+    remembered per browser like the reading level.
+  - **What a lens does (Q36).** Edges carrying the tag rest at 0.65, as
+    bright as a demo edge; every other edge drops to 0.06, below a quiet
+    edge; nodes touching no lit edge dim to 0.3. Selected, touched and
+    lit things are never dimmed, so a thread's route and a clicked
+    record stay readable under any lens. No new colour.
+  - **The card.** Choosing a lens opens a short drawer card: what it
+    lights, how many edges ("14 of 265 connections are lit", counted
+    from the loaded data, so it stays true), and how to clear it. The
+    Politics card says plainly that few edges are tagged yet and that
+    this is a gap in the map, not a finding about the music.
+  - **Labels is a lens like the others (Q37).** Its card points to Arrange
+    by label for the roster view.
+  - **Fixed on the way: a rebuild dropped a thread's route.** Toggling a
+    layer rebuilds the graph, which carried the camera, year and
+    selection but not the route. It now carries the route and the lens.
+  - **Changed on the way: control pills are darker.** With a fifth row,
+    nodes and labels passing behind the stack made its buttons hard to
+    read. Every toggle's resting background went from 5% blue-grey to 78%
+    of the page background. Pressed buttons are unchanged.
+  - **Checked in the browser**, dev and `dist/` over file://: each lens
+    lights its tagged edges and opens its card, None clears both, a layer
+    rebuild keeps the lens and a thread's route, and the lens survives a
+    reload.
