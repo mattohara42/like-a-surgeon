@@ -1,0 +1,29 @@
+{
+  "id": "e-bowie-glass",
+  "from": "david-bowie",
+  "to": "philip-glass",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1992,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on Glass's Symphony No. 1: composed in 1992 on themes from 'Subterraneans', 'Some Are' and 'Warszawa', associated with Bowie's 'Low' (1977), made with Brian Eno; premiered in Munich on 30 August 1992, conducted by Dennis Russell Davies. Glass allowed Bowie's and Eno's ideas to influence how he worked on it. His Symphony No. 4 (1996) is based on '\"Heroes\"'.",
+  "trackPair": {
+    "earlier": {
+      "artist": "David Bowie",
+      "title": "Warszawa",
+      "year": 1977
+    },
+    "later": {
+      "artist": "Philip Glass",
+      "title": "Symphony No. 1 \"Low\"",
+      "year": 1992,
+      "search": "Philip Glass Low Symphony"
+    },
+    "whatToListenFor": "'Warszawa' is slow and heavy: low synthesizer chords, a wordless choir-like voice Bowie sang himself, and a melody that moves in small steps. In Glass's symphony, listen for the same shapes played by strings and brass, and for how Glass adds his own habit of short, cycling patterns underneath. It is a rock album's instrumental side turned back into concert music."
+  },
+  "explanation": {
+    "age13": "In 1992 the composer Philip Glass wrote a symphony based on music from David Bowie's 1977 album 'Low', which Bowie made with Brian Eno. A few years later he did the same with their album '\"Heroes\"'.",
+    "adult": "A return edge, and a rare one on this map: the concert composer takes from the rock record, fifteen years after minimalism fed into Eno's work on it. It shows the line between the two worlds being crossed in both directions, and it is dated precisely by a premiere."
+  },
+  "tags": []
+}

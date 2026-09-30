@@ -3734,3 +3734,28 @@ small and worth having in front of Matt alongside everything else here.
   Tape Op, Sound On Sound, the Library of Congress registry). Spotify,
   WhoSampled, AllMusic, Rate Your Music and Last.fm are recorded as
   considered and left out, with the reason.
+
+## Added with the minimalism batch (Track D, deferred data)
+
+- **A300. Classical minimalism into rock and electronic music.** BACKLOG
+  listed it under deferred data. The batch adds La Monte Young, Terry
+  Riley, Steve Reich and Philip Glass, and 7 edges (297 of 350). It is
+  stacked on the New York batch (A298) because
+  `e-lamonteyoung-velvets` needs the Velvets' node. Sources were
+  Wikipedia articles read through a web fetch, as in A298.
+  - **Lanes.** Young, Riley and Reich go in `electronic`, beside
+    Stockhausen and Schaeffer, because what reached pop music from them
+    was tape delay, phasing and amplified drone. Glass goes in `other`:
+    his route onto the map is a symphony written from a rock album,
+    and nothing on it is electronic in the sense the lane means.
+  - **`e-riley-reich` is consensus.** At the 'In C' premiere the
+    influence ran both ways (Reich supplied the pulse), and no single
+    statement cited here settles how much 'In C' shaped phasing.
+  - **Young's tracks are composition years.** Few of his recordings are
+    in print. 'The Well-Tuned Piano' is dated to the October 1981
+    performance Gramavision issued, and the release year was not checked.
+  - **Two Eno quotations are Eno's own, as reported.** "The daddy of us
+    all" and the "cornerstone" remark are carried with attribution from
+    Wikipedia's article on Young. Both are real quotes reported by a
+    secondary source, not ones written here, so rule 1 holds, but a
+    primary citation (the 1981 interview) would be better.

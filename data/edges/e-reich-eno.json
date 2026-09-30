@@ -1,0 +1,28 @@
+{
+  "id": "e-reich-eno",
+  "from": "steve-reich",
+  "to": "brian-eno",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1975,
+  "crossLineage": true,
+  "evidence": "Wikipedia's articles on 'It's Gonna Rain' and on Reich: Eno has cited the piece in public lectures as his first experience of minimalism and of what came to be called ambient music, and has listed 'the early experiments of Steve Reich, Terry Riley, and the other minimalist composers' among the threads he picked up. Eno's 'Discreet Music' (1975) is built from two tape machines looping and delaying a short synthesizer phrase.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Steve Reich",
+      "title": "It's Gonna Rain",
+      "year": 1965
+    },
+    "later": {
+      "artist": "Brian Eno",
+      "title": "Discreet Music",
+      "year": 1975
+    },
+    "whatToListenFor": "Both pieces are made by setting up two tape machines and letting them run. In 'It's Gonna Rain', two copies of a voice drift apart, and the music is what happens between them. In 'Discreet Music', a short, gentle synthesizer phrase goes into a tape delay and keeps coming back, slightly different each time, for half an hour. Listen for how neither composer plays much: they build a system and let it make the music."
+  },
+  "explanation": {
+    "age13": "Brian Eno has said that Steve Reich's 'It's Gonna Rain' was the first minimal music he heard, and the start of the road to what he later called ambient music. Ten years later, Eno made 'Discreet Music' with the same basic tool: tape machines set up to repeat and change a small piece of sound on their own.",
+    "adult": "The edge that connects the tape-loop minimalism of the 1960s to ambient music and, through Eno, to Bowie's Berlin albums and Talking Heads. Eno's point, repeated in his talks, is about method rather than sound: a process set running can generate music its maker didn't write note by note."
+  },
+  "tags": []
+}

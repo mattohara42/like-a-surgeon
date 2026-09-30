@@ -1,0 +1,28 @@
+{
+  "id": "e-riley-who",
+  "from": "terry-riley",
+  "to": "the-who",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1971,
+  "crossLineage": true,
+  "evidence": "Wikipedia's articles on 'Baba O'Riley' and 'In C': Pete Townshend named the song after Meher Baba and Terry Riley, and was inspired by Riley's 'A Rainbow in Curved Air' and 'In C'. The keyboard part was a Lowrey Berkshire Deluxe TBO-1 organ played through its 'marimba repeat' setting. Recorded at Olympic Studios in May 1971 and released on 'Who's Next' (1971).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Terry Riley",
+      "title": "A Rainbow in Curved Air",
+      "year": 1969
+    },
+    "later": {
+      "artist": "The Who",
+      "title": "Baba O'Riley",
+      "year": 1971
+    },
+    "whatToListenFor": "Listen to the first minute of 'Baba O'Riley', before the band comes in. A home organ plays fast, bubbling, repeating notes that never change their pattern, like a machine ticking over. That is Townshend imitating the feel of Riley's organ loops on 'A Rainbow in Curved Air', where several patterns cycle and overlap for minutes on end. Then the piano and drums arrive and it turns into a rock song, but the loop keeps going underneath."
+  },
+  "explanation": {
+    "age13": "Pete Townshend of the Who named 'Baba O'Riley' after two people: his spiritual teacher, Meher Baba, and the composer Terry Riley. The fast, repeating organ at the start of the song comes from listening to Riley's records.",
+    "adult": "Documented in the title itself. The edge brings a minimalist composer into the rock lane at arena scale, and it is a good test for readers of the difference between influence and imitation: Townshend borrowed the idea of a mechanical, repeating pattern as the ground of a song, not any of Riley's actual music."
+  },
+  "tags": []
+}
