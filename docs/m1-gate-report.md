@@ -15,7 +15,7 @@ Regenerate with `npm run report`. This report describes the dataset only;
 | edges | 277 | 350 | 79% |
 | threads | 6 | 5 | met |
 | crossLineageEdges | 110 | 60 | met |
-| edgesWithDemo | 15 | 30 | 50% |
+| edgesWithDemo | 18 | 30 | 60% |
 
 ## Counts by lineage
 
