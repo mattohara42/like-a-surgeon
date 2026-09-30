@@ -1,0 +1,28 @@
+{
+  "id": "e-hendrix-clapton",
+  "from": "jimi-hendrix",
+  "to": "eric-clapton",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1966,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Eric Clapton: Hendrix attended a Cream show at the Central London Polytechnic on 1 October 1966 and sat in on a song, and his arrival had an immediate and major effect on the next phase of Clapton's career.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Jimi Hendrix Experience",
+      "title": "Purple Haze",
+      "year": 1967
+    },
+    "later": {
+      "artist": "Cream",
+      "title": "Sunshine of Your Love",
+      "year": 1967
+    },
+    "whatToListenFor": "'Purple Haze' is loud, distorted and strange, with a clashing chord at the start and a guitar sound that seems to bend in the air. 'Sunshine of Your Love', from later the same year, has Clapton playing a heavier, rounder, more distorted tone than his earlier blues playing, over a slow, massive riff. Listen for the guitar sound more than the notes: both players were pushing the amplifier into the music."
+  },
+  "explanation": {
+    "age13": "In October 1966, a few weeks after arriving in London, Jimi Hendrix got up on stage with Eric Clapton's band Cream and played. Clapton was already the most admired guitarist in London, and seeing Hendrix changed how he played.",
+    "adult": "Documented as an effect on Clapton through a specific, dated night. It links the Chas Chandler and Hendrix edges already on the map to the British blues boom."
+  },
+  "tags": []
+}

@@ -1,0 +1,30 @@
+{
+  "id": "e-korner-stones",
+  "from": "alexis-korner",
+  "to": "rolling-stones",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1962,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on Alexis Korner: Blues Incorporated, formed by Korner and Cyril Davies in 1961, included Charlie Watts and attracted younger musicians including Mick Jagger, Keith Richards and Brian Jones, who sat in with the band before forming the Rolling Stones.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Alexis Korner's Blues Incorporated",
+      "title": "R&B from the Marquee",
+      "year": 1962,
+      "search": "Alexis Korner Blues Incorporated R&B from the Marquee"
+    },
+    "later": {
+      "artist": "The Rolling Stones",
+      "title": "I Just Want to Make Love to You",
+      "year": 1964,
+      "search": "Rolling Stones I Just Want to Make Love to You"
+    },
+    "whatToListenFor": "Both are British bands playing Chicago blues. Blues Incorporated plays it like a club jazz band, with harmonica and saxophone taking long solos. Two years later the Stones play a Chess song faster, shorter and louder, aimed at teenagers rather than jazz fans. Listen for the same music moving from a grown-up club to a pop audience, which is the step the Stones took after sitting in with Korner."
+  },
+  "explanation": {
+    "age13": "Alexis Korner's band, Blues Incorporated, played Chicago blues in London clubs from 1961. Charlie Watts was its drummer, and Mick Jagger, Keith Richards and Brian Jones sat in with it before they started the Rolling Stones.",
+    "adult": "The personal link between the Chicago blues on this map (Muddy Waters, Chess) and the band that sold it back to America. Korner's own records are modest; his importance is the room he made for younger players."
+  },
+  "tags": []
+}

@@ -3898,3 +3898,24 @@ small and worth having in front of Matt alongside everything else here.
   - **Race and politics are stated through Dammers's own account** of
     why the band was integrated, not through context this batch did
     not source.
+
+## Added with the blues boom batch
+
+- **A307. Alexis Korner, the Yardbirds and Eric Clapton.** Three
+  artists and 5 edges (333 to 338 of 350). Korner is in the `blues`
+  lane beside Muddy Waters and Chess, since his band was a British
+  blues band; the Yardbirds and Clapton are in `rock`.
+  - **`e-clapton-ukpunk` is a `reaction-against` edge to a scene.**
+    Rock Against Racism's founders name Clapton's August 1976
+    Birmingham remarks as the trigger, and Bowie's remarks that year
+    are in the evidence too. Stated as fact in both registers, per
+    Q2 and CLAUDE.md's rule on conduct, without adjectives. A
+    Bowie-side edge was not drawn; the founders cite Clapton first.
+  - **The Yardbirds joined `swinging-london`** in the scene's
+    `memberIds`, since the scene edge puts them there.
+  - **Korner has one signature track and a note (Q32).** His
+    importance is as a bandleader, and his individual tracks could not
+    be dated from the sources read.
+  - **'Train Kept A-Rollin'' was engineered by Sam Phillips at his
+    1960s Memphis studio,** not at Sun, so no Sun Records edge was
+    drawn.
