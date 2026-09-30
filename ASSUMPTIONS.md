@@ -3626,6 +3626,40 @@ small and worth having in front of Matt alongside everything else here.
     nothing about what the scene did to them); Long Island to De La Soul
     (their Prince Paul edge already carries the Long Island connection).
 
+- **A295. Q32 built: `signatureTracksNote`.** Matt chose (a). An artist
+  may have fewer than two signature tracks when an optional
+  `signatureTracksNote` says why. The validator accepts 0 or 1 tracks with
+  a note and fails a note that is present but empty or not a string, since
+  it is reader-facing. The panel shows the note under the same "Listen
+  to" / "Signature tracks" heading, above any tracks.
+  - **A plain string, not register-aware.** Each note is one short
+    sentence that reads the same at Teen and Adult, so a three-register
+    object would repeat itself. If a Kid pass (Track D batch 6) needs a
+    different wording, the field can become an object then.
+  - **The seven notes** restate each record's own text and add no facts:
+    Kool Herc, Coke La Rock, Grand Wizzard Theodore and Ron Hardy (known
+    for what they played or did live, not their records), the Charmels
+    and the Honey Drippers (one record is why they are here), and
+    Daedelus, whose note says plainly that a second track has not been
+    confirmed from a source (A275) rather than dressing a gap up as a
+    reason.
+  - **Checked** in the browser at 1280x800 (Herc shows the note alone,
+    the Charmels the note above their one track, no console errors) and
+    in `npm run build`, whose record files carry the field.
+  - **Q24 resolved alongside:** Matt kept `cover` for parody, so no change.
+- **A296. Q23 built: the tape and radiophonic pioneers join `electronic`.**
+  Matt chose (a). Pierre Schaeffer, Karlheinz Stockhausen, Daphne Oram,
+  Delia Derbyshire, `paris-musique-concrete` and `bbc-radiophonic-workshop`
+  move from `other` to `electronic`, which supersedes A148. Only the
+  `lineage` field changed. No edge's `crossLineage` flips: the four edges
+  among these six were already same-lineage and stay so, and their two
+  edges out (Stockhausen into the Beatles and into Can) were already
+  cross-lineage and stay so. Q23's text expected edges into Kraftwerk and
+  the Radiophonic successors to become same-lineage. No such edges exist
+  yet, so they are Track D work, and they will be same-lineage when
+  written. Checked in the browser: Schaeffer's panel reads "Artist ·
+  Electronic" and the node sits in the electronic lane, with no console
+  errors.
 - **A297. An edge can caption its own demo.** Matt chose an edge-level
   caption over rewriting demo captions to name no record. `demoCaption`
   is an optional register object on an edge. It replaces the demo's
