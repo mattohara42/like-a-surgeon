@@ -1,0 +1,39 @@
+{
+  "id": "massive-attack",
+  "name": "Massive Attack",
+  "sortName": "Massive Attack",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1988,
+  "activeTo": null,
+  "originCity": "Bristol",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A Bristol collective that grew out of a sound system and made the album usually called the first trip-hop record.",
+  "blurb": {
+    "age13": "Massive Attack formed in Bristol in 1988, growing out of the Wild Bunch, one of the first sound systems started in Britain. Their first album, 'Blue Lines' (1991), is usually called the first trip-hop album. In 1995 they asked Mad Professor to remake their second album as dub.",
+    "adult": "The Wild Bunch was among the first homegrown UK sound systems, so Massive Attack's lineage runs through the same Jamaican-derived practice as dub itself. 'Blue Lines' (Virgin, 1991) is generally considered the first trip-hop album. 'No Protection' (1995), Mad Professor's dub remake of 'Protection', began as a single remix request that the band widened to the whole album: the dub tradition invited back into music it had helped shape."
+  },
+  "signatureTracks": [
+    {
+      "title": "Blue Lines",
+      "year": 1991,
+      "whyThisOne": "The debut album, generally considered the first album of trip-hop.",
+      "search": "Massive Attack Blue Lines"
+    },
+    {
+      "title": "Protection",
+      "year": 1994,
+      "whyThisOne": "The second album, which won a Brit award for Best Dance Act and which Mad Professor then remade as dub.",
+      "search": "Massive Attack Protection"
+    },
+    {
+      "title": "Mezzanine",
+      "year": 1998,
+      "whyThisOne": "The third album and their most commercially successful, selling nearly four million copies.",
+      "search": "Massive Attack Mezzanine"
+    }
+  ]
+}
