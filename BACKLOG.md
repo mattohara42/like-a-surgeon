@@ -246,6 +246,12 @@ correct response to a good idea arriving mid-milestone.
   should read it (as a custom property set from CONFIG) or the CONFIG key
   should go. Found in M5 step 1 (A283), not changed there.
 
+- **`tools/report.js --out` breaks on an absolute path.** It writes to
+  `join(ROOT, opts.out)`, so `--out=/tmp/x.md` becomes
+  `<repo>/tmp/x.md` and fails with ENOENT. `resolve(ROOT, opts.out)`
+  would handle both. Found while reading the report outside the repo,
+  not changed there.
+
 - **Demo peaks cluster just under the safety knee, whatever their cap
   (A280).** Four of the nine playable demos (tape echo, synth bass,
   distortion, 808 against 909) peak between 0.37 and 0.395 at their
