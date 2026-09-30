@@ -1,0 +1,28 @@
+{
+  "id": "e-clash-specials",
+  "from": "the-clash",
+  "to": "the-specials",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1978,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on the Specials: Joe Strummer invited them to open the Clash's 1978 'On Parole' UK tour, and the band briefly shared the Clash's management, which gave them their first national exposure.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Clash",
+      "title": "Police and Thieves",
+      "year": 1977
+    },
+    "later": {
+      "artist": "The Specials",
+      "title": "Gangsters",
+      "year": 1979
+    },
+    "whatToListenFor": "The Clash's 'Police and Thieves' is a punk band playing a Jamaican song, slowly and respectfully. 'Gangsters' is a band that grew up on both at once and fused them. Listen for the difference between a punk band covering reggae and a band for whom ska and punk were one thing."
+  },
+  "explanation": {
+    "age13": "In 1978 Joe Strummer asked the Specials to support the Clash on tour. It was the Specials' first big break, and for a while the two bands had the same manager.",
+    "adult": "A direct edge through a tour and shared management. It extends the Clash's role on the map as the hinge between punk and Jamaican music: the Clash covered reggae, and the band they took on tour made the fusion its own."
+  },
+  "tags": []
+}

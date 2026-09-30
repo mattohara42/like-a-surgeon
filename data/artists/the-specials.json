@@ -1,0 +1,39 @@
+{
+  "id": "the-specials",
+  "name": "The Specials",
+  "sortName": "Specials, The",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1977,
+  "activeTo": 1981,
+  "originCity": "Coventry",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "two-tone",
+      "from": 1979,
+      "to": 1981
+    }
+  ],
+  "keyProducers": [
+    "Elvis Costello"
+  ],
+  "hook": "A deliberately mixed-race Coventry band that fused ska and punk, ran its own label, and took a song about empty, riot-hit cities to number one.",
+  "blurb": {
+    "age13": "The Specials formed in Coventry in 1977, started by Jerry Dammers. He wanted a band with Black and white members playing together, and they mixed Jamaican ska with the energy of punk. In 1978 Joe Strummer invited them on the Clash's tour. Dammers started his own label, 2 Tone, and their first single, 'Gangsters', was built on Prince Buster's 'Al Capone'. In 1981 'Ghost Town', about cities hit by unemployment, went to number one during a summer of riots in British cities.",
+    "adult": "Formed in Coventry in 1977 by Jerry Dammers, who has said the band was built on purpose to bring Black and white musicians together. The Clash's 1978 'On Parole' tour gave them their first national exposure, and they briefly shared the Clash's management. 'Gangsters' (1979) launched 2 Tone; their debut album was produced by Elvis Costello. 'Ghost Town' (1981) was a UK number one during the recession and the summer's urban riots. The classic line-up split that year when Terry Hall, Neville Staple and Lynval Golding left to form Fun Boy Three."
+  },
+  "signatureTracks": [
+    {
+      "title": "Gangsters",
+      "year": 1979,
+      "whyThisOne": "Prince Buster's 'Al Capone' rebuilt as a Coventry punk-ska single."
+    },
+    {
+      "title": "Ghost Town",
+      "year": 1981,
+      "whyThisOne": "A number one about empty cities, released as riots broke out."
+    }
+  ]
+}
