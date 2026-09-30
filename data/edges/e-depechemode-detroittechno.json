@@ -1,0 +1,29 @@
+{
+  "id": "e-depechemode-detroittechno",
+  "from": "depeche-mode",
+  "to": "detroit-techno",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1983,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Detroit techno: Juan Atkins, Kevin Saunderson and Derrick May bonded while listening to Yellow Magic Orchestra, Kraftwerk, Bootsy Collins, Parliament, Prince, Depeche Mode and the B-52's. Held at consensus because this is a listening list, not a statement tying a specific record to a specific Detroit track.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Depeche Mode",
+      "title": "Everything Counts",
+      "year": 1983
+    },
+    "later": {
+      "artist": "Cybotron",
+      "title": "Clear",
+      "year": 1983,
+      "search": "Cybotron Clear"
+    },
+    "whatToListenFor": "'Everything Counts' mixes sampled metallic sounds with bright synth hooks over a drum machine. 'Clear', by Juan Atkins's Cybotron the same year, uses drum machines and synths too, but colder and more rhythmic. Listen for what they share, the machines, and what Detroit added, the funk underneath."
+  },
+  "explanation": {
+    "age13": "The three young Detroit musicians who invented techno listened to Depeche Mode along with Kraftwerk, Parliament and Prince when they were starting out.",
+    "adult": "An influence at the level of a scene's listening, which is why it goes to the scene, not to a single artist, and why it is consensus."
+  },
+  "tags": []
+}

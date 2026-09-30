@@ -1,0 +1,30 @@
+{
+  "id": "e-factory-neworder",
+  "from": "factory",
+  "to": "new-order",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1983,
+  "crossLineage": true,
+  "evidence": "Wikipedia's articles on 'Blue Monday' and New Order: released by Factory as FAC 73 on 7 March 1983, in a die-cut sleeve by Peter Saville that cost so much Factory lost money on each copy sold; it became the best-selling 12-inch single, with UK sales of 1.16 million across formats. New Order and Factory also financed the Haçienda club, opened in May 1982, which lost both a great deal of money.",
+  "trackPair": {
+    "earlier": {
+      "artist": "New Order",
+      "title": "Ceremony",
+      "year": 1981
+    },
+    "later": {
+      "artist": "New Order",
+      "title": "Blue Monday",
+      "year": 1983
+    },
+    "whatToListenFor": "Listen to 'Blue Monday' as a label decision as much as a song: seven and a half minutes, released only as a 12-inch for clubs, with no band photo and no title on the sleeve. That was Factory's way of doing things. It sold over a million copies and lost the label money on every one."
+  },
+  "explanation": {
+    "age13": "Factory Records released 'Blue Monday' in 1983 in an expensive sleeve designed to look like a computer floppy disk. It became the best-selling 12-inch single ever, but the sleeve cost so much that Factory lost money on every copy.",
+    "adult": "The clearest case on the map of a label's values beating its accounts: design and freedom first, money later or never. The Haçienda, financed by the same label and band, is the same story at the scale of a building."
+  },
+  "tags": [
+    "labels"
+  ]
+}

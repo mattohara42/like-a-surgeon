@@ -1,0 +1,28 @@
+{
+  "id": "e-littlerichard-hendrix",
+  "from": "little-richard",
+  "to": "jimi-hendrix",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1964,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Jimi Hendrix: he joined Little Richard's touring band, the Upsetters, in late 1964 after leaving the Isley Brothers, recorded one single with Richard in Los Angeles in February 1965, 'I Don't Know What You Got (But It's Got Me)', which reached number 92, and was fired by Richard's brother Robert in late July 1965 after clashes over lateness, clothes and his stage antics.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Little Richard",
+      "title": "Tutti Frutti",
+      "year": 1955
+    },
+    "later": {
+      "artist": "Little Richard",
+      "title": "I Don't Know What You Got (But It's Got Me)",
+      "year": 1965
+    },
+    "whatToListenFor": "'Tutti Frutti' is Little Richard at full speed: pounding piano, screaming, a show designed around one flamboyant star. Ten years later, on 'I Don't Know What You Got', the young Hendrix is somewhere in the backing band, playing quiet, tasteful soul guitar behind a slow ballad. Listen for how little room he was given. Within two years he was the star doing the flamboyant show himself."
+  },
+  "explanation": {
+    "age13": "Before he was famous, Jimi Hendrix played guitar in Little Richard's touring band from 1964 to 1965. He played on one of Richard's singles. He was fired for turning up late and trying to steal the show.",
+    "adult": "A direct edge through apprenticeship. What Hendrix took from Little Richard is visible on stage more than on record: the costumes, the showmanship, and the idea that a Black rock performer could be outrageous, which is exactly what got him fired."
+  },
+  "tags": []
+}

@@ -1,0 +1,40 @@
+{
+  "id": "new-order",
+  "name": "New Order",
+  "sortName": "New Order",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1980,
+  "activeTo": null,
+  "originCity": "Manchester",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "factory",
+      "from": 1980,
+      "to": 1992
+    }
+  ],
+  "keyProducers": [
+    "martin-hannett",
+    "arthur-baker"
+  ],
+  "hook": "The three surviving members of Joy Division, who turned to drum machines, sequencers and New York club records and made the best-selling 12-inch single ever.",
+  "blurb": {
+    "age13": "After Joy Division's singer Ian Curtis died in May 1980, the other three members, Bernard Sumner, Peter Hook and Stephen Morris, kept going as New Order, and Gillian Gilbert joined on keyboards. They started using drum machines and sequencers and listening to New York dance music. 'Blue Monday' (1983) became the best-selling 12-inch single ever. Its fancy sleeve cost so much that their label lost money on every copy.",
+    "adult": "Formed in Manchester in 1980 by Sumner, Hook and Morris, who had agreed to drop the Joy Division name if any member left or died; Gilbert joined that autumn. Martin Hannett produced 'Movement' (1981), and Hook later said his main contribution was teaching them to use a mixing desk. 'Blue Monday' (Factory, FAC 73, March 1983) used an Oberheim DMX, a Moog Source and a home-made sync circuit before MIDI, sampled Kraftwerk through an Emulator, and borrowed from Donna Summer's 'Our Love' and Klein + M.B.O.'s 'Dirty Talk' by the band's own account. With Factory they financed the Haçienda club (opened May 1982), which lost both of them a great deal of money."
+  },
+  "signatureTracks": [
+    {
+      "title": "Blue Monday",
+      "year": 1983,
+      "whyThisOne": "A drum machine, a sequencer and a borrowed choir: the best-selling 12-inch ever."
+    },
+    {
+      "title": "Confusion",
+      "year": 1983,
+      "whyThisOne": "Made in New York with Arthur Baker."
+    }
+  ]
+}

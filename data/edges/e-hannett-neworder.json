@@ -1,0 +1,30 @@
+{
+  "id": "e-hannett-neworder",
+  "from": "martin-hannett",
+  "to": "new-order",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1981,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on New Order: Martin Hannett produced their first album, 'Movement' (1981). Peter Hook later said Hannett's main contribution was showing the band how to use a mixing board, which let them produce themselves afterwards.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Joy Division",
+      "title": "Atmosphere",
+      "year": 1980
+    },
+    "later": {
+      "artist": "New Order",
+      "title": "Dreams Never End",
+      "year": 1981
+    },
+    "whatToListenFor": "Hannett's Joy Division records are full of space: drums that sound far away, echoes, a cold, glassy air. 'Movement' still has that sound, and the band had not yet found their own. Listen for Hannett's echo on the drums, and then for how different New Order sounded once they took the controls themselves."
+  },
+  "explanation": {
+    "age13": "Martin Hannett, who had produced Joy Division, also produced New Order's first album in 1981. Peter Hook said the most useful thing Hannett did was teach them how to use the studio's mixing desk.",
+    "adult": "A production edge whose documented effect is a handover: Hannett's lasting contribution, by Hook's account, was making the band able to do without him."
+  },
+  "tags": [
+    "production"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "e-dmx-neworder",
+  "from": "oberheim-dmx",
+  "to": "new-order",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1983,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'Blue Monday': the rhythm was programmed on an Oberheim DMX drum machine, with a Moog Source for the bass line, synchronised by a circuit Bernard Sumner built because MIDI did not yet exist.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Oberheim DMX",
+      "title": "as sold",
+      "year": 1981,
+      "search": false
+    },
+    "later": {
+      "artist": "New Order",
+      "title": "Blue Monday",
+      "year": 1983
+    },
+    "whatToListenFor": "The famous opening is the DMX on its own: a kick drum firing in a stuttering sixteenth-note burst, then settling into a steady beat. Listen for how mechanical and exact it is, and how it keeps going unchanged under everything else. That opening is why DJs played it."
+  },
+  "explanation": {
+    "age13": "'Blue Monday' starts with a drum machine, an Oberheim DMX, playing a fast, stuttering kick drum. Bernard Sumner built his own gadget to keep it in time with the synthesizers, because the standard way of connecting them didn't exist yet.",
+    "adult": "A technological edge with a specific, well-known sound attached. The home-made sync circuit is part of the story: it is what a band had to build to make machines play together before MIDI."
+  },
+  "tags": [
+    "technology"
+  ]
+}
