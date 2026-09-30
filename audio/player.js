@@ -6,15 +6,16 @@
 //   ab             two versions, each its own pattern
 //   pattern        one pattern, and versions that play its steps in a new
 //                  order (a chop)
-//   fx-chain       one pattern, dry or sent through an effect chain
+//   fx-chain       one pattern, and versions that switch effects in and out
+//                  (a send or an insert, audio/fx.js)
 //
 // A switch between patterns or orders lands on the next bar. A switch in
-// or out of an effect is immediate, as an engineer throws a send, and the
-// effect's tail rings on.
+// or out of an effect is immediate, as an engineer throws a send or a
+// guitarist steps on a pedal, and an echo's tail rings on.
 //
-// Signal path: each machine's AudioWorkletNode -> bus -> this demo's
-// gain, set to the demo's safety.maxGain -> the engine's master input.
-// An fx-chain demo also sends the bus through its chain into that gain.
+// Signal path: each machine's node -> bus -> (an fx-chain demo's chain)
+// -> this demo's gain, set to the demo's safety.maxGain -> the engine's
+// master input.
 //
 // Nothing is created until start() or a pad press, and both go through
 // engine.start(), which a press is always behind.
@@ -31,8 +32,8 @@ const RAMP_S = CONFIG.audio.master.rampS;
 const RELEASE_MS = CONFIG.audio.player.releaseMs;
 
 // The versions a reader can switch between, in order: { key, label,
-// pattern, order, wet }. `order` maps each step to the source step it
-// plays (0-based, null for silence); `wet` sends through the chain.
+// pattern, order, fx }. `order` maps each step to the source step it
+// plays (0-based, null for silence); `fx` lists the effects engaged.
 export function demoVersions(demo) {
   const params = demo.params;
   const parse = (raw) => (raw ? parsePattern(raw).pattern : null);
@@ -49,10 +50,7 @@ export function demoVersions(demo) {
     }));
   }
   if (demo.kind === 'fx-chain') {
-    return [
-      { key: 'dry', label: params.dry.label, pattern, wet: false },
-      { key: 'wet', label: params.wet.label, pattern, wet: true },
-    ];
+    return params.versions.map((v, i) => ({ key: `v${i}`, label: v.label, pattern, fx: v.fx }));
   }
   return [{ key: 'a', label: null, pattern }];
 }
@@ -80,7 +78,6 @@ export function createPlayer(engine, demo) {
   let out = null;
   let bus = null;
   let chain = null;
-  let send = null;
   const nodes = new Map(); // machineId -> AudioWorkletNode
   let scheduler = null;
   let side = versions[0].key;
@@ -120,21 +117,23 @@ export function createPlayer(engine, demo) {
         out.gain.value = demo.safety.maxGain;
         out.connect(engine.input);
         bus = ctx.createGain();
-        bus.connect(out);
         if (params.chain) {
-          chain = buildChain(ctx, params.chain, versions[0].pattern.bpm, RAMP_S);
-          send = ctx.createGain();
-          send.gain.value = byKey.get(side).wet ? 1 : 0;
-          bus.connect(send).connect(chain.input);
+          chain = buildChain(ctx, params.chain, versions[0].pattern.bpm, RAMP_S, params.route);
+          bus.connect(chain.input);
           chain.output.connect(out);
+          chain.engage(byKey.get(side).fx);
           for (const [target, value] of values) chain.set(target, value);
+        } else {
+          bus.connect(out);
         }
         for (const id of machineIds) {
           const inst = INSTRUMENTS[id];
           const node = inst.worklet
-            ? new AudioWorkletNode(ctx, inst.worklet, { numberOfInputs: 0, outputChannelCount: [1] })
+            ? new AudioWorkletNode(ctx, inst.worklet, { numberOfInputs: 0, outputChannelCount: [1], processorOptions: inst.options })
             : createVoice(ctx, inst.voice);
-          node.connect(bus);
+          // An fx-chain demo's `through` names the instruments that go
+          // through the chain; the rest go straight out.
+          node.connect(!params.through || params.through.includes(id) ? bus : out);
           nodes.set(id, node);
           applyVoiceParams(id);
         }
@@ -159,7 +158,8 @@ export function createPlayer(engine, demo) {
     for (const [machineId, part] of src === null ? [] : Object.entries(pattern.parts)) {
       const node = nodes.get(machineId);
       if (INSTRUMENTS[machineId].kind === 'voice') {
-        for (const ev of eventsForStep(part, src, time, stepDur)) node.port.postMessage(ev);
+        const chord = part[src].c;
+        for (const ev of eventsForStep(part, src, time, stepDur)) node.port.postMessage(chord && ev.gate ? { ...ev, chord } : ev);
       } else {
         for (const [lane, steps] of Object.entries(part)) {
           const hit = steps[src];
@@ -233,7 +233,7 @@ export function createPlayer(engine, demo) {
       if (!byKey.has(next)) return;
       if (params.chain) {
         side = next;
-        send?.gain.setTargetAtTime(byKey.get(next).wet ? 1 : 0, ctx.currentTime, RAMP_S);
+        chain?.engage(byKey.get(next).fx);
         return;
       }
       if (scheduler?.playing) {
@@ -253,7 +253,7 @@ export function createPlayer(engine, demo) {
       stepListeners.clear();
       if (!ctx) return;
       out.gain.setTargetAtTime(0, ctx.currentTime, RAMP_S);
-      const toRelease = [...nodes.values(), bus, send, out].filter(Boolean);
+      const toRelease = [...nodes.values(), bus, out].filter(Boolean);
       const chainToRelease = chain;
       setTimeout(() => {
         toRelease.forEach((n) => n.disconnect());

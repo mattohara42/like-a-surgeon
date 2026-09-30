@@ -448,11 +448,41 @@ export const CONFIG = {
         wowHz: 0.6,
         wowDepthS: 0.0012,
       },
+      // A transistor fuzz: drive into an asymmetric tanh, then a tone
+      // low-pass. The asymmetry is what gives it the rasp.
+      fuzz: {
+        driveDb: { min: 0, max: 48 },
+        toneHz: { min: 500, max: 8000 },
+        outDb: { min: -36, max: 6 },
+        bias: 0.25,
+        dcCutHz: 30,
+      },
+      // A slashed speaker cone into an overdriven amp: the sound driven
+      // into a softer tanh, plus a rattle that is the signal multiplied
+      // by noise, band-passed, so it crackles only as loud as the chord.
+      tornSpeaker: {
+        driveDb: { min: 0, max: 36 },
+        rattleHz: { min: 500, max: 6000 },
+        rattleDb: { min: -36, max: 12 },
+        outDb: { min: -36, max: 6 },
+        rattleQ: 0.8,
+        coneLowpassHz: 4500,
+      },
+      // The crusher worklet's settings (dsp.CRUSHER holds its limits).
+      crusher: {
+        rateHz: { min: 1000, max: 48000 },
+        bits: { min: 4, max: 16 },
+      },
+      // One period of white noise, looped, for effects that need noise.
+      noiseSeconds: 1,
     },
 
     // A demo's on-screen keyboard (reading/demoBlock.js): at most this many
     // keys, so it fits the panel.
     keys: { max: 25 },
+    // A pattern part's chord: the widest step above its note, in
+    // semitones.
+    chord: { maxInterval: 24 },
 
     // Voices built from native nodes (audio/voices.js), driven by the same
     // note messages as the 303. Every time constant is in seconds.
@@ -484,27 +514,16 @@ export const CONFIG = {
         accentGain: 1.35,
         notes: { min: 24, max: 72 },
       },
-      // Karplus-Strong: a short burst of noise circulating in a delay the
-      // length of one period, losing a little treble on every pass. A
-      // delay inside a feedback loop cannot be shorter than one render
-      // quantum (128 samples), and the loop itself adds one more, so a
-      // period cannot be shorter than 256 samples: about 172 Hz at
-      // 44.1 kHz (measured, A279). notes.max (E3) stays below that, which
-      // is enough for a bass and too little for a guitar.
-      pluck: {
-        loopLowpassHz: 3200,
-        // Q in dB. Below about -3 dB the low-pass has no bump, so no
-        // frequency gains on a pass round the loop.
-        loopQDb: -6,
-        exciteLowpassHz: 1800,
-        accentExciteLowpassHz: 3200,
-        // Time for a sustained note to fall by 60 dB.
-        t60S: 2.2,
-        toneHz: 1400,
-        level: 0.7,
-        releaseS: 0.04,
-        glideS: 0.03,
-        notes: { min: 28, max: 52 },
+      // Plucked strings on the string worklet (dsp.STRING). `string` is
+      // passed to it as processorOptions: seconds to fall 60 dB, the
+      // pluck's brightness (plain and accented), the output tone, level.
+      electricBass: {
+        notes: { min: 28, max: 60 },
+        string: { t60S: 2.2, exciteHz: 1800, accentExciteHz: 3200, toneHz: 1400, level: 0.7 },
+      },
+      electricGuitar: {
+        notes: { min: 40, max: 84 },
+        string: { t60S: 3, exciteHz: 3500, accentExciteHz: 6000, toneHz: 5000, level: 0.5 },
       },
     },
 
@@ -590,6 +609,23 @@ export const CONFIG = {
           cy: { decayMinMs: 300, decayMaxMs: 1500, decayDefaultMs: 700, hpHz: 3000 },
           ma: { decayMs: 20, bpHz: 6000 },
         },
+      },
+      // Lineage's own worklets (A280), not SQUELCH's.
+      CRUSHER: { RATE_MIN_HZ: 1000, RATE_MAX_HZ: 96000, BITS_MIN: 2, BITS_MAX: 24 },
+      STRING: {
+        // The lowest pitch the delay line is sized for, and the most
+        // strings one note message can pluck at once (a chord).
+        MIN_HZ: 30,
+        MAX_STRINGS: 3,
+        // Defaults; each instrument overrides them in processorOptions
+        // (audio/instruments.js).
+        T60_S: 2,
+        EXCITE_HZ: 2000,
+        ACCENT_EXCITE_HZ: 4000,
+        TONE_HZ: 5000,
+        LEVEL: 0.5,
+        GLIDE_S: 0.03,
+        RELEASE_S: 0.03,
       },
       DRUM909: {
         ACCENT_BOOST_GAIN: 0.8,

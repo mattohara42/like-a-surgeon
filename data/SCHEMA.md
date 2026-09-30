@@ -233,8 +233,9 @@ machine-voice params:
 ```
 machine     a machine id that has a player (audio/instruments.js): the
             drum machines tr-808 and tr-909; the voices tb-303,
-            minimoog, dubreq-stylophone, and electric-bass (a stand-in
-            with no machine record). Each voice has its own note range.
+            minimoog, dubreq-stylophone, and electric-bass and
+            electric-guitar (stand-ins with no machine record). Each voice
+            has its own note range.
 pads        drum machines only, optional: lanes to show as buttons, e.g.
             ["bd", "sd", "cp"]
 controls    optional: [{ target, min, max, default }]. target is
@@ -267,16 +268,28 @@ controls    optional, as machine-voice, targeting any drum lane in the
             pattern
 ```
 
-fx-chain params (the effect is a send: the dry sound never changes, and
-switching the effect in or out is immediate, so its tail rings on):
+fx-chain params (switching an effect in or out is immediate, so an
+echo's tail rings on):
 
 ```
 pattern     one pattern
-dry, wet    each { label (register object) }
+route       "send": the dry sound always plays and the chain is added
+            beside it, as a dub engineer sends to an echo. "insert": the
+            sound passes through the chain, and each effect is switched in
+            or bypassed on its own, as a pedal is.
+through     optional: the instruments in the pattern that go through the
+            chain. The rest go straight out. Default: all of them.
 chain       effects in order, each { fx, ...settings in real units }
-            (audio/fx.js). "tape-echo": steps (1 to 8, the delay time in
-            sixteenth-notes), lowCutHz (into the echo), highCutHz (in its
-            feedback loop). Each effect may appear once.
+            (audio/fx.js). Each effect may appear once.
+              "tape-echo"     steps (1 to 8, the delay in sixteenth-notes),
+                              lowCutHz (into the echo), highCutHz (in its
+                              feedback loop)
+              "fuzz"          driveDb, toneHz, outDb
+              "torn-speaker"  driveDb, rattleHz, rattleDb, outDb
+              "crusher"       rateHz, bits (a whole number)
+versions    two or more { label (register object), fx: [effect ids] }.
+            fx: [] is the plain sound. On a send, a version engages the
+            whole chain or none of it.
 controls    optional, as machine-voice. Targets are "fx.knob"
             ("tape-echo.feedback", "tape-echo.level") or a drum lane knob.
 ```
@@ -289,10 +302,13 @@ steps       16 (the scheduler loops at that length)
 parts       { machineId: part }
   drum part     { lane: "x...X..." }  one character per step:
                 "." rest, "x" hit, "X" accented hit
-  voice part    { notes: [45, null, ...], accent: "X...", slide: "..s." }
+  voice part    { notes: [45, null, ...], accent: "X...", slide: "..s.",
+                  chord: [0, 7, 12] }
                 one MIDI note (in the voice's range) or null per step. A
                 slide on step N glides into step N+1. A rest cannot carry
-                either flag.
+                either flag. `chord`, optional, on a voice that can play
+                one (electric-guitar, up to three notes): semitones above
+                every note, sounded together.
 ```
 
 Patterns and melodies here are original unless the demo says otherwise.

@@ -1,5 +1,7 @@
 // Voices built from native Web Audio nodes (docs/m4-architecture.md
-// section 2), for the instruments no SQUELCH worklet covers.
+// section 2), for the instruments no worklet covers. The plucked string
+// started here and moved to a worklet (audio/worklets/string.proc.js,
+// A280), because a native feedback loop cannot hold a guitar's pitch.
 //
 // Each voice takes the same messages as the 303 worklet, so the player
 // and seq303.js drive every voice the same way:
@@ -151,106 +153,7 @@ function monosynth(ctx) {
   });
 }
 
-// ---- Plucked string -----------------------------------------------------
-// Karplus-Strong on native nodes. Each plucked note is its own strand: a
-// burst of noise into a delay one period long, fed back through a
-// low-pass. A new note fades the old strand out, as a bassist's next note
-// stops the last one. A slide retunes the ringing strand instead.
-let noiseBuffer = null;
-
-function pluck(ctx) {
-  const P = V.pluck;
-  if (!noiseBuffer || noiseBuffer.sampleRate !== ctx.sampleRate) {
-    noiseBuffer = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate);
-    const data = noiseBuffer.getChannelData(0);
-    for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
-  }
-  const tone = ctx.createBiquadFilter();
-  tone.type = 'lowpass';
-  tone.frequency.value = P.toneHz;
-  const out = ctx.createGain();
-  out.gain.value = P.level;
-  tone.connect(out);
-  // One render quantum. A DelayNode in a cycle can be no shorter, and
-  // Chromium adds one more to every trip round the loop (measured, A279).
-  const quantumS = 128 / ctx.sampleRate;
-  let strand = null;
-
-  // The delay that, with the loop filter's own delay at this pitch, makes
-  // one pass exactly one period. Also the filter's gain at this pitch, and
-  // its highest gain anywhere, so the loop can be kept below 1 everywhere.
-  function loopDelay(loopLp, freq) {
-    const n = 64;
-    const f = new Float32Array(n);
-    f[0] = freq;
-    for (let i = 1; i < n; i++) f[i] = 20 * Math.pow(ctx.sampleRate / 2 / 20, i / (n - 1));
-    const mag = new Float32Array(n);
-    const phase = new Float32Array(n);
-    loopLp.getFrequencyResponse(f, mag, phase);
-    return {
-      delayS: Math.max(1 / freq + phase[0] / (2 * Math.PI * freq) - quantumS, quantumS),
-      mag: mag[0],
-      maxMag: Math.max(...mag),
-    };
-  }
-
-  function release(s, time, tau) {
-    gateTo(s.gain.gain, 0, time, tau);
-    const ms = (time - ctx.currentTime + tau * 10) * 1000;
-    setTimeout(() => s.nodes.forEach((n) => n.disconnect()), Math.max(0, ms));
-  }
-
-  function newStrand(freq, time, accent) {
-    const burst = ctx.createBufferSource();
-    burst.buffer = noiseBuffer;
-    const excite = ctx.createBiquadFilter();
-    excite.type = 'lowpass';
-    excite.frequency.value = accent ? P.accentExciteLowpassHz : P.exciteLowpassHz;
-    const delay = ctx.createDelay(1);
-    const loopLp = ctx.createBiquadFilter();
-    loopLp.type = 'lowpass';
-    loopLp.frequency.value = P.loopLowpassHz;
-    loopLp.Q.value = P.loopQDb;
-    const { delayS, mag, maxMag } = loopDelay(loopLp, freq);
-    delay.delayTime.value = delayS;
-    const feedback = ctx.createGain();
-    feedback.gain.value = Math.min(Math.pow(10, (-3 / freq) / P.t60S) / mag, 0.999 / maxMag);
-    const gain = ctx.createGain();
-    burst.connect(excite).connect(delay).connect(loopLp).connect(feedback).connect(delay);
-    loopLp.connect(gain).connect(tone);
-    burst.start(time, Math.random() * 0.5, 1 / freq);
-    return { delay, loopLp, gain, nodes: [burst, excite, delay, loopLp, feedback, gain] };
-  }
-
-  return asNode(out, {
-    note(msg) {
-      const t = msg.time;
-      if (!msg.gate) {
-        if (strand) release(strand, t, P.releaseS / 3);
-        strand = null;
-        return;
-      }
-      const freq = midiToFreq(msg.note);
-      if (msg.slide && strand) {
-        strand.delay.delayTime.setTargetAtTime(loopDelay(strand.loopLp, freq).delayS, t, P.glideS / 3);
-        return;
-      }
-      if (strand) release(strand, t, V.gateRampS);
-      strand = newStrand(freq, t, msg.accent);
-    },
-    stop() {
-      if (strand) release(strand, ctx.currentTime, P.releaseS / 3);
-      strand = null;
-    },
-    dispose() {
-      if (strand) strand.nodes.forEach((n) => n.disconnect());
-      strand = null;
-      tone.disconnect();
-    },
-  });
-}
-
-export const VOICES = { stylophone, monosynth, pluck };
+export const VOICES = { stylophone, monosynth };
 
 export function createVoice(ctx, voice) {
   return VOICES[voice](ctx);
