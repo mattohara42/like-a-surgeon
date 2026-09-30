@@ -90,6 +90,8 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   (b) Add an `avant-garde` roots lane, alongside jazz and blues (A224).
   Keeps them visibly separate as a source the pop lineages drew on.
   (c) Leave them in `other`.
+  **Resolved 2026-09-30: (a).** Built (A296): all six records are now
+  `electronic`.
 
 ## Resolved
 
