@@ -1,0 +1,29 @@
+{
+  "id": "e-tonyallen-fela",
+  "from": "tony-allen",
+  "to": "fela-kuti",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1968,
+  "crossLineage": false,
+  "evidence": "Wikipedia's articles on Tony Allen and Fela Kuti: Allen was the drummer and musical director of Africa 70 from 1968 to 1979 and is credited with Fela as co-creator of Afrobeat; Fela's remark that there would be no Afrobeat without Tony Allen is reported in Wikipedia's article on Allen. Allen left in 1979 over royalties, recognition and the band's finances.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Fela Kuti and Africa 70",
+      "title": "Jeun Ko Ku (Chop'n'Quench)",
+      "year": 1971,
+      "search": "Fela Kuti Chop and Quench"
+    },
+    "later": {
+      "artist": "Fela Kuti",
+      "title": "Zombie",
+      "year": 1976
+    },
+    "whatToListenFor": "Listen to the drums alone on either record. The kick, snare, hi-hat and toms each play their own pattern, so one drummer sounds like a whole percussion section, and the pattern keeps going for the whole song while everything else comes and goes. On 'Jeun Ko Ku' it is tight and fast; by 'Zombie' it drives a twelve-minute march. That drum language is Tony Allen's invention, and it is the engine of both records."
+  },
+  "explanation": {
+    "age13": "Tony Allen was Fela Kuti's drummer and musical director from 1968 to 1979, and the two of them created Afrobeat together. Fela said that without Tony Allen there would be no Afrobeat. Allen left in 1979 because he felt he was not being paid or credited fairly.",
+    "adult": "An edge from the drummer to the bandleader, drawn that way on purpose: the drum language is Allen's, and histories that credit Afrobeat to Fela alone leave out the person Fela himself credited. The 1979 split over pay and credit is part of the same story."
+  },
+  "tags": []
+}

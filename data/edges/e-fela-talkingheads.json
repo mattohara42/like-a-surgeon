@@ -1,0 +1,29 @@
+{
+  "id": "e-fela-talkingheads",
+  "from": "fela-kuti",
+  "to": "talking-heads",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1980,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Remain in Light': Fela Kuti's album 'Afrodisiac' (1973) became the band's template, and they took up communal, loop-based ways of making music from African practice. Wikipedia's article on Afrobeat notes that Eno and Byrne credit Fela as essential to their work.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Fela Kuti",
+      "title": "Afrodisiac",
+      "year": 1973,
+      "search": "Fela Kuti Afrodisiac"
+    },
+    "later": {
+      "artist": "Talking Heads",
+      "title": "Born Under Punches (The Heat Goes On)",
+      "year": 1980
+    },
+    "whatToListenFor": "On 'Afrodisiac', guitars, bass, horns and drums each play a short part over and over, and the song is the way they fit together. 'Born Under Punches' does the same with a New York art-rock band: several small guitar and keyboard parts, each simple, locked together into one moving pattern. Listen for how no single instrument carries the tune. That is the Afrobeat method, borrowed."
+  },
+  "explanation": {
+    "age13": "Talking Heads used Fela Kuti's 1973 album 'Afrodisiac' as their model for 'Remain in Light'. Like Fela's band, they built songs out of many small parts played over and over, fitting together like gears.",
+    "adult": "Pairs with e-eno-talkingheads. The loop method credited to Eno's production has a source, and it is a Lagos bandleader. The credit dispute on 'Remain in Light', which was about who counts as the author of group-built music, is sharper once you know the model was someone else's band."
+  },
+  "tags": []
+}
