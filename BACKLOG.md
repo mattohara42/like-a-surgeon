@@ -229,6 +229,18 @@ correct response to a good idea arriving mid-milestone.
 
 ## Observed problems
 
+- **Demo peaks cluster just under the safety knee, whatever their cap
+  (A280).** Four of the nine playable demos (tape echo, synth bass,
+  distortion, 808 against 909) peak between 0.37 and 0.395 at their
+  loudest against a 0.4 knee, and the kick-led ones sit at 0.358. Cutting a demo's `safety.maxGain`
+  from 0.6 to 0.55 moved its peak by only about 0.01, because the master
+  limiter holds peaks at roughly the same level. So the per-demo cap is
+  a weak lever, and each new demo tends to land close to the knee.
+  Worth a look as one change: a lower `volumeMaxGain`, or a limiter
+  threshold, set so the loudest demo has real margin. Not changed here,
+  since it moves every demo's level and Matt has been judging them by
+  ear.
+
 - **`e-909-knuckles` may put a 1984 machine in the Warehouse.** The
   edge dates the 909 reaching Knuckles to 1984, names "Warehouse and
   Power Plant DJ sets" as the later track, and ends its listening note

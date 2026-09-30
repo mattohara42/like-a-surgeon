@@ -3224,3 +3224,51 @@ small and worth having in front of Matt alongside everything else here.
     default volume it peaked at 0.064, just over the 0.05 floor, though
     its RMS already matched the other demos. Now 0.082. All seven
     playable demos pass the audio check in dev and from `dist/`.
+
+- **A280. M4 step 5, third PR: a string worklet, a crusher, fuzz and a
+  torn speaker, demos 7 and 8.**
+  - **One plucked string, as a worklet.** `audio/worklets/string.proc.js`
+    is Lineage's own Karplus-Strong string, read at a fractional delay,
+    so any pitch is in tune. The Node test holds E1 to C6 within 5 cents.
+    The native-node version from A279 is gone. `electric-bass` now plays
+    on the worklet too, with a range back up to C4, so there is one
+    string model, not two. A step can carry a `chord` (up to three
+    strings), which is how the guitar plays power chords.
+    `electric-guitar` is, like the bass, a stand-in id with no machine
+    record.
+  - **Crusher.** `crusher.proc.js` samples and holds at `rateHz` and
+    rounds to `bits`, with no smoothing after. The SP-1200 figures were
+    checked against Wikipedia's E-mu SP-1200 article: 26.04 kHz, 12-bit,
+    and a reconstruction filter "deliberately omitted", which is why its
+    images brighten the sound. A first version held its first sample for
+    one frame too few, which the test caught.
+  - **fx-chain now has versions and a route.** Each version lists the
+    effects it switches in (`fx`), and `route` says whether the chain is
+    a send (the dub echo) or an insert (pedals, each bypassed on its
+    own). The dub echo demo moved to this shape unchanged in sound. An
+    optional `through` names the instruments that go through the chain,
+    so the distortion demo's drums stay clean. My first draft passed
+    them through and apologised for it in the note, which was the wrong
+    fix.
+  - **Demo 7, twelve bits, 26,040 times a second**
+    (`e-sp1200-marleymarl`, and the SP-1200 record). An original 909
+    beat, full quality, then through the crusher. Measured over 3 s, the
+    crushed version has 3 dB more energy from 4 to 10 kHz (folded and
+    imaged content) and 2 dB less above 13 kHz. That is small, as the
+    edge text says it should be. The caption tells the reader to listen
+    to the hats and says the effect is slight.
+  - **Demo 8, clean, fuzz, and a slashed speaker** (`e-fuzztone-stones`
+    and `e-elpico-kinks`). An original E power-chord riff. I checked it
+    against the riffs it could be mistaken for: it avoids the whole-step
+    alternation of 'You Really Got Me' and the root, minor third, fourth
+    shape of 'Smoke on the Water'. The fuzz is an asymmetric waveshaper.
+    The torn speaker is a softer waveshaper plus a rattle, which is the
+    signal multiplied by noise and band-passed, so it crackles as loud
+    as the chord and dies with it. The three versions are matched in
+    loudness by measurement, to within 0.4 dB RMS, so the comparison is
+    character, not volume.
+  - **Levels.** The distortion, synth-bass and tape-echo demos now have
+    `maxGain` 0.55. Each peaked between 0.392 and 0.395 before, and now
+    between 0.370 and 0.384. See BACKLOG on why the cap barely moves the
+    peak. All nine playable demos pass the audio check in dev and from
+    `dist/`.
