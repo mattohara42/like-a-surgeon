@@ -10,17 +10,33 @@
   "steps": [
     {
       "nodeId": "tr-808",
+      "framing": {
+        "age13": "Start with a drum machine that failed. The 808 did not sound like a drum kit, so it sold badly and was dropped after about three years. Press play and hear what people did not want.",
+        "adult": "The first failure: an instrument judged on realism, discontinued after roughly three years, and left to the secondhand market."
+      },
       "demoId": "demo-808-voices"
     },
     {
-      "edgeId": "e-808-planetrock"
+      "edgeId": "e-808-planetrock",
+      "framing": {
+        "age13": "On 'Planet Rock' in 1982, the 808's machine sound is not a problem to hide. It is the point.",
+        "adult": "The reframing: the quality that sank the machine in shops becomes the reason to use it."
+      }
     },
     {
       "nodeId": "tb-303",
+      "framing": {
+        "age13": "Roland's second failure was sold as a fake bass player. It was hard to program and did not sound like a bass guitar. Turn its knobs while it plays, which is exactly what nobody at Roland expected.",
+        "adult": "The pattern repeats with the 303: a product that missed its market, a cheap secondhand supply, and a use nobody designed for."
+      },
       "demoId": "demo-303-twist"
     },
     {
-      "edgeId": "e-303-phuture"
+      "edgeId": "e-303-phuture",
+      "framing": {
+        "age13": "In Chicago, Phuture got a secondhand 303 without its manual and turned the knobs while it played. A whole genre is named after the sound that came out.",
+        "adult": "Access by people with no stake in the intended use: the step the whole thread has been building toward."
+      }
     }
   ],
   "outro": {
