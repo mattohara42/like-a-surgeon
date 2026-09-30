@@ -81,6 +81,13 @@
   /* SPEC: edges with a demo get visual emphasis. Brighter at rest than a
      quiet edge, not as bright as a lit one, so its mark can be found. */
   .edge.has-demo:not(.lit):not(.unborn):not(:hover) { opacity: 0.65; }
+  /* A lens (docs/m5-architecture.md section 4, Q36): its edges rest as
+     bright as a demo edge, the rest drop well below a quiet edge, and nodes
+     that touch no lit edge dim. No new colour. */
+  .edge.lens-on:not(.lit):not(.unborn):not(:hover) { opacity: 0.65; }
+  .edge.lens-off:not(.lit):not(.unborn):not(:hover) { opacity: 0.06; }
+  .node.lens-off:not(.selected):not(.touched):not(.unborn),
+  .node-labels.lens-off:not(.selected):not(.touched):not(.unborn) { opacity: 0.3; }
   .edge-gold { pointer-events: none; animation: gold-shimmer 3.2s ease-in-out infinite; }
   @keyframes gold-shimmer {
     0%, 100% { stroke-opacity: 0.18; }
@@ -158,7 +165,9 @@
   .layer-toggle {
     font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--dim); cursor: pointer;
-    background: rgba(140,170,220,0.05); border: 1px solid var(--hairline);
+    /* Dark enough that a node or label passing behind a control does not
+       make it unreadable (A287). The background colour, mostly opaque. */
+    background: rgba(4,6,13,0.78); border: 1px solid var(--hairline);
     border-radius: 999px; padding: 5px 12px;
     transition: color 200ms, border-color 200ms, background 200ms;
   }
@@ -168,7 +177,7 @@
   }
   .layer-toggle:focus-visible { outline: 1px solid rgba(150,180,235,0.7); outline-offset: 3px; }
 
-  #registers, #arrange, #sound {
+  #registers, #arrange, #sound, #lens {
     position: fixed; left: 18px; z-index: 6;
     display: flex; gap: 7px; align-items: center;
   }
@@ -176,6 +185,8 @@
   #arrange { top: 110px; }
   /* Mute and volume (reading/soundControls.js): never under the drawer. */
   #sound { top: 144px; }
+  /* Lenses (reading/lens.js). */
+  #lens { top: 178px; }
   #sound .sound-volume { width: 84px; accent-color: #9fc2ff; }
   #sound .sound-volume:disabled { opacity: 0.35; }
 
@@ -518,6 +529,7 @@
   <div id="registers" role="group"></div>
   <div id="arrange" role="group"></div>
   <div id="sound" role="group"></div>
+  <div id="lens" role="group"></div>
   <div id="search" role="search"></div>
   <div id="goal"><div id="goal-chip" aria-live="polite" hidden></div><div id="thread-chip" hidden></div></div>
   <div id="transport"></div>
