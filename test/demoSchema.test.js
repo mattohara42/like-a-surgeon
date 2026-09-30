@@ -169,3 +169,27 @@ test('fx-chain controls reach effect knobs and drum lanes, nothing else', () => 
 test('an fx-chain demo is dry first, then wet', () => {
   assert.deepStrictEqual(demoVersions(echoDemo([echo])).map((v) => v.wet), [false, true]);
 });
+
+const voiceOn = (machine, part, extra = {}) => ({
+  id: 'demo-n',
+  kind: 'machine-voice',
+  safety: { maxGain: 0.6 },
+  params: { machine, pattern: { bpm: 100, steps: STEPS, parts: { [machine]: part } }, ...extra },
+});
+
+test('native voices play notes in their own range (A279)', () => {
+  assert.deepStrictEqual(checkDemo(voiceOn('electric-bass', { notes: notes(40) })), []);
+  // Above E3 a plucked string on native nodes cannot hold its pitch.
+  const high = checkDemo(voiceOn('electric-bass', { notes: notes(57) }));
+  assert.ok(high.some((e) => e.includes('from 28 to 52')), high.join('\n'));
+  assert.deepStrictEqual(checkDemo(voiceOn('minimoog', { notes: notes(28) }, { controls: [{ target: 'cutoff', min: 0, max: 1, default: 0.3 }] })), []);
+});
+
+test('keys belong to a voice, rise, and stay in its range', () => {
+  const sty = (keys) => checkDemo(voiceOn('dubreq-stylophone', { notes: notes(64) }, { keys }));
+  assert.deepStrictEqual(sty([60, 62, 64]), []);
+  assert.ok(sty([64, 62]).some((e) => e.includes('must rise')));
+  assert.ok(sty([20]).some((e) => e.includes('params.keys[0]')));
+  assert.ok(sty([]).some((e) => e.includes('must list 1 to')));
+  assert.ok(checkDemo(drums({ keys: [60] })).some((e) => e.includes('only a voice has keys')));
+});

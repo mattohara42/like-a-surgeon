@@ -80,6 +80,20 @@ export function checkDemo(demo, checkRegister = () => {}) {
         if (new Set(params.pads).size !== params.pads.length) errors.push('params.pads lists a lane twice');
       }
     }
+    // A keyboard for a voice: the notes to offer as keys, low to high.
+    if (params.keys !== undefined) {
+      const K = CONFIG.audio.keys;
+      if (inst.kind !== 'voice') errors.push('params.keys: only a voice has keys');
+      else if (!Array.isArray(params.keys) || params.keys.length < 1 || params.keys.length > K.max) {
+        errors.push(`params.keys must list 1 to ${K.max} MIDI notes`);
+      } else {
+        params.keys.forEach((n, i) => {
+          if (!Number.isInteger(n) || n < inst.notes.min || n > inst.notes.max) {
+            errors.push(`params.keys[${i}] must be a whole MIDI note from ${inst.notes.min} to ${inst.notes.max}, got ${JSON.stringify(n)}`);
+          } else if (i > 0 && n <= params.keys[i - 1]) errors.push(`params.keys[${i}]: keys must rise from low to high`);
+        });
+      }
+    }
     // Per-lane starting levels, for balancing a kit (A277). A lane's
     // `level` control, if the demo has one, starts from its own default.
     if (params.levels !== undefined) {

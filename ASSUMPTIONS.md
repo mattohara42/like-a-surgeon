@@ -3172,3 +3172,55 @@ small and worth having in front of Matt alongside everything else here.
   - **Not in this PR:** demos 5 and 7 to 11. Each needs a native voice
     or effect that does not exist yet (square and noise voices, bit
     crush, fuzz and rattle, Stylophone, mono synth and plucked bass).
+
+- **A279. M4 step 5, second PR: native voices, a keyboard, demos 9 and
+  11.**
+  - **Voices on native nodes** (`audio/voices.js`). A Stylophone (one
+    square oscillator, gated with no envelope), a mono synth (three
+    detuned sawtooths into two low-passes with a filter envelope and
+    glide) and a plucked string (Karplus-Strong). Each takes the 303
+    worklet's note messages and looks like an AudioWorkletNode from
+    outside, so the player and `seq303.js` drive them unchanged. A voice
+    now has its own note range in `audio/instruments.js`, which the
+    parser checks, in place of the 303's range for everything.
+  - **`electric-bass` is not a machine record.** Every other instrument
+    id is a record on the map. A bass guitar is not one, so this stand-in
+    is named for what it is. If the map ever gets a Fender Precision
+    record, the id should become that record's.
+  - **Measured: Chromium adds one render quantum to a feedback loop.**
+    The first plucked notes came out flat by one 128-sample block: note
+    40 sounded at 66.6 Hz, a period 2.9 ms longer than it should be, on
+    every note. The loop now subtracts that block. With the delay's own
+    128-sample minimum in a cycle, no period can be shorter than 256
+    samples, about 172 Hz at 44.1 kHz. The plucked voice stops at E3
+    (164.8 Hz), which is enough for a bass. Measured after the fix, every
+    note from E1 to E3 sits on its harmonic series within the 1.35 Hz
+    resolution of the check. A guitar needs higher notes, so demo 8
+    will need a string worklet. Firefox and Safari were not measured and
+    may not add the extra block (Q27 has them checked by hand).
+  - **The loop's low-pass had a resonant bump.** A BiquadFilterNode
+    low-pass reads Q in dB, and the default gives a small peak, so the
+    loop gained on each pass near the cutoff and ran away (a peak of
+    2e8 before the safety stage). The loop filter is now flat (-6 dB)
+    and the feedback is capped by the filter's highest gain at any
+    frequency, not only at the note.
+  - **Keys.** A voice demo can offer `keys`, a row of notes held down by
+    pointer or by Space or Enter. A note sounds while held and stops on
+    release. The Stylophone demo has one octave from middle C, chosen to
+    fit the panel. The note says so, since that is not the instrument's
+    own range.
+  - **Demo 9, one voice, a metal pen** (`e-stylophone-bowie` and the
+    Stylophone record). An original melody loop plus the keyboard. The
+    caption describes the instrument from the record and edge text only.
+    A first draft asked the reader to try two keys at once, which a mouse
+    cannot do, so that line went.
+  - **Demo 11, a bass guitar against a synth bass**
+    (`e-minimoog-parliamentfunkadelic`). The same original line and 909
+    drums on both sides. The synth glides on its chromatic walk-down and
+    the plucked string does not. The caption repeats the edge's own facts
+    (Worrell, linked Minimoogs, Collins on drums) and adds none. Its
+    `maxGain` is 0.6, after 0.7 peaked at 0.397 against the 0.4 knee.
+  - **Levels.** The Stylophone voice level went from 0.35 to 0.45: at
+    default volume it peaked at 0.064, just over the 0.05 floor, though
+    its RMS already matched the other demos. Now 0.082. All seven
+    playable demos pass the audio check in dev and from `dist/`.

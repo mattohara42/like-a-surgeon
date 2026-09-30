@@ -231,8 +231,10 @@ note              optional, prose for maintainers: how it is synthesized
 machine-voice params:
 
 ```
-machine     a machine id that has a player: tr-808, tr-909, tb-303
-            (audio/instruments.js)
+machine     a machine id that has a player (audio/instruments.js): the
+            drum machines tr-808 and tr-909; the voices tb-303,
+            minimoog, dubreq-stylophone, and electric-bass (a stand-in
+            with no machine record). Each voice has its own note range.
 pads        drum machines only, optional: lanes to show as buttons, e.g.
             ["bd", "sd", "cp"]
 controls    optional: [{ target, min, max, default }]. target is
@@ -242,6 +244,8 @@ controls    optional: [{ target, min, max, default }]. target is
 levels      drum machines only, optional: { lane: 0..1 } starting level per
             lane, to balance the kit. A lane's level control starts from
             its own default instead.
+keys        voices only, optional: MIDI notes, rising, shown as a keyboard
+            the reader holds down to play (at most 25)
 pattern     optional on a drum machine that has pads, required otherwise
 ```
 
@@ -285,9 +289,10 @@ steps       16 (the scheduler loops at that length)
 parts       { machineId: part }
   drum part     { lane: "x...X..." }  one character per step:
                 "." rest, "x" hit, "X" accented hit
-  303 part      { notes: [45, null, ...], accent: "X...", slide: "..s." }
-                one MIDI note (20 to 72) or null per step. A slide on step
-                N glides into step N+1. A rest cannot carry either flag.
+  voice part    { notes: [45, null, ...], accent: "X...", slide: "..s." }
+                one MIDI note (in the voice's range) or null per step. A
+                slide on step N glides into step N+1. A rest cannot carry
+                either flag.
 ```
 
 Patterns and melodies here are original unless the demo says otherwise.

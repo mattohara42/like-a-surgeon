@@ -108,6 +108,47 @@ export function renderDemoBlock(demo, ctx) {
       )
     : null;
 
+  // Keys: a note sounds while a key is held, by pointer or by Space or
+  // Enter, and stops when it is let go.
+  let keys = null;
+  if (params.keys) {
+    const NAMES = ['C', 'C♯', 'D', 'D♯', 'E', 'F', 'F♯', 'G', 'G♯', 'A', 'A♯', 'B'];
+    const release = (key) => {
+      if (!key.classList.contains('on')) return;
+      key.classList.remove('on');
+      player.keyUp();
+    };
+    const press = (key, note) => {
+      key.parentElement.querySelectorAll('.demo-key.on').forEach((k) => k.classList.remove('on'));
+      key.classList.add('on');
+      guard(player.keyDown(note));
+    };
+    keys = h(
+      'div',
+      { class: 'demo-keys', role: 'group', 'aria-label': pick(COPY.demo.keys, reg) },
+      params.keys.map((note) => {
+        const name = NAMES[note % 12];
+        const key = h('button', { type: 'button', class: `demo-key${name.length > 1 ? ' sharp' : ''}` }, `${name}${Math.floor(note / 12) - 1}`);
+        key.addEventListener('pointerdown', (e) => {
+          key.setPointerCapture?.(e.pointerId);
+          press(key, note);
+        });
+        for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) key.addEventListener(type, () => release(key));
+        key.addEventListener('keydown', (e) => {
+          if ((e.key === ' ' || e.key === 'Enter') && !e.repeat) {
+            e.preventDefault();
+            press(key, note);
+          }
+        });
+        key.addEventListener('keyup', (e) => {
+          if (e.key === ' ' || e.key === 'Enter') release(key);
+        });
+        key.addEventListener('blur', () => release(key));
+        return key;
+      }),
+    );
+  }
+
   // Sliders.
   const controls = (params.controls ?? []).map((c) => {
     const input = h('input', { type: 'range', min: c.min, max: c.max, step: 'any', value: c.default });
@@ -123,6 +164,7 @@ export function renderDemoBlock(demo, ctx) {
     hasLoop ? h('div', { class: 'demo-transport' }, playButton, sides) : null,
     hasLoop ? steps : null,
     pads,
+    keys,
     controls.length ? h('div', { class: 'demo-controls' }, controls) : null,
     h('p', { class: 'demo-caption' }, pick(demo.caption, reg)),
     h('p', { class: 'note' }, pick(COPY.demo.synthesized, reg)),

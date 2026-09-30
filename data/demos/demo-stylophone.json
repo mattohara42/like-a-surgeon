@@ -1,0 +1,28 @@
+{
+  "id": "demo-stylophone",
+  "title": "One voice, a metal pen",
+  "kind": "machine-voice",
+  "params": {
+    "machine": "dubreq-stylophone",
+    "keys": [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72],
+    "pattern": {
+      "bpm": 84,
+      "steps": 16,
+      "parts": {
+        "dubreq-stylophone": {
+          "notes": [64, 64, 67, 67, 71, 71, 69, 67, 64, 64, 62, 62, 60, 60, null, null],
+          "slide": "s.s.s...s.s.ss.."
+        }
+      }
+    },
+    "note": "A square oscillator through a fixed low-pass, switched on and off with no envelope, standing in for the Stylophone's circuit rather than modelling it. The looped melody is original. The keys are one octave from middle C, chosen to fit the panel, not the instrument's own range."
+  },
+  "caption": {
+    "age7": "Press a key and it buzzes. Only one note can play at a time.",
+    "age13": "Hold down a key, or play the loop. The Stylophone plays one note at a time, with a thin, buzzing tone, and you played it by touching a metal pen to a metal keyboard. Bowie wrote 'Space Oddity' around this sound.",
+    "adult": "One oscillator, one note at a time, and no envelope: a note starts when the pen touches a key and stops when it lifts. That is the whole instrument. Bowie used it as a voice in its own right, thin and buzzing, rather than as a stand-in for something fuller."
+  },
+  "safety": {
+    "maxGain": 0.6
+  }
+}

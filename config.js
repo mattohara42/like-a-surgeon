@@ -450,6 +450,64 @@ export const CONFIG = {
       },
     },
 
+    // A demo's on-screen keyboard (reading/demoBlock.js): at most this many
+    // keys, so it fits the panel.
+    keys: { max: 25 },
+
+    // Voices built from native nodes (audio/voices.js), driven by the same
+    // note messages as the 303. Every time constant is in seconds.
+    voices: {
+      // Q in dB for a low-pass meant to be flat, with no resonant bump.
+      flatQDb: -3,
+      // A key press or a note starts and ends over this long, so nothing
+      // clicks.
+      gateRampS: 0.003,
+      // A square oscillator through a fixed low-pass: one note at a time,
+      // switched on and off by the pen, with no envelope beyond that.
+      stylophone: { lowpassHz: 3500, level: 0.45, notes: { min: 45, max: 84 } },
+      // Three sawtooths, slightly detuned, into two low-passes in series
+      // (roughly the slope of a four-pole ladder), with a filter envelope.
+      monosynth: {
+        detuneCents: [-8, 0, 7],
+        oscLevel: 0.22,
+        cutoffHz: { min: 80, max: 4000 },
+        // Resonance 0..1 becomes up to this much peak at the cutoff on the
+        // first filter. A BiquadFilterNode low-pass reads Q in dB.
+        resonanceMaxDb: 12,
+        // How far the envelope opens the filter above the cutoff at full
+        // envelope amount.
+        envOctaves: 4,
+        decayS: { min: 0.05, max: 1.2 },
+        attackS: 0.004,
+        releaseS: 0.06,
+        glideS: 0.04,
+        accentGain: 1.35,
+        notes: { min: 24, max: 72 },
+      },
+      // Karplus-Strong: a short burst of noise circulating in a delay the
+      // length of one period, losing a little treble on every pass. A
+      // delay inside a feedback loop cannot be shorter than one render
+      // quantum (128 samples), and the loop itself adds one more, so a
+      // period cannot be shorter than 256 samples: about 172 Hz at
+      // 44.1 kHz (measured, A279). notes.max (E3) stays below that, which
+      // is enough for a bass and too little for a guitar.
+      pluck: {
+        loopLowpassHz: 3200,
+        // Q in dB. Below about -3 dB the low-pass has no bump, so no
+        // frequency gains on a pass round the loop.
+        loopQDb: -6,
+        exciteLowpassHz: 1800,
+        accentExciteLowpassHz: 3200,
+        // Time for a sustained note to fall by 60 dB.
+        t60S: 2.2,
+        toneHz: 1400,
+        level: 0.7,
+        releaseS: 0.04,
+        glideS: 0.03,
+        notes: { min: 28, max: 52 },
+      },
+    },
+
     // Main-thread 303 values (the worklet's own are under dsp.VOICE303).
     // From SQUELCH: GATE_FRACTION, NOTE_MIN, NOTE_MAX.
     voice303: {

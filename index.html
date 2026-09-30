@@ -317,6 +317,16 @@
   .demo-play:focus-visible, .demo-side:focus-visible, .demo-pad:focus-visible, .demo-control input:focus-visible {
     outline: 1px solid rgba(150,180,235,0.8); outline-offset: 2px;
   }
+  /* A demo's keyboard: one row of keys, held down to sound (demoBlock.js). */
+  .demo-keys { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 3px; margin-bottom: 10px; }
+  .demo-key {
+    font-family: var(--mono); font-size: 10px; color: var(--dim); cursor: pointer;
+    background: rgba(140,170,220,0.10); border: 1px solid rgba(150,180,235,0.25); border-radius: 4px;
+    padding: 18px 0 4px; min-width: 0; touch-action: none; user-select: none;
+  }
+  .demo-key.sharp { background: rgba(10,14,24,0.6); }
+  .demo-key.on { background: rgba(159,194,255,0.45); color: var(--ink); border-color: rgba(159,194,255,0.8); }
+  .demo-key:focus-visible { outline: 1px solid rgba(150,180,235,0.8); outline-offset: 2px; }
   .demo-steps { display: grid; grid-template-columns: repeat(16, 1fr); gap: 3px; margin-bottom: 12px; }
   .demo-step { height: 6px; border-radius: 2px; background: rgba(140,170,220,0.14); }
   .demo-step:nth-child(4n+1) { background: rgba(140,170,220,0.26); }

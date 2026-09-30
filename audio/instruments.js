@@ -4,7 +4,12 @@
 // can check demo files against it in Node.
 //
 // Keyed by machine record id (data/machines/), so a demo names the same
-// thing the map does.
+// thing the map does. The one exception is `electric-bass`, a stand-in
+// voice for an instrument the map has no record for.
+//
+// A voice is either a SQUELCH worklet (`worklet`) or built from native
+// nodes (`voice`, audio/voices.js). A worklet voice's controls go through
+// `toParam` into its own units; a native voice converts them itself.
 
 import { CONFIG } from '../config.js';
 
@@ -16,10 +21,21 @@ const DSP = CONFIG.audio.dsp;
 const LANES_808 = { bd: ['tone', 'decay'], sd: ['tone', 'snappy'], lt: [], mt: [], ht: [], rs: [], cp: [], cb: [], ch: [], oh: ['decay'], cy: ['decay'], ma: [] };
 const LANES_909 = { bd: ['tune', 'attack', 'decay'], sd: ['tune', 'tone', 'snappy'], lt: ['tune', 'decay'], mt: ['tune', 'decay'], ht: ['tune', 'decay'], rs: [], cp: [], ch: [], oh: ['decay'], cc: [], rc: [] };
 
+const VOICES = CONFIG.audio.voices;
+
 export const INSTRUMENTS = {
   'tr-808': { worklet: 'drum808', kind: 'drums', lanes: LANES_808 },
   'tr-909': { worklet: 'drum909', kind: 'drums', lanes: LANES_909 },
-  'tb-303': { worklet: 'voice303', kind: 'voice', params: ['cutoff', 'resonance', 'envMod', 'decay', 'accent'] },
+  'tb-303': {
+    worklet: 'voice303',
+    kind: 'voice',
+    params: ['cutoff', 'resonance', 'envMod', 'decay', 'accent'],
+    notes: { min: CONFIG.audio.voice303.noteMin, max: CONFIG.audio.voice303.noteMax },
+    toParam: (param, value) => voiceParamValue(param, value),
+  },
+  'dubreq-stylophone': { voice: 'stylophone', kind: 'voice', params: [], notes: VOICES.stylophone.notes },
+  minimoog: { voice: 'monosynth', kind: 'voice', params: ['cutoff', 'resonance', 'envMod', 'decay'], notes: VOICES.monosynth.notes },
+  'electric-bass': { voice: 'pluck', kind: 'voice', params: [], notes: VOICES.pluck.notes },
 };
 
 // Every control target a machine accepts: "lane.knob" for drums, the
