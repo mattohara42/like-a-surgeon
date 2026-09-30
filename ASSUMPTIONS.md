@@ -3857,7 +3857,7 @@ small and worth having in front of Matt alongside everything else here.
 
 ## Added with the Seattle batch
 
-- **A305. Sub Pop, the Pixies, Steve Albini and the Melvins.** Three
+- **A305. Sub Pop, Pixies, Steve Albini and the Melvins.** Three
   artists, one label and 6 edges (322 to 328 of 350), giving Nirvana,
   which had only a Bowie cover edge before, its label, its producer
   and its two named influences.
@@ -3875,3 +3875,8 @@ small and worth having in front of Matt alongside everything else here.
     album, so the edge runs forwards in time. The year is from memory
     of the album's release, not a source read in this batch, and the
     crosscheck tool should confirm it.
+  - **"Pixies", not "the Pixies".** The band's name has no article,
+    and Matt asked for it written that way. Prose uses "Pixies" as a
+    plural name ("Pixies formed", "Pixies' 'Surfer Rosa'"), keeping
+    "the Pixies album" only where "the" belongs to "album". The one
+    older line in `nirvana.json` was changed to match.

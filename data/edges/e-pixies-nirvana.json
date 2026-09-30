@@ -6,7 +6,7 @@
   "confidence": "documented",
   "year": 1991,
   "crossLineage": false,
-  "evidence": "Wikipedia's article on 'Smells Like Teen Spirit': Cobain said he was trying to write the ultimate pop song and was trying to rip off the Pixies, naming their soft-loud dynamics. Wikipedia's article on 'Surfer Rosa' reports him saying he had heard songs on it like ones he had written and discarded.",
+  "evidence": "Wikipedia's article on 'Smells Like Teen Spirit': Cobain said he was trying to write the ultimate pop song and was trying to rip off Pixies, naming their soft-loud dynamics. Wikipedia's article on 'Surfer Rosa' reports him saying he had heard songs on it like ones he had written and discarded.",
   "trackPair": {
     "earlier": {
       "artist": "Pixies",
@@ -21,7 +21,7 @@
     "whatToListenFor": "Listen for the volume change. In a Pixies song the verse is quiet, bass and a thin guitar and a muttered vocal, and then the chorus explodes. 'Smells Like Teen Spirit' does exactly this: a quiet, bass-led verse with Cobain half-singing, then the whole band hitting the chorus at full force. Cobain said out loud that this was the part he took."
   },
   "explanation": {
-    "age13": "Kurt Cobain said that when he wrote 'Smells Like Teen Spirit' he was trying to copy the Pixies, especially the way their songs went quiet and then suddenly very loud.",
+    "age13": "Kurt Cobain said that when he wrote 'Smells Like Teen Spirit' he was trying to copy Pixies, especially the way their songs went quiet and then suddenly very loud.",
     "adult": "One of the plainest statements of influence on the whole map, and it describes a technique rather than a mood. It pairs with e-albini-nirvana: Cobain hired the engineer of the Pixies album he admired."
   },
   "tags": []
