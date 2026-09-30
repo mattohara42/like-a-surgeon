@@ -228,6 +228,7 @@ export function renderNodePanel(node, ctx) {
     para(pick(r.blurb, reg)),
     node.startYear === null ? para(pick(COPY.headings.offMap, reg), 'note') : null,
     producerButton(node, ctx),
+    ctx.threadStops ?? null,
     kindSections ? kindSections() : null,
     connectionSections(node, ctx),
   );

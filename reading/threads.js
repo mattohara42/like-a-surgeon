@@ -41,7 +41,8 @@ function saveFinished(finished) {
 // `threads` is data.threads (id -> record). `chipEl` is where the "back to
 // the thread" chip is drawn. The callbacks come from main.js:
 //   open(target)         opens a panel target
-//   renderRecord(target) the node or edge panel for a stop, as a Promise
+//   renderRecord(target, extra) the node or edge panel for a stop, as a
+//                        Promise; `extra` is merged into its context
 //   focusRecord(target)  flies the camera to a node or edge
 //   frame(nodeIds)       frames a set of nodes
 //   setPath(route)       lights the route on the map, or clears it
@@ -188,7 +189,7 @@ export function createThreads(chipEl, { threads, nodesById, edgesById, open, ren
 
     const s = thread.steps[step];
     const heading = `${pick(COPY.threads.stop, ctx.register)} ${step + 1} ${pick(COPY.threads.of, ctx.register)} ${n}`;
-    return renderRecord(recordTarget(s)).then((record) =>
+    return renderRecord(recordTarget(s), { inThread: true }).then((record) =>
       page(
         h('div', { class: 'kicker' }, thread.title),
         h('h2', { class: 'thread-heading' }, heading),
@@ -200,8 +201,37 @@ export function createThreads(chipEl, { threads, nodesById, edgesById, open, ren
     );
   }
 
+  // A small section for a record's own panel: every thread that stops at
+  // it, each opening at that stop. Left out when the panel is already
+  // shown inside a thread.
+  function stopsSection(target, ctx) {
+    const stops = [];
+    for (const t of list) {
+      t.steps.forEach((s, i) => {
+        if ((target.kind === 'node' && s.nodeId === target.id) || (target.kind === 'edge' && s.edgeId === target.id)) {
+          stops.push({ thread: t, step: i });
+        }
+      });
+    }
+    if (!stops.length) return null;
+    return h(
+      'div',
+      { class: 'thread-stops' },
+      h('h3', {}, pick(COPY.threads.partOf, ctx.register)),
+      stops.map(({ thread, step }) =>
+        h(
+          'button',
+          { type: 'button', class: 'link-row', onClick: () => open({ kind: 'thread', id: thread.id, step }) },
+          h('span', { class: 'link-name' }, `${finished.has(thread.id) ? '✓ ' : ''}${thread.title}`),
+          h('span', { class: 'link-meta' }, ` · ${pick(COPY.threads.stop, ctx.register)} ${step + 1} ${pick(COPY.threads.of, ctx.register)} ${thread.steps.length}`),
+        ),
+      ),
+    );
+  }
+
   return {
     list: () => list,
+    stopsSection,
     listButtons,
     render,
     // Camera and route for a thread target, called whenever one is shown.

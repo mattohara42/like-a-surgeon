@@ -84,6 +84,8 @@ export const COPY = {
     backTo: { age13: 'Back to the thread', adult: 'Return to thread' },
     end: { age13: 'End the thread', adult: 'End thread' },
     ended: { age13: 'The end of the thread', adult: 'End of thread' },
+    partOf: { age13: 'Part of a thread', adult: 'In a thread' },
+    searchGroup: { age13: 'Threads', adult: 'Threads' },
   },
 
   welcome: {
