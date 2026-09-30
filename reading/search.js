@@ -113,8 +113,11 @@ function isTyping(el) {
 
 // `yearBounds` is a function because the axis moves when a layer toggle
 // rebuilds the graph (labels reach back to 1953).
-export function createSearch(root, { nodes, yearBounds, onSelectNode, onSelectYear }) {
+export function createSearch(root, { nodes, yearBounds, onSelectNode, onSelectYear, threads = () => [], onSelectThread }) {
   const index = buildSearchIndex(nodes);
+  // Threads match on their title (docs/m5-architecture.md section 3).
+  // `threads` is a function, read when searching.
+  const threadIndex = () => threads().map((t) => ({ thread: t, title: fold(t.title) }));
   let register = CONFIG.reading.defaultRegister;
   let options = []; // [{ el, select }]
   let active = -1;
@@ -205,6 +208,22 @@ export function createSearch(root, { nodes, yearBounds, onSelectNode, onSelectYe
           () => onSelectYear(res.year),
         ),
       );
+    }
+    const typedNow = fold(input.value);
+    const threadHits =
+      typedNow.length >= CONFIG.search.minQueryLength
+        ? threadIndex().filter((t) => matchRank(t.title, typedNow) !== null).map((t) => t.thread)
+        : [];
+    if (threadHits.length) {
+      parts.push(h('div', { class: 'search-group', role: 'presentation' }, pick(COPY.threads.searchGroup, register)));
+      for (const t of threadHits) {
+        parts.push(
+          option(
+            [h('span', { class: 'search-name' }, t.title), h('span', { class: 'search-meta' }, `${t.steps.length} ${pick(COPY.threads.stops, register)}`)],
+            () => onSelectThread(t.id),
+          ),
+        );
+      }
     }
     if (res.names.length) {
       parts.push(h('div', { class: 'search-group', role: 'presentation' }, pick(COPY.search.names, register)));

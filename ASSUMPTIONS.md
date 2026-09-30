@@ -3377,3 +3377,16 @@ small and worth having in front of Matt alongside everything else here.
     Delay Line from intro to outro by button and by arrow key, wandering
     off through a link and back through the chip, finishing (stored as
     finished), and ending from the chip. No page errors.
+
+- **A285. M5 step 4: threads are found from records and from search.**
+  - **A record's panel** lists every thread that stops at it, under "Part
+    of a thread", each opening at that stop ("The Delay Line · Stop 1 of
+    4"). It sits under the hook, where a reader looks first. It is left
+    out when the record is shown as a thread's own stop, so a stop never
+    offers to open itself.
+  - **Search** finds threads by title, in a "Threads" group above names.
+    Choosing one opens its intro. It lists only threads whose every stop
+    is on the map, the same list the welcome card uses.
+  - **Checked in the browser:** "delay" finds the Delay Line; King Tubby's
+    panel offers stop 1 and opens it; the thread walk from A284 still
+    passes.

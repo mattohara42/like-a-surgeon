@@ -107,6 +107,14 @@ async function main() {
     yearBounds: () => graph.yearBounds(),
     onSelectNode: (id) => goNode(id),
     onSelectYear: (year) => graph.focusYear(year),
+    // A function: the thread player is created further down, and it
+    // decides which threads are complete enough to offer.
+    threads: () => threads.list(),
+    onSelectThread: (id) => {
+      const target = { kind: 'thread', id, step: -1 };
+      panel.open(target);
+      focusTarget(target);
+    },
   });
 
   // Follow the producer: everyone a record's production edges reach, plus
@@ -173,7 +181,7 @@ async function main() {
       panel.open(target);
       focusTarget(target);
     },
-    renderRecord: (target) => renderRecord(target),
+    renderRecord: (target, extra) => renderRecord(target, extra),
     focusRecord: (target) => focusTarget(target),
     frame: (ids) => graph.frameNodes(ids),
     setPath: (route) => graph?.setPath(route),
@@ -195,17 +203,20 @@ async function main() {
   // The map holds only the skeleton of each record (render/loader.js). A
   // panel loads the full record, then draws it over the skeleton so the
   // resolved from/to nodes and normalized years stay as the map has them.
-  function renderRecord(target) {
+  function renderRecord(target, extra = {}) {
+    const ctx = { ...panelContext(), ...extra };
+    // Every thread that stops here, unless this panel is a thread's stop.
+    ctx.threadStops = extra.inThread ? null : threads.stopsSection(target, ctx);
     if (target.kind === 'node') {
       const node = nodesById.get(target.id);
       return loadRecord(SHARD_FOR_KIND[node.kind], node.id).then((raw) =>
-        renderNodePanel({ ...node, raw }, panelContext()),
+        renderNodePanel({ ...node, raw }, ctx),
       );
     }
     const edge = edgesById.get(target.id);
     welcome.noticeEdge(edge.id);
     return loadRecord('edges', edge.id).then((full) =>
-      renderEdgePanel({ ...full, from: edge.from, to: edge.to }, panelContext()),
+      renderEdgePanel({ ...full, from: edge.from, to: edge.to }, ctx),
     );
   }
 

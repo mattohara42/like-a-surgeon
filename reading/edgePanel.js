@@ -57,6 +57,7 @@ export function renderEdgePanel(edge, ctx) {
       h('span', { class: `tier tier-${edge.confidence}` }, tierSwatch(edge.confidence), pick(tier?.name, reg)),
     ),
     h('p', { class: 'hook' }, pick(edge.explanation, reg)),
+    ctx.threadStops ?? null,
 
     tp
       ? [
