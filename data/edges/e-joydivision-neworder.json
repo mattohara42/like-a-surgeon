@@ -1,0 +1,28 @@
+{
+  "id": "e-joydivision-neworder",
+  "from": "joy-division",
+  "to": "new-order",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1980,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on New Order: formed in 1980 by Bernard Sumner, Peter Hook and Stephen Morris after Ian Curtis's death on 18 May 1980, under a prior agreement to stop using the name Joy Division if any member died or left. Gillian Gilbert joined later that year.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Joy Division",
+      "title": "Love Will Tear Us Apart",
+      "year": 1980
+    },
+    "later": {
+      "artist": "New Order",
+      "title": "Ceremony",
+      "year": 1981
+    },
+    "whatToListenFor": "'Ceremony' was written while Joy Division still existed, and New Order's first single sounds like it: Hook's high, melodic bass, Morris's tight drums, a chiming guitar. Put it next to 'Love Will Tear Us Apart' and you hear the same band with a different singer. Then jump two years to 'Blue Monday' to hear how far the same three people travelled."
+  },
+  "explanation": {
+    "age13": "When Joy Division's singer Ian Curtis died in 1980, the other three members had already agreed to drop the band's name. They carried on as New Order.",
+    "adult": "A continuity edge, the same players under a new name, which matters because the change in sound over the next two years was theirs, not a new band's."
+  },
+  "tags": []
+}

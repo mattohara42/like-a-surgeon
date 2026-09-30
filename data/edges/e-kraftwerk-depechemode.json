@@ -1,0 +1,28 @@
+{
+  "id": "e-kraftwerk-depechemode",
+  "from": "kraftwerk",
+  "to": "depeche-mode",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1981,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Depeche Mode lists Kraftwerk among the synthesizer acts that influenced the band's direction. Held at consensus because the influence is stated generally rather than tied to a specific record or statement cited here.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Kraftwerk",
+      "title": "The Model",
+      "year": 1978
+    },
+    "later": {
+      "artist": "Depeche Mode",
+      "title": "Just Can't Get Enough",
+      "year": 1981
+    },
+    "whatToListenFor": "'The Model' is a pop song made entirely with synthesizers and drum machines, cool and catchy. 'Just Can't Get Enough' takes the same tools and makes them cheerful and bouncy. Listen for how a German idea of electronic pop turned into a British chart hit three years later."
+  },
+  "explanation": {
+    "age13": "Depeche Mode were influenced by Kraftwerk, the German band who made pop music entirely with electronic machines.",
+    "adult": "Held at consensus. It is one of the widest-spread influences on the map, and this edge draws it into British synth-pop."
+  },
+  "tags": []
+}

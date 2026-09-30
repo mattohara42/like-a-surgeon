@@ -3919,3 +3919,25 @@ small and worth having in front of Matt alongside everything else here.
   - **'Train Kept A-Rollin'' was engineered by Sam Phillips at his
     1960s Memphis studio,** not at Sun, so no Sun Records edge was
     drawn.
+
+## Added with the New Order and Depeche Mode batch
+
+- **A308. New Order, Depeche Mode and Mute, and the edge target.**
+  Two artists, one label and 12 edges (338 to 350), which meets the
+  M1 edge target of 350 for the first time. Ten edges come from the
+  new nodes; two close gaps between existing ones from sources read
+  in this session: Hendrix in Little Richard's band (1964 to 1965)
+  and Island releasing Tom Tom Club in the UK.
+  - **Both new bands are in `electronic`.** New Order's significance
+    here is 'Blue Monday' and what it connected, and Depeche Mode is
+    all synthesizers from the start. Joy Division stays in `rock`, so
+    `e-joydivision-neworder` crosses lanes.
+  - **Two consensus edges.** Kraftwerk to Depeche Mode rests on a
+    general list of influences, and Depeche Mode to Detroit techno on
+    the Belleville Three's listening list. Both go no further than the
+    sources.
+  - **Peter Hook's word 'stolen'** is reported from Wikipedia's article
+    on 'Blue Monday', not invented; it is his word, in quotation marks
+    because the source puts it there.
+  - The only remaining unmet M1 target is edges with a demo (18 of
+    30), which is M4 and M5 work rather than Track D.

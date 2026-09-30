@@ -1,0 +1,39 @@
+{
+  "id": "depeche-mode",
+  "name": "Depeche Mode",
+  "sortName": "Depeche Mode",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1980,
+  "activeTo": null,
+  "originCity": "Basildon",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "mute",
+      "from": 1981,
+      "to": null
+    }
+  ],
+  "keyProducers": [
+    "Daniel Miller"
+  ],
+  "hook": "An Essex synth-pop band signed on a handshake, whose records were in the mix Detroit's techno founders grew up on.",
+  "blurb": {
+    "age13": "Depeche Mode formed in Basildon, Essex, in 1980: Dave Gahan, Martin Gore, Andy Fletcher and Vince Clarke. Daniel Miller of Mute Records saw them play in east London and signed them without a written contract. Their first single came out in 1981. Clarke left that year, and Gore became the songwriter. In Detroit, the teenagers who went on to invent techno were listening to Depeche Mode alongside Kraftwerk and funk.",
+    "adult": "Formed in Basildon in 1980; Miller signed them on a verbal agreement after seeing them at the Bridge House in Canning Town, and 'Dreaming of Me' came out in February 1981. Clarke left in November 1981 and formed Yazoo; Gore took over the writing and Alan Wilder joined in 1982. Gore described their aim as soul music played on electronic instruments. Kraftwerk is among their stated influences, and Wikipedia's article on Detroit techno lists them among the records the Belleville Three bonded over."
+  },
+  "signatureTracks": [
+    {
+      "title": "Just Can't Get Enough",
+      "year": 1981,
+      "whyThisOne": "The Vince Clarke-era hit: bright, simple, all synthesizers."
+    },
+    {
+      "title": "Everything Counts",
+      "year": 1983,
+      "whyThisOne": "Gore's writing, with sampled metallic sounds."
+    }
+  ]
+}
