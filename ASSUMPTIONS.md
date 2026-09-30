@@ -3941,3 +3941,14 @@ small and worth having in front of Matt alongside everything else here.
     because the source puts it there.
   - The only remaining unmet M1 target is edges with a demo (18 of
     30), which is M4 and M5 work rather than Track D.
+
+## Added with the Cards design
+
+- **A309. Cards is built outside the milestone order, at Matt's request.**
+  Matt asked for a phone version on 2026-09-30 with the M5 gate still
+  open. BUILD_PLAN says features wait behind gates, so this is logged as
+  a requested exception rather than a new milestone. It gets its own
+  small gate (`docs/cards-architecture.md` section 6) and changes
+  nothing on the map. Matt chose the four options in section 2 of that
+  doc in chat: connection card first, a random well-connected opener,
+  random over every connected record, and no audio yet.
