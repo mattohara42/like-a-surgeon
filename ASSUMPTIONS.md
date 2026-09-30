@@ -3447,3 +3447,27 @@ small and worth having in front of Matt alongside everything else here.
     lights its tagged edges and opens its card, None clears both, a layer
     rebuild keeps the lens and a thread's route, and the lens survives a
     reload.
+
+- **A288. The tag audit: 5 of the 22 untagged edges get a tag.** Tags drive
+  the lenses (A287), so an untagged edge is invisible under all four. Each
+  edge was tagged only where its own text supports it, following the
+  map's existing practice:
+  - **production**, as every other sample edge is: `e-bongoband-nwa` and
+    `e-parliamentfunkadelic-dre`. Also `e-jamesbrown-parliamentfunkadelic`,
+    whose subject is a horn section carrying James Brown's arranging into
+    P-Funk.
+  - **technology**, as the other DJ-technique edges (`e-herc-flash`,
+    `e-flash-theodore`) are: `e-jamesbrown-koolherc`, Herc's two-copy
+    break. Also `e-radiophonic-oram`, whose subject is Oram founding the
+    Workshop's studio and leaving to build her own.
+  - **Left untagged, 17 edges.** These are musician-to-musician influence
+    (Hendrix and Sly into P-Funk, Can into PiL, Neu! and Tangerine Dream
+    into Bowie, and so on), a naming story (`e-bunnylee-scientist`), a
+    polka medley, and the deliberate resemblance edge
+    (`e-tubby-atkins-resemblance`). None of the four tags describes them
+    honestly, so none was forced on. Two were weighed for politics and
+    left out: `e-juicecrew-nas` (rap as a way out of the projects) and
+    `e-sly-parliamentfunkadelic` (an integrated band). Their texts describe
+    social circumstance, not a political act, and the Politics lens
+    should stay as strict as its card says it is. A reader who disagrees
+    has a clear place to change it: the edge's `tags`.
