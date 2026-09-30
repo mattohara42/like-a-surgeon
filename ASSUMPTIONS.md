@@ -3499,3 +3499,27 @@ small and worth having in front of Matt alongside everything else here.
     one room for a decade". Both now match the dates: the Warehouse from
     1977 to late 1982, the drum machine later, at the Power Plant. Nothing
     else in the record changed.
+
+- **A291. Track D: Massive Attack, and the Delay Line reaches Bristol.**
+  SPEC runs the Delay Line "into Bristol". The map now has the step it
+  needs, sourced from Wikipedia's articles on Massive Attack and on 'No
+  Protection'.
+  - **`massive-attack`** (electronic lineage): formed in Bristol in 1988
+    out of the Wild Bunch sound system; 'Blue Lines' (Virgin, 1991)
+    generally considered the first trip-hop album; 'Protection' (1994),
+    'Mezzanine' (1998). Put in the electronic lineage, as the map has no
+    trip-hop lane, which makes its edge from Mad Professor cross-lineage.
+    `labels` and `keyProducers` are empty rather than guessed: Virgin
+    released 'Blue Lines', but nothing checked says for how long.
+  - **`e-madprofessor-massiveattack`** (production, documented, 1995): the
+    band asked Mad Professor for one remix of 'Protection', then widened
+    it to the whole album, released as 'No Protection'. The track pair
+    credits the later record to Massive Attack only: the release's exact
+    joint credit was not checked, and CLAUDE.md forbids inventing one.
+  - **The Delay Line** gains two stops, `e-tubby-madprofessor` and the new
+    edge, and a new outro that no longer says "terminates at PiL".
+  - **Cut before commit:** a clause saying their records "carry reggae
+    and sound system culture into electronic music", which came from a
+    summary rather than a checked sentence, and a framing line calling
+    'No Protection' "one of the best-known albums of the 1990s", which no
+    source here says.
