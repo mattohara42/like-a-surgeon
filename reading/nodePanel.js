@@ -117,10 +117,14 @@ function artistSections(r, ctx) {
   const demo = ctx.demoForNode?.(r.id);
   return [
     demo ? renderDemoBlock(demo, ctx) : null,
-    r.signatureTracks?.length
+    // Q32: a record with fewer tracks than usual says why in
+    // signatureTracksNote (a DJ known for sets, a one-record act), shown
+    // above whatever tracks it has.
+    r.signatureTracks?.length || r.signatureTracksNote
       ? [
           heading('listenTo', reg),
-          r.signatureTracks.map((t) => trackRow(t.title, t.year, t.whyThisOne, signatureQuery(r, t), reg)),
+          para(r.signatureTracksNote),
+          (r.signatureTracks ?? []).map((t) => trackRow(t.title, t.year, t.whyThisOne, signatureQuery(r, t), reg)),
         ]
       : null,
     r.scenes?.length ? [heading('scenes', reg), chipRow(r.scenes.map((id) => nodeRef(id, null, ctx)))] : null,

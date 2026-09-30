@@ -29,6 +29,8 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   Charmels and the Honey Drippers made one record that mattered, and
   Daedelus's likeliest second track cannot be named from a source yet.
   Option (a) would cover them too.
+  **Resolved 2026-09-30: (a).** Built (A295): the seven records carry a
+  note, and the validator's warnings drop from 8 to 1 (Brunswick's year).
 
 - **Q30. A source for the Planet Rock melody.** The A/B demo is to play
   the melody 'Planet Rock' shares with 'Trans-Europe Express' (Q26). I
@@ -77,6 +79,7 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   schema change, and the edge text already says "parody".
   (b) Add `parody` to the edge `type` enum (SCHEMA.md, validator, and the
   renderer's edge styling).
+  **Resolved 2026-09-30: (a).** Keep `cover`. No change.
 - **Q23. Where do the tape and radiophonic pioneers belong now that
   lineages are cheap to add?** Schaeffer, Stockhausen, Oram, Derbyshire,
   and the `paris-musique-concrete` and `bbc-radiophonic-workshop` scenes
