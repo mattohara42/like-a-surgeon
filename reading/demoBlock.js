@@ -29,6 +29,13 @@ function controlLabel(target) {
   return b ? `${LANE_LABELS[a] ?? FX_LABELS[a] ?? a} ${CONTROL_LABELS[b] ?? b}` : capitalise(CONTROL_LABELS[a] ?? a);
 }
 
+// An edge may carry its own demoCaption, so one demo can be reused on edges
+// its own caption does not describe. A copy keeps the demo's id, so the
+// player and the edge pulse (both keyed by id) are unaffected.
+export function withEdgeCaption(demo, edge) {
+  return demo && edge?.demoCaption ? { ...demo, caption: edge.demoCaption } : demo;
+}
+
 export function renderDemoBlock(demo, ctx) {
   const reg = ctx.register;
   const heading = h('h3', {}, pick(COPY.demo.heading, reg));

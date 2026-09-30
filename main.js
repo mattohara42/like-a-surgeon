@@ -24,7 +24,7 @@ import { createWelcome, OPENING_FRAME_IDS } from './reading/welcome.js';
 import { h } from './reading/dom.js';
 import { createEngine } from './audio/engine.js';
 import { createSoundControls } from './reading/soundControls.js';
-import { stopDemo } from './reading/demoBlock.js';
+import { stopDemo, withEdgeCaption } from './reading/demoBlock.js';
 import { createThreads } from './reading/threads.js';
 import { loadLens, saveLens, createLensControl, renderLensCard } from './reading/lens.js';
 
@@ -144,7 +144,7 @@ async function main() {
     demoForNode: (id) => {
       const found = data.edges
         .filter((e) => e.demoId && (e.from.id === id || e.to.id === id))
-        .map((e) => data.demos[e.demoId])
+        .map((e) => withEdgeCaption(data.demos[e.demoId], e))
         .filter(Boolean);
       return found.find((d) => d.status !== 'draft') ?? found[0] ?? null;
     },

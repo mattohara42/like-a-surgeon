@@ -201,6 +201,11 @@ trackPair       { earlier: {artist, title, year, search?},
                 as sold, a practice). The validator rejects anything else.
 explanation     three registers
 demoId          optional
+demoCaption     optional, register object like a demo's caption. Replaces
+                the demo's own caption wherever this edge's demo is shown
+                (the edge panel, and an artist panel that picks this edge's
+                demo). Use it when the demo's caption names another edge's
+                record. Needs a demoId.
 tags            ["production","labels","politics","technology"] for overlays
 ```
 

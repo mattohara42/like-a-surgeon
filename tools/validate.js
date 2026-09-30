@@ -389,6 +389,12 @@ for (const [id, edge] of records.edges) {
     fail(`${where}: illegal confidence tier "${edge.confidence}"`);
   }
   checkDemoId(where, edge.demoId);
+  // An edge's own demoCaption replaces the demo's caption on its panels
+  // (A297), so it needs a demo to caption and the same registers.
+  if (edge.demoCaption !== undefined) {
+    if (edge.demoId === undefined) fail(`${where}: demoCaption without a demoId`);
+    checkRegisterObject(where, 'demoCaption', edge.demoCaption);
+  }
   // trackPair side `search` (Q17, A78): absent means "artist title", a
   // non-empty string replaces the query, false means no link. Anything else
   // would quietly draw a wrong link, so it is a hard error.
