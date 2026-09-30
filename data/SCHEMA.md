@@ -95,6 +95,10 @@ signatureTracks [ { title, year, whyThisOne, search? } ]   2 to 3
               "<artist name> <title>", a string replaces that query, false
               means no link. Use it when the title carries a credit note,
               like "Big Fun (Inner City)".
+signatureTracksNote  optional string (Q32). Why this artist has fewer
+              than two tracks: a DJ known for sets rather than records, or
+              an act with one record that matters here. The panel shows it
+              above the tracks, and the validator then accepts 0 or 1.
 ```
 
 ## machine
