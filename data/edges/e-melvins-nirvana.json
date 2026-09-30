@@ -1,0 +1,28 @@
+{
+  "id": "e-melvins-nirvana",
+  "from": "melvins",
+  "to": "nirvana",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1988,
+  "crossLineage": false,
+  "evidence": "Wikipedia's articles on the Melvins and 'Bleach': Melvins drummer Dale Crover played on Nirvana's ten-song demo of 23 January 1988, and those recordings of 'Floyd the Barber', 'Paper Cuts' and 'Downer' were remixed for 'Bleach' after re-recordings with Chad Channing were abandoned. Buzz Osborne later introduced Cobain and Novoselic to Dave Grohl.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Melvins",
+      "title": "Eye Flys",
+      "year": 1987
+    },
+    "later": {
+      "artist": "Nirvana",
+      "title": "Paper Cuts",
+      "year": 1989
+    },
+    "whatToListenFor": "'Eye Flys' crawls: a riff played so slowly it almost stops, with huge, deliberate drum hits from Dale Crover. 'Paper Cuts' is Nirvana at a similar dragging pace, and the drummer is the same person, Crover, lent to Nirvana for their 1988 demo. Listen for the weight of the drums on both. The edge is audible because it is literally the same drummer."
+  },
+  "explanation": {
+    "age13": "The Melvins came from the same small area of Washington as Kurt Cobain. Their drummer played on Nirvana's first demo, and three of those songs are on Nirvana's first album. Their singer later introduced Nirvana to Dave Grohl.",
+    "adult": "Documented through personnel, which is the strongest kind of edge: Crover is on the record, and Osborne supplied the drummer who played on 'Nevermind'."
+  },
+  "tags": []
+}

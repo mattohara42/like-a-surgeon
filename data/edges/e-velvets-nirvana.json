@@ -1,0 +1,28 @@
+{
+  "id": "e-velvets-nirvana",
+  "from": "the-velvet-underground",
+  "to": "nirvana",
+  "type": "cover",
+  "confidence": "documented",
+  "year": 1991,
+  "crossLineage": false,
+  "evidence": "Nirvana recorded the Velvet Underground's 'Here She Comes Now' (from 'White Light/White Heat', 1968) for the 1991 tribute compilation 'Heaven and Hell: A Tribute to The Velvet Underground', released as a split single with the Melvins' 'Venus in Furs'.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Velvet Underground",
+      "title": "Here She Comes Now",
+      "year": 1968
+    },
+    "later": {
+      "artist": "Nirvana",
+      "title": "Here She Comes Now",
+      "year": 1991
+    },
+    "whatToListenFor": "The Velvet Underground's original is short, quiet and droning, almost a lullaby. Nirvana play it slow and heavy, with thick distorted guitar, and stretch it out. Listen for how the same two chords can go from New York art-rock drone to Seattle sludge. On the other side of the same single, the Melvins played 'Venus in Furs'."
+  },
+  "explanation": {
+    "age13": "In 1991 Nirvana recorded a Velvet Underground song, 'Here She Comes Now', for a tribute album. It came out on a single with the Melvins playing another Velvet Underground song on the other side.",
+    "adult": "A plain cover edge. It is worth having because it puts the Velvets, the Melvins and Nirvana on one record in 1991, the year 'Nevermind' came out."
+  },
+  "tags": []
+}

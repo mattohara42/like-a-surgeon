@@ -1,0 +1,30 @@
+{
+  "id": "e-subpop-nirvana",
+  "from": "sub-pop",
+  "to": "nirvana",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1989,
+  "crossLineage": false,
+  "evidence": "Wikipedia's articles on 'Bleach' and Sub Pop: 'Bleach' was recorded by Jack Endino at Reciprocal Recording in Seattle between December 1988 and January 1989 for $606.17, paid by Jason Everman, and released by Sub Pop on 15 June 1989; it is Sub Pop's best-selling release. The label's Singles Club began in November 1988 with Nirvana's 'Love Buzz'. Geffen bought Nirvana's contract in 1991 for $72,000 plus a share of 'Nevermind', which rescued Sub Pop from near-bankruptcy.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Nirvana",
+      "title": "Love Buzz",
+      "year": 1988
+    },
+    "later": {
+      "artist": "Nirvana",
+      "title": "About a Girl",
+      "year": 1989
+    },
+    "whatToListenFor": "'Love Buzz', the Singles Club's first release, is a cover with a heavy, sludgy guitar and a lot of distortion. 'About a Girl' on 'Bleach' is Cobain writing a Beatles-style pop song under the same thick Seattle guitar sound. Listen for the budget: both were recorded quickly and cheaply, and the rough, thick sound is what Sub Pop sold as a regional style."
+  },
+  "explanation": {
+    "age13": "Sub Pop, a small Seattle label, put out Nirvana's first single in 1988 and first album, 'Bleach', in 1989. The album cost about $600 to record. When Nirvana moved to a big label in 1991, Sub Pop got paid and got a share of 'Nevermind'. That money saved the label.",
+    "adult": "The label edge that runs in both directions financially: Sub Pop made Nirvana's first records cheaply, and Nirvana's sale kept Sub Pop alive. The $606.17 figure is Endino's bill as reported, which is why it is so exact."
+  },
+  "tags": [
+    "labels"
+  ]
+}
