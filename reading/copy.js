@@ -199,6 +199,7 @@ export const COPY = {
     play: { age13: 'Play', adult: 'Play' },
     stop: { age13: 'Stop', adult: 'Stop' },
     pads: { age13: 'Hit one', adult: 'Single hits' },
+    keys: { age13: 'Play it yourself', adult: 'Keyboard' },
     version: { age13: 'Switch between', adult: 'Compare' },
     synthesized: {
       age13: 'Made live in your browser. This is not a recording.',
