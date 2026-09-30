@@ -428,6 +428,34 @@
   }
   #goal-chip { display: flex; align-items: flex-start; gap: 8px; min-width: 0; }
   #goal-chip[hidden] { display: none; }
+  /* A thread in progress, read away from (reading/threads.js). It takes the
+     mission chip's place until the reader goes back or ends the thread. */
+  #thread-chip { display: flex; align-items: center; gap: 6px; }
+  #thread-chip[hidden] { display: none; }
+  #goal:has(#thread-chip:not([hidden])) #goal-chip .goal-text { display: none; }
+  #thread-chip button {
+    font-family: var(--ui); font-size: var(--t-chip); color: var(--ink); cursor: pointer;
+    background: rgba(243,223,166,0.12); border: 1px solid rgba(243,223,166,0.45);
+    border-radius: 999px; padding: 6px 14px;
+  }
+  #thread-chip .thread-end { padding: 6px 10px; }
+  #thread-chip button:hover { border-color: rgba(243,223,166,0.8); }
+  #thread-chip button:focus-visible { outline: 1px solid rgba(243,223,166,0.9); outline-offset: 2px; }
+  /* Thread pages in the drawer. */
+  .thread .thread-heading { font-size: var(--t-track); }
+  .thread .thread-subtitle { color: var(--dim); margin-top: -4px; }
+  .thread .thread-framing { font-family: var(--serif); font-style: italic; color: #f3dfa6; font-size: var(--t-body); line-height: var(--lh-body); }
+  .thread .thread-nav { display: flex; justify-content: space-between; gap: 8px; margin: 12px 0 16px; }
+  .thread .thread-nav button, .thread .thread-again {
+    font-family: var(--ui); font-size: var(--t-chip); color: var(--ink); cursor: pointer;
+    background: rgba(140,170,220,0.08); border: 1px solid rgba(150,180,235,0.3);
+    border-radius: 999px; padding: 6px 16px;
+  }
+  .thread .thread-next { margin-left: auto; border-color: rgba(243,223,166,0.55); }
+  .thread .thread-nav button:focus-visible, .thread .thread-again:focus-visible { outline: 1px solid rgba(150,180,235,0.8); outline-offset: 2px; }
+  .thread .thread-record { border-top: 1px solid rgba(150,180,235,0.15); padding-top: 4px; }
+  .thread .thread-record > .panel-body { padding: 0; }
+  .thread-list { display: grid; gap: 8px; margin-top: 8px; }
 
   #goal .goal-text, #goal .start-here {
     display: inline-block; padding: 5px 14px; border-radius: 999px;
@@ -489,7 +517,7 @@
   <div id="arrange" role="group"></div>
   <div id="sound" role="group"></div>
   <div id="search" role="search"></div>
-  <div id="goal"><div id="goal-chip" aria-live="polite" hidden></div></div>
+  <div id="goal"><div id="goal-chip" aria-live="polite" hidden></div><div id="thread-chip" hidden></div></div>
   <div id="transport"></div>
   <aside id="panel"></aside>
   <div id="legend"></div>

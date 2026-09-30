@@ -330,6 +330,8 @@ export const CONFIG = {
   threads: {
     // Fewer stops than this is a link, not a route.
     minSteps: 3,
+    // Finished threads, remembered per browser like the missions.
+    storageKey: 'lineage.threads',
   },
 
   transport: {
