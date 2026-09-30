@@ -62,6 +62,7 @@ audio/
   kits.js        wraps the 808 and 909 worklets as step-playable instruments
   voice303.js    wraps the 303 worklet: notes, slides, accents, knob params
   fx.js          native-node effects: tape delay, spring reverb, high-pass, fuzz, cone rattle, bit-crush
+  voices.js      native-node voices: Stylophone, mono synth, plucked string (A279)
   player.js      plays one demo: machine-voice and A/B today (A271)
   instruments.js playable machines, their lanes and controls, 0..1 -> worklet units
   pattern.js     the demo pattern format and its parser
@@ -230,9 +231,9 @@ two new ones filled the freed slots.
 | 6 | A funk break straight, then chopped | pattern | `e-winstons-nwa`, `e-winstons-shyfx` | SQUELCH 909 kit playing a break pattern | plays (A278) |
 | 7 | The same loop at full quality and at 12-bit, 26 kHz | ab | `e-sp1200-marleymarl` | native bit-crush and sample-rate reduction | to build |
 | 8 | Clean, then the fuzz box, then the slashed speaker (A/B/C) | fx-chain | `e-fuzztone-stones`, `e-elpico-kinks` | waveshaper; waveshaper plus noise-modulated rattle | to build |
-| 9 | The Stylophone: one voice, a metal pen | machine-voice | `e-stylophone-bowie` | native square oscillator | to build |
+| 9 | The Stylophone: one voice, a metal pen | machine-voice | `e-stylophone-bowie` | native square oscillator | plays (A279) |
 | 10 | Herc's Merry-Go-Round: one break, extended across two copies | pattern | `e-jamesbrown-koolherc` | SQUELCH 909 kit, two decks switched | to build |
-| 11 | A synth bass against an electric bass (original line) | ab | `e-minimoog-parliamentfunkadelic` | native mono synth with a ladder-style filter; plucked-string voice | to build |
+| 11 | A synth bass against an electric bass (original line) | ab | `e-minimoog-parliamentfunkadelic` | native mono synth with a ladder-style filter; plucked-string voice | plays (A279) |
 | - | Planet Rock A/B | ab | `e-kraftwerk-planetrock` | | draft, waits on Q30 |
 
 Considered and not chosen: the Eventide H910 harmoniser (`e-h910-bowie`),
@@ -292,6 +293,10 @@ Each step is one PR, merged before the next starts.
    (the sketch's `technique`, named as SCHEMA.md already had it) and
    `pattern` kinds in the one player, and demos 3, 4 and 6. Demos 5 and
    7 to 11 need new native voices or effects and come next.
+   Second PR built (A279): `voices.js`, an on-screen keyboard, and demos
+   9 and 11. Left: 5, 7, 8 and 10. Demo 8's guitar cannot be the native
+   plucked string, which tops out near 172 Hz, so it needs a string
+   worklet.
 6. Visual feedback on the map (section 6). Built (A273): a pulse per
    bar on the demo's edges, a ♪ mark on every demo edge, and demo edges
    resting brighter than quiet ones.
