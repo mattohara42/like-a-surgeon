@@ -97,6 +97,11 @@ that a kid cannot blow his ears out with.
 **Opened** 2026-09-29. The design goes to `docs/m4-architecture.md` for
 sign-off before any `audio/` code is written, as M1 to M3 did.
 
+**Moved on** 2026-09-30. Matt started M5 with nine playable demos (A278
+to A280), skipping demos 5 and 10 for now. The Planet Rock A/B is still a
+draft (Q30). The by-ear listen, and the Safari and Firefox check (Q27),
+are still to do.
+
 ---
 
 ## M5 — Timeline, threads, overlays
@@ -106,6 +111,10 @@ framing text and audio through-line. The four overlays.
 
 **Gate:** a cold reader can complete a thread start to finish and explain what
 they learned.
+
+**Opened** 2026-09-30. The design is in `docs/m5-architecture.md` for
+sign-off before any code, as M1 to M4 did. Most of the timeline already
+exists, so M5 is mainly the thread player and the lenses.
 
 ---
 
