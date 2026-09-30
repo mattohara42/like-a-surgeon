@@ -1,0 +1,31 @@
+{
+  "id": "e-chess-chuckberry",
+  "from": "chess-records",
+  "to": "chuck-berry",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1955,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on Chuck Berry: in May 1955 Berry went to Chicago, met Muddy Waters, who suggested he contact Leonard Chess, and Chess preferred Berry's version of the country tune 'Ida Red' to his blues material. It was recorded on 21 May 1955 as 'Maybellene', sold over a million copies and reached number one on Billboard's R&B chart.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Bob Wills and His Texas Playboys",
+      "title": "Ida Red",
+      "year": 1938,
+      "search": "Bob Wills Ida Red"
+    },
+    "later": {
+      "artist": "Chuck Berry",
+      "title": "Maybellene",
+      "year": 1955
+    },
+    "whatToListenFor": "'Ida Red' is a western swing fiddle tune, a country dance record. 'Maybellene' keeps its bounce but swaps the fiddle for Berry's electric guitar, adds a pounding backbeat, and fills the verses with a car chase. Listen for the country two-step still underneath a record sold as rhythm and blues, on the label best known for Chicago blues."
+  },
+  "explanation": {
+    "age13": "When Chuck Berry came to Chess Records in 1955, sent there by Muddy Waters, Leonard Chess wasn't very interested in his blues songs. He liked Berry's fast version of an old country song instead. They recorded it as 'Maybellene', and it sold over a million copies.",
+    "adult": "A label decision that pushed a Black guitarist's debut toward a country source, sold on the R&B chart, by a blues label. The year given for the 'Ida Red' side is the Bob Wills recording, which is only one of several versions of a much older tune; which one Berry knew is not documented here."
+  },
+  "tags": [
+    "labels"
+  ]
+}

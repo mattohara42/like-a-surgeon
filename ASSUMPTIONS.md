@@ -3759,3 +3759,30 @@ small and worth having in front of Matt alongside everything else here.
     Wikipedia's article on Young. Both are real quotes reported by a
     secondary source, not ones written here, so rule 1 holds, but a
     primary citation (the 1981 interview) would be better.
+
+## Added with the 1950s batch (Track D, rock spine backwards)
+
+- **A301. The 1950s, which the map claimed and barely had.** Adds
+  Elvis Presley, Muddy Waters, Chuck Berry, Little Richard and the
+  `sun-records` label, with 8 edges (297 to 305 of 350). Muddy Waters
+  is the second node in the blues lane, after Chess. Sources were
+  Wikipedia articles read through a web fetch, as in A298.
+  - **Conduct stated as fact (Q2).** Chuck Berry's 1959 Mann Act arrest
+    and his 1962 to 1963 prison term are in both registers, without
+    adjectives. The Teen text says what the charge was about, as the
+    reading-level rule requires.
+  - **Crudup's royalties are on Elvis's record.** The failed 1968
+    $60,000 agreement and the roughly $10,000 collected by 1971 come
+    from Wikipedia's article on Crudup. They sit in Elvis's adult text
+    because Crudup has no node, and the edge's earlier track is his.
+  - **`e-chess-chuckberry` pairs 'Maybellene' with Bob Wills's 1938
+    'Ida Red'.** That is one recording of a much older tune, and which
+    version Berry knew is not documented. The adult text says so.
+  - **Details removed for lack of a source:** the Beatles'
+    'Long Tall Sally' as a single take, and instrument details on the
+    Berry covers. They may well be right, but none of the sources read
+    for this batch said so.
+  - **Elvis has one edge.** Nothing found documented a specific,
+    datable influence from Presley on another node already on the map
+    well enough to draw. A Presley-to-Beatles edge is the obvious gap,
+    and it needs a first-hand source rather than the famous paraphrases.

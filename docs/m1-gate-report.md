@@ -8,13 +8,13 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 145 | 120 | met |
+| artists | 149 | 120 | met |
 | machines | 32 | 25 | met |
 | scenes | 21 | 20 | met |
-| labels | 32 | 30 | met |
-| edges | 297 | 350 | 85% |
+| labels | 33 | 30 | met |
+| edges | 305 | 350 | 87% |
 | threads | 6 | 5 | met |
-| crossLineageEdges | 118 | 60 | met |
+| crossLineageEdges | 120 | 60 | met |
 | edgesWithDemo | 18 | 30 | 60% |
 
 ## Counts by lineage
@@ -25,36 +25,37 @@ Every node type, since machines, scenes and labels carry a lineage too.
 |---|---:|
 | electronic | 59 |
 | hiphop | 55 |
-| rock | 45 |
+| rock | 49 |
 | funk | 23 |
 | dub | 21 |
 | other | 19 |
 | jazz | 7 |
-| blues | 1 |
+| blues | 2 |
 
 Artists alone:
 
 | lineage | count |
 |---|---:|
 | hiphop | 43 |
+| rock | 33 |
 | electronic | 30 |
-| rock | 30 |
 | funk | 17 |
 | dub | 13 |
 | jazz | 7 |
 | other | 5 |
+| blues | 1 |
 
 ## Counts by edge type
 
 | edge type | count |
 |---|---:|
-| direct | 67 |
+| direct | 69 |
+| label | 50 |
 | technological | 50 |
-| label | 47 |
 | production | 47 |
 | sample | 40 |
 | scene | 32 |
-| cover | 10 |
+| cover | 13 |
 | reaction-against | 3 |
 | rediscovery | 1 |
 
@@ -62,7 +63,7 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 221 |
+| documented | 229 |
 | consensus | 75 |
 | asserted | 1 |
 
@@ -236,126 +237,126 @@ Evidence: The Sex Pistols and the Clash are the two foundational bands of the 19
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 296 edges that carry one.
+Drawn with seed 1 from the 304 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-atkins-ur`
+### 1. `e-publicenemy-rza`
 
-Cybotron, "Clear" (1983) to Underground Resistance, "Death Star" (1992)
+Public Enemy, "Bring the Noise" (1987) to Wu-Tang Clan, "Protect Ya Neck" (1992)
 
-Atkins' record is cool and controlled; UR's is aggressive and stripped of any pop concession. Same machine vocabulary, opposite emotional register and opposite stance toward the music industry.
+'Bring the Noise' stacks dense layers of sirens, horn stabs and vocal snatches on top of each other, chaotic on purpose. 'Protect Ya Neck' takes the same cut-up instinct and strips it back to one or two grimy loops, murky and minimal rather than maximal, RZA's own turn on the same technique.
 
-### 2. `e-kraftwerk-may`
+### 2. `e-tommyboy-bambaataa`
 
-Kraftwerk, "Numbers" (1981) to Rhythim Is Rhythim, "Strings of Life" (1987)
+Afrika Bambaataa & the Soulsonic Force, "Zulu Nation Throwdown" (1980) to Afrika Bambaataa and the Soulsonic Force, "Planet Rock" (1982)
 
-Kraftwerk's rhythm is rigid and repeats without variation. May keeps the rigidity in the drums but layers a string figure that swells and falls, funk phrasing riding on top of a Kraftwerk-style engine.
+Two records by the same crew on two labels. The Winley single is rap over a band track arranged for them, the sound most rap records had after 'Rapper's Delight'. 'Planet Rock' is what happened when the new label paired Bambaataa with a producer: his record collection, Kraftwerk included, rebuilt in a studio around a drum machine. Listen for whose taste is running the record.
 
-### 3. `e-honeydrippers-marleymarl`
+### 3. `e-kraftwerk-joydivision`
 
-The Honey Drippers, "Impeach the President" (1973) to MC Shan, "The Bridge (produced by Marley Marl)" (1986)
+Kraftwerk, "Trans-Europe Express" (1977) to Joy Division, "Isolation" (1980)
 
-The song opens on its drums alone for a few bars: a bouncy kick, a snare with a bright crack, and an open hi-hat that breathes between hits. Then play 'The Bridge'. Marl has lifted that kick and snare and set them against the steady tick of a drum machine's hi-hat. Listen for the two sources side by side: the real drum carrying a room and a tape hiss, the machine's hat perfectly even.
+'Trans-Europe Express' rolls on a steady, metallic, machine-made pulse that never varies. 'Isolation', from 'Closer', is Joy Division at their most mechanical: the drums are fast and even, a synthesiser line runs through it, and the guitar is pushed back. Listen for how little the rhythm moves. That is the part of Kraftwerk a rock band could borrow without owning a sequencer.
 
-### 4. `e-ms10-atkins`
+### 4. `e-hardy-heard`
 
-Korg, "MS-10" (1978) to Cybotron, "Alleys of Your Mind" (1981)
+Ron Hardy, "Music Box DJ sets" (1984) to Mr. Fingers (Larry Heard), "Can You Feel It" (1986)
 
-This is the record the years of learning led to, not a record made on the MS-10. Listen to how much of its character sits in the tone of each synthesized sound rather than in the tune. The notes themselves are simple. The interest is in how each one is shaped: bright or dull, clipped or held. That is the ear of someone who spent years alone with one synthesizer, turning knobs.
+Heard's record is slower and softer than most of what Hardy played, which is itself part of the story: the Music Box could break a record that didn't sound like everything else in the room.
 
-### 5. `e-lamonteyoung-velvets`
+### 5. `e-memphisstax-charmels`
 
-La Monte Young, "Trio for Strings" (1958) to The Velvet Underground, "Venus in Furs" (1967)
+Sam & Dave, "Hold On, I'm Comin'" (1966) to The Charmels, "As Long as I've Got You" (1967)
 
-Young's trio holds single notes for a very long time, so you stop hearing a tune and start hearing the sound itself. On 'Venus in Furs' listen for John Cale's viola: it saws away on one high, scraping drone under the whole song, never really playing a melody. That is the Theatre of Eternal Music's held note, amplified and dropped into a rock song.
+Both records come from the same writing room: Hayes and Porter's melodic instinct and a horn-driven Stax arrangement. Sam & Dave's version is a full-band, up-tempo declaration; the Charmels', a year later, slows the same songwriting team's sensibility into a sadder, sparer piano ballad, the version a producer would later go looking for.
 
-### 6. `e-sherwood-tackhead`
+### 6. `e-beatles-rollingstones`
 
-Sugarhill Gang and the Sugar Hill house band, "The Message" (1982) to Tackhead, "Rebel Discharge Vs Tricky Kid" (1988)
+The Beatles, "I Wanna Be Your Man" (1963) to The Rolling Stones, "I Wanna Be Your Man" (1963)
 
-The same rhythm section: McDonald, Wimbish, and LeBlanc played on Sugar Hill's most famous records. Six years later, under Sherwood's production, the same muscle drives a much darker, dub-industrial sound with none of the earlier records' pop polish.
+The same song by two bands in the same year. The Beatles' version, sung by Ringo, bounces along as cheerful beat music. The Stones' is rougher and faster, with Brian Jones's slide guitar wailing over it. Listen for how the Stones turn a Beatles pop song into something closer to the American R&B they were copying.
 
-### 7. `e-loud-wutang`
+### 7. `e-kevinsaunderson-chezdamier`
 
-Wu-Tang Clan, "Protect Ya Neck" (1992) to GZA, "Liquid Swords" (1995)
+The Music Institute, "Club residencies, 1988-89" (1988) to Chez Damier, "Can You Feel It" (1992)
 
-'Protect Ya Neck' is crowded on purpose: eight rappers take turns on one rough, lo-fi loop, each getting a single verse before the next one cuts in, and the group is the star. 'Liquid Swords' gives one member the whole track, opening on film dialogue and settling into a slow, eerie RZA loop with space around the voice. Same producer, same kung fu film habit, but now a solo record on a different company's label, which is exactly what the Loud deal allowed.
+There is no early Damier record to compare against; the claim here is about proximity, not a specific production choice. 'Can You Feel It' arrived four years after the two men shared a DJ booth, made inside the label Saunderson ran.
 
-### 8. `e-herc-bambaataa`
-
-DJ Kool Herc, "park jams and rec-room parties, the merry-go-round" (1973) to Afrika Bambaataa, "Zulu Nation park jams" (1977)
-
-The format is inherited and the record selection is not. Both are playing breaks to a park, but Herc's crates are funk and soul, and Bambaataa's take the same logic somewhere deliberately strange: a rock record, a TV theme, a German electronic album. Listen for how little the technique has to change to absorb material that sounds nothing like the last thing.
-
-### 9. `e-perry-madprofessor`
-
-Lee "Scratch" Perry, "Black Ark productions" (1976) to Lee "Scratch" Perry & Mad Professor, "Ariwa studio collaborations" (1987)
-
-Perry's original records are raw and cluttered on purpose. The Ariwa collaborations are cleaner and more controlled, Mad Professor's studio discipline audibly reining in Perry's chaos without erasing it.
-
-### 10. `e-hendrix-parliamentfunkadelic`
-
-The Jimi Hendrix Experience, "Machine Gun" (1970) to Funkadelic, "Maggot Brain" (1971)
-
-'Machine Gun', from 'Band of Gypsys', is Hendrix stretching single notes into long, screaming, feedback-drenched lines over a slow groove. 'Maggot Brain' is ten minutes of Eddie Hazel doing the same over a quiet, repeating accompaniment, with long sustained notes that cry and break up. Listen for the guitar held on the edge of feedback. That was Hendrix's sound, and Funkadelic took it into a Black funk band's record.
-
-### 11. `e-honeydrippers-ericbrakim`
+### 8. `e-honeydrippers-ericbrakim`
 
 The Honey Drippers, "Impeach the President" (1973) to Eric B. & Rakim, "Eric B. Is President" (1986)
 
 Listen to the drum intro of 'Impeach the President': a dry, tight kick and snare with a hi-hat, every hit distinct. On 'Eric B. Is President' those drums sit under a rolling bassline and scratches, with very little else on top. The space in the track is what lets Rakim's calm, low delivery come through. He does not have to shout over anything.
 
-### 12. `e-bambaataa-nativetongues`
+### 9. `e-madonna-weirdal`
 
-Afrika Bambaataa & the Soulsonic Force, "Planet Rock" (1982) to Jungle Brothers, "I'll House You" (1988)
+Madonna, "Like a Virgin" (1984) to "Weird Al" Yankovic, "Like a Surgeon" (1985)
 
-'Planet Rock' puts rapping over a Kraftwerk melody and a drum machine, music nobody in the Bronx was supposed to like. 'I'll House You' does the same trick six years later with Chicago and New York house: a four-on-the-floor kick, a house bassline and piano stabs under rapping. Listen for the kick drum. Almost all rap in 1988 swung on a broken beat, and this one runs straight like a dance record. The shared idea is that a rap group can take whatever dance music is around and rap over it.
+Yankovic's band rebuilds the Nile Rodgers-produced disco-pop arrangement closely, down to the vocal phrasing, and swaps the words for a squeamish comedy premise about operating-room anxiety.
 
-### 13. `e-marleymarl-mcshan`
+### 10. `e-daedelus-madlib`
 
-MC Shan, "The Bridge" (1986) to Boogie Down Productions, "The Bridge Is Over" (1987)
+Daedelus, "Experience" (2002) to Madvillain, "Accordion" (2004)
 
-'The Bridge' is a proud, unhurried borough anthem, MC Shan naming names and places over Marl's beat. 'The Bridge Is Over', KRS-One's answer a year later, borrows the same title and subject and turns it into an attack, faster and meaner, ending with a mocking sung outro aimed straight at Shan and Marl. Same beat-and-borough format, opposite intent.
+Listen to 'Experience': a wheezy, reedy melody that really does sound like an accordion, played on a cheap electric chord organ. Madlib loops it and hands it to MF DOOM. Listen for how much of the track's character comes from the choice of loop alone.
 
-### 14. `e-perry-sherwood`
+### 11. `e-808-marleymarl`
 
-Lee "Scratch" Perry, "Black Ark productions" (1976) to African Head Charge, "My Life in a Hole in the Ground" (1981)
+Roland, "TR-808 snare, as synthesised" (1980) to Marley Marl, "The Bridge, produced for MC Shan" (1986)
 
-Both records treat the mix itself as the instrument: sounds appear and vanish, echo is pushed to the point of distortion, and the 'song' is really a shifting arrangement rather than a fixed structure.
+Compare two snares. The 808's is a short burst of noise with a tuned ring under it, always identical, sitting cleanly in its own space. A snare lifted off a record brings the room with it: the drummer's touch, the tape compression, a trace of whatever else was playing at that instant. Listen for that smear of extra information. It is the sound of a recording rather than the sound of a circuit.
 
-### 15. `e-bongoband-herc`
+### 12. `e-simmons-sly`
 
-Incredible Bongo Band, "Apache" (1973) to The Sugarhill Gang, "Apache" (1981)
+Simmons, "SDS-V electronic drums" (1981) to Black Uhuru, "Anthem" (1983)
 
-In the 1973 record, wait for the long passage where the melody drops away and bongos and drums play on their own. It runs far longer than most breaks, which is exactly why a DJ with two copies could stretch it out. Then play the Sugarhill Gang's 1981 'Apache', where a studio band replays the groove under rapping and chants. Listen for how the break has become the song.
+Listen to the drum fills. In places, instead of the round thud of a drum skin, a tom comes out as a short electronic zap that swoops down in pitch. Underneath it, the groove is still Sly's: the kick and snare placed with a reggae drummer's sense of where the beat should sit. The machine sound, played by a human, is the combination to hear.
 
-### 16. `e-herc-flash`
+### 13. `e-mjackson-nas`
 
-DJ Kool Herc, "park jams and rec-room parties, the merry-go-round" (1973) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
+Michael Jackson, "Human Nature" (1982) to Nas, "It Ain't Hard to Tell" (1994)
 
-Listen for precision, because that is the whole difference. Herc's idea is that the break repeats. Flash's contribution is that the repeat lands exactly where the next bar would have started, so the loop is seamless and you stop noticing there are two records. On 'Wheels of Steel' the joins are so tight that the record sounds composed rather than performed, which is the point Flash was chasing.
+Jackson's original glides on a bright, synth-and-guitar hook under a falsetto vocal. Large Professor pulls just that hook, loops it, and drops it under a much harder, dustier drum break, so the same shimmering figure that once sat inside a pop ballad now underlines nineteen-year-old Nas's dense, image-packed verses.
 
-### 17. `e-jamal-nas`
+### 14. `e-lamonteyoung-eno`
 
-Ahmad Jamal, "I Love Music" (1970) to Nas, "The World Is Yours" (1994)
+La Monte Young, "Trio for Strings" (1958) to Brian Eno, "Discreet Music" (1975)
 
-Listen to Jamal's piano: unhurried, with room between the phrases. Pete Rock picks a few notes of it and loops them, so a phrase that drifts in the original circles steadily in the new track. Under Nas's ambition the loop sounds wistful, and Jamal's restraint becomes the song's emotional weight.
+Young's music asks you to listen to one sound for a long time until you notice what is going on inside it. 'Discreet Music' asks the same thing, more gently: one soft phrase, repeating slowly, quiet enough to sit under a room. Listen for how long nothing seems to happen, and then notice how much has changed.
 
-### 18. `e-stockhausen-beatles`
+### 15. `e-marleymarl-lotug`
 
-Karlheinz Stockhausen, "Hymnen" (1967) to The Beatles, "Revolution 9" (1968)
+Marley Marl featuring MC Shan, "Marley Marl Scratch" (1985) to Lords of the Underground, "Lord Jazz Hit Me One Time (Make It Funky)" (1993)
 
-Both pieces are made of fragments that arrive, overlap and vanish: radio noise, snatches of orchestral music, voices. In 'Revolution 9' listen for the loop of a voice repeating 'number nine', the crowd noise, the reversed tape and the stretches where several unrelated recordings play at once. That layering of found sound, with no beat and no tune to hold it together, is the Cologne studio's method in the middle of the best-selling band in the world.
+Here the producer samples himself. 'Marley Marl Scratch' is one of his first records, from before sampling drums was his method. Eight years later a piece of it turns up inside a Lords of the Underground track he produced. Listen for the older record returning as material, and for how it's become a sound source inside a bigger, busier 1993 production built around the group's DJ.
 
-### 19. `e-nypunk-talkingheads`
+### 16. `e-who-sexpistols`
 
-Ramones, "Beat on the Brat" (1976) to Talking Heads, "Psycho Killer" (1977)
+The Who, "Substitute" (1966) to Sex Pistols, "Substitute" (1979)
 
-Talking Heads' first show was opening for the Ramones, and the two bands sound almost nothing alike. 'Beat on the Brat' is loud and blunt. 'Psycho Killer' is clean and tense, with a spare bass line from Tina Weymouth, choppy guitar, and David Byrne singing like someone trying too hard to stay calm. Listen for what they share anyway: short songs, no solos to speak of, nothing wasted.
+The Who's 'Substitute' is driven by a strummed acoustic guitar riff, with the band crashing in around it. The Sex Pistols' version keeps the riff and the tune but plays it as a wall of loud electric guitar at full pressure, and Johnny Rotten sneers the words. Punk bands that claimed to hate the 1960s were still learning from its singles.
 
-### 20. `e-h910-bowie`
+### 17. `e-virgin-tangerinedream`
 
-Eventide, "H910 Harmonizer" (1975) to David Bowie, "Breaking Glass" (1977)
+Tangerine Dream, "Atem" (1973) to Tangerine Dream, "Phaedra" (1974)
 
-Listen only to the snare drum. Each hit is followed by a fast smear that drops in pitch, a thud that seems to fall away underneath itself. The Harmonizer shifted each echo down and fed it back in, so every repeat went lower than the last. On a normal record the snare is the most solid thing in the mix. Here it sounds like it is collapsing.
+Atem, the last album for their German label, is built from long organ and Mellotron sounds that swell and fade. Phaedra, the first for Virgin, was made with the Moog the Virgin advance paid for, in Virgin's own studio. Listen for the change underneath: a repeating electronic pattern that the machine plays by itself, so the music has a pulse without a drummer.
+
+### 18. `e-stonesthrow-dilla`
+
+J Dilla, "Welcome 2 Detroit" (2001) to J Dilla, "Don't Cry" (2006)
+
+'Welcome 2 Detroit' was made as an album of songs. 'Donuts' is something else: 31 instrumentals, most of them about a minute to a minute and a half, starting and stopping abruptly. The last track runs straight back into the first, so the album can loop forever. 'Don't Cry' is one of them. Listen for how short it is, and how it cuts off rather than ending.
+
+### 19. `e-muggs-cypresshill`
+
+House of Pain, "Jump Around" (1992) to Cypress Hill, "Insane in the Brain" (1993)
+
+Two hits a year apart, both built by Muggs around one piercing, pitched squeal that works as the hook. Listen for it first in 'Jump Around', then in 'Insane in the Brain', where it wails over a keyboard riff lifted from Sly and the Family Stone's 'Life' and B-Real's high, nasal voice. The squeal is Muggs's signature, audible across two different groups, and its source is still argued about.
+
+### 20. `e-stones-weirdal`
+
+The Rolling Stones, "(I Can't Get No) Satisfaction" (1965) to "Weird Al" Yankovic, "The Hot Rocks Polka" (1989)
+
+Listen to the 'Satisfaction' riff first, a fuzzed guitar line over a heavy backbeat, then find it in the medley. The polka puts everything on a bouncing two-beat pulse and hands the melody to the accordion, so a riff built around a fuzz pedal has to survive on a squeezebox. The tune survives the move. The tone and the swagger do not, which tells you how much of the Stones' sound lived in the playing rather than the notes.

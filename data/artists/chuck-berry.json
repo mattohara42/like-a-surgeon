@@ -1,0 +1,39 @@
+{
+  "id": "chuck-berry",
+  "name": "Chuck Berry",
+  "sortName": "Berry, Chuck",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1955,
+  "activeTo": 2017,
+  "originCity": "St. Louis, Missouri",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [
+    {
+      "labelId": "chess-records",
+      "from": 1955,
+      "to": 1966
+    }
+  ],
+  "keyProducers": [
+    "Leonard Chess"
+  ],
+  "hook": "The guitarist and songwriter whose Chess singles were the first records the Beatles and the Rolling Stones learned to play.",
+  "blurb": {
+    "age13": "Chuck Berry was born in St. Louis in 1926. In 1955 he went to Chicago, met Muddy Waters, and Muddy told him to go and see Leonard Chess. Chess liked Berry's fast version of an old country song, which became 'Maybellene' and sold over a million copies. Berry's songs about cars, school and dancing, with a sharp, ringing guitar part at the start, were covered by the Beatles and the Rolling Stones. In 1959 he was arrested for taking a 14-year-old girl across state lines, and he was in federal prison from 1962 to 1963.",
+    "adult": "Born in St. Louis in 1926. Muddy Waters referred him to Leonard Chess in May 1955, and 'Maybellene', recorded on 21 May 1955 and adapted from the country fiddle tune 'Ida Red', reached number one on the R&B chart. That a Black guitarist's breakthrough was a reworked country song, pushed by a blues label, says a lot about how mixed the sources of rock and roll were. 'Roll Over Beethoven' (1956), 'Rock and Roll Music' (1957) and 'Johnny B. Goode' (1958) followed. He was arrested under the Mann Act in December 1959 for transporting a 14-year-old girl across state lines, and served about eighteen months in federal prison, from February 1962 to October 1963, the period when British bands were learning his songs. He died in 2017."
+  },
+  "signatureTracks": [
+    {
+      "title": "Maybellene",
+      "year": 1955,
+      "whyThisOne": "A country fiddle tune rebuilt as an R&B hit, on a blues label."
+    },
+    {
+      "title": "Johnny B. Goode",
+      "year": 1958,
+      "whyThisOne": "The opening guitar figure every beginner learns."
+    }
+  ]
+}
