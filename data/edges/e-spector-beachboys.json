@@ -1,0 +1,30 @@
+{
+  "id": "e-spector-beachboys",
+  "from": "phil-spector",
+  "to": "the-beach-boys",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1966,
+  "crossLineage": false,
+  "evidence": "Wikipedia's articles on 'Pet Sounds' and on Spector: Brian Wilson described 'Pet Sounds' as his interpretation of Spector's Wall of Sound and sought to combine instrumental tone colours as Spector did; he called the Beach Boys messengers of Spector's innovations. 'Pet Sounds' was made mostly with the Wrecking Crew, the session players Spector used at Gold Star.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Ronettes",
+      "title": "Be My Baby",
+      "year": 1963
+    },
+    "later": {
+      "artist": "The Beach Boys",
+      "title": "God Only Knows",
+      "year": 1966
+    },
+    "whatToListenFor": "'Be My Baby' opens with a booming drum pattern and then piles everything together: pianos, guitars, strings and castanets blurred into one big roar with echo on top. 'God Only Knows' uses some of the same players but separates what Spector blurred: you can pick out the French horn, the sleigh bells, the harpsichord-like keyboard, and each voice in the harmonies. Listen for the same method, doubling unusual instruments into new colours, used for clarity instead of size."
+  },
+  "explanation": {
+    "age13": "Brian Wilson of the Beach Boys loved Phil Spector's records, especially 'Be My Baby'. He hired the same studio musicians Spector used, and said 'Pet Sounds' was his own version of Spector's Wall of Sound.",
+    "adult": "Documented from Wilson's side, and audible, because the personnel overlap. The edge is the hinge between the single-as-production (Spector) and the album-as-production ('Pet Sounds'), and it leads on to e-beachboys-beatles."
+  },
+  "tags": [
+    "production"
+  ]
+}

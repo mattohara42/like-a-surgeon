@@ -1,0 +1,30 @@
+{
+  "id": "e-spector-beatles",
+  "from": "phil-spector",
+  "to": "the-beatles",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1970,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Spector: after producing John Lennon's 'Instant Karma!' (1970), he was invited to rescue the abandoned 'Get Back' sessions, released as 'Let It Be' (1970). 'The Long and Winding Road' reached number one, and McCartney objected to Spector's overdubs.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Ronettes",
+      "title": "Be My Baby",
+      "year": 1963
+    },
+    "later": {
+      "artist": "The Beatles",
+      "title": "The Long and Winding Road",
+      "year": 1970
+    },
+    "whatToListenFor": "McCartney wrote and recorded 'The Long and Winding Road' as a plain piano ballad. Spector added a full orchestra and a women's choir, the same big, soaked sound as his 1960s singles. Listen for how the strings and voices swell over McCartney's quiet piano, and then find 'Let It Be... Naked' (2003), which strips them off again. The two versions are the argument."
+  },
+  "explanation": {
+    "age13": "When the Beatles gave up on the recordings that became 'Let It Be', Phil Spector was brought in to finish them. He added strings and a choir to 'The Long and Winding Road'. Paul McCartney didn't like it, and years later he released a version without them.",
+    "adult": "A production edge that was contested by the artist, which is the reason it is worth reading. The overdubs are Spector's Wall of Sound applied after the fact to a band that had tried, on these sessions, to record live and unadorned. McCartney's 2003 'Naked' release is his reply on record."
+  },
+  "tags": [
+    "production"
+  ]
+}
