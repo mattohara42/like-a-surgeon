@@ -297,9 +297,16 @@ for (const [id, artist] of records.artists) {
       fail(`${where}: signatureTracks[${i}].search must be a non-empty string or false, got ${JSON.stringify(search)}`);
     }
   }
+  // Q32: fewer than two tracks is fine when signatureTracksNote says why
+  // (a DJ known for sets, a one-record act). The note is reader-facing, so
+  // a present but empty or non-string one is an error.
+  const note = artist.signatureTracksNote;
+  if (note !== undefined && (typeof note !== 'string' || !note.trim())) {
+    fail(`${where}: signatureTracksNote must be a non-empty string, got ${JSON.stringify(note)}`);
+  }
   const trackCount = (artist.signatureTracks || []).length;
-  if (trackCount < 2 || trackCount > 3) {
-    warn(`${where}: signatureTracks has ${trackCount} entries, expected 2 to 3`);
+  if ((trackCount < 2 && note === undefined) || trackCount > 3) {
+    warn(`${where}: signatureTracks has ${trackCount} entries, expected 2 to 3 (or fewer with a signatureTracksNote)`);
   }
 }
 
