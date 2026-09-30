@@ -3647,3 +3647,16 @@ small and worth having in front of Matt alongside everything else here.
     the Charmels the note above their one track, no console errors) and
     in `npm run build`, whose record files carry the field.
   - **Q24 resolved alongside:** Matt kept `cover` for parody, so no change.
+- **A296. Q23 built: the tape and radiophonic pioneers join `electronic`.**
+  Matt chose (a). Pierre Schaeffer, Karlheinz Stockhausen, Daphne Oram,
+  Delia Derbyshire, `paris-musique-concrete` and `bbc-radiophonic-workshop`
+  move from `other` to `electronic`, which supersedes A148. Only the
+  `lineage` field changed. No edge's `crossLineage` flips: the four edges
+  among these six were already same-lineage and stay so, and their two
+  edges out (Stockhausen into the Beatles and into Can) were already
+  cross-lineage and stay so. Q23's text expected edges into Kraftwerk and
+  the Radiophonic successors to become same-lineage. No such edges exist
+  yet, so they are Track D work, and they will be same-lineage when
+  written. Checked in the browser: Schaeffer's panel reads "Artist ·
+  Electronic" and the node sits in the electronic lane, with no console
+  errors.
