@@ -116,6 +116,10 @@ they learned.
 sign-off before any code, as M1 to M4 did. Most of the timeline already
 exists, so M5 is mainly the thread player and the lenses.
 
+**Built** 2026-09-30, steps 1 to 6 (A281 to A288): the receding past, the
+thread player, five launch threads, and the lenses. Waiting on the gate,
+which Matt runs with a cold reader; `docs/m5-gate-notes.md` is the script.
+
 ---
 
 ## M6 — Polish and release

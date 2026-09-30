@@ -178,7 +178,7 @@ Each step is one PR, merged before the next.
    the 22 untagged edges.
    Built (A287), except the tag audit, which is its own data PR.
 7. The gate: a cold reader finishes a thread and explains what they
-   learned. Matt runs it.
+   learned. Matt runs it. Notes for that session: `docs/m5-gate-notes.md`.
 
 ## 7. Questions for Matt (also in QUESTIONS.md)
 
