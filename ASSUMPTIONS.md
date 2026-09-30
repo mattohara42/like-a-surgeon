@@ -3272,3 +3272,23 @@ small and worth having in front of Matt alongside everything else here.
     between 0.370 and 0.384. See BACKLOG on why the cap barely moves the
     peak. All nine playable demos pass the audio check in dev and from
     `dist/`.
+
+- **A281. M5 step 1: the timeline audit.** Checked `render/transport.js`
+  against SPEC's timeline paragraph.
+  - **Fixed: Space and Enter could never start play.** The scrubber's key
+    handler toggled play and then called `stop()` for every key, so a
+    keyboard reader got play for no frames at all. Space and Enter now
+    only toggle, and a held key does not re-toggle. Checked in the
+    browser: Space played from 1954 to 1956 in 1.5 s, and a second Space
+    paused it there.
+  - **Added: Home and End** jump to the first and last year, as a slider
+    does.
+  - **Already met:** drag to scrub, play and pause, arrow keys step one
+    year and Shift+arrow five, and material after the cursor reads as not
+    yet here.
+  - **Not done: receding (Q33).** Measured before building. At the default
+    view, with the cursor at 2026, "more than twenty years behind" covers
+    all 266 edges, and "stopped more than twenty years ago" covers 47 of
+    167 nodes (among them the Kinks, N.W.A and Hendrix). Either rule dims
+    most of the map at rest, which is not the gentle fade Q33 meant. It
+    goes back to Matt (Q38) instead of being built as written.

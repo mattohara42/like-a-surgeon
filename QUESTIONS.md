@@ -4,6 +4,16 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
+- **Q38. Receding, revisited (Q33).** Q33 said material more than about
+  twenty years behind the cursor should fade partway. Measured (A281): the
+  map opens with the cursor at 2026, where that covers every edge on the
+  map and 47 of 167 nodes. So as signed off, the resting map would open
+  dimmed. Options: (a) **Recommended.** The past recedes only while time
+  is moving (playing or scrubbing), and eases back to full a moment after
+  the cursor stops. Play-forward reads as time passing, and the resting
+  map stays whole. (b) Recede by age, but only for nodes whose activity
+  ended (47 at rest), with edges left alone. (c) Drop receding.
+
 - **Q32. Signature tracks for DJs who didn't make records.** The schema
   asks every artist for 2 to 3 signature tracks, and the validator warns
   below that. Kool Herc, Coke La Rock, Grand Wizzard Theodore and Ron
