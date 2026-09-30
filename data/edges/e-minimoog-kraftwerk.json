@@ -26,6 +26,11 @@
     "age13": "Before the Minimoog, a synthesizer was a wall of modules joined by cables and you needed to understand it before you could get a sound out. Moog wired the useful parts together permanently and put a keyboard on the front, so a musician could just buy one and play it. Kraftwerk used it for the bass on 'Autobahn', and the fact that every note is identical is the point rather than a problem.",
     "adult": "Hardwiring the signal path traded the modular system's open-endedness for immediacy, and immediacy is what opened synthesis to musicians without technical training. Kraftwerk's use is the interesting case because they treated the machine's inhumanity as content rather than as something to disguise, which is the position most electronic music takes from here on."
   },
+  "demoId": "demo-synth-bass",
+  "demoCaption": {
+    "age13": "Same notes, same drums. A sounds like a plucked string, so each note starts loud and dies away. B is a synthesizer, and every note starts the same way and holds its level for as long as it is held. Kraftwerk played the bass on 'Autobahn' on a Minimoog, and that sameness is what you are meant to hear.",
+    "adult": "Only the instrument changes between A and B. The plucked string decays from the moment it is struck. The synth holds its level and repeats the same attack on every note. That evenness, a bassline with no hand in it, is what the edge into 'Autobahn' is about. The bassline here is original, not the 'Autobahn' part."
+  },
   "tags": [
     "technology"
   ]

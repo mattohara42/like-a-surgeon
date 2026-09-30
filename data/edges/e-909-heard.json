@@ -26,6 +26,11 @@
     "age13": "Larry Heard's drum machine was a Roland 909, the same model that reached Frankie Knuckles from Detroit that same year. On 'Washing Machine' the 909 is almost the whole song. Comparing it with 'Can You Feel It' shows how one small setup could make very different records.",
     "adult": "Two Chicago edges from the 909 in the same year, Knuckles and Heard, show the machine arriving by different routes: a DJ's live tool in one case and a bedroom composer's instrument in the other. That pairing is part of why house has both a club lineage and an introspective one."
   },
+  "demoId": "demo-808-909-kick",
+  "demoCaption": {
+    "age13": "Same beat, same speed, two Roland drum machines. B is the 909, the machine Larry Heard used in 1984. Listen to its hi-hat: brighter and harder than the 808's. On 'Washing Machine' the 909 carries almost the whole record.",
+    "adult": "Only the machine changes between A and B. On the real 909 the hi-hats and cymbals were short samples while the drums were analog circuits, which is part of why they cut through on Heard's records. Both kits here are synthesized, including the 909's hats."
+  },
   "tags": [
     "technology"
   ]

@@ -3625,3 +3625,30 @@ small and worth having in front of Matt alongside everything else here.
     Swinging London to The Who (the article lists the band but says
     nothing about what the scene did to them); Long Island to De La Soul
     (their Prince Paul edge already carries the Long Island connection).
+
+- **A297. An edge can caption its own demo.** Matt chose an edge-level
+  caption over rewriting demo captions to name no record. `demoCaption`
+  is an optional register object on an edge. It replaces the demo's
+  caption on that edge's panel, and on an artist panel that shows the
+  demo through that edge (`demoForNode` in main.js). Everywhere else the
+  demo keeps its own caption, so King Tubby's panel still reads the tape
+  echo caption that names him, and Lee Perry's reads his.
+  - **How it is built.** `withEdgeCaption` in `reading/demoBlock.js`
+    returns a copy of the demo with the edge's caption, keeping the id,
+    so the player and the edge pulse (both keyed by demo id) are
+    unchanged. `demoCaption` joins `demoId` in the skeleton's edge fields
+    (`tools/skeleton.js`), because artist panels read the skeleton, not
+    full edge records. The release index grew by about 2 KB. The
+    validator fails a `demoCaption` without a `demoId` and checks it as a
+    register object.
+  - **Three edges now carry a demo**, each with its own caption:
+    `e-re201-perry` (tape echo), `e-minimoog-kraftwerk` (synth bass) and
+    `e-909-heard` (808 against 909). Edges with a demo go from 15 to 18.
+    Each caption describes what the demo does and ties it to the claim
+    the edge already makes. They add no facts beyond the edge and the
+    demo's own notes. The Kraftwerk one says the bassline is original,
+    as the demo's note does.
+  - **Checked in the browser**: Larry Heard's, Kraftwerk's and Lee
+    Perry's panels show their own captions, King Tubby's shows the
+    demo's, and there are no console errors. `npm run build` carries the
+    field in the index.
