@@ -254,7 +254,8 @@ correct response to a good idea arriving mid-milestone.
   since it moves every demo's level and Matt has been judging them by
   ear.
 
-- **`e-909-knuckles` may put a 1984 machine in the Warehouse.** The
+- ~~**`e-909-knuckles` may put a 1984 machine in the Warehouse.**~~
+  **Fixed** (A290), checked against Wikipedia's article on Knuckles. The
   edge dates the 909 reaching Knuckles to 1984, names "Warehouse and
   Power Plant DJ sets" as the later track, and ends its listening note
   on "what a Warehouse night turned into". My understanding is that
