@@ -10,16 +10,31 @@
   "steps": [
     {
       "nodeId": "king-tubby",
-      "cameraHint": "kingston"
+      "framing": {
+        "age13": "Start in Kingston with King Tubby, who repaired electronics for a living and rebuilt his own mixing desk. His idea was to take a finished song apart and let the gaps become the music.",
+        "adult": "The thread starts with a technique rather than a record: a mixing desk used to take things away, so that space and echo carry the track."
+      }
     },
     {
-      "edgeId": "e-perry-clash-cover"
+      "edgeId": "e-perry-clash-cover",
+      "framing": {
+        "age13": "Lee Perry was working in Kingston in the same years. By 1977 a song he had produced turned up on a London punk album, covered by the Clash and six minutes long.",
+        "adult": "The first crossing is a cover: a Perry production carried into a punk album more or less as a song, which is borrowing at the surface."
+      }
     },
     {
-      "edgeId": "e-perry-clash-production"
+      "edgeId": "e-perry-clash-production",
+      "framing": {
+        "age13": "Next the Clash brought Perry himself to London to produce them. Listen to how little the result sounds like his own records: a studio sound is hard to carry across.",
+        "adult": "The second crossing moves a person rather than a song. The distance between the finished single and Perry's own studio sound is the point of this stop."
+      }
     },
     {
-      "edgeId": "e-tubby-pil"
+      "edgeId": "e-tubby-pil",
+      "framing": {
+        "age13": "The deepest crossing comes last. PiL took dub's shape, not its sound: the bass in front, the guitar as texture, the silence on purpose.",
+        "adult": "The thread ends on structural transfer, the kind of influence that is hardest to document, which is why this edge is held at consensus rather than documented."
+      }
     }
   ],
   "outro": {

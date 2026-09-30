@@ -326,6 +326,12 @@ export const CONFIG = {
   // The year cursor. Not a scrollbar with a graph attached: dragging it is
   // how the map performs its own history, and it is the first thing anyone
   // touches.
+  // Threads (docs/m5-architecture.md section 3).
+  threads: {
+    // Fewer stops than this is a link, not a route.
+    minSteps: 3,
+  },
+
   transport: {
     msPerYear: 620,
     stepYears: 1,
