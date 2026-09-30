@@ -438,6 +438,14 @@ for (const [id, thread] of records.threads) {
       fail(`${where}: steps[${i}] references unresolved edge "${step.edgeId}"`);
     }
     checkDemoId(`${where}: steps[${i}]`, step.demoId);
+    // The player shows each stop's own record panel, and so that record's
+    // own demo (A284). A step demo naming anything else would never appear.
+    if (step.demoId !== undefined) {
+      const shown = hasEdge ? records.edges.get(step.edgeId)?.demoId : resolveNode(step.nodeId)?.demoId;
+      if (shown !== step.demoId) {
+        fail(`${where}: steps[${i}].demoId is "${step.demoId}", but the stop shows its record's own demo (${shown ? `"${shown}"` : 'none'}); drop it or make them match`);
+      }
+    }
   }
 }
 

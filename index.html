@@ -59,7 +59,7 @@
 
   /* The year cursor has not reached this yet. Present, but clearly not
      here yet -- which is the whole point of being able to drag it. */
-  .unborn { opacity: 0.085; }
+  .unborn { opacity: var(--unborn-opacity); }
   /* While time moves, a veil lies over the past (Q38, CONFIG.transport.recede).
      It fades in and out rather than blinking. */
   .recede-veil { opacity: 0; transition: opacity 400ms ease; pointer-events: none; }
