@@ -3854,3 +3854,24 @@ small and worth having in front of Matt alongside everything else here.
   - **`e-summer-eno` is consensus.** It rests on Bowie's account of
     Eno's reaction, and what the reaction changed in Eno's work is not
     documented.
+
+## Added with the Seattle batch
+
+- **A305. Sub Pop, the Pixies, Steve Albini and the Melvins.** Three
+  artists, one label and 6 edges (322 to 328 of 350), giving Nirvana,
+  which had only a Bowie cover edge before, its label, its producer
+  and its two named influences.
+  - **Albini is an artist node, like the map's other producers,** even
+    though he refused the producer title. His edges are typed
+    `production` because that is the schema's word for the relation;
+    the prose says engineer.
+  - **A TR-606 source turned up.** Wikipedia's article on Albini says
+    Big Black used a Roland TR-606. BACKLOG holds the TR-606 back for
+    lack of any source better than forum posts. This is better, and
+    Big Black would be the edge, but a machine record also needs price
+    and production dates, which were not checked, so it is not added
+    here. Noted in Albini's adult text.
+  - **Melvins' earliest track is 'Eye Flys' (1987)**, from their first
+    album, so the edge runs forwards in time. The year is from memory
+    of the album's release, not a source read in this batch, and the
+    crosscheck tool should confirm it.

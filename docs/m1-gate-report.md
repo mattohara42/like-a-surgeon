@@ -8,11 +8,11 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 156 | 120 | met |
+| artists | 159 | 120 | met |
 | machines | 32 | 25 | met |
 | scenes | 21 | 20 | met |
-| labels | 33 | 30 | met |
-| edges | 322 | 350 | 92% |
+| labels | 34 | 30 | met |
+| edges | 328 | 350 | 94% |
 | threads | 6 | 5 | met |
 | crossLineageEdges | 125 | 60 | met |
 | edgesWithDemo | 18 | 30 | 60% |
@@ -25,7 +25,7 @@ Every node type, since machines, scenes and labels carry a lineage too.
 |---|---:|
 | electronic | 60 |
 | hiphop | 55 |
-| rock | 51 |
+| rock | 55 |
 | funk | 27 |
 | dub | 21 |
 | other | 19 |
@@ -37,7 +37,7 @@ Artists alone:
 | lineage | count |
 |---|---:|
 | hiphop | 43 |
-| rock | 35 |
+| rock | 38 |
 | electronic | 31 |
 | funk | 21 |
 | dub | 13 |
@@ -49,13 +49,13 @@ Artists alone:
 
 | edge type | count |
 |---|---:|
-| direct | 77 |
-| production | 52 |
-| label | 51 |
+| direct | 79 |
+| production | 54 |
+| label | 52 |
 | technological | 51 |
 | sample | 41 |
 | scene | 32 |
-| cover | 14 |
+| cover | 15 |
 | reaction-against | 3 |
 | rediscovery | 1 |
 
@@ -63,7 +63,7 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 243 |
+| documented | 249 |
 | consensus | 78 |
 | asserted | 1 |
 
@@ -237,126 +237,126 @@ Evidence: The Sex Pistols and the Clash are the two foundational bands of the 19
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 321 edges that carry one.
+Drawn with seed 1 from the 327 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-clinton-dre`
+### 1. `e-rza-wutang`
 
-George Clinton, "Atomic Dog" (1982) to Dr. Dre, "Fuck Wit Dre Day (And Everybody's Celebratin')" (1992)
+Wu-Tang Clan, "Protect Ya Neck" (1992) to Wu-Tang Clan, "C.R.E.A.M." (1993)
 
-Clinton's original chant floats over a loose, synth-driven groove, half sung and half spoken, more strange than tough. Dre tightens everything around it: a slower, heavier low end, a cleaner beat, and the chant now sitting inside a much harder, more menacing record. The words barely change. The mood around them does completely.
+'Protect Ya Neck' opens on kung fu film dialogue and then runs eight rappers back to back over a raw, clattering loop. It sounds almost homemade, and it was self-released. 'C.R.E.A.M.', a year later, slows everything down: a sad, looping soul piano from a Charmels record, with space around each verse. Listen for RZA moving from chaos to melancholy with the same dusty texture holding both together.
 
-### 2. `e-trax-phuture`
+### 2. `e-publicenemy-rza`
 
-Phuture, "Acid Tracks, as played by Ron Hardy at the Music Box" (1987) to Phuture, "Acid Tracks" (1987)
+Public Enemy, "Bring the Noise" (1987) to Wu-Tang Clan, "Protect Ya Neck" (1992)
 
-The record is a long TB-303 bassline twisting and squelching over a drum machine, with the filter being opened and closed by hand as it plays. Listen for how the same short pattern keeps changing tone without changing notes. That squelch had been heard only at Ron Hardy's Music Box on bootleg tapes until Trax put it on vinyl and made it available everywhere.
+'Bring the Noise' stacks dense layers of sirens, horn stabs and vocal snatches on top of each other, chaotic on purpose. 'Protect Ya Neck' takes the same cut-up instinct and strips it back to one or two grimy loops, murky and minimal rather than maximal, RZA's own turn on the same technique.
 
-### 3. `e-mpc3000-dilla`
+### 3. `e-jamesbrown-koolherc`
 
-Akai, "MPC3000, sequencer with quantise" (1994) to Slum Village, "Fall in Love" (2000)
+James Brown, "Give It Up or Turnit a Loose" (1970) to DJ Kool Herc, "The Merry-Go-Round (live DJ technique)" (1973)
 
-A quantise setting moves every drum hit onto the nearest point of a grid, so a beat stays perfectly even. Listen to 'Fall in Love' with that in mind. The kick drums do not land where a grid would put them: some come early, some late. The beat seems to stagger and yet it grooves, because the unevenness repeats. That is a person refusing the machine's correction on the machine itself.
+Find the live version of 'Give It Up or Turnit a Loose' on 'Sex Machine' and wait for the breakdown: the band drops out except for drums, bass and percussion, and the groove keeps going. Herc's discovery was that this short stretch was what the dancers were waiting for. With two copies of the record he could play it over and over, and that repeating break is the floor hip-hop is built on.
 
-### 4. `e-hayes-massiveattack`
+### 4. `e-bobjames-rundmc`
+
+Bob James, "Take Me to the Mardi Gras" (1975) to Run-D.M.C., "Peter Piper" (1986)
+
+James's original is a laid-back jazz-funk instrumental with a chiming bell pattern buried in the arrangement. Run-D.M.C. pulls just the bells and the break to the front, loops them, and raps directly over the loop, with nothing else in the mix competing with it.
+
+### 5. `e-ms10-atkins`
+
+Korg, "MS-10" (1978) to Cybotron, "Alleys of Your Mind" (1981)
+
+This is the record the years of learning led to, not a record made on the MS-10. Listen to how much of its character sits in the tone of each synthesized sound rather than in the tune. The notes themselves are simple. The interest is in how each one is shaped: bright or dull, clipped or held. That is the ear of someone who spent years alone with one synthesizer, turning knobs.
+
+### 6. `e-albini-pixies`
+
+Big Black, "Kerosene" (1986) to Pixies, "Where Is My Mind?" (1988)
+
+Listen to the drums on 'Surfer Rosa': loud, roomy and a little distant, as if you are standing in the room rather than inside the drum kit. That is Albini's microphones picking up the room itself. Then listen to the voice echoing on some tracks: it was recorded in a bathroom. Big Black is harsher, but it is the same interest in sounds that are real, raw and unpolished.
+
+### 7. `e-eps16-rza`
+
+Ensoniq, "EPS-16 Plus, sixteen-bit keyboard sampler" (1990) to Wu-Tang Clan, "C.R.E.A.M." (1993)
+
+Listen to the length of the loop. The piano phrase in 'C.R.E.A.M.' runs for bars, a whole musical sentence repeating, which the SP-1200's ten seconds made hard. The sound is also cleaner at the top, without the SP's crunch, though RZA kept it dusty and dark. That's the machine allowing the long, sad phrase to become the song's whole mood.
+
+### 8. `e-juno60-heard`
+
+Roland, "Juno-60" (1982) to Mr. Fingers, "Can You Feel It" (1986)
+
+Listen to the chords floating above the bassline. They have no hard front edge: each one arrives softly and hangs in the air, and they sound wide, as if coming from both sides at once. That softness and width are the kind of sound the Juno's built-in chorus was designed to make. The whole record was built from a synth, a drum machine and two cassette decks.
+
+### 9. `e-flash-bambaataa`
+
+Grandmaster Flash, "early Bronx park-jam sets" (1975) to Afrika Bambaataa, "early Bronx park-jam sets" (1976)
+
+No single record captures this; the comparison is between two DJs building sound systems and crews in the same neighborhood at the same time, out of the same breakbeat culture.
+
+### 10. `e-osullivan-bizmarkie`
+
+Gilbert O'Sullivan, "Alone Again (Naturally)" (1972) to Biz Markie, "Alone Again" (1991)
+
+Listen to O'Sullivan's piano, then to Biz's loop of it. It's only a few bars, repeated, and still instantly recognisable. That's the whole case in one sound: a sample carries its author with it. The Cold Chillin' edge covers the label's decision, and this edge is the sound that decision was about.
+
+### 11. `e-hayes-massiveattack`
 
 Isaac Hayes, "Our Day Will Come" (1970) to Massive Attack, "Exchange" (1998)
 
 Hayes's 'Our Day Will Come' is his own arrangement of a song other people wrote, as many of his solo records were. Play it through, then play 'Exchange' and listen for the piece of Hayes's arrangement that Massive Attack kept, and for what they put around it. They liked it enough to use it twice on the same album: once as 'Exchange' in the middle of 'Mezzanine', and again as '(Exchange)', the album's last track.
 
-### 5. `e-lagangstarap-nwa`
+### 12. `e-sire-ramones`
 
-Ice-T, "6 in the Mornin'" (1986) to N.W.A, "Fuck tha Police" (1988)
+Ramones, "Judy Is a Punk" (1976) to Ramones, "Sheena Is a Punk Rocker" (1977)
 
-'6 in the Mornin'' is a bare drum machine pattern with Ice-T telling a long story in a flat, conversational voice, starting with police at the door at dawn. 'Fuck tha Police' takes the same subject and stages it as a courtroom, with members of the group taking turns as witnesses. The beat is much busier, with sampled funk drums and scratching. Listen for the spoken courtroom interruptions between verses: the record is built like a scene from a film, not just a rap over a beat.
+The first album was made fast and cheap, and it sounds it: dry drums, guitars panned hard to one side, almost no overdubs. A year later, with Sire now distributed by Warner Bros., 'Sheena Is a Punk Rocker' has a cleaner, fuller sound and a surf-pop chorus aimed at radio. Listen for the label's ambition growing in the sound, while the song stays under three minutes.
 
-### 6. `e-flash-theodore`
+### 13. `e-jones-mjackson`
 
-Grandmaster Flash, "quick-mix theory at Bronx jams" (1975) to Grand Wizzard Theodore, "the scratch" (1975)
+Michael Jackson, "Off the Wall" (1979) to Michael Jackson, "Thriller" (1982)
 
-Flash's technique is about making the join invisible: you should not hear the second record arrive. Theodore's does the opposite and makes the hand audible on purpose. Listen for that inversion, because it is the moment the turntable stops pretending to be a playback device and starts admitting it is being operated.
+Both albums share Jones's dense, horn-inflected arrangement style, a jazz arranger's ear applied to disco and pop. 'Thriller' pushes the same approach further, into rock guitar (Eddie Van Halen's solo on 'Beat It') and horror-movie theater.
 
-### 7. `e-marshalljefferson-phuture`
+### 14. `e-summer-eno`
 
-Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986) to Phuture, "Acid Tracks" (1987)
+Donna Summer, "I Feel Love" (1977) to David Bowie, "Sound and Vision" (1977)
 
-'Move Your Body' is bright and busy, with piano, vocals and a quick beat. 'Acid Tracks' strips all of that away to a drum machine and one squelching bassline, and it moves more slowly than Phuture first made it. Listen to the tempo. The slower, heavier walk is the one change everyone agrees Jefferson asked for, and it gives the 303 room to twist.
+Listen to how both records use machines. 'I Feel Love' is almost all sequenced synthesizer, cold and exact, with a warm voice floating above. 'Sound and Vision', from the Bowie album Eno worked on in the same period, is a band record with synthesizer textures laid over it. The edge is about recognition more than borrowing: Eno heard in Munich where the Berlin sessions' interest in machines could lead.
 
-### 8. `e-ramones-ukpunk`
+### 15. `e-getzbonfa-dilla`
 
-Ramones, "Blitzkrieg Bop" (1976) to The Damned, "New Rose" (1976)
+Stan Getz and Luiz Bonfá, "Saudade Vem Correndo" (1963) to The Pharcyde, "Runnin'" (1995)
 
-'Blitzkrieg Bop' is fast, even and relentless, every chord hit the same way, no guitar solo. 'New Rose', released in October 1976 as the first British punk single, runs at a similar sprint with a drum roll to start and barely a pause after. Listen to the tempo more than anything else. The claim on this edge is about speed: British bands already existed, and the Ramones showed them how fast and short a song could go.
+The bossa nova original moves in a steady, unhurried sway, guitar and flute trading a bright, circling phrase. Dilla chops that phrase down to a few notes and loops it tight against a harder, dustier drum break, so the same figure that once drifted now insists. Listen for how little of the original he needed to take before it was recognisably his.
 
-### 9. `e-stones-weirdal`
-
-The Rolling Stones, "(I Can't Get No) Satisfaction" (1965) to "Weird Al" Yankovic, "The Hot Rocks Polka" (1989)
-
-Listen to the 'Satisfaction' riff first, a fuzzed guitar line over a heavy backbeat, then find it in the medley. The polka puts everything on a bouncing two-beat pulse and hands the melody to the accordion, so a riff built around a fuzz pedal has to survive on a squeezebox. The tune survives the move. The tone and the swagger do not, which tells you how much of the Stones' sound lived in the playing rather than the notes.
-
-### 10. `e-tommyboy-delasoul`
-
-De La Soul, "3 Feet High and Rising" (1989) to De La Soul, "De La Soul Is Dead" (1991)
-
-The debut is bright, generous with its samples and happy to be liked. Its follow-up opens by smashing the daisy-and-flower image of the first record and turns markedly more cynical throughout, released the same year the Turtles settlement became public.
-
-### 11. `e-bronx-theclash`
-
-Grandmaster Flash and the Furious Five, "Superrappin'" (1979) to The Clash, "The Magnificent Seven" (1980)
-
-'The Magnificent Seven' is a British rock band attempting rap for the first time: a looped bassline, spoken verses, and a chorus that owes more to the sound Jones heard on the street than to anything in punk. It is usually credited as the first rap song by a rock band.
-
-### 12. `e-food-blur`
-
-Blur, "Popscene" (1992) to Blur, "For Tomorrow" (1993)
-
-'Popscene' already has the English guitar-pop idea, but it comes at you fast and loud: a blaring brass section, a sprinting tempo, and no chorus built to be sung back. 'For Tomorrow' slows down and opens up: a la-la-la chorus sung by female backing singers, a string quartet (the band's first), and a lyric that takes a drive up to Primrose Hill in north London. The Englishness is the same. The difference is a song written to order for a label that wanted a single.
-
-### 13. `e-beatles-rollingstones`
-
-The Beatles, "I Wanna Be Your Man" (1963) to The Rolling Stones, "I Wanna Be Your Man" (1963)
-
-The same song by two bands in the same year. The Beatles' version, sung by Ringo, bounces along as cheerful beat music. The Stones' is rougher and faster, with Brian Jones's slide guitar wailing over it. Listen for how the Stones turn a Beatles pop song into something closer to the American R&B they were copying.
-
-### 14. `e-rodgers-madonna`
-
-David Bowie, "Let's Dance" (1983) to Madonna, "Like a Virgin" (1984)
-
-Both were produced by Rodgers within a year. Listen for the same bright, tight rhythm section on 'Like a Virgin': a bouncing bass line, crisp drums, choppy guitar, and nothing wasted. Madonna's first album was built from club drum machines; this one sounds like a band, which was Rodgers's contribution.
-
-### 15. `e-lamonteyoung-eno`
-
-La Monte Young, "Trio for Strings" (1958) to Brian Eno, "Discreet Music" (1975)
-
-Young's music asks you to listen to one sound for a long time until you notice what is going on inside it. 'Discreet Music' asks the same thing, more gently: one soft phrase, repeating slowly, quiet enough to sit under a room. Listen for how long nothing seems to happen, and then notice how much has changed.
-
-### 16. `e-spector-ramones`
-
-The Ronettes, "Baby, I Love You" (1963) to Ramones, "Baby, I Love You" (1980)
-
-The Ramones' version is not a punk cover. The loud guitars are gone: Joey Ramone sings over strings and a slow beat, very close to Spector's own 1963 arrangement for the Ronettes. Compare it with 'Blitzkrieg Bop' and you hear what a producer can do to a band, for better or worse. Some of the band later said they resented the change.
-
-### 17. `e-sugarhill-tackhead`
-
-Grandmaster Flash and the Furious Five, "The Message" (1982) to Tackhead, "Tackhead Tape Time" (1987)
-
-On 'The Message' the players are anonymous: a label's house band, playing what the record needed. On 'Tackhead Tape Time' the same bass player, drummer and guitarist are the act, with Adrian Sherwood's dub production around them. Listen for the rhythm section on both: in 1982 it sits under the rapping, and in 1987 it is the main thing you hear.
-
-### 18. `e-chuckberry-beatles`
-
-Chuck Berry, "Roll Over Beethoven" (1956) to The Beatles, "Roll Over Beethoven" (1963)
-
-Both open with the same guitar figure, a run of double-stopped notes that rings out before the band comes in. Berry's version swings a little. The Beatles' is straighter and harder, with George Harrison singing and playing the lead. Listen to the opening bars side by side: this riff is a lesson in how rock guitar intros started.
-
-### 19. `e-mt40-princejammy`
+### 16. `e-mt40-princejammy`
 
 Casio, "MT-40 'rock' rhythm preset" (1981) to Wayne Smith, "Under Mi Sleng Teng" (1985)
 
 The entire backing track is the MT-40's unmodified preset: no live drums, no live bass, just a cheap home keyboard's demo rhythm sped up and run underneath the vocal. It sounds nothing like the analogue dub coming out of Jammy's own former workplace, King Tubby's studio, a decade earlier.
 
-### 20. `e-kraftwerk-warp`
+### 17. `e-derrickmay-carlcraig`
 
-Kraftwerk, "Autobahn" (1974) to Various Artists, "Artificial Intelligence" (1992)
+Derrick May (Rhythim Is Rhythim), "Nude Photo" (1987) to Psyche (Carl Craig), "Elements" (1989)
 
-'Autobahn' is on the compilation's own cover, propped against the android's hi-fi. Listen to how far the series carries that record's idea, electronic music made for sitting and listening rather than dancing, into the early-90s British bedroom-producer sound of Aphex Twin and Autechre.
+Both records share Transmat's repeating-figure discipline, but 'Elements' pulls the tempo down and lets the chords hang longer, the mark of an assistant absorbing his mentor's vocabulary and then bending it somewhere else.
+
+### 18. `e-may-knuckles`
+
+Derrick May, "Detroit, working on a pair of TR-909s" (1983) to Frankie Knuckles, "Warehouse and Power Plant DJ sets" (1984)
+
+Listen to a Detroit record and a Chicago record from the same couple of years and find the shared object. Same kick, same ringing open hi-hat, one machine's voice in two cities. What differs is the instinct: Detroit leaves space around the machine and lets it sound like a machine, Chicago buries it under a soul vocal and a piano and asks it to carry a party.
+
+### 19. `e-winstons-nwa`
+
+The Winstons, "Amen, Brother" (1969) to N.W.A, "Straight Outta Compton" (1988)
+
+Find the six seconds near the middle of 'Amen, Brother' where the band stops and Gregory Coleman plays alone. Listen for the last bars, where the snare shifts off its pattern and lands late. That hitch is what everyone recognises. Then hear it in 'Straight Outta Compton', looped hard under Ice Cube's opening verse. It has the same hitch in the snare, now with the urgency of the whole track riding on it.
+
+### 20. `e-re201-tubby`
+
+Roland, "RE-201 Space Echo, as sold to guitarists" (1974) to King Tubby, "Dub from the Roots" (1974)
+
+Compare the echo here with Perry's. Tubby's repeats are cleaner and more rhythmic, placed so they land where a drum would have landed, so the delay becomes part of the pattern rather than a haze over it. Same kind of box, opposite instinct: Perry lets it flood, Tubby uses it to keep time.
