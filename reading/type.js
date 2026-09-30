@@ -11,4 +11,7 @@ export function applyTypeScale(root = document.documentElement) {
   for (const [key, value] of Object.entries(CONFIG.type.lineHeight)) {
     root.style.setProperty(`--lh-${key}`, String(value));
   }
+  // Not typography, but the same job: the "not yet" fade is a number in
+  // CONFIG that the stylesheet needs.
+  root.style.setProperty('--unborn-opacity', String(CONFIG.transport.unbornOpacity));
 }
