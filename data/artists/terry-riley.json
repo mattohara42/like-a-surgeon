@@ -1,0 +1,31 @@
+{
+  "id": "terry-riley",
+  "name": "Terry Riley",
+  "sortName": "Riley, Terry",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1959,
+  "activeTo": null,
+  "originCity": "Colfax, California",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "The composer of 'In C', whose tape-delay experiments and organ loops gave the Who's 'Baba O'Riley' half its name.",
+  "blurb": {
+    "age13": "Terry Riley was born in California in 1935. In the early 1960s in Paris he found a way to make music repeat and pile up on itself using two tape recorders. His 1964 piece 'In C' gives a group of players 53 short phrases, each repeated as many times as each player likes, over a steady pulse. His 1969 album 'A Rainbow in Curved Air' layered fast, repeating organ patterns, and Pete Townshend of the Who named 'Baba O'Riley' partly after him.",
+    "adult": "Born in Colfax, California, in 1935. With La Monte Young he performed 'Concert for Two Pianists and Tape Recorders' in 1959 and 1960, and in Paris in the early 1960s he built the 'time-lag accumulator', a two-machine tape delay that layers a sound on its own repeats. 'In C' premiered at the San Francisco Tape Music Center on 4 November 1964, with Steve Reich in the ensemble; Reich's suggestion of a steady eighth-note pulse became part of the piece. Columbia recorded it in 1968 and released 'A Rainbow in Curved Air' in 1969. Two-machine tape delay later reached rock through Eno and Fripp's system on '(No Pussyfooting)' (1973), which Wikipedia's article on Frippertronics traces to studio systems by Riley and Pauline Oliveros."
+  },
+  "signatureTracks": [
+    {
+      "title": "In C",
+      "year": 1964,
+      "whyThisOne": "53 short phrases over a pulse, played by any number of people. The 1968 Columbia recording made it a record."
+    },
+    {
+      "title": "A Rainbow in Curved Air",
+      "year": 1969,
+      "whyThisOne": "Fast, overlapping organ patterns. The record Townshend was listening to."
+    }
+  ]
+}

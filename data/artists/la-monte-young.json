@@ -1,0 +1,31 @@
+{
+  "id": "la-monte-young",
+  "name": "La Monte Young",
+  "sortName": "Young, La Monte",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1958,
+  "activeTo": null,
+  "originCity": "Bern, Idaho",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A composer of very long, very loud held notes, whose early-1960s group put John Cale on the path to the Velvet Underground.",
+  "blurb": {
+    "age13": "La Monte Young was born in Idaho in 1935. From the late 1950s he wrote music made of notes held for a very long time, sometimes for hours. In New York in the early 1960s he led a group, later called the Theatre of Eternal Music, that played loud, amplified drones. John Cale played viola in it, and brought that sound with him when he started the Velvet Underground. Brian Eno has called Young a starting point for everything he did.",
+    "adult": "Born in Bern, Idaho, in 1935. His 'Trio for Strings' (1958) is built from sustained tones and long silences and is usually named as a founding work of minimalism. From 1962 his New York ensemble, later the Theatre of Eternal Music, played amplified drones in just intonation, with Marian Zazeela, Tony Conrad, John Cale and, from 1965, Terry Riley. Almost none of its recordings have been released: Young has held that he is the sole composer, Conrad argued the work was collective, and the dispute has kept the tapes in the archive. Few of Young's recordings are in print at all, which makes him an influence more read about than heard. Eno has described Young's 'X for Henry Flynt' as a cornerstone of his own work (1981)."
+  },
+  "signatureTracks": [
+    {
+      "title": "Trio for Strings",
+      "year": 1958,
+      "whyThisOne": "Long held notes and long silences. The piece minimalism is usually said to start from."
+    },
+    {
+      "title": "The Well-Tuned Piano",
+      "year": 1981,
+      "whyThisOne": "Young's own choice of his central work, recorded in performance in New York in October 1981 and issued by Gramavision."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "e-lamonteyoung-riley",
+  "from": "la-monte-young",
+  "to": "terry-riley",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1959,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Terry Riley: Riley befriended La Monte Young, the two performed Riley's 'Concert for Two Pianists and Tape Recorders' in 1959 and 1960, and Riley later joined Young's Theatre of Eternal Music in New York (1965).",
+  "trackPair": {
+    "earlier": {
+      "artist": "La Monte Young",
+      "title": "Trio for Strings",
+      "year": 1958,
+      "search": "La Monte Young Trio for Strings"
+    },
+    "later": {
+      "artist": "Terry Riley",
+      "title": "In C",
+      "year": 1964
+    },
+    "whatToListenFor": "Young's trio is almost motionless: long tones, long silences. 'In C' keeps the idea of one harmony held for a long time, but fills it with short, bright, repeating phrases over a steady pulse. Listen for how both pieces refuse to go anywhere in the usual sense. The difference is that Riley's version moves, and that is the version rock musicians picked up."
+  },
+  "explanation": {
+    "age13": "Terry Riley and La Monte Young were friends from their student days in California and played together from 1959. Young's music was about very long held notes. Riley kept the idea of staying on one chord for a long time but filled it with short repeating patterns, and that became 'In C'.",
+    "adult": "The founding friendship of American minimalism. Young's sustained-tone music and Riley's repetition are two answers to the same question, and Riley joining Young's ensemble in 1965 kept the two in contact after 'In C'."
+  },
+  "tags": []
+}

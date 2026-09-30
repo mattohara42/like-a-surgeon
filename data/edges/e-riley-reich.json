@@ -1,0 +1,28 @@
+{
+  "id": "e-riley-reich",
+  "from": "terry-riley",
+  "to": "steve-reich",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1964,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'In C': Steve Reich played in the premiere at the San Francisco Tape Music Center on 4 November 1964 and suggested the steady eighth-note pulse that holds the ensemble together, which Riley accepted. Reich's first tape-phasing piece, 'It's Gonna Rain', followed in 1965. Held at consensus because the influence runs both ways at the premiere, and how much 'In C' shaped Reich's phasing is a matter of interpretation rather than a single documented statement cited here.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Terry Riley",
+      "title": "In C",
+      "year": 1964
+    },
+    "later": {
+      "artist": "Steve Reich",
+      "title": "It's Gonna Rain",
+      "year": 1965
+    },
+    "whatToListenFor": "In 'In C', listen for the pulse: one high note on the piano, hammered evenly all the way through, while everything else drifts over it. That pulse was Reich's idea. A year later, in 'It's Gonna Rain', the drifting happens between two identical tape loops of one voice instead of between players. Listen for the moment the two copies start to separate into an echo, then into a stutter, then into something that sounds like a new rhythm."
+  },
+  "explanation": {
+    "age13": "Steve Reich played in the first performance of Terry Riley's 'In C' in 1964, and it was his idea to add the steady pulse that runs through it. A year later he made 'It's Gonna Rain', where two copies of the same tape loop slowly slide out of step.",
+    "adult": "Influence in both directions, which is why this sits at consensus: Reich gave 'In C' its pulse, and 'In C' gave Reich an ensemble model of repetition and gradual change. The edge is drawn Riley to Reich because 'In C' came first and Reich's phasing followed within months."
+  },
+  "tags": []
+}

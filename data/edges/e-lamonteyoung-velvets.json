@@ -1,0 +1,29 @@
+{
+  "id": "e-lamonteyoung-velvets",
+  "from": "la-monte-young",
+  "to": "the-velvet-underground",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1965,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on the Theatre of Eternal Music: John Cale played viola in La Monte Young's ensemble in its best-documented line-up (1964 to 1966), and the group's sustained notes and loud amplification influenced Cale's use of drone, discord and feedback in the Velvet Underground. Angus MacLise, the Velvets' first drummer, had also played with Young's group.",
+  "trackPair": {
+    "earlier": {
+      "artist": "La Monte Young",
+      "title": "Trio for Strings",
+      "year": 1958,
+      "search": "La Monte Young Trio for Strings"
+    },
+    "later": {
+      "artist": "The Velvet Underground",
+      "title": "Venus in Furs",
+      "year": 1967
+    },
+    "whatToListenFor": "Young's trio holds single notes for a very long time, so you stop hearing a tune and start hearing the sound itself. On 'Venus in Furs' listen for John Cale's viola: it saws away on one high, scraping drone under the whole song, never really playing a melody. That is the Theatre of Eternal Music's held note, amplified and dropped into a rock song."
+  },
+  "explanation": {
+    "age13": "John Cale played viola in La Monte Young's New York group in the mid-1960s, where the music was made of very long, very loud held notes. Then he helped start the Velvet Underground and brought that droning, scraping sound with him.",
+    "adult": "One of the cleanest routes on the map from the concert avant-garde into rock, because it runs through a person rather than a record: Cale carried the practice across. The Theatre's own recordings are still mostly unreleased because Young and Tony Conrad disagreed about authorship, so the rock records are where most listeners have actually heard this sound."
+  },
+  "tags": []
+}

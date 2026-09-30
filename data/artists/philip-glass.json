@@ -1,0 +1,31 @@
+{
+  "id": "philip-glass",
+  "name": "Philip Glass",
+  "sortName": "Glass, Philip",
+  "type": "artist",
+  "lineage": "other",
+  "activeFrom": 1967,
+  "activeTo": null,
+  "originCity": "Baltimore, Maryland",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A minimalist composer who, fifteen years after Bowie and Eno borrowed from minimalism, turned their album 'Low' into a symphony.",
+  "blurb": {
+    "age13": "Philip Glass was born in Baltimore in 1937. With his own ensemble of amplified keyboards and wind instruments he wrote music of short patterns that repeat and change slowly, and in 1976 the opera 'Einstein on the Beach', made with Robert Wilson. In 1992 he wrote his first symphony, based on David Bowie and Brian Eno's album 'Low'. Minimalism had influenced that album, and now the influence came back the other way.",
+    "adult": "Born in Baltimore in 1937. The Philip Glass Ensemble, formed in 1968, played amplified electric organs and winds at rock volume, and 'Einstein on the Beach' (1976, with Robert Wilson) made his name. On this map he matters for a return trip: his Symphony No. 1 (premiered in Munich on 30 August 1992) takes themes from three pieces associated with Bowie's 'Low', 'Subterraneans', 'Some Are' and 'Warszawa', and Symphony No. 4 (1996) does the same with '\"Heroes\"'. Eno's own route to those albums ran through minimalism (see e-reich-eno), and Glass has said he let Bowie and Eno's ideas shape how he worked on the symphony."
+  },
+  "signatureTracks": [
+    {
+      "title": "Einstein on the Beach",
+      "year": 1976,
+      "whyThisOne": "The opera with Robert Wilson. Amplified organs and counting voices, nearly five hours long."
+    },
+    {
+      "title": "Symphony No. 1 \"Low\"",
+      "year": 1992,
+      "whyThisOne": "Bowie and Eno's 'Low' rewritten for orchestra."
+    }
+  ]
+}
