@@ -4477,3 +4477,23 @@ small and worth having in front of Matt alongside everything else here.
   is 197 of 202. Not added: the Goats' tours with the Beastie Boys,
   Public Enemy and Cypress Hill, which are shared bills with no first-
   person account behind them.
+
+- **A336. A third Six Degrees reach batch: three edges, 197 to 201 of
+  202.** Same method as A332, every claim checked on English Wikipedia.
+  - **`e-derbyshire-aphextwin`**, `consensus`: her article names Aphex
+    Twin among the musicians she influenced, but as a summary of her
+    reputation, not his own statement. Delia Derbyshire goes from 7 to 6.
+  - **`e-hankwilliams-willie`**, `consensus`: Nelson's article lists
+    Williams among his influences. Willie Nelson goes from 6 to 5 and
+    Patsy Cline from 7 to 6.
+  - **`e-princebuster-sexpistols`**, `documented`: Steve Jones cited
+    Prince Buster as an inspiration in his autobiography 'Lonely Boy', as
+    the Buster article reports. Prince Buster goes from 7 to 5 and
+    Madness from 8 to 6. The source says nothing about what Jones took,
+    so the `whatToListenFor` asks the reader to judge rather than claim
+    a sound.
+  - All three edge years place the paired later record, not a documented
+    moment of influence, and each evidence field says so.
+  - **Hugh Mundell stays at 7,** the one artist out of reach. His
+    producer Augustus Pablo's documented links (King Tubby, Bob Marley,
+    Lee Perry) are all themselves five or six hops out.

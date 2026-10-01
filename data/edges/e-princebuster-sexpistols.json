@@ -1,0 +1,28 @@
+{
+  "id": "e-princebuster-sexpistols",
+  "from": "prince-buster",
+  "to": "sex-pistols",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on Prince Buster: Sex Pistols guitarist Steve Jones cited Prince Buster as an inspiration in his autobiography 'Lonely Boy'. The source does not say what Jones took from him, so the edge claims the inspiration only. The year places the paired Sex Pistols record.",
+  "year": 1976,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Prince Buster",
+      "title": "Al Capone",
+      "year": 1964
+    },
+    "later": {
+      "artist": "Sex Pistols",
+      "title": "Anarchy in the U.K.",
+      "year": 1976
+    },
+    "whatToListenFor": "'Al Capone' opens with a car crash, gunfire and squealing tyres, then runs on jazzy horns and a piano keeping the ska rhythm. It reached the UK top 20 in 1967, when London teenagers like Steve Jones could hear it. Jones never said exactly what he took from it, so listen to the two side by side and decide for yourself: the attitude, the shouted intro, or nothing you can hear at all."
+  },
+  "explanation": {
+    "age13": "Steve Jones, the Sex Pistols' guitarist, wrote in his autobiography that the Jamaican ska star Prince Buster inspired him. Buster's records were hits in Britain in the 1960s, when Jones was a boy in London.",
+    "adult": "A first-person credit, written decades later, from a punk guitarist to Jamaican ska. It joins the ska line, Prince Buster and through him Madness and the Specials, to London punk."
+  },
+  "tags": []
+}

@@ -1,0 +1,28 @@
+{
+  "id": "e-hankwilliams-willie",
+  "from": "hank-williams",
+  "to": "willie-nelson",
+  "type": "direct",
+  "confidence": "consensus",
+  "evidence": "Wikipedia's article on Willie Nelson lists Hank Williams among his musical influences, with Jimmie Rodgers, Bob Wills, Lefty Frizzell, Ray Price, Ernest Tubb, Hank Snow, Django Reinhardt, Frank Sinatra and Louis Armstrong. The list is the article's summary, not a single statement from Nelson consulted here, so the edge is held at consensus. The year places the paired Nelson record.",
+  "year": 1975,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Hank Williams",
+      "title": "I'm So Lonesome I Could Cry",
+      "year": 1949
+    },
+    "later": {
+      "artist": "Willie Nelson",
+      "title": "Blue Eyes Crying in the Rain",
+      "year": 1975
+    },
+    "whatToListenFor": "Both are sad country songs carried almost entirely by one plain voice. Hank Williams sings over a slow, simple band with steel guitar. Willie Nelson's record is even barer, mostly his voice and his guitar. Listen to how little either singer decorates the melody."
+  },
+  "explanation": {
+    "age13": "Willie Nelson grew up listening to country singers like Hank Williams, and Williams is one of the influences usually listed for him. Nelson went on to write 'Crazy' for Patsy Cline.",
+    "adult": "Williams is one name in a long list of influences that runs from country singers to Django Reinhardt and Frank Sinatra, which says something about how wide Nelson's listening was. The edge connects the two country lines of the map through him."
+  },
+  "tags": []
+}
