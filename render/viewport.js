@@ -10,8 +10,10 @@ function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
 }
 
+// `minScale` is set by the graph from the map's size and the screen's
+// (graph.js, minScaleFor). CONFIG.zoom.min is only the floor under it.
 export function createViewportState() {
-  return { tx: 0, ty: 0, scale: CONFIG.zoom.initial, _cancelAnimation: null };
+  return { tx: 0, ty: 0, scale: CONFIG.zoom.initial, minScale: CONFIG.zoom.min, _cancelAnimation: null };
 }
 
 export function screenToContent(vp, sx, sy) {
@@ -31,7 +33,7 @@ function cancelAnimation(vp) {
 // currently under the (sx, sy) screen point fixed in place.
 export function zoomAt(vp, sx, sy, deltaScale) {
   cancelAnimation(vp);
-  const newScale = clamp(vp.scale * deltaScale, CONFIG.zoom.min, CONFIG.zoom.max);
+  const newScale = clamp(vp.scale * deltaScale, vp.minScale, CONFIG.zoom.max);
   const content = screenToContent(vp, sx, sy);
   vp.scale = newScale;
   vp.tx = sx - content.x * newScale;
@@ -53,7 +55,7 @@ function easeInOutCubic(t) {
 // Calls onFrame() after each mutation (the caller schedules a render from
 // it) and onDone() once the animation completes or is interrupted.
 export function flyTo(vp, contentX, contentY, targetScale, viewportWidthPx, viewportHeightPx, onFrame, onDone) {
-  const clampedScale = clamp(targetScale, CONFIG.zoom.min, CONFIG.zoom.max);
+  const clampedScale = clamp(targetScale, vp.minScale, CONFIG.zoom.max);
   const endTx = viewportWidthPx / 2 - contentX * clampedScale;
   const endTy = viewportHeightPx / 2 - contentY * clampedScale;
   animateTo(vp, endTx, endTy, clampedScale, CONFIG.zoom.flyToDurationMs, onFrame, onDone);

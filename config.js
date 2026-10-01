@@ -156,7 +156,12 @@ export const CONFIG = {
   },
 
   zoom: {
+    // A floor only. The real limit is worked out from the map and the
+    // screen (graph.js, minScaleFor): the populated span can never shrink
+    // smaller than the screen, less fillPaddingPx a side, so zooming out
+    // never leaves a band of empty black beside the map.
     min: 0.2,
+    fillPaddingPx: 70,
     max: 8,
     initial: 1,
     wheelSensitivity: 0.0015,

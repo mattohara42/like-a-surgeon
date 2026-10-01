@@ -6,7 +6,7 @@
 import { CONFIG } from '../config.js';
 import { computeLayout } from './layout.js';
 import { buildLanePlan } from './arrange.js';
-import { createViewportState, transformString, visibleContentRange, screenToContent, flyTo, pullBackIntoView } from './viewport.js';
+import { createViewportState, transformString, visibleContentRange, screenToContent, flyTo, pullBackIntoView, zoomAt } from './viewport.js';
 import { zoomLevelForScale } from './zoomLevels.js';
 import { attachPanZoomHandlers } from './interactions.js';
 import { svgEl, setAttrs } from './svg.js';
@@ -527,7 +527,7 @@ export function createGraph(container, data, callbacks = {}) {
       CONFIG.viewport.fitMinScale,
       Math.min(Math.min(usableW / contentW, usableH / contentH), fitMaxScale),
     );
-    vp.scale = Math.min(CONFIG.zoom.max, Math.max(CONFIG.zoom.min, scale));
+    vp.scale = Math.min(CONFIG.zoom.max, Math.max(vp.minScale, scale));
     const midX = (Math.min(...starts) + Math.max(...starts)) / 2;
     vp.tx = left + (widthPx - left) / 2 - midX * vp.scale;
     vp.ty = pad + Math.max(0, (usableH - contentH * vp.scale) / 2);
@@ -553,7 +553,7 @@ export function createGraph(container, data, callbacks = {}) {
       usableW / Math.max(1, Math.max(...xs) - Math.min(...xs)),
       usableH / Math.max(1, Math.max(...ys) - Math.min(...ys)),
     );
-    vp.scale = Math.min(CONFIG.zoom.max, Math.max(CONFIG.zoom.min, scale));
+    vp.scale = Math.min(CONFIG.zoom.max, Math.max(vp.minScale, scale));
     const midX = (Math.min(...xs) + Math.max(...xs)) / 2;
     const midY = (Math.min(...ys) + Math.max(...ys)) / 2;
     vp.tx = left + (widthPx - left - right) / 2 - midX * vp.scale;
@@ -568,6 +568,28 @@ export function createGraph(container, data, callbacks = {}) {
   // zooming anyway.
   let containerRect = container.getBoundingClientRect();
   const viewWidth = () => Math.max(1, containerRect.width - rightInset());
+
+  // The furthest out the reader may zoom: the populated span (first
+  // marker to last, top lane to bottom) fills the screen above the
+  // transport bar in at least one direction, less the padding. Past that
+  // the map only shrinks into empty black. Worked out from the layout,
+  // so it follows the dataset as it grows.
+  const populated = (() => {
+    const xs = positionedNodes.map((e) => e.pos.x1);
+    const ys = positionedNodes.map((e) => e.pos.y);
+    return xs.length
+      ? { w: Math.max(1, Math.max(...xs) - Math.min(...xs)), h: Math.max(1, Math.max(...ys) - Math.min(...ys)) }
+      : null;
+  })();
+  function minScaleFor() {
+    if (!populated) return CONFIG.zoom.min;
+    const pad = CONFIG.zoom.fillPaddingPx * 2;
+    const w = Math.max(1, containerRect.width - pad);
+    const h = Math.max(1, containerRect.height - CONFIG.viewport.fitBottomInsetPx - pad);
+    const fill = Math.max(w / populated.w, h / populated.h);
+    return Math.min(CONFIG.zoom.max, Math.max(CONFIG.zoom.min, fill));
+  }
+  vp.minScale = minScaleFor();
 
   function flyToContent(contentX, contentY, scale) {
     flyTo(vp, contentX, contentY, scale, viewWidth(), containerRect.height, timedRender);
@@ -923,6 +945,9 @@ export function createGraph(container, data, callbacks = {}) {
   );
   const resizeObserver = new ResizeObserver(() => {
     containerRect = container.getBoundingClientRect();
+    vp.minScale = minScaleFor();
+    // A smaller window can leave the camera further out than now allowed.
+    if (vp.scale < vp.minScale) zoomAt(vp, containerRect.width / 2, containerRect.height / 2, vp.minScale / vp.scale);
     dust.resize();
     scheduleRender();
   });
