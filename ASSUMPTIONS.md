@@ -4387,3 +4387,13 @@ small and worth having in front of Matt alongside everything else here.
   - **'Summer Renaissance' also credits Larry Heard,** who is on the
     map; no edge was drawn because the source did not say which Heard
     record it uses.
+
+- **A331. The Weird Al thread is renamed "Songs Everyone Knew", and the
+  Six Degrees hop rule moves into `CONFIG`.** Matt chose on 2026-10-01 to
+  keep "Six Degrees" for the hop-counting challenge (BACKLOG.md) and give
+  the thread a name for what it teaches. The new title and subtitle are
+  mine, taken from the thread's own intro, and only the two display
+  strings changed: the id `thread-weird-al` stays, so remembered progress
+  survives. `CONFIG.sixDegrees` holds the target and the six-hop limit,
+  and `npm run report` now lists every artist out of reach, with its hop
+  count and edge count, so the gap reads as Track D work.
