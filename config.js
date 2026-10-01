@@ -394,6 +394,14 @@ export const CONFIG = {
     storageKey: 'lineage.threads',
   },
 
+  // Six Degrees of Weird Al (BACKLOG.md). The challenge itself waits on the
+  // M5 gate; `npm run report` already uses these to list who is out of reach.
+  // A hop is any edge, either direction, through any node type.
+  sixDegrees: {
+    target: 'weird-al-yankovic',
+    maxHops: 6,
+  },
+
   transport: {
     msPerYear: 620,
     stepYears: 1,
