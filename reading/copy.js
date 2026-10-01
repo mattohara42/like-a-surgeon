@@ -41,6 +41,8 @@ export const COPY = {
       age13: 'Every line on the map is a claim that one thing changed another. How the line is drawn shows how sure we are.',
       adult: 'Every edge is a claim of influence. Its stroke shows the strength of the evidence behind it.',
     },
+    close: { age13: 'Hide this', adult: 'Hide the confidence key' },
+    reopen: { age13: 'Show how sure we are', adult: 'Show the confidence key' },
     version: { age13: 'Map version', adult: 'Dataset version' },
     updated: { age13: 'last updated', adult: 'last updated' },
   },

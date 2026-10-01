@@ -399,18 +399,33 @@
     background: rgba(6, 10, 22, 0.78); border: 1px solid var(--hairline);
     backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   }
-  .legend-toggle {
-    display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 12px;
-    background: none; border: 0; padding: 0; cursor: pointer; color: var(--ink);
+  .legend-header {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
     font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
   }
-  .legend-toggle:focus-visible { outline: 1px solid rgba(150,180,235,0.7); outline-offset: 4px; }
-  .legend-caret { color: var(--dim); font-size: 14px; letter-spacing: 0; }
+  .legend-close {
+    background: none; border: 0; padding: 0 2px; margin: -4px -4px -4px 0; cursor: pointer;
+    color: var(--dim); font-family: var(--ui); font-size: 20px; line-height: 1; letter-spacing: 0;
+  }
+  .legend-close:hover { color: var(--ink); }
+  /* Closed: only a pill, which still shows the three line styles. */
+  #legend.closed { padding: 0; background: none; border: 0; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .legend-reopen {
+    display: inline-flex; align-items: center; gap: 9px; cursor: pointer;
+    padding: 6px 13px; border-radius: 999px; color: var(--dim);
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase;
+    background: rgba(6, 10, 22, 0.78); border: 1px solid var(--hairline);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    transition: color 200ms, border-color 200ms;
+  }
+  .legend-reopen:hover { color: var(--ink); border-color: rgba(150,180,235,0.4); }
+  .legend-reopen-swatches { display: inline-flex; flex-direction: column; gap: 2px; color: var(--ink); }
+  .legend-reopen-swatches .tier-swatch { width: 18px; height: 4px; }
+  .legend-close:focus-visible, .legend-reopen:focus-visible { outline: 1px solid rgba(150,180,235,0.7); outline-offset: 4px; }
   .legend-intro { font-size: var(--t-legend); line-height: 1.5; color: var(--body); margin: 10px 0 8px; }
   .legend-row { margin: 8px 0 0; }
   .legend-row .tier { font-size: 13px; }
   .legend-explain { font-size: var(--t-legend-note); line-height: 1.45; color: var(--dim); margin: 3px 0 0 30px; }
-  .legend-compact { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 9px; font-size: 12px; }
   .legend-stamp {
     font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--dim);
     margin: 10px 0 0; padding-top: 8px; border-top: 1px solid var(--hairline);
