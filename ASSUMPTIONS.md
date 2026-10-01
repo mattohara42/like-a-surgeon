@@ -4356,3 +4356,17 @@ small and worth having in front of Matt alongside everything else here.
   - **Rated `consensus`:** Sam Cooke to Aretha, Aretha to Whitney
     Houston, Joni Mitchell to Prince, and James Brown to Prince. Each
     rests on an influence list in Wikipedia, not a statement read.
+- **A329. Deaths audit of every artist still marked active.** After
+  A327, all 108 artist records with `activeTo` null were checked
+  against the `death_date` in their English Wikipedia infobox. Two
+  people had died: Rick Derringer (26 May 2025, Ormond Beach, Florida)
+  and Shel Talmy (13 November 2024, Los Angeles). Their `activeTo`
+  becomes 2025 and 2024, with one sentence in each register. The Beach
+  Boys stay active as a band, but Brian Wilson died on 11 June 2025, and
+  that is added to their text because the record is largely about him.
+  Sly Stone's death (June 2025) was already in his band's record.
+  Seven records had no matching article title in the automated pass
+  and were checked by hand (George Clinton, Janet Jackson, Steve Reich,
+  Grand Wizzard Theodore, Chez Damier, African Head Charge and the
+  Honey Drippers); none lists a death. Band records were not checked
+  member by member.
