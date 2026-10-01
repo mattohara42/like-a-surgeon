@@ -1,0 +1,38 @@
+{
+  "id": "hank-williams",
+  "name": "Hank Williams",
+  "sortName": "Williams, Hank",
+  "type": "artist",
+  "lineage": "country",
+  "activeFrom": 1937,
+  "activeTo": 1953,
+  "originCity": "Mount Olive, Alabama",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Fred Rose"
+  ],
+  "hook": "An Alabama singer who learned guitar from a Black street musician, wrote the songs country music still measures itself by, and was dead at 29.",
+  "blurb": {
+    "age13": "Hank Williams was born in 1923 in Mount Olive, a rural community in Alabama. He was born with a spine condition that caused him pain all his life, and it was one reason he later drank heavily and took painkillers. As a boy he learned guitar from Rufus Payne, a Black blues musician known as Tee Tot, and Payne and the country star Roy Acuff shaped how he played and sang. He started on local radio in Montgomery in the late 1930s. His cover of 'Lovesick Blues' (1949) made him a star, and he wrote songs like 'Your Cheatin' Heart' and 'Hey, Good Lookin''. The Grand Ole Opry, country's most important radio show, fired him in 1952 for drinking and missing shows. He died in the back of a car on New Year's Day 1953, aged 29. Ray Charles, Johnny Cash and Bob Dylan all learned from his songs.",
+    "adult": "Born on 17 September 1923 in Mount Olive, Butler County, Alabama, with spina bifida occulta, which caused him lifelong pain and contributed to his later alcohol and drug use. He learned guitar from Rufus 'Tee Tot' Payne, a Black blues musician from Greenville, Alabama, and Payne and Roy Acuff are named as the main influences on his style, so one of country music's founding figures learned from a Black bluesman. He began on Montgomery radio in the late 1930s with the Drifting Cowboys. Fred Rose of Acuff-Rose signed him as a songwriter in 1946, and he joined MGM in 1947. His cover of 'Lovesick Blues' (1949) reached number one on the country chart, and he debuted at the Grand Ole Opry on 11 June 1949 to six encores. He also recorded moral recitations as 'Luke the Drifter' so that jukebox operators would not confuse them with his honky-tonk records. The Opry dismissed him on 11 August 1952 for habitual drunkenness. His last session, on 23 September 1952, produced 'Your Cheatin' Heart' and 'Kaw-Liga'. He died on 1 January 1953, aged 29, his heart failing in the back of a car near Oak Hill, West Virginia, after a doctor had injected him with vitamin B12 and morphine. Elvis Presley, the Beatles, Bob Dylan, Johnny Cash and many others are recorded as influenced by him."
+  },
+  "signatureTracks": [
+    {
+      "title": "Lovesick Blues",
+      "year": 1949,
+      "whyThisOne": "Not his song, but his yodelling version made him a star."
+    },
+    {
+      "title": "Hey, Good Lookin'",
+      "year": 1951,
+      "whyThisOne": "The cheerful one, later recorded by Ray Charles."
+    },
+    {
+      "title": "Your Cheatin' Heart",
+      "year": 1953,
+      "whyThisOne": "From his last session, released after his death."
+    }
+  ]
+}

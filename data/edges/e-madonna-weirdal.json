@@ -6,7 +6,7 @@
   "confidence": "documented",
   "evidence": "'Like a Surgeon' (1985, from 'Dare to Be Stupid') parodies Madonna's 'Like a Virgin' (1984). Yankovic has described Madonna approving the parody without objection, unlike some artists' more complicated reactions to being parodied elsewhere in his catalogue.",
   "year": 1985,
-  "crossLineage": true,
+  "crossLineage": false,
   "trackPair": {
     "earlier": {
       "artist": "Madonna",

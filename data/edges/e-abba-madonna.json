@@ -5,7 +5,7 @@
   "type": "sample",
   "confidence": "documented",
   "year": 2005,
-  "crossLineage": true,
+  "crossLineage": false,
   "evidence": "Wikipedia's article on 'Hung Up' (released 17 October 2005, produced with Stuart Price): it is built on a sample of 'Gimme! Gimme! Gimme! (A Man After Midnight)' (1979). Andersson and Ulvaeus rarely allow samples, and Madonna sent an emissary to Stockholm with a letter asking for permission; they agreed after negotiating a significant share of the royalties.",
   "trackPair": {
     "earlier": {

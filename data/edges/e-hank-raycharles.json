@@ -1,0 +1,28 @@
+{
+  "id": "e-hank-raycharles",
+  "from": "hank-williams",
+  "to": "ray-charles",
+  "type": "cover",
+  "confidence": "documented",
+  "year": 1962,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Modern Sounds in Country and Western Music' (recorded February 1962, released March 1962 on ABC-Paramount): the album includes two Hank Williams songs, 'You Win Again' and 'Hey, Good Lookin''. It became one of the best-selling albums by a Black musician of its time and one of the best-selling country albums, and its mix of soul and country is described as challenging racial barriers in popular music at the height of the Civil Rights Movement.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Hank Williams",
+      "title": "Hey, Good Lookin'",
+      "year": 1951
+    },
+    "later": {
+      "artist": "Ray Charles",
+      "title": "Hey, Good Lookin'",
+      "year": 1962
+    },
+    "whatToListenFor": "Williams's version is a fast, bouncing honky-tonk song with fiddle and steel guitar. Charles turns it into big-band swing: horns, a walking bass, and a voice that plays with the rhythm instead of riding on it. Listen for the melody, which barely changes, and for everything around it, which changes completely."
+  },
+  "explanation": {
+    "age13": "In 1962 Ray Charles made an album of country songs, including two by Hank Williams. It was one of the best-selling records of the year, at a time when country music was seen as white music and soul as Black music.",
+    "adult": "A soul singer taking the songbook of a white country writer, who had learned guitar from a Black blues musician, back across the colour line. Wikipedia also notes that in making it Charles became one of the first African-American musicians to have complete artistic control over his own recording career."
+  },
+  "tags": []
+}

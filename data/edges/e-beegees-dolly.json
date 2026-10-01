@@ -1,0 +1,30 @@
+{
+  "id": "e-beegees-dolly",
+  "from": "bee-gees",
+  "to": "dolly-parton",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1983,
+  "crossLineage": true,
+  "evidence": "Wikipedia's articles on Dolly Parton and on 'Islands in the Stream': the song was written by the Bee Gees, first as an R&B song, and produced by Barry Gibb. Robin Gibb said it was written as a Tamla-style soul song with a Marvin Gaye feel. Recorded by Kenny Rogers and Parton, it reached number one on the Billboard Hot 100 and also topped the country and adult contemporary charts.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Bee Gees",
+      "title": "Stayin' Alive",
+      "year": 1977
+    },
+    "later": {
+      "artist": "Kenny Rogers and Dolly Parton",
+      "title": "Islands in the Stream",
+      "year": 1983
+    },
+    "whatToListenFor": "Listen for the Bee Gees inside a country duet: the light, bouncing pop beat and the stacked harmonies on the chorus are theirs, and the song moves like a Motown record. Rogers and Parton sing it as a country duet, trading lines, and the two styles fit."
+  },
+  "explanation": {
+    "age13": "The Bee Gees wrote 'Islands in the Stream' as a soul song, and Barry Gibb produced it for the country singers Kenny Rogers and Dolly Parton. It went to number one in 1983.",
+    "adult": "A song that crosses three lanes in one record: written as Motown-style soul by a pop group, produced as a pop record, and sung as a country duet."
+  },
+  "tags": [
+    "production"
+  ]
+}

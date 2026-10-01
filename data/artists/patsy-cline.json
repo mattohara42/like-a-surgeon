@@ -1,0 +1,38 @@
+{
+  "id": "patsy-cline",
+  "name": "Patsy Cline",
+  "sortName": "Cline, Patsy",
+  "type": "artist",
+  "lineage": "country",
+  "activeFrom": 1954,
+  "activeTo": 1963,
+  "originCity": "Winchester, Virginia",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Owen Bradley"
+  ],
+  "hook": "A Virginia singer whose producer gave her strings and backing choirs to sell country to pop listeners, and whose biggest record was a jazz-chorded song by an unknown writer called Willie Nelson.",
+  "blurb": {
+    "age13": "Patsy Cline was born Virginia Patterson Hensley in Winchester, Virginia, in 1932. Her family was poor and she worked in a chicken factory as a girl. She first sang on local radio at 15. Her first record deal, in 1954, gave her less than three per cent of the money her records made. In 1960 she moved to Decca, where the producer Owen Bradley surrounded her with smooth backing singers, piano and strings, a style called the Nashville sound, and she had hits on both the country and pop charts. 'Crazy' (1961) was written by Willie Nelson, then an unknown songwriter, who taught her the song himself. She died in a plane crash in March 1963, aged 30. In 1973 she became the first woman in the Country Music Hall of Fame.",
+    "adult": "Born Virginia Patterson Hensley in Winchester on 8 September 1932, she first sang on WINC radio at 15. Her 1954 contract with 4 Star gave the label the great majority of the revenue, with Cline receiving under three per cent in royalties. She moved to Nashville in 1958, joined the Grand Ole Opry, and signed to Decca in 1960, where Owen Bradley's production, with the Jordanaires, Floyd Cramer's piano and orchestral backing, made her one of the first country singers to cross over to pop. 'Crazy' (recorded August and September 1961) was by Willie Nelson, whom she had at first refused to record; he taught it to her in her living room, singing behind the beat, and Bradley asked her to sing it in her own style. It became, by 1996, the most played song on American jukeboxes. She was killed with Cowboy Copas, Hawkshaw Hawkins and her manager Randy Hughes in a plane crash near Camden, Tennessee, on 5 March 1963. In 1973 she became the first woman inducted into the Country Music Hall of Fame."
+  },
+  "signatureTracks": [
+    {
+      "title": "Walkin' After Midnight",
+      "year": 1957,
+      "whyThisOne": "Her first hit, from the 4 Star years."
+    },
+    {
+      "title": "I Fall to Pieces",
+      "year": 1961,
+      "whyThisOne": "Her first hit with Owen Bradley: the Nashville sound."
+    },
+    {
+      "title": "Crazy",
+      "year": 1961,
+      "whyThisOne": "Willie Nelson's song, with jazz chords no country singer wanted."
+    }
+  ]
+}
