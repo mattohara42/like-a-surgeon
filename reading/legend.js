@@ -1,9 +1,11 @@
 // The confidence legend and the version stamp (docs/m3-architecture.md
 // section 5).
 //
-// Permanent, never hidden: collapsed, it is still a three-swatch key. The
-// swatches come from tierSwatch, which reads the same CONFIG.edge stroke
-// values the map draws with, so the key cannot drift from the map.
+// The reader can put it away (Matt's review, A311). Closed, it is a small
+// pill in the corner that still shows the three line styles, so the key
+// is one click from anywhere. The swatches come from tierSwatch, which
+// reads the same CONFIG.edge stroke values the map draws with, so the key
+// cannot drift from the map.
 //
 // The tiers are the curriculum (SPEC.md): a reader learning that "sounds
 // obviously true" and "is actually documented" are different things gets
@@ -53,51 +55,69 @@ export function createLegend(root, meta) {
     if (meta.version) parts.push(`${pick(COPY.legend.version, register)} ${meta.version}`);
     const date = readableDate(meta.generatedAt);
     if (date) parts.push(`${pick(COPY.legend.updated, register)} ${date}`);
-    // The way to the card view from the map (Q39: each view links to the other).
-    const cards = h('a', { href: '?view=cards', class: 'legend-cards' }, pick(COPY.cards.toCards, register));
-    return h('p', { class: 'legend-stamp' }, parts.length ? `${parts.join(' · ')} · ` : '', cards);
+    // The link to the card view moved to its own place (Q41, main.js).
+    return parts.length ? h('p', { class: 'legend-stamp' }, parts.join(' · ')) : null;
+  }
+
+  function setOpen(next) {
+    open = next;
+    saveOpen(open);
+    draw();
+    // Keep focus on the control that replaced the one just pressed.
+    root.querySelector(open ? '.legend-close' : '.legend-reopen')?.focus();
   }
 
   function draw() {
-    const toggle = h(
-      'button',
-      {
-        type: 'button',
-        class: 'legend-toggle',
-        'aria-expanded': String(open),
-        'aria-controls': 'legend-body',
-        onClick: () => {
-          open = !open;
-          saveOpen(open);
-          draw();
-        },
-      },
-      h('span', {}, pick(COPY.legend.title, register)),
-      h('span', { class: 'legend-caret', 'aria-hidden': 'true' }, open ? '−' : '+'),
-    );
-
-    const body = open
-      ? h(
-          'div',
-          { id: 'legend-body' },
-          h('p', { class: 'legend-intro' }, pick(COPY.legend.intro, register)),
-          TIERS.map((tier) =>
-            h(
-              'div',
-              { class: 'legend-row' },
-              h('span', { class: 'tier' }, tierSwatch(tier), pick(COPY.tiers[tier].name, register)),
-              h('p', { class: 'legend-explain' }, pick(COPY.tiers[tier].explain, register)),
-            ),
-          ),
-        )
-      : h(
-          'div',
-          { id: 'legend-body', class: 'legend-compact' },
-          TIERS.map((tier) => h('span', { class: 'tier' }, tierSwatch(tier), pick(COPY.tiers[tier].name, register))),
-        );
-
     root.classList.toggle('open', open);
-    root.replaceChildren(toggle, body, stamp());
+    root.classList.toggle('closed', !open);
+    if (!open) {
+      root.replaceChildren(
+        h(
+          'button',
+          {
+            type: 'button',
+            class: 'legend-reopen',
+            'aria-expanded': 'false',
+            'aria-label': pick(COPY.legend.reopen, register),
+            onClick: () => setOpen(true),
+          },
+          h('span', { class: 'legend-reopen-swatches', 'aria-hidden': 'true' }, TIERS.map((tier) => tierSwatch(tier))),
+          h('span', {}, pick(COPY.legend.title, register)),
+        ),
+      );
+      return;
+    }
+
+    const header = h(
+      'div',
+      { class: 'legend-header' },
+      h('span', { class: 'legend-title' }, pick(COPY.legend.title, register)),
+      h(
+        'button',
+        {
+          type: 'button',
+          class: 'legend-close',
+          'aria-expanded': 'true',
+          'aria-label': pick(COPY.legend.close, register),
+          onClick: () => setOpen(false),
+        },
+        '×',
+      ),
+    );
+    const body = h(
+      'div',
+      { id: 'legend-body' },
+      h('p', { class: 'legend-intro' }, pick(COPY.legend.intro, register)),
+      TIERS.map((tier) =>
+        h(
+          'div',
+          { class: 'legend-row' },
+          h('span', { class: 'tier' }, tierSwatch(tier), pick(COPY.tiers[tier].name, register)),
+          h('p', { class: 'legend-explain' }, pick(COPY.tiers[tier].explain, register)),
+        ),
+      ),
+    );
+    root.replaceChildren(header, body, stamp());
   }
 
   root.setAttribute('role', 'region');

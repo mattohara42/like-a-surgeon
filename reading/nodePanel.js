@@ -57,17 +57,22 @@ function para(text, cls = 'body') {
   return text ? h('p', { class: cls }, text) : null;
 }
 
+// Coloured as the map draws the line: a dot in the other record's lineage
+// colour, and the edge's own swatch running cause colour to effect colour
+// in its tier's stroke, so a row can be matched to its line by eye.
 export function connectionRow(edge, other, ctx) {
+  const color = lineageColor(other.lineage);
   return h(
     'button',
-    { type: 'button', class: 'link-row', onClick: () => ctx.goEdge(edge.id) },
+    { type: 'button', class: 'link-row', style: `--link-color:${color}`, onClick: () => ctx.goEdge(edge.id) },
+    h('span', { class: 'link-dot', 'aria-hidden': 'true' }),
     h('span', { class: 'link-name' }, other.name),
     h(
       'span',
       { class: 'link-meta' },
       EDGE_TYPE_LABELS[edge.type] ?? edge.type,
       edge.year ? ` · ${edge.year}` : '',
-      tierSwatch(edge.confidence),
+      tierSwatch(edge.confidence, { from: lineageColor(edge.from.lineage), to: lineageColor(edge.to.lineage) }),
     ),
   );
 }
@@ -229,11 +234,13 @@ export function renderNodePanel(node, ctx) {
     h('h2', {}, node.name),
     h('div', { class: 'meta' }, metaLine(node).filter(Boolean).join(' · ')),
     para(r.hook, 'hook'),
+    // Near the top, so what this record touched is found without
+    // scrolling (Matt's review, A311).
+    h('div', { class: 'connections' }, connectionSections(node, ctx)),
     para(pick(r.blurb, reg)),
     node.startYear === null ? para(pick(COPY.headings.offMap, reg), 'note') : null,
     producerButton(node, ctx),
     ctx.threadStops ?? null,
     kindSections ? kindSections() : null,
-    connectionSections(node, ctx),
   );
 }

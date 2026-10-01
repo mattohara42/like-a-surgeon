@@ -59,6 +59,14 @@ export const CONFIG = {
       mid: { halfWidthPx: 70, heightPx: 18 },
       detail: { halfWidthPx: 90, heightPx: 26 },
     },
+    // The target is narrowed to the node's own name when that is shorter
+    // than halfWidthPx, plus this much either side.
+    hitNamePadPx: 6,
+    // How long the pointer must rest on a node before its edges light.
+    // Passing over nodes lights nothing: at mid zoom the dots sit closer
+    // than their names are wide, and lighting on every enter flashed whole
+    // edge sets on and off as the mouse moved.
+    hoverDwellMs: 160,
     radius: { collapsed: 3, mid: 7, detail: 10 },
     strokeWidth: 1.5,
     hoverStrokeWidth: 3,
@@ -148,7 +156,12 @@ export const CONFIG = {
   },
 
   zoom: {
+    // A floor only. The real limit is worked out from the map and the
+    // screen (graph.js, minScaleFor): the populated span can never shrink
+    // smaller than the screen, less fillPaddingPx a side, so zooming out
+    // never leaves a band of empty black beside the map.
     min: 0.2,
+    fillPaddingPx: 70,
     max: 8,
     initial: 1,
     wheelSensitivity: 0.0015,
@@ -204,6 +217,24 @@ export const CONFIG = {
   //   machines - the substrate: floor, markers, and the beams rising off it
   //
   // Persisted per reader in localStorage under `storageKey`.
+  // The control dock, top left (Q42, A312): one coloured button per row
+  // of controls, each opening its row sideways. `el` is the row's element
+  // in index.html. The colours are the controls' own, not lineage
+  // colours, so none of them claims a lane.
+  dock: {
+    // An open row slides back in after this long without being used. The
+    // pointer resting on it, or focus inside it, holds it open.
+    autoCloseMs: 4000,
+    slideMs: 220,
+    items: [
+      { key: 'show', el: 'layers', glyph: '◎', color: '#3ddfa4' },
+      { key: 'read', el: 'registers', glyph: 'Aa', color: '#f3c46a' },
+      { key: 'arrange', el: 'arrange', glyph: '☰', color: '#b48cff' },
+      { key: 'sound', el: 'sound', glyph: '♪', color: '#ff8a6b' },
+      { key: 'spotlight', el: 'lens', glyph: '◐', color: '#5fa8ff' },
+    ],
+  },
+
   layers: {
     defaults: { scenes: true, labels: false, machines: true },
     storageKey: 'lineage.layers.v1',
