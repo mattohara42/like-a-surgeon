@@ -1,0 +1,28 @@
+{
+  "id": "e-sly-miles",
+  "from": "sly-and-the-family-stone",
+  "to": "miles-davis",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1972,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'On the Corner' names the funk of Sly Stone and James Brown, beside Stockhausen, Ornette Coleman and Paul Buckmaster, as the album's sources.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Sly and the Family Stone",
+      "title": "Thank You (Falettinme Be Mice Elf Agin)",
+      "year": 1969
+    },
+    "later": {
+      "artist": "Miles Davis",
+      "title": "On the Corner",
+      "year": 1972
+    },
+    "whatToListenFor": "Larry Graham's bass on 'Thank You' is thumped and plucked, a short pattern repeated until it becomes the whole song. On 'On the Corner' Michael Henderson's bass does the same job: one figure, repeated, with everything else built on top. Listen to the bass alone on each record."
+  },
+  "explanation": {
+    "age13": "Miles Davis was a jazz musician, but by the early 1970s he was listening to funk bands like Sly and the Family Stone. On 'On the Corner' the bass plays one short pattern again and again, the way funk bass does.",
+    "adult": "The funk side of 'On the Corner'. It connects Sly, already on the map as a quarry for hip-hop, with the album now often named as a hip-hop ancestor itself."
+  },
+  "tags": []
+}

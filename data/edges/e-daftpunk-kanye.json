@@ -1,0 +1,28 @@
+{
+  "id": "e-daftpunk-kanye",
+  "from": "daft-punk",
+  "to": "kanye-west",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 2007,
+  "crossLineage": true,
+  "evidence": "Wikipedia's articles on Daft Punk and on Kanye West: 'Stronger' (2007) samples 'Harder, Better, Faster, Stronger' (2001), and is credited with encouraging other hip-hop artists to use house and electronic music.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Daft Punk",
+      "title": "Harder, Better, Faster, Stronger",
+      "year": 2001
+    },
+    "later": {
+      "artist": "Kanye West",
+      "title": "Stronger",
+      "year": 2007
+    },
+    "whatToListenFor": "Listen for the robot voice. Daft Punk's vocoder chant becomes the hook of 'Stronger', pitched and chopped, over heavier drums. A French house record that itself sampled an old funk song is now the base of an American rap hit."
+  },
+  "explanation": {
+    "age13": "Kanye West built his 2007 hit 'Stronger' on a sample of Daft Punk's 'Harder, Better, Faster, Stronger'. After it, many more rappers started using dance music in their songs.",
+    "adult": "The sample chain loops back: Daft Punk built 'Harder, Better, Faster, Stronger' on a funk sample, and West took it back into Black American music, now as house."
+  },
+  "tags": []
+}

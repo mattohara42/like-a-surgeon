@@ -1,0 +1,28 @@
+{
+  "id": "e-abba-madonna",
+  "from": "abba",
+  "to": "madonna",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 2005,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Hung Up' (released 17 October 2005, produced with Stuart Price): it is built on a sample of 'Gimme! Gimme! Gimme! (A Man After Midnight)' (1979). Andersson and Ulvaeus rarely allow samples, and Madonna sent an emissary to Stockholm with a letter asking for permission; they agreed after negotiating a significant share of the royalties.",
+  "trackPair": {
+    "earlier": {
+      "artist": "ABBA",
+      "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
+      "year": 1979
+    },
+    "later": {
+      "artist": "Madonna",
+      "title": "Hung Up",
+      "year": 2005
+    },
+    "whatToListenFor": "Listen for the fast, climbing synthesizer riff that opens the ABBA record. On 'Hung Up' it is the hook of the whole song, looped under a steady four-to-the-floor club beat and a ticking clock. Notice how little else Madonna took: one riff, used again and again."
+  },
+  "explanation": {
+    "age13": "ABBA's songwriters almost never let anyone sample their music. Madonna sent someone to Stockholm with a letter asking to use the synthesizer riff from 'Gimme! Gimme! Gimme!'. They said yes, and 'Hung Up' went to number one in 41 countries.",
+    "adult": "A sample cleared by persuasion and a royalty share, from writers whose refusals are the rule. It links a Swedish pop group to the club-pop line on this map that runs back through Madonna to Nile Rodgers and disco."
+  },
+  "tags": []
+}

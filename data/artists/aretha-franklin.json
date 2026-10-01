@@ -1,0 +1,36 @@
+{
+  "id": "aretha-franklin",
+  "name": "Aretha Franklin",
+  "sortName": "Franklin, Aretha",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1956,
+  "activeTo": 2018,
+  "originCity": "Memphis, Tennessee",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": ["Jerry Wexler", "Arif Mardin", "Tom Dowd"],
+  "hook": "A Detroit preacher's daughter whose first label never knew what to do with her gospel voice, and whose second sent her to Muscle Shoals to use it, which produced 'Respect'.",
+  "blurb": {
+    "age13": "Aretha Franklin was born in Memphis in 1942 and grew up in Detroit, where her father was a famous Baptist preacher. She sang gospel in his church as a girl, and singers like Ray Charles and Sam Cooke visited the family home. From 1960 she recorded for Columbia, which had her sing jazz and old standards, and it did not go well. In 1966 the producer Jerry Wexler signed her to Atlantic and built the records around her gospel singing and piano. In January 1967 he took her to a studio in Muscle Shoals, Alabama, to record with its band. That year her version of Otis Redding's 'Respect' became a number one hit and an anthem for the civil rights and women's movements. In 1987 she became the first woman in the Rock and Roll Hall of Fame. She died in 2018.",
+    "adult": "Born in Memphis on 25 March 1942 and raised in Detroit, where her father C. L. Franklin was pastor of New Bethel Baptist Church and a nationally known preacher; Ray Charles and Sam Cooke were among the musicians who visited the house. Columbia signed her at 18 and spent six years recording her in jazz, standards and blues without finding her a hit; John Hammond later said the label did not understand her gospel background. Jerry Wexler brought her to Atlantic in November 1966 with the opposite plan, to build around the gospel. The first session, at Rick Hall's FAME studio in Muscle Shoals in January 1967, produced 'I Never Loved a Man (The Way I Love You)' and ended after one day in a fight involving her then husband and manager Ted White and Hall; the work moved to New York with the Muscle Shoals players flown in. 'Respect' (April 1967), Otis Redding's song rewritten from a man's demand into hers, became a civil rights and feminist anthem. 'Amazing Grace' (recorded January 1972) returned her to church. First woman inducted into the Rock and Roll Hall of Fame (1987). Died in Detroit on 16 August 2018."
+  },
+  "signatureTracks": [
+    {
+      "title": "I Never Loved a Man (The Way I Love You)",
+      "year": 1967,
+      "whyThisOne": "The one song finished at Muscle Shoals before the session fell apart: gospel piano and a Southern rhythm section."
+    },
+    {
+      "title": "Respect",
+      "year": 1967,
+      "whyThisOne": "Otis Redding's song, made hers, and the record that made her a star."
+    },
+    {
+      "title": "Bridge over Troubled Water",
+      "year": 1971,
+      "whyThisOne": "Paul Simon's gospel-inspired song taken back into church. Simon called it his favourite cover of anything he wrote."
+    }
+  ]
+}

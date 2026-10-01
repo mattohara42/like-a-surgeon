@@ -1,0 +1,36 @@
+{
+  "id": "miles-davis",
+  "name": "Miles Davis",
+  "sortName": "Davis, Miles",
+  "type": "artist",
+  "lineage": "jazz",
+  "activeFrom": 1944,
+  "activeTo": 1991,
+  "originCity": "Alton, Illinois",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": ["Teo Macero"],
+  "hook": "A jazz trumpeter who made the best-selling jazz album ever, then plugged in, borrowed from Sly Stone and Stockhausen, and let his producer build albums out of spliced tape.",
+  "blurb": {
+    "age13": "Miles Davis was born in Alton, Illinois, in 1926 and grew up in East St. Louis. He played trumpet in the New York jazz scene from the 1940s and kept changing his music every few years. 'Kind of Blue' (1959) has sold more than five million copies in the US, more than any other jazz album. At the end of the 1960s he started using electric instruments and rock and funk rhythms. On 'Bitches Brew' (1970) and 'On the Corner' (1972) his producer, Teo Macero, cut the tapes of long jam sessions into pieces and joined them back together, which is close to how sampling and editing work today. He listened to Sly Stone, James Brown and the composer Karlheinz Stockhausen. Many jazz fans hated it. He died in 1991.",
+    "adult": "Born in Alton on 26 May 1926 and raised in East St. Louis. He came up in New York's bebop scene in the mid-1940s, and across the next two decades recorded for Prestige and then Columbia, leading some of the most influential small groups in jazz. 'Kind of Blue' (August 1959) is certified five times platinum in the US. 'Bitches Brew' (recorded August 1969, released March 1970) and 'On the Corner' (recorded mid-1972) were assembled by Teo Macero from hours of studio jams, with tape loops, delays and echo added in post-production: the title track of 'Bitches Brew' has fifteen edits. Paul Buckmaster introduced Davis to Stockhausen's music in 1972, and Davis described 'On the Corner' as Stockhausen plus funk plus Ornette Coleman, with Sly Stone and James Brown audible in the bass and drums. It sold poorly and was panned, and is now credited as an ancestor of hip-hop, drum and bass and electronica, a reassessment worth treating with some care, since it is mostly made in hindsight. Ill health kept him from performing from 1975 to 1980. He recorded for Warner Bros. from 1986 and died in Santa Monica on 28 September 1991."
+  },
+  "signatureTracks": [
+    {
+      "title": "So What",
+      "year": 1959,
+      "whyThisOne": "The first track on 'Kind of Blue': a tune built on two scales instead of a run of chords."
+    },
+    {
+      "title": "Pharaoh's Dance",
+      "year": 1970,
+      "whyThisOne": "From 'Bitches Brew', with nineteen tape edits: a piece made in the editing as much as in the playing."
+    },
+    {
+      "title": "On the Corner",
+      "year": 1972,
+      "whyThisOne": "Funk bass and drums looping under wah-wah trumpet: his own 'Stockhausen plus funk'."
+    }
+  ]
+}

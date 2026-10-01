@@ -4122,3 +4122,136 @@ small and worth having in front of Matt alongside everything else here.
     otherwise hear nothing and find no control to undo it. The engine
     keeps `setMuted` for `tools/audio-check.js`, which still checks
     that the mute stage silences the output.
+
+## Added with the big-names batch
+
+- **A318. "That big batch" is the whole list from chat.** Matt asked
+  about Fleetwood Mac and Paul Simon, was given a table of missing big
+  names, and asked for "that big batch". Read as all of them, added in
+  themed commits on one branch, each researched from the English
+  Wikipedia articles named in its edges' evidence.
+- **A319. Fleetwood Mac, Paul Simon, Bob Marley and Bob Dylan.** Four
+  artists and 10 edges.
+  - **Fleetwood Mac is `endUnknown`.** Christine McVie died in 2022
+    and Nicks said in 2024 she did not believe the band would continue,
+    but no end has been announced, so `activeTo` is null with the flag
+    rather than a guessed year.
+  - **`e-chess-fleetwoodmac` is a label edge under A69.** Marshall
+    Chess opened the closing studio to the session and Willie Dixon
+    assembled the label's players, so the label's decision made the
+    record. The trackPair's earlier side is 'Hoochie Coochie Man',
+    chosen because Dixon wrote it and Spann played on it, not because
+    Fleetwood Mac covered it.
+  - **Paul Simon reaches Kingston as a scene edge,** from
+    `kingston-dub`, since he used the scene's studio and session
+    players. The scene's name is about sound systems and dub, which
+    'Mother and Child Reunion' is not; it is the only Kingston scene on
+    the map. Graceland has no edge: none of the South African musicians
+    are on the map yet. The Los Lobos credit dispute is stated as a
+    dispute in the adult text.
+  - **Marley is in the `dub` lane and joins `kingston-dub`'s
+    `memberIds`,** beside Perry and the other Kingston artists, since
+    there is no reggae lane. The node is the group, named "Bob Marley
+    and the Wailers", from 1963 to his death in 1981.
+  - **Dylan's Newport 1965 booing is told as disputed** in the adult
+    text, per accuracy rule 4.
+  - **`e-littlerichard-dylan` is `documented` for the ambition only.**
+    The yearbook caption is the evidence; its trackPair is a reading,
+    and the adult text says so.
+- **A320. Ray Charles, Aretha Franklin, Marvin Gaye, Stevie Wonder and
+  TONTO.** Four artists, one machine and 7 edges.
+  - **Soul goes in the `funk` lane,** where Isaac Hayes and Curtis
+    Mayfield already are. There is no soul lane, and adding one would
+    mean moving those records too.
+  - **`e-raycharles-aretha` is `consensus`.** The visits to her
+    father's house are documented; the musical debt is the standard
+    history of soul, not a statement read for the edge.
+  - **TONTO is a machine record with `releasedYear` 1971,** the year of
+    'Zero Time', its first record. It was never sold, so it has no
+    release in the usual sense, and its `priceStory` says so. Its
+    `discontinuedYear` is null because it is still playable in Calgary.
+  - **Stevie Wonder has no `labels` entry.** He signed to Motown in
+    1961, but whether he is still on Motown now was not confirmed, so
+    no end year could be given and the entry was left out.
+  - **`e-steviewonder-coolio` is type `sample` for an interpolation.**
+    The schema has no interpolation type; the explanation says which
+    it is. See BACKLOG for the Coolio record's wording.
+  - **Marvin Gaye's `activeFrom` is 1961,** his first solo single,
+    though he sang with the Moonglows before that.
+- **A321. Miles Davis, Black Sabbath, Pink Floyd and Kate Bush.** Four
+  artists and 6 edges. Kate Bush moved up from the art-pop group
+  because her strongest link is Gilmour.
+  - **Pink Floyd is `endUnknown`.** No formal split; the last studio
+    album was 2014 and Gilmour and Mason released a single as Pink
+    Floyd in 2022.
+  - **No Beatles to Pink Floyd edge.** The bands recorded next door to
+    each other at Abbey Road in 1967 and Floyd watched 'Lovely Rita' on
+    21 March, but no source read claims influence either way, so it is
+    told in the blurb only.
+  - **No UFO Club scene edge.** `swinging-london` is the blues-boom
+    scene and ends in 1967; the psychedelic underground would be its
+    own scene, and Pink Floyd would be its only member so far.
+  - **`e-blacksabbath-melvins` is `consensus`, with Osborne's own
+    account (Black Flag) stated beside it,** per accuracy rule 4.
+  - **`e-pinkfloyd-katebush` is a `production` edge for patronage.**
+    Gilmour paid for the demo. Its trackPair's earlier record only
+    places Gilmour in time, and the adult text says there is no musical
+    claim.
+  - **Miles Davis's 'On the Corner' as a hip-hop ancestor** is reported
+    in the adult text as a hindsight reassessment, not as an edge.
+- **A322. Bee Gees, ABBA and Johnny Cash.** Three artists and 4 edges.
+  - **Lanes.** The Bee Gees go in `funk`, beside Donna Summer and the
+    rest of disco. ABBA go in `other`, since there is no pop lane and
+    they are neither funk nor rock. Cash goes in `rock`, beside Elvis
+    and Sun Records. Whether these lanes should change is Q43.
+  - **No edge for the 'Stayin' Alive' tape loop.** It is the best
+    story on the Bee Gees record (a hand-made drum loop in 1977) and it
+    is told in the adult blurb, but the map has no tape-loop technique
+    node to draw it from. A candidate for a later machine or technique
+    record, beside the breaks thread.
+  - **No ABBA and Phil Spector edge.** Wikipedia describes Tretow's
+    "wall of sound" experiments without crediting Spector, so the
+    phrase is used and Spector is not.
+  - **Cash's "go home and sin" story is told as denied,** per accuracy
+    rules 1 and 4, and is not quoted.
+  - **`e-beatles-beegees` carries the `labels` tag,** since Atco's
+    blank-label promotion is part of the story.
+- **A323. Björk, Radiohead, Daft Punk and the Smiths.** Four artists
+  and 12 edges.
+  - **Aphex Twin and Autechre each get an edge to Radiohead** instead
+    of one Warp label edge, since A69 needs a decision of the label's
+    and the 'Kid A' influence is the records.
+  - **Björk and Daft Punk reach Chicago house through `consensus`
+    scene edges.** Björk's statement is about house in general, heard
+    in London; Daft Punk's 'Teachers' names individuals, but the source
+    read did not list them, so no per-artist edges were drawn.
+  - **Björk's `activeFrom` is 1977,** the album she made as a child,
+    though her career on this map starts with 'Debut' in 1993.
+  - **Morrissey's support for For Britain is in the Smiths' adult and
+    teen text,** per Q2 and CLAUDE.md's rule on conduct, stated as
+    what he said and did, with the reaction, from Wikipedia's Morrissey
+    article. The node is the band, so it is one sentence, not a hook.
+  - **`e-spector-smiths` is `production` without a credit.** Marr names
+    Spector's approach as the idea behind his records; Spector never
+    worked with them.
+- **A324. The Notorious B.I.G., Jay-Z, Kanye West, Missy Elliott and
+  Timbaland.** Five artists and 11 edges. Timbaland is his own node
+  rather than shared with Missy Elliott, since he also produced Jay-Z
+  and Aaliyah and the map's producers are nodes elsewhere.
+  - **`e-kane-jayz` is `consensus`.** Jay-Z is widely called Kane's
+    hype man; Kane says he only made cameo appearances, and the adult
+    text says both.
+  - **`e-jayz-nas` is `reaction-against`, from Jay-Z to Nas,** since
+    'Ether' answers 'Takeover'. The Tupac clip that opens 'Ether' is
+    described, not quoted.
+  - **Kanye West's antisemitic statements and the Adidas termination
+    are in the hook and both registers,** per Q2 and CLAUDE.md's rule
+    on conduct, as fact and without adjectives. They are in the hook
+    because they are part of why his standing changed.
+  - **`e-steviewonder-kanye` documents an ambition,** West's stated
+    aim to match two Wonder albums. The trackPair is a reading and the
+    adult text says so.
+  - **Not drawn:** 'Takeover' interpolates Bowie's 'Fame' (a possible
+    Bowie edge), and 'Big Pimpin'' and its copyright case over the
+    Egyptian song 'Khosara Khosara'. Both are fine candidates for a
+    later pass.

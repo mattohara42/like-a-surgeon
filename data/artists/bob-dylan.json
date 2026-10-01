@@ -1,0 +1,36 @@
+{
+  "id": "bob-dylan",
+  "name": "Bob Dylan",
+  "sortName": "Dylan, Bob",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1961,
+  "activeTo": null,
+  "originCity": "Duluth, Minnesota",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": ["John Hammond", "Tom Wilson", "Bob Johnston"],
+  "hook": "A folk singer who wanted to be Little Richard, taught the Beatles that a pop song could be about anything, went electric in 1965, and later played his own song the way Jimi Hendrix had.",
+  "blurb": {
+    "age13": "Bob Dylan was born Robert Zimmerman in Duluth, Minnesota, in 1941 and grew up in Hibbing. In his school yearbook he wrote that his ambition was to join Little Richard. In 1961 he moved to New York and became the best-known singer in the folk music scene, writing songs about war, racism and his own life. The Beatles listened to his records over and over, and John Lennon started writing songs that sounded like him. In July 1965 he played with a loud electric band at the Newport Folk Festival, and some of the folk crowd were angry about it. That year his six-minute 'Like a Rolling Stone' was a hit. In 2016 he won the Nobel Prize in Literature. He is still recording and touring.",
+    "adult": "Born in Duluth on 24 May 1941 and raised in Hibbing, where his 1959 yearbook gives his ambition as joining Little Richard. He arrived in New York in January 1961 and was signed to Columbia by John Hammond that autumn. His early-1960s records set new terms for what a pop lyric could cover, and George Harrison later described the Beatles wearing his records out; Lennon called 'You've Got to Hide Your Love Away' (February 1965) his own Dylan period. He played his first electric set at the Newport Folk Festival on 25 July 1965, a night whose audience reaction is still argued over: the story of mass booing is widely repeated, and accounts differ on how much there was and whether it was about the electric sound or the short set and poor mix. 'Like a Rolling Stone', produced by Tom Wilson and released that summer, reached number two. Jimi Hendrix's 1968 recording of 'All Along the Watchtower' changed Dylan's own approach to the song, which he has performed in Hendrix's arrangement since 1974. Nobel Prize in Literature, 2016. He has toured almost continuously since the late 1980s."
+  },
+  "signatureTracks": [
+    {
+      "title": "Blowin' in the Wind",
+      "year": 1963,
+      "whyThisOne": "From 'The Freewheelin' Bob Dylan', the album the Beatles wore out."
+    },
+    {
+      "title": "Like a Rolling Stone",
+      "year": 1965,
+      "whyThisOne": "Six minutes long, electric, and a hit: the record that made the folk singer a rock star."
+    },
+    {
+      "title": "All Along the Watchtower",
+      "year": 1967,
+      "whyThisOne": "His quiet acoustic original, to set beside Hendrix's version a few months later."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "e-dylan-beatles",
+  "from": "bob-dylan",
+  "to": "the-beatles",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1965,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'You've Got to Hide Your Love Away' (recorded 18 February 1965): Lennon described the song as from his Dylan period, and McCartney described it as John doing Dylan. Wikipedia's Bob Dylan article cites George Harrison on the band playing Dylan's records until they wore them out.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Bob Dylan",
+      "title": "Blowin' in the Wind",
+      "year": 1963
+    },
+    "later": {
+      "artist": "The Beatles",
+      "title": "You've Got to Hide Your Love Away",
+      "year": 1965
+    },
+    "whatToListenFor": "Strummed acoustic guitar carrying the whole song, a plain melody, and a singer who sounds like he is talking to himself. Where Dylan would have played harmonica, the Beatles put a flute. Listen for how far this is from 'She Loves You', two years earlier."
+  },
+  "explanation": {
+    "age13": "The Beatles played Bob Dylan's records over and over. John Lennon said that 'You've Got to Hide Your Love Away' came from his 'Dylan period', and it sounds like it: acoustic guitar, and words about how he felt rather than a simple love song.",
+    "adult": "Influence on the lyric more than the sound: after Dylan, the Beatles' words got personal and strange."
+  },
+  "tags": []
+}

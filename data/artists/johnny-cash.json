@@ -1,0 +1,36 @@
+{
+  "id": "johnny-cash",
+  "name": "Johnny Cash",
+  "sortName": "Cash, Johnny",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1955,
+  "activeTo": 2003,
+  "originCity": "Kingsland, Arkansas",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [{ "labelId": "sun-records", "from": 1955, "to": 1958 }],
+  "keyProducers": ["Sam Phillips", "Rick Rubin"],
+  "hook": "A gospel singer whom Sun Records turned down until he came back with rockabilly, who played prisons and sang about Native American history, and whom Rick Rubin recorded alone with a guitar sixty years later.",
+  "blurb": {
+    "age13": "Johnny Cash was born in 1932 in Kingsland, Arkansas, to a poor family of cotton farmers, and grew up singing gospel. In 1955 he auditioned at Sun Records in Memphis, the label that had just made Elvis Presley's first records. He sang gospel, and the owner, Sam Phillips, told him he did not record gospel any more. Cash came back with his own songs, played with a chugging rhythm like a train, and they became hits, including 'Folsom Prison Blues' and 'I Walk the Line'. He played free concerts in prisons and recorded live albums at Folsom and San Quentin. In 1964 he made an album about the violent treatment of Native Americans. In 1994 the hip-hop and metal producer Rick Rubin recorded him alone in his living room with an acoustic guitar, and a new generation discovered him. He died in 2003.",
+    "adult": "Born in Kingsland on 26 February 1932 to cotton farmers, and raised on gospel. He auditioned for Sam Phillips at Sun in 1955 with mostly gospel songs and was told Sun no longer recorded gospel; a widely repeated story that Phillips told him to go and sin and come back with something sellable was denied by Cash in 2002. He won Phillips over with his own songs, played with Luther Perkins and Marshall Grant, the Tennessee Two, in a train-like chugging rhythm; 'Hey, Porter' and 'Cry! Cry! Cry!' came out in June 1955, and 'I Walk the Line' reached number one on the country chart. He was present at the Million Dollar Quartet session on 4 December 1956, and left for Columbia in 1958. 'Bitter Tears: Ballads of the American Indian' (1964) was about the violent oppression of Indigenous peoples. 'At Folsom Prison' (1968) and 'At San Quentin' (1969) reached number one on the country album chart. Rick Rubin signed him to American Recordings and recorded 'American Recordings' (1994) in Cash's living room, voice and guitar only, with covers of contemporary songs Rubin chose; the fourth album of the series, in 2002, included his cover of Nine Inch Nails' 'Hurt'. He died in Nashville on 12 September 2003."
+  },
+  "signatureTracks": [
+    {
+      "title": "Folsom Prison Blues",
+      "year": 1955,
+      "whyThisOne": "A Sun single: the chugging train rhythm and a song sung from inside a prison."
+    },
+    {
+      "title": "I Walk the Line",
+      "year": 1956,
+      "whyThisOne": "His first country number one."
+    },
+    {
+      "title": "Hurt",
+      "year": 2002,
+      "whyThisOne": "A Nine Inch Nails song recorded with Rick Rubin near the end of his life."
+    }
+  ]
+}

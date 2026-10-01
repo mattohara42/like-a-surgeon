@@ -1,0 +1,36 @@
+{
+  "id": "daft-punk",
+  "name": "Daft Punk",
+  "sortName": "Daft Punk",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1993,
+  "activeTo": 2021,
+  "originCity": "Paris",
+  "originCountry": "France",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "Two Parisians who built French house out of Chicago house and disco samples, then hired Nile Rodgers and recorded Giorgio Moroder telling his life story to make a record without samples.",
+  "blurb": {
+    "age13": "Daft Punk were Thomas Bangalter and Guy-Manuel de Homem-Christo, from Paris. They started in 1993 after an indie rock band they were in got a bad review that dismissed it as daft, punky thrash, and they took the name from it. Their first album, 'Homework' (1997), was built on the sound of Chicago house, and one track, 'Teachers', is a list of the house producers and DJs they learned from. They wore robot helmets in public. On 'Random Access Memories' (2013) they wanted to do with real musicians what they used to do with samplers, so they worked with Nile Rodgers of Chic, who played guitar on 'Get Lucky', and with Giorgio Moroder, who talked about his life on a track named after him. Kanye West's 'Stronger' (2007) is built on their 'Harder, Better, Faster, Stronger'. They split up in 2021.",
+    "adult": "Formed in Paris in 1993 by Thomas Bangalter and Guy-Manuel de Homem-Christo after their indie band Darlin'. 'Homework' (1997) drew heavily on Chicago house; its track 'Teachers', a riff on Parris Mitchell's 'Ghetto Shout Out!!' (Dance Mania, 1995), is a roll call of their house influences, including later collaborators Romanthony, DJ Sneak and Todd Edwards. 'Discovery' (2001) and the robot personas made them stars. 'Random Access Memories' (May 2013) set out, in Bangalter's words as reported by Wikipedia, to do with people what they had done with machines and samplers: session musicians, Nile Rodgers on guitar on 'Get Lucky', and Giorgio Moroder recorded telling his life story for 'Giorgio by Moroder'. It won the Grammy for Album of the Year. Kanye West's 'Stronger' (2007) samples 'Harder, Better, Faster, Stronger'. They announced their split in February 2021 with a video called 'Epilogue'."
+  },
+  "signatureTracks": [
+    {
+      "title": "Da Funk",
+      "year": 1995,
+      "whyThisOne": "A filtered, squelching acid-house riff: their first big single."
+    },
+    {
+      "title": "Harder, Better, Faster, Stronger",
+      "year": 2001,
+      "whyThisOne": "A vocoder chant over a chopped funk sample, and the source of Kanye West's 'Stronger'."
+    },
+    {
+      "title": "Get Lucky",
+      "year": 2013,
+      "whyThisOne": "Nile Rodgers's guitar and Pharrell Williams's voice: disco made by the people, not the samples."
+    }
+  ]
+}

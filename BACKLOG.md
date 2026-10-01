@@ -238,6 +238,14 @@ correct response to a good idea arriving mid-milestone.
 
 ## Observed problems
 
+- **`coolio.json` calls 'Pastime Paradise' a sample.** Wikipedia's
+  article on 'Gangsta's Paradise' says it is an interpolation, replayed
+  rather than lifted from the record, with Wonder credited as a writer.
+  The new `e-steviewonder-coolio` says so; the Coolio record's hook,
+  blurb and signature track still say sample. A one-word fix in a data
+  pass, left alone here because it is outside the batch (found during
+  A320).
+
 - ~~**A thread step's `demoId` is validated but never read (A284).**~~
   **Fixed** (A289): the validator now requires a step's `demoId` to match
   the demo its record shows. The

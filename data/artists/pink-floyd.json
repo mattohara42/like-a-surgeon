@@ -1,0 +1,37 @@
+{
+  "id": "pink-floyd",
+  "name": "Pink Floyd",
+  "sortName": "Pink Floyd",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1965,
+  "activeTo": null,
+  "endUnknown": true,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": ["Norman Smith", "Alan Parsons"],
+  "hook": "A London underground band that recorded next door to the Beatles at Abbey Road, made one of the best-selling albums ever with a synthesizer sequence at its centre, and paid for Kate Bush's first proper demo.",
+  "blurb": {
+    "age13": "Pink Floyd formed in London in 1965. Their first leader, Syd Barrett, wrote strange, playful songs, and the band played long, loud, experimental pieces with light shows in London's underground clubs. They recorded their first album at Abbey Road in 1967 in the room next to the Beatles, who were making 'Sgt. Pepper'. Barrett's mental health collapsed and David Gilmour replaced him. 'The Dark Side of the Moon' (1973) has sold more than 45 million copies. On one track, 'On the Run', a synthesizer plays a fast eight-note pattern over and over, years before that kind of sound was common. Gilmour also paid for a teenage Kate Bush to record a demo, which got her a record deal.",
+    "adult": "Formed in London in 1965 by Syd Barrett, Nick Mason, Roger Waters and Richard Wright, and briefly a house band at the UFO Club, the centre of the London underground, in 1966 and 1967. They signed to EMI on 15 February 1967, and recorded 'The Piper at the Gates of Dawn' with Norman Smith at EMI's Abbey Road studios between February and May 1967; on 21 March they watched the Beatles record 'Lovely Rita' in the next room. David Gilmour joined in 1967 as Barrett's health failed. 'The Dark Side of the Moon' (March 1973), engineered by Alan Parsons, has sold more than 45 million copies; its 'On the Run' is an eight-note sequence on an EMS Synthi AKS sped up on playback, an early sequenced synthesizer track on a mass-market rock album. Gilmour financed the 16-year-old Kate Bush's demo, which led to her EMI contract. 'The Wall' (1979) topped the US chart for fifteen weeks. Their last studio album was 'The Endless River' (2014); there has been no formal split, and Gilmour and Mason recorded a single as Pink Floyd in 2022."
+  },
+  "signatureTracks": [
+    {
+      "title": "Interstellar Overdrive",
+      "year": 1967,
+      "whyThisOne": "Barrett-era Floyd as the underground heard them: a riff that dissolves into nearly ten minutes of noise and improvisation."
+    },
+    {
+      "title": "On the Run",
+      "year": 1973,
+      "whyThisOne": "A sped-up eight-note synthesizer sequence on one of the best-selling albums ever made."
+    },
+    {
+      "title": "Another Brick in the Wall, Part 2",
+      "year": 1979,
+      "whyThisOne": "A disco beat under a rock band and a children's choir, and their only US number one single."
+    }
+  ]
+}

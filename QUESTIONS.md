@@ -4,6 +4,19 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 
 ## Open
 
+- **Q43. Lanes for soul, pop and country (A322).** The big-names
+  batch put soul and disco in `funk` (Ray Charles, Aretha, Marvin Gaye,
+  Stevie Wonder, the Bee Gees), ABBA in `other`, and Johnny Cash in
+  `rock` beside Elvis and Sun. Each is defensible, but `funk` now holds
+  a lot that is not funk, and country has no home if Dolly Parton or
+  Hank Williams follow. Options: (a) leave the lanes as they are; (b)
+  add a `soul` lane and move the soul records into it (Isaac Hayes and
+  Curtis Mayfield too); (c) add `country` when there are three or more
+  country artists; (d) both (b) and (c). Adding a lane is one file, but
+  moving records changes every `crossLineage` flag on their edges, which
+  the validator will catch. Recommended: (d), done as its own pass, not
+  inside a data batch.
+
 - **Q41. The card-view link when the legend is closed (A311).** A310
   put the map's link to the card view in the legend's version line,
   because the legend was always on screen. It can be closed now, and the

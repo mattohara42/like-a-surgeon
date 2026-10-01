@@ -1,0 +1,28 @@
+{
+  "id": "e-aphextwin-radiohead",
+  "from": "aphex-twin",
+  "to": "radiohead",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 2000,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Kid A' (released 2 October 2000): Thom Yorke had grown tired of rock and melody and was listening almost exclusively to Warp Records artists, describing the music as all structure with no human voices in it. The article names Aphex Twin and Autechre among the album's main influences.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Aphex Twin",
+      "title": "Xtal",
+      "year": 1992
+    },
+    "later": {
+      "artist": "Radiohead",
+      "title": "Everything in Its Right Place",
+      "year": 2000
+    },
+    "whatToListenFor": "'Xtal' is soft, looping and warm, with a voice used as a texture rather than to sing words. 'Everything in Its Right Place' opens 'Kid A' with an electric piano instead of a guitar, and Yorke's voice is chopped and played back in fragments behind him. Listen for a rock band treating its singer's voice the way Aphex Twin treats a sample."
+  },
+  "explanation": {
+    "age13": "When Radiohead made 'Kid A', their singer Thom Yorke had stopped listening to rock music. He was listening to electronic records from the Warp label, especially Aphex Twin and Autechre, and the album sounds like it.",
+    "adult": "Documented in the band's own account of the record. It is one of the clearest crossings on the map from 1990s British electronic music into the biggest rock band of its moment."
+  },
+  "tags": []
+}

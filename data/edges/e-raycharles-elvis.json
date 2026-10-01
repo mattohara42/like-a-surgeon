@@ -1,0 +1,28 @@
+{
+  "id": "e-raycharles-elvis",
+  "from": "ray-charles",
+  "to": "elvis-presley",
+  "type": "cover",
+  "confidence": "documented",
+  "year": 1956,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'I Got a Woman': Charles recorded it on 18 November 1954 at WGST's studio in Atlanta and Atlantic released it that December. Presley recorded it at RCA's Nashville studio on 10 January 1956, his first RCA session, and it was released on 31 August 1956. It did not chart as a single but was a staple of his 1950s shows.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Ray Charles",
+      "title": "I Got a Woman",
+      "year": 1954
+    },
+    "later": {
+      "artist": "Elvis Presley",
+      "title": "I Got a Woman",
+      "year": 1956
+    },
+    "whatToListenFor": "Charles's version swings, with horns and a gospel shout in the voice, and the band stops and starts like a church choir answering a preacher. Presley keeps the stops but swaps the horns for slapped bass and electric guitar, and sings it faster and higher. Listen for which parts of a Black gospel-R&B record survived the move into rockabilly."
+  },
+  "explanation": {
+    "age13": "In January 1956, at his first session for his new record company, Elvis Presley recorded Ray Charles's 'I Got a Woman'. He sang it at most of his concerts in the 1950s.",
+    "adult": "A record that was already a crossing, a gospel song made secular, carried one step further by a white Southern singer at the start of his RCA career. It ties the soul spine to the rock spine at the point where both were being invented."
+  },
+  "tags": []
+}

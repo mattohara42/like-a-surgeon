@@ -1,0 +1,28 @@
+{
+  "id": "e-jayz-nas",
+  "from": "jay-z",
+  "to": "nas",
+  "type": "reaction-against",
+  "confidence": "documented",
+  "year": 2001,
+  "crossLineage": false,
+  "evidence": "Wikipedia's articles on Jay-Z and on 'Ether': Jay-Z performed 'Takeover', attacking Nas and Mobb Deep, at Summer Jam 2001 and released it on 'The Blueprint'. Nas answered with 'Ether', released on 4 December 2001, Jay-Z's birthday, produced by Ron Browz. The two later reconciled and recorded together from 2006.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Jay-Z",
+      "title": "Takeover",
+      "year": 2001
+    },
+    "later": {
+      "artist": "Nas",
+      "title": "Ether",
+      "year": 2001
+    },
+    "whatToListenFor": "Listen to the two records as one argument. 'Takeover' is built on a heavy Doors guitar loop and attacks Nas's career as a decline. 'Ether' answers over a darker beat, opening with a distorted voice clip of Tupac Shakur insulting Jay-Z. Both are about reputation, and both are written to be quoted."
+  },
+  "explanation": {
+    "age13": "In 2001 Jay-Z released 'Takeover', a song attacking Nas. Nas answered with 'Ether', released on Jay-Z's birthday. Rap battles like this were part of how the music worked, and the two later made up and recorded together.",
+    "adult": "A reaction-against edge between two rappers rather than two styles: Nas's best-known record of the period exists because of Jay-Z's attack. It sits on top of the Juice Crew's Bridge Wars on this map, the same Queensbridge tradition of answer records."
+  },
+  "tags": []
+}

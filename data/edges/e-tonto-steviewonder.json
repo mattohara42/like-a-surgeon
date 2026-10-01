@@ -1,0 +1,28 @@
+{
+  "id": "e-tonto-steviewonder",
+  "from": "tonto",
+  "to": "stevie-wonder",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1972,
+  "crossLineage": true,
+  "evidence": "Wikipedia's articles on TONTO and on Stevie Wonder: after Cecil and Margouleff's 'Zero Time' (1971), Wonder worked with them and TONTO on 'Music of My Mind' and 'Talking Book' (1972), 'Innervisions' (1973) and 'Fulfillingness' First Finale' (1974).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Tonto's Expanding Head Band",
+      "title": "Zero Time",
+      "year": 1971
+    },
+    "later": {
+      "artist": "Stevie Wonder",
+      "title": "Living for the City",
+      "year": 1973
+    },
+    "whatToListenFor": "'Zero Time' is the instrument showing off: slow, spacey synthesizer pieces with no singer. On 'Living for the City' the same kind of sound is doing ordinary band jobs, playing bass lines and chords under a soul song. Listen for synthesizer parts that you might at first take for keyboards or horns."
+  },
+  "explanation": {
+    "age13": "TONTO was a homemade synthesizer the size of a room. Stevie Wonder heard an album its builders made and came to work with them. For four albums in the early 1970s, TONTO was part of his band.",
+    "adult": "A one-off instrument shaping a run of famous records because its owners came with it. It put polyphonic synthesis into Black popular music years before shop-bought polysynths, and through Wonder's albums it set an example for funk and R&B keyboard players through the 1970s."
+  },
+  "tags": ["technology"]
+}

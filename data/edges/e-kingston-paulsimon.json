@@ -1,0 +1,28 @@
+{
+  "id": "e-kingston-paulsimon",
+  "from": "kingston-dub",
+  "to": "paul-simon",
+  "type": "scene",
+  "confidence": "documented",
+  "year": 1971,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Mother and Child Reunion': recorded in 1971 at Dynamic Sounds in Kingston with Jamaican players including Hux Brown, Jackie Jackson and Winston Grennan. Simon chose Kingston because Jimmy Cliff had recorded 'Vietnam' there in 1970. The article describes it as one of the few songs by a non-Jamaican musician at the time to use reggae so prominently.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Jimmy Cliff",
+      "title": "Vietnam",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Paul Simon",
+      "title": "Mother and Child Reunion",
+      "year": 1972
+    },
+    "whatToListenFor": "Listen to the guitar chopping on the off-beat and the bass playing short phrases with gaps between them, which is the Kingston rhythm section's style. Simon did not imitate this. He flew to the studio and hired the players. His voice and melody are New York pop, and everything under them is Jamaican."
+  },
+  "explanation": {
+    "age13": "Paul Simon liked Jimmy Cliff's song 'Vietnam' so much that in 1971 he went to the studio in Kingston, Jamaica, where it had been recorded and used Jamaican musicians for his own song. Almost no one outside Jamaica was making reggae then.",
+    "adult": "The scene reaching out through its studios and session players, not through records. It came a year before Island marketed the Wailers to rock fans, and it set the pattern Simon followed again in Johannesburg in 1985: travel to the musicians and record them where they play."
+  },
+  "tags": []
+}

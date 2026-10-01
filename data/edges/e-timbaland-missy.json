@@ -1,0 +1,30 @@
+{
+  "id": "e-timbaland-missy",
+  "from": "timbaland",
+  "to": "missy-elliott",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1997,
+  "crossLineage": false,
+  "evidence": "Wikipedia's articles on Missy Elliott and Timbaland: they met through DeVante Swing's Swing Mob collective, wrote and produced for other acts together, and Timbaland produced 'Supa Dupa Fly' (1997), which reached number three on the Billboard 200.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Aaliyah",
+      "title": "One in a Million",
+      "year": 1996
+    },
+    "later": {
+      "artist": "Missy Elliott",
+      "title": "The Rain (Supa Dupa Fly)",
+      "year": 1997
+    },
+    "whatToListenFor": "Listen for the gaps. Timbaland's drums skip and stutter, landing just off where you expect, with long silences between hits and odd sounds dropped into the spaces. Missy raps and sings into those gaps, slowly, as if she has all the time in the world."
+  },
+  "explanation": {
+    "age13": "Missy Elliott and Timbaland worked together from their early days in Virginia. He produced her first album, and their records sounded like nothing else on the radio in 1997.",
+    "adult": "A partnership more than a one-way production credit: they wrote together for other artists first. The stuttering rhythm is Timbaland's, the humour and the persona are Missy's."
+  },
+  "tags": [
+    "production"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "e-fleetwoodmac-beatles",
+  "from": "fleetwood-mac",
+  "to": "the-beatles",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1969,
+  "crossLineage": false,
+  "evidence": "George Harrison, in a 1987 interview cited in Wikipedia's article on 'Albatross': with the Fleetwood Mac single out and its reverb-heavy guitar in the air, the Beatles began 'Sun King' by pretending to be Fleetwood Mac playing it. He added that the result never really sounded like them, but that it was the starting point.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Fleetwood Mac",
+      "title": "Albatross",
+      "year": 1968
+    },
+    "later": {
+      "artist": "The Beatles",
+      "title": "Sun King",
+      "year": 1969
+    },
+    "whatToListenFor": "Both are slow, almost still, with clean electric guitar played gently and drowned in reverb over soft cymbal washes. 'Albatross' stays an instrumental; 'Sun King' adds stacked harmony vocals. Listen to the first half-minute of each one after the other and the shared mood is obvious, then listen for where the Beatles move away."
+  },
+  "explanation": {
+    "age13": "'Albatross' was a slow, dreamy guitar instrumental that went to number one in Britain in January 1969. George Harrison said that when the Beatles started work on 'Sun King' that year, they began by pretending to be Fleetwood Mac playing it.",
+    "adult": "A small, well-attested case of influence running from the blues boom back up to the biggest band in the country, via a mood rather than a riff. Wikipedia's article also names 'Don't Let Me Down' as owing something to the record."
+  },
+  "tags": []
+}

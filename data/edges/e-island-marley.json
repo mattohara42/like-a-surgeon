@@ -1,0 +1,28 @@
+{
+  "id": "e-island-marley",
+  "from": "island",
+  "to": "bob-marley",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1973,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'Catch a Fire': recorded in Kingston in 1972, then remixed by Chris Blackwell at Island's Basing Street studio in London, with guitar overdubs by Wayne Perkins on three tracks and keyboards by John 'Rabbit' Bundrick. Released 13 April 1973. Wikipedia's Bob Marley article: Blackwell packaged it like a rock record and tempered the bass-heavy mix.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Bob Marley and the Wailers",
+      "title": "Soul Rebel",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Bob Marley and the Wailers",
+      "title": "Concrete Jungle",
+      "year": 1973
+    },
+    "whatToListenFor": "Listen for the lead guitar. On 'Soul Rebel' there isn't one. On 'Concrete Jungle' an American session player solos over the Kingston rhythm like a rock guitarist, added in London after the band had gone home. Listen to the bass too: it is still there, but lower in the mix than a Kingston engineer would have put it."
+  },
+  "explanation": {
+    "age13": "Chris Blackwell of Island Records wanted the Wailers' music to sell to rock fans in Britain and America. Before releasing 'Catch a Fire' he took the recordings to London and added rock guitar and keyboards. It worked, and it is a big reason why Bob Marley became famous around the world.",
+    "adult": "The plainest label edge on the map under A69: a label head changing the sound of a record for a market, in his own studio, after the artists had finished. Whether that was translation or dilution is a fair argument, and the 2001 deluxe release of the unoverdubbed Jamaican mixes lets a listener judge."
+  },
+  "tags": ["labels"]
+}

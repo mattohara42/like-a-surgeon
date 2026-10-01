@@ -1,0 +1,36 @@
+{
+  "id": "timbaland",
+  "name": "Timbaland",
+  "sortName": "Timbaland",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1993,
+  "activeTo": null,
+  "originCity": "Norfolk, Virginia",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A Virginia producer whose stuttering, syncopated beats blurred hip-hop and R&B production at the end of the 1990s, for Missy Elliott, Aaliyah and Jay-Z.",
+  "blurb": {
+    "age13": "Timothy Mosley was born in Norfolk, Virginia, in 1972. DeVante Swing of the R&B group Jodeci took him into his crew of young musicians and named him Timbaland, after the Timberland boot. He and Missy Elliott, from nearby Portsmouth, made records together. In 1996 he produced most of Aaliyah's album 'One in a Million'. His beats stutter and skip, with drums and sounds placed in unexpected gaps instead of on the beat. He produced Missy Elliott's albums, Jay-Z's 'Big Pimpin'', and later hits for Justin Timberlake and Nelly Furtado, and his style changed the sound of R&B and pop in the 2000s.",
+    "adult": "Born in Norfolk on 10 March 1972. DeVante Swing of Jodeci renamed him after the Timberland boot and brought him into Swing Mob's 'Da Bassment' crew with Missy Elliott and Ginuwine. His breakthrough was producing most of Aaliyah's 'One in a Million' (1996), followed by Missy Elliott's 'Supa Dupa Fly' (1997) and the albums after it, and Jay-Z's 'Big Pimpin'' (1999). His stuttering, syncopated rhythms are credited with blurring the line between hip-hop and R&B production. In the 2000s he produced Justin Timberlake's 'Cry Me a River' (2002) and Nelly Furtado's 'Promiscuous', carrying the same approach into mainstream pop."
+  },
+  "signatureTracks": [
+    {
+      "title": "One in a Million (Aaliyah)",
+      "year": 1996,
+      "whyThisOne": "The breakthrough: an R&B ballad on a skittering, half-empty beat."
+    },
+    {
+      "title": "The Rain (Supa Dupa Fly) (Missy Elliott)",
+      "year": 1997,
+      "whyThisOne": "Slow, hollow drums with sounds dropped into the gaps."
+    },
+    {
+      "title": "Cry Me a River (Justin Timberlake)",
+      "year": 2002,
+      "whyThisOne": "The same approach in mainstream pop, with beatboxing and choir."
+    }
+  ]
+}

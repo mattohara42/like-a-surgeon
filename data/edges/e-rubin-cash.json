@@ -1,0 +1,30 @@
+{
+  "id": "e-rubin-cash",
+  "from": "rick-rubin",
+  "to": "johnny-cash",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1994,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Johnny Cash: after years without a major label, Cash worked with Rick Rubin, whose American Recordings released 'American Recordings' (1994), recorded in Cash's living room with only his guitar and including covers of contemporary songs Rubin chose. It won the Grammy for Best Contemporary Folk Album.",
+  "trackPair": {
+    "earlier": {
+      "artist": "LL Cool J",
+      "title": "I Can't Live Without My Radio",
+      "year": 1985
+    },
+    "later": {
+      "artist": "Johnny Cash",
+      "title": "Delia's Gone",
+      "year": 1994
+    },
+    "whatToListenFor": "Rubin's idea in both places is to strip a sound to its bare bones and make it hit. On 'Delia's Gone' that means one voice and one acoustic guitar, recorded close, with nothing to soften either. Listen to how loud and near Cash's voice is, and to how much space there is around it."
+  },
+  "explanation": {
+    "age13": "By the 1990s Johnny Cash had no big record company. Rick Rubin, a producer known for hip-hop and heavy metal, recorded him in his living room with just his voice and guitar. The album won a Grammy and made Cash famous with young listeners again.",
+    "adult": "The same stripping-down Rubin brought to rap, applied to a 62-year-old country singer. The trackPair's earlier side is a Rubin production from his Def Jam years, there to show the method, not a musical source for the Cash record."
+  },
+  "tags": [
+    "production"
+  ]
+}

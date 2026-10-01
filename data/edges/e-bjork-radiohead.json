@@ -1,0 +1,28 @@
+{
+  "id": "e-bjork-radiohead",
+  "from": "bjork",
+  "to": "radiohead",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 2000,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Kid A' names Björk's 'Homogenic' (1997) among the album's influences.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Björk",
+      "title": "Jóga",
+      "year": 1997
+    },
+    "later": {
+      "artist": "Radiohead",
+      "title": "Everything in Its Right Place",
+      "year": 2000
+    },
+    "whatToListenFor": "Both put a voice and a few warm keyboard or string sounds against cold, electronic beats, and let the space between them do the work. Listen for how each singer's voice is treated as one sound among the others, not the thing everything else supports."
+  },
+  "explanation": {
+    "age13": "Radiohead named Björk's album 'Homogenic', with its strings and harsh electronic beats, as one of the influences on 'Kid A'.",
+    "adult": "Björk's record was itself built with Mark Bell of LFO, a Warp act, so this edge runs beside the Aphex Twin and Autechre edges: Warp's sound reached 'Kid A' directly and through Björk."
+  },
+  "tags": []
+}

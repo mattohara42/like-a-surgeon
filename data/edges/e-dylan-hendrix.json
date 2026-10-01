@@ -1,0 +1,28 @@
+{
+  "id": "e-dylan-hendrix",
+  "from": "bob-dylan",
+  "to": "jimi-hendrix",
+  "type": "cover",
+  "confidence": "documented",
+  "year": 1968,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'All Along the Watchtower': Dylan's original, recorded in Nashville on 6 November 1967, came out on 'John Wesley Harding' on 27 December 1967. The Jimi Hendrix Experience began their version at Olympic Studios on 21 January 1968, and it reached number five in Britain. Dylan said in 1985 and again in 1995 that Hendrix's version overwhelmed him and that he had played the song Hendrix's way ever since, and from his 1974 tour he did.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Bob Dylan",
+      "title": "All Along the Watchtower",
+      "year": 1967
+    },
+    "later": {
+      "artist": "The Jimi Hendrix Experience",
+      "title": "All Along the Watchtower",
+      "year": 1968
+    },
+    "whatToListenFor": "Dylan's version is two and a half minutes of acoustic guitar, harmonica, bass and drums, the same three chords going round. Hendrix keeps the three chords and turns each gap between verses into a guitar section with its own sound, including a slide passage and a wah-wah passage. Then listen to a Dylan live version from any year after 1974: he plays Hendrix's arrangement."
+  },
+  "explanation": {
+    "age13": "Jimi Hendrix recorded Bob Dylan's song 'All Along the Watchtower' a few weeks after it came out. Dylan liked Hendrix's version so much that he has played the song Hendrix's way ever since.",
+    "adult": "A cover that changed the original's author. It is the clearest case on the map of an influence edge with a return current, and it ties the Dylan node into the Hendrix and Chas Chandler cluster in London."
+  },
+  "tags": []
+}

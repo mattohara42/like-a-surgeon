@@ -1,0 +1,28 @@
+{
+  "id": "e-clash-marley",
+  "from": "the-clash",
+  "to": "bob-marley",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1977,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Punky Reggae Party': written by Marley, produced by Lee Perry and recorded in July 1977, as a positive response to the Clash's cover of Junior Murvin's 'Police and Thieves' on their first album. Its lyrics name punk bands including the Clash, the Damned and the Jam beside the Wailers and the Maytals. Issued as the B-side of 'Jamming' on Island in some countries.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Clash",
+      "title": "Police and Thieves",
+      "year": 1977
+    },
+    "later": {
+      "artist": "Bob Marley and the Wailers",
+      "title": "Punky Reggae Party",
+      "year": 1977
+    },
+    "whatToListenFor": "The Clash took a Lee Perry production and played it like a punk band. A few months later Marley went to Perry and answered with a song that invites punks and reggae musicians to the same party. Listen for Perry's echo and percussion behind Marley, the same producer on both ends of the conversation."
+  },
+  "explanation": {
+    "age13": "The Clash, a London punk band, recorded a cover of a reggae song on their first album. Bob Marley heard it and wrote 'Punky Reggae Party' in reply, a song that names punk bands and reggae bands together.",
+    "adult": "Influence running back along the line it usually runs forward on: punk's reggae cover answered by the reggae star, with Lee Perry producing both the original 'Police and Thieves' and Marley's reply. It closes a loop with e-perry-clash-cover."
+  },
+  "tags": ["politics"]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "e-smiths-britpop",
+  "from": "the-smiths",
+  "to": "britpop",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1993,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on the Smiths: Britpop drew heavily on Morrissey's portrayal of and nostalgia for a bleak urban England, and the article names Oasis, Blur and Suede among the bands influenced. Wikipedia's Johnny Marr article records Noel Gallagher's praise of Marr and his borrowing of Marr's guitars.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Smiths",
+      "title": "There Is a Light That Never Goes Out",
+      "year": 1986
+    },
+    "later": {
+      "artist": "Pulp",
+      "title": "Common People",
+      "year": 1995
+    },
+    "whatToListenFor": "Both are songs about ordinary English life told with jokes and despair at once, sung by a narrator who watches everyone, including himself. Listen to the words more than the guitars: the subject matter is the inheritance."
+  },
+  "explanation": {
+    "age13": "The Smiths split up in 1987, but their songs about grey English towns and awkward lives shaped the Britpop bands of the 1990s, like Oasis, Blur and Suede.",
+    "adult": "An artist-to-scene edge. The influence ran through two channels: Morrissey's lyrical England and Marr's guitar playing, which Noel Gallagher in particular acknowledged."
+  },
+  "tags": []
+}

@@ -1,0 +1,28 @@
+{
+  "id": "e-steviewonder-coolio",
+  "from": "stevie-wonder",
+  "to": "coolio",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1995,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Gangsta's Paradise': the song interpolates 'Pastime Paradise' (1976), with Wonder credited as a writer. Coolio said Wonder would not clear it while it had profanity in it, so he took the profanity out. Released 1 August 1995 and the best-selling single of the year on the Hot 100.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Stevie Wonder",
+      "title": "Pastime Paradise",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Coolio",
+      "title": "Gangsta's Paradise",
+      "year": 1995
+    },
+    "whatToListenFor": "Wonder's song is a dark, circling string-synth figure with choir and percussion, a song about people wasting their lives looking back or looking ahead. Coolio's version replays the same figure, slower and heavier, with L.V.'s chorus stacked like a choir, and turns the subject into one young man's life in violence. Listen to how little of the musical idea needed to change."
+  },
+  "explanation": {
+    "age13": "Coolio's 'Gangsta's Paradise', one of the biggest songs of 1995, is built on Stevie Wonder's 'Pastime Paradise' from 1976. Wonder only agreed to it after Coolio took the swear words out.",
+    "adult": "Strictly an interpolation, the part replayed rather than lifted from the record, which is why the type is sample in this schema's sense rather than a tape sample. The writer's veto over the lyric is a rare documented case of the source artist shaping the new record's words."
+  },
+  "tags": []
+}
