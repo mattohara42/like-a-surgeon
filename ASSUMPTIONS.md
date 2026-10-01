@@ -3976,3 +3976,51 @@ small and worth having in front of Matt alongside everything else here.
   - **`sceneMembers` moved from `main.js` to `reading/members.js`,**
     unchanged, so the two views share it rather than copy it.
 
+
+## Added with Matt's map review (legend, connections, flicker, zoom)
+
+- **A311. Fixes from Matt's review of the map.**
+  - **Flashing at mid zoom.** Matt reported it again, at mid zoom. The
+    cause is the same as A277's, by another route. A node's halo (up to
+    ~185 px across) took the pointer, so the true hover area was the
+    glow rather than the hit rect A277 had narrowed. At mid zoom the
+    halos overlap over half the map, and every mouse move hovered a new
+    node and lit and unlit its edge set. Measured with a grid of
+    `elementFromPoint` probes over the map at 1280x800: the share of the
+    map that hovers some node went from 50% to 14% at scale 0.6, and
+    from 35% to 6% at 0.9. Three changes. Halo and span ignore the
+    pointer. The hit rect is no wider than the node's own name
+    (`CONFIG.node.hitNamePadPx`). And a node's edges light only once the
+    pointer has rested on it for `CONFIG.node.hoverDwellMs` (160 ms),
+    while its ring still answers at once. Headless Chromium could not
+    move the pointer at human speed (about 160 to 290 px/s at best,
+    each move costing a full render), so the effect of the dwell at a
+    real hand speed is reasoned rather than measured. A name target is
+    at most 140 px wide, which a pointer moving faster than about
+    900 px/s crosses inside the dwell.
+  - **Zoom-out limit.** `CONFIG.zoom.min` (0.2) left the populated map
+    about 750 px wide on a 1280 px screen, with black around it. The
+    limit is now worked out from the layout (`graph.js` `minScaleFor`):
+    the populated span (first marker to last, top lane to bottom) must
+    fill the screen above the transport bar in at least one direction,
+    less `CONFIG.zoom.fillPaddingPx` a side. At 1280x800 that is 0.301.
+    It is recomputed on resize, so it follows the dataset and the
+    window. `CONFIG.zoom.min` stays as a floor. Consequence: the
+    `collapsed` zoom level (names hidden, scale 0.34 and below) is now
+    only reachable between 0.30 and 0.34 on a laptop, and the whole map
+    can no longer be seen at once, since it is taller than it is wide
+    against a laptop screen. Vertical panning shows the rest.
+  - **The confidence legend can be closed.** M3 had it permanent, with a
+    compact three-swatch state. Matt asked for it to be dismissable. The
+    × closes it to a small pill in the same corner, still showing the
+    three line styles, and the pill reopens it. The choice is
+    remembered under the existing storage key. Not settled: A310 put the
+    link to the card view in the legend's version line because it was
+    always visible, and it now hides with the legend (QUESTIONS).
+  - **Connections at the top of a node's panel, in colour.** They sit
+    just under the hook, above the blurb, so they are found without
+    scrolling. Each row carries a dot in the other record's lineage
+    colour and a left rule in the same colour. Its line swatch is drawn
+    in the edge's own colours, cause to effect, in its tier's stroke, as
+    the map draws the line. Cards use the same panel, so the phone view
+    gets the same order.
