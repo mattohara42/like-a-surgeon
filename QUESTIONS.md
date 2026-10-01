@@ -10,6 +10,8 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   link closes with it. Options: (a) leave it, since it is one click away
   when the legend is open; (b) give it its own small place on the map;
   (c) fold it into the redesigned top-left controls (Q42).
+  **Resolved 2026-10-01: (b), its own small place.** Bottom right, under
+  the transport bar (A312).
 
 - **Q42. The top-left controls, redesigned.** Matt: the pills are messy
   and take a lot of space; could they pop out of the corner as colourful
@@ -17,6 +19,9 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   either way: "Lens" is already the name of one row (Production, Labels,
   Politics, Technology), so if the whole control set becomes "lenses",
   that row needs another name.
+  **Resolved 2026-10-01: concept C, the colour dock,** and the Lens row is
+  called **Spotlight** to the reader (A312). Matt also kept the zoom-out
+  limit as built in A311.
 
 - **Q39 and Q40. Cards (the phone version) sign-off.** Two questions
   gate the build. The full text, with options and a recommendation for

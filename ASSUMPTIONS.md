@@ -4024,3 +4024,27 @@ small and worth having in front of Matt alongside everything else here.
     in the edge's own colours, cause to effect, in its tier's stroke, as
     the map draws the line. Cards use the same panel, so the phone view
     gets the same order.
+
+- **A312. The control dock (Q42) and the card-view link (Q41).**
+  - **The dock.** The five rows of pills in the top-left corner are now
+    five round buttons in a column (`reading/dock.js`): Show, Reading
+    level, Arrange by, Sound and Spotlight. Each opens its row sideways,
+    one at a time, in the button's colour. Escape, or pressing anywhere
+    outside the dock, closes it. A press on the map both closes the row and
+    starts its pan or click. The rows are drawn by the same modules into
+    the same elements as before; the dock only moves each into a flyout.
+  - **Colours** are the controls' own (`CONFIG.dock.items`), not lineage
+    colours, so no button reads as belonging to a lane.
+  - **A dot on a button** means its row is not at its default: a layer
+    differs from `CONFIG.layers.defaults`, the reading level or the
+    arrangement is not the default, sound is muted, or a spotlight is on.
+    The button's accessible name says so too.
+  - **Rows stay open after a choice,** so the reader sees the map change
+    with the row still in reach. Choosing a spotlight opens its card in
+    the drawer, as before.
+  - **Spotlight** is the reader's name for the lens row, in copy only.
+    Code, storage keys and docs keep `lens`, which avoids churn in
+    unrelated code.
+  - **The card-view link** sits on its own, bottom right under the
+    transport bar, small and dim on a dark backing so it reads over the
+    map. The legend's version line no longer carries it.
