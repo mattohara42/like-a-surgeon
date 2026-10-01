@@ -23,7 +23,6 @@ import { COPY } from './reading/copy.js';
 import { createWelcome, OPENING_FRAME_IDS } from './reading/welcome.js';
 import { h } from './reading/dom.js';
 import { createEngine } from './audio/engine.js';
-import { createSoundControls } from './reading/soundControls.js';
 import { stopDemo, withEdgeCaption } from './reading/demoBlock.js';
 import { createThreads } from './reading/threads.js';
 import { loadLens, saveLens, createLensControl, renderLensCard } from './reading/lens.js';
@@ -42,7 +41,6 @@ const searchEl = document.getElementById('search');
 const arrangeEl = document.getElementById('arrange');
 const goalEl = document.getElementById('goal-chip');
 const threadChipEl = document.getElementById('thread-chip');
-const soundEl = document.getElementById('sound');
 const lensEl = document.getElementById('lens');
 const dockEl = document.getElementById('dock');
 const cardsLinkEl = document.getElementById('cards-link');
@@ -52,7 +50,6 @@ const cardsLinkEl = document.getElementById('cards-link');
 // presses play.
 const audio = createEngine();
 window.__audio = audio; // for manual/automated inspection (tools/audio-check.js)
-const sound = createSoundControls(soundEl, audio);
 
 // Which layer toggle has to be on for a node of this kind to be drawn.
 // Artists are always drawn, and scenes are framed through their members.
@@ -115,10 +112,8 @@ async function main() {
     dock.setChanged('show', Object.keys(CONFIG.layers.defaults).some((k) => layers[k] !== CONFIG.layers.defaults[k]));
     dock.setChanged('read', register !== CONFIG.reading.defaultRegister);
     dock.setChanged('arrange', arrange !== CONFIG.arrange.default);
-    dock.setChanged('sound', audio.muted);
     dock.setChanged('spotlight', lens !== null);
   }
-  audio.onChange(updateDock);
   const search = createSearch(searchEl, {
     nodes: data.nodes,
     yearBounds: () => graph.yearBounds(),
@@ -336,7 +331,7 @@ async function main() {
       return { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
     };
     // A closed row keeps its size while hidden, so only the open one counts.
-    const rows = [layersEl, registersEl, arrangeEl, soundEl, lensEl].filter((el) => el.parentElement.classList.contains('open'));
+    const rows = [layersEl, registersEl, arrangeEl, lensEl].filter((el) => el.parentElement.classList.contains('open'));
     const controls = [dockEl, ...rows].map(rect).filter((r) => r.right > r.left);
     const cluster = controls.length
       ? controls.reduce((a, b) => ({
@@ -352,7 +347,7 @@ async function main() {
     graph?.rerender();
   }
   const overlayObserver = new ResizeObserver(measureOverlays);
-  for (const el of [dockEl, layersEl, registersEl, arrangeEl, soundEl, lensEl, legendEl]) overlayObserver.observe(el);
+  for (const el of [dockEl, layersEl, registersEl, arrangeEl, lensEl, legendEl]) overlayObserver.observe(el);
   window.addEventListener('resize', measureOverlays);
 
   function build({ opening = false } = {}) {
@@ -438,7 +433,6 @@ async function main() {
     search.setRegister(register);
     welcome.setRegister(register);
     threads.setRegister(register);
-    sound.setRegister(register);
     createLensControl(lensEl, lens, register, applyLens);
     dock.setRegister(register);
     updateDock();
@@ -453,7 +447,6 @@ async function main() {
   search.setRegister(register);
   welcome.setRegister(register);
   threads.setRegister(register);
-  sound.setRegister(register);
   dock.setRegister(register);
   updateDock();
   // The way to the card view (Q39), in its own place (Q41).

@@ -230,7 +230,6 @@ export const CONFIG = {
       { key: 'show', el: 'layers', glyph: '◎', color: '#3ddfa4' },
       { key: 'read', el: 'registers', glyph: 'Aa', color: '#f3c46a' },
       { key: 'arrange', el: 'arrange', glyph: '☰', color: '#b48cff' },
-      { key: 'sound', el: 'sound', glyph: '♪', color: '#ff8a6b' },
       { key: 'spotlight', el: 'lens', glyph: '◐', color: '#5fa8ff' },
     ],
   },

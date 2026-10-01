@@ -73,7 +73,6 @@ export const COPY = {
     show: { age13: 'Show', adult: 'Layers' },
     read: { age13: 'Reading level', adult: 'Reading level' },
     arrange: { age13: 'Arrange by', adult: 'Arrange by' },
-    sound: { age13: 'Sound', adult: 'Sound' },
     spotlight: { age13: 'Spotlight', adult: 'Spotlight' },
     changed: { age13: 'changed from the start', adult: 'not the default' },
   },
@@ -273,9 +272,9 @@ export const COPY = {
     },
   },
 
-  // The demo block (reading/demoBlock.js) and the sound controls beside
-  // "Start here" (reading/soundControls.js).
+  // The demo block (reading/demoBlock.js), which carries the volume too.
   demo: {
+    volume: { age13: 'Volume', adult: 'Volume' },
     heading: { age13: 'Try it', adult: 'Hear it' },
     play: { age13: 'Play', adult: 'Play' },
     stop: { age13: 'Stop', adult: 'Stop' },
@@ -295,13 +294,6 @@ export const COPY = {
       adult: 'Audio could not start in this browser.',
     },
   },
-  sound: {
-    heading: { age13: 'Sound', adult: 'Sound' },
-    on: { age13: 'On', adult: 'On' },
-    muted: { age13: 'Off', adult: 'Muted' },
-    volume: { age13: 'Volume', adult: 'Volume' },
-  },
-
   links: {
     youtube: { age13: 'Search YouTube', adult: 'Search YouTube' },
     newTab: { age13: 'opens in a new tab', adult: 'opens in a new tab' },

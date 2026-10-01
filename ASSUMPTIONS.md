@@ -4107,3 +4107,18 @@ small and worth having in front of Matt alongside everything else here.
     was pushed by both distances added together, since its position was
     read once per pass. It is now re-read after each step. This was
     hard to reach before titles were held at the edge.
+
+- **A317. Volume lives in the demo, not the dock (Matt).** The dock's
+  Sound row held a mute toggle and a volume slider. Sound only ever
+  comes from a demo's play button, so with nothing playing, changing
+  them made no sound and the button read as broken. The row is gone
+  (four dock buttons now) and every demo ends its sliders with a Volume
+  slider: the engine's one setting, so it carries from demo to demo.
+  - **No mute button.** A demo's Stop, or volume at zero, does the job,
+    and a mute toggle beside Stop would be two buttons for one thing.
+    This changes the M4 plan's "a global mute"; the volume cap and the
+    safety stage are untouched.
+  - **A saved mute is ignored.** A reader who muted under A271 would
+    otherwise hear nothing and find no control to undo it. The engine
+    keeps `setMuted` for `tools/audio-check.js`, which still checks
+    that the mute stage silences the output.

@@ -1,7 +1,8 @@
 // The control dock, top left (Q42, A312). One round, coloured button per
-// row of controls (Show, Reading level, Arrange by, Sound, Spotlight).
-// Each opens its row sideways, one at a time, so the corner holds five
-// small buttons instead of five rows of pills.
+// row of controls (Show, Reading level, Arrange by, Spotlight). Each opens
+// its row sideways, one at a time, so the corner holds four small buttons
+// instead of four rows of pills. Sound is not here: its volume lives in
+// each demo, where the sound is (A317).
 //
 // The rows themselves are drawn by their own modules, into the elements
 // CONFIG.dock names, exactly as before. The dock only moves each one into
