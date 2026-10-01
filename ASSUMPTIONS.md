@@ -4216,3 +4216,21 @@ small and worth having in front of Matt alongside everything else here.
     rules 1 and 4, and is not quoted.
   - **`e-beatles-beegees` carries the `labels` tag,** since Atco's
     blank-label promotion is part of the story.
+- **A323. Björk, Radiohead, Daft Punk and the Smiths.** Four artists
+  and 12 edges.
+  - **Aphex Twin and Autechre each get an edge to Radiohead** instead
+    of one Warp label edge, since A69 needs a decision of the label's
+    and the 'Kid A' influence is the records.
+  - **Björk and Daft Punk reach Chicago house through `consensus`
+    scene edges.** Björk's statement is about house in general, heard
+    in London; Daft Punk's 'Teachers' names individuals, but the source
+    read did not list them, so no per-artist edges were drawn.
+  - **Björk's `activeFrom` is 1977,** the album she made as a child,
+    though her career on this map starts with 'Debut' in 1993.
+  - **Morrissey's support for For Britain is in the Smiths' adult and
+    teen text,** per Q2 and CLAUDE.md's rule on conduct, stated as
+    what he said and did, with the reaction, from Wikipedia's Morrissey
+    article. The node is the band, so it is one sentence, not a hook.
+  - **`e-spector-smiths` is `production` without a credit.** Marr names
+    Spector's approach as the idea behind his records; Spector never
+    worked with them.

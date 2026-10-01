@@ -1,0 +1,28 @@
+{
+  "id": "e-rodgers-daftpunk",
+  "from": "nile-rodgers",
+  "to": "daft-punk",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 2013,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Random Access Memories': Rodgers played guitar on 'Get Lucky' and worked with the duo through the sessions, part of their aim, in Bangalter's words, to do with people what they had done with machines and samplers. 'Get Lucky' won Record of the Year.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Chic",
+      "title": "Good Times",
+      "year": 1979
+    },
+    "later": {
+      "artist": "Daft Punk",
+      "title": "Get Lucky",
+      "year": 2013
+    },
+    "whatToListenFor": "Listen to the rhythm guitar: short, choppy chords on every beat, played so cleanly they work as drums. That is Rodgers's own style, the same as on 'Good Times'. A French house duo who had spent years sampling disco records hired the man who played on them."
+  },
+  "explanation": {
+    "age13": "Daft Punk spent years sampling disco records. For 'Get Lucky' they asked Nile Rodgers, the guitarist from Chic, to play the guitar himself instead.",
+    "adult": "The sample turned back into a session: the producers who built 'Discovery' from disco loops chose the original player over the loop."
+  },
+  "tags": []
+}

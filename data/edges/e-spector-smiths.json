@@ -1,0 +1,28 @@
+{
+  "id": "e-spector-smiths",
+  "from": "phil-spector",
+  "to": "the-smiths",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1984,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Johnny Marr: he described liking records, even spacious ones, that sound symphonic, with all the players merged into one atmosphere, an idea influenced by Phil Spector.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Ronettes",
+      "title": "Be My Baby",
+      "year": 1963
+    },
+    "later": {
+      "artist": "The Smiths",
+      "title": "How Soon Is Now?",
+      "year": 1984
+    },
+    "whatToListenFor": "Spector stacked many players in one room so that guitars, pianos and drums blur into a single roar. 'How Soon Is Now?' gets there with a few players and many overdubs: layers of tremolo guitar that merge into one throbbing sound. Listen for how hard it is to pick out a single guitar."
+  },
+  "explanation": {
+    "age13": "Johnny Marr liked records where all the instruments blend into one big sound, an idea he took from the producer Phil Spector, who did it in the early 1960s.",
+    "adult": "Production in the sense of an idea about how a record should sound, not of a credit: Spector never worked with the Smiths. On the map, Spector's conduct and conviction are on his own record."
+  },
+  "tags": []
+}

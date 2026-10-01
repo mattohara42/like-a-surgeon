@@ -1,0 +1,28 @@
+{
+  "id": "e-autechre-radiohead",
+  "from": "autechre",
+  "to": "radiohead",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 2000,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Kid A' (released 2 October 2000): Thom Yorke had grown tired of rock and melody and was listening almost exclusively to Warp Records artists, describing the music as all structure with no human voices in it. The article names Autechre and Aphex Twin among the album's main influences.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Autechre",
+      "title": "Bike",
+      "year": 1993
+    },
+    "later": {
+      "artist": "Radiohead",
+      "title": "Idioteque",
+      "year": 2000
+    },
+    "whatToListenFor": "Autechre's beats are sharp, clicking and slightly off from where you expect them. 'Idioteque' is built on a drum machine pattern that stutters and snaps the same way, under a sampled chord from a 1970s computer-music piece. Listen for how far forward the drums are, louder than any guitar."
+  },
+  "explanation": {
+    "age13": "Autechre, from Rochdale, made strange, precise electronic music for Warp Records. Thom Yorke named them, with Aphex Twin, as one of the reasons 'Kid A' sounds the way it does.",
+    "adult": "Paired with e-aphextwin-radiohead. Two edges rather than one through Warp because a label edge under A69 needs a decision of the label's, and here the influence is the records themselves."
+  },
+  "tags": []
+}

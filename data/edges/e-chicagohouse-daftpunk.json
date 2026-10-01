@@ -1,0 +1,28 @@
+{
+  "id": "e-chicagohouse-daftpunk",
+  "from": "chicago-house",
+  "to": "daft-punk",
+  "type": "scene",
+  "confidence": "consensus",
+  "year": 1997,
+  "crossLineage": false,
+  "evidence": "Wikipedia's articles on Daft Punk and on 'Teachers': the duo drew heavily on Chicago house, and 'Teachers' on 'Homework' (1997) is a tribute to their house influences, riffing on Parris Mitchell's 'Ghetto Shout Out!!' (Dance Mania, 1995).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Phuture",
+      "title": "Acid Tracks",
+      "year": 1987
+    },
+    "later": {
+      "artist": "Daft Punk",
+      "title": "Da Funk",
+      "year": 1995
+    },
+    "whatToListenFor": "Listen for the bass line on 'Da Funk': a squelching synthesizer riff that rises and falls as its filter opens and closes. That is the acid house sound that started with Phuture's TB-303 in Chicago. Daft Punk slow it down and make it fatter, but it is the same idea."
+  },
+  "explanation": {
+    "age13": "Daft Punk learned from Chicago house records. On their first album a track called 'Teachers' is a list of the house producers and DJs who taught them.",
+    "adult": "Rated consensus: the debt is plain and widely stated, but the most specific evidence, 'Teachers', names individuals, and the source read for this edge did not list them all. Per-artist edges could follow from a source that lists the names, since some of them may already be on this map."
+  },
+  "tags": []
+}

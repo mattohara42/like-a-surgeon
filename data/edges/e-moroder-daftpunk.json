@@ -1,0 +1,28 @@
+{
+  "id": "e-moroder-daftpunk",
+  "from": "giorgio-moroder",
+  "to": "daft-punk",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 2013,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'Random Access Memories' (17 May 2013): Moroder recorded a monologue about his life, which the duo built 'Giorgio by Moroder' around; he did not compose or play on it.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Donna Summer",
+      "title": "I Feel Love",
+      "year": 1977
+    },
+    "later": {
+      "artist": "Daft Punk",
+      "title": "Giorgio by Moroder",
+      "year": 2013
+    },
+    "whatToListenFor": "In the middle of 'Giorgio by Moroder', Moroder describes wanting the sound of the future and using a click track to sync a synthesizer. Then a synthesizer bass line starts, pulsing on every sixteenth note: the sound of 'I Feel Love'. Listen for the moment the talking stops and his own invention comes in under it."
+  },
+  "explanation": {
+    "age13": "On their last album, Daft Punk recorded Giorgio Moroder telling the story of his life and then built a song around it, using the kind of pulsing synthesizer bass he invented for Donna Summer's 'I Feel Love'.",
+    "adult": "An unusual edge: the influence is the subject of the record. Daft Punk did not sample Moroder; they recorded him explaining himself and then played his idea back to him."
+  },
+  "tags": []
+}
