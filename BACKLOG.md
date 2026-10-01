@@ -97,12 +97,15 @@ correct response to a good idea arriving mid-milestone.
     So the limit stays at six, and the far list is a Track D worklist.
   - *Starting artists.* Only artists within six hops, Matt's call on
     2026-10-01, so every game can be won. An artist further out is never
-    offered as a start. Not yet decided: what the game says if a reader
-    asks for a far artist by name, and whether `npm run report` should
-    list the artists beyond six hops so the gap shows up as data work.
+    offered as a start. If a reader asks for one by name, the game says
+    honestly how many hops away it is on the map so far and suggests a
+    closer start. `npm run report` lists the artists beyond six hops (A331).
+  - *Naming.* The challenge keeps "Six Degrees of Weird Al". The A292
+    thread is renamed "Songs Everyone Knew" (A331).
   - *Build notes.* The distances must be computed at load time from the
     edge data (a BFS from Yankovic), never a stored list, so artist 900
-    costs what artist 9 did. The hop limit goes in `CONFIG`.
+    costs what artist 9 did. The target and hop limit are already in
+    `CONFIG.sixDegrees`, and `tools/report.js` has a BFS to reuse.
 
 - **Follow the producer (Q21).** Select a producer and see everything
   they touched lit up across the map, or an "Arrange by producer" lane

@@ -18,6 +18,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildManifest, SHARD_TYPES } from './manifest.js';
+import { CONFIG } from '../config.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = join(ROOT, 'data');
@@ -219,6 +220,53 @@ function describeNode(id, records) {
   return `${id} (unresolved)`;
 }
 
+// Hops from every node to `target`, treating edges as undirected and every
+// node type as a stop, the Six Degrees rule (BACKLOG.md). Breadth-first, so
+// each count is the shortest route. Nodes with no route are absent.
+function hopsTo(target, edges) {
+  const neighbours = new Map();
+  for (const { from, to } of edges) {
+    if (!neighbours.has(from)) neighbours.set(from, []);
+    if (!neighbours.has(to)) neighbours.set(to, []);
+    neighbours.get(from).push(to);
+    neighbours.get(to).push(from);
+  }
+  const hops = new Map([[target, 0]]);
+  const queue = [target];
+  for (let i = 0; i < queue.length; i += 1) {
+    for (const next of neighbours.get(queue[i]) ?? []) {
+      if (hops.has(next)) continue;
+      hops.set(next, hops.get(queue[i]) + 1);
+      queue.push(next);
+    }
+  }
+  return { hops, neighbours };
+}
+
+function sixDegreesSection(records, edges) {
+  const { target, maxHops } = CONFIG.sixDegrees;
+  const { hops, neighbours } = hopsTo(target, edges);
+  const artists = [...records.artists.keys()].filter((id) => id !== target);
+  const far = artists
+    .filter((id) => !(hops.get(id) <= maxHops))
+    .sort((a, b) => (hops.get(a) ?? Infinity) - (hops.get(b) ?? Infinity) || a.localeCompare(b));
+  const lines = [
+    `## Six Degrees of ${describeNode(target, records)}`,
+    '',
+    `${artists.length - far.length} of ${artists.length} artists are within ${maxHops} hops,`,
+    'counting any edge in either direction through any node type. The artists',
+    'below are out of reach, which usually means they are short of edges.',
+    '',
+  ];
+  if (far.length === 0) return [...lines, 'Every artist is in reach.'];
+  lines.push('| artist | hops | edges |', '|---|---|---|');
+  for (const id of far) {
+    lines.push(`| ${describeNode(id, records)} | ${hops.get(id) ?? 'no route'} | `
+      + `${neighbours.get(id)?.length ?? 0} |`);
+  }
+  return lines;
+}
+
 function main() {
   const opts = parseArgs(process.argv.slice(2));
   const records = loadRecords();
@@ -293,6 +341,9 @@ function main() {
     out.push(`Evidence: ${edge.evidence}`);
     out.push('');
   }
+
+  out.push(...sixDegreesSection(records, edges));
+  out.push('');
 
   const withTracks = edges.filter((e) => e.trackPair?.whatToListenFor);
   const random = mulberry32(opts.seed);

@@ -1,0 +1,28 @@
+{
+  "id": "e-pinkfloyd-bowie",
+  "from": "pink-floyd",
+  "to": "david-bowie",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "Wikipedia's articles on 'Pin Ups' and 'See Emily Play': Bowie covered the 1967 Pink Floyd single, written by Syd Barrett, on 'Pin Ups' (released 19 October 1973, co-produced with Ken Scott), an album of songs he chose from a stack of 1960s 45s. Neither article records why he picked this one, so no reason is given here.",
+  "year": 1973,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Pink Floyd",
+      "title": "See Emily Play",
+      "year": 1967
+    },
+    "later": {
+      "artist": "David Bowie",
+      "title": "See Emily Play",
+      "year": 1973
+    },
+    "whatToListenFor": "Start with the original's first bridge, between the first chorus and the second verse. That piano was recorded slowly and then sped up on tape, so it skitters past faster than human hands could play it. Around it are echo, reverb, tapes run backwards and a swooping slide guitar. Then play Bowie's version and listen for which of those 1967 studio tricks a band six years later chose to keep, and which it rebuilt with its own players."
+  },
+  "explanation": {
+    "age13": "In 1973 David Bowie made a whole album of other people's songs from the 1960s, called 'Pin Ups'. One of them was 'See Emily Play', an early Pink Floyd single written by Syd Barrett.",
+    "adult": "'Pin Ups' was a covers album of mostly London singles from the 1960s, and the Pink Floyd track is the one from the psychedelic side of that scene, written by Syd Barrett before he left the band in 1968. It puts Pink Floyd's first, Barrett-led sound on Bowie's line of the map."
+  },
+  "tags": []
+}

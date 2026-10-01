@@ -1,0 +1,28 @@
+{
+  "id": "e-mayfield-kanye",
+  "from": "curtis-mayfield",
+  "to": "kanye-west",
+  "type": "sample",
+  "confidence": "documented",
+  "evidence": "Wikipedia's articles on 'Touch the Sky' and 'Move On Up': Just Blaze produced 'Touch the Sky' for Kanye West's 'Late Registration' (2005; released as a single in February 2006) on a slowed-down sample of the horns from Mayfield's 'Move On Up', from his 1970 album 'Curtis'. The article on the song notes that slowing or speeding up a sample had been part of West's sound since 'Through the Wire' (2003).",
+  "year": 2005,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Curtis Mayfield",
+      "title": "Move On Up",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Kanye West",
+      "title": "Touch the Sky",
+      "year": 2005
+    },
+    "whatToListenFor": "'Move On Up' runs nearly nine minutes on the album, driven by fast congas (Henry Gibson) and a bright, climbing horn line. On 'Touch the Sky' those horns are slowed down, so they sound lower, heavier and more triumphant. Play the two openings back to back and listen to how changing only the speed turns the same horns into a different feeling."
+  },
+  "explanation": {
+    "age13": "Kanye West's 'Touch the Sky' is built on the horns from Curtis Mayfield's 'Move On Up', from 1970. The producer, Just Blaze, slowed the horns down, which makes them sound bigger and lower.",
+    "adult": "A soul record from the start of Mayfield's solo career becomes the frame of a 2005 hip-hop single, through one move: playing the sample slower. Changing a sample's speed was already part of West's sound, and this is one of its best-known uses."
+  },
+  "tags": []
+}
