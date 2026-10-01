@@ -4086,3 +4086,9 @@ small and worth having in front of Matt alongside everything else here.
   the row is open for seconds and moving the search box would make it
   jump under the reader's eye. At 1280 x 800 no row crosses them, so
   nothing fades.
+
+- **A315. A dock row wraps rather than leave the screen.** At 390 px the
+  Arrange by and Spotlight rows ran past the right edge. A row is now
+  capped at the screen's width less its own left edge and a 12 px margin,
+  and wraps onto a second line past that. Its corner radius is half a
+  one-line row's height, so a row that fits looks as before.
