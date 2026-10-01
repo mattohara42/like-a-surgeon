@@ -4315,3 +4315,16 @@ small and worth having in front of Matt alongside everything else here.
     edge. Booker T. Jones producing 'Stardust' would link Willie Nelson
     to Stax, but Booker T. and the M.G.'s are not on the map yet; they
     are a strong candidate for the soul lane.
+
+## Added with the second soul and pop batch
+
+- **A327. Dolly Parton died on 25 August 2026, and A326 missed it.**
+  Her record went in with `activeTo` null and present-tense text. The
+  English Wikipedia article, citing People magazine, gives her death
+  from cancer in Nashville on 25 August 2026, aged 80; the earlier
+  research read the parts of the article about her career and not the
+  infobox. Corrected: `activeTo` 2026 and one sentence in each
+  register. Every living person added this session was then checked
+  against their article's infobox. Paul Simon's and Thomas Bangalter's
+  articles carry an empty `death_date` template with placeholder
+  values and no death in the text, so both are treated as living.
