@@ -4092,3 +4092,18 @@ small and worth having in front of Matt alongside everything else here.
   capped at the screen's width less its own left edge and a 12 px margin,
   and wraps onto a second line past that. Its corner radius is half a
   one-line row's height, so a row that fits looks as before.
+
+- **A316. Lane titles are held at the left edge (Matt).** A lineage
+  lane's title sits at the start of the time axis, which the opening
+  view puts off the left of the screen at every width. At 768 px the
+  titles showed as stubs ("K" for ROCK); at 1280 none was visible. A
+  title that would start past the left edge is now held
+  `CONFIG.arrange.titleEdgePx` (12 px) in from it, like a frozen row
+  header, so every lane is named on screen. It still steps right of the
+  dock, the legend, and now the play button, which titles held at the
+  edge can land under. Scene and label views, whose titles sit beside
+  their first member, are unchanged.
+  - **A fix in the same code.** A title crossing two controls in one pass
+    was pushed by both distances added together, since its position was
+    read once per pass. It is now re-read after each step. This was
+    hard to reach before titles were held at the edge.

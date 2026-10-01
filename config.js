@@ -341,6 +341,9 @@ export const CONFIG = {
   arrange: {
     // Screen px a lane title keeps from a fixed control it steps past.
     titleOverlayGapPx: 10,
+    // A lane title whose start would scroll past the screen's left edge
+    // stays this many screen px in from it instead (A316).
+    titleEdgePx: 12,
     // A dark halo behind lane titles, in screen px, so a title that steps
     // onto a marker still reads.
     titleHaloPx: 3.5,

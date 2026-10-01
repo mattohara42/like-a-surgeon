@@ -325,8 +325,9 @@ async function main() {
   // every artist below them. Rebuilding the whole graph is the honest way
   // to do that, and at this size it is imperceptible. The reader's camera,
   // year and selection are carried across so it doesn't feel like a reload.
-  // The fixed controls drawn over the top-left of the map, which lane
-  // titles step clear of. Measured when they change size (a layer toggle,
+  // The fixed controls drawn over the left of the map, which lane titles
+  // step clear of (the play button since titles are held at the left edge,
+  // A316). Measured when they change size (a layer toggle,
   // the legend collapsing, a resize), never per frame.
   let overlayRects = [];
   function measureOverlays() {
@@ -345,7 +346,9 @@ async function main() {
           bottom: Math.max(a.bottom, b.bottom),
         }))
       : null;
-    overlayRects = [cluster, rect(legendEl)].filter(Boolean);
+    // Drawn with the graph (render/transport.js), so looked up each time.
+    const playEl = document.getElementById('transport-play');
+    overlayRects = [cluster, rect(legendEl), playEl && rect(playEl)].filter(Boolean);
     graph?.rerender();
   }
   const overlayObserver = new ResizeObserver(measureOverlays);

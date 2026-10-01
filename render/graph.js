@@ -184,25 +184,28 @@ function drawBands(bandsG, titlesG, layout, onSelectGroup) {
   return titleSpecs;
 }
 
-// A lane title at the axis origin can land under a fixed control (the
-// layer and reading toggles, the legend), where it prints through them as
-// a collision. Each frame, a title that would sit under one steps right to
-// just past it. Titles placed beside their content (scene and label views)
-// already sit clear of the origin and are left alone. `overlays` are screen
-// rects, cached by the caller, so this reads no layout.
+// A lane title at the axis origin is usually off the left of the screen,
+// or under a fixed control (the dock, the legend), where it prints through
+// as a collision. Each frame, a title that would start past the left edge
+// is held at it, like a frozen row header, and one that would sit under a
+// control steps right to just past it. Titles placed beside their content
+// (scene and label views) already sit clear of the origin and are left
+// alone. `overlays` are screen rects, cached by the caller, so this reads
+// no layout.
 function updateTitleShifts(titleSpecs, vp, overlays) {
   const { labelCharWidthEm } = CONFIG.node;
-  const gap = CONFIG.arrange.titleOverlayGapPx;
+  const { titleOverlayGapPx: gap, titleEdgePx } = CONFIG.arrange;
   for (const t of titleSpecs) {
     t.shiftPx = 0;
     if (t.anchorEnd) continue;
     const width = t.chars * t.fontPx * (labelCharWidthEm + t.trackingEm);
     const baseline = t.y * vp.scale + vp.ty + t.dyPx;
     const top = baseline - t.fontPx;
+    t.shiftPx = Math.max(0, titleEdgePx - (t.x * vp.scale + vp.tx + t.dxPx));
     // Two passes, so stepping past one control can still clear the next.
     for (let pass = 0; pass < 2; pass++) {
-      const x = t.x * vp.scale + vp.tx + t.dxPx + t.shiftPx;
       for (const o of overlays) {
+        const x = t.x * vp.scale + vp.tx + t.dxPx + t.shiftPx;
         if (top < o.bottom && baseline > o.top && x < o.right && x + width > o.left) {
           t.shiftPx += o.right + gap - x;
         }
