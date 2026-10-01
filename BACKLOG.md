@@ -75,6 +75,35 @@ correct response to a good idea arriving mid-milestone.
   is still M5 work.
   **Shipped** (A292) as a six-stop thread into Yankovic in date order.
 
+- **Six Degrees of Weird Al, the challenge.** Matt asked for this
+  2026-10-01, as a game alongside the A292 thread: get from any artist to
+  Yankovic in six hops or fewer. Held until the M5 gate passes, per Matt.
+  Design as agreed in chat:
+  - *Shape.* The player hops. The game starts on an artist, each click on
+    a connected node is one hop, a counter sits in the dock, and reaching
+    Yankovic wins. A "show me a route" button reveals one shortest path
+    after a win or a give-up. Every hop opens an edge, so the reader learns
+    something at each step.
+  - *What counts as a hop.* Any edge, in either direction, through any node
+    type. Scenes, labels and machines count as stops. Direction has to be
+    ignored because every Yankovic edge points into him.
+  - *Reach today.* With those rules, 181 of 203 artists are within six
+    hops (a BFS over the edge files on 2026-10-01). The 22 beyond six, or
+    unreachable, are thinly connected rather than musically distant.
+    George Clinton has one edge (to Dr. Dre), Pink Floyd one (to Kate
+    Bush), and Curtis Mayfield and The Goats connect only to their labels.
+    Daphne Oram, Delia Derbyshire, Curtis Mayfield and The Goats have no
+    route at all. Every far artist has 1 to 4 edges against a median of 3.
+    So the limit stays at six, and the far list is a Track D worklist.
+  - *Starting artists.* Only artists within six hops, Matt's call on
+    2026-10-01, so every game can be won. An artist further out is never
+    offered as a start. Not yet decided: what the game says if a reader
+    asks for a far artist by name, and whether `npm run report` should
+    list the artists beyond six hops so the gap shows up as data work.
+  - *Build notes.* The distances must be computed at load time from the
+    edge data (a BFS from Yankovic), never a stored list, so artist 900
+    costs what artist 9 did. The hop limit goes in `CONFIG`.
+
 - **Follow the producer (Q21).** Select a producer and see everything
   they touched lit up across the map, or an "Arrange by producer" lane
   option beside Lineage, Scene and Label. The data for it is `production`
