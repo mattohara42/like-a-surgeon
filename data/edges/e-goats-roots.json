@@ -1,0 +1,28 @@
+{
+  "id": "e-goats-roots",
+  "from": "the-goats",
+  "to": "the-roots",
+  "type": "scene",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on The Goats: in his introduction to a 2019 book on Ruffhouse Records, Questlove wrote that the Goats asked his band to open for them, and that it was the Roots' first live show. Wikipedia's article on the Roots separately dates their first organized gig to a 1989 school talent show, under the name Radio Activity, so 'first live show' is best read as their first proper concert. The source gives no date for the Goats show. The edge is placed at 1992, the year of the Goats' debut album 'Tricks of the Shade', which is a placement on the timeline and not a documented date. The claim is the shared bill between two Philadelphia live-band hip-hop acts, not a musical influence.",
+  "year": 1992,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "The Goats",
+      "title": "Typical American",
+      "year": 1992
+    },
+    "later": {
+      "artist": "The Roots",
+      "title": "Pass the Popcorn",
+      "year": 1993
+    },
+    "whatToListenFor": "Both bands rap over live players instead of samples. The Goats had a drummer, Chuck Treece, and a bassist, E.J. Simpson, and their record leans toward rock. The Roots' first album, made a year later, has Questlove on drums and leans toward jazz. Listen to the drums on each: a person playing, with the small changes from bar to bar that a sampled loop does not have."
+  },
+  "explanation": {
+    "age13": "The Goats and the Roots were both Philadelphia rap groups that used a live band. The Goats asked the Roots to open for them at one of their shows. Questlove, the Roots' drummer, later wrote that it was his band's first real show.",
+    "adult": "A support slot, documented by the drummer who played it, linking two early-1990s Philadelphia acts that put rappers in front of live players. The Goats split in 1994. The Roots went on to become known for exactly that approach, hip hop played on live instruments. Their earlier 1989 talent show, under another name, is why the 'first show' claim is read narrowly here."
+  },
+  "tags": []
+}
