@@ -1,0 +1,28 @@
+{
+  "id": "e-dre-nwa",
+  "from": "dr-dre",
+  "to": "nwa",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Straight Outta Compton' (Priority and Ruthless Records): the album was produced by group members Dr. Dre, DJ Yella and Arabian Prince, on a Roland TR-808 with sampled horns, funk guitar, sampled vocals and turntable scratching. Dre has described it in retrospect as made quickly, to have something to sell. The article currently gives the release as January 1989, against the 1988 used elsewhere on this map and in most accounts; this edge keeps 1988 to match the N.W.A record and flags the difference.",
+  "year": 1988,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "World Class Wreckin' Cru",
+      "title": "Surgery",
+      "year": 1984
+    },
+    "later": {
+      "artist": "N.W.A",
+      "title": "Straight Outta Compton",
+      "year": 1988
+    },
+    "whatToListenFor": "Before N.W.A, Dre was a DJ and producer in a Los Angeles electro group, making drum-machine dance records for clubs. 'Straight Outta Compton' keeps the drum machine and the DJ's scratching, but the title track runs on the Amen break and the mood has turned from the dancefloor to the street. Listen for the scratches and sampled horn stabs that Dre stacks on top of the beat."
+  },
+  "explanation": {
+    "age13": "Dr. Dre was a member of N.W.A and also its main producer, the one who built the music under the words. 'Straight Outta Compton' was his production, made with DJ Yella and Arabian Prince.",
+    "adult": "The group's main producer was one of its members, which is why Dre's later career, from G-funk to 'The Chronic', runs straight out of this record. It links N.W.A to his own entry on the map, where that later work is told."
+  },
+  "tags": ["production"]
+}

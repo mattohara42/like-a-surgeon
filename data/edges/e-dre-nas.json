@@ -1,0 +1,28 @@
+{
+  "id": "e-dre-nas",
+  "from": "dr-dre",
+  "to": "nas",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'It Was Written' (Nas's second album, released July 1996): 'Nas Is Coming' features and is produced by Dr. Dre, and began a brief collaboration between the two. The track opens with them discussing the East Coast–West Coast rivalry and saying the song will stay out of it. The pairing drew criticism from both sides, and the collaboration led on to the Firm.",
+  "year": 1996,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Dr. Dre",
+      "title": "Nuthin' but a 'G' Thang",
+      "year": 1992
+    },
+    "later": {
+      "artist": "Nas",
+      "title": "Nas Is Coming",
+      "year": 1996
+    },
+    "whatToListenFor": "'Nuthin' but a 'G' Thang' is the Los Angeles sound Dre was famous for: slow, rolling, built on a Leon Haywood record, with Snoop Dogg's relaxed delivery. 'Nas Is Coming' starts before the beat does, with Nas and Dre talking about fans who care more about the coast rivalry than the music, and saying this record is not part of it. Listen to that opening as the point of the track: a Queensbridge rapper and a Compton producer on one song in 1996."
+  },
+  "explanation": {
+    "age13": "In 1996 rap fans were split into an East Coast side and a West Coast side, and the argument was turning violent. Dr. Dre, from Los Angeles, produced a track for Nas, from New York, and they open it by saying the song is not part of that fight. Fans on both sides criticised them for it.",
+    "adult": "A cross-coast production at the height of the East Coast–West Coast rivalry, framed on the record itself as a refusal to take part, and criticised from both sides. It was the start of a short working relationship that led on to the Firm."
+  },
+  "tags": []
+}

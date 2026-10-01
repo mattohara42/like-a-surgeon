@@ -4397,3 +4397,26 @@ small and worth having in front of Matt alongside everything else here.
   survives. `CONFIG.sixDegrees` holds the target and the six-hop limit,
   and `npm run report` now lists every artist out of reach, with its hop
   count and edge count, so the gap reads as Track D work.
+
+- **A332. A first Six Degrees reach batch: four edges, 180 to 186 of 202
+  artists in range.** Matt asked on 2026-10-01 for edges that the artists
+  out of Weird Al's reach plainly lack. Each claim was checked against
+  English Wikipedia before writing, and all four are `documented`.
+  - **`e-pinkfloyd-bowie`** ('See Emily Play' on 'Pin Ups', 1973). Pink
+    Floyd goes from 7 to 3. Neither source says why Bowie chose the song,
+    so the edge gives no reason, and its `whatToListenFor` describes the
+    original's documented studio tricks without claiming details of
+    Bowie's arrangement that I could not confirm.
+  - **`e-dre-nas`** ('Nas Is Coming', 1996). Dr. Dre goes from 6 to 3,
+    and George Clinton from 7 to 4 through the existing Clinton edge.
+  - **`e-mayfield-kanye`** ('Move On Up' slowed for 'Touch the Sky').
+    Curtis Mayfield goes from no route to 4.
+  - **`e-dre-nwa`** (Dre producing 'Straight Outta Compton'). He was
+    already in N.W.A's `keyProducers` but had no edge. N.W.A goes from 7
+    to 4, The Winstons from 8 to 5 and Shy FX from 9 to 6. Wikipedia now
+    gives the album's release as January 1989; the map's 1988 is kept,
+    and the difference is noted in the evidence.
+  - **Not added:** Janet Jackson to Beyoncé, because I found no source
+    for it. Clash to The Specials (the 1978 tour, Bernie Rhodes) and the
+    Massive Attack and Madonna 'I Want You' collaboration also wait,
+    since neither is clearly an influence edge.
