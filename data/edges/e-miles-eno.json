@@ -1,0 +1,28 @@
+{
+  "id": "e-miles-eno",
+  "from": "miles-davis",
+  "to": "brian-eno",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1982,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Get Up with It': Brian Eno cited 'He Loved Him Madly', recorded in June 1974 as Davis's tribute to Duke Ellington, as an influence in the liner notes to 'Ambient 4: On Land' (1982).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Miles Davis",
+      "title": "He Loved Him Madly",
+      "year": 1974
+    },
+    "later": {
+      "artist": "Brian Eno",
+      "title": "Lizard Point",
+      "year": 1982
+    },
+    "whatToListenFor": "'He Loved Him Madly' is half an hour long and barely moves: guitars, organ and flute drifting over a soft pulse, with long silences around the trumpet. Eno's 'On Land' pieces have no beat at all, just low drones and blurred sounds that seem to come from a place more than from instruments. Listen for what both leave out: no tune you could sing, no chord changes, a feeling of space."
+  },
+  "explanation": {
+    "age13": "Brian Eno, who invented the name 'ambient music', wrote in the notes to one of his albums that a long, slow Miles Davis piece from 1974 had influenced it.",
+    "adult": "A documented link from Davis's electric period to ambient, through the slowest and least-funk thing in it. It places Teo Macero's long, edited studio pieces on the same line as Eno's studio-as-instrument records."
+  },
+  "tags": []
+}

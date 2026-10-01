@@ -4178,3 +4178,24 @@ small and worth having in front of Matt alongside everything else here.
     it is. See BACKLOG for the Coolio record's wording.
   - **Marvin Gaye's `activeFrom` is 1961,** his first solo single,
     though he sang with the Moonglows before that.
+- **A321. Miles Davis, Black Sabbath, Pink Floyd and Kate Bush.** Four
+  artists and 6 edges. Kate Bush moved up from the art-pop group
+  because her strongest link is Gilmour.
+  - **Pink Floyd is `endUnknown`.** No formal split; the last studio
+    album was 2014 and Gilmour and Mason released a single as Pink
+    Floyd in 2022.
+  - **No Beatles to Pink Floyd edge.** The bands recorded next door to
+    each other at Abbey Road in 1967 and Floyd watched 'Lovely Rita' on
+    21 March, but no source read claims influence either way, so it is
+    told in the blurb only.
+  - **No UFO Club scene edge.** `swinging-london` is the blues-boom
+    scene and ends in 1967; the psychedelic underground would be its
+    own scene, and Pink Floyd would be its only member so far.
+  - **`e-blacksabbath-melvins` is `consensus`, with Osborne's own
+    account (Black Flag) stated beside it,** per accuracy rule 4.
+  - **`e-pinkfloyd-katebush` is a `production` edge for patronage.**
+    Gilmour paid for the demo. Its trackPair's earlier record only
+    places Gilmour in time, and the adult text says there is no musical
+    claim.
+  - **Miles Davis's 'On the Corner' as a hip-hop ancestor** is reported
+    in the adult text as a hindsight reassessment, not as an edge.

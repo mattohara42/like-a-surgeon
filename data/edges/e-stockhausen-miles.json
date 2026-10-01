@@ -1,0 +1,28 @@
+{
+  "id": "e-stockhausen-miles",
+  "from": "karlheinz-stockhausen",
+  "to": "miles-davis",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1972,
+  "crossLineage": true,
+  "evidence": "Wikipedia's articles on Miles Davis and on 'On the Corner': the arranger Paul Buckmaster introduced Davis to Stockhausen's music in 1972, and Davis later described 'On the Corner' (recorded June and July 1972, released 11 October 1972) as Stockhausen plus funk plus Ornette Coleman.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Karlheinz Stockhausen",
+      "title": "Hymnen",
+      "year": 1967
+    },
+    "later": {
+      "artist": "Miles Davis",
+      "title": "On the Corner",
+      "year": 1972
+    },
+    "whatToListenFor": "Do not expect 'On the Corner' to sound like Stockhausen. What Davis took was a way of building a piece: layers that enter and leave, sounds placed against each other rather than a tune with accompaniment, and a long form that does not resolve. Listen for the instruments coming in and out of a fixed groove, and for nobody playing a solo in the usual sense."
+  },
+  "explanation": {
+    "age13": "In 1972 a friend played Miles Davis the music of Karlheinz Stockhausen, a German composer who made pieces from electronic sounds and recordings. Davis said his next album, 'On the Corner', was Stockhausen mixed with funk.",
+    "adult": "The third route on this map from Stockhausen into popular music, after his students in Can and the Beatles. Davis's own summary is the evidence; how much of the record's sound comes from Stockhausen rather than from Buckmaster's arrangements and Macero's editing is a fair question."
+  },
+  "tags": []
+}

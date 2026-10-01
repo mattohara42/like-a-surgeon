@@ -1,0 +1,36 @@
+{
+  "id": "black-sabbath",
+  "name": "Black Sabbath",
+  "sortName": "Black Sabbath",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1968,
+  "activeTo": 2025,
+  "originCity": "Birmingham",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": ["Rodger Bain"],
+  "hook": "A Birmingham blues band whose guitarist lost his fingertips in a factory, tuned his guitar down to make it playable, and in doing so set the sound of heavy metal.",
+  "blurb": {
+    "age13": "Black Sabbath formed in Birmingham, an industrial city in England, in 1968. They started as a blues band called Earth. Their guitarist, Tony Iommi, had lost the tips of two fingers in an accident at the sheet-metal factory where he worked. To make playing hurt less, he tuned his guitar lower, and that low, heavy sound, played slowly and with a creepy, clashing interval, became heavy metal. They named the band after a horror film. Their first album came out on Friday 13 February 1970. Their singer was Ozzy Osbourne. They played their last show in Birmingham in July 2025, and Osbourne died seventeen days later.",
+    "adult": "Formed in Birmingham in 1968 by Tony Iommi, Geezer Butler, Bill Ward and Ozzy Osbourne, first as the Polka Tulk Blues Band and then Earth, and renamed in August 1969 after a horror film showing near their rehearsal room. Iommi lost the tips of two fingers in a sheet-metal factory accident and down-tuned to ease the string tension, which, with the tritone in the title track of their first album, gave them a sound far darker than the blues bands they came from. The album came out on Vertigo on Friday 13 February 1970 and reached number eight in the UK; 'Paranoid' followed the same year. They are generally credited as the first heavy metal band, a claim that has competitors (Led Zeppelin, Deep Purple, Blue Cheer) but holds best for the down-tuned, slow sound that doom metal, sludge and grunge built on. Active 1968 to 2006 and 2011 to 2017, with a final reunion show at Villa Park on 5 July 2025. Osbourne died seventeen days later."
+  },
+  "signatureTracks": [
+    {
+      "title": "Black Sabbath",
+      "year": 1970,
+      "whyThisOne": "Rain, a church bell, then three notes built on the tritone, played slowly: the first track of the first album."
+    },
+    {
+      "title": "Paranoid",
+      "year": 1970,
+      "whyThisOne": "Their fast one, and their biggest single."
+    },
+    {
+      "title": "Iron Man",
+      "year": 1970,
+      "whyThisOne": "The slow, heavy riff that every guitar shop has heard a thousand times."
+    }
+  ]
+}
