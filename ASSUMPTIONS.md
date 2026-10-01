@@ -4448,3 +4448,17 @@ small and worth having in front of Matt alongside everything else here.
     Delia Derbyshire the Radiophonic Workshop, only through their
     `scenes` fields. The scene's edges point outward, to the acts it
     influenced, so no edge was added to stand for membership.
+
+- **A334. Scene membership counts as a Six Degrees hop; label membership
+  does not.** Matt agreed on 2026-10-01 to my recommendation. The scene
+  panel already lists a scene's members (`reading/members.js`), so a game
+  that refused that hop would contradict the screen. Measured on the A333
+  data: scenes take reach from 193 to 196 of 202 (Larry Heard, Ron Hardy,
+  Daphne Oram) and move the mean route only from 4.03 to 3.98 hops, so
+  they do not shortcut the game. Labels would add one artist and still
+  leave it out of range, and once big labels carry dozens of acts they
+  would link unrelated artists in two hops. `tools/report.js` now adds
+  each artist's `scenes` to the graph, and its table counts distinct
+  neighbours, so an edge and a membership to the same scene count once.
+  A scene hop has no evidence or `whatToListenFor`; the game will show
+  the scene's own text for it (BACKLOG.md).

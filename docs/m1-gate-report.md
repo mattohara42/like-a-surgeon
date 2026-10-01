@@ -243,20 +243,18 @@ Evidence: The Sex Pistols and the Clash are the two foundational bands of the 19
 
 ## Six Degrees of "Weird Al" Yankovic
 
-193 of 202 artists are within 6 hops,
-counting any edge in either direction through any node type. The artists
-below are out of reach, which usually means they are short of edges.
+196 of 202 artists are within 6 hops,
+counting any edge in either direction through any node type, plus each
+artist's own scene membership. The artists below are out of reach, which
+usually means they are short of edges.
 
-| artist | hops | edges |
+| artist | hops | neighbours |
 |---|---|---|
-| Hugh Mundell | 7 | 2 |
-| Larry Heard | 7 | 3 |
+| Delia Derbyshire | 7 | 1 |
+| Hugh Mundell | 7 | 3 |
 | Patsy Cline | 7 | 1 |
 | Prince Buster | 7 | 2 |
-| Ron Hardy | 7 | 3 |
 | Madness | 8 | 2 |
-| Daphne Oram | no route | 2 |
-| Delia Derbyshire | no route | 1 |
 | The Goats | no route | 1 |
 
 ## 20 sampled `whatToListenFor` fields

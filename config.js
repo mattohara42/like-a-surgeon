@@ -396,7 +396,9 @@ export const CONFIG = {
 
   // Six Degrees of Weird Al (BACKLOG.md). The challenge itself waits on the
   // M5 gate; `npm run report` already uses these to list who is out of reach.
-  // A hop is any edge, either direction, through any node type.
+  // A hop is any edge, either direction, through any node type, or an
+  // artist's own membership of a scene (its `scenes` field). Label
+  // membership does not count (A334).
   sixDegrees: {
     target: 'weird-al-yankovic',
     maxHops: 6,
