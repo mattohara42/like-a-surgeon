@@ -1,0 +1,28 @@
+{
+  "id": "e-motown-marvingaye",
+  "from": "motown",
+  "to": "marvin-gaye",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1971,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Marvin Gaye: Berry Gordy initially refused to release 'What's Going On', calling it too political for radio. Gaye withheld further material until Gordy relented, and after its success he became one of the first Motown artists to escape the label's production-company control and produce his own records.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Marvin Gaye",
+      "title": "I Heard It Through the Grapevine",
+      "year": 1968
+    },
+    "later": {
+      "artist": "Marvin Gaye",
+      "title": "What's Going On",
+      "year": 1971
+    },
+    "whatToListenFor": "'Grapevine' is a Motown factory record at its best: Norman Whitfield's song and production, a tense groove, a love story. 'What's Going On' sounds like nothing Motown had released: conversation and party noise at the start, layered saxophone and strings, Gaye's voice stacked on itself, and words about war and police. Listen for the songs on the album running into each other with no gaps, like one long piece."
+  },
+  "explanation": {
+    "age13": "Motown's boss, Berry Gordy, decided which songs came out. When Marvin Gaye made an album about war, poverty and police violence, Gordy would not release it. Gaye refused to make anything else until he did. The album was a huge hit, and it changed how much say Motown's singers had over their own music.",
+    "adult": "A label edge under A69 that runs through a refusal: the label's quality-control system, the same one the Motown record describes, tried to stop the record, and the fight over it shifted control of production from the label to the artist."
+  },
+  "tags": ["labels", "politics"]
+}

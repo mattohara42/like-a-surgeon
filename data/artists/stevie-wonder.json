@@ -1,0 +1,36 @@
+{
+  "id": "stevie-wonder",
+  "name": "Stevie Wonder",
+  "sortName": "Wonder, Stevie",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1961,
+  "activeTo": null,
+  "originCity": "Saginaw, Michigan",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": ["Malcolm Cecil", "Robert Margouleff"],
+  "hook": "A Motown child star who won control of his own records at 21 and made his best-known albums inside TONTO, a synthesizer the size of a room.",
+  "blurb": {
+    "age13": "Stevie Wonder was born in Saginaw, Michigan, in 1950 and has been blind since he was a baby. Motown signed him at 11, and at 13 he became the youngest person ever to have a number one record in America, with 'Fingertips'. At 21 he made Motown give him a new contract with much more money and control over his own music. With two producers, Malcolm Cecil and Robert Margouleff, he used a giant homemade synthesizer called TONTO, and from 1972 to 1976 he made a run of albums, including 'Talking Book', 'Innervisions' and 'Songs in the Key of Life', that musicians still study. He also campaigned for Martin Luther King Jr.'s birthday to become a national holiday. He is still performing.",
+    "adult": "Born in Saginaw on 13 May 1950. Signed to Tamla at 11 in 1961, and at 13 the youngest artist to top the Hot 100, with the live 'Fingertips' (1963). At 21 he renegotiated his Motown contract, gaining a 14 per cent royalty, unusually high for the label, and creative control. Working with Malcolm Cecil and Robert Margouleff and their TONTO synthesizer, he made 'Music of My Mind' and 'Talking Book' (both 1972), 'Innervisions' (1973) and 'Fulfillingness' First Finale' (1974), playing most of the instruments himself; 'Superstition' is one of the best-known Clavinet records. 'Songs in the Key of Life' (1976) was the first album by an American artist to debut at number one on the Billboard chart. His 1980 single 'Happy Birthday' was part of the campaign for a Martin Luther King Jr. federal holiday. Its 'Pastime Paradise' became Coolio's 'Gangsta's Paradise' in 1995, and Kanye West has named 'Innervisions' and 'Songs in the Key of Life' as what he set out to compete with."
+  },
+  "signatureTracks": [
+    {
+      "title": "Superstition",
+      "year": 1972,
+      "whyThisOne": "The Clavinet riff, played by Wonder himself, and the drums too."
+    },
+    {
+      "title": "Living for the City",
+      "year": 1973,
+      "whyThisOne": "From 'Innervisions': a story about racism and a young man moving to New York, made with TONTO's builders and with Wonder playing almost every instrument."
+    },
+    {
+      "title": "Pastime Paradise",
+      "year": 1976,
+      "whyThisOne": "From 'Songs in the Key of Life', and the source of 'Gangsta's Paradise' nineteen years later."
+    }
+  ]
+}

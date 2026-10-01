@@ -1,0 +1,28 @@
+{
+  "id": "e-raycharles-aretha",
+  "from": "ray-charles",
+  "to": "aretha-franklin",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1967,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Aretha Franklin names Ray Charles, with Sam Cooke, among the musicians who visited her father's Detroit home and influenced her. That a gospel singer's move into secular soul followed the path Charles opened in 1954 is a standard reading in histories of soul, but no specific statement by Franklin crediting him for the 1967 records was read for this edge.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Ray Charles",
+      "title": "I Got a Woman",
+      "year": 1954
+    },
+    "later": {
+      "artist": "Aretha Franklin",
+      "title": "I Never Loved a Man (The Way I Love You)",
+      "year": 1967
+    },
+    "whatToListenFor": "Both are love songs sung like hymns. Listen for the piano, played by the singer in both cases, and for the way each voice bends notes and holds back before letting a phrase go, the way a preacher's voice builds through a sermon. The arrangements are thirteen years apart; the idea underneath is the same."
+  },
+  "explanation": {
+    "age13": "Ray Charles was one of the musicians who visited Aretha Franklin's home when she was growing up. He had shown that you could sing a love song the way you sing in church. Thirteen years later, that is exactly what she did.",
+    "adult": "Rated consensus: the personal contact is documented, but the musical claim rests on the general history of soul rather than a cited statement. It is the gospel-to-soul line running from the first record that made the move to the singer who made it most famous."
+  },
+  "tags": []
+}

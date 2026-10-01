@@ -4158,3 +4158,23 @@ small and worth having in front of Matt alongside everything else here.
   - **`e-littlerichard-dylan` is `documented` for the ambition only.**
     The yearbook caption is the evidence; its trackPair is a reading,
     and the adult text says so.
+- **A320. Ray Charles, Aretha Franklin, Marvin Gaye, Stevie Wonder and
+  TONTO.** Four artists, one machine and 7 edges.
+  - **Soul goes in the `funk` lane,** where Isaac Hayes and Curtis
+    Mayfield already are. There is no soul lane, and adding one would
+    mean moving those records too.
+  - **`e-raycharles-aretha` is `consensus`.** The visits to her
+    father's house are documented; the musical debt is the standard
+    history of soul, not a statement read for the edge.
+  - **TONTO is a machine record with `releasedYear` 1971,** the year of
+    'Zero Time', its first record. It was never sold, so it has no
+    release in the usual sense, and its `priceStory` says so. Its
+    `discontinuedYear` is null because it is still playable in Calgary.
+  - **Stevie Wonder has no `labels` entry.** He signed to Motown in
+    1961, but whether he is still on Motown now was not confirmed, so
+    no end year could be given and the entry was left out.
+  - **`e-steviewonder-coolio` is type `sample` for an interpolation.**
+    The schema has no interpolation type; the explanation says which
+    it is. See BACKLOG for the Coolio record's wording.
+  - **Marvin Gaye's `activeFrom` is 1961,** his first solo single,
+    though he sang with the Moonglows before that.

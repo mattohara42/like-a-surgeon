@@ -1,0 +1,18 @@
+{
+  "id": "tonto",
+  "name": "TONTO",
+  "type": "machine",
+  "kind": "synth",
+  "lineage": "electronic",
+  "maker": "Malcolm Cecil and Robert Margouleff",
+  "releasedYear": 1971,
+  "discontinuedYear": null,
+  "originalPurpose": "Not a product. Malcolm Cecil, an engineer and bass player, and Robert Margouleff, a producer, spent years joining Moog III modules, ARP 2600s, Oberheim SEMs and other units into one instrument, 'The Original New Timbral Orchestra', for their own album 'Zero Time' (1971).",
+  "whatActuallyHappened": "The first large multitimbral, polyphonic analog synthesizer, at a time when shop-bought synthesizers played one note at a time. After 'Zero Time', Stevie Wonder worked with its builders on four albums from 1972 to 1974, and the Isley Brothers, Gil Scott-Heron, Quincy Jones and Weather Report used it too. It sits in the National Music Centre in Calgary, which bought it in 2013 and restored it to playing condition in 2017.",
+  "priceStory": "Never for sale, and no price is recorded. That is the point: the only way to use it was to go to the room it was in and work with the two men who built it, which is how a synthesizer this size ended up shaping a handful of famous records instead of thousands of ordinary ones.",
+  "hook": "A homemade synthesizer twenty feet wide that Stevie Wonder played on four of his best-known albums.",
+  "blurb": {
+    "age13": "In the early 1970s most synthesizers could only play one note at a time. Malcolm Cecil and Robert Margouleff wired many synthesizers together into one huge instrument shaped like a half circle, twenty feet across, and called it TONTO. It could play chords and several different sounds at once. Stevie Wonder heard their album and came to work with them, and TONTO is on 'Talking Book' and 'Innervisions'. It is now in a museum in Calgary, Canada, and still works.",
+    "adult": "A one-off instrument assembled by Cecil and Margouleff from Moog Series III units, ARP 2600s, Oberheim SEMs, Serge modules and other parts, roughly semicircular, twenty feet across and six feet high. Its significance on this map is that it gave Wonder chords and multiple voices from synthesizers years before commercial polyphonic synths existed, and that it came with two operators: Cecil and Margouleff worked on the Wonder albums as its programmers and as producers alongside him. Cecil bought Margouleff's share in 1975; the National Music Centre in Calgary acquired it in 2013."
+  }
+}

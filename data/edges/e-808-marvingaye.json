@@ -1,0 +1,30 @@
+{
+  "id": "e-808-marvingaye",
+  "from": "tr-808",
+  "to": "marvin-gaye",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 1982,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Sexual Healing': Gaye programmed the percussion on a Roland TR-808, drawn to it because it let him make music without other musicians or producers. Recorded at Studio Katy in Ohain, Belgium, released 9 October 1982, ten weeks at number one on the R&B chart and number three on the Hot 100.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Roland",
+      "title": "TR-808 factory voices",
+      "year": 1980,
+      "search": false
+    },
+    "later": {
+      "artist": "Marvin Gaye",
+      "title": "Sexual Healing",
+      "year": 1982
+    },
+    "whatToListenFor": "Listen for the drum machine first: a deep, booming kick, thin clicky handclaps, a ticking snare and hissy hi-hats, all perfectly even. Nobody tried to make it sound like a drummer. Then notice that this is a slow love song by one of Motown's great singers, not an electro record from the Bronx, and that the machine works there too."
+  },
+  "explanation": {
+    "age13": "Marvin Gaye was living in Belgium, far from his old band. He used a Roland TR-808 drum machine to make 'Sexual Healing' because it let him make music on his own. It was his biggest hit, in the same year that 'Planet Rock' made the 808 famous in hip-hop.",
+    "adult": "The 808 reaching soul in the same year as electro, by the same logic: a machine that let one person make a whole record. Its slow, sparse use here is the line that runs to later R&B production."
+  },
+  "demoId": "demo-808-voices",
+  "tags": ["technology"]
+}
