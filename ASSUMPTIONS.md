@@ -4122,3 +4122,39 @@ small and worth having in front of Matt alongside everything else here.
     otherwise hear nothing and find no control to undo it. The engine
     keeps `setMuted` for `tools/audio-check.js`, which still checks
     that the mute stage silences the output.
+
+## Added with the big-names batch
+
+- **A318. "That big batch" is the whole list from chat.** Matt asked
+  about Fleetwood Mac and Paul Simon, was given a table of missing big
+  names, and asked for "that big batch". Read as all of them, added in
+  themed commits on one branch, each researched from the English
+  Wikipedia articles named in its edges' evidence.
+- **A319. Fleetwood Mac, Paul Simon, Bob Marley and Bob Dylan.** Four
+  artists and 10 edges.
+  - **Fleetwood Mac is `endUnknown`.** Christine McVie died in 2022
+    and Nicks said in 2024 she did not believe the band would continue,
+    but no end has been announced, so `activeTo` is null with the flag
+    rather than a guessed year.
+  - **`e-chess-fleetwoodmac` is a label edge under A69.** Marshall
+    Chess opened the closing studio to the session and Willie Dixon
+    assembled the label's players, so the label's decision made the
+    record. The trackPair's earlier side is 'Hoochie Coochie Man',
+    chosen because Dixon wrote it and Spann played on it, not because
+    Fleetwood Mac covered it.
+  - **Paul Simon reaches Kingston as a scene edge,** from
+    `kingston-dub`, since he used the scene's studio and session
+    players. The scene's name is about sound systems and dub, which
+    'Mother and Child Reunion' is not; it is the only Kingston scene on
+    the map. Graceland has no edge: none of the South African musicians
+    are on the map yet. The Los Lobos credit dispute is stated as a
+    dispute in the adult text.
+  - **Marley is in the `dub` lane and joins `kingston-dub`'s
+    `memberIds`,** beside Perry and the other Kingston artists, since
+    there is no reggae lane. The node is the group, named "Bob Marley
+    and the Wailers", from 1963 to his death in 1981.
+  - **Dylan's Newport 1965 booing is told as disputed** in the adult
+    text, per accuracy rule 4.
+  - **`e-littlerichard-dylan` is `documented` for the ambition only.**
+    The yearbook caption is the evidence; its trackPair is a reading,
+    and the adult text says so.

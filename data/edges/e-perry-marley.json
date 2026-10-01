@@ -1,0 +1,28 @@
+{
+  "id": "e-perry-marley",
+  "from": "lee-perry",
+  "to": "bob-marley",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1970,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'Soul Rebels': produced by Lee Perry, recorded August to November 1970 at Randy's in Kingston with the Barrett brothers on bass and drums, issued by Trojan in December 1970, and described as sparse, with no horns or other additions. Wikipedia's Bob Marley article notes that the Perry period is considered by many to be the Wailers' finest work.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Wailers",
+      "title": "Simmer Down",
+      "year": 1963
+    },
+    "later": {
+      "artist": "Bob Marley and the Wailers",
+      "title": "Soul Rebel",
+      "year": 1970
+    },
+    "whatToListenFor": "'Simmer Down' is ska: fast, with a full horn section and a busy band. Seven years later 'Soul Rebel' is half the speed with the horns gone, so the bass and the drums take up the space. Listen for how much room there is in the Perry record, and how the three voices sit on top of a nearly empty rhythm."
+  },
+  "explanation": {
+    "age13": "When the Wailers started they played ska, which was fast and full of horns. In 1970 Lee 'Scratch' Perry recorded them with just guitar, bass, drums, organ and voices. That slower, emptier sound became the base for everything Marley did after.",
+    "adult": "The Perry sessions gave the Wailers the rhythm section (Aston and Carlton Barrett) and the spare arrangements they took to Island. They are also the link between Marley and the dub engineers on this map: the same rooms and the same idea that space is part of the music."
+  },
+  "tags": ["production"]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "fleetwood-mac",
+  "name": "Fleetwood Mac",
+  "sortName": "Fleetwood Mac",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1967,
+  "activeTo": null,
+  "endUnknown": true,
+  "originCity": "London",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": ["Mike Vernon", "Ken Caillat", "Richard Dashut"],
+  "hook": "A British blues band that recorded with Chicago's blues players in the Chess studio, gave the Beatles the starting point for 'Sun King', and then became, with two Californians, one of the best-selling pop groups in history.",
+  "blurb": {
+    "age13": "Fleetwood Mac was started in London in July 1967 by the guitarist Peter Green, who had taken Eric Clapton's place in John Mayall's Bluesbreakers. At first it was a blues band. In January 1969 they recorded in Chicago at the Chess studio with blues players like Willie Dixon, Otis Spann and Buddy Guy. Their slow, echoing guitar instrumental 'Albatross' went to number one in Britain that month. Green left in 1970. On New Year's Eve 1974 two Americans, Lindsey Buckingham and Stevie Nicks, joined, and in 1977 the band released 'Rumours', which has sold more than 40 million copies. They made it while the couples in the band were breaking up with each other.",
+    "adult": "Formed in London in July 1967 by Peter Green, who had replaced Clapton in John Mayall's Bluesbreakers, with Mick Fleetwood and, soon after, John McVie. The first Fleetwood Mac was a straight British blues band on Mike Vernon's Blue Horizon label, and on their January 1969 US tour Vernon arranged a session at Chess's Chicago studio, which was about to close, with Willie Dixon, Otis Spann, Buddy Guy and other Chicago players; it came out as 'Fleetwood Mac in Chicago'. 'Albatross', released in November 1968, was their only UK number one, and George Harrison later described the Beatles starting 'Sun King' as an imitation of it. Green left in 1970. Buckingham and Nicks joined on New Year's Eve 1974, and 'Rumours' (February 1977), produced by the band with Ken Caillat and Richard Dashut while the McVies divorced and Buckingham and Nicks split, won the Grammy for Album of the Year and has sold more than 40 million copies. Christine McVie died in 2022, and in 2024 Nicks said she did not believe the band would continue; no formal end has been announced."
+  },
+  "signatureTracks": [
+    {
+      "title": "Albatross",
+      "year": 1968,
+      "whyThisOne": "The blues band at its quietest: a slow instrumental of reverb-soaked guitar that went to number one in Britain and that the Beatles used as a starting point."
+    },
+    {
+      "title": "Dreams",
+      "year": 1977,
+      "whyThisOne": "From 'Rumours'. Stevie Nicks's song, built on an almost unchanging bass and drum pattern, and the record most people know the band by."
+    },
+    {
+      "title": "Go Your Own Way",
+      "year": 1977,
+      "whyThisOne": "Also from 'Rumours': Lindsey Buckingham's song about his split with Nicks, sung with her in the same band."
+    }
+  ]
+}

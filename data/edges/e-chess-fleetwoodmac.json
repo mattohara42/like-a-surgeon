@@ -1,0 +1,29 @@
+{
+  "id": "e-chess-fleetwoodmac",
+  "from": "chess-records",
+  "to": "fleetwood-mac",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1969,
+  "crossLineage": true,
+  "evidence": "Wikipedia's articles on Fleetwood Mac and on 'Blues Jam at Chess': on 4 January 1969, during their first US tour, the band recorded at Chess's Ter-Mar studio in Chicago with Otis Spann, Willie Dixon, Shakey Horton, J. T. Brown, Buddy Guy, Honeyboy Edwards and S. P. Leary. Mike Vernon arranged it with Marshall Chess after learning the studio was closing, and Dixon helped organise the players. Released by Blue Horizon in December 1969.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Muddy Waters",
+      "title": "Hoochie Coochie Man",
+      "year": 1954
+    },
+    "later": {
+      "artist": "Fleetwood Mac",
+      "title": "Fleetwood Mac in Chicago",
+      "year": 1969,
+      "search": "Fleetwood Mac Blues Jam at Chess"
+    },
+    "whatToListenFor": "'Hoochie Coochie Man' is a Willie Dixon song cut at Chess with Otis Spann on piano. Fifteen years later Dixon is on bass and Spann on piano again, now behind a band from London who learned this music from the records. Listen for the piano and the stop-time riffs: the Chicago players sit back and leave space, and the young British guitarists play more notes than they need to."
+  },
+  "explanation": {
+    "age13": "Fleetwood Mac learned the blues from records made at Chess in Chicago. In January 1969 they got to record in the Chess studio with some of the musicians who had played on those records, including Willie Dixon and Otis Spann.",
+    "adult": "A label edge under A69: Marshall Chess opened the closing studio to the session and Dixon assembled the label's players, so the record exists because of the label. It is the British blues boom meeting its source in the room where the source was made."
+  },
+  "tags": ["labels"]
+}

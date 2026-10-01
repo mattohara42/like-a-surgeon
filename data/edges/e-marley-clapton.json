@@ -1,0 +1,28 @@
+{
+  "id": "e-marley-clapton",
+  "from": "bob-marley",
+  "to": "eric-clapton",
+  "type": "cover",
+  "confidence": "documented",
+  "year": 1974,
+  "crossLineage": true,
+  "evidence": "Wikipedia's articles on 'I Shot the Sheriff' and on Bob Marley: the song first appeared on the Wailers' 'Burnin'' (1973); Clapton's cover on '461 Ocean Boulevard' reached number one on the Billboard Hot 100 on 14 September 1974, his only US number one.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Bob Marley and the Wailers",
+      "title": "I Shot the Sheriff",
+      "year": 1973
+    },
+    "later": {
+      "artist": "Eric Clapton",
+      "title": "I Shot the Sheriff",
+      "year": 1974
+    },
+    "whatToListenFor": "The Wailers' version is tense and slow, the organ and guitar chopping off the beat and the bass carrying the tune. Clapton keeps the off-beat chop but smooths it into soft rock, with a fuller drum sound and a guitar solo. Listen for which instrument leads in each: the bass in Kingston, the guitar in Miami."
+  },
+  "explanation": {
+    "age13": "Eric Clapton recorded a Bob Marley song in 1974 and it went to number one in America. For many Americans it was the first time they heard a Marley song, even though it was not his recording.",
+    "adult": "A cover that sent a Kingston songwriter's name up the US chart a year after Island's repackaging. Two years later Clapton made the Birmingham remarks that started Rock Against Racism, which is why the two edges sit uneasily beside each other on this map."
+  },
+  "tags": []
+}

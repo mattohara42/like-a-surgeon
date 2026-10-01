@@ -1,0 +1,28 @@
+{
+  "id": "e-littlerichard-dylan",
+  "from": "little-richard",
+  "to": "bob-dylan",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1959,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Bob Dylan: his Hibbing High School yearbook caption gives his ambition as joining Little Richard.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Little Richard",
+      "title": "Tutti Frutti",
+      "year": 1955
+    },
+    "later": {
+      "artist": "Bob Dylan",
+      "title": "Like a Rolling Stone",
+      "year": 1965
+    },
+    "whatToListenFor": "Little Richard hammers the piano and shouts. When Dylan finally plugged in, six years after he left school, he came back to the same thing in his own way: a loud band, pounding keyboards, and a voice that pushes against the music instead of floating on it. Listen to the organ and piano on 'Like a Rolling Stone' and to how hard Dylan leans on the ends of lines."
+  },
+  "explanation": {
+    "age13": "Before he was a folk singer, the teenage Bob Dylan wanted to play rock and roll. In his 1959 high school yearbook he wrote that his ambition was to join Little Richard's band.",
+    "adult": "Documented as a teenage ambition, not as a specific musical debt; the trackPair is a reading of what came back in 1965, and that part is interpretation. It does show that the electric Dylan of 1965 was not a folk singer discovering rock and roll for the first time."
+  },
+  "tags": []
+}
