@@ -1,0 +1,28 @@
+{
+  "id": "e-rza-kanye",
+  "from": "rza",
+  "to": "kanye-west",
+  "type": "direct",
+  "confidence": "consensus",
+  "evidence": "Wikipedia's article on Wu-Tang Clan: RZA's way of chopping up soul samples and speeding them up or slowing them down was picked up by producers including Kanye West and Just Blaze. That is a critical assessment, not a statement West made about RZA's technique, so the edge is held at consensus. West has spoken separately of Wu-Tang's impact as a movement, as the same article reports.",
+  "year": 2003,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Wu-Tang Clan",
+      "title": "C.R.E.A.M.",
+      "year": 1993
+    },
+    "later": {
+      "artist": "Kanye West",
+      "title": "Through the Wire",
+      "year": 2003
+    },
+    "whatToListenFor": "On 'C.R.E.A.M.' RZA takes a few seconds of a 1960s soul record by the Charmels and loops it into something sad and dusty. On 'Through the Wire' Kanye takes Chaka Khan's 'Through the Fire' and speeds it up, so her voice comes out high and quick. Same raw material, old soul records, and the same idea: change the speed and cut it short until it becomes a new instrument."
+  },
+  "explanation": {
+    "age13": "RZA, Wu-Tang Clan's producer, built beats by cutting up old soul records and playing them faster or slower. Kanye West made the same trick the centre of his early sound, and critics trace it back to RZA.",
+    "adult": "Sped-up and slowed soul samples became one of the most recognisable production styles of the early 2000s, largely through West and Just Blaze. Critics place RZA's 1990s work as a source for it; West himself spoke of Wu-Tang in broader terms."
+  },
+  "tags": ["production"]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "e-janet-mjackson",
+  "from": "janet-jackson",
+  "to": "michael-jackson",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Scream' (released 29 May 1995 as the lead single from Michael Jackson's 'HIStory'): the song was written, composed and produced by Jimmy Jam and Terry Lewis with Michael and Janet Jackson, and Janet joined the project as a show of support for her brother. A contemporary review cited there heard the production as clipped, choppy and electronic, in the manner of Janet's own earlier records with Jam and Lewis. The edge stands for that collaboration, the record on which her production team and sound came to his.",
+  "year": 1995,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Janet Jackson",
+      "title": "Rhythm Nation",
+      "year": 1989
+    },
+    "later": {
+      "artist": "Michael Jackson and Janet Jackson",
+      "title": "Scream",
+      "year": 1995
+    },
+    "whatToListenFor": "'Rhythm Nation' is Janet with Jam and Lewis at their hardest: drum-machine hits that land like metal, and a voice that cuts in short phrases. On 'Scream' listen for the same clipped, electronic beat under Michael, and for how the two siblings trade lines and spit out the words, in a song aimed at the tabloid press."
+  },
+  "explanation": {
+    "age13": "'Scream' is a duet between Michael Jackson and his younger sister Janet. She wrote and produced it with him and with her own producers, Jimmy Jam and Terry Lewis, and critics heard her hard, choppy sound in it. It was the first song ever to enter the US chart in the top five.",
+    "adult": "By 1995 the younger sibling's production team had a sound of its own, and on 'Scream' it shaped one of Michael's singles. The song is an attack on tabloid coverage, released while he was under intense press scrutiny."
+  },
+  "tags": ["production"]
+}
