@@ -1,0 +1,28 @@
+{
+  "id": "e-madonna-swift",
+  "from": "madonna",
+  "to": "taylor-swift",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 2014,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Taylor Swift: for '1989' (2014) she turned to 1980s synth-pop to reset her artistic identity, inspired by Phil Collins, Annie Lennox, Peter Gabriel and Madonna.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Madonna",
+      "title": "Into the Groove",
+      "year": 1985
+    },
+    "later": {
+      "artist": "Taylor Swift",
+      "title": "Style",
+      "year": 2014
+    },
+    "whatToListenFor": "Listen for 1980s pop machinery: programmed drums, bright synthesizers, a bass line that pulses on every beat. Swift moved her songs into the sound Madonna's records had made the standard for dance-pop."
+  },
+  "explanation": {
+    "age13": "When Taylor Swift switched from country to pop for '1989', one of the artists she took her sound from was Madonna.",
+    "adult": "One of four names Swift gave for the '1989' sound, and the only one on this map. The reinvention itself is the Madonna model as much as the synthesizers."
+  },
+  "tags": []
+}

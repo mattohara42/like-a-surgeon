@@ -4370,3 +4370,20 @@ small and worth having in front of Matt alongside everything else here.
   Grand Wizzard Theodore, Chez Damier, African Head Charge and the
   Honey Drippers); none lists a death. Band records were not checked
   member by member.
+- **A330. Beyoncé and Taylor Swift.** Two artists and 7 edges, both in
+  the `pop` lane (Swift began in country, but most of her record is
+  pop). Researched from their English Wikipedia articles and those on
+  'Renaissance' and 'Cowboy Carter'.
+  - **`e-dolly-swift` and `e-mjackson-beyonce` are `documented`** from
+    the artists' own accounts as reported by Wikipedia; their trackPairs
+    are readings.
+  - **`e-beyonce-swift` is about release strategy,** which is the
+    influence Swift named, so its trackPair pairs two surprise releases.
+  - **Swift's masters.** Told as she described it: Braun's 2019
+    purchase, the terms she declined, the re-recordings from 2020, and
+    her purchase of the originals from Shamrock Holdings in May 2025.
+  - **Beyoncé's 2023 Dubai concert** and the criticism it drew are in
+    her adult text as fact, per Q2.
+  - **'Summer Renaissance' also credits Larry Heard,** who is on the
+    map; no edge was drawn because the source did not say which Heard
+    record it uses.

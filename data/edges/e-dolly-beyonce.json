@@ -1,0 +1,28 @@
+{
+  "id": "e-dolly-beyonce",
+  "from": "dolly-parton",
+  "to": "beyonce",
+  "type": "cover",
+  "confidence": "documented",
+  "year": 2024,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Cowboy Carter' (2024): the album includes a cover of Dolly Parton's 'Jolene' with new lyrics, and collaborations with Parton and Willie Nelson. The album addresses the overlooked contributions of Black musicians to country music.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Dolly Parton",
+      "title": "Jolene",
+      "year": 1973
+    },
+    "later": {
+      "artist": "Beyoncé",
+      "title": "Jolene",
+      "year": 2024
+    },
+    "whatToListenFor": "Parton's 'Jolene' is a woman begging another woman not to take her man. Beyoncé keeps the melody and the fast fingerpicked feel but rewrites the words into a warning. Listen for which lines change, and for how that changes who has the power in the song."
+  },
+  "explanation": {
+    "age13": "Beyoncé's country album 'Cowboy Carter' includes her version of Dolly Parton's 'Jolene', with new words, and Parton herself appears on the album.",
+    "adult": "A cover that crosses from the country lane into pop on an album arguing that country's history includes Black musicians it left out."
+  },
+  "tags": []
+}

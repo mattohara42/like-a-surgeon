@@ -1,0 +1,36 @@
+{
+  "id": "beyonce",
+  "name": "Beyoncé",
+  "sortName": "Beyoncé",
+  "type": "artist",
+  "lineage": "pop",
+  "activeFrom": 1990,
+  "activeTo": null,
+  "originCity": "Houston, Texas",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A Houston singer who named Michael Jackson her greatest influence, then made albums tracing dance music and country back to their Black originators, covering Dolly Parton and rebuilding Donna Summer's 'I Feel Love' on the way.",
+  "blurb": {
+    "age13": "Beyoncé Knowles was born in Houston, Texas, in 1981 and began performing as a child. She became famous in the late 1990s as the lead singer of Destiny's Child, one of the best-selling girl groups ever, and went solo in 2003. She has said Michael Jackson was her biggest musical influence, after he was the first concert she saw, aged five, and that Whitney Houston made her believe she could perform. Her later albums are about Black history in music. 'Renaissance' (2022) celebrates the Black and gay musicians who started disco and house, and uses part of Donna Summer's 'I Feel Love'. 'Cowboy Carter' (2024) is about Black musicians in country music, which is usually seen as white music; it includes her version of Dolly Parton's 'Jolene' and won the Grammy for Album of the Year. She was the first Black artist in 50 years to win in the country categories.",
+    "adult": "Born in Houston in 1981, she performed from 1990 and led Destiny's Child, named in 1996, before her solo debut 'Dangerously in Love' (2003). Wikipedia records Michael Jackson as her greatest musical influence (his concert was the first she attended, at five), Tina Turner and Diana Ross as models, and Whitney Houston as the singer who made her believe she could perform, with Prince, Janet Jackson, Sade and Donna Summer among others. 'Beyoncé' (2013), released without warning as a visual album, is credited with helping set Friday as the global release day. 'Lemonade' (2016) was the best-selling album of its year. 'Renaissance' (2022) is a house and disco record honouring the Black queer originators of those genres; its closing 'Summer Renaissance' interpolates 'I Feel Love' and credits Summer, Moroder and Bellotte, and Larry Heard. 'Cowboy Carter' (2024) addresses Black musicians' overlooked part in country, includes a rewritten 'Jolene' and collaborations with Dolly Parton and Willie Nelson, and at the 2025 Grammys made her the first Black artist in 50 years to win in the country categories and won Album of the Year. Her 2023 private concert in Dubai, reportedly paid $24 million, drew criticism because the UAE criminalises homosexuality."
+  },
+  "signatureTracks": [
+    {
+      "title": "Crazy in Love",
+      "year": 2003,
+      "whyThisOne": "Her first solo single, built on a horn sample from the Chi-Lites."
+    },
+    {
+      "title": "Formation",
+      "year": 2016,
+      "whyThisOne": "From 'Lemonade', performed at the Super Bowl, where its images of Black political history drew both praise and criticism."
+    },
+    {
+      "title": "Summer Renaissance",
+      "year": 2022,
+      "whyThisOne": "Donna Summer's 'I Feel Love' synthesizer pulse, rebuilt."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "taylor-swift",
+  "name": "Taylor Swift",
+  "sortName": "Swift, Taylor",
+  "type": "artist",
+  "lineage": "pop",
+  "activeFrom": 2004,
+  "activeTo": null,
+  "originCity": "West Reading, Pennsylvania",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Nathan Chapman",
+    "Max Martin",
+    "Jack Antonoff"
+  ],
+  "hook": "A country songwriter who sent Nashville demo tapes of Dolly Parton covers at 11, moved to pop on Madonna's model, and re-recorded her first albums when someone else bought her masters.",
+  "blurb": {
+    "age13": "Taylor Swift was born in West Reading, Pennsylvania, in 1989. At 11 she went to Nashville with her mother and handed record companies demo tapes of herself singing Dolly Parton and Dixie Chicks songs; they all said no, so she concentrated on writing her own. At 14 she became the youngest songwriter ever signed by her publishing company, and at 15 she signed to a new label, Big Machine, on condition that she wrote her own albums. She began as a country singer, then moved to pop with '1989' (2014), inspired by 1980s pop including Madonna. In 2019 the music manager Scooter Braun bought Big Machine, including the original recordings of her first six albums. Swift could not buy them on terms she would accept, so she recorded the albums again as 'Taylor's Version', and in 2025 she bought the originals back. She has called Beyoncé a major influence.",
+    "adult": "Born in West Reading on 13 December 1989. At 11 she took demo tapes of Dolly Parton and Dixie Chicks covers to Nashville labels and was rejected by all of them, which led her to songwriting; Sony/ATV signed her as a writer at 14, its youngest, and Scott Borchetta signed her to his new Big Machine label after a Bluebird Cafe showcase in November 2004, on condition that her albums be self-written. 'Taylor Swift' (2006) and 'Fearless' (2008) crossed from country to pop radio. For '1989' (2014) she turned to 1980s synth-pop, citing Phil Collins, Annie Lennox, Peter Gabriel and Madonna, with Max Martin and Shellback. In 2019 Scooter Braun bought Big Machine with the masters of her first six albums; she said she was offered them only in exchange for one new album per old one, declined, and from November 2020 re-recorded them so she would control their licensing. She signed to Republic in 2018 with ownership of her new masters, and in May 2025 bought the six original albums' masters from Shamrock Holdings, which had acquired them from Braun in 2020. Beyoncé's Wikipedia article records Swift naming her a major influence for showing artists how to oppose industry standards."
+  },
+  "signatureTracks": [
+    {
+      "title": "Our Song",
+      "year": 2006,
+      "whyThisOne": "Written alone as a teenager: she became the youngest person to write and sing a number-one country single by herself."
+    },
+    {
+      "title": "Shake It Off",
+      "year": 2014,
+      "whyThisOne": "The first single from '1989', her move to pop."
+    },
+    {
+      "title": "All Too Well (10 Minute Version) (Taylor's Version)",
+      "year": 2021,
+      "whyThisOne": "A re-recorded song, longer than the original, from the albums she recorded again."
+    }
+  ]
+}

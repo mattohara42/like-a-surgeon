@@ -1,0 +1,28 @@
+{
+  "id": "e-mjackson-beyonce",
+  "from": "michael-jackson",
+  "to": "beyonce",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 2003,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Beyoncé: she has named Michael Jackson as her greatest musical influence; his concert was the first she attended, at five, which she later said helped her realise her purpose as a performer.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Michael Jackson",
+      "title": "Rock with You",
+      "year": 1979
+    },
+    "later": {
+      "artist": "Beyoncé",
+      "title": "Crazy in Love",
+      "year": 2003
+    },
+    "whatToListenFor": "Listen for the performer's tricks more than the notes: the sharp vocal hiccups and gasps, the dance rhythm in the singing itself, and a track built to be danced to on stage. Both singers sing as if they are moving."
+  },
+  "explanation": {
+    "age13": "Beyoncé saw Michael Jackson in concert when she was five and has said he is the musician who influenced her most.",
+    "adult": "Documented from Beyoncé's side. It runs inside the new pop lane from the biggest star of the 1980s to the biggest of the 2000s and 2010s."
+  },
+  "tags": []
+}
