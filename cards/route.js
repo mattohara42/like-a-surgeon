@@ -5,11 +5,19 @@
 // hosted site, the phone's back gesture steps back a card, and a reader can
 // send someone the card they are on.
 
-// 'cards' or 'map'. `?view=cards` or `?view=map` wins; otherwise the width.
-export function chooseView(search, widthPx, maxWidthPx) {
+// True on a phone, or in a window narrower than the limit. The device
+// screen's shorter side catches a phone held sideways, which reads as wide.
+// It is the screen, not the window, so a laptop with a short window still
+// counts as a laptop.
+export function isSmallScreen(windowWidthPx, screenShortSidePx, maxWidthPx) {
+  return windowWidthPx < maxWidthPx || screenShortSidePx < maxWidthPx;
+}
+
+// 'cards' or 'map'. `?view=cards` or `?view=map` wins; otherwise the size.
+export function chooseView(search, windowWidthPx, screenShortSidePx, maxWidthPx) {
   const asked = new URLSearchParams(search).get('view');
   if (asked === 'cards' || asked === 'map') return asked;
-  return widthPx < maxWidthPx ? 'cards' : 'map';
+  return isSmallScreen(windowWidthPx, screenShortSidePx, maxWidthPx) ? 'cards' : 'map';
 }
 
 const NODE_KINDS = new Set(['artist', 'machine', 'scene', 'label']);

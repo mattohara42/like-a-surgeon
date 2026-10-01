@@ -74,7 +74,8 @@ as the main action.
 **Back**, **Random** and a **Teen / Adult** switch. Nothing is hidden
 behind hover or a long press. Touch targets are at least
 `CONFIG.cards.minTargetPx` (44 px). A small "Open the full map" link
-sits at the end of every card.
+sits at the end of every card, except on a phone, where the map runs too
+slowly to offer (A313).
 
 ## 4. How it is built
 

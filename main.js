@@ -80,8 +80,10 @@ async function main() {
   }
 
   // A phone gets cards instead of the map (docs/cards-architecture.md,
-  // Q39). Decided once, here, so turning the phone does not swap views.
-  if (chooseView(location.search, window.innerWidth, CONFIG.cards.maxWidthPx) === 'cards') {
+  // Q39, A313), upright or sideways. Decided once, here, so turning the
+  // phone does not swap views.
+  const screenShortSide = Math.min(window.screen.width, window.screen.height);
+  if (chooseView(location.search, window.innerWidth, screenShortSide, CONFIG.cards.maxWidthPx) === 'cards') {
     startCards(data);
     return;
   }

@@ -4052,3 +4052,24 @@ small and worth having in front of Matt alongside everything else here.
   - **The card-view link** sits on its own, bottom right under the
     transport bar, small and dim on a dark backing so it reads over the
     map. The legend's version line no longer carries it.
+
+- **A313. Phones always get cards (Matt).** The full map was slow on a
+  phone, which reached it through the "Open the full map" link at the
+  foot of every card.
+  - **Sideways counts.** The view is now chosen by the window's width or
+    the device screen's shorter side, whichever is smaller than
+    `CONFIG.cards.maxWidthPx`. A phone held sideways reports a wide
+    window, around 844 px, and used to get the map. The screen, not the
+    window, is used for the second test so that a laptop with a short
+    browser window still gets the map.
+  - **No link to the map on a phone.** The card foot's "Open the full
+    map" link is left out on a small screen. Cards opened with
+    `?view=cards` on a laptop keep it. `?view=map` still forces the map
+    on a phone, for testing.
+  - **Not measured on a real phone.** The first draw takes about 1.8 s on
+    an emulated phone with the CPU slowed 4x, so the slowness is frame
+    rate afterwards. Headless Chromium here draws without a GPU, and
+    switching off the grain, the dust, the nebula blur and the gold
+    shimmer one at a time moved its frame rate only from 16 to about 19,
+    within noise. Which effect costs a real phone the most is unknown. A
+    lighter map for phones was offered and not chosen.

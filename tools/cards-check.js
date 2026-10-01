@@ -109,6 +109,8 @@ async function run(browser, label, base) {
   if (!(await backDisabled())) fail('Back is on at the first card');
   const hidden = await page.evaluate(() => getComputedStyle(document.getElementById('app')).display);
   if (hidden !== 'none') fail('the map is still drawn under the cards');
+  // A phone is not offered the full map (A313).
+  if (await page.evaluate(() => document.querySelector('.cards-foot'))) fail('a phone is offered the full map');
 
   // hop: a connection row, then Go on to the far end
   const edgeRoute = await clickAndWait('.cards .panel-body .link-row');
@@ -172,7 +174,15 @@ async function run(browser, label, base) {
   const sep = base.includes('?') ? '&' : '?';
   await lp.goto(`${base}${sep}view=cards`);
   await lp.waitForFunction(() => document.getElementById('cards')?.dataset.route, null, { timeout: 8000 });
+  if (!(await lp.evaluate(() => document.querySelector('.cards-foot')))) fail('laptop cards lost the way to the map');
   await laptop.close();
+  // A phone held sideways reads as wide, but its screen is a phone's.
+  const sidewaysPhone = await browser.newContext({ ...PHONE, viewport: { width: 844, height: 390 }, screen: { width: 390, height: 844 } });
+  const sp = await sidewaysPhone.newPage();
+  await sp.goto(base);
+  await sp.waitForFunction(() => document.getElementById('cards')?.dataset.route, null, { timeout: 8000 })
+    .catch(() => fail('a phone held sideways got the map'));
+  await sidewaysPhone.close();
   const phoneMap = await browser.newContext(PHONE);
   const pm = await phoneMap.newPage();
   await pm.goto(`${base}${sep}view=map`);

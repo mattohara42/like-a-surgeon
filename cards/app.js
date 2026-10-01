@@ -23,7 +23,7 @@ import { renderEdgePanel } from '../reading/edgePanel.js';
 import { COPY } from '../reading/copy.js';
 import { h } from '../reading/dom.js';
 import { connectionCounts, poolWithAtLeast, openingPool, pickFrom } from './pick.js';
-import { parseRoute, routeFor } from './route.js';
+import { isSmallScreen, parseRoute, routeFor } from './route.js';
 
 export function startCards(data) {
   const nodesById = new Map(data.nodes.map((n) => [n.id, n]));
@@ -134,12 +134,21 @@ export function startCards(data) {
     return h('article', { class: 'panel-body' }, h('p', { class: 'note' }, text));
   }
 
+  // The way to the full map, offered only where it runs well. A phone does
+  // not get it (A313); `?view=map` still opens the map there for testing.
+  const offerMap = !isSmallScreen(
+    window.innerWidth,
+    Math.min(window.screen.width, window.screen.height),
+    CONFIG.cards.maxWidthPx,
+  );
+
   function foot() {
-    return h(
+    if (!offerMap) return [];
+    return [h(
       'p',
       { class: 'cards-foot' },
       h('a', { href: `?view=map`, class: 'search-link' }, pick(COPY.cards.fullMap, register)),
-    );
+    )];
   }
 
   function show(target, { keepScroll = false } = {}) {
@@ -152,7 +161,7 @@ export function startCards(data) {
     render(target).then(
       ({ card, title }) => {
         if (token !== drawToken) return;
-        cardEl.replaceChildren(card, foot());
+        cardEl.replaceChildren(card, ...foot());
         // Which card is on screen, for tools/cards-check.js.
         cardEl.dataset.route = routeFor(target, nodesById);
         document.title = `${title} · Lineage`;
@@ -168,7 +177,7 @@ export function startCards(data) {
       (err) => {
         console.error(err);
         if (token !== drawToken) return;
-        cardEl.replaceChildren(notice(pick(COPY.cards.loadFailed, register)), foot());
+        cardEl.replaceChildren(notice(pick(COPY.cards.loadFailed, register)), ...foot());
         cardEl.dataset.route = 'failed';
       },
     );
