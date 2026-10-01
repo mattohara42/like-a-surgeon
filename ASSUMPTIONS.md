@@ -4073,3 +4073,16 @@ small and worth having in front of Matt alongside everything else here.
     shimmer one at a time moved its frame rate only from 16 to about 19,
     within noise. Which effect costs a real phone the most is unknown. A
     lighter map for phones was offered and not chosen.
+
+- **A314. Controls step aside for an open dock row (Matt).** On screens
+  narrower than the 1280 laptop, a dock row slid out across the
+  top-centre controls. At 768 px, Show crossed the search box and Start
+  here, and Arrange by crossed the mission pill. At 1024 px, Show still
+  crossed the search box. When a row opens, the dock works out where it
+  will sit once fully out and fades any control in `yieldTo` that it
+  would cross (the search box and the goal pills). They come back when
+  the row closes, which it does on its own after
+  `CONFIG.dock.autoCloseMs`. Fading was chosen over moving them, since
+  the row is open for seconds and moving the search box would make it
+  jump under the reader's eye. At 1280 x 800 no row crosses them, so
+  nothing fades.

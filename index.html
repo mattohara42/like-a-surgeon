@@ -209,7 +209,15 @@
   }
   #sound .sound-volume { width: 84px; accent-color: var(--dock-color); }
   #sound .sound-volume:disabled { opacity: 0.35; }
-  @media (prefers-reduced-motion: reduce) { .dock-button, .dock-flyout, .dock-item.open .dock-flyout { transition: none; } }
+  /* A control an open row would run across steps aside until it closes. */
+  #search, #goal { transition: opacity var(--dock-slide) ease, visibility 0s; }
+  .yield-to-dock {
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity var(--dock-slide) ease, visibility 0s linear var(--dock-slide);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .dock-button, .dock-flyout, .dock-item.open .dock-flyout, #search, #goal, .yield-to-dock { transition: none; }
+  }
 
   /* The way to the card view (Q39, Q41): its own small place, bottom right. */
   #cards-link {

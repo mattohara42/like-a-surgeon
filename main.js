@@ -107,8 +107,9 @@ async function main() {
   let graph = null;
 
   const legend = createLegend(legendEl, data.meta);
-  const dock = createDock(dockEl, () => measureOverlays());
-  dockEl.style.setProperty('--dock-slide', `${CONFIG.dock.slideMs}ms`);
+  const dock = createDock(dockEl, () => measureOverlays(), [searchEl, goalEl.parentElement]);
+  // On the root, not the dock: the controls that step aside for it use it too.
+  document.documentElement.style.setProperty('--dock-slide', `${CONFIG.dock.slideMs}ms`);
   // Each dock button's dot: is its row away from the default?
   function updateDock() {
     dock.setChanged('show', Object.keys(CONFIG.layers.defaults).some((k) => layers[k] !== CONFIG.layers.defaults[k]));
