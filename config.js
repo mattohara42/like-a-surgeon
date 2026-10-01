@@ -59,6 +59,14 @@ export const CONFIG = {
       mid: { halfWidthPx: 70, heightPx: 18 },
       detail: { halfWidthPx: 90, heightPx: 26 },
     },
+    // The target is narrowed to the node's own name when that is shorter
+    // than halfWidthPx, plus this much either side.
+    hitNamePadPx: 6,
+    // How long the pointer must rest on a node before its edges light.
+    // Passing over nodes lights nothing: at mid zoom the dots sit closer
+    // than their names are wide, and lighting on every enter flashed whole
+    // edge sets on and off as the mouse moved.
+    hoverDwellMs: 160,
     radius: { collapsed: 3, mid: 7, detail: 10 },
     strokeWidth: 1.5,
     hoverStrokeWidth: 3,

@@ -160,8 +160,14 @@ export function updateNodeElement(g, node, position, zoomLevel, scale, degreeFac
   // which at full zoom is tens of thousands of pixels: the pointer was
   // always over some artist, and every move lit and unlit its edges,
   // which read as flashing (A277).
+  // No wider than the node's own name, so a short name does not claim the
+  // dots beside it.
   const hit = CONFIG.node.hit[zoomLevel] ?? CONFIG.node.hit.mid;
-  const hitHalfWidth = Math.max(hit.halfWidthPx / scale, radius + 2 / scale);
+  const nameHalfPx = zoomLevel === 'collapsed'
+    ? hit.halfWidthPx
+    : (Math.min(CONFIG.node.labelMaxChars, node.name.length) * CONFIG.node.labelFontSize * CONFIG.node.labelCharWidthEm) / 2 +
+      CONFIG.node.hitNamePadPx;
+  const hitHalfWidth = Math.max(Math.min(hit.halfWidthPx, nameHalfPx) / scale, radius + 2 / scale);
   const hitHeight = hit.heightPx / scale;
   setAttrs(hitArea, {
     x: position.x1 - hitHalfWidth,

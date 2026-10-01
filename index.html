@@ -35,6 +35,11 @@
 
   .node { cursor: pointer; }
   .node-name, .node-hook { pointer-events: none; user-select: none; }
+  /* Decoration, not target. A halo is up to ~185 px across, and while it
+     took the pointer the halos overlapped over most of the map at mid zoom,
+     so every mouse move hovered a new node and flashed its edges on and
+     off. The hit rect (render/nodes.js) is the target. */
+  .node-halo, .node-span { pointer-events: none; }
   .edge { cursor: pointer; }
   /* A playable demo on this edge (render/edges.js, createDemoBadge). */
   .demo-badge { cursor: pointer; }

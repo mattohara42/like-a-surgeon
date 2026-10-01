@@ -293,6 +293,7 @@ export function createGraph(container, data, callbacks = {}) {
   let selectedId = initialSelectedId;
   // The node under the pointer, whose edges light up like a selection's.
   let hoveredNodeId = null;
+  let hoverTimer = null;
   // Nodes ringed as "what the selected node touched", for Follow the
   // producer. Cleared whenever the selection moves.
   let touchedIds = new Set();
@@ -758,9 +759,18 @@ export function createGraph(container, data, callbacks = {}) {
             (n, hovered) => {
               const current = nodeElements.get(n.id);
               if (current) setNodeHovered(current, hovered, vp.scale);
-              if (hovered) hoveredNodeId = n.id;
-              else if (hoveredNodeId === n.id) hoveredNodeId = null;
-              scheduleRender();
+              clearTimeout(hoverTimer);
+              if (hovered) {
+                // The ring answers at once; the edges wait for the pointer
+                // to rest (CONFIG.node.hoverDwellMs).
+                hoverTimer = setTimeout(() => {
+                  hoveredNodeId = n.id;
+                  scheduleRender();
+                }, CONFIG.node.hoverDwellMs);
+              } else if (hoveredNodeId === n.id) {
+                hoveredNodeId = null;
+                scheduleRender();
+              }
             },
           );
           nodesG.appendChild(created);
@@ -1000,6 +1010,7 @@ export function createGraph(container, data, callbacks = {}) {
       scheduleRender();
     },
     destroy: () => {
+      clearTimeout(hoverTimer);
       resizeObserver.disconnect();
       transport?.stop();
       dust.stop();
