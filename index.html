@@ -163,10 +163,57 @@
     overflow: hidden;
   }
 
-  #layers {
-    position: fixed; top: 40px; left: 18px; z-index: 6;
-    display: flex; gap: 7px; flex-wrap: wrap;
+  /* ---- the control dock (reading/dock.js, Q42) ---------------------- */
+  #dock {
+    position: fixed; top: 40px; left: 18px; z-index: 7;
+    display: flex; flex-direction: column; gap: 10px;
   }
+  .dock-item { position: relative; display: flex; align-items: center; }
+  .dock-button {
+    position: relative; flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%;
+    display: grid; place-items: center; cursor: pointer;
+    font-family: var(--ui); font-size: 15px; font-weight: 600; line-height: 1;
+    color: var(--dock-color); background: rgba(4,6,13,0.85);
+    border: 2px solid var(--dock-color);
+    transition: background 200ms, box-shadow 200ms;
+  }
+  .dock-button:hover, .dock-item.open .dock-button {
+    background: color-mix(in srgb, var(--dock-color) 24%, rgba(4,6,13,0.9));
+    box-shadow: 0 0 16px color-mix(in srgb, var(--dock-color) 70%, transparent);
+  }
+  .dock-button:focus-visible { outline: 1px solid var(--dock-color); outline-offset: 3px; }
+  .dock-badge {
+    position: absolute; right: -3px; bottom: -3px; width: 11px; height: 11px; border-radius: 50%;
+    background: var(--dock-color); border: 2px solid var(--void); display: none;
+  }
+  .dock-item.changed .dock-badge { display: block; }
+  /* A row opens sideways from its button, in the button's colour. */
+  .dock-flyout {
+    position: absolute; left: 50px; top: 50%; transform: translateY(-50%);
+    display: flex; gap: 7px; align-items: center; white-space: nowrap;
+    padding: 7px 10px; border-radius: 999px;
+    background: rgba(6,10,22,0.92); border: 1px solid color-mix(in srgb, var(--dock-color) 55%, transparent);
+    box-shadow: 0 0 22px color-mix(in srgb, var(--dock-color) 22%, transparent);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  }
+  .dock-flyout[hidden] { display: none; }
+  .dock-flyout .register-caption { color: var(--dock-color); }
+  .dock-flyout .layer-toggle[aria-pressed="true"] {
+    color: #05070f; background: var(--dock-color); border-color: var(--dock-color);
+  }
+  #sound .sound-volume { width: 84px; accent-color: var(--dock-color); }
+  #sound .sound-volume:disabled { opacity: 0.35; }
+  @media (prefers-reduced-motion: reduce) { .dock-button { transition: none; } }
+
+  /* The way to the card view (Q39, Q41): its own small place, bottom right. */
+  #cards-link {
+    position: fixed; right: 14px; bottom: 6px; z-index: 6; padding: 2px 8px; border-radius: 999px;
+    background: rgba(4,6,13,0.85);
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--dim);
+    text-underline-offset: 2px;
+  }
+  #cards-link:hover { color: var(--ink); }
+
   .layer-toggle {
     font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--dim); cursor: pointer;
@@ -181,19 +228,6 @@
     color: #05070f; background: var(--ink); border-color: var(--ink);
   }
   .layer-toggle:focus-visible { outline: 1px solid rgba(150,180,235,0.7); outline-offset: 3px; }
-
-  #registers, #arrange, #sound, #lens {
-    position: fixed; left: 18px; z-index: 6;
-    display: flex; gap: 7px; align-items: center;
-  }
-  #registers { top: 76px; }
-  #arrange { top: 110px; }
-  /* Mute and volume (reading/soundControls.js): never under the drawer. */
-  #sound { top: 144px; }
-  /* Lenses (reading/lens.js). */
-  #lens { top: 178px; }
-  #sound .sound-volume { width: 84px; accent-color: #9fc2ff; }
-  #sound .sound-volume:disabled { opacity: 0.35; }
 
   /* A scene or label lane title is a button (Arrange by, Q19). */
   /* Names, not category headings, so ordinary letter-spacing: the wide
@@ -445,7 +479,6 @@
     font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--dim);
     margin: 10px 0 0; padding-top: 8px; border-top: 1px solid var(--hairline);
   }
-  .legend-cards { color: inherit; text-underline-offset: 2px; pointer-events: auto; }
 
   /* ---- welcome card and goal (reading/welcome.js) -------------------- */
   .doors { display: flex; flex-direction: column; gap: 8px; margin: 16px 0 4px; }
@@ -603,11 +636,14 @@
   </svg>
   <div id="veil"></div>
   <div id="status">Loading&hellip;</div>
-  <div id="layers" role="group" aria-label="Which records to show"></div>
-  <div id="registers" role="group"></div>
-  <div id="arrange" role="group"></div>
-  <div id="sound" role="group"></div>
-  <div id="lens" role="group"></div>
+  <nav id="dock">
+    <div id="layers" role="group" aria-label="Which records to show"></div>
+    <div id="registers" role="group"></div>
+    <div id="arrange" role="group"></div>
+    <div id="sound" role="group"></div>
+    <div id="lens" role="group"></div>
+  </nav>
+  <a id="cards-link" href="?view=cards"></a>
   <div id="search" role="search"></div>
   <div id="goal"><div id="goal-chip" aria-live="polite" hidden></div><div id="thread-chip" hidden></div></div>
   <div id="transport"></div>

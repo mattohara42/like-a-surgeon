@@ -217,6 +217,20 @@ export const CONFIG = {
   //   machines - the substrate: floor, markers, and the beams rising off it
   //
   // Persisted per reader in localStorage under `storageKey`.
+  // The control dock, top left (Q42, A312): one coloured button per row
+  // of controls, each opening its row sideways. `el` is the row's element
+  // in index.html. The colours are the controls' own, not lineage
+  // colours, so none of them claims a lane.
+  dock: {
+    items: [
+      { key: 'show', el: 'layers', glyph: '◎', color: '#3ddfa4' },
+      { key: 'read', el: 'registers', glyph: 'Aa', color: '#f3c46a' },
+      { key: 'arrange', el: 'arrange', glyph: '☰', color: '#b48cff' },
+      { key: 'sound', el: 'sound', glyph: '♪', color: '#ff8a6b' },
+      { key: 'spotlight', el: 'lens', glyph: '◐', color: '#5fa8ff' },
+    ],
+  },
+
   layers: {
     defaults: { scenes: true, labels: false, machines: true },
     storageKey: 'lineage.layers.v1',

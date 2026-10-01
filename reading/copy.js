@@ -67,16 +67,28 @@ export const COPY = {
   // records say.
   // Lenses (reading/lens.js). Each intro says what its tag covers, in the
   // words the tag is used with in data/SCHEMA.md.
+  // The control dock's buttons (reading/dock.js). Each names its row.
+  dock: {
+    label: { age13: 'Map controls', adult: 'Map controls' },
+    show: { age13: 'Show', adult: 'Layers' },
+    read: { age13: 'Reading level', adult: 'Reading level' },
+    arrange: { age13: 'Arrange by', adult: 'Arrange by' },
+    sound: { age13: 'Sound', adult: 'Sound' },
+    spotlight: { age13: 'Spotlight', adult: 'Spotlight' },
+    changed: { age13: 'changed from the start', adult: 'not the default' },
+  },
+
+  // "Spotlight" to the reader (Q42): "lens" is the code's name for it.
   lenses: {
-    caption: { age13: 'Lens', adult: 'Lens' },
+    caption: { age13: 'Spotlight', adult: 'Spotlight' },
     none: { age13: 'None', adult: 'None' },
     of: { age13: 'of', adult: 'of' },
     connections: { age13: 'connections are lit', adult: 'edges lit' },
     howTo: {
       age13: 'Lit lines stay bright and the rest go quiet. Click any lit line to read it. Choose None to see everything again.',
-      adult: 'Tagged edges stay lit and the rest go quiet. Choose None to clear the lens.',
+      adult: 'Tagged edges stay lit and the rest go quiet. Choose None to clear the spotlight.',
     },
-    clear: { age13: 'Turn the lens off', adult: 'Clear lens' },
+    clear: { age13: 'Turn the spotlight off', adult: 'Clear the spotlight' },
     production: {
       name: { age13: 'Production', adult: 'Production' },
       intro: {

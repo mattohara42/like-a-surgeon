@@ -55,9 +55,8 @@ export function createLegend(root, meta) {
     if (meta.version) parts.push(`${pick(COPY.legend.version, register)} ${meta.version}`);
     const date = readableDate(meta.generatedAt);
     if (date) parts.push(`${pick(COPY.legend.updated, register)} ${date}`);
-    // The way to the card view from the map (Q39: each view links to the other).
-    const cards = h('a', { href: '?view=cards', class: 'legend-cards' }, pick(COPY.cards.toCards, register));
-    return h('p', { class: 'legend-stamp' }, parts.length ? `${parts.join(' · ')} · ` : '', cards);
+    // The link to the card view moved to its own place (Q41, main.js).
+    return parts.length ? h('p', { class: 'legend-stamp' }, parts.join(' · ')) : null;
   }
 
   function setOpen(next) {

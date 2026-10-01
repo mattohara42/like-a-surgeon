@@ -28,6 +28,7 @@ import { stopDemo, withEdgeCaption } from './reading/demoBlock.js';
 import { createThreads } from './reading/threads.js';
 import { loadLens, saveLens, createLensControl, renderLensCard } from './reading/lens.js';
 import { createSceneMembers } from './reading/members.js';
+import { createDock } from './reading/dock.js';
 import { chooseView } from './cards/route.js';
 import { startCards } from './cards/app.js';
 
@@ -43,6 +44,8 @@ const goalEl = document.getElementById('goal-chip');
 const threadChipEl = document.getElementById('thread-chip');
 const soundEl = document.getElementById('sound');
 const lensEl = document.getElementById('lens');
+const dockEl = document.getElementById('dock');
+const cardsLinkEl = document.getElementById('cards-link');
 
 // One audio engine for the page. It creates nothing until a play button
 // calls start(), so building it here costs nothing for a reader who never
@@ -102,6 +105,16 @@ async function main() {
   let graph = null;
 
   const legend = createLegend(legendEl, data.meta);
+  const dock = createDock(dockEl);
+  // Each dock button's dot: is its row away from the default?
+  function updateDock() {
+    dock.setChanged('show', Object.keys(CONFIG.layers.defaults).some((k) => layers[k] !== CONFIG.layers.defaults[k]));
+    dock.setChanged('read', register !== CONFIG.reading.defaultRegister);
+    dock.setChanged('arrange', arrange !== CONFIG.arrange.default);
+    dock.setChanged('sound', audio.muted);
+    dock.setChanged('spotlight', lens !== null);
+  }
+  audio.onChange(updateDock);
   const search = createSearch(searchEl, {
     nodes: data.nodes,
     yearBounds: () => graph.yearBounds(),
@@ -317,7 +330,7 @@ async function main() {
       const r = el.getBoundingClientRect();
       return { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
     };
-    const controls = [layersEl, registersEl, arrangeEl, soundEl, lensEl].map(rect).filter((r) => r.right > r.left);
+    const controls = [dockEl, layersEl, registersEl, arrangeEl, soundEl, lensEl].map(rect).filter((r) => r.right > r.left);
     const cluster = controls.length
       ? controls.reduce((a, b) => ({
           left: Math.min(a.left, b.left),
@@ -330,7 +343,7 @@ async function main() {
     graph?.rerender();
   }
   const overlayObserver = new ResizeObserver(measureOverlays);
-  for (const el of [layersEl, registersEl, arrangeEl, soundEl, lensEl, legendEl]) overlayObserver.observe(el);
+  for (const el of [dockEl, layersEl, registersEl, arrangeEl, soundEl, lensEl, legendEl]) overlayObserver.observe(el);
   window.addEventListener('resize', measureOverlays);
 
   function build({ opening = false } = {}) {
@@ -377,6 +390,7 @@ async function main() {
     layers = next;
     saveLayers(layers);
     createLayerToggles(layersEl, layers, applyLayers);
+    updateDock();
     build();
   }
 
@@ -388,6 +402,7 @@ async function main() {
     arrange = next;
     saveArrange(arrange);
     createArrangeControl(arrangeEl, arrange, applyArrange);
+    updateDock();
     graph?.destroy();
     graph = null;
     build();
@@ -399,6 +414,7 @@ async function main() {
     lens = next;
     saveLens(lens);
     createLensControl(lensEl, lens, register, applyLens);
+    updateDock();
     graph?.setLens(lens);
     if (lens) panel.open({ kind: 'lens', id: lens });
     else if (panel.current()?.kind === 'lens') panel.close();
@@ -415,6 +431,9 @@ async function main() {
     threads.setRegister(register);
     sound.setRegister(register);
     createLensControl(lensEl, lens, register, applyLens);
+    dock.setRegister(register);
+    updateDock();
+    cardsLinkEl.textContent = pick(COPY.cards.toCards, register);
   }
 
   createLayerToggles(layersEl, layers, applyLayers);
@@ -426,6 +445,10 @@ async function main() {
   welcome.setRegister(register);
   threads.setRegister(register);
   sound.setRegister(register);
+  dock.setRegister(register);
+  updateDock();
+  // The way to the card view (Q39), in its own place (Q41).
+  cardsLinkEl.textContent = pick(COPY.cards.toCards, register);
   // The card opens before the first build so the opening frame can leave
   // room for the drawer it sits in.
   if (welcome.shouldOpen()) {
