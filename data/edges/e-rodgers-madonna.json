@@ -5,7 +5,7 @@
   "type": "production",
   "confidence": "documented",
   "year": 1984,
-  "crossLineage": false,
+  "crossLineage": true,
   "evidence": "Wikipedia's article on Nile Rodgers: he produced Madonna's 'Like a Virgin' (1984), which yielded four hit singles including the title track.",
   "trackPair": {
     "earlier": {

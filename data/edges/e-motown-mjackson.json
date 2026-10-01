@@ -5,7 +5,7 @@
   "type": "label",
   "confidence": "documented",
   "year": 1969,
-  "crossLineage": false,
+  "crossLineage": true,
   "evidence": "'I Want You Back' (1969), the Jackson 5's first single and first number one, was written and produced by Motown's in-house team The Corporation (Freddie Perren, Fonce Mizell, Deke Richards and Berry Gordy). The song was originally developed for Gladys Knight; Gordy heard it, made changes, and reassigned it to the Jackson 5, as documented in Motown's own retrospectives and standard music histories.",
   "trackPair": {
     "earlier": {

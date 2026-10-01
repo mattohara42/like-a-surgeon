@@ -4255,3 +4255,41 @@ small and worth having in front of Matt alongside everything else here.
     Bowie edge), and 'Big Pimpin'' and its copyright case over the
     Egyptian song 'Khosara Khosara'. Both are fine candidates for a
     later pass.
+
+## Added with the soul, pop and country lanes
+
+- **A325. Three new lanes, and which records moved (Q43).** Matt chose
+  all three. `pop` sits at order 15 (between rock and dub), `soul` at
+  55 (between funk and jazz) and `country` at 75 (between blues and
+  other).
+  - **Colours.** Pop `#f040f0`, soul `#c4806e`, country `#e8dc4c`,
+    chosen with the A258 method (Machado 2009 simulation, CIE76 in
+    Lab). Each new colour is at least 12.4 from every other lane colour
+    under normal vision and all three simulations, so the palette's
+    closest pairs are still the existing ones (10.2 rock and blues
+    under deuteranopia). A teal pop was tried first and dropped after a
+    screenshot: it scored well but read as dub's green, in the lane
+    beside it.
+  - **To `soul`:** Ray Charles, Aretha Franklin, Marvin Gaye, Stevie
+    Wonder, Curtis Mayfield, Isaac Hayes, Syl Johnson, the Winstons, the
+    Charmels, the Isley Brothers and Sade (from `other`); Motown, Stax
+    and Curtom; and the `memphis-stax` scene.
+  - **To `pop`:** Michael Jackson, Janet Jackson, Madonna, the Bee Gees,
+    ABBA, Gilbert O'Sullivan and Weird Al Yankovic.
+  - **To `country`:** Johnny Cash.
+  - **Stayed in `funk`:** James Brown, George Clinton,
+    Parliament-Funkadelic, Bootsy Collins, Sly and the Family Stone,
+    Fela Kuti, Tony Allen, Nile Rodgers, Tom Tom Club, the Honey
+    Drippers, Sylvia Robinson, Donna Summer, Casablanca and the 12-inch
+    single. **Disco stays in funk** with Chic and Donna Summer; the Bee
+    Gees go to pop because their record here covers a pop career from
+    1967 to 1983, not only disco.
+  - **The Isley Brothers go to soul** although their 1970s records are
+    funk: their record starts with a gospel trio, and the earliest work
+    sets the lane. Elvis stays in rock with Sun; Cash moves because
+    country is what his record is about.
+  - **Seven edges changed `crossLineage`**, recomputed from the records
+    rather than by hand: four became cross-lineage (Motown to Michael
+    Jackson, Rodgers to Madonna, Sun to Cash, Rubin to Cash) and three
+    became same-lineage (ABBA to Madonna, and Madonna and Michael Jackson
+    to Weird Al). None of their texts mentioned lanes.

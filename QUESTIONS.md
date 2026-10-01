@@ -16,6 +16,9 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   moving records changes every `crossLineage` flag on their edges, which
   the validator will catch. Recommended: (d), done as its own pass, not
   inside a data batch.
+  **Resolved 2026-10-01: (d), all three lanes (Matt).** Soul, pop and
+  country added, records moved, and country seeded with four more
+  artists (A325, A326).
 
 - **Q41. The card-view link when the legend is closed (A311).** A310
   put the map's link to the card view in the legend's version line,

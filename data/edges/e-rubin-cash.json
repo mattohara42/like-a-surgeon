@@ -5,7 +5,7 @@
   "type": "production",
   "confidence": "documented",
   "year": 1994,
-  "crossLineage": false,
+  "crossLineage": true,
   "evidence": "Wikipedia's article on Johnny Cash: after years without a major label, Cash worked with Rick Rubin, whose American Recordings released 'American Recordings' (1994), recorded in Cash's living room with only his guitar and including covers of contemporary songs Rubin chose. It won the Grammy for Best Contemporary Folk Album.",
   "trackPair": {
     "earlier": {

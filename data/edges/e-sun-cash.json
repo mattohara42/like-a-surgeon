@@ -5,7 +5,7 @@
   "type": "label",
   "confidence": "documented",
   "year": 1955,
-  "crossLineage": false,
+  "crossLineage": true,
   "evidence": "Wikipedia's article on Johnny Cash: he auditioned for Sam Phillips in 1955 singing mostly gospel and was told Sun no longer recorded gospel; he won Phillips over with new songs in an early rockabilly style. 'Hey, Porter' and 'Cry! Cry! Cry!' were released that June. A story that Phillips told him to go and sin before coming back was denied by Cash in a 2002 interview.",
   "trackPair": {
     "earlier": {
