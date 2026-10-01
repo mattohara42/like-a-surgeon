@@ -8,13 +8,13 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 195 | 120 | met |
+| artists | 201 | 120 | met |
 | machines | 33 | 25 | met |
 | scenes | 21 | 20 | met |
 | labels | 36 | 30 | met |
-| edges | 405 | 350 | met |
+| edges | 418 | 350 | met |
 | threads | 6 | 5 | met |
-| crossLineageEdges | 162 | 60 | met |
+| crossLineageEdges | 169 | 60 | met |
 | edgesWithDemo | 19 | 30 | 63% |
 
 ## Counts by lineage
@@ -27,11 +27,11 @@ Every node type, since machines, scenes and labels carry a lineage too.
 | electronic | 66 |
 | hiphop | 60 |
 | dub | 23 |
+| soul | 19 |
 | other | 16 |
-| soul | 15 |
-| funk | 14 |
+| funk | 15 |
 | jazz | 8 |
-| pop | 7 |
+| pop | 8 |
 | country | 5 |
 | blues | 3 |
 
@@ -43,10 +43,10 @@ Artists alone:
 | hiphop | 48 |
 | electronic | 35 |
 | dub | 15 |
-| funk | 12 |
-| soul | 11 |
+| soul | 15 |
+| funk | 13 |
 | jazz | 8 |
-| pop | 7 |
+| pop | 8 |
 | country | 5 |
 | blues | 2 |
 | other | 2 |
@@ -55,13 +55,13 @@ Artists alone:
 
 | edge type | count |
 |---|---:|
-| direct | 113 |
-| production | 66 |
-| label | 61 |
+| direct | 120 |
+| production | 68 |
+| label | 62 |
 | technological | 56 |
-| sample | 46 |
+| sample | 47 |
 | scene | 36 |
-| cover | 21 |
+| cover | 23 |
 | reaction-against | 5 |
 | rediscovery | 1 |
 
@@ -69,8 +69,8 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 318 |
-| consensus | 86 |
+| documented | 327 |
+| consensus | 90 |
 | asserted | 1 |
 
 ## The 20 edges to read hardest
@@ -243,126 +243,126 @@ Evidence: The Sex Pistols and the Clash are the two foundational bands of the 19
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 404 edges that carry one.
+Drawn with seed 1 from the 417 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-perry-clash-production`
+### 1. `e-bootsycollins-parliamentfunkadelic`
 
-Lee "Scratch" Perry, "Black Ark productions" (1976) to The Clash, "Complete Control" (1977)
+The J.B.'s, "The Grunt" (1970) to Parliament, "Up for the Down Stroke" (1974)
 
-Perry's own records are all space and echo. The Clash single is not, because the band and label largely mixed his approach back out. What survives is the treatment on the vocal and the size of the drum sound. This is a good example of an influence being audible in the negotiation rather than the result.
+'The Grunt' is a J.B.'s instrumental built around a tight, repeating bass figure with almost no ornamentation. 'Up for the Down Stroke', four years and one J.B.'s walkout later, keeps that same repeating-figure discipline but stretches it, adds Bernie Worrell's synthesizer, and lets Collins's bass talk back to the vocals instead of just holding time.
 
-### 2. `e-chuckberry-stones`
+### 2. `e-premier-nas`
+
+Gang Starr, "Mass Appeal" (1994) to Nas, "N.Y. State of Mind" (1994)
+
+Premier made both in the same year, and his hands are audible in both: short, hard, tightly trimmed drums, and a small fragment looped until it becomes a mood. On 'Mass Appeal' the fragment is a thin, repeating figure that sounds almost like elevator music, a joke that fits a song mocking rap made for the charts. On 'N.Y. State of Mind' it's a dark, minor-key piano figure sitting low under the drums. Same method, opposite weather.
+
+### 3. `e-sherwood-africanheadcharge`
+
+African Head Charge, "My Life in a Hole in the Ground" (1981) to African Head Charge, "Off the Beaten Track" (1986)
+
+Both records layer African and Caribbean percussion under heavy dub echo and dropout, Sherwood's signature technique. The later record is denser and more processed, five years of the same partnership deepening.
+
+### 4. `e-parliamentfunkadelic-publicenemy`
+
+Funkadelic, "Get Off Your Ass and Jam" (1975) to Public Enemy, "Bring the Noise" (1987)
+
+Funkadelic's original is a loose, live-sounding jam built to fill a dance floor. The Bomb Squad chops it into a hard, repeating stab buried under sirens, scratches and Chuck D's vocal, the same move e-jamesbrown-publicenemy describes with 'Funky Drummer': the source record's groove becomes raw material for something faster, louder and more urgent.
+
+### 5. `e-bobjames-rundmc`
+
+Bob James, "Take Me to the Mardi Gras" (1975) to Run-D.M.C., "Peter Piper" (1986)
+
+James's original is a laid-back jazz-funk instrumental with a chiming bell pattern buried in the arrangement. Run-D.M.C. pulls just the bells and the break to the front, loops them, and raps directly over the loop, with nothing else in the mix competing with it.
+
+### 6. `e-jamesbrown-publicenemy`
+
+James Brown, "Funky Drummer" (1970) to Public Enemy, "Fight the Power" (1989)
+
+LL Cool J's producer used the break as a clean bed. The Bomb Squad buries it. Listen for Stubblefield's rolling hi-hat and snare somewhere underneath, then for everything piled on top: shouts, horn stabs, scratches and fragments from a dozen other records, all at once, rubbing against each other. It's a wall of sound built from other people's recordings, two years before a court ruling made that kind of record almost impossible to afford.
+
+### 7. `e-hendrix-cypresshill`
+
+The Jimi Hendrix Experience, "Are You Experienced?" (1967) to Cypress Hill, "How I Could Just Kill a Man" (1991)
+
+'Are You Experienced?' is full of sounds played backwards on tape: guitar and drums that swell up and cut off where they'd normally ring out. Muggs lifts a short guitar lick from it and loops it under B-Real's high voice and his own murky drums. Listen for Hendrix's guitar turned into a repeating pattern, a piece of 1967 psychedelia working as a hook in a 1991 rap single.
+
+### 8. `e-princepaul-delasoul`
+
+Prince Paul, "DJing for Stetsasonic" (1988) to De La Soul, "3 Feet High and Rising" (1989)
+
+Stetsasonic's own records are dense but conventional boom-bap. On De La Soul's album the same production instincts turn playful and collage-like: skits, game-show samples and non-sequitur interludes across a much wider, weirder crate of source records than Paul had used behind Stetsasonic's own mic.
+
+### 9. `e-britpop-pulp`
+
+Pulp, "My Legendary Girlfriend" (1991) to Pulp, "Common People" (1995)
+
+The songwriting voice, wry, specific, class-attentive, is already fully formed on the 1991 single; it just found almost no audience. Four years later, 'Common People' is not a different Pulp, only the same band arriving during a moment already primed to hear them.
+
+### 10. `e-kinks-blur`
+
+The Kinks, "Waterloo Sunset" (1967) to Blur, "Parklife" (1994)
+
+Both zoom in on one small, specific English scene (a couple crossing a bridge; a man walking his dog in a park) rather than making a generalized statement, and both use a talky, almost-spoken vocal delivery over a fairly simple melody.
+
+### 11. `e-chuckberry-stones`
 
 Chuck Berry, "Come On" (1961) to The Rolling Stones, "Come On" (1963)
 
 Berry's original is a light, bouncy Chess single. The Stones' version is quicker and more urgent. Listen for how close it stays to the original: a new band's first single, playing it safe with a song they knew from import records.
 
-### 3. `e-h910-bowie`
+### 12. `e-aretha-whitney`
 
-Eventide, "H910 Harmonizer" (1975) to David Bowie, "Breaking Glass" (1977)
+Aretha Franklin, "Respect" (1967) to Whitney Houston, "Saving All My Love for You" (1985)
 
-Listen only to the snare drum. Each hit is followed by a fast smear that drops in pitch, a thud that seems to fall away underneath itself. The Harmonizer shifted each echo down and fed it back in, so every repeat went lower than the last. On a normal record the snare is the most solid thing in the mix. Here it sounds like it is collapsing.
+Both are gospel-trained voices singing secular songs. Listen for the long held notes, the runs on a single word, and the way each singer saves her full power for the end of the song.
 
-### 4. `e-transmat-carlcraig`
+### 13. `e-kingston-paulsimon`
 
-Derrick May (Rhythim Is Rhythim), "Strings of Life" (1987) to Psyche (Carl Craig), "Elements" (1989)
+Jimmy Cliff, "Vietnam" (1970) to Paul Simon, "Mother and Child Reunion" (1972)
 
-'Strings of Life' is techno reaching for euphoria in broad daylight. 'Elements,' made two years later inside the same label, is quieter and more interior, described by reissue notes as 'swooning electro-jazz.' Same label, same machine palette, a different temperament entirely.
+Listen to the guitar chopping on the off-beat and the bass playing short phrases with gaps between them, which is the Kingston rhythm section's style. Simon did not imitate this. He flew to the studio and hired the players. His voice and melody are New York pop, and everything under them is Jamaican.
 
-### 5. `e-tommyboy-bambaataa`
+### 14. `e-flash-theodore`
 
-Afrika Bambaataa & the Soulsonic Force, "Zulu Nation Throwdown" (1980) to Afrika Bambaataa and the Soulsonic Force, "Planet Rock" (1982)
+Grandmaster Flash, "quick-mix theory at Bronx jams" (1975) to Grand Wizzard Theodore, "the scratch" (1975)
 
-Two records by the same crew on two labels. The Winley single is rap over a band track arranged for them, the sound most rap records had after 'Rapper's Delight'. 'Planet Rock' is what happened when the new label paired Bambaataa with a producer: his record collection, Kraftwerk included, rebuilt in a studio around a drum machine. Listen for whose taste is running the record.
+Flash's technique is about making the join invisible: you should not hear the second record arrive. Theodore's does the opposite and makes the hand audible on purpose. Listen for that inversion, because it is the moment the turntable stops pretending to be a playback device and starts admitting it is being operated.
 
-### 6. `e-clash-marley`
+### 15. `e-ruffhouse-goats`
 
-The Clash, "Police and Thieves" (1977) to Bob Marley and the Wailers, "Punky Reggae Party" (1977)
+Cypress Hill, "How I Could Just Kill a Man" (1991) to The Goats, "Tricks of the Shade (album)" (1992)
 
-The Clash took a Lee Perry production and played it like a punk band. A few months later Marley went to Perry and answered with a song that invites punks and reggae musicians to the same party. Listen for Perry's echo and percussion behind Marley, the same producer on both ends of the conversation.
+Ruffhouse's first two rap records, a year apart and from the same studio, went opposite ways. Cypress Hill's is built from samples, murky and looped. Tricks of the Shade is backed by a live band, with horns and piano played by musicians, under three voices trading political verses and sketches. Listen for players rather than loops, and for how much the label let a debut album sprawl: twenty-five tracks, with a story running through them.
 
-### 7. `e-sly-miles`
+### 16. `e-spector-beatles`
 
-Sly and the Family Stone, "Thank You (Falettinme Be Mice Elf Agin)" (1969) to Miles Davis, "On the Corner" (1972)
+The Ronettes, "Be My Baby" (1963) to The Beatles, "The Long and Winding Road" (1970)
 
-Larry Graham's bass on 'Thank You' is thumped and plucked, a short pattern repeated until it becomes the whole song. On 'On the Corner' Michael Henderson's bass does the same job: one figure, repeated, with everything else built on top. Listen to the bass alone on each record.
+McCartney wrote and recorded 'The Long and Winding Road' as a plain piano ballad. Spector added a full orchestra and a women's choir, the same big, soaked sound as his 1960s singles. Listen for how the strings and voices swell over McCartney's quiet piano, and then find 'Let It Be... Naked' (2003), which strips them off again. The two versions are the argument.
 
-### 8. `e-honeydrippers-bizmarkie`
+### 17. `e-food-blur`
 
-The Honey Drippers, "Impeach the President" (1973) to Biz Markie, "Make the Music with Your Mouth, Biz" (1986)
+Blur, "Popscene" (1992) to Blur, "For Tomorrow" (1993)
 
-The same year and the same producer as 'The Bridge', and the same drums. But on the Biz record they share space with a human beatbox. Listen for the 'Impeach the President' kick and snare, then for Biz's mouth-made drums answering them. It's a sampled drummer from 1973 and a man imitating a drummer in 1986, on one track.
+'Popscene' already has the English guitar-pop idea, but it comes at you fast and loud: a blaring brass section, a sprinting tempo, and no chorus built to be sung back. 'For Tomorrow' slows down and opens up: a la-la-la chorus sung by female backing singers, a string quartet (the band's first), and a lyric that takes a drive up to Primrose Hill in north London. The Englishness is the same. The difference is a song written to order for a label that wanted a single.
 
-### 9. `e-lamonteyoung-eno`
+### 18. `e-hank-raycharles`
 
-La Monte Young, "Trio for Strings" (1958) to Brian Eno, "Discreet Music" (1975)
+Hank Williams, "Hey, Good Lookin'" (1951) to Ray Charles, "Hey, Good Lookin'" (1962)
 
-Young's music asks you to listen to one sound for a long time until you notice what is going on inside it. 'Discreet Music' asks the same thing, more gently: one soft phrase, repeating slowly, quiet enough to sit under a room. Listen for how long nothing seems to happen, and then notice how much has changed.
+Williams's version is a fast, bouncing honky-tonk song with fiddle and steel guitar. Charles turns it into big-band swing: horns, a walking bass, and a voice that plays with the rhythm instead of riding on it. Listen for the melody, which barely changes, and for everything around it, which changes completely.
 
-### 10. `e-nativetongues-tribe`
+### 19. `e-mutron-perry`
 
-Jungle Brothers, "Black Is Black" (1988) to A Tribe Called Quest, "Can I Kick It?" (1990)
+Musitronics, "Mu-Tron Bi-Phase" (1975) to The Congos, "Heart of the Congos" (1977)
 
-On 'Black Is Black' Q-Tip is a guest on a friend's record, one voice among several. Two years later on 'Can I Kick It?' he is leading his own group. Listen for his voice and delivery on both, and see whether you can pick him out on the earlier record before you know which verse is his.
+Put on the album and follow the cymbals and hi-hats. At points they begin to swirl, a hollow whoosh like a jet passing overhead, rising and falling at a speed that drifts instead of repeating evenly. That is the phaser, and the uneven speed is a hand on the control rather than a setting.
 
-### 11. `e-beatles-rollingstones`
+### 20. `e-pye-kinks`
 
-The Beatles, "I Wanna Be Your Man" (1963) to The Rolling Stones, "I Wanna Be Your Man" (1963)
+The Kinks, "Long Tall Sally" (1964) to The Kinks, "You Really Got Me" (1964)
 
-The same song by two bands in the same year. The Beatles' version, sung by Ringo, bounces along as cheerful beat music. The Stones' is rougher and faster, with Brian Jones's slide guitar wailing over it. Listen for how the Stones turn a Beatles pop song into something closer to the American R&B they were copying.
-
-### 12. `e-bronx-theclash`
-
-Grandmaster Flash and the Furious Five, "Superrappin'" (1979) to The Clash, "The Magnificent Seven" (1980)
-
-'The Magnificent Seven' is a British rock band attempting rap for the first time: a looped bassline, spoken verses, and a chorus that owes more to the sound Jones heard on the street than to anything in punk. It is usually credited as the first rap song by a rock band.
-
-### 13. `e-marshalljefferson-phuture`
-
-Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986) to Phuture, "Acid Tracks" (1987)
-
-'Move Your Body' is bright and busy, with piano, vocals and a quick beat. 'Acid Tracks' strips all of that away to a drum machine and one squelching bassline, and it moves more slowly than Phuture first made it. Listen to the tempo. The slower, heavier walk is the one change everyone agrees Jefferson asked for, and it gives the 303 room to twist.
-
-### 14. `e-madonna-weirdal`
-
-Madonna, "Like a Virgin" (1984) to "Weird Al" Yankovic, "Like a Surgeon" (1985)
-
-Yankovic's band rebuilds the Nile Rodgers-produced disco-pop arrangement closely, down to the vocal phrasing, and swaps the words for a squeamish comedy premise about operating-room anxiety.
-
-### 15. `e-tomtomclub-flash`
-
-Tom Tom Club, "Genius of Love" (1981) to Grandmaster Flash and the Furious Five, "It's Nasty (Genius of Love)" (1982)
-
-Play the two openings. The groove is the same: the bass line, the tempo, the bouncing synth. But on 'It's Nasty' it is not the Tom Tom Club record. Sugar Hill's studio band played it again, so the bass is a little rounder and the drums a little heavier, and the Furious Five rap over it. Listen for how quickly a hook could travel in 1981 to 1982: from a Bahamas studio to a Sugar Hill record within a year, by being replayed rather than copied.
-
-### 16. `e-syljohnson-delasoul`
-
-Syl Johnson, "Different Strokes" (1967) to De La Soul, "Freedom of Speak (We Got Three Minutes)" (1988)
-
-Johnson's original is a tight, live soul-funk groove built around a drum break and a spoken 'different strokes for different folks' hook. De La Soul chops it into just a fragment inside a dense collage, one voice among several sources rather than the whole beat, the same reuse-as-texture approach 'Different Strokes' would get from dozens of other producers.
-
-### 17. `e-tangerinedream-bowie`
-
-Tangerine Dream, "Phaedra" (1974) to David Bowie, "Warszawa" (1977)
-
-'Phaedra' is a side-long piece built on a synthesiser sequencer: a burbling pattern that repeats while slow washes of sound change around it. 'Warszawa', on side two of 'Low', has no sequencer and no drums at all, just slow synth chords, a melody that moves like a hymn and singing in an invented language. What they share is the decision to make a whole piece out of slowly changing electronic texture with no song structure. What is missing from Bowie's version is the pulse, which tells you he took the mood more than the machinery.
-
-### 18. `e-winstons-shyfx`
-
-The Winstons, "Amen, Brother" (1969) to UK Apachi and Shy FX, "Original Nuttah" (1994)
-
-The original break is one drummer, alone, for six seconds, its timing plain enough to hum. In 'Original Nuttah' the same break is chopped into fragments and reassembled faster than a body could play it, hi-hats scattering unevenly across the bar, so the same six seconds that once sounded like a pause in a soul record now sounds like the whole floor shaking.
-
-### 19. `e-chess-stones`
-
-The Rolling Stones, "It's All Over Now" (1964) to The Rolling Stones, "(I Can't Get No) Satisfaction" (1965)
-
-'It's All Over Now', cut in the same Chess sessions, is still a cover, a Bobby Womack song reworked. 'Satisfaction', less than a year later, is the band's own riff and words, written not long after standing in the room where the blues records they'd been copying were actually made.
-
-### 20. `e-motown-marvingaye`
-
-Marvin Gaye, "I Heard It Through the Grapevine" (1968) to Marvin Gaye, "What's Going On" (1971)
-
-'Grapevine' is a Motown factory record at its best: Norman Whitfield's song and production, a tense groove, a love story. 'What's Going On' sounds like nothing Motown had released: conversation and party noise at the start, layered saxophone and strings, Gaye's voice stacked on itself, and words about war and police. Listen for the songs on the album running into each other with no gaps, like one long piece.
+The Kinks' first single for Pye is a cover of a Little Richard song. Their third is Ray Davies's own riff, two chords over and over, on a guitar played through a torn speaker. The version you know is the second attempt, made on a session the label wouldn't pay for. Listen for how dry and close the guitar is: the band's complaint about the first version was that the reverb buried it.

@@ -1,0 +1,28 @@
+{
+  "id": "e-aretha-whitney",
+  "from": "aretha-franklin",
+  "to": "whitney-houston",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1985,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on Whitney Houston: Franklin was an 'honorary aunt' to her, and is listed among her musical influences, after her mother Cissy Houston and her cousin Dionne Warwick.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Aretha Franklin",
+      "title": "Respect",
+      "year": 1967
+    },
+    "later": {
+      "artist": "Whitney Houston",
+      "title": "Saving All My Love for You",
+      "year": 1985
+    },
+    "whatToListenFor": "Both are gospel-trained voices singing secular songs. Listen for the long held notes, the runs on a single word, and the way each singer saves her full power for the end of the song."
+  },
+  "explanation": {
+    "age13": "Aretha Franklin was a family friend Whitney Houston called her aunt, and one of the singers she learned from, along with her own mother.",
+    "adult": "Rated consensus: the family connection and the influence are listed, but no specific statement was read. The more direct source was her mother, Cissy Houston, who has no node yet."
+  },
+  "tags": []
+}

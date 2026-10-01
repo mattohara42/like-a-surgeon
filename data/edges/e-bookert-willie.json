@@ -1,0 +1,30 @@
+{
+  "id": "e-bookert-willie",
+  "from": "booker-t-and-the-mgs",
+  "to": "willie-nelson",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1978,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'Stardust' (April 1978): Booker T. Jones, Nelson's neighbour in Malibu, arranged 'Moonlight in Vermont' for him, and Nelson then asked him to produce the album; Nelson knew his work with the M.G.'s. Columbia doubted the record, but Nelson had creative control, and it stayed on the country album chart for about a decade.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Booker T. & the M.G.'s",
+      "title": "Time Is Tight",
+      "year": 1969
+    },
+    "later": {
+      "artist": "Willie Nelson",
+      "title": "Georgia on My Mind",
+      "year": 1978
+    },
+    "whatToListenFor": "Listen for the organ. Booker T. Jones plays it on 'Stardust' the way he played on Stax records: warm, sustained chords under the singer, never showing off. A Texas country singer singing 1930s pop standards over a Memphis soul organist is the cross-lineage edge in one sound."
+  },
+  "explanation": {
+    "age13": "Booker T. Jones, the organist from Booker T. & the M.G.'s, lived near Willie Nelson in California. He produced Nelson's album 'Stardust', old pop songs sung by a country singer, and it became one of Nelson's biggest records.",
+    "adult": "Drawn from the band node because Jones has no node of his own; the credit is his alone, not the group's. It ties the Stax house band to outlaw country."
+  },
+  "tags": [
+    "production"
+  ]
+}

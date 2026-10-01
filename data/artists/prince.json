@@ -1,0 +1,36 @@
+{
+  "id": "prince",
+  "name": "Prince",
+  "sortName": "Prince",
+  "type": "artist",
+  "lineage": "funk",
+  "activeFrom": 1975,
+  "activeTo": 2016,
+  "originCity": "Minneapolis, Minnesota",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A Minneapolis musician who played almost every instrument on his first five albums, built the Minneapolis sound from funk, rock and synthesizers, and changed his name to a symbol to fight his record label.",
+  "blurb": {
+    "age13": "Prince Rogers Nelson was born in Minneapolis in 1958 and wrote his first song on his father's piano at seven. Warner Bros. signed him at 18 and let him produce his own records, which almost never happened to a new artist. He played nearly every instrument on his first five albums himself: guitar, bass, keyboards, synthesizers and drums. He mixed funk, rock, soul and new wave into what became called the Minneapolis sound. In 1984 'Purple Rain' made him the first singer to have the number one film, album and single in America at the same time. In 1993, in a fight with Warner Bros. over when his music could be released, he changed his name to a symbol that could not be pronounced. He died in 2016 of an accidental overdose of fentanyl, a powerful painkiller.",
+    "adult": "Born in Minneapolis on 7 June 1958. Warner Bros. signed him in 1977 at 18, with creative control for three albums and his publishing left with him, both unusual for a debut. He played nearly all the instruments on his first five albums, and 'Dirty Mind' (1980), 'Controversy' (1981) and '1999' (1982) defined the Minneapolis sound: funk rhythm, rock guitar and synthesizers in place of horns. In 1984 he had the number one film, album and single in the US at once, with 'Purple Rain' and 'When Doves Cry'. Wikipedia lists his influences as including James Brown, George Clinton, Joni Mitchell, Jimi Hendrix, Sly Stone, Little Richard, Curtis Mayfield and Stevie Wonder, and records Miles Davis describing him as a blend of James Brown, Hendrix, Marvin Gaye, Sly Stone and Little Richard. In 1993, in a dispute with Warner Bros. over the pace of releases, he adopted an unpronounceable symbol as his name. He became a Jehovah's Witness in 2001 through Larry Graham, Sly and the Family Stone's bassist. He died at Paisley Park, his studio complex in Chanhassen, Minnesota, on 21 April 2016, of an accidental fentanyl overdose."
+  },
+  "signatureTracks": [
+    {
+      "title": "I Wanna Be Your Lover",
+      "year": 1979,
+      "whyThisOne": "His first hit, with every instrument played by him."
+    },
+    {
+      "title": "When Doves Cry",
+      "year": 1984,
+      "whyThisOne": "A number one single with no bass line at all."
+    },
+    {
+      "title": "Sign o' the Times",
+      "year": 1987,
+      "whyThisOne": "A drum machine, a bass line and a list of the news."
+    }
+  ]
+}

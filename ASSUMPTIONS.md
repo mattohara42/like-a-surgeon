@@ -4315,3 +4315,44 @@ small and worth having in front of Matt alongside everything else here.
     edge. Booker T. Jones producing 'Stardust' would link Willie Nelson
     to Stax, but Booker T. and the M.G.'s are not on the map yet; they
     are a strong candidate for the soul lane.
+
+## Added with the second soul and pop batch
+
+- **A327. Dolly Parton died on 25 August 2026, and A326 missed it.**
+  Her record went in with `activeTo` null and present-tense text. The
+  English Wikipedia article, citing People magazine, gives her death
+  from cancer in Nashville on 25 August 2026, aged 80; the earlier
+  research read the parts of the article about her career and not the
+  infobox. Corrected: `activeTo` 2026 and one sentence in each
+  register. Every living person added this session was then checked
+  against their article's infobox. Paul Simon's and Thomas Bangalter's
+  articles carry an empty `death_date` template with placeholder
+  values and no death in the text, so both are treated as living.
+- **A328. Otis Redding, Booker T. & the M.G.'s, Sam Cooke, Ann Peebles,
+  Whitney Houston and Prince.** Six artists and 13 edges, researched
+  from the English Wikipedia articles on each and on 'Respect', 'Green
+  Onions', 'A Change Is Gonna Come', 'I Can't Stand the Rain', 'The Rain
+  (Supa Dupa Fly)', 'I Will Always Love You' and 'Stardust'.
+  - **Lanes.** Redding, the M.G.'s, Cooke and Peebles go in `soul`,
+    Houston in `pop`. **Prince goes in `funk`:** the Minneapolis sound
+    is funk rhythm with rock and synthesizers, and his influences on
+    the map (James Brown, Sly Stone) are funk. Pop was the other
+    candidate.
+  - **Redding and the M.G.'s join `memphis-stax`'s `memberIds`.**
+  - **The M.G.'s are `endUnknown`.** Members reunited intermittently
+    after Jackson's murder in 1975, and Cropper died in December 2025.
+    No label span is given, since the year they left Stax was not
+    confirmed.
+  - **`e-bookert-willie` is drawn from the band node** for a credit
+    that is Booker T. Jones's alone; Jones has no node, and the adult
+    text says so.
+  - **`e-stax-otis` is a label edge under A69:** Jim Stewart choosing
+    the ballad over the Little Richard-style song.
+  - **Sam Cooke's death** is given as the manager's account, the
+    coroner's jury's verdict of justifiable homicide, and his family's
+    challenge to it, with no further detail.
+  - **Whitney Houston's death** is given as the coroner's finding
+    (accidental drowning, with heart disease and cocaine use), per Q2.
+  - **Rated `consensus`:** Sam Cooke to Aretha, Aretha to Whitney
+    Houston, Joni Mitchell to Prince, and James Brown to Prince. Each
+    rests on an influence list in Wikipedia, not a statement read.

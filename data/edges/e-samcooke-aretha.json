@@ -1,0 +1,28 @@
+{
+  "id": "e-samcooke-aretha",
+  "from": "sam-cooke",
+  "to": "aretha-franklin",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1967,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Aretha Franklin names Sam Cooke, with Ray Charles, among the musicians who visited her father's Detroit home and influenced her. Cooke had made the move from gospel star to pop singer in 1956, the move Franklin made in the 1960s. No specific statement by Franklin was read for this edge.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Sam Cooke",
+      "title": "You Send Me",
+      "year": 1957
+    },
+    "later": {
+      "artist": "Aretha Franklin",
+      "title": "Do Right Woman, Do Right Man",
+      "year": 1967
+    },
+    "whatToListenFor": "Both singers keep church phrasing inside a secular song: notes bent and held, a word stretched across several notes. Listen to how quietly each one starts, and how they save the gospel force for later."
+  },
+  "explanation": {
+    "age13": "Sam Cooke was a gospel star who switched to pop. He visited Aretha Franklin's family when she was young, and she followed the same path from church singing to soul.",
+    "adult": "Rated consensus, like e-raycharles-aretha: the contact is documented, the musical debt is standard soul history."
+  },
+  "tags": []
+}

@@ -1,0 +1,28 @@
+{
+  "id": "e-jamesbrown-prince",
+  "from": "james-brown",
+  "to": "prince",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1979,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Prince lists James Brown first among the funk musicians who influenced him, and records Miles Davis describing Prince as a blend of James Brown, Jimi Hendrix, Marvin Gaye, Sly Stone and Little Richard.",
+  "trackPair": {
+    "earlier": {
+      "artist": "James Brown",
+      "title": "Get Up (I Feel Like Being a) Sex Machine",
+      "year": 1970
+    },
+    "later": {
+      "artist": "Prince",
+      "title": "I Wanna Be Your Lover",
+      "year": 1979
+    },
+    "whatToListenFor": "Listen for the rhythm guitar: a short, choppy chord repeated on the beat, the bass locked to the kick drum, and every instrument playing a small part of one groove. Prince plays all of it himself, but the plan is Brown's."
+  },
+  "explanation": {
+    "age13": "James Brown's tight, rhythm-first funk was one of Prince's biggest influences. On his early records Prince played the whole funk band himself.",
+    "adult": "Rated consensus: the influence is listed by Wikipedia and named by Miles Davis, but no direct statement by Prince was read."
+  },
+  "tags": []
+}

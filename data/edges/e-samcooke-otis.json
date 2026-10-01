@@ -1,0 +1,28 @@
+{
+  "id": "e-samcooke-otis",
+  "from": "sam-cooke",
+  "to": "otis-redding",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1965,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Otis Redding: besides Little Richard, he was influenced by Sam Cooke, in particular the live album 'Sam Cooke at the Copa' (1964); he covered Cooke's songs early on, and his 'Sweet Soul Music' (with Arthur Conley) was based on Cooke's 'Yeah Man'.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Sam Cooke",
+      "title": "A Change Is Gonna Come",
+      "year": 1964
+    },
+    "later": {
+      "artist": "Otis Redding",
+      "title": "A Change Is Gonna Come",
+      "year": 1965
+    },
+    "whatToListenFor": "Redding recorded Cooke's song on 'Otis Blue' within a year of Cooke's death. Cooke sings it smoothly over strings, holding back. Redding sings it rougher and louder, with the Stax horns, and pushes the emotion out where Cooke kept it in. Listen for the same melody carried by two very different voices."
+  },
+  "explanation": {
+    "age13": "Sam Cooke was one of Otis Redding's biggest influences. A year after Cooke was killed, Redding recorded Cooke's 'A Change Is Gonna Come' on his album 'Otis Blue'.",
+    "adult": "Two of the singers called the King of Soul, one learning from the other. The trackPair is a cover on 'Otis Blue', which also carried Redding's own 'Respect'."
+  },
+  "tags": []
+}

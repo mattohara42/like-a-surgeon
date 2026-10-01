@@ -1,0 +1,30 @@
+{
+  "id": "e-bookert-otis",
+  "from": "booker-t-and-the-mgs",
+  "to": "otis-redding",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1965,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Booker T. & the M.G.'s: as the Stax house band they were the studio backing for Otis Redding, including 'I've Been Loving You Too Long' and 'Try a Little Tenderness'.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Booker T. & the M.G.'s",
+      "title": "Green Onions",
+      "year": 1962
+    },
+    "later": {
+      "artist": "Otis Redding",
+      "title": "Try a Little Tenderness",
+      "year": 1966
+    },
+    "whatToListenFor": "Listen to the drums and guitar on 'Try a Little Tenderness'. Al Jackson Jr. starts almost silent and builds, and Steve Cropper's guitar plays small, clipped chords that leave room for the voice. By the end the whole band is pushing Redding into a shout. The same four players made 'Green Onions' four years earlier."
+  },
+  "explanation": {
+    "age13": "The band who made 'Green Onions' were also the band behind almost every Otis Redding record. Their spare, tight playing is a big part of how he sounds.",
+    "adult": "A house band edge: the M.G.'s did not produce in the credit sense, but the Stax sound was theirs, and Redding's records are its best-known setting."
+  },
+  "tags": [
+    "production"
+  ]
+}

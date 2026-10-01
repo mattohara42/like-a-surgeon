@@ -1,0 +1,30 @@
+{
+  "id": "e-dylan-samcooke",
+  "from": "bob-dylan",
+  "to": "sam-cooke",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1964,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'A Change Is Gonna Come' (recorded 30 January 1964): hearing 'Blowin' in the Wind' in 1963, Cooke was moved that such a song about racism in America could come from a white writer, and ashamed he had not yet written one himself; he added it to his act. The song also grew from his being turned away from a whites-only motel in Shreveport on 8 October 1963.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Bob Dylan",
+      "title": "Blowin' in the Wind",
+      "year": 1963
+    },
+    "later": {
+      "artist": "Sam Cooke",
+      "title": "A Change Is Gonna Come",
+      "year": 1964
+    },
+    "whatToListenFor": "Dylan's song asks questions over a strummed guitar. Cooke's answers with a story, his own, over strings and horns: born by a river, turned away, still waiting. Listen to how a gospel singer takes a protest song's job and makes it sound like a hymn."
+  },
+  "explanation": {
+    "age13": "Sam Cooke heard Bob Dylan's 'Blowin' in the Wind' and was ashamed that a white singer had written about racism before he had. Soon after a motel turned him away for being Black, he wrote 'A Change Is Gonna Come'.",
+    "adult": "A documented case of influence running from the folk revival into soul, through shame and challenge rather than imitation. It is also one of the political songs on the map most directly caused by a single event."
+  },
+  "tags": [
+    "politics"
+  ]
+}
