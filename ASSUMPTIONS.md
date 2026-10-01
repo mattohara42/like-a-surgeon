@@ -4420,3 +4420,31 @@ small and worth having in front of Matt alongside everything else here.
     for it. Clash to The Specials (the 1978 tour, Bernie Rhodes) and the
     Massive Attack and Madonna 'I Want You' collaboration also wait,
     since neither is clearly an influence edge.
+
+- **A333. A second Six Degrees reach batch: four edges, 186 to 193 of
+  202.** Same method as A332, every claim checked on English Wikipedia.
+  - **`e-janet-mjackson`** ('Scream', 1995), `direct`, standing in for a
+    collaboration as A239 did for Kool G Rap and Nas. It runs from Janet
+    to Michael because the record carries her production team, Jam and
+    Lewis, and a cited review heard her sound in it. Janet goes from 8 to
+    2 and Joni Mitchell from 7 to 3.
+  - **`e-marvingaye-massiveattack`** ('I Want You' with Madonna, on the
+    1995 Gaye tribute album). Massive Attack goes from 6 to 4, Billy
+    Cobham from 7 to 5 and Souls of Mischief from 8 to 6.
+  - **`e-sherwood-depechemode`** (his On-U Sound remixes on the 1984
+    'Master and Servant' 12-inch). Adrian Sherwood goes from 7 to 5,
+    African Head Charge from 8 to 6.
+  - **`e-rza-kanye`**, held at `consensus`: Wikipedia credits RZA's
+    sped-up and slowed soul chops as picked up by West, but that is a
+    critic's reading, and West's own remark is about Wu-Tang in general.
+    The Charmels go from 7 to 6.
+  - **Dropped after checking:** Bob Dylan to Joni Mitchell (the source
+    gives only touring and a public dispute), Patsy Cline to anyone on
+    the map (her article names only Loretta Lynn and Willie Nelson),
+    Madness to Britpop (not in the source), and Clash to the Specials
+    (a support slot, and it would not change the reach anyway).
+  - **What is left** (nine artists) is mostly the membership question:
+    Larry Heard and Ron Hardy join Chicago house, and Daphne Oram and
+    Delia Derbyshire the Radiophonic Workshop, only through their
+    `scenes` fields. The scene's edges point outward, to the acts it
+    influenced, so no edge was added to stand for membership.

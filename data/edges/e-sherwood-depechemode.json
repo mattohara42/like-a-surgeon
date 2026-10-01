@@ -1,0 +1,29 @@
+{
+  "id": "e-sherwood-depechemode",
+  "from": "adrian-sherwood",
+  "to": "depeche-mode",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Wikipedia's articles on Adrian Sherwood and on 'Master and Servant': Sherwood is listed among Depeche Mode's remixers, and the limited UK 12-inch of 'Master and Servant' (1984) carried his 'Master and Servant (An ON-USound Science Fiction Dance Hall Classic)' and a remix of 'People Are People' retitled 'Are People People?', which the article describes as a complete deconstruction that fit the band's industrial image.",
+  "year": 1984,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Depeche Mode",
+      "title": "Master and Servant",
+      "year": 1984
+    },
+    "later": {
+      "artist": "Depeche Mode",
+      "title": "Master and Servant (An ON-USound Science Fiction Dance Hall Classic)",
+      "year": 1984,
+      "search": "Depeche Mode Master and Servant On-U Sound Science Fiction Dance Hall Classic"
+    },
+    "whatToListenFor": "The single is already built from sampled noises: the whip crack is Daniel Miller hissing and spitting in the studio. Then play Sherwood's version and listen the way you would to a dub record: which parts drop out, which are thrown into echo, and what happens to those sampled noises once a dub producer has the mixing desk."
+  },
+  "explanation": {
+    "age13": "Adrian Sherwood ran On-U Sound, a London label for dub and experimental music. In 1984 Depeche Mode let him remix two of their songs, and he took them apart the way a dub producer would.",
+    "adult": "An early meeting between London's dub-influenced underground and a chart synth-pop band. Sherwood went on to production and remix work for industrial acts, among them Ministry, Skinny Puppy, Cabaret Voltaire and Nine Inch Nails."
+  },
+  "tags": ["production"]
+}

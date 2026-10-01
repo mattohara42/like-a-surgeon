@@ -1,0 +1,28 @@
+{
+  "id": "e-marvingaye-massiveattack",
+  "from": "marvin-gaye",
+  "to": "massive-attack",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "Wikipedia's articles on 'I Want You' (Marvin Gaye, released April 1976, written and produced by Leon Ware and Arthur Ross) and on 'Inner City Blues: The Music of Marvin Gaye' (Motown, October 1995): Massive Attack recorded the song with Madonna singing for the tribute album, at the suggestion of producer Nellee Hooper, who proposed Madonna as the vocalist and set up the meeting. It also appeared on Madonna's 'Something to Remember' (1995).",
+  "year": 1995,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Marvin Gaye",
+      "title": "I Want You",
+      "year": 1976
+    },
+    "later": {
+      "artist": "Madonna and Massive Attack",
+      "title": "I Want You",
+      "year": 1995
+    },
+    "whatToListenFor": "Gaye's original is a slow, sliding soul groove with his voice stacked in layers. Massive Attack keep the melody and slow it into trip-hop: a heavy, unhurried beat, lots of space, and Madonna singing close to the microphone, almost breathing the words. Listen for which parts of the 1976 record survive, and how much the beat changes the mood."
+  },
+  "explanation": {
+    "age13": "For a 1995 album of Marvin Gaye songs, the Bristol group Massive Attack recorded his 'I Want You' with Madonna singing. They turned a 1976 soul song into slow, dark trip-hop.",
+    "adult": "A tribute record on Gaye's own label that joins three lines of this map: 1970s Motown soul, Bristol trip-hop, and Madonna's pop, brought together by the producer Nellee Hooper."
+  },
+  "tags": []
+}

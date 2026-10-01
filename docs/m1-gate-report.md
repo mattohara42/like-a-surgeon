@@ -12,9 +12,9 @@ Regenerate with `npm run report`. This report describes the dataset only;
 | machines | 33 | 25 | met |
 | scenes | 21 | 20 | met |
 | labels | 36 | 30 | met |
-| edges | 429 | 350 | met |
+| edges | 433 | 350 | met |
 | threads | 6 | 5 | met |
-| crossLineageEdges | 173 | 60 | met |
+| crossLineageEdges | 175 | 60 | met |
 | edgesWithDemo | 19 | 30 | 63% |
 
 ## Counts by lineage
@@ -55,13 +55,13 @@ Artists alone:
 
 | edge type | count |
 |---|---:|
-| direct | 125 |
-| production | 70 |
+| direct | 127 |
+| production | 71 |
 | label | 62 |
 | technological | 56 |
 | sample | 49 |
 | scene | 36 |
-| cover | 25 |
+| cover | 26 |
 | reaction-against | 5 |
 | rediscovery | 1 |
 
@@ -69,8 +69,8 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 338 |
-| consensus | 90 |
+| documented | 341 |
+| consensus | 91 |
 | asserted | 1 |
 
 ## The 20 edges to read hardest
@@ -243,151 +243,144 @@ Evidence: The Sex Pistols and the Clash are the two foundational bands of the 19
 
 ## Six Degrees of "Weird Al" Yankovic
 
-186 of 202 artists are within 6 hops,
+193 of 202 artists are within 6 hops,
 counting any edge in either direction through any node type. The artists
 below are out of reach, which usually means they are short of edges.
 
 | artist | hops | edges |
 |---|---|---|
-| Adrian Sherwood | 7 | 4 |
-| Billy Cobham | 7 | 2 |
 | Hugh Mundell | 7 | 2 |
-| Joni Mitchell | 7 | 2 |
 | Larry Heard | 7 | 3 |
 | Patsy Cline | 7 | 1 |
 | Prince Buster | 7 | 2 |
 | Ron Hardy | 7 | 3 |
-| The Charmels | 7 | 2 |
-| African Head Charge | 8 | 2 |
-| Janet Jackson | 8 | 1 |
 | Madness | 8 | 2 |
-| Souls of Mischief | 8 | 1 |
 | Daphne Oram | no route | 2 |
 | Delia Derbyshire | no route | 1 |
 | The Goats | no route | 1 |
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 428 edges that carry one.
+Drawn with seed 1 from the 432 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-virgin-sexpistols`
+### 1. `e-tommyboy-bambaataa`
 
-Sex Pistols, "Anarchy in the U.K." (1976) to Sex Pistols, "God Save the Queen" (1977)
+Afrika Bambaataa & the Soulsonic Force, "Zulu Nation Throwdown" (1980) to Afrika Bambaataa and the Soulsonic Force, "Planet Rock" (1982)
 
-Play the two back to back. The sound barely changes: the same four players, the same wall of overdubbed guitar, Johnny Rotten's voice pushed to the front. Almost nothing on the record explains why one came out on EMI and the next could only come out on a five-year-old label that had grown out of a record shop. The difference is in the words and the timing, not in the music.
+Two records by the same crew on two labels. The Winley single is rap over a band track arranged for them, the sound most rap records had after 'Rapper's Delight'. 'Planet Rock' is what happened when the new label paired Bambaataa with a producer: his record collection, Kraftwerk included, rebuilt in a studio around a drum machine. Listen for whose taste is running the record.
 
-### 2. `e-dolly-swift`
+### 2. `e-desk-tubby`
 
-Dolly Parton, "Coat of Many Colors" (1971) to Taylor Swift, "Our Song" (2006)
+MCI, "a twelve-into-four studio console, as designed" (1965) to King Tubby, "King Tubby Meets Rockers Uptown" (1976)
 
-Both are country songs written by a teenage girl about her own life, plainly told, with a story you can follow line by line. Listen for the detail: Parton's coat, Swift's porch and car radio. The pairing is our reading; the documented part is the demo tape.
+Follow one thing: the filter. The whole track thins out from the bottom up, loses its body, hangs there sounding like a radio in another room, then floods back. That is one knob being turned by hand while the tape runs. Underneath it, notice that the singing is not mixed low, it is gone, and comes back for one word before disappearing again. Both are performances, not settings.
 
-### 3. `e-jonimitchell-janetjackson`
+### 3. `e-pinkfloyd-bowie`
 
-Joni Mitchell, "Big Yellow Taxi" (1970) to Janet Jackson, "Got 'til It's Gone" (1997)
+Pink Floyd, "See Emily Play" (1967) to David Bowie, "See Emily Play" (1973)
 
-Mitchell's original is a bright, strummed folk-pop protest song, the line 'you don't know what you've got till it's gone' delivered plainly over acoustic guitar. Jackson's version loops that line as a chorus hook under a mid-tempo hip-hop groove, and Mitchell's own voice, re-recorded for this track rather than only sampled, sits inside a completely different rhythmic world than the one she wrote it in.
+Start with the original's first bridge, between the first chorus and the second verse. That piano was recorded slowly and then sped up on tape, so it skitters past faster than human hands could play it. Around it are echo, reverb, tapes run backwards and a swooping slide guitar. Then play Bowie's version and listen for which of those 1967 studio tricks a band six years later chose to keep, and which it rebuilt with its own players.
 
-### 4. `e-honeydrippers-bizmarkie`
+### 4. `e-marleymarl-ericbrakim`
 
-The Honey Drippers, "Impeach the President" (1973) to Biz Markie, "Make the Music with Your Mouth, Biz" (1986)
+MC Shan, "The Bridge (produced by Marley Marl)" (1986) to Eric B. & Rakim, "Eric B. Is President" (1986)
 
-The same year and the same producer as 'The Bridge', and the same drums. But on the Biz record they share space with a human beatbox. Listen for the 'Impeach the President' kick and snare, then for Biz's mouth-made drums answering them. It's a sampled drummer from 1973 and a man imitating a drummer in 1986, on one track.
+Play them back to back and compare the drums. Both are built on hard, sampled breaks cut into short, repeating loops, with a heavy low end and very little else, which is the Queensbridge room sound of 1986. Then listen to the voice on top. MC Shan is loud and pushing forward. Rakim is calm, slightly behind the beat, and packs rhymes into the middle of his lines. Same kind of beat, and a completely different way of rapping on it.
 
-### 5. `e-tubby-atkins-resemblance`
+### 5. `e-velvets-nirvana`
+
+The Velvet Underground, "Here She Comes Now" (1968) to Nirvana, "Here She Comes Now" (1991)
+
+The Velvet Underground's original is short, quiet and droning, almost a lullaby. Nirvana play it slow and heavy, with thick distorted guitar, and stretch it out. Listen for how the same two chords can go from New York art-rock drone to Seattle sludge. On the other side of the same single, the Melvins played 'Venus in Furs'.
+
+### 6. `e-isleybrothers-hendrix`
+
+The Isley Brothers, "Testify" (1964) to The Jimi Hendrix Experience, "Purple Haze" (1967)
+
+On 'Testify' Hendrix is a sideman in a tight R&B backing band, under the Isleys' gospel-style vocals, and he is hard to pick out. Three years later on 'Purple Haze' the same player is the whole show, with distortion, bent notes and feedback. Listening to both, you can hear the R&B rhythm playing he learned in bands like this one still underneath the noise.
+
+### 7. `e-willie-patsy`
+
+Willie Nelson, "Crazy (demo)" (1961) to Patsy Cline, "Crazy" (1961)
+
+Nelson's demo is sung loosely, almost spoken, lagging behind the beat. Cline's record keeps his chords, which were unusual for country at the time, and a little of his lag, but she sings long, smooth, full notes over Floyd Cramer's piano and the Jordanaires. Listen for the moment she holds a note where he would have let it drop.
+
+### 8. `e-bootsycollins-parliamentfunkadelic`
+
+The J.B.'s, "The Grunt" (1970) to Parliament, "Up for the Down Stroke" (1974)
+
+'The Grunt' is a J.B.'s instrumental built around a tight, repeating bass figure with almost no ornamentation. 'Up for the Down Stroke', four years and one J.B.'s walkout later, keeps that same repeating-figure discipline but stretches it, adds Bernie Worrell's synthesizer, and lets Collins's bass talk back to the vocals instead of just holding time.
+
+### 9. `e-joydivision-neworder`
+
+Joy Division, "Love Will Tear Us Apart" (1980) to New Order, "Ceremony" (1981)
+
+'Ceremony' was written while Joy Division still existed, and New Order's first single sounds like it: Hook's high, melodic bass, Morris's tight drums, a chiming guitar. Put it next to 'Love Will Tear Us Apart' and you hear the same band with a different singer. Then jump two years to 'Blue Monday' to hear how far the same three people travelled.
+
+### 10. `e-stax-isaachayes`
+
+Isaac Hayes, "Precious, Precious (Presenting Isaac Hayes)" (1968) to Isaac Hayes, "Walk On By (Hot Buttered Soul)" (1969)
+
+The 1968 debut is a competent, conventional soul session, short songs, tight arrangements, nothing that announces a distinct voice. A year later, the same singer stretches a Burt Bacharach song past eleven minutes, opening with strings and a wah-wah guitar solo before the vocal even arrives. The difference is what a label desperate enough to hand over full control actually sounds like.
+
+### 11. `e-osullivan-bizmarkie`
+
+Gilbert O'Sullivan, "Alone Again (Naturally)" (1972) to Biz Markie, "Alone Again" (1991)
+
+Listen to O'Sullivan's piano, then to Biz's loop of it. It's only a few bars, repeated, and still instantly recognisable. That's the whole case in one sound: a sample carries its author with it. The Cold Chillin' edge covers the label's decision, and this edge is the sound that decision was about.
+
+### 12. `e-clinton-dre`
+
+George Clinton, "Atomic Dog" (1982) to Dr. Dre, "Fuck Wit Dre Day (And Everybody's Celebratin')" (1992)
+
+Clinton's original chant floats over a loose, synth-driven groove, half sung and half spoken, more strange than tough. Dre tightens everything around it: a slower, heavier low end, a cleaner beat, and the chant now sitting inside a much harder, more menacing record. The words barely change. The mood around them does completely.
+
+### 13. `e-bronx-theclash`
+
+Grandmaster Flash and the Furious Five, "Superrappin'" (1979) to The Clash, "The Magnificent Seven" (1980)
+
+'The Magnificent Seven' is a British rock band attempting rap for the first time: a looped bassline, spoken verses, and a chorus that owes more to the sound Jones heard on the street than to anything in punk. It is usually credited as the first rap song by a rock band.
+
+### 14. `e-tubby-atkins-resemblance`
 
 King Tubby, "various versions" (1976) to Juan Atkins, "No UFO's" (1985)
 
 Both treat the mixing desk as the instrument and the arrangement as something to be performed rather than fixed. This is a resemblance we are pointing out, not a line of transmission we can trace.
 
-### 6. `e-talmy-kinks`
+### 15. `e-zeppelin-beastieboys`
 
-The Kinks, "You Really Got Me" (1964) to The Who, "I Can't Explain" (1965)
+Led Zeppelin, "When the Levee Breaks" (1971) to Beastie Boys, "Rhymin & Stealin" (1986)
 
-Talmy's Kinks production is the template: compressed, riff-led, little separation between the instruments. A year later on the Who record he reaches for the same compression and the same short, repeated riff shape.
+Listen to how huge Bonham's drums sound at the start of 'When the Levee Breaks': slow and heavy, with a long echo after every hit, because they were recorded at the bottom of a stairwell with microphones high above. Then hear that same beat looped under the Beastie Boys, even heavier and scratched up. The room around the drums comes along with them, which is why this beat sounds bigger than any drum machine.
 
-### 7. `e-samcooke-otis`
+### 16. `e-stooges-sexpistols`
 
-Sam Cooke, "A Change Is Gonna Come" (1964) to Otis Redding, "A Change Is Gonna Come" (1965)
+The Stooges, "No Fun" (1969) to Sex Pistols, "No Fun" (1977)
 
-Redding recorded Cooke's song on 'Otis Blue' within a year of Cooke's death. Cooke sings it smoothly over strings, holding back. Redding sings it rougher and louder, with the Stax horns, and pushes the emotion out where Cooke kept it in. Listen for the same melody carried by two very different voices.
+The Stooges' version is slow, loose and bored-sounding on purpose, with handclaps and a guitar solo that wanders off. The Sex Pistols play the same two chords faster and harder, with Johnny Rotten sneering instead of drawling. Listen for how little they changed the song itself. They sped it up and made it angrier, which is close to a one-line description of what British punk did to the Stooges.
 
-### 8. `e-longisland-publicenemy`
+### 17. `e-dusseldorf-kraftwerk`
 
-Spectrum City, "Check Out the Radio" (1984) to Public Enemy, "Public Enemy No. 1" (1987)
+Kraftwerk, "Ruckzuck" (1970) to Kraftwerk, "Trans-Europe Express" (1977)
 
-Listen to Chuck D on 'Check Out the Radio' first: the deep, booming delivery is already there in 1984. Then play 'Public Enemy No. 1', where the same voice sits over a high, squealing synthesiser whine sampled from the JB's 'Blow Your Head', looping over a heavy beat. The voice barely changed in three years. Listen to how much the production did, from an ordinary early-80s single toward the start of the Bomb Squad's noise.
+Listen to who keeps time. 'Ruckzuck' is a flute riff over drums played by a person, speeding up as they go. 'Trans-Europe Express' is made in the same private room seven years later, and the rhythm is a machine's, steady and mechanical, with the synthesizer patterns running from sequencers the band had built for them. The studio is how they got from one to the other without anyone else's clock.
 
-### 9. `e-minimoog-parliamentfunkadelic`
+### 18. `e-herc-flash`
 
-Moog Music, "Minimoog Model D" (1970) to Parliament, "Flash Light" (1977)
+DJ Kool Herc, "park jams and rec-room parties, the merry-go-round" (1973) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
 
-The bass on 'Flash Light' is not a bass guitar. It is a thick, rubbery synthesiser line that climbs and falls in a chromatic line with a fat, buzzing tone no string could make, and it carries the whole song. Listen for how it swaggers: Worrell plays it with a funk bassist's feel, so it sounds human and machine at once. Funk had always been built on the bass guitar. Here the most important part in a number one funk record is played on a keyboard.
+Listen for precision, because that is the whole difference. Herc's idea is that the break repeats. Flash's contribution is that the repeat lands exactly where the next bar would have started, so the loop is seamless and you stop noticing there are two records. On 'Wheels of Steel' the joins are so tight that the record sounds composed rather than performed, which is the point Flash was chasing.
 
-### 10. `e-sheffieldidm-aphextwin`
+### 19. `e-lamonteyoung-eno`
 
-Aphex Twin, "Digeridoo" (1992) to Aphex Twin, "Xtal" (1992)
+La Monte Young, "Trio for Strings" (1958) to Brian Eno, "Discreet Music" (1975)
 
-'Digeridoo' is still built for a dancefloor's low end, a club record with a rave lineage. 'Xtal', on the same year's 'Selected Ambient Works 85-92' and the kind of track 'Artificial Intelligence' pointed to, floats without a beat built for dancing at all. The same year, two different destinations.
+Young's music asks you to listen to one sound for a long time until you notice what is going on inside it. 'Discreet Music' asks the same thing, more gently: one soft phrase, repeating slowly, quiet enough to sit under a room. Listen for how long nothing seems to happen, and then notice how much has changed.
 
-### 11. `e-bongoband-nwa`
+### 20. `e-beachboys-beatles`
 
-The Incredible Bongo Band, "Bongo Rock" (1973) to N.W.A, "Real Niggaz Don't Die" (1991)
+The Beach Boys, "God Only Knows" (1966) to The Beatles, "Getting Better" (1967)
 
-'Bongo Rock' is congas and bongos locked into a driving, insistent pattern with a rock band behind them. 'Real Niggaz Don't Die' takes that percussion and buries it under thick West Coast production, so it works as texture rather than as the lead instrument it was on the original. The same drums that powered Kool Herc's earliest Bronx parties are still turning up in gangsta rap two decades later.
-
-### 12. `e-rundmc-missy`
-
-Run-D.M.C., "Peter Piper" (1986) to Missy Elliott, "Work It" (2002)
-
-Listen for the bells. They are Bob James's, from 1975, as looped by Run-DMC in 1986, and here they are again sixteen years later under Missy. Then wait for the line that plays backwards.
-
-### 13. `e-daedelus-madlib`
-
-Daedelus, "Experience" (2002) to Madvillain, "Accordion" (2004)
-
-Listen to 'Experience': a wheezy, reedy melody that really does sound like an accordion, played on a cheap electric chord organ. Madlib loops it and hands it to MF DOOM. Listen for how much of the track's character comes from the choice of loop alone.
-
-### 14. `e-food-blur`
-
-Blur, "Popscene" (1992) to Blur, "For Tomorrow" (1993)
-
-'Popscene' already has the English guitar-pop idea, but it comes at you fast and loud: a blaring brass section, a sprinting tempo, and no chorus built to be sung back. 'For Tomorrow' slows down and opens up: a la-la-la chorus sung by female backing singers, a string quartet (the band's first), and a lyric that takes a drive up to Primrose Hill in north London. The Englishness is the same. The difference is a song written to order for a label that wanted a single.
-
-### 15. `e-pistols-clash`
-
-Sex Pistols, "Anarchy in the U.K." (1976) to The Clash, "White Riot" (1977)
-
-Both are built from the same three-chord urgency, but listen to how directly "White Riot" addresses a specific real event (the 1976 Notting Hill Carnival riot) where "Anarchy in the U.K." stays in the realm of general provocation.
-
-### 16. `e-plank-kraftwerk`
-
-Kraftwerk, "Ralf und Florian" (1973) to Kraftwerk, "Autobahn" (1974)
-
-On 'Ralf und Florian' the sounds are still loose, with drifting organ, flute and electronic percussion. On 'Autobahn' they lock into place: a steady synthesized bass, a clean electronic rhythm, and car sounds sweeping across the stereo field. Listen for the passing cars and the Doppler swoosh, which are recordings placed in space, and for how exact every sound's position is. That clarity is engineering as much as composition.
-
-### 17. `e-sheffieldidm-autechre`
-
-Autechre, "Crystel" (1992) to Autechre, "Bike" (1993)
-
-'Crystel', on 'Artificial Intelligence', still carries an electro beat under its melody, close to the source material Brown and Booth grew up cutting on cassette. 'Bike', from 'Incunabula' the next year, keeps the melody but thins the beat toward something closer to home listening than a dancefloor.
-
-### 18. `e-island-marley`
-
-Bob Marley and the Wailers, "Soul Rebel" (1970) to Bob Marley and the Wailers, "Concrete Jungle" (1973)
-
-Listen for the lead guitar. On 'Soul Rebel' there isn't one. On 'Concrete Jungle' an American session player solos over the Kingston rhythm like a rock guitarist, added in London after the band had gone home. Listen to the bass too: it is still there, but lower in the mix than a Kingston engineer would have put it.
-
-### 19. `e-jamesbrown-delasoul`
-
-James Brown, "Mind Power" (1973) to De La Soul, "Stakes Is High" (1996)
-
-'Mind Power' runs for about twelve minutes, a long funk track that takes its time. 'Stakes Is High' is built from two sources at once, this and Ahmad Jamal's 'Swahililand'. Listen for which parts come from the funk record and which from the jazz one, and how Jay Dee makes them sit together.
-
-### 20. `e-talkingheads-tomtomclub`
-
-Talking Heads, "Once in a Lifetime" (1980) to Tom Tom Club, "Genius of Love" (1981)
-
-Listen to the bass and drums on both. On 'Once in a Lifetime' Weymouth and Frantz are one layer among many interlocking loops. On 'Genius of Love' they are the whole point: a slow, rubbery bass line, a dry drum groove, a bright synth hook on top, and a sing-song vocal. It is the rhythm section of an art-rock band making a funk record in the Bahamas, and it sounded good enough to rappers that they used it within months.
+Listen for the bass. On 'Pet Sounds' the bass often plays its own melody instead of just the root note, moving against the chords. On 'Sgt. Pepper' McCartney's bass does the same, high and melodic, walking around the tune. Listeners often point to this as something the two albums share. Then listen for the rest of 'Sgt. Pepper', the sound effects and tape tricks, which is the avant-garde part McCartney felt 'Pet Sounds' was missing.
