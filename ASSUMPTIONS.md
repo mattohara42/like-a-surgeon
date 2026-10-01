@@ -4293,3 +4293,25 @@ small and worth having in front of Matt alongside everything else here.
     Jackson, Rodgers to Madonna, Sun to Cash, Rubin to Cash) and three
     became same-lineage (ABBA to Madonna, and Madonna and Michael Jackson
     to Weird Al). None of their texts mentioned lanes.
+- **A326. Country: Hank Williams, Patsy Cline, Willie Nelson and Dolly
+  Parton.** Four artists and 5 edges, so the lane holds five artists
+  with Cash. Researched from the English Wikipedia articles on each,
+  on 'Crazy', 'Islands in the Stream', 'Modern Sounds in Country and
+  Western Music', 'Red Headed Stranger' and 'Stardust'.
+  - **Hank Williams's teacher, Rufus 'Tee Tot' Payne, is in both
+    registers.** A Black bluesman teaching country's founding writer is
+    the kind of crossing this map exists for. Payne has no node; a
+    later blues batch could add him.
+  - **`e-hank-cash` is `consensus`.** Wikipedia lists Cash among those
+    Williams influenced, but no statement by Cash was read.
+  - **`e-hank-dylan` is `documented` from Dylan's memoir, as cited by
+    Wikipedia.** The memoir itself was not read; the trackPair is a
+    reading and says so.
+  - **`e-willie-patsy` is `direct`,** a songwriter teaching a singer
+    his song in person, not a cover: hers was the first release.
+  - **Not drawn:** Dolly Parton refusing Colonel Parker's demand for
+    half the publishing on 'I Will Always Love You' is in her blurb, but
+    it is a business decision, not an influence on Elvis, so there is no
+    edge. Booker T. Jones producing 'Stardust' would link Willie Nelson
+    to Stax, but Booker T. and the M.G.'s are not on the map yet; they
+    are a strong candidate for the soul lane.

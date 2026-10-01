@@ -1,0 +1,28 @@
+{
+  "id": "e-hank-dylan",
+  "from": "hank-williams",
+  "to": "bob-dylan",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1961,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on Hank Williams lists Bob Dylan among the musicians influenced by Williams, citing Dylan's own memoir 'Chronicles: Volume One' (2004). The article also records that Dylan was later given the first chance to set unfinished Williams lyrics to music for 'The Lost Notebooks of Hank Williams' (2011).",
+  "trackPair": {
+    "earlier": {
+      "artist": "Hank Williams",
+      "title": "Your Cheatin' Heart",
+      "year": 1953
+    },
+    "later": {
+      "artist": "Bob Dylan",
+      "title": "I'll Be Your Baby Tonight",
+      "year": 1967
+    },
+    "whatToListenFor": "Williams's songs are short and plain: a few lines that say exactly one thing, sung in a voice that cracks on purpose. Listen to Dylan's late-1960s country songs for the same plainness, after years of long, crowded lyrics. The pairing is our reading; the documented part is that Dylan names Williams as a source."
+  },
+  "explanation": {
+    "age13": "Bob Dylan grew up listening to Hank Williams and has written that he learned from his songs. Decades later he was asked to finish some songs Williams had left unfinished when he died.",
+    "adult": "Documented from Dylan's side, in his memoir, as cited by Wikipedia; the specific track pairing is interpretation. It links the country lane to the songwriter who changed what a rock lyric could be."
+  },
+  "tags": []
+}

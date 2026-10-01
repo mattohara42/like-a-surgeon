@@ -1,0 +1,39 @@
+{
+  "id": "dolly-parton",
+  "name": "Dolly Parton",
+  "sortName": "Parton, Dolly",
+  "type": "artist",
+  "lineage": "country",
+  "activeFrom": 1957,
+  "activeTo": null,
+  "originCity": "Pittman Center, Tennessee",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Porter Wagoner",
+    "Barry Gibb"
+  ],
+  "hook": "A Smoky Mountains songwriter who refused to give Elvis Presley's manager half of 'I Will Always Love You', a decision later credited with making her many millions.",
+  "blurb": {
+    "age13": "Dolly Parton was born in 1946 in the Great Smoky Mountains of East Tennessee, one of twelve children in a family she has called dirt poor; her song 'Coat of Many Colors' is about it. She wrote her first song at six and became a professional songwriter at sixteen. In 1967 she joined Porter Wagoner's television show, and in 1974 she left it and wrote 'I Will Always Love You' about leaving. Elvis Presley wanted to record the song, but his manager told her she would have to give up half the rights to it, as songwriters usually did for Elvis. She said no. Because she kept the rights, Whitney Houston's huge 1992 version made Parton a fortune. In 1983 she sang 'Islands in the Stream' with Kenny Rogers, a song written by the Bee Gees, and it went to number one. She has written more than 3,000 songs.",
+    "adult": "Born on 19 January 1946 near Pittman Center in East Tennessee and raised on a small subsistence farm on Locust Ridge; 'Coat of Many Colors' and 'In the Good Old Days (When Times Were Bad)' describe the family's poverty. She performed on television by ten, made her first recording a year later, and became a professional songwriter at sixteen with Combine Publishing. Porter Wagoner brought her onto his syndicated show in 1967, and their duets outsold her solo records until 'Joshua' (1971) and 'Jolene' (1973). 'I Will Always Love You' (1974), written about leaving Wagoner's show, went to number one on the country chart. When Elvis Presley wanted to record it, Colonel Tom Parker told her it was standard for writers to sign over half the publishing on any song Presley recorded; she refused, a decision later credited with earning her many millions after Whitney Houston's 1992 version. 'Islands in the Stream' (1983), written by the Bee Gees, first as an R&B song, and produced by Barry Gibb, was a US number one with Kenny Rogers. She has written more than 3,000 songs."
+  },
+  "signatureTracks": [
+    {
+      "title": "Coat of Many Colors",
+      "year": 1971,
+      "whyThisOne": "Her childhood poverty, told as a story about a patchwork coat."
+    },
+    {
+      "title": "Jolene",
+      "year": 1973,
+      "whyThisOne": "Her biggest record of the Wagoner years, and her first UK hit."
+    },
+    {
+      "title": "I Will Always Love You",
+      "year": 1974,
+      "whyThisOne": "Written about leaving Porter Wagoner, and kept out of Colonel Parker's hands."
+    }
+  ]
+}

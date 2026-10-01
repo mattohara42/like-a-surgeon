@@ -1,0 +1,39 @@
+{
+  "id": "willie-nelson",
+  "name": "Willie Nelson",
+  "sortName": "Nelson, Willie",
+  "type": "artist",
+  "lineage": "country",
+  "activeFrom": 1957,
+  "activeTo": null,
+  "originCity": "Abbott, Texas",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Booker T. Jones",
+    "Jerry Wexler"
+  ],
+  "hook": "A Texas songwriter who wrote 'Crazy' for Patsy Cline, grew tired of Nashville's string-heavy production, and won the right to release albums so bare his label thought they were demos.",
+  "blurb": {
+    "age13": "Willie Nelson was born in Abbott, Texas, in 1933. He wrote his first song at seven and worked as a radio DJ while trying to sell songs. In Nashville in the early 1960s he wrote hits for other singers, including 'Crazy' for Patsy Cline. His own records on RCA were given the Nashville sound, with strings and backing choirs, which he thought was unnecessary. In 1972 he moved back to Texas, to Austin, and became a leader of 'outlaw country', a reaction against Nashville's polished style. His label, Columbia, gave him complete control, and 'Red Headed Stranger' (1975) was so bare, just guitar, piano and drums, that the bosses thought it was a demo. It was a huge hit. In 1978 he made 'Stardust', an album of old pop standards, produced by Booker T. Jones, his neighbour, who had led the Stax house band in Memphis. He is still recording.",
+    "adult": "Born in Abbott on 29 April 1933. He worked as a DJ in Texas and the Pacific Northwest and moved to Nashville in 1960, where Pamper Music hired him as a writer: 'Hello Walls', 'Funny How Time Slips Away' and 'Crazy', which he said was hard to place because it used more chords than the usual three. His RCA albums, many produced by Chet Atkins, got the Nashville sound treatment, which he felt was largely unnecessary. He moved to Austin in 1972, signed to Atlantic with Jerry Wexler in 1973, and became a central figure in outlaw country, which developed as a reaction to the Nashville sound's conservative restrictions. Columbia gave him total creative control, and 'Red Headed Stranger' (May 1975), recorded in Garland, Texas, with arrangements largely limited to guitar, piano and drums, was taken by executives for a demo and released as it was. 'Stardust' (April 1978), pop standards produced by Booker T. Jones of Booker T. and the M.G.'s, his neighbour in Malibu, stayed on the country album chart for a decade. In 1990 the IRS seized his assets over $32 million in unpaid taxes. He co-chairs the advisory board of NORML."
+  },
+  "signatureTracks": [
+    {
+      "title": "Crazy",
+      "year": 1962,
+      "whyThisOne": "His own version of the song he wrote for Patsy Cline, sung behind the beat the way he taught it to her."
+    },
+    {
+      "title": "Blue Eyes Crying in the Rain",
+      "year": 1975,
+      "whyThisOne": "From 'Red Headed Stranger': a voice and a guitar, released as recorded."
+    },
+    {
+      "title": "Georgia on My Mind",
+      "year": 1978,
+      "whyThisOne": "From 'Stardust', produced by Booker T. Jones."
+    }
+  ]
+}
