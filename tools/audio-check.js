@@ -173,7 +173,7 @@ async function measureDemo(page, host, volume, loudest) {
   await page.evaluate((v) => window.__audio.setVolume(v), volume);
   if (loudest) {
     await page.evaluate(() =>
-      document.querySelectorAll('.demo-control input').forEach((input) => {
+      document.querySelectorAll('.demo-control input:not(.demo-volume)').forEach((input) => {
         input.value = input.max;
         input.dispatchEvent(new Event('input'));
       }),

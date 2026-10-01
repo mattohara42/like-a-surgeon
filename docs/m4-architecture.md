@@ -149,10 +149,12 @@ There are four layers, and every number lives in `CONFIG.audio`.
      (the dub delay's runaway), and even there the safety stage holds;
    - closing the panel stops the sound.
 
-**Mute** is one button, always on screen in the top-left control stack
-(moved there from beside "Start here" in step 4, A271), and it
-remembers its state in localStorage with the same guarded access
-`registers.js` uses. The AudioContext is created on the first press of a
+**Volume** is a slider in every demo, the only place sound comes from
+(A317). It was a mute button and slider in the top-left controls (A271),
+where changing them made no sound and read as broken. There is no mute
+button now: a demo's Stop, or volume at zero, does that job. The volume
+is remembered in localStorage with the same guarded access
+`registers.js` uses; a mute saved before A317 is ignored. The AudioContext is created on the first press of a
 play button and never before. That satisfies autoplay rules, and it means
 a reader who never presses play never starts an audio thread.
 

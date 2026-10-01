@@ -162,6 +162,12 @@ export function renderDemoBlock(demo, ctx) {
     input.addEventListener('input', () => player.setControl(c.target, Number(input.value)));
     return h('label', { class: 'demo-control' }, h('span', {}, controlLabel(c.target)), input);
   });
+  // The page's volume, last, in every demo: this is the only place sound
+  // comes from, so it is the only place the volume is (A317). It is the
+  // engine's setting, so it carries from one demo to the next.
+  const volume = h('input', { type: 'range', class: 'demo-volume', min: 0, max: 1, step: 'any', value: ctx.audio.volume });
+  volume.addEventListener('input', () => ctx.audio.setVolume(Number(volume.value)));
+  controls.push(h('label', { class: 'demo-control' }, h('span', {}, pick(COPY.demo.volume, reg)), volume));
 
   return h(
     'section',
@@ -172,7 +178,7 @@ export function renderDemoBlock(demo, ctx) {
     hasLoop ? steps : null,
     pads,
     keys,
-    controls.length ? h('div', { class: 'demo-controls' }, controls) : null,
+    h('div', { class: 'demo-controls' }, controls),
     h('p', { class: 'demo-caption' }, pick(demo.caption, reg)),
     h('p', { class: 'note' }, pick(COPY.demo.synthesized, reg)),
     failed,

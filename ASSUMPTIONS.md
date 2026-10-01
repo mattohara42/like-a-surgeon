@@ -4052,3 +4052,73 @@ small and worth having in front of Matt alongside everything else here.
   - **The card-view link** sits on its own, bottom right under the
     transport bar, small and dim on a dark backing so it reads over the
     map. The legend's version line no longer carries it.
+
+- **A313. Phones always get cards (Matt).** The full map was slow on a
+  phone, which reached it through the "Open the full map" link at the
+  foot of every card.
+  - **Sideways counts.** The view is now chosen by the window's width or
+    the device screen's shorter side, whichever is smaller than
+    `CONFIG.cards.maxWidthPx`. A phone held sideways reports a wide
+    window, around 844 px, and used to get the map. The screen, not the
+    window, is used for the second test so that a laptop with a short
+    browser window still gets the map.
+  - **No link to the map on a phone.** The card foot's "Open the full
+    map" link is left out on a small screen. Cards opened with
+    `?view=cards` on a laptop keep it. `?view=map` still forces the map
+    on a phone, for testing.
+  - **Not measured on a real phone.** The first draw takes about 1.8 s on
+    an emulated phone with the CPU slowed 4x, so the slowness is frame
+    rate afterwards. Headless Chromium here draws without a GPU, and
+    switching off the grain, the dust, the nebula blur and the gold
+    shimmer one at a time moved its frame rate only from 16 to about 19,
+    within noise. Which effect costs a real phone the most is unknown. A
+    lighter map for phones was offered and not chosen.
+
+- **A314. Controls step aside for an open dock row (Matt).** On screens
+  narrower than the 1280 laptop, a dock row slid out across the
+  top-centre controls. At 768 px, Show crossed the search box and Start
+  here, and Arrange by crossed the mission pill. At 1024 px, Show still
+  crossed the search box. When a row opens, the dock works out where it
+  will sit once fully out and fades any control in `yieldTo` that it
+  would cross (the search box and the goal pills). They come back when
+  the row closes, which it does on its own after
+  `CONFIG.dock.autoCloseMs`. Fading was chosen over moving them, since
+  the row is open for seconds and moving the search box would make it
+  jump under the reader's eye. At 1280 x 800 no row crosses them, so
+  nothing fades.
+
+- **A315. A dock row wraps rather than leave the screen.** At 390 px the
+  Arrange by and Spotlight rows ran past the right edge. A row is now
+  capped at the screen's width less its own left edge and a 12 px margin,
+  and wraps onto a second line past that. Its corner radius is half a
+  one-line row's height, so a row that fits looks as before.
+
+- **A316. Lane titles are held at the left edge (Matt).** A lineage
+  lane's title sits at the start of the time axis, which the opening
+  view puts off the left of the screen at every width. At 768 px the
+  titles showed as stubs ("K" for ROCK); at 1280 none was visible. A
+  title that would start past the left edge is now held
+  `CONFIG.arrange.titleEdgePx` (12 px) in from it, like a frozen row
+  header, so every lane is named on screen. It still steps right of the
+  dock, the legend, and now the play button, which titles held at the
+  edge can land under. Scene and label views, whose titles sit beside
+  their first member, are unchanged.
+  - **A fix in the same code.** A title crossing two controls in one pass
+    was pushed by both distances added together, since its position was
+    read once per pass. It is now re-read after each step. This was
+    hard to reach before titles were held at the edge.
+
+- **A317. Volume lives in the demo, not the dock (Matt).** The dock's
+  Sound row held a mute toggle and a volume slider. Sound only ever
+  comes from a demo's play button, so with nothing playing, changing
+  them made no sound and the button read as broken. The row is gone
+  (four dock buttons now) and every demo ends its sliders with a Volume
+  slider: the engine's one setting, so it carries from demo to demo.
+  - **No mute button.** A demo's Stop, or volume at zero, does the job,
+    and a mute toggle beside Stop would be two buttons for one thing.
+    This changes the M4 plan's "a global mute"; the volume cap and the
+    safety stage are untouched.
+  - **A saved mute is ignored.** A reader who muted under A271 would
+    otherwise hear nothing and find no control to undo it. The engine
+    keeps `setMuted` for `tools/audio-check.js`, which still checks
+    that the mute stage silences the output.

@@ -23,7 +23,6 @@ import { COPY } from './reading/copy.js';
 import { createWelcome, OPENING_FRAME_IDS } from './reading/welcome.js';
 import { h } from './reading/dom.js';
 import { createEngine } from './audio/engine.js';
-import { createSoundControls } from './reading/soundControls.js';
 import { stopDemo, withEdgeCaption } from './reading/demoBlock.js';
 import { createThreads } from './reading/threads.js';
 import { loadLens, saveLens, createLensControl, renderLensCard } from './reading/lens.js';
@@ -42,7 +41,6 @@ const searchEl = document.getElementById('search');
 const arrangeEl = document.getElementById('arrange');
 const goalEl = document.getElementById('goal-chip');
 const threadChipEl = document.getElementById('thread-chip');
-const soundEl = document.getElementById('sound');
 const lensEl = document.getElementById('lens');
 const dockEl = document.getElementById('dock');
 const cardsLinkEl = document.getElementById('cards-link');
@@ -52,7 +50,6 @@ const cardsLinkEl = document.getElementById('cards-link');
 // presses play.
 const audio = createEngine();
 window.__audio = audio; // for manual/automated inspection (tools/audio-check.js)
-const sound = createSoundControls(soundEl, audio);
 
 // Which layer toggle has to be on for a node of this kind to be drawn.
 // Artists are always drawn, and scenes are framed through their members.
@@ -80,8 +77,10 @@ async function main() {
   }
 
   // A phone gets cards instead of the map (docs/cards-architecture.md,
-  // Q39). Decided once, here, so turning the phone does not swap views.
-  if (chooseView(location.search, window.innerWidth, CONFIG.cards.maxWidthPx) === 'cards') {
+  // Q39, A313), upright or sideways. Decided once, here, so turning the
+  // phone does not swap views.
+  const screenShortSide = Math.min(window.screen.width, window.screen.height);
+  if (chooseView(location.search, window.innerWidth, screenShortSide, CONFIG.cards.maxWidthPx) === 'cards') {
     startCards(data);
     return;
   }
@@ -105,17 +104,16 @@ async function main() {
   let graph = null;
 
   const legend = createLegend(legendEl, data.meta);
-  const dock = createDock(dockEl, () => measureOverlays());
-  dockEl.style.setProperty('--dock-slide', `${CONFIG.dock.slideMs}ms`);
+  const dock = createDock(dockEl, () => measureOverlays(), [searchEl, goalEl.parentElement]);
+  // On the root, not the dock: the controls that step aside for it use it too.
+  document.documentElement.style.setProperty('--dock-slide', `${CONFIG.dock.slideMs}ms`);
   // Each dock button's dot: is its row away from the default?
   function updateDock() {
     dock.setChanged('show', Object.keys(CONFIG.layers.defaults).some((k) => layers[k] !== CONFIG.layers.defaults[k]));
     dock.setChanged('read', register !== CONFIG.reading.defaultRegister);
     dock.setChanged('arrange', arrange !== CONFIG.arrange.default);
-    dock.setChanged('sound', audio.muted);
     dock.setChanged('spotlight', lens !== null);
   }
-  audio.onChange(updateDock);
   const search = createSearch(searchEl, {
     nodes: data.nodes,
     yearBounds: () => graph.yearBounds(),
@@ -322,8 +320,9 @@ async function main() {
   // every artist below them. Rebuilding the whole graph is the honest way
   // to do that, and at this size it is imperceptible. The reader's camera,
   // year and selection are carried across so it doesn't feel like a reload.
-  // The fixed controls drawn over the top-left of the map, which lane
-  // titles step clear of. Measured when they change size (a layer toggle,
+  // The fixed controls drawn over the left of the map, which lane titles
+  // step clear of (the play button since titles are held at the left edge,
+  // A316). Measured when they change size (a layer toggle,
   // the legend collapsing, a resize), never per frame.
   let overlayRects = [];
   function measureOverlays() {
@@ -332,7 +331,7 @@ async function main() {
       return { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
     };
     // A closed row keeps its size while hidden, so only the open one counts.
-    const rows = [layersEl, registersEl, arrangeEl, soundEl, lensEl].filter((el) => el.parentElement.classList.contains('open'));
+    const rows = [layersEl, registersEl, arrangeEl, lensEl].filter((el) => el.parentElement.classList.contains('open'));
     const controls = [dockEl, ...rows].map(rect).filter((r) => r.right > r.left);
     const cluster = controls.length
       ? controls.reduce((a, b) => ({
@@ -342,11 +341,13 @@ async function main() {
           bottom: Math.max(a.bottom, b.bottom),
         }))
       : null;
-    overlayRects = [cluster, rect(legendEl)].filter(Boolean);
+    // Drawn with the graph (render/transport.js), so looked up each time.
+    const playEl = document.getElementById('transport-play');
+    overlayRects = [cluster, rect(legendEl), playEl && rect(playEl)].filter(Boolean);
     graph?.rerender();
   }
   const overlayObserver = new ResizeObserver(measureOverlays);
-  for (const el of [dockEl, layersEl, registersEl, arrangeEl, soundEl, lensEl, legendEl]) overlayObserver.observe(el);
+  for (const el of [dockEl, layersEl, registersEl, arrangeEl, lensEl, legendEl]) overlayObserver.observe(el);
   window.addEventListener('resize', measureOverlays);
 
   function build({ opening = false } = {}) {
@@ -432,7 +433,6 @@ async function main() {
     search.setRegister(register);
     welcome.setRegister(register);
     threads.setRegister(register);
-    sound.setRegister(register);
     createLensControl(lensEl, lens, register, applyLens);
     dock.setRegister(register);
     updateDock();
@@ -447,7 +447,6 @@ async function main() {
   search.setRegister(register);
   welcome.setRegister(register);
   threads.setRegister(register);
-  sound.setRegister(register);
   dock.setRegister(register);
   updateDock();
   // The way to the card view (Q39), in its own place (Q41).

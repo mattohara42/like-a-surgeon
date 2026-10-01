@@ -1,7 +1,8 @@
 // The control dock, top left (Q42, A312). One round, coloured button per
-// row of controls (Show, Reading level, Arrange by, Sound, Spotlight).
-// Each opens its row sideways, one at a time, so the corner holds five
-// small buttons instead of five rows of pills.
+// row of controls (Show, Reading level, Arrange by, Spotlight). Each opens
+// its row sideways, one at a time, so the corner holds four small buttons
+// instead of four rows of pills. Sound is not here: its volume lives in
+// each demo, where the sound is (A317).
 //
 // The rows themselves are drawn by their own modules, into the elements
 // CONFIG.dock names, exactly as before. The dock only moves each one into
@@ -15,8 +16,11 @@ import { h } from './dom.js';
 import { pick } from './registers.js';
 
 // `onLayout` runs when a row opens or closes, since the space the dock
-// covers on the map changes with it.
-export function createDock(root, onLayout = () => {}) {
+// covers on the map changes with it. `yieldTo` lists other fixed
+// controls: one an open row would run across steps out of its way until
+// the row closes, which on a narrow screen is the search box and the goal
+// pills at the top centre.
+export function createDock(root, onLayout = () => {}, yieldTo = []) {
   let register = CONFIG.reading.defaultRegister;
   let openKey = null;
   let closeTimer = null;
@@ -49,8 +53,28 @@ export function createDock(root, onLayout = () => {}) {
       button.setAttribute('aria-expanded', String(open));
       wrap.classList.toggle('open', open);
     }
+    clearWay();
     armClose();
     onLayout();
+  }
+
+  // Where the open row will sit once it has slid out. Its slide only moves
+  // and stretches it sideways, so its height is already final; its width
+  // and offset are read untransformed.
+  function clearWay() {
+    const item = items.get(openKey);
+    let row = null;
+    if (item) {
+      const { top, bottom } = item.flyout.getBoundingClientRect();
+      const left = item.wrap.getBoundingClientRect().left + item.flyout.offsetLeft;
+      row = { top, bottom, left, right: left + item.flyout.offsetWidth };
+    }
+    for (const el of yieldTo) {
+      const r = el.getBoundingClientRect();
+      const crossed = row !== null && r.width > 0 &&
+        row.left < r.right && row.right > r.left && row.top < r.bottom && row.bottom > r.top;
+      el.classList.toggle('yield-to-dock', crossed);
+    }
   }
 
   // Slides the open row back in after CONFIG.dock.autoCloseMs unused. Any

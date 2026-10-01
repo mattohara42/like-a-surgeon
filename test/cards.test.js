@@ -37,12 +37,16 @@ test('random never repeats the card on screen unless it has to', () => {
   assert.strictEqual(pickFrom(pool, () => 0.999), 'c');
 });
 
-test('the view follows the width unless the address asks', () => {
-  assert.strictEqual(chooseView('', 390, 700), 'cards');
-  assert.strictEqual(chooseView('', 1280, 700), 'map');
-  assert.strictEqual(chooseView('?view=map', 390, 700), 'map');
-  assert.strictEqual(chooseView('?view=cards', 1280, 700), 'cards');
-  assert.strictEqual(chooseView('?view=nonsense', 1280, 700), 'map');
+test('the view follows the screen unless the address asks', () => {
+  assert.strictEqual(chooseView('', 390, 390, 700), 'cards');
+  assert.strictEqual(chooseView('', 1280, 800, 700), 'map');
+  // A phone held sideways: a wide window on a small screen.
+  assert.strictEqual(chooseView('', 844, 390, 700), 'cards');
+  // A narrowed desktop window.
+  assert.strictEqual(chooseView('', 500, 1080, 700), 'cards');
+  assert.strictEqual(chooseView('?view=map', 390, 390, 700), 'map');
+  assert.strictEqual(chooseView('?view=cards', 1280, 800, 700), 'cards');
+  assert.strictEqual(chooseView('?view=nonsense', 1280, 800, 700), 'map');
 });
 
 test('card addresses read and write', () => {

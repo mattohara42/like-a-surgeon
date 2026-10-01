@@ -26,8 +26,11 @@ const M = CONFIG.audio.master;
 function loadPrefs() {
   try {
     const saved = JSON.parse(localStorage.getItem(M.storageKey) ?? '{}');
+    // Muted is not restored: the reader has no mute button any more, only
+    // each demo's volume and Stop, so a saved mute would be silence they
+    // could not undo (A317). setMuted stays for tools/audio-check.js.
     return {
-      muted: saved.muted === true,
+      muted: false,
       volume: Number.isFinite(saved.volume) ? Math.min(1, Math.max(0, saved.volume)) : M.volumeDefault,
     };
   } catch {
