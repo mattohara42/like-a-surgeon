@@ -1,0 +1,28 @@
+{
+  "id": "e-joni-prince",
+  "from": "joni-mitchell",
+  "to": "prince",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1980,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on Prince lists Joni Mitchell among his influences, alongside James Brown, George Clinton, Jimi Hendrix and Sly Stone.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Joni Mitchell",
+      "title": "Blue",
+      "year": 1971
+    },
+    "later": {
+      "artist": "Prince",
+      "title": "When Doves Cry",
+      "year": 1984
+    },
+    "whatToListenFor": "Not a sound but an attitude: songs that go somewhere unexpected in the chords and say something personal and odd in the words. Listen to 'When Doves Cry' with no bass line and the guitar breaking off, and to how Mitchell's songs refuse the obvious next chord."
+  },
+  "explanation": {
+    "age13": "Prince is known for funk, but one of the musicians he named as an influence was the Canadian singer-songwriter Joni Mitchell.",
+    "adult": "Rated consensus: listed by Wikipedia among his influences, without a specific statement read. It is one of the edges that shows Prince's range better than any funk one."
+  },
+  "tags": []
+}

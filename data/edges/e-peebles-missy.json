@@ -1,0 +1,28 @@
+{
+  "id": "e-peebles-missy",
+  "from": "ann-peebles",
+  "to": "missy-elliott",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 1997,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'The Rain (Supa Dupa Fly)' (released to radio on 20 May 1997): Missy Elliott's debut solo single contains a sample of Ann Peebles' 1973 'I Can't Stand the Rain', whose lyrics serve as its chorus; Peebles' co-writers Don Bryant and Bernie Miller are credited.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Ann Peebles",
+      "title": "I Can't Stand the Rain",
+      "year": 1973
+    },
+    "later": {
+      "artist": "Missy Elliott",
+      "title": "The Rain (Supa Dupa Fly)",
+      "year": 1997
+    },
+    "whatToListenFor": "The tapping timbales that open Peebles' record were moved to the front by Willie Mitchell to sound like rain. Timbaland slows the whole thing down and leaves gaps around it, and Missy raps in the space. Listen for Peebles' voice in the chorus, twenty-four years later."
+  },
+  "explanation": {
+    "age13": "Missy Elliott's first single is built on Ann Peebles' 1973 song 'I Can't Stand the Rain'. Peebles' words are the chorus.",
+    "adult": "A Memphis soul record from Hi becoming the debut of a Virginia rapper and her producer, with the original writers credited."
+  },
+  "tags": []
+}

@@ -1,0 +1,28 @@
+{
+  "id": "e-dolly-whitney",
+  "from": "dolly-parton",
+  "to": "whitney-houston",
+  "type": "cover",
+  "confidence": "documented",
+  "year": 1992,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'I Will Always Love You': Parton wrote and recorded it in 1974 about leaving Porter Wagoner's show. Houston recorded a new pop-ballad arrangement for 'The Bodyguard' (1992), which spent a then-record 14 weeks at number one on the Hot 100 and won the 1994 Grammy for Record of the Year. Because Parton had refused to give Elvis Presley's manager half the publishing in 1974, she kept the rights.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Dolly Parton",
+      "title": "I Will Always Love You",
+      "year": 1974
+    },
+    "later": {
+      "artist": "Whitney Houston",
+      "title": "I Will Always Love You",
+      "year": 1992
+    },
+    "whatToListenFor": "Parton sings it gently, half-spoken in places, a goodbye to a business partner. Houston opens with no instruments at all, then builds to a key change and a huge held note near the end. Listen for the same words meaning a different kind of goodbye."
+  },
+  "explanation": {
+    "age13": "Dolly Parton wrote 'I Will Always Love You' in 1974. Whitney Houston's 1992 version spent fourteen weeks at number one, and because Parton had refused to sell half her rights to Elvis Presley's manager, the money went to her.",
+    "adult": "A country song turned into the biggest pop ballad of the decade by a gospel-trained singer. The publishing story behind it is the clearest example on the map of a writer's business decision paying off two decades later."
+  },
+  "tags": []
+}

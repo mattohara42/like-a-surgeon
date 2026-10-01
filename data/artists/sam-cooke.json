@@ -1,0 +1,39 @@
+{
+  "id": "sam-cooke",
+  "name": "Sam Cooke",
+  "sortName": "Cooke, Sam",
+  "type": "artist",
+  "lineage": "soul",
+  "activeFrom": 1950,
+  "activeTo": 1964,
+  "originCity": "Clarksdale, Mississippi",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Bumps Blackwell",
+    "Hugo & Luigi"
+  ],
+  "hook": "A gospel star who crossed over to pop, owned his own label and publishing at a time when almost no Black artist did, and wrote 'A Change Is Gonna Come' after hearing Bob Dylan.",
+  "blurb": {
+    "age13": "Sam Cooke was born in Clarksdale, Mississippi, in 1931, the son of a Baptist minister, and grew up in Chicago. At 19 he became the lead singer of the Soul Stirrers, a famous gospel group. In 1956 he left gospel to sing pop, which many church people thought was wrong. His first pop single, 'You Send Me' (1957), went to number one. He started his own record label and his own music publishing company, so that he owned his songs, which very few Black musicians could do then. In 1963 he heard Bob Dylan's 'Blowin' in the Wind' and was ashamed that a white singer had written about racism before he had. Shortly after a motel in Louisiana turned him away because he was Black, he wrote 'A Change Is Gonna Come'. In December 1964 he was shot dead by the manager of a motel in Los Angeles. She said it was self-defence; his family has always questioned what happened.",
+    "adult": "Born Samuel Cook in Clarksdale on 22 January 1931, the son of a Baptist minister, and raised in Chicago. He replaced R. H. Harris as lead of the Soul Stirrers in 1950 and was a gospel star by his early twenties. His move to secular music in 1956 drew a backlash from the gospel world; Specialty's Art Rupe wanted him to sound like Little Richard, and he went to Keen, where 'You Send Me' (1957) topped the R&B chart. He signed to RCA Victor in 1960 for a $100,000 advance, and with J. W. Alexander founded SAR Records and the publishing and management firm Kags, which made him one of the first modern Black performers to control the business side of his work. Hearing 'Blowin' in the Wind' in 1963, he was moved that such a song about American racism had come from a white writer and ashamed he had not written one; after being turned away from a whites-only Holiday Inn in Shreveport on 8 October 1963, he wrote 'A Change Is Gonna Come', recorded on 30 January 1964. He was shot dead at the Hacienda Motel in Los Angeles on 11 December 1964. The manager, Bertha Franklin, said she fired in self-defence, and a coroner's jury returned a verdict of justifiable homicide; his family has questioned the circumstances since."
+  },
+  "signatureTracks": [
+    {
+      "title": "You Send Me",
+      "year": 1957,
+      "whyThisOne": "His first pop single and a number one: a gospel voice, softened."
+    },
+    {
+      "title": "Chain Gang",
+      "year": 1960,
+      "whyThisOne": "Grunting work-gang sounds inside a pop hit."
+    },
+    {
+      "title": "A Change Is Gonna Come",
+      "year": 1964,
+      "whyThisOne": "Written after hearing Dylan and being turned away from a motel; released after his death."
+    }
+  ]
+}

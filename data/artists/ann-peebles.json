@@ -1,0 +1,38 @@
+{
+  "id": "ann-peebles",
+  "name": "Ann Peebles",
+  "sortName": "Peebles, Ann",
+  "type": "artist",
+  "lineage": "soul",
+  "activeFrom": 1968,
+  "activeTo": 2012,
+  "originCity": "Kinloch, Missouri",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Willie Mitchell"
+  ],
+  "hook": "A Hi Records singer who wrote 'I Can't Stand the Rain' on a wet night in Memphis, a record John Lennon called the best song ever and Missy Elliott built her first single on.",
+  "blurb": {
+    "age13": "Ann Peebles was born in Kinloch, Missouri, in 1947, one of eleven children, and sang in her father's church. Her family's gospel group opened for stars like Mahalia Jackson and Sam Cooke. In 1968, on a visit to Memphis, she sang in a club and was introduced to Willie Mitchell, the producer at Hi Records, who signed her. In 1973, as she was about to go out and it began to pour, she said 'I can't stand the rain', and she, her partner Don Bryant and a DJ friend wrote a song from it that night. Willie Mitchell moved the tapping timbales, which sound like rain, to the very start of the record. Missy Elliott sampled it in 1997 for her first single, 'The Rain (Supa Dupa Fly)'. Peebles stopped performing after a stroke in 2012.",
+    "adult": "Born in Kinloch on 27 April 1947, the seventh of eleven children; the family group, the Peebles Choir, opened for Mahalia Jackson and the Soul Stirrers with Sam Cooke. She sang with Oliver Sain's revue in St. Louis, and in 1968 Gene 'Bowlegs' Miller introduced her to Willie Mitchell, who signed her to Hi and produced her records with the Hi Rhythm Section and the Memphis Horns. She was the only woman on Hi to release a string of albums, much of it co-written with Don Bryant, whom she married in 1974. 'I Can't Stand the Rain' (1973), written by Peebles, Bryant and the DJ Bernie Miller, opens with electric timbales that Mitchell moved to the front of the record, and an organ part Charles Hodges said was meant to sound like dripping water; it reached number six R&B. Wikipedia reports it as one of John Lennon's favourite songs. Hi closed in 1979; she returned on Mitchell's Waylo label in 1989 and stopped performing after a stroke in 2012."
+  },
+  "signatureTracks": [
+    {
+      "title": "Part Time Love",
+      "year": 1970,
+      "whyThisOne": "Her first sizeable hit, with the Hi Rhythm Section."
+    },
+    {
+      "title": "I Can't Stand the Rain",
+      "year": 1973,
+      "whyThisOne": "Electric timbales like raindrops, then a voice holding steady over them."
+    },
+    {
+      "title": "I'm Gonna Tear Your Playhouse Down",
+      "year": 1973,
+      "whyThisOne": "Hard Memphis soul, with horns."
+    }
+  ]
+}

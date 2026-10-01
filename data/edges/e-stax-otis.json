@@ -1,0 +1,30 @@
+{
+  "id": "e-stax-otis",
+  "from": "stax",
+  "to": "otis-redding",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1962,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Otis Redding: he drove Johnny Jenkins to a Stax session in 1962; when it ended early he was allowed two songs. Jim Stewart thought the first sounded too much like Little Richard, but signed him on the ballad 'These Arms of Mine', released by Volt in October 1962.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Otis Redding",
+      "title": "Hey Hey Baby",
+      "year": 1962
+    },
+    "later": {
+      "artist": "Otis Redding",
+      "title": "These Arms of Mine",
+      "year": 1962
+    },
+    "whatToListenFor": "The two songs from the end of that session, released on the same single. 'Hey Hey Baby' is a Little Richard-style shouter. 'These Arms of Mine' is slow, almost pleading, with Steve Cropper on piano. Listen to both and you can hear why the label chose the ballad, and what Stax heard in Redding that nobody else had."
+  },
+  "explanation": {
+    "age13": "Otis Redding was at Stax only as a driver for another musician. At the end of the session he was allowed to sing two songs. The label's boss didn't like the fast one but loved the slow one, and signed him.",
+    "adult": "A label edge under A69: Stewart's choice of the ballad over the Little Richard imitation set the direction of Redding's career."
+  },
+  "tags": [
+    "labels"
+  ]
+}

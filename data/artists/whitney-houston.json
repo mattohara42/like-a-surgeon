@@ -1,0 +1,40 @@
+{
+  "id": "whitney-houston",
+  "name": "Whitney Houston",
+  "sortName": "Houston, Whitney",
+  "type": "artist",
+  "lineage": "pop",
+  "activeFrom": 1977,
+  "activeTo": 2012,
+  "originCity": "Newark, New Jersey",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Clive Davis",
+    "Narada Michael Walden",
+    "David Foster"
+  ],
+  "hook": "A gospel singer's daughter from Newark whose 1992 recording of Dolly Parton's 'I Will Always Love You' spent fourteen weeks at number one.",
+  "blurb": {
+    "age13": "Whitney Houston was born in Newark, New Jersey, in 1963. Her mother, Cissy Houston, was a gospel and soul singer, her cousin was Dionne Warwick, and Aretha Franklin was a family friend she called an aunt. She sang in the choir of a Newark Baptist church from the age of five and began singing backup for her mother at fourteen. Clive Davis signed her to Arista Records at 19. Her first two albums each topped the American chart for months. For the 1992 film 'The Bodyguard' she recorded Dolly Parton's country song 'I Will Always Love You' as a huge pop ballad, and it spent fourteen weeks at number one. Her later years were marked by drug use. She drowned in a hotel bathtub in 2012, aged 48; the coroner found heart disease and cocaine use contributed.",
+    "adult": "Born in Newark on 9 August 1963 to the gospel and soul singer Cissy Houston; Dionne and Dee Dee Warwick were cousins, Darlene Love her godmother and Aretha Franklin an honorary aunt. Wikipedia names her mother as her biggest influence, Dionne Warwick for stagecraft, and Aretha Franklin, Chaka Khan, Gladys Knight, Roberta Flack and Karen Carpenter among others. She sang in the New Hope Baptist Church choir from five and backed her mother in Manhattan clubs from fourteen. Clive Davis signed her to Arista at 19; 'Whitney Houston' (1985) and 'Whitney' (1987) topped the Billboard 200 for 14 and 11 weeks, helped by MTV exposure then rarely given to Black artists. Her 1992 recording of Dolly Parton's 'I Will Always Love You' for 'The Bodyguard' spent a then-record 14 weeks at number one and won Record of the Year. She renewed with Arista for a reported $100 million in 2001, while her drug use and her marriage to Bobby Brown damaged her public image. She died at the Beverly Hilton on 11 February 2012; the Los Angeles County coroner ruled it an accidental drowning, with atherosclerotic heart disease and cocaine use as contributing effects."
+  },
+  "signatureTracks": [
+    {
+      "title": "Saving All My Love for You",
+      "year": 1985,
+      "whyThisOne": "Her first number one, from her debut."
+    },
+    {
+      "title": "I Wanna Dance with Somebody (Who Loves Me)",
+      "year": 1987,
+      "whyThisOne": "Her dance-pop peak."
+    },
+    {
+      "title": "I Will Always Love You",
+      "year": 1992,
+      "whyThisOne": "Dolly Parton's country song, rebuilt as a pop ballad with an a cappella opening."
+    }
+  ]
+}
