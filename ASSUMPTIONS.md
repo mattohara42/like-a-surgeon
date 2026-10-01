@@ -4234,3 +4234,24 @@ small and worth having in front of Matt alongside everything else here.
   - **`e-spector-smiths` is `production` without a credit.** Marr names
     Spector's approach as the idea behind his records; Spector never
     worked with them.
+- **A324. The Notorious B.I.G., Jay-Z, Kanye West, Missy Elliott and
+  Timbaland.** Five artists and 11 edges. Timbaland is his own node
+  rather than shared with Missy Elliott, since he also produced Jay-Z
+  and Aaliyah and the map's producers are nodes elsewhere.
+  - **`e-kane-jayz` is `consensus`.** Jay-Z is widely called Kane's
+    hype man; Kane says he only made cameo appearances, and the adult
+    text says both.
+  - **`e-jayz-nas` is `reaction-against`, from Jay-Z to Nas,** since
+    'Ether' answers 'Takeover'. The Tupac clip that opens 'Ether' is
+    described, not quoted.
+  - **Kanye West's antisemitic statements and the Adidas termination
+    are in the hook and both registers,** per Q2 and CLAUDE.md's rule
+    on conduct, as fact and without adjectives. They are in the hook
+    because they are part of why his standing changed.
+  - **`e-steviewonder-kanye` documents an ambition,** West's stated
+    aim to match two Wonder albums. The trackPair is a reading and the
+    adult text says so.
+  - **Not drawn:** 'Takeover' interpolates Bowie's 'Fame' (a possible
+    Bowie edge), and 'Big Pimpin'' and its copyright case over the
+    Egyptian song 'Khosara Khosara'. Both are fine candidates for a
+    later pass.

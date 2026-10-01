@@ -1,0 +1,30 @@
+{
+  "id": "e-premier-biggie",
+  "from": "dj-premier",
+  "to": "notorious-big",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1994,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'Ready to Die' (13 September 1994) lists DJ Premier among the album's producers, for 'Unbelievable'.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Gang Starr",
+      "title": "Mass Appeal",
+      "year": 1994
+    },
+    "later": {
+      "artist": "The Notorious B.I.G.",
+      "title": "Unbelievable",
+      "year": 1994
+    },
+    "whatToListenFor": "Premier's sound in 1994: a short, dusty loop, hard drums, and a chorus made by scratching words from other records together. On 'Unbelievable' the hook is a scratched line from an R. Kelly record. Listen for how little music there is under the rapping, and how that leaves all the attention on Biggie's voice."
+  },
+  "explanation": {
+    "age13": "DJ Premier, the producer from Gang Starr, made the beat for 'Unbelievable' on Biggie's first album. Its chorus is made of words scratched from another record.",
+    "adult": "On an album whose singles were pulled towards radio by Sean Combs, Premier's track is the New York underground sound it came out of. Premier is the shared producer between Biggie, Nas and Jay-Z on this map."
+  },
+  "tags": [
+    "production"
+  ]
+}

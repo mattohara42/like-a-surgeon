@@ -1,0 +1,30 @@
+{
+  "id": "e-kanye-jayz",
+  "from": "kanye-west",
+  "to": "jay-z",
+  "type": "production",
+  "confidence": "documented",
+  "year": 2001,
+  "crossLineage": false,
+  "evidence": "Wikipedia's articles on 'The Blueprint' and on Kanye West: West produced four tracks, including 'Takeover', 'Izzo (H.O.V.A.)', 'Heart of the City (Ain't No Love)' and 'Never Change', mostly on sped-up soul samples, and is credited with revitalising Jay-Z's career with the album, released on 11 September 2001.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Bobby Bland",
+      "title": "Ain't No Love in the Heart of the City",
+      "year": 1974
+    },
+    "later": {
+      "artist": "Jay-Z",
+      "title": "Heart of the City (Ain't No Love)",
+      "year": 2001
+    },
+    "whatToListenFor": "Bobby Bland's original is a slow, aching soul song. West speeds the record up, so the voices go higher and thinner, and loops a few seconds of it under Jay-Z. Listen for the old singer's voice still there, sped up into the background like a ghost: that is the chipmunk soul sound."
+  },
+  "explanation": {
+    "age13": "On 'The Blueprint', a young producer called Kanye West took old soul records, sped them up so the singers' voices went high, and looped them. It became Jay-Z's sound, and the album made West's name.",
+    "adult": "A producer edge that ran both ways: West's samples gave Jay-Z a new sound, and Jay-Z's label gave West his career. The soul-sample method runs back through RZA and Pete Rock on this map."
+  },
+  "tags": [
+    "production"
+  ]
+}

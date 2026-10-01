@@ -1,0 +1,30 @@
+{
+  "id": "e-premier-jayz",
+  "from": "dj-premier",
+  "to": "jay-z",
+  "type": "production",
+  "confidence": "documented",
+  "year": 1996,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Jay-Z: 'Reasonable Doubt' (1996) included beats from DJ Premier and Clark Kent.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Nas",
+      "title": "N.Y. State of Mind",
+      "year": 1994
+    },
+    "later": {
+      "artist": "Jay-Z",
+      "title": "D'Evils",
+      "year": 1996
+    },
+    "whatToListenFor": "Premier gave Nas a dark piano loop and hard drums. On 'D'Evils' he gives Jay-Z the same kind of thing: a short, minor-key loop, scratched vocal fragments in the chorus, and drums that hit hard and plainly. Listen to the two beats one after the other: two different Brooklyn and Queens rappers on very similar ground."
+  },
+  "explanation": {
+    "age13": "DJ Premier, who had produced Nas's best-known songs, also made beats for Jay-Z's first album in 1996.",
+    "adult": "Premier's production ties together Nas, Jay-Z and Biggie, the three New York rappers whose rivalries shaped the late 1990s."
+  },
+  "tags": [
+    "production"
+  ]
+}

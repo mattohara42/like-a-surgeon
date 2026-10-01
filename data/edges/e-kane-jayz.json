@@ -1,0 +1,28 @@
+{
+  "id": "e-kane-jayz",
+  "from": "big-daddy-kane",
+  "to": "jay-z",
+  "type": "direct",
+  "confidence": "consensus",
+  "year": 1994,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Jay-Z: he appears on Big Daddy Kane's 'Show and Prove' (1994) and has been described as Kane's hype man in that period. Kane has said Jay-Z made cameo appearances during his shows rather than serving as a hype man.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Big Daddy Kane",
+      "title": "Ain't No Half-Steppin'",
+      "year": 1988
+    },
+    "later": {
+      "artist": "Jay-Z",
+      "title": "Dead Presidents II",
+      "year": 1996
+    },
+    "whatToListenFor": "Kane's style is fast, smooth and very precise: long, complicated sentences that land exactly on the beat, delivered as if it costs him nothing. Listen for the same calm, unhurried control in Jay-Z's flow eight years later, and for how neither raises his voice to make a point."
+  },
+  "explanation": {
+    "age13": "Before he was famous, Jay-Z went on tour with Big Daddy Kane, one of the most skilled rappers of the 1980s, and appeared on one of his songs in 1994. People often say he was Kane's 'hype man', but Kane says he only made guest appearances.",
+    "adult": "Rated consensus. The connection is documented, the role is disputed by Kane himself, and the stylistic debt is a common reading of the two flows rather than a statement from either man."
+  },
+  "tags": []
+}

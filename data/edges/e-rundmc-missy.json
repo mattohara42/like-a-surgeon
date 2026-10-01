@@ -1,0 +1,28 @@
+{
+  "id": "e-rundmc-missy",
+  "from": "run-dmc",
+  "to": "missy-elliott",
+  "type": "sample",
+  "confidence": "documented",
+  "year": 2002,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on 'Work It' (16 September 2002): it samples Run-DMC's 'Peter Piper' (1986) for its percussion, with Rock Master Scott and the Dynamic Three's 'Request Line', Blondie's 'Heart of Glass' and Bob James's 'Take Me to the Mardi Gras'.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Run-D.M.C.",
+      "title": "Peter Piper",
+      "year": 1986
+    },
+    "later": {
+      "artist": "Missy Elliott",
+      "title": "Work It",
+      "year": 2002
+    },
+    "whatToListenFor": "Listen for the bells. They are Bob James's, from 1975, as looped by Run-DMC in 1986, and here they are again sixteen years later under Missy. Then wait for the line that plays backwards."
+  },
+  "explanation": {
+    "age13": "Missy Elliott's 'Work It' uses the bell sound from Run-DMC's 'Peter Piper', which Run-DMC had themselves taken from a Bob James jazz record.",
+    "adult": "A sample of a sample: Bob James to Run-DMC to Missy Elliott, the same bells across 27 years. It joins e-bobjames-rundmc into a three-step chain."
+  },
+  "tags": []
+}

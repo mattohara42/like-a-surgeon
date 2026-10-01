@@ -1,0 +1,31 @@
+{
+  "id": "e-808-kanye",
+  "from": "tr-808",
+  "to": "kanye-west",
+  "type": "technological",
+  "confidence": "documented",
+  "year": 2008,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on Kanye West: '808s & Heartbreak' (2008) used Auto-Tune and TR-808 drum machine sounds prominently, and is considered to have had a significant effect on hip-hop.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Roland",
+      "title": "TR-808 factory voices",
+      "year": 1980,
+      "search": false
+    },
+    "later": {
+      "artist": "Kanye West",
+      "title": "Love Lockdown",
+      "year": 2008
+    },
+    "whatToListenFor": "Listen for the bass drum: a long, booming 808 kick that rings on like a low note, the same sound as on 'Sexual Healing' and 'Planet Rock'. Over it West sings, not raps, through Auto-Tune. The drum machine that started in the Bronx and in Marvin Gaye's Belgian studio is now the centre of a sad, quiet album."
+  },
+  "explanation": {
+    "age13": "Kanye West named his 2008 album '808s & Heartbreak' after the Roland TR-808 drum machine. He sang through Auto-Tune over its booming drums, and many rappers copied the sound.",
+    "adult": "The 808 named in an album title 28 years after its release, at the start of its second life in hip-hop and R&B. It links to e-808-marvingaye: two singers using the machine for slow, personal records."
+  },
+  "tags": [
+    "technology"
+  ]
+}
