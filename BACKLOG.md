@@ -95,12 +95,11 @@ correct response to a good idea arriving mid-milestone.
     Daphne Oram, Delia Derbyshire, Curtis Mayfield and The Goats have no
     route at all. Every far artist has 1 to 4 edges against a median of 3.
     So the limit stays at six, and the far list is a Track D worklist.
-  - *Still open for Matt.* How a start artist is chosen while some are out
-    of range. Two options: draw random starts only from artists within six
-    hops (searching a far artist says honestly how far it is), or allow any
-    start and let some games be unwinnable. A related idea is a line in
-    `npm run report` listing artists beyond six hops, so the gap shows up
-    as data work.
+  - *Starting artists.* Only artists within six hops, Matt's call on
+    2026-10-01, so every game can be won. An artist further out is never
+    offered as a start. Not yet decided: what the game says if a reader
+    asks for a far artist by name, and whether `npm run report` should
+    list the artists beyond six hops so the gap shows up as data work.
   - *Build notes.* The distances must be computed at load time from the
     edge data (a BFS from Yankovic), never a stored list, so artist 900
     costs what artist 9 did. The hop limit goes in `CONFIG`.
