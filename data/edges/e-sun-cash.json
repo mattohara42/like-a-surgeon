@@ -1,0 +1,28 @@
+{
+  "id": "e-sun-cash",
+  "from": "sun-records",
+  "to": "johnny-cash",
+  "type": "label",
+  "confidence": "documented",
+  "year": 1955,
+  "crossLineage": false,
+  "evidence": "Wikipedia's article on Johnny Cash: he auditioned for Sam Phillips in 1955 singing mostly gospel and was told Sun no longer recorded gospel; he won Phillips over with new songs in an early rockabilly style. 'Hey, Porter' and 'Cry! Cry! Cry!' were released that June. A story that Phillips told him to go and sin before coming back was denied by Cash in a 2002 interview.",
+  "trackPair": {
+    "earlier": {
+      "artist": "Elvis Presley",
+      "title": "That's All Right",
+      "year": 1954
+    },
+    "later": {
+      "artist": "Johnny Cash",
+      "title": "Hey, Porter",
+      "year": 1955
+    },
+    "whatToListenFor": "Both are small bands in the same room: a voice, an electric guitar, a bass and almost nothing else. Listen for Luther Perkins's guitar on 'Hey, Porter', which plays muted, chugging notes like a train on the tracks instead of chords, and for the slapback echo Sun put on everything."
+  },
+  "explanation": {
+    "age13": "When Johnny Cash first went to Sun Records he sang gospel songs, and Sam Phillips told him Sun did not record gospel any more. Cash came back with his own songs in a faster, rockier style, and Sun released them.",
+    "adult": "A label edge under A69: Phillips's refusal of the gospel material is the decision, and Cash's Sun records are what he brought back instead. The popular version of the story, with Phillips telling him to go and sin, is the kind of quotation that should not be repeated as fact, since Cash denied it."
+  },
+  "tags": ["labels"]
+}

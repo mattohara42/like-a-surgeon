@@ -8,13 +8,13 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 179 | 120 | met |
+| artists | 182 | 120 | met |
 | machines | 33 | 25 | met |
 | scenes | 21 | 20 | met |
 | labels | 36 | 30 | met |
-| edges | 373 | 350 | met |
+| edges | 377 | 350 | met |
 | threads | 6 | 5 | met |
-| crossLineageEdges | 147 | 60 | met |
+| crossLineageEdges | 149 | 60 | met |
 | edgesWithDemo | 19 | 30 | 63% |
 
 ## Counts by lineage
@@ -23,12 +23,12 @@ Every node type, since machines, scenes and labels carry a lineage too.
 
 | lineage | count |
 |---|---:|
-| rock | 66 |
+| rock | 67 |
 | electronic | 64 |
 | hiphop | 55 |
-| funk | 31 |
+| funk | 32 |
 | dub | 23 |
-| other | 19 |
+| other | 20 |
 | jazz | 8 |
 | blues | 3 |
 
@@ -36,24 +36,24 @@ Artists alone:
 
 | lineage | count |
 |---|---:|
-| rock | 48 |
+| rock | 49 |
 | hiphop | 43 |
 | electronic | 33 |
-| funk | 25 |
+| funk | 26 |
 | dub | 15 |
 | jazz | 8 |
-| other | 5 |
+| other | 6 |
 | blues | 2 |
 
 ## Counts by edge type
 
 | edge type | count |
 |---|---:|
-| direct | 98 |
-| label | 60 |
-| production | 58 |
+| direct | 99 |
+| label | 61 |
+| production | 59 |
 | technological | 55 |
-| sample | 43 |
+| sample | 44 |
 | scene | 34 |
 | cover | 20 |
 | reaction-against | 4 |
@@ -63,7 +63,7 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 290 |
+| documented | 294 |
 | consensus | 82 |
 | asserted | 1 |
 
@@ -237,126 +237,126 @@ Evidence: The Sex Pistols and the Clash are the two foundational bands of the 19
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 372 edges that carry one.
+Drawn with seed 1 from the 376 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-clapton-ukpunk`
+### 1. `e-909-heard`
 
-Eric Clapton, "Cocaine" (1977) to The Clash, "White Riot" (1977)
+Roland, "TR-909" (1983) to Mr. Fingers, "Washing Machine" (1986)
 
-The two records come from the same year and opposite sides of this story. 'Cocaine' is relaxed, mid-tempo, polished rock by the most successful British guitarist of the day. 'White Riot' is ninety seconds of shouting and slashing guitar. Listen for the gap between them: the edge is not a musical borrowing but a refusal, and the Clash played the Rock Against Racism carnival that Clapton's remarks helped bring about.
+The drum machine carries this record almost on its own. Listen to the hi-hats: bright and metallic, ticking in a perfectly even grid over a synthetic kick. The 909's cymbals were short digital recordings, which is why they sound harder and more real than the rest of the kit. Then play 'Can You Feel It', made on the same two machines in the same few days, and hear how differently they can be used.
 
-### 2. `e-island-marley`
+### 2. `e-marleymarl-peterock`
 
-Bob Marley and the Wailers, "Soul Rebel" (1970) to Bob Marley and the Wailers, "Concrete Jungle" (1973)
+Marley Marl, "The Symphony, produced for the Juice Crew" (1988) to Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992)
 
-Listen for the lead guitar. On 'Soul Rebel' there isn't one. On 'Concrete Jungle' an American session player solos over the Kingston rhythm like a rock guitarist, added in London after the band had gone home. Listen to the bass too: it is still there, but lower in the mix than a Kingston engineer would have put it.
+Both are built on one short loop running under the vocals, and both keep the drums heavy and forward. Then listen to what Pete Rock added to Marl's approach. On 'The Symphony' the loop is hard and the drums dominate, leaving four MCs to fight over it. On 'T.R.O.Y.' the loop is a saxophone phrase from a Tom Scott jazz record, over a bassline that sounds rounded and dark. It is the same way of building a beat, turned warm and mournful.
 
-### 3. `e-littlerichard-beatles`
-
-Little Richard, "Long Tall Sally" (1956) to The Beatles, "Long Tall Sally" (1964)
-
-Listen to the singing. Little Richard's 'Long Tall Sally' is shouted at the top of his range, with a scream before the sax solo. Paul McCartney's version copies the shout and the scream almost exactly, and he learned them from the man himself in 1962. The band plays it fast and tight behind him.
-
-### 4. `e-pistols-pil`
-
-Sex Pistols, "Anarchy in the U.K." (1976) to Public Image Ltd, "Public Image" (1978)
-
-Same singer, opposite record. "Anarchy" is a three-chord shout. "Public Image" opens with a huge, un-punk guitar chime, and Lydon sings about his own manufactured persona rather than trying to provoke the audience.
-
-### 5. `e-plank-eno`
-
-Cluster, "Sowiesoso" (1976) to Cluster & Eno, "Cluster & Eno" (1977)
-
-'Sowiesoso' is Cluster alone: two synthesiser players building slow, softly overlapping tones with no clear beat. 'Cluster & Eno', made a year later in Plank's Cologne studio, keeps that same unhurried pace but adds Eno's clearer melodic sense, so tones resolve into something closer to a tune. Plank recorded and shaped both records, and the difference between them is the extra voice in the room.
-
-### 6. `e-onu-africanheadcharge`
-
-On-U Sound, "Adrian Sherwood's label, founded 1979" (1979) to African Head Charge, "My Life in a Hole in the Ground" (1981)
-
-Listen for the label's working method rather than a band sound: layered hand percussion at the centre, and Sherwood's mixing desk doing the rest, with echo and dropouts applied the way Jamaican dub engineers applied them.
-
-### 7. `e-elektra-stooges`
-
-The MC5, "Kick Out the Jams" (1969) to The Stooges, "I Wanna Be Your Dog" (1969)
-
-Both are Elektra records from 1969 by Michigan bands signed on the same trip. The MC5 is a live record, fast and political. The Stooges' 'I Wanna Be Your Dog' is slower and simpler: three chords, a fuzz guitar, and one piano note struck over and over by the producer, John Cale of the Velvet Underground. Listen for that piano; it is the Velvets' drone carried into Michigan rock by the man who played it in New York.
-
-### 8. `e-sugarhill-tackhead`
-
-Grandmaster Flash and the Furious Five, "The Message" (1982) to Tackhead, "Tackhead Tape Time" (1987)
-
-On 'The Message' the players are anonymous: a label's house band, playing what the record needed. On 'Tackhead Tape Time' the same bass player, drummer and guitarist are the act, with Adrian Sherwood's dub production around them. Listen for the rhythm section on both: in 1982 it sits under the rapping, and in 1987 it is the main thing you hear.
-
-### 9. `e-tomscott-peterock`
-
-Tom Scott and the California Dreamers, "Today" (1967) to Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992)
-
-Wait for Scott's saxophone solo in 'Today', then listen to 'T.R.O.Y.'. Pete Rock has taken pieces of that solo and turned them into a short, repeating horn line, the melody everyone remembers. A soft 1967 version of a Jefferson Airplane song has become a memorial for a friend who died. The notes are Scott's. The grief is Pete Rock's.
-
-### 10. `e-sire-madonna`
-
-Talking Heads, "Once in a Lifetime" (1980) to Madonna, "Everybody" (1982)
-
-Two Sire records, two years apart. 'Once in a Lifetime' is a rock band building a song from dance-music loops. 'Everybody' is a dance record from the start: a drum machine, a bubbling synth bass, a chant of a chorus, made for a club floor. Listen for how the label that signed CBGB bands ended up with a club record as its biggest hit, and how short the distance between them actually was.
-
-### 11. `e-metroplex-saunderson`
-
-Model 500, "No UFO's" (1985) to Kreem, "Triangle of Love" (1986)
-
-The first Metroplex record and the seventh. 'No UFO's' is Atkins alone. 'Triangle of Love' is the first record Saunderson made, with Atkins, and the 12-inch carries a vocal version, a dub and an instrumental. Play the vocal and the dub one after the other: the same track with the song taken out, so that a DJ gets a tool as well as a tune.
-
-### 12. `e-musiqueconcrete-oram`
-
-Pierre Schaeffer, "Étude aux chemins de fer" (1948) to Daphne Oram and Frederick Bradnum, "Private Dreams and Public Nightmares" (1957)
-
-In Schaeffer's piece you can still hear the trains. In the BBC piece you mostly can't. Listen for sounds that have been slowed, reversed and echoed until their source disappears, sitting under a spoken poem. The method is the same, recorded sound cut and changed on tape. The use is different. In Paris it was the whole piece. At the BBC it was built to serve a script, which is how the Workshop worked for the next forty years.
-
-### 13. `e-parliamentfunkadelic-dre`
-
-Parliament, "Mothership Connection (Star Child)" (1976) to Dr. Dre, "Let Me Ride" (1993)
-
-Listen for the chorus. Parliament's 'Mothership Connection' ends on a slow, sung chant about swinging down in a chariot. 'Let Me Ride' re-sings that chant as its own hook over a slow, rolling G-funk beat with a high synthesiser whine. The tempo is laid back, the bass is deep, and the P-Funk chorus sits on top like a familiar voice from a car radio. That is G-funk's method: replay and re-sing the funk records rather than just loop them.
-
-### 14. `e-tomtomclub-flash`
-
-Tom Tom Club, "Genius of Love" (1981) to Grandmaster Flash and the Furious Five, "It's Nasty (Genius of Love)" (1982)
-
-Play the two openings. The groove is the same: the bass line, the tempo, the bouncing synth. But on 'It's Nasty' it is not the Tom Tom Club record. Sugar Hill's studio band played it again, so the bass is a little rounder and the drums a little heavier, and the Furious Five rap over it. Listen for how quickly a hook could travel in 1981 to 1982: from a Bahamas studio to a Sugar Hill record within a year, by being replayed rather than copied.
-
-### 15. `e-rockersinternational-hughmundell`
-
-Augustus Pablo, "King Tubby Meets Rockers Uptown" (1976) to Hugh Mundell, "Africa Must Be Free By 1983" (1978)
-
-Pablo's own melodica records made the label's reputation; two years later he put that same production behind a teenager's songwriting instead of his own instrument, and 'Africa Must Be Free By 1983' is a vocal album built on the same spacious, echo-heavy platform.
-
-### 16. `e-stones-weirdal`
-
-The Rolling Stones, "(I Can't Get No) Satisfaction" (1965) to "Weird Al" Yankovic, "The Hot Rocks Polka" (1989)
-
-Listen to the 'Satisfaction' riff first, a fuzzed guitar line over a heavy backbeat, then find it in the medley. The polka puts everything on a bouncing two-beat pulse and hands the melody to the accordion, so a riff built around a fuzz pedal has to survive on a squeezebox. The tune survives the move. The tone and the swagger do not, which tells you how much of the Stones' sound lived in the playing rather than the notes.
-
-### 17. `e-honeydrippers-bizmarkie`
-
-The Honey Drippers, "Impeach the President" (1973) to Biz Markie, "Make the Music with Your Mouth, Biz" (1986)
-
-The same year and the same producer as 'The Bridge', and the same drums. But on the Biz record they share space with a human beatbox. Listen for the 'Impeach the President' kick and snare, then for Biz's mouth-made drums answering them. It's a sampled drummer from 1973 and a man imitating a drummer in 1986, on one track.
-
-### 18. `e-kevinsaunderson-chezdamier`
+### 3. `e-kevinsaunderson-chezdamier`
 
 The Music Institute, "Club residencies, 1988-89" (1988) to Chez Damier, "Can You Feel It" (1992)
 
 There is no early Damier record to compare against; the claim here is about proximity, not a specific production choice. 'Can You Feel It' arrived four years after the two men shared a DJ booth, made inside the label Saunderson ran.
 
-### 19. `e-juno60-heard`
+### 4. `e-hardy-jefferson`
+
+Ron Hardy, "Music Box DJ sets" (1983) to Marshall Jefferson, "Move Your Body (The House Music Anthem)" (1986)
+
+Jefferson's piano hook is the part everyone remembers, but the mix, the sequencing and drum programming Hardy shaped, is what makes it a dancefloor record rather than just a song.
+
+### 5. `e-spector-beachboys`
+
+The Ronettes, "Be My Baby" (1963) to The Beach Boys, "God Only Knows" (1966)
+
+'Be My Baby' opens with a booming drum pattern and then piles everything together: pianos, guitars, strings and castanets blurred into one big roar with echo on top. 'God Only Knows' uses some of the same players but separates what Spector blurred: you can pick out the French horn, the sleigh bells, the harpsichord-like keyboard, and each voice in the harmonies. Listen for the same method, doubling unusual instruments into new colours, used for clarity instead of size.
+
+### 6. `e-kane-nas`
+
+Big Daddy Kane, "Ain't No Half-Steppin'" (1988) to Nas, "It Ain't Hard to Tell" (1994)
+
+Kane's verses pack dense internal rhyme into a fast, clean flow with no wasted breath. Six years later, Nas's own debut single stacks images and rhymes just as densely, at a more measured pace, description doing the work Kane's speed did. Same commitment to packing a bar full; different instrument used to do it.
+
+### 7. `e-sp1200-marleymarl`
+
+E-mu Systems, "SP-1200, ten seconds of sampling time" (1987) to Marley Marl, "The Symphony, produced for the Juice Crew" (1988)
+
+Listen for the grain. Everything running through this machine picks up a slight crunch at the top end that was not in the source record, and producers wanted it. Then listen to how short the loops are: one or two bars, over and over. That is not a stylistic preference, it is ten seconds of memory deciding the structure of the song.
+
+### 8. `e-treasureisle-uroy`
+
+Alton Ellis, "Girl I've Got a Date" (1967) to U-Roy, "Wake the Town" (1970)
+
+Play Ellis's original rocksteady vocal first, then U-Roy's version built on the same rhythm track three years later: the tune and the players are the same, but U-Roy talks, chants and ad-libs over the top instead of singing a fixed lyric, turning Reid's back catalogue into new records without a new song being written.
+
+### 9. `e-kraftwerk-dilla`
+
+Kraftwerk, "Trans-Europe Express" (1977) to Jay Dee, "B.B.E. (Big Booty Express)" (2001)
+
+Listen to how Kraftwerk say the title: flat, chanted, treated voices over a clanking rhythm meant to sound like a train. Then listen to how Dilla's track keeps the shape and rhythm of that chant and swaps the words, so the hook is instantly familiar and slightly ridiculous. Underneath, the music is his, not a sample of theirs. It is a Detroit hip-hop producer quoting the record Detroit's techno producers learned from.
+
+### 10. `e-sheffieldidm-aphextwin`
+
+Aphex Twin, "Digeridoo" (1992) to Aphex Twin, "Xtal" (1992)
+
+'Digeridoo' is still built for a dancefloor's low end, a club record with a rave lineage. 'Xtal', on the same year's 'Selected Ambient Works 85-92' and the kind of track 'Artificial Intelligence' pointed to, floats without a beat built for dancing at all. The same year, two different destinations.
+
+### 11. `e-publicenemy-rza`
+
+Public Enemy, "Bring the Noise" (1987) to Wu-Tang Clan, "Protect Ya Neck" (1992)
+
+'Bring the Noise' stacks dense layers of sirens, horn stabs and vocal snatches on top of each other, chaotic on purpose. 'Protect Ya Neck' takes the same cut-up instinct and strips it back to one or two grimy loops, murky and minimal rather than maximal, RZA's own turn on the same technique.
+
+### 12. `e-martin-beatles`
+
+The Beatles, "Love Me Do" (1962) to The Beatles, "Tomorrow Never Knows" (1966)
+
+Same producer, same band, four years apart. 'Love Me Do' is a competent beat-group single. 'Tomorrow Never Knows' is tape loops, a droning single chord, and a vocal run through a Leslie speaker. The distance between them is the story of what a producer and a band can build together once trust and ambition both grow.
+
+### 13. `e-bdp-mcshan`
+
+MC Shan, "The Bridge" (1986) to Boogie Down Productions, "The Bridge Is Over" (1987)
+
+Shan's original is an unhurried, proud borough anthem. BDP's answer keeps the same subject, hip-hop's origin, and even echoes the title, but turns it faster, meaner, and ends with a mocking sung outro aimed directly at Shan and Marley Marl. Same format, opposite intent.
+
+### 14. `e-808-mantronix`
+
+Roland, "TR-808 factory voices" (1980) to Mantronix, "Fresh Is the Word" (1985)
+
+The 808 carries almost the entire track: a hard, dry kick-and-hi-hat pattern with almost no live instrumentation layered over it, an early example of hip-hop production built to sound like a machine rather than to disguise one.
+
+### 15. `e-sherwood-tackhead`
+
+Sugarhill Gang and the Sugar Hill house band, "The Message" (1982) to Tackhead, "Rebel Discharge Vs Tricky Kid" (1988)
+
+The same rhythm section: McDonald, Wimbish, and LeBlanc played on Sugar Hill's most famous records. Six years later, under Sherwood's production, the same muscle drives a much darker, dub-industrial sound with none of the earlier records' pop polish.
+
+### 16. `e-isley-publicenemy`
+
+The Isley Brothers, "Fight the Power (Part 1)" (1975) to Public Enemy, "Fight the Power" (1989)
+
+The Isleys' original is a smooth, horn-driven funk protest song about censorship on the radio. Public Enemy keeps the title and a fragment of the groove but buries both under the Bomb Squad's usual density, turning a specific, contained complaint into a much broader, louder one.
+
+### 17. `e-juno60-heard`
 
 Roland, "Juno-60" (1982) to Mr. Fingers, "Can You Feel It" (1986)
 
 Listen to the chords floating above the bassline. They have no hard front edge: each one arrives softly and hangs in the air, and they sound wide, as if coming from both sides at once. That softness and width are the kind of sound the Juno's built-in chorus was designed to make. The whole record was built from a synth, a drum machine and two cassette decks.
 
-### 20. `e-rodgers-robinson`
+### 18. `e-dilla-roots`
 
-Chic, "Good Times" (1979) to The Sugarhill Gang, "Rapper's Delight" (1979)
+Slum Village, "Fall in Love" (1998) to The Roots, "Things Fall Apart (album)" (1999)
 
-Start both records together. The bass line is the same, the melody Bernard Edwards played on 'Good Times': bouncing, walking up and down, carrying the whole song. On 'Rapper's Delight' a studio band plays it again, and then three rappers talk over it for fifteen minutes. Listen for how little the backing changes. The new thing was entirely the voices.
+Put a programmed Dilla beat next to Questlove playing live. In 'Fall in Love' the kicks land early or late against the loop and the beat seems to lean. On the slower tracks of Things Fall Apart, listen to Questlove's kick and snare: played by hand, but placed a fraction behind where a metronome would put them, so the groove drags lazily. A drummer is copying a machine that was being used against its own settings.
+
+### 19. `e-tonyallen-blur`
+
+Tony Allen, "Jealousy" (1975) to Blur, "Music Is My Radar" (2000)
+
+'Music Is My Radar' is a British band trying to play an Afrobeat groove: a dry, busy drum part, a short repeating bass figure, and Albarn singing a line about Tony Allen getting him dancing. Put it next to Allen's own playing and you can hear both the admiration and the distance. Then listen to The Good, the Bad & the Queen (2007), where Allen himself plays the drums.
+
+### 20. `e-parliamentfunkadelic-publicenemy`
+
+Funkadelic, "Get Off Your Ass and Jam" (1975) to Public Enemy, "Bring the Noise" (1987)
+
+Funkadelic's original is a loose, live-sounding jam built to fill a dance floor. The Bomb Squad chops it into a hard, repeating stab buried under sirens, scratches and Chuck D's vocal, the same move e-jamesbrown-publicenemy describes with 'Funky Drummer': the source record's groove becomes raw material for something faster, louder and more urgent.

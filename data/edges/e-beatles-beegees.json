@@ -1,0 +1,28 @@
+{
+  "id": "e-beatles-beegees",
+  "from": "the-beatles",
+  "to": "bee-gees",
+  "type": "direct",
+  "confidence": "documented",
+  "year": 1967,
+  "crossLineage": true,
+  "evidence": "Wikipedia's article on 'New York Mining Disaster 1941' (released 14 April 1967): Atco sent promotional copies with a blank label and a hint that the group's name began with B, and many DJs played it as a new Beatles record. Maurice Gibb later described the song as a rip-off of the Beatles and said they were heavily influenced by them; George Harrison told him he had bought it because it sounded so much like the Beatles.",
+  "trackPair": {
+    "earlier": {
+      "artist": "The Beatles",
+      "title": "Eleanor Rigby",
+      "year": 1966
+    },
+    "later": {
+      "artist": "Bee Gees",
+      "title": "New York Mining Disaster 1941",
+      "year": 1967
+    },
+    "whatToListenFor": "A sad story-song, close harmony, and a dark, simple accompaniment with strings. Listen to the vocal harmonies and the way the melody falls at the end of each line. Then imagine hearing the Bee Gees song on the radio in 1967 with no name on the label."
+  },
+  "explanation": {
+    "age13": "The Bee Gees' first big hit outside Australia sounded so like the Beatles that their American record company sent it to radio stations with no name on it, and many DJs played it thinking it was a secret Beatles record. Maurice Gibb later said it was a copy of the Beatles.",
+    "adult": "A documented imitation, admitted by the imitator and recognised by the imitated, and used deliberately as a marketing trick by the label. The trackPair's earlier record is a representative 1966 Beatles ballad, not one the Gibbs named."
+  },
+  "tags": ["labels"]
+}

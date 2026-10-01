@@ -4199,3 +4199,20 @@ small and worth having in front of Matt alongside everything else here.
     claim.
   - **Miles Davis's 'On the Corner' as a hip-hop ancestor** is reported
     in the adult text as a hindsight reassessment, not as an edge.
+- **A322. Bee Gees, ABBA and Johnny Cash.** Three artists and 4 edges.
+  - **Lanes.** The Bee Gees go in `funk`, beside Donna Summer and the
+    rest of disco. ABBA go in `other`, since there is no pop lane and
+    they are neither funk nor rock. Cash goes in `rock`, beside Elvis
+    and Sun Records. Whether these lanes should change is Q43.
+  - **No edge for the 'Stayin' Alive' tape loop.** It is the best
+    story on the Bee Gees record (a hand-made drum loop in 1977) and it
+    is told in the adult blurb, but the map has no tape-loop technique
+    node to draw it from. A candidate for a later machine or technique
+    record, beside the breaks thread.
+  - **No ABBA and Phil Spector edge.** Wikipedia describes Tretow's
+    "wall of sound" experiments without crediting Spector, so the
+    phrase is used and Spector is not.
+  - **Cash's "go home and sin" story is told as denied,** per accuracy
+    rules 1 and 4, and is not quoted.
+  - **`e-beatles-beegees` carries the `labels` tag,** since Atco's
+    blank-label promotion is part of the story.
