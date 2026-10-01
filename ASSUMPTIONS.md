@@ -4462,3 +4462,18 @@ small and worth having in front of Matt alongside everything else here.
   neighbours, so an edge and a membership to the same scene count once.
   A scene hop has no evidence or `whatToListenFor`; the game will show
   the scene's own text for it (BACKLOG.md).
+
+- **A335. The Goats to the Roots, a `scene` edge for a shared bill.**
+  Matt asked for the Roots and the Goats to be connected as Philadelphia
+  live-band hip hop. Both were already on the map. Wikipedia's Goats
+  article reports Questlove's 2019 account that the Goats asked the Roots
+  to open for them, the Roots' first live show, so the edge is
+  `documented` for the bill itself and claims no musical influence. Two
+  things are flagged in the evidence. The source gives no date, so the
+  edge year of 1992 (the Goats' debut album) is a placement and not a
+  documented date. And the Roots' own article dates a 1989 school talent
+  show as their first organised gig, so "first live show" is read as
+  first proper concert. The Goats go from no route to 6 hops, and reach
+  is 197 of 202. Not added: the Goats' tours with the Beastie Boys,
+  Public Enemy and Cypress Hill, which are shared bills with no first-
+  person account behind them.
