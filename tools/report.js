@@ -220,16 +220,21 @@ function describeNode(id, records) {
   return `${id} (unresolved)`;
 }
 
-// Hops from every node to `target`, treating edges as undirected and every
-// node type as a stop, the Six Degrees rule (BACKLOG.md). Breadth-first, so
-// each count is the shortest route. Nodes with no route are absent.
-function hopsTo(target, edges) {
+// Hops from every node to `target`, the Six Degrees rule (BACKLOG.md):
+// edges are undirected, every node type is a stop, and an artist's own
+// scene membership counts as a link (A334). Breadth-first, so each count is
+// the shortest route. Nodes with no route are absent.
+function hopsTo(target, edges, artists) {
   const neighbours = new Map();
-  for (const { from, to } of edges) {
-    if (!neighbours.has(from)) neighbours.set(from, []);
-    if (!neighbours.has(to)) neighbours.set(to, []);
-    neighbours.get(from).push(to);
-    neighbours.get(to).push(from);
+  const link = (a, b) => {
+    if (!neighbours.has(a)) neighbours.set(a, []);
+    if (!neighbours.has(b)) neighbours.set(b, []);
+    neighbours.get(a).push(b);
+    neighbours.get(b).push(a);
+  };
+  for (const { from, to } of edges) link(from, to);
+  for (const artist of artists) {
+    for (const scene of artist.scenes ?? []) link(artist.id, scene);
   }
   const hops = new Map([[target, 0]]);
   const queue = [target];
@@ -245,7 +250,7 @@ function hopsTo(target, edges) {
 
 function sixDegreesSection(records, edges) {
   const { target, maxHops } = CONFIG.sixDegrees;
-  const { hops, neighbours } = hopsTo(target, edges);
+  const { hops, neighbours } = hopsTo(target, edges, records.artists.values());
   const artists = [...records.artists.keys()].filter((id) => id !== target);
   const far = artists
     .filter((id) => !(hops.get(id) <= maxHops))
@@ -254,15 +259,16 @@ function sixDegreesSection(records, edges) {
     `## Six Degrees of ${describeNode(target, records)}`,
     '',
     `${artists.length - far.length} of ${artists.length} artists are within ${maxHops} hops,`,
-    'counting any edge in either direction through any node type. The artists',
-    'below are out of reach, which usually means they are short of edges.',
+    'counting any edge in either direction through any node type, plus each',
+    "artist's own scene membership. The artists below are out of reach, which",
+    'usually means they are short of edges.',
     '',
   ];
   if (far.length === 0) return [...lines, 'Every artist is in reach.'];
-  lines.push('| artist | hops | edges |', '|---|---|---|');
+  lines.push('| artist | hops | neighbours |', '|---|---|---|');
   for (const id of far) {
     lines.push(`| ${describeNode(id, records)} | ${hops.get(id) ?? 'no route'} | `
-      + `${neighbours.get(id)?.length ?? 0} |`);
+      + `${new Set(neighbours.get(id)).size} |`);
   }
   return lines;
 }

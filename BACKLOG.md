@@ -86,7 +86,10 @@ correct response to a good idea arriving mid-milestone.
     something at each step.
   - *What counts as a hop.* Any edge, in either direction, through any node
     type. Scenes, labels and machines count as stops. Direction has to be
-    ignored because every Yankovic edge points into him.
+    ignored because every Yankovic edge points into him. An artist's own
+    scene membership (its `scenes` field) is also a hop, since the scene
+    panel already lists its members. Label membership is not, so that big
+    labels never become shortcuts (A334, Matt's call on 2026-10-01).
   - *Reach today.* With those rules, 181 of 203 artists are within six
     hops (a BFS over the edge files on 2026-10-01). The 22 beyond six, or
     unreachable, are thinly connected rather than musically distant.
@@ -105,7 +108,9 @@ correct response to a good idea arriving mid-milestone.
   - *Build notes.* The distances must be computed at load time from the
     edge data (a BFS from Yankovic), never a stored list, so artist 900
     costs what artist 9 did. The target and hop limit are already in
-    `CONFIG.sixDegrees`, and `tools/report.js` has a BFS to reuse.
+    `CONFIG.sixDegrees`, and `tools/report.js` has a BFS to reuse. A
+    scene-membership hop has no edge evidence or `whatToListenFor`, so the
+    game shows the scene's own text for that step instead.
 
 - **Follow the producer (Q21).** Select a producer and see everything
   they touched lit up across the map, or an "Arrange by producer" lane
