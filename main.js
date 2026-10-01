@@ -105,7 +105,8 @@ async function main() {
   let graph = null;
 
   const legend = createLegend(legendEl, data.meta);
-  const dock = createDock(dockEl);
+  const dock = createDock(dockEl, () => measureOverlays());
+  dockEl.style.setProperty('--dock-slide', `${CONFIG.dock.slideMs}ms`);
   // Each dock button's dot: is its row away from the default?
   function updateDock() {
     dock.setChanged('show', Object.keys(CONFIG.layers.defaults).some((k) => layers[k] !== CONFIG.layers.defaults[k]));
@@ -330,7 +331,9 @@ async function main() {
       const r = el.getBoundingClientRect();
       return { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
     };
-    const controls = [dockEl, layersEl, registersEl, arrangeEl, soundEl, lensEl].map(rect).filter((r) => r.right > r.left);
+    // A closed row keeps its size while hidden, so only the open one counts.
+    const rows = [layersEl, registersEl, arrangeEl, soundEl, lensEl].filter((el) => el.parentElement.classList.contains('open'));
+    const controls = [dockEl, ...rows].map(rect).filter((r) => r.right > r.left);
     const cluster = controls.length
       ? controls.reduce((a, b) => ({
           left: Math.min(a.left, b.left),

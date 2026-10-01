@@ -222,6 +222,10 @@ export const CONFIG = {
   // in index.html. The colours are the controls' own, not lineage
   // colours, so none of them claims a lane.
   dock: {
+    // An open row slides back in after this long without being used. The
+    // pointer resting on it, or focus inside it, holds it open.
+    autoCloseMs: 4000,
+    slideMs: 220,
     items: [
       { key: 'show', el: 'layers', glyph: '◎', color: '#3ddfa4' },
       { key: 'read', el: 'registers', glyph: 'Aa', color: '#f3c46a' },

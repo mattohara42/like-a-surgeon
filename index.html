@@ -188,22 +188,28 @@
   }
   .dock-item.changed .dock-badge { display: block; }
   /* A row opens sideways from its button, in the button's colour. */
+  /* Closed rows sit tucked behind their button; opening slides one out. */
   .dock-flyout {
-    position: absolute; left: 50px; top: 50%; transform: translateY(-50%);
+    position: absolute; left: 50px; top: 50%; transform: translate(-24px, -50%) scaleX(0.6);
+    transform-origin: left center; opacity: 0; visibility: hidden; pointer-events: none;
+    transition: transform var(--dock-slide) cubic-bezier(.16, 1, .3, 1), opacity var(--dock-slide) ease, visibility 0s linear var(--dock-slide);
     display: flex; gap: 7px; align-items: center; white-space: nowrap;
     padding: 7px 10px; border-radius: 999px;
     background: rgba(6,10,22,0.92); border: 1px solid color-mix(in srgb, var(--dock-color) 55%, transparent);
     box-shadow: 0 0 22px color-mix(in srgb, var(--dock-color) 22%, transparent);
     backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   }
-  .dock-flyout[hidden] { display: none; }
+  .dock-item.open .dock-flyout {
+    transform: translate(0, -50%); opacity: 1; visibility: visible; pointer-events: auto;
+    transition: transform var(--dock-slide) cubic-bezier(.16, 1, .3, 1), opacity var(--dock-slide) ease, visibility 0s;
+  }
   .dock-flyout .register-caption { color: var(--dock-color); }
   .dock-flyout .layer-toggle[aria-pressed="true"] {
     color: #05070f; background: var(--dock-color); border-color: var(--dock-color);
   }
   #sound .sound-volume { width: 84px; accent-color: var(--dock-color); }
   #sound .sound-volume:disabled { opacity: 0.35; }
-  @media (prefers-reduced-motion: reduce) { .dock-button { transition: none; } }
+  @media (prefers-reduced-motion: reduce) { .dock-button, .dock-flyout, .dock-item.open .dock-flyout { transition: none; } }
 
   /* The way to the card view (Q39, Q41): its own small place, bottom right. */
   #cards-link {

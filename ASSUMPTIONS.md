@@ -4039,9 +4039,13 @@ small and worth having in front of Matt alongside everything else here.
     differs from `CONFIG.layers.defaults`, the reading level or the
     arrangement is not the default, sound is muted, or a spotlight is on.
     The button's accessible name says so too.
-  - **Rows stay open after a choice,** so the reader sees the map change
-    with the row still in reach. Choosing a spotlight opens its card in
-    the drawer, as before.
+  - **Rows slide back in on their own** (Matt), after
+    `CONFIG.dock.autoCloseMs` (4 s) without use. A choice restarts the
+    count, so the reader sees the map change with the row still in reach.
+    The pointer resting on the row, or keyboard focus in it, holds it
+    open. Only keyboard focus counts, since a mouse click leaves focus on
+    the pill it pressed. Choosing a spotlight opens its card in the
+    drawer, as before.
   - **Spotlight** is the reader's name for the lens row, in copy only.
     Code, storage keys and docs keep `lens`, which avoids churn in
     unrelated code.

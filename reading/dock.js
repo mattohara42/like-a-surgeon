@@ -14,15 +14,17 @@ import { COPY } from './copy.js';
 import { h } from './dom.js';
 import { pick } from './registers.js';
 
-export function createDock(root) {
+// `onLayout` runs when a row opens or closes, since the space the dock
+// covers on the map changes with it.
+export function createDock(root, onLayout = () => {}) {
   let register = CONFIG.reading.defaultRegister;
   let openKey = null;
+  let closeTimer = null;
   const items = new Map();
 
   for (const item of CONFIG.dock.items) {
     const flyout = document.getElementById(item.el);
     flyout.classList.add('dock-flyout');
-    flyout.hidden = true;
     const button = h(
       'button',
       {
@@ -42,12 +44,30 @@ export function createDock(root) {
 
   function setOpen(key) {
     openKey = key;
-    for (const [k, { button, flyout, wrap }] of items) {
+    for (const [k, { button, wrap }] of items) {
       const open = k === key;
-      flyout.hidden = !open;
       button.setAttribute('aria-expanded', String(open));
       wrap.classList.toggle('open', open);
     }
+    armClose();
+    onLayout();
+  }
+
+  // Slides the open row back in after CONFIG.dock.autoCloseMs unused. Any
+  // use restarts the count. The pointer resting on it, or keyboard focus
+  // in it, holds it open. Only keyboard focus: a mouse click leaves focus
+  // on the pill clicked, which would hold the row open for good.
+  function armClose() {
+    clearTimeout(closeTimer);
+    if (openKey === null) return;
+    closeTimer = setTimeout(() => {
+      const wrap = items.get(openKey)?.wrap;
+      if (wrap && (wrap.matches(':hover') || wrap.querySelector(':focus-visible'))) armClose();
+      else setOpen(null);
+    }, CONFIG.dock.autoCloseMs);
+  }
+  for (const event of ['pointermove', 'pointerdown', 'input', 'keydown', 'focusin']) {
+    root.addEventListener(event, armClose);
   }
 
   function label(key) {
