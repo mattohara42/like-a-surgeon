@@ -6,6 +6,9 @@ built to be explored by a curious 13-year-old.
 The map lays the whole dataset on a left-to-right time axis, with lanes by
 lineage, scene or label, machines on a receding floor beneath, and a year
 cursor you can drag to watch it arrive. Click anything to read about it.
+Every line is a sourced claim, graded for how sure we are. The sound demos
+are synthesized in the browser, never recordings. Guided threads walk
+through the map, and Six Degrees of Weird Al turns it into a game.
 
 The latest `main` is live at https://like-a-surgeon.netlify.app, and every
 pull request gets its own Netlify preview.
@@ -15,28 +18,28 @@ pull request gets its own Netlify preview.
 - **M1 (data layer):** closed. The dataset targets moved to Track D, which
   keeps growing (`npm run report` measures the distance).
 - **M2 (graph renderer):** shipped.
-- **M3 (reading surface):** built. Panels, reading levels, legend, search,
-  YouTube links, Arrange by, and the typography pass are all in (PRs #16 to
-  #21). The gate is still open: it passes when Matt's 13-year-old uses the
-  map without instruction and gets somewhere. `docs/m3-gate-notes.md` is the
-  guide for that session.
-- **Track D (data):** ongoing. Artists (135 of 120), machines (31 of 25),
-  scenes (20 of 20), labels (31 of 30) and cross-lineage edges (103 of 60)
-  have all passed their old M1 targets. Still short: 263 of 350 edges,
-  2 of 5 threads, and 5 of 30 edges with a demo. Recent batches were
-  edge-only passes between artists already on the map, the Juice Crew and
-  Sherwood's On-U Sound circle, producers (George Martin, Quincy Jones,
-  Tony Visconti and others), and the Weird Al parody edges (Nirvana,
-  Madonna, Coolio, Rick Derringer). `npm run report` has the exact
-  distance.
+- **M3 (reading surface):** passed 2026-09-29.
+- **M4 (audio engine):** built, with nine playable demos. Matt moved on to
+  M5 on 2026-09-30. The by-ear listen and the Safari and Firefox check
+  (Q27) are still to do, and the Planet Rock A/B is a draft (Q30).
+- **M5 (timeline, threads, lenses):** built 2026-09-30. Six threads, the
+  receding past, and the four lenses. The gate is still to run: a reader
+  who has never seen the map finishes a thread and explains what it was
+  about. `docs/m5-gate-notes.md` is the script.
+- **Six Degrees of Weird Al:** built 2026-10-02, ahead of the M5 gate at
+  Matt's request (A340). Start from the welcome card or any artist panel
+  and hop through connections until you reach Yankovic, in six or fewer.
+  Every artist on the map is in reach.
+- **Track D (data):** ongoing, and past every old M1 target except demos:
+  214 artists, 33 machines, 21 scenes, 36 labels, 457 edges (190 across
+  lineages), 6 threads, and 19 of 30 edges with a demo. `npm run report`
+  has the exact distance and the Six Degrees reach.
 - **Cards (the phone version):** built, gate open. A screen narrower
-  than 700 px gets one record per card instead of the map, with Random
-  and a web address per card. `?view=map` and `?view=cards` override the
+  than 700 px gets one record per card instead of the map, with a Random
+  button and a link for each card. `?view=map` and `?view=cards` override the
   choice. See `docs/cards-architecture.md`.
-- **Open question:** Q20 in `QUESTIONS.md`. A null end year can't
-  currently tell "still made" from "unknown", so some machines read as
-  still on sale.
-- **Next:** M4, the audio engine, once the M3 gate is passed.
+- **Adding artists:** see `docs/adding-artists.md` for what a new artist
+  needs to join the map, the threads and the Six Degrees game.
 
 ## What is here
 
@@ -54,14 +57,15 @@ pull request gets its own Netlify preview.
 | `tools/validate.js` | Checks the data tree. `npm run validate`. |
 | `tools/serve.js` | Dev static server, solves the `file://` fetch problem. `npm run dev`. |
 | `tools/bundle.js` | Release bundler. Writes `dist/`, which opens from disk with no server. `npm run build`. |
-| `tools/report.js` | Generates the M1 gate report into `docs/m1-gate-report.md`. `npm run report`. |
+| `tools/report.js` | Generates the data report into `docs/m1-gate-report.md`: counts, the edges to read hardest, sampled listening notes, and the Six Degrees reach (who is beyond six hops). `npm run report`. |
 | `tools/crosscheck.js` | Checks the data against Wikidata and MusicBrainz and lists disagreements in `docs/crosscheck-report.md`. Dev only, and the only tool that uses the network. `npm run crosscheck`. |
 | `index.html`, `main.js` | The app shell and entry point. |
 | `config.js` | Every tuning value in the project. No magic numbers in logic. |
 | `render/` | The graph renderer: layout, lane plans (`arrange.js`), substrate, nodes, edges, gradients, atmosphere, transport, viewport culling, semantic zoom, label placement. |
 | `cards/` | Cards, the phone version: the view switch, card addresses, the opening and random pools, and the card shell. |
-| `reading/` | The reading surface: the drawer and its node and edge panels, reading levels, legend and version stamp, search, YouTube links, interface copy in registers, the type scale. |
-| `docs/` | Milestone designs (`m1-`, `m2-`, `m3-architecture.md`), the M1 gate report, and the M3 gate notes. |
+| `reading/` | The reading surface: the drawer and its node and edge panels, reading levels, legend and version stamp, search, YouTube links, interface copy in registers, the type scale, the welcome card and missions, the thread player (`threads.js`), the lenses, and Six Degrees of Weird Al (`sixDegrees.js`, on the shared hop graph in `hops.js`). |
+| `audio/` | The audio engine: machine voices, the 303 worklet, the dub effects, pattern playback. |
+| `docs/` | Milestone designs (`m1-` to `m5-architecture.md`, `cards-architecture.md`), the data report, the M3 and M5 gate notes, the source policy (`sources.md`), and the guide to adding artists (`adding-artists.md`). |
 | `netlify.toml` | Builds `dist/` for the Netlify site and its PR previews. |
 | `design/` | Visual direction prototypes. `03-strata.html` is the one that shipped. |
 | `tools/design-snapshot.js` | Freezes `data/` for the `design/` prototypes. `npm run design:snapshot`. |
@@ -74,13 +78,16 @@ pull request gets its own Netlify preview.
     npm run report     # regenerates docs/m1-gate-report.md
     npm run crosscheck # checks the data against outside sources (needs network)
     npm run build      # writes dist/, the offline release: open dist/index.html directly
+    npm test           # unit tests: audio, demos, cards, and the Six Degrees hop graph
     npm run cards:check # walks the phone view in headless Chromium (needs Playwright and a build)
 
 Scroll to zoom, drag to pan, and drag the year cursor or press play. Click a
 dot or a line to open its panel, and follow the links in the panel sideways.
 Press `/` to search by name, place or year. The top-left controls switch
-the layers, the reading level (Teen, Adult) and the arrangement (Lineage,
-Scene, Label). The legend bottom-left explains how sure each line is.
+the layers, the reading level (Teen, Adult), the arrangement (Lineage,
+Scene, Label) and the lens. The legend bottom-left explains how sure each
+line is. The welcome card ("Start here") opens the missions, the threads
+and Six Degrees of Weird Al.
 
 ## Working with Claude Code
 

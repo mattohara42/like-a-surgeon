@@ -120,6 +120,12 @@ exists, so M5 is mainly the thread player and the lenses.
 thread player, five launch threads, and the lenses. Waiting on the gate,
 which Matt runs with a cold reader; `docs/m5-gate-notes.md` is the script.
 
+**Added ahead of the gate** 2026-10-02, at Matt's request: Six Degrees of
+Weird Al (A340), a route-finding game on the same drawer, chip and
+route-lighting pattern as the thread player. It stays on the welcome card
+for the gate session; a cold reader choosing it over a thread is a
+finding.
+
 ---
 
 ## Cards — the phone version (outside the milestone order)
@@ -143,6 +149,8 @@ guided tour, bundling, offline verification, then a hosting path.
 
 Runs alongside every milestone from M1 forward. Adding an artist is one file
 (`data/manifest.json` is generated, so there is no manifest line to edit).
+`docs/adding-artists.md` is the working guide: the file, the edges, what
+picks a new artist up automatically, and what the Six Degrees game needs.
 Each expansion batch is its own commit with its own
 validator run and its own confidence-tier report.
 
@@ -221,8 +229,15 @@ and Tackhead (A243), and Nirvana, Madonna, Coolio and Rick Derringer
 (A244 to A247), which anchored the Weird Al parody edges and closed the
 last plain-name `keyProducers` entries on his record. The most recent
 batch gave Autechre the Sheffield IDM scene edge Aphex Twin already had
-(A248). `npm run report` has the current
-distance on every remaining target.
+(A248). The Six Degrees work of 2026-10-01 and 10-02 then used the
+report's new reach section as a worklist: twelve edges between nodes
+already on the map closed most of the gap (A332, A333, A335, A336).
+Then four Yankovic edges to artists already on the map (A337) and eleven
+new artists, each with its parody edge (Queen, the Knack, Devo, Toni
+Basil, Lady Gaga, Chamillionaire, the Doors, Frank Zappa, Eminem, Robin
+Thicke and the Foo Fighters), plus five edges tying them into the rest of
+the map (A338, A339), brought every artist within six hops. `npm run
+report` has the current distance on every remaining target.
 
 ## Definition of done for any milestone
 

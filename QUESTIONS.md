@@ -124,6 +124,10 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   (b) Add `parody` to the edge `type` enum (SCHEMA.md, validator, and the
   renderer's edge styling).
   **Resolved 2026-09-30: (a).** Keep `cover`. No change.
+  Later (A337): a style parody, an original song in a band's manner
+  ("Dare to Be Stupid", "Bob", "Craigslist"), is typed `direct`, since
+  `cover` would claim a song that was not copied. Song parodies stay
+  `cover`.
 - **Q23. Where do the tape and radiophonic pioneers belong now that
   lineages are cheap to add?** Schaeffer, Stockhausen, Oram, Derbyshire,
   and the `paris-musique-concrete` and `bbc-radiophonic-workshop` scenes

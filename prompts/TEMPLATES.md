@@ -8,14 +8,18 @@
 > matter: [AREA].
 >
 > Before writing, re-read three edges from batch 1 that I approved, plus
-> e-kraftwerk-planetrock in the frozen seed. Match that depth.
+> e-kraftwerk-planetrock in the frozen seed. Match that depth. Follow
+> docs/adding-artists.md for what each new artist needs, including its
+> place in the Six Degrees game.
 >
 > All the accuracy rules from CLAUDE.md apply. No quotations attributed to real
 > people. No invented credits. Honest tiers. `whatToListenFor` specific enough
 > that it could not describe a different pair of records.
 >
 > Run the validator, then `node tools/crosscheck.js --ids=<the new record ids>`
-> and settle anything it lists (see docs/sources.md). Then produce docs/batch-0N-report.md in the same format as
+> and settle anything it lists (see docs/sources.md). Run `npm run report`
+> and check its Six Degrees section: no new artist should be beyond six
+> hops, and none should get an edge just to fix that. Then produce docs/batch-0N-report.md in the same format as
 > batch 1: counts and tier ratio, five least confident edges, twenty randomly
 > sampled `whatToListenFor` fields verbatim, and anything left null.
 >

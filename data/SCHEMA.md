@@ -70,6 +70,9 @@ artist.
 
 ## artist
 
+`docs/adding-artists.md` is the working guide to adding one: the file, its
+edges, and what the threads and the Six Degrees game need from it.
+
 ```
 id            slug, stable forever
 name
@@ -85,9 +88,12 @@ originCity    for a person, where they were born; for a band, group or duo,
               differs, belongs in the blurb ("born in Harlem, grew up on
               Long Island"). City level, or a neighbourhood with its city.
 originCountry the country of originCity
-scenes        [scene ids]
-labels        [ { labelId, from, to } ]    the ones that mattered
-keyProducers  [artist ids or plain names]
+scenes        [scene ids]. Each is also a Six Degrees hop (A334).
+labels        [ { labelId, from, to } ]    the ones that mattered.
+              Not a Six Degrees hop.
+keyProducers  [artist ids or plain names]. An id drives "Follow the
+              producer"; it is not an edge and not a hop, so a documented
+              production on the map also gets a `production` edge.
 hook          one sentence, why this node exists on the map
 blurb         three registers
 signatureTracks [ { title, year, whyThisOne, search? } ]   2 to 3
@@ -143,7 +149,8 @@ whatWasNew    what a listener at the time had literally never heard before,
 production    rooms, engineers, consoles, budgets
 labels        who paid, who owned the masters, who got robbed
 politics      what the music argued for or against
-memberIds     [artist ids]
+memberIds     [artist ids]. Each is also a Six Degrees hop, as an
+              artist's own `scenes` is (A334).
 palette       { ink, paper, accent, accent2 }   hero card colors
 motif         motif key for the generated hero card
 ```
@@ -184,6 +191,10 @@ from, to        node ids of any type
 type            "direct" | "production" | "technological" | "label" |
                 "scene" | "sample" | "reaction-against" | "rediscovery" |
                 "cover"
+                A song parody is "cover" (Q24); a style parody, an original
+                song in another act's manner, is "direct" (A337). A
+                documented collaboration may stand in for influence as
+                "direct" when the evidence says so (A239).
 confidence      "documented" | "consensus" | "asserted"
 evidence        For "documented": what was said and roughly where and when.
                 NEVER a fabricated quotation. Describe the source in prose.

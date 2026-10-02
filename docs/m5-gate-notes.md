@@ -61,6 +61,13 @@ carried the idea.
 
 ## Also worth trying, briefly
 
+- **Six Degrees of Weird Al.** It is on the welcome card beside the
+  threads (A340), and Matt chose to leave it there for this session. If
+  the reader picks it instead of a thread, write that down and let them
+  play one round, then ask them to pick a thread. Whether they find the
+  connection buttons, read the link labels, and reach him, or ask for
+  "Show me a route", are all worth noting.
+
 - The **Lens** row, top left. Choosing one opens a short card and dims the
   map to that kind of connection. Politics lights only 14 edges, and its
   card says so.
