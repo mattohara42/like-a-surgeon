@@ -116,6 +116,21 @@ Launch threads:
 
 Threads are cheap to add. Expect dozens eventually.
 
+## Six Degrees of Weird Al
+
+A second way in, added 2026-10-02 (A340). Where a thread is a guided route,
+this is a hunt: start from any artist and reach "Weird Al" Yankovic by
+following connections, one hop at a time, in six or fewer. A hop is any
+edge in either direction, or membership of a shared scene. Each choice is
+labelled with what links the two, so every hop teaches one connection.
+There is no dead end: past six the game goes on, and the finish compares
+the route with the shortest one. "Show me a route" is the only hint.
+
+The game also keeps the dataset honest. `npm run report` lists every artist
+beyond six hops, and an artist out of reach is almost always an artist short
+of documented edges. That list is a Track D worklist, never a reason to
+stretch a claim.
+
 ## Interaction
 
 **Timeline.** A scrubber spanning the full date range. Dragging moves a "now"

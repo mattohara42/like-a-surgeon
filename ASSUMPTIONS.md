@@ -4606,3 +4606,18 @@ small and worth having in front of Matt alongside everything else here.
   - No scores are kept, by Matt's decision. The game also stays on the
     welcome card for the M5 gate session; a cold reader choosing it over a
     thread is itself a finding.
+
+- **A341. The docs are brought up to date after the Six Degrees work, and a
+  guide to adding artists is written.** Matt asked on 2026-10-02 for every
+  doc to be updated, with the considerations for bringing in new artists
+  and hooking them into the new functionality. `docs/adding-artists.md` is
+  new: the artist file, the edges and their conventions (parody typing,
+  collaborations, years that place a record), what picks a new artist up
+  with no code, what Six Degrees needs (reach, two connections for a random
+  start, never an edge just for reach), threads, and the checks before a
+  pull request. README's status section, which still described M3 as open
+  and M4 as next, now reflects M1 to M5, the game and current counts.
+  BUILD_PLAN, SPEC, SCHEMA, the M5 architecture and gate notes, Q24, the
+  batch prompt template and the BACKLOG entry now describe the game as
+  built. CLAUDE.md gains one pointer to the guide under the scope rule; its
+  rules are unchanged.

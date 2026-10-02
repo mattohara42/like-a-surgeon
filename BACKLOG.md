@@ -76,42 +76,19 @@ correct response to a good idea arriving mid-milestone.
   **Shipped** (A292) as a six-stop thread into Yankovic in date order.
 
 - **Six Degrees of Weird Al, the challenge.** Matt asked for this
-  2026-10-01, as a game alongside the A292 thread: get from any artist to
-  Yankovic in six hops or fewer. Held until the M5 gate passes, per Matt.
-  **Shipped** (A340) on 2026-10-02, ahead of the M5 gate at Matt's request.
-  Design as agreed in chat:
-  - *Shape.* The player hops. The game starts on an artist, each click on
-    a connected node is one hop, a counter sits in the dock, and reaching
-    Yankovic wins. A "show me a route" button reveals one shortest path
-    after a win or a give-up. Every hop opens an edge, so the reader learns
-    something at each step.
-  - *What counts as a hop.* Any edge, in either direction, through any node
-    type. Scenes, labels and machines count as stops. Direction has to be
-    ignored because every Yankovic edge points into him. An artist's own
-    scene membership (its `scenes` field) is also a hop, since the scene
-    panel already lists its members. Label membership is not, so that big
-    labels never become shortcuts (A334, Matt's call on 2026-10-01).
-  - *Reach today.* With those rules, 181 of 203 artists are within six
-    hops (a BFS over the edge files on 2026-10-01). The 22 beyond six, or
-    unreachable, are thinly connected rather than musically distant.
-    George Clinton has one edge (to Dr. Dre), Pink Floyd one (to Kate
-    Bush), and Curtis Mayfield and The Goats connect only to their labels.
-    Daphne Oram, Delia Derbyshire, Curtis Mayfield and The Goats have no
-    route at all. Every far artist has 1 to 4 edges against a median of 3.
-    So the limit stays at six, and the far list is a Track D worklist.
-  - *Starting artists.* Only artists within six hops, Matt's call on
-    2026-10-01, so every game can be won. An artist further out is never
-    offered as a start. If a reader asks for one by name, the game says
-    honestly how many hops away it is on the map so far and suggests a
-    closer start. `npm run report` lists the artists beyond six hops (A331).
-  - *Naming.* The challenge keeps "Six Degrees of Weird Al". The A292
-    thread is renamed "Songs Everyone Knew" (A331).
-  - *Build notes.* The distances must be computed at load time from the
-    edge data (a BFS from Yankovic), never a stored list, so artist 900
-    costs what artist 9 did. The target and hop limit are already in
-    `CONFIG.sixDegrees`, and `tools/report.js` has a BFS to reuse. A
-    scene-membership hop has no edge evidence or `whatToListenFor`, so the
-    game shows the scene's own text for that step instead.
+  2026-10-01: get from any artist to Yankovic in six hops or fewer.
+  **Shipped** (A340) on 2026-10-02, ahead of the M5 gate at Matt's request,
+  as built: hops are chosen from a list of connections in the drawer, each
+  labelled with its link; past six the count turns amber and play goes on,
+  scored against the shortest route; "Show me a route" is the only hint;
+  it starts from the welcome card (a random artist two to six hops out
+  with at least two connections) or from any artist panel. A hop is any
+  edge either way, or a scene membership; label membership is not (A334).
+  The thread it was first built as is now "Songs Everyone Knew" (A331).
+  On 2026-10-01, 181 of 203 artists were in reach; the report's far list
+  was worked as a Track D list until every artist was (A332 to A339).
+  `docs/adding-artists.md` covers what a new artist needs to join it.
+  Declined: keeping scores between visits (Matt, 2026-10-02).
 
 - **Follow the producer (Q21).** Select a producer and see everything
   they touched lit up across the map, or an "Arrange by producer" lane

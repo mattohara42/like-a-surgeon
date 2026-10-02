@@ -213,3 +213,19 @@ Each step is one PR, merged before the next.
   Arrange by label. (c) Drop it: three lenses, and the label arrangement
   covers labels.
   **Resolved 2026-09-30: (a).**
+
+## Addendum: Six Degrees of Weird Al (A340)
+
+Built after this design, ahead of the gate, on the same parts as the thread
+player rather than new ones. The game is a drawer target, `{ kind: 'six',
+id: 'game' }`, redrawn in place on each hop (the panel does not stack a
+target onto itself). Each hop flies the camera to the new stop and lights
+the walked route with `graph.setPath`, as a thread's stops do. A chip,
+`#six-chip` beside `#thread-chip`, brings the reader back after wandering
+off (the Q34 rule). Unlike a thread, it leaves the timeline year alone.
+
+The hop graph is `reading/hops.js`: pure, DOM-free, built from whatever
+links it is handed, and shared with `tools/report.js` so the game and the
+report count a hop the same way. Its rule (A334) is any edge either way,
+plus scene membership from an artist's `scenes` or a scene's `memberIds`.
+What a new artist needs to join it is in `docs/adding-artists.md`.
