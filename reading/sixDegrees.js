@@ -28,7 +28,7 @@ const TARGET = { kind: 'six', id: 'game' };
 //   focusRecord(target)  flies the camera to a node or edge
 //   setPath(route)       lights a route on the map, or clears it
 export function createSixDegrees(chipEl, { nodes, nodesById, edges, edgesById, sceneMembers, open, focusRecord, setPath }) {
-  const { target: targetId, maxHops, minStartHops } = CONFIG.sixDegrees;
+  const { target: targetId, maxHops, minStartHops, minStartLinks } = CONFIG.sixDegrees;
   const links = edges.map((e) => ({ a: e.from.id, b: e.to.id, edgeId: e.id }));
   for (const node of nodes) {
     if (node.kind !== 'scene') continue;
@@ -39,7 +39,7 @@ export function createSixDegrees(chipEl, { nodes, nodesById, edges, edgesById, s
   const toTarget = available ? hops.distancesTo(targetId) : new Map();
   const starts = nodes.filter((n) => {
     const d = toTarget.get(n.id);
-    return n.kind === 'artist' && d >= minStartHops && d <= maxHops;
+    return n.kind === 'artist' && d >= minStartHops && d <= maxHops && hops.neighbours(n.id).length >= minStartLinks;
   });
 
   let register = null;

@@ -404,6 +404,9 @@ export const CONFIG = {
     // A random start is at least this far out, so a game is never one
     // click long.
     minStartHops: 2,
+    // ...and has at least this many connections, so the first move is a
+    // choice rather than a forced hop (Matt, A340).
+    minStartLinks: 2,
   },
 
   transport: {

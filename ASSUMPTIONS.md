@@ -4595,9 +4595,14 @@ small and worth having in front of Matt alongside everything else here.
   - When two links join the same pair, the choice shows the first edge,
     preferring an edge over a membership, since an edge carries evidence.
   - Random starts are artists between `minStartHops` (2) and `maxHops`
-    (6) away, never the artist just played when there is another choice.
+    (6) away with at least `minStartLinks` (2) connections, so the first
+    move is a choice (Matt's call), never the artist just played when
+    there is another choice. An artist panel can still start a game from
+    a one-link artist, since the reader chose it.
   - The game follows the thread player's pattern: a drawer target
     (`{ kind: 'six' }`) redrawn in place on each hop, the route lit with
     `graph.setPath`, and a chip (`#six-chip`) to return while reading
     elsewhere. The timeline year is left alone, unlike a thread.
-  - Not kept between visits. A best score per start could follow.
+  - No scores are kept, by Matt's decision. The game also stays on the
+    welcome card for the M5 gate session; a cold reader choosing it over a
+    thread is itself a finding.
