@@ -1,0 +1,28 @@
+{
+  "id": "e-queen-ladygaga",
+  "from": "queen",
+  "to": "lady-gaga",
+  "type": "direct",
+  "confidence": "consensus",
+  "evidence": "Wikipedia's article on Lady Gaga: producer Rob Fusari has said he coined the name 'Lady Gaga' in 2006 from Queen's 'Radio Ga Ga', when his phone autocorrected 'Radio' to 'Lady'; and her music drew on the glam rock style of David Bowie and Queen. The name story is Fusari's account and the stylistic debt is the article's summary, so the edge is held at consensus.",
+  "year": 2008,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Queen",
+      "title": "Radio Ga Ga",
+      "year": 1984
+    },
+    "later": {
+      "artist": "Lady Gaga",
+      "title": "Just Dance",
+      "year": 2008
+    },
+    "whatToListenFor": "'Radio Ga Ga' is Queen in their synthesizer period, a big singalong about missing old radio. Gaga's debut single is club pop. The link is less in the notes than in the presentation: theatrical costumes, a huge stage persona, and a name taken straight from the Queen song."
+  },
+  "explanation": {
+    "age13": "Lady Gaga's name came from Queen's song 'Radio Ga Ga', according to her early producer. Her big, theatrical style also borrows from Queen and David Bowie.",
+    "adult": "Two kinds of debt in one edge: a name, by one producer's account, and a glam stage style the article attributes to Queen and Bowie together."
+  },
+  "tags": []
+}

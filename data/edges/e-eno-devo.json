@@ -1,0 +1,30 @@
+{
+  "id": "e-eno-devo",
+  "from": "brian-eno",
+  "to": "devo",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Q: Are We Not Men? A: We Are Devo!' (Warner Bros. and Virgin, August and September 1978): Eno produced it, mostly at Conny Plank's studio near Cologne, and played synthesizer and sang backing vocals. The band later said they resisted his ideas: he wrote synthesizer parts and sounds for almost every song, and they used them on three or four. Eno found them unwilling to stray from their demos.",
+  "year": 1978,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Brian Eno",
+      "title": "Baby's on Fire",
+      "year": 1974
+    },
+    "later": {
+      "artist": "Devo",
+      "title": "Jocko Homo",
+      "year": 1978
+    },
+    "whatToListenFor": "Eno made his name with odd, treated sounds; Devo arrived knowing exactly how they wanted to sound. Listen to 'Jocko Homo' for the parts that are pure Devo, the chant and the stiff rhythm, and for places where an extra electronic sound sits behind them: by the band's own account, only a few of Eno's ideas made it onto the record."
+  },
+  "explanation": {
+    "age13": "Brian Eno produced Devo's first album in 1978. He wrote synthesizer parts for nearly every song, but the band only used a few of them, because they already knew how they wanted to sound.",
+    "adult": "A producer-artist relationship documented as friction from both sides. It joins Devo to Eno's line on the map, and through the studio to Conny Plank and German electronic music."
+  },
+  "tags": [
+    "production"
+  ]
+}

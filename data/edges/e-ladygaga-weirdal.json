@@ -1,0 +1,28 @@
+{
+  "id": "e-ladygaga-weirdal",
+  "from": "lady-gaga",
+  "to": "weird-al-yankovic",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Perform This Way' (released 25 April 2011, on 'Alpocalypse'): it parodies 'Born This Way'. Lady Gaga's manager refused permission without asking her; Yankovic posted the song online on 20 April 2011, it spread quickly, and Gaga, who had not known of the request, approved it. Proceeds were given to the Human Rights Campaign. The parody keeps the music and turns the words to her stage costumes and performance.",
+  "year": 2011,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Lady Gaga",
+      "title": "Born This Way",
+      "year": 2011
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "Perform This Way",
+      "year": 2011
+    },
+    "whatToListenFor": "'Born This Way' is pounding electronic dance-pop with a message about accepting yourself. 'Perform This Way' copies the music closely and changes the subject to her outfits and stage shows. Listen for how the same big, proud chorus sounds when the words are about wearing a dress made of something strange."
+  },
+  "explanation": {
+    "age13": "Lady Gaga's manager said no to Weird Al's parody of 'Born This Way' without asking her. Weird Al put it online anyway, and when Gaga found out, she said yes. The money it made went to an LGBT rights charity.",
+    "adult": "The clearest case on this map of the permission method being tested: a refusal by a manager, reversed by the artist, and the proceeds given to a cause her original song stood for."
+  },
+  "tags": []
+}

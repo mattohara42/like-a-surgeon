@@ -1,0 +1,31 @@
+{
+  "id": "lady-gaga",
+  "name": "Lady Gaga",
+  "sortName": "Gaga, Lady",
+  "type": "artist",
+  "lineage": "pop",
+  "activeFrom": 2006,
+  "activeTo": null,
+  "originCity": "New York City, New York",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A New York pop star named after a Queen song, whose manager turned down a Weird Al parody she had never heard about.",
+  "blurb": {
+    "age13": "Lady Gaga, born Stefani Germanotta in New York City in 1986, became famous with her first album, 'The Fame' (2008). Her stage name, according to her early producer, came from Queen's song 'Radio Ga Ga', and her music borrowed the dressed-up glam style of Queen and David Bowie. 'Born This Way' (2011) is a song about accepting who you are, and she has campaigned for LGBT rights. She has also sung jazz with Tony Bennett and won an Oscar for the song 'Shallow' (2019).",
+    "adult": "Born in Manhattan in 1986, Germanotta released 'The Fame' (2008) on Interscope via Cherrytree, produced with RedOne and Martin Kierszenbaum. Producer Rob Fusari has said he coined 'Lady Gaga' in 2006 from Queen's 'Radio Ga Ga', through a phone's autocorrect; it is his account. Her pop drew on the glam rock of Bowie and Queen. 'Born This Way' (2011) sold 1.1 million copies in its first US week, and its title song and her Born This Way Foundation tie her music to LGBT rights and youth mental health. Later records range from jazz with Tony Bennett ('Cheek to Cheek', 2014) to 'Joanne' (2016) and 'Chromatica' (2020); 'Shallow' won the 2019 Oscar for Best Original Song."
+  },
+  "signatureTracks": [
+    {
+      "title": "Just Dance",
+      "year": 2008,
+      "whyThisOne": "Her debut single, from 'The Fame'."
+    },
+    {
+      "title": "Born This Way",
+      "year": 2011,
+      "whyThisOne": "Her anthem about acceptance, and the song Weird Al parodied."
+    }
+  ]
+}

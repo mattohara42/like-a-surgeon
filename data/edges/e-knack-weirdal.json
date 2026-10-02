@@ -1,0 +1,28 @@
+{
+  "id": "e-knack-weirdal",
+  "from": "the-knack",
+  "to": "weird-al-yankovic",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'My Bologna': Yankovic recorded it in September 1979, voice and accordion only, in the men's bathroom across from the KCPR studio at Cal Poly, for its echo. It parodies the Knack's 'My Sharona'. After it was played on Dr. Demento's radio show, Yankovic met the Knack and Capitol executive Rupert Perry backstage at Cal Poly, and by Yankovic's account Doug Fieger told Perry that Capitol should release it. Capitol issued it on Christmas Day 1979; Yankovic was paid $500. The Fieger exchange is Yankovic's account, reported as such.",
+  "year": 1979,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "The Knack",
+      "title": "My Sharona",
+      "year": 1979
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "My Bologna",
+      "year": 1979
+    },
+    "whatToListenFor": "'My Sharona' is a tight four-piece rock band with a famous guitar riff. 'My Bologna' is one young man with an accordion in a tiled bathroom, singing about a sandwich. Listen for how much of the song survives with almost nothing left of the band: the riff, played on an accordion, is still instantly recognisable."
+  },
+  "explanation": {
+    "age13": "Weird Al recorded 'My Bologna' as a student, singing with his accordion in a college bathroom because it echoed nicely. It made fun of the Knack's 'My Sharona'. When he met the Knack, their singer told a record company boss to release it, and that became his first record deal.",
+    "adult": "The start of the career, and an early instance of the original artist backing the parody. That the Knack's singer pressed Capitol to release it rests on Yankovic's own telling."
+  },
+  "tags": []
+}

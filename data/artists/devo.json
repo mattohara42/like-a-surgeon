@@ -1,0 +1,34 @@
+{
+  "id": "devo",
+  "name": "Devo",
+  "sortName": "Devo",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1973,
+  "activeTo": null,
+  "originCity": "Akron, Ohio",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "brian-eno"
+  ],
+  "hook": "An Akron art band built on a joke about humans going backwards, produced by Brian Eno, and copied whole by Weird Al in 'Dare to Be Stupid'.",
+  "blurb": {
+    "age13": "Devo started with art students at Kent State University in Ohio. Their idea, 'de-evolution', was a joke that people were going backwards, getting dumber and following the crowd. After soldiers shot and killed four students at Kent State in 1970, the joke turned serious. The band formed in Akron in 1973, wore matching uniforms and red 'energy dome' hats, and used synthesizers and jerky, robot-like rhythms. Brian Eno produced their first album in 1978. 'Whip It' (1980) was their only big American hit. Singer Mark Mothersbaugh later wrote music for TV and films, including 'Rugrats'.",
+    "adult": "Gerald Casale and Bob Lewis developed de-evolution as satire at Kent State; the National Guard shootings of 4 May 1970 gave it an edge. Devo formed in Akron in 1973, settled into the quintet of Mark and Bob Mothersbaugh, Gerald and Bob Casale and Alan Myers, and released 'Q: Are We Not Men? A: We Are Devo!' (1978) on Warner Bros. and Virgin, produced by Brian Eno, largely at Conny Plank's studio near Cologne. Their sound moved from experimental art-punk toward synth-pop; 'Whip It' (1980) was their only US top 40 hit. They split in 1991 and have reunited since 1996. Mothersbaugh's company Mutato Muzika scores film and television."
+  },
+  "signatureTracks": [
+    {
+      "title": "(I Can't Get No) Satisfaction",
+      "year": 1978,
+      "whyThisOne": "The Rolling Stones rebuilt as twitchy, mechanical new wave.",
+      "search": "Devo Satisfaction"
+    },
+    {
+      "title": "Whip It",
+      "year": 1980,
+      "whyThisOne": "Their one big American hit, synthesizers up front."
+    }
+  ]
+}

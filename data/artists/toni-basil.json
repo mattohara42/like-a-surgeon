@@ -1,0 +1,27 @@
+{
+  "id": "toni-basil",
+  "name": "Toni Basil",
+  "sortName": "Basil, Toni",
+  "type": "artist",
+  "lineage": "pop",
+  "activeFrom": 1964,
+  "activeTo": null,
+  "originCity": "Philadelphia, Pennsylvania",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A choreographer who brought street dance to television and made 'Mickey', a cheerleader chant that Weird Al turned into an 'I Love Lucy' tribute.",
+  "blurb": {
+    "age13": "Toni Basil was born in Philadelphia in 1943 and grew up in Las Vegas. She was a dancer and choreographer long before she was a pop star. She helped start and managed The Lockers, a group that brought street dance to television, choreographed David Bowie's tours, and co-directed Talking Heads' 'Once in a Lifetime' video. Her 1982 hit 'Mickey', a cover of a song called 'Kitty', went to number one in America. She made the video herself, dancing in her old high-school cheerleader uniform.",
+    "adult": "Born Antonia Basilotta in Philadelphia in 1943, Basil worked as an assistant choreographer on the 'T.A.M.I. Show' (1964), was a founding member and manager of The Lockers, choreographed Bowie's Diamond Dogs (1974) and Glass Spider (1987) tours, and co-directed the 'Once in a Lifetime' video (1981). 'Mickey', a cover of Racey's 'Kitty' (1979) from her album 'Word of Mouth' on Chrysalis, reached number one in the US in December 1982; she conceived, directed and choreographed its video. She choreographed 'Once Upon a Time in Hollywood' (2019) at 75."
+  },
+  "signatureTracks": [
+    {
+      "title": "Mickey",
+      "year": 1982,
+      "whyThisOne": "A US number one, and a video she made herself."
+    }
+  ],
+  "signatureTracksNote": "Her lasting work is mostly choreography and video, not records; one single matters here."
+}

@@ -4516,3 +4516,31 @@ small and worth having in front of Matt alongside everything else here.
   - Other Yankovic targets with clear sources, such as Queen, The Knack,
     Devo, Toni Basil, Lady Gaga and Chamillionaire, are not on the map.
     Each would be a new artist file first.
+
+- **A338. Six Weird Al targets join the map: Queen, the Knack, Devo,
+  Toni Basil, Lady Gaga and Chamillionaire.** Matt asked for more Weird
+  Al sources. Each is one new artist file plus a parody edge into
+  Yankovic, and every fact is from English Wikipedia's articles on the
+  artist and the parody.
+  - **Five song parodies are `cover`** (Q24): 'My Bologna' (1979),
+    'Another One Rides the Bus' (1980), 'Ricky' (1983), 'White & Nerdy'
+    (2006) and 'Perform This Way' (2011). **'Dare to Be Stupid' (1985)
+    is `direct`,** as a style parody (A337).
+  - **Accounts kept as accounts:** Doug Fieger urging Capitol to release
+    'My Bologna' is Yankovic's telling. Mothersbaugh's praise of 'Dare
+    to Be Stupid' is reported with Yankovic's reading of it as deadpan.
+    The 'Radio Ga Ga' origin of Lady Gaga's name is Rob Fusari's claim.
+  - **Two non-Weird Al edges** tie the new artists into the map:
+    `e-eno-devo` (`documented`, Eno producing Devo's debut, with the
+    friction both sides described) and `e-queen-ladygaga` (`consensus`,
+    the name story plus the glam debt the article names).
+  - **Adult-register facts per the conduct rule:** Queen's 1984 Sun City
+    shows during the apartheid boycott are stated with the band's own
+    defence.
+  - **Lineages:** Queen, the Knack and Devo `rock`; Toni Basil and Lady
+    Gaga `pop`; Chamillionaire `hiphop`. The Knack, Toni Basil and
+    Chamillionaire carry one signature track each, with a
+    `signatureTracksNote` saying why.
+  - **Not added:** Michael Jackson urging Queen to release 'Another One
+    Bites the Dust' is in Queen's blurb but not drawn as an edge, since
+    it was advice about a release, not influence on the music.
