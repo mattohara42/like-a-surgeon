@@ -78,6 +78,7 @@ correct response to a good idea arriving mid-milestone.
 - **Six Degrees of Weird Al, the challenge.** Matt asked for this
   2026-10-01, as a game alongside the A292 thread: get from any artist to
   Yankovic in six hops or fewer. Held until the M5 gate passes, per Matt.
+  **Shipped** (A340) on 2026-10-02, ahead of the M5 gate at Matt's request.
   Design as agreed in chat:
   - *Shape.* The player hops. The game starts on an artist, each click on
     a connected node is one hop, a counter sits in the dock, and reaching

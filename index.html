@@ -527,17 +527,18 @@
   #goal-chip[hidden] { display: none; }
   /* A thread in progress, read away from (reading/threads.js). It takes the
      mission chip's place until the reader goes back or ends the thread. */
-  #thread-chip { display: flex; align-items: center; gap: 6px; }
-  #thread-chip[hidden] { display: none; }
-  #goal:has(#thread-chip:not([hidden])) #goal-chip .goal-text { display: none; }
-  #thread-chip button {
+  #thread-chip, #six-chip { display: flex; align-items: center; gap: 6px; }
+  #thread-chip[hidden], #six-chip[hidden] { display: none; }
+  #goal:has(#thread-chip:not([hidden])) #goal-chip .goal-text,
+  #goal:has(#six-chip:not([hidden])) #goal-chip .goal-text { display: none; }
+  #thread-chip button, #six-chip button {
     font-family: var(--ui); font-size: var(--t-chip); color: var(--ink); cursor: pointer;
     background: rgba(243,223,166,0.12); border: 1px solid rgba(243,223,166,0.45);
     border-radius: 999px; padding: 6px 14px;
   }
-  #thread-chip .thread-end { padding: 6px 10px; }
-  #thread-chip button:hover { border-color: rgba(243,223,166,0.8); }
-  #thread-chip button:focus-visible { outline: 1px solid rgba(243,223,166,0.9); outline-offset: 2px; }
+  #thread-chip .thread-end, #six-chip .thread-end { padding: 6px 10px; }
+  #thread-chip button:hover, #six-chip button:hover { border-color: rgba(243,223,166,0.8); }
+  #thread-chip button:focus-visible, #six-chip button:focus-visible { outline: 1px solid rgba(243,223,166,0.9); outline-offset: 2px; }
   /* Thread pages in the drawer. */
   .thread .thread-heading { font-size: var(--t-track); }
   .thread .thread-subtitle { color: var(--dim); margin-top: -4px; }
@@ -554,6 +555,14 @@
   .thread .thread-record > .panel-body { padding: 0; }
   .thread-list { display: grid; gap: 8px; margin-top: 8px; }
   .thread-stops { margin: 4px 0 14px; }
+  /* Six Degrees of Weird Al (reading/sixDegrees.js). */
+  .six .six-count { font-family: var(--mono); font-size: var(--t-link); letter-spacing: 0.06em; color: var(--dim); }
+  .six .six-count.over { color: #f3c46a; }
+  .six .six-here { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-bottom: 6px; }
+  .six .six-choices { display: grid; gap: 6px; margin: 6px 0 12px; }
+  .six .six-choice { padding: 8px 14px; }
+  .six h3 { color: #f3dfa6; }
+  .six .six-route { margin: 4px 0 12px; padding-left: 22px; }
   .thread-stops h3 { color: #f3dfa6; }
 
   #goal .goal-text, #goal .start-here {
@@ -661,7 +670,7 @@
   </nav>
   <a id="cards-link" href="?view=cards"></a>
   <div id="search" role="search"></div>
-  <div id="goal"><div id="goal-chip" aria-live="polite" hidden></div><div id="thread-chip" hidden></div></div>
+  <div id="goal"><div id="goal-chip" aria-live="polite" hidden></div><div id="thread-chip" hidden></div><div id="six-chip" hidden></div></div>
   <div id="transport"></div>
   <aside id="panel"></aside>
   <div id="legend"></div>

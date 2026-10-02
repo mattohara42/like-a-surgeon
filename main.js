@@ -25,6 +25,7 @@ import { h } from './reading/dom.js';
 import { createEngine } from './audio/engine.js';
 import { stopDemo, withEdgeCaption } from './reading/demoBlock.js';
 import { createThreads } from './reading/threads.js';
+import { createSixDegrees } from './reading/sixDegrees.js';
 import { loadLens, saveLens, createLensControl, renderLensCard } from './reading/lens.js';
 import { createSceneMembers } from './reading/members.js';
 import { createDock } from './reading/dock.js';
@@ -41,6 +42,7 @@ const searchEl = document.getElementById('search');
 const arrangeEl = document.getElementById('arrange');
 const goalEl = document.getElementById('goal-chip');
 const threadChipEl = document.getElementById('thread-chip');
+const sixChipEl = document.getElementById('six-chip');
 const lensEl = document.getElementById('lens');
 const dockEl = document.getElementById('dock');
 const cardsLinkEl = document.getElementById('cards-link');
@@ -200,14 +202,47 @@ async function main() {
     setYear: (year) => graph?.setYear(year),
   });
 
+  // Six Degrees of Weird Al (A340): a drawer page like a thread, with its
+  // own chip back while the reader looks at something else.
+  const sixDegrees = createSixDegrees(sixChipEl, {
+    nodes: data.nodes,
+    nodesById,
+    edges: data.edges,
+    edgesById,
+    sceneMembers,
+    open: (target) => {
+      panel.open(target);
+      focusTarget(target);
+    },
+    focusRecord: (target) => focusTarget(target),
+    setPath: (route) => graph?.setPath(route),
+  });
+
+  function sixDegreesButton(node, ctx) {
+    if (!sixDegrees.canStartFrom(node)) return null;
+    return h('button', { type: 'button', class: 'follow-producer', onClick: () => sixDegrees.begin(node.id) }, pick(COPY.sixDegrees.startHere, ctx.register));
+  }
+
+  function sixDegreesDoor(ctx) {
+    if (!sixDegrees.available()) return null;
+    return h(
+      'button',
+      { type: 'button', class: 'door six-door', onClick: () => sixDegrees.begin() },
+      h('span', { class: 'door-title' }, pick(COPY.sixDegrees.doorTitle, ctx.register)),
+      h('span', { class: 'door-line' }, pick(COPY.sixDegrees.doorLine, ctx.register)),
+    );
+  }
+
   function renderTarget(target) {
     // A demo belongs to the panel it was opened from.
     stopDemo();
     threads.noticeTarget(target);
+    sixDegrees.noticeTarget(target);
     if (target.kind === 'welcome') {
       const ctx = { ...panelContext(), close: () => panel.close() };
-      return welcome.render({ ...ctx, threadList: threads.list().length ? threads.listButtons(threads.list(), ctx) : null });
+      return welcome.render({ ...ctx, threadList: threads.list().length ? threads.listButtons(threads.list(), ctx) : null, gameDoor: sixDegreesDoor(ctx) });
     }
+    if (target.kind === 'six') return sixDegrees.render(panelContext());
     if (target.kind === 'thread') return threads.render(target, panelContext());
     if (target.kind === 'lens') return renderLensCard(target.id, data.edges, { ...panelContext(), clearLens: () => applyLens(null) });
     return renderRecord(target);
@@ -220,6 +255,7 @@ async function main() {
     const ctx = { ...panelContext(), ...extra };
     // Every thread that stops here, unless this panel is a thread's stop.
     ctx.threadStops = extra.inThread ? null : threads.stopsSection(target, ctx);
+    ctx.sixDegreesStart = (node) => sixDegreesButton(node, ctx);
     if (target.kind === 'node') {
       const node = nodesById.get(target.id);
       return loadRecord(SHARD_FOR_KIND[node.kind], node.id).then((raw) =>
@@ -255,6 +291,7 @@ async function main() {
       stopDemo();
       graph?.clearSelection();
       threads.noticeTarget(null);
+      sixDegrees.noticeTarget(null);
     },
   });
   // Stops above the transport bar, so the year and play button stay usable
@@ -278,6 +315,10 @@ async function main() {
     if (target.kind === 'welcome' || target.kind === 'lens') return;
     if (target.kind === 'thread') {
       threads.focus(target);
+      return;
+    }
+    if (target.kind === 'six') {
+      sixDegrees.focus();
       return;
     }
     if (target.kind === 'edge') {
@@ -433,6 +474,7 @@ async function main() {
     search.setRegister(register);
     welcome.setRegister(register);
     threads.setRegister(register);
+    sixDegrees.setRegister(register);
     createLensControl(lensEl, lens, register, applyLens);
     dock.setRegister(register);
     updateDock();
@@ -447,6 +489,7 @@ async function main() {
   search.setRegister(register);
   welcome.setRegister(register);
   threads.setRegister(register);
+  sixDegrees.setRegister(register);
   dock.setRegister(register);
   updateDock();
   // The way to the card view (Q39), in its own place (Q41).

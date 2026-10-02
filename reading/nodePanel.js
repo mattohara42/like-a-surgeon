@@ -240,6 +240,7 @@ export function renderNodePanel(node, ctx) {
     para(pick(r.blurb, reg)),
     node.startYear === null ? para(pick(COPY.headings.offMap, reg), 'note') : null,
     producerButton(node, ctx),
+    ctx.sixDegreesStart?.(node) ?? null,
     ctx.threadStops ?? null,
     kindSections ? kindSections() : null,
   );

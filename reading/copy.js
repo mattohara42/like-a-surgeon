@@ -119,6 +119,51 @@ export const COPY = {
   },
 
   // The thread player (reading/threads.js).
+  // Six Degrees of Weird Al (reading/sixDegrees.js). Names and numbers are
+  // joined on in code, so each string is a whole phrase on its own.
+  sixDegrees: {
+    kicker: { age13: 'Six Degrees of Weird Al', adult: 'Six Degrees of Weird Al' },
+    doorTitle: { age13: 'Six Degrees of Weird Al', adult: 'Six Degrees of Weird Al' },
+    doorLine: {
+      age13: 'Get from a random artist to "Weird Al" Yankovic in six hops or fewer.',
+      adult: 'A route-finding game: any artist to "Weird Al" Yankovic in six hops or fewer.',
+    },
+    startHere: { age13: 'Six Degrees of Weird Al from here', adult: 'Play Six Degrees from here' },
+    intro: {
+      age13: 'Each hop follows one connection on the map: a cover, a sample, a producer, a scene they both belonged to. Pick where to go next. Six hops or fewer wins.',
+      adult: 'Each hop follows one connection: any edge in either direction, or a shared scene. Reach him in six or fewer.',
+    },
+    hopsLabel: { age13: 'Hops', adult: 'Hops' },
+    hopsWord: { age13: 'hops', adult: 'hops' },
+    overLimit: { age13: 'past six, but keep going', adult: 'over the limit; carry on' },
+    youAreAt: { age13: 'You are at', adult: 'Now at' },
+    readStop: { age13: 'Read about them', adult: 'Open this record' },
+    readLink: { age13: 'How you got here', adult: 'Read the link you just took' },
+    whereNext: { age13: 'Where next?', adult: 'Connections' },
+    sceneLink: { age13: 'Same scene', adult: 'Scene membership' },
+    showRoute: { age13: 'Show me a route', adult: 'Show a shortest route' },
+    routeHeading: { age13: 'One shortest way from here', adult: 'A shortest route from here' },
+    newStart: { age13: 'New game', adult: 'New start' },
+    sameStart: { age13: 'Try the same start again', adult: 'Replay this start' },
+    won: { age13: 'You reached Weird Al!', adult: 'Reached' },
+    onPar: { age13: 'That is the shortest route there is.', adult: 'That matches the shortest route.' },
+    shortestWas: { age13: 'The shortest route possible was', adult: 'Shortest possible:' },
+    yourRoute: { age13: 'Your route', adult: 'Route taken' },
+    isTarget: { age13: 'This is Weird Al himself. Start from someone else!', adult: 'This is the target. Choose another start.' },
+    isAway: { age13: 'is', adult: 'is' },
+    tooFar: {
+      age13: 'hops from Weird Al on the map so far, more than six. The map is still growing. Try a closer start.',
+      adult: 'hops from the target on the current map, beyond the limit. Try another start.',
+    },
+    noRoute: {
+      age13: 'has no route to Weird Al on the map yet. The map is still growing.',
+      adult: 'has no route to the target on the current map.',
+    },
+    chip: { age13: 'Six Degrees', adult: 'Six Degrees' },
+    backTo: { age13: 'Back to your game', adult: 'Return to the game' },
+    end: { age13: 'Stop playing', adult: 'End the game' },
+  },
+
   threads: {
     kicker: { age13: 'A thread', adult: 'Thread' },
     listHeading: { age13: 'Follow a thread', adult: 'Threads' },
