@@ -19,6 +19,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildManifest, SHARD_TYPES } from './manifest.js';
 import { CONFIG } from '../config.js';
+import { buildHops } from '../reading/hops.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = join(ROOT, 'data');
@@ -220,37 +221,23 @@ function describeNode(id, records) {
   return `${id} (unresolved)`;
 }
 
-// Hops from every node to `target`, the Six Degrees rule (BACKLOG.md):
-// edges are undirected, every node type is a stop, and an artist's own
-// scene membership counts as a link (A334). Breadth-first, so each count is
-// the shortest route. Nodes with no route are absent.
-function hopsTo(target, edges, artists) {
-  const neighbours = new Map();
-  const link = (a, b) => {
-    if (!neighbours.has(a)) neighbours.set(a, []);
-    if (!neighbours.has(b)) neighbours.set(b, []);
-    neighbours.get(a).push(b);
-    neighbours.get(b).push(a);
-  };
-  for (const { from, to } of edges) link(from, to);
-  for (const artist of artists) {
-    for (const scene of artist.scenes ?? []) link(artist.id, scene);
+// The Six Degrees links (reading/hops.js): every edge, plus each scene's
+// membership both ways, as the app's scene panel counts it.
+function hopLinks(records, edges) {
+  const links = edges.map((e) => ({ a: e.from, b: e.to, edgeId: e.id }));
+  for (const artist of records.artists.values()) {
+    for (const scene of artist.scenes ?? []) links.push({ a: artist.id, b: scene, edgeId: null });
   }
-  const hops = new Map([[target, 0]]);
-  const queue = [target];
-  for (let i = 0; i < queue.length; i += 1) {
-    for (const next of neighbours.get(queue[i]) ?? []) {
-      if (hops.has(next)) continue;
-      hops.set(next, hops.get(queue[i]) + 1);
-      queue.push(next);
-    }
+  for (const scene of records.scenes.values()) {
+    for (const member of scene.memberIds ?? []) links.push({ a: member, b: scene.id, edgeId: null });
   }
-  return { hops, neighbours };
+  return links;
 }
 
 function sixDegreesSection(records, edges) {
   const { target, maxHops } = CONFIG.sixDegrees;
-  const { hops, neighbours } = hopsTo(target, edges, records.artists.values());
+  const graph = buildHops(hopLinks(records, edges));
+  const hops = graph.distancesTo(target);
   const artists = [...records.artists.keys()].filter((id) => id !== target);
   const far = artists
     .filter((id) => !(hops.get(id) <= maxHops))
@@ -268,7 +255,7 @@ function sixDegreesSection(records, edges) {
   lines.push('| artist | hops | neighbours |', '|---|---|---|');
   for (const id of far) {
     lines.push(`| ${describeNode(id, records)} | ${hops.get(id) ?? 'no route'} | `
-      + `${new Set(neighbours.get(id)).size} |`);
+      + `${graph.neighbours(id).length} |`);
   }
   return lines;
 }

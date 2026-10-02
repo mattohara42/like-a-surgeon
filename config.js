@@ -394,14 +394,19 @@ export const CONFIG = {
     storageKey: 'lineage.threads',
   },
 
-  // Six Degrees of Weird Al (BACKLOG.md). The challenge itself waits on the
-  // M5 gate; `npm run report` already uses these to list who is out of reach.
-  // A hop is any edge, either direction, through any node type, or an
-  // artist's own membership of a scene (its `scenes` field). Label
+  // Six Degrees of Weird Al (reading/sixDegrees.js, A340). `npm run report`
+  // uses the same rule to list who is out of reach. A hop is any edge,
+  // either direction, through any node type, or a scene membership. Label
   // membership does not count (A334).
   sixDegrees: {
     target: 'weird-al-yankovic',
     maxHops: 6,
+    // A random start is at least this far out, so a game is never one
+    // click long.
+    minStartHops: 2,
+    // ...and has at least this many connections, so the first move is a
+    // choice rather than a forced hop (Matt, A340).
+    minStartLinks: 2,
   },
 
   transport: {

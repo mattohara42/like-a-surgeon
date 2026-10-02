@@ -4571,3 +4571,38 @@ small and worth having in front of Matt alongside everything else here.
   - **Dropped:** TLC ('Phony Calls'), because no source I could reach
     confirmed it. The Doors' keyboard bass is described as a stage
     practice, which is what the source says.
+
+- **A340. Six Degrees of Weird Al is built, ahead of the M5 gate.** Matt
+  asked on 2026-10-02 to build it now and run the M5 gate test the next
+  morning, as with Arrange by in M3: a requested addition, logged here.
+  Design choices, all Matt's from chat:
+  - **Hopping is a list in the drawer,** not clicks on the map. The game
+    page shows the current stop and each distinct neighbour as a button
+    labelled with its link (the edge type, or "Same scene"), so it works
+    on touch and every hop names what connects the two.
+  - **No dead end past six.** The counter turns amber and the game goes
+    on; the finish compares hops taken with the shortest route (par).
+  - **Entry points:** a door on the welcome card (random start) and a
+    button on every artist panel (start from that artist). An artist
+    beyond the limit gets an honest page saying how far it is.
+  - **The only hint is "Show me a route",** which lists and lights one
+    shortest route from the current stop.
+  Build notes, my calls:
+  - `reading/hops.js` is a pure, DOM-free hop graph used by both the game
+    and `npm run report`, so the two count a hop the same way. The report
+    now also counts a scene's own `memberIds`, as the scene panel does;
+    reach is unchanged at 213 of 213.
+  - When two links join the same pair, the choice shows the first edge,
+    preferring an edge over a membership, since an edge carries evidence.
+  - Random starts are artists between `minStartHops` (2) and `maxHops`
+    (6) away with at least `minStartLinks` (2) connections, so the first
+    move is a choice (Matt's call), never the artist just played when
+    there is another choice. An artist panel can still start a game from
+    a one-link artist, since the reader chose it.
+  - The game follows the thread player's pattern: a drawer target
+    (`{ kind: 'six' }`) redrawn in place on each hop, the route lit with
+    `graph.setPath`, and a chip (`#six-chip`) to return while reading
+    elsewhere. The timeline year is left alone, unlike a thread.
+  - No scores are kept, by Matt's decision. The game also stays on the
+    welcome card for the M5 gate session; a cold reader choosing it over a
+    thread is itself a finding.
