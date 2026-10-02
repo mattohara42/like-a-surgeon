@@ -6,6 +6,9 @@ built to be explored by a curious 13-year-old.
 The map lays the whole dataset on a left-to-right time axis, with lanes by
 lineage, scene or label, machines on a receding floor beneath, and a year
 cursor you can drag to watch it arrive. Click anything to read about it.
+Every line is a sourced claim, graded for how sure we are. The sound demos
+are synthesized in the browser, never recordings. Guided threads walk
+through the map, and Six Degrees of Weird Al turns it into a game.
 
 The latest `main` is live at https://like-a-surgeon.netlify.app, and every
 pull request gets its own Netlify preview.
@@ -16,13 +19,13 @@ pull request gets its own Netlify preview.
   keeps growing (`npm run report` measures the distance).
 - **M2 (graph renderer):** shipped.
 - **M3 (reading surface):** passed 2026-09-29.
-- **M4 (audio engine):** built and moved on from 2026-09-30, with nine
-  playable demos. The by-ear listen and the Safari and Firefox check (Q27)
-  are still to do, and the Planet Rock A/B is a draft (Q30).
+- **M4 (audio engine):** built, with nine playable demos. Matt moved on to
+  M5 on 2026-09-30. The by-ear listen and the Safari and Firefox check
+  (Q27) are still to do, and the Planet Rock A/B is a draft (Q30).
 - **M5 (timeline, threads, lenses):** built 2026-09-30. Six threads, the
-  receding past, and the four lenses. The gate is open: a cold reader
-  completes a thread and explains it. `docs/m5-gate-notes.md` is the
-  script.
+  receding past, and the four lenses. The gate is still to run: a reader
+  who has never seen the map finishes a thread and explains what it was
+  about. `docs/m5-gate-notes.md` is the script.
 - **Six Degrees of Weird Al:** built 2026-10-02, ahead of the M5 gate at
   Matt's request (A340). Start from the welcome card or any artist panel
   and hop through connections until you reach Yankovic, in six or fewer.
@@ -32,8 +35,8 @@ pull request gets its own Netlify preview.
   lineages), 6 threads, and 19 of 30 edges with a demo. `npm run report`
   has the exact distance and the Six Degrees reach.
 - **Cards (the phone version):** built, gate open. A screen narrower
-  than 700 px gets one record per card instead of the map, with Random
-  and a web address per card. `?view=map` and `?view=cards` override the
+  than 700 px gets one record per card instead of the map, with a Random
+  button and a link for each card. `?view=map` and `?view=cards` override the
   choice. See `docs/cards-architecture.md`.
 - **Adding artists:** see `docs/adding-artists.md` for what a new artist
   needs to join the map, the threads and the Six Degrees game.
