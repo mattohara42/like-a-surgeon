@@ -1,0 +1,28 @@
+{
+  "id": "e-talkingheads-weirdal",
+  "from": "talking-heads",
+  "to": "weird-al-yankovic",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Polka Party!' (1986): 'Dog Eat Dog' is a style parody of Talking Heads, an original song in their manner rather than a parody of one record. Its lines 'this is not my beautiful stapler' and 'this is not my beautiful chair' echo 'Once in a Lifetime'. The office setting came from Yankovic's own time working in the mailroom and traffic department at Westwood One. Typed `direct` because it borrows a band's style, not a song's arrangement.",
+  "year": 1986,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Talking Heads",
+      "title": "Once in a Lifetime",
+      "year": 1980
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "Dog Eat Dog",
+      "year": 1986
+    },
+    "whatToListenFor": "'Once in a Lifetime' has a man suddenly noticing his own ordinary life and saying 'this is not my beautiful house'. 'Dog Eat Dog' moves that feeling into an office: 'this is not my beautiful stapler'. Listen for how Yankovic borrows the band's sound and its anxious way of looking at everyday things, without copying any one song's music."
+  },
+  "explanation": {
+    "age13": "'Dog Eat Dog' is not a copy of one song. It is a new song written to sound like Talking Heads, about working in an office, with a line that nods to their 'Once in a Lifetime'.",
+    "adult": "A style parody, the other half of Yankovic's method: instead of rebuilding one record, he writes an original in a band's manner. This one draws on his own office job at Westwood One."
+  },
+  "tags": []
+}

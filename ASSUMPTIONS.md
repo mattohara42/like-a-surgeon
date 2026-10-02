@@ -4497,3 +4497,22 @@ small and worth having in front of Matt alongside everything else here.
   - **Hugh Mundell stays at 7,** the one artist out of reach. His
     producer Augustus Pablo's documented links (King Tubby, Bob Marley,
     Lee Perry) are all themselves five or six hops out.
+
+- **A337. Four more Weird Al edges, from artists already on the map.**
+  Matt asked for more Yankovic. Every claim is from English Wikipedia's
+  album articles, and all four are `documented`.
+  - **`e-jamesbrown-weirdal`** ('Living with a Hernia', 1986, parodying
+    'Living in America') is typed `cover`, like every song parody so far,
+    per Q24.
+  - **`e-talkingheads-weirdal`** ('Dog Eat Dog', 1986),
+    **`e-dylan-weirdal`** ('Bob', 2003) and **`e-pixies-weirdal`** ('First
+    World Problems', 2014) are style parodies: original songs written in
+    a band's manner, with no one record rebuilt. They are typed `direct`
+    rather than `cover`, since `cover` would claim a song that was not
+    copied. Q24 settled song parodies only, so this is a new call.
+  - Not claimed: James Brown's reaction to the parody, which the source
+    does not give. Prince's documented refusals of parody requests are
+    not an influence, so they are not an edge.
+  - Other Yankovic targets with clear sources, such as Queen, The Knack,
+    Devo, Toni Basil, Lady Gaga and Chamillionaire, are not on the map.
+    Each would be a new artist file first.

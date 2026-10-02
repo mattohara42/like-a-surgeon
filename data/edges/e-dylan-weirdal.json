@@ -1,0 +1,28 @@
+{
+  "id": "e-dylan-weirdal",
+  "from": "bob-dylan",
+  "to": "weird-al-yankovic",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Poodle Hat' (released 20 May 2003): 'Bob' is a style parody of Bob Dylan written entirely in palindromes, opening 'I, man, am regal, a German am I'. Its later video references the promotional clip for 'Subterranean Homesick Blues', shot for D. A. Pennebaker's 1967 documentary 'Dont Look Back'. Typed `direct` because it borrows Dylan's style, not one song's arrangement.",
+  "year": 2003,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Bob Dylan",
+      "title": "Subterranean Homesick Blues",
+      "year": 1965
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "Bob",
+      "year": 2003
+    },
+    "whatToListenFor": "Dylan's song is a fast rush of words in his nasal half-sung voice. 'Bob' copies that voice and style, but every single line reads the same backwards as forwards. Try reading one of the lyrics in reverse, then listen to how hard it is to make a palindrome sound like a Dylan line."
+  },
+  "explanation": {
+    "age13": "'Bob' is written to sound like Bob Dylan, and every line is a palindrome, a sentence that reads the same backwards. Its video copies Dylan's famous clip where he flips through cue cards with the words on them.",
+    "adult": "A style parody that doubles as a word puzzle, and a video that quotes one of the best-known images of Dylan, from Pennebaker's 1967 film. The title is itself a palindrome."
+  },
+  "tags": []
+}

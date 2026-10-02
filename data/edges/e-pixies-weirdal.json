@@ -1,0 +1,28 @@
+{
+  "id": "e-pixies-weirdal",
+  "from": "pixies",
+  "to": "weird-al-yankovic",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Mandatory Fun' (released 15 July 2014): 'First World Problems' is a style parody of the Pixies, an original song in their manner. Typed `direct` because it borrows a band's style, not one song's arrangement.",
+  "year": 2014,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Pixies",
+      "title": "Where Is My Mind?",
+      "year": 1988
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "First World Problems",
+      "year": 2014
+    },
+    "whatToListenFor": "The Pixies are known for songs that switch between quiet verses and loud, crashing choruses. Listen for that switch in 'First World Problems', where the loud parts are spent on small, comfortable complaints."
+  },
+  "explanation": {
+    "age13": "'First World Problems' is written to sound like the Pixies, a band that inspired Nirvana. Its words are a list of small complaints from people who have everything they need.",
+    "adult": "A style parody of a band whose influence on Nirvana is on this map too, which puts Yankovic on both ends of that line: he parodied Nirvana in 1992 and the Pixies in 2014."
+  },
+  "tags": []
+}
