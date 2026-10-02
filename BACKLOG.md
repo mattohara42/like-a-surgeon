@@ -90,6 +90,16 @@ correct response to a good idea arriving mid-milestone.
   `docs/adding-artists.md` covers what a new artist needs to join it.
   Declined: keeping scores between visits (Matt, 2026-10-02).
 
+- **Six Degrees on phones (Cards).** Found 2026-10-02: a phone never reaches
+  the game. Phones always get Cards (A313) with no link to the map, and the
+  game lives only in the map view (`main.js`, A340). `?view=map` works as a
+  workaround but brings the slow map, and the game is untested at phone
+  width. Proposed home is Cards, reusing `reading/hops.js` and most of
+  `reading/sixDegrees.js` without the graph. To settle with Matt before
+  building: where a game starts on a phone, what "Show me a route" does with
+  no map to light (likely just the list), and whether it joins the M5 gate
+  session. Saved for 2026-10-03 at Matt's request.
+
 - **Follow the producer (Q21).** Select a producer and see everything
   they touched lit up across the map, or an "Arrange by producer" lane
   option beside Lineage, Scene and Label. The data for it is `production`
