@@ -1,0 +1,28 @@
+{
+  "id": "e-jamesbrown-weirdal",
+  "from": "james-brown",
+  "to": "weird-al-yankovic",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Polka Party!' (released 21 October 1986, produced by Rick Derringer): 'Living with a Hernia' parodies James Brown's 'Living in America', the theme from the 1985 film 'Rocky IV'. Yankovic has described studying Brown's dance routine to copy it, and the video was shot on the concert set used in 'Rocky IV', with a choreographer hired to recreate the dancing. The article does not record Brown's own response, so none is claimed.",
+  "year": 1986,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "James Brown",
+      "title": "Living in America",
+      "year": 1985
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "Living with a Hernia",
+      "year": 1986
+    },
+    "whatToListenFor": "Brown's record is a big, brassy 1980s production built for a boxing film, with him shouting the title over horns. Yankovic's band copies the arrangement as closely as it can, and the joke is that the same triumphant music now announces a medical complaint."
+  },
+  "explanation": {
+    "age13": "'Living with a Hernia' copies the music of James Brown's 'Living in America', the theme from 'Rocky IV', and turns it into a song about hernias. Yankovic studied Brown's dancing so he could copy it in the video.",
+    "adult": "A parody made the year after Brown's record came out. Yankovic described learning the dance by breaking it down step by step, which fits his method of copying a source exactly before changing the words."
+  },
+  "tags": []
+}
