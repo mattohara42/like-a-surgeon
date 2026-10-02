@@ -4544,3 +4544,30 @@ small and worth having in front of Matt alongside everything else here.
   - **Not added:** Michael Jackson urging Queen to release 'Another One
     Bites the Dust' is in Queen's blurb but not drawn as an edge, since
     it was advice about a release, not influence on the music.
+
+- **A339. Five more Weird Al targets: the Doors, Frank Zappa, Eminem,
+  Robin Thicke and the Foo Fighters.** Same method as A338: one artist
+  file and one edge into Yankovic each, all from English Wikipedia.
+  - **Song parodies, `cover`:** 'Couch Potato' (2003, Eminem's 'Lose
+    Yourself', audio approved and video refused) and 'Word Crimes' (2014,
+    'Blurred Lines'). **Style parodies, `direct`:** 'Genius in France'
+    (2003, Zappa, with Dweezil Zappa on guitar), 'Craigslist' (2009, the
+    Doors, with Ray Manzarek on keyboards) and 'My Own Eyes' (2014, Foo
+    Fighters).
+  - **Three edges into the wider map:** `e-dre-eminem` (Dre's discovery
+    and production of Eminem), `e-nirvana-foofighters` (Grohl founding
+    the band after Cobain's death) and `e-marvingaye-thicke` (the 2015
+    'Blurred Lines' verdict, affirmed in 2018). The last is typed
+    `direct` and `documented` as a court finding of copying, with no
+    sample involved; its evidence says the wider argument about
+    protecting a song's feel is not settled by the edge.
+  - **Conduct and controversy in the adult register, as fact:**
+    Morrison's 1969 Miami conviction and 2010 pardon, GLAAD's criticism
+    of Eminem's lyrics, and the misogyny criticism of 'Blurred Lines'
+    with Thicke's own later explanation of his GQ remark.
+  - **Lineages:** the Doors, Zappa and the Foo Fighters `rock`, Eminem
+    `hiphop`, Thicke `pop` (following Whitney Houston and Janet Jackson
+    for R&B-pop singers).
+  - **Dropped:** TLC ('Phony Calls'), because no source I could reach
+    confirmed it. The Doors' keyboard bass is described as a stage
+    practice, which is what the source says.

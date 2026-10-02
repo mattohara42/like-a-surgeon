@@ -1,0 +1,28 @@
+{
+  "id": "e-nirvana-foofighters",
+  "from": "nirvana",
+  "to": "foo-fighters",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on Foo Fighters: Dave Grohl, Nirvana's drummer, founded the band in Seattle in 1994 after Kurt Cobain's death in April, choosing not to join another band as a drummer, and recorded the debut largely alone that October.",
+  "year": 1995,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Nirvana",
+      "title": "Smells Like Teen Spirit",
+      "year": 1991
+    },
+    "later": {
+      "artist": "Foo Fighters",
+      "title": "This Is a Call",
+      "year": 1995
+    },
+    "whatToListenFor": "Grohl was the drummer on 'Smells Like Teen Spirit'. On the first Foo Fighters album he plays nearly everything and sings. Listen to the drums on both: the same player, first behind Cobain and then behind his own songs."
+  },
+  "explanation": {
+    "age13": "Dave Grohl was Nirvana's drummer. After Kurt Cobain died, Grohl recorded an album almost on his own, and that became the Foo Fighters.",
+    "adult": "A direct line of membership: one band's ending is the next band's start, with the same person behind the kit and then in front of the microphone."
+  },
+  "tags": []
+}

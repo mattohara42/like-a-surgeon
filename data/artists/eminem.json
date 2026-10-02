@@ -1,0 +1,33 @@
+{
+  "id": "eminem",
+  "name": "Eminem",
+  "sortName": "Eminem",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1996,
+  "activeTo": null,
+  "originCity": "St. Joseph, Missouri",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "dr-dre"
+  ],
+  "hook": "A Detroit rapper discovered by Dr. Dre from a demo tape, who let Weird Al parody 'Lose Yourself' but refused him a video.",
+  "blurb": {
+    "age13": "Eminem, born Marshall Mathers in Missouri in 1972, moved to Detroit as a boy. Dr. Dre heard his demo after a rap competition in 1997 and signed him, and Dre produced 'The Slim Shady LP' (1999). 'Lose Yourself' (2002), from the film '8 Mile', in which he starred, was number one for 12 weeks and won an Oscar, the first for a hip-hop act. His lyrics have been widely criticised as homophobic and violent.",
+    "adult": "Born in St. Joseph, Missouri, in 1972 and settled in Detroit at 12, Mathers was discovered by Dr. Dre through a demo after the 1997 Rap Olympics and signed to Aftermath and Interscope in March 1998. 'The Slim Shady LP' (1999) broke him; 'The Marshall Mathers LP' (2000) sold 1.76 million copies in its first US week, and 'The Eminem Show' was 2002's best-selling album worldwide. 'Lose Yourself' held the Hot 100 top spot for 12 weeks and won the 2003 Oscar for Best Original Song, a first for hip hop. GLAAD and others condemned his lyrics as homophobic and violent through the 2000s."
+  },
+  "signatureTracks": [
+    {
+      "title": "My Name Is",
+      "year": 1999,
+      "whyThisOne": "The breakthrough single, produced by Dr. Dre."
+    },
+    {
+      "title": "Lose Yourself",
+      "year": 2002,
+      "whyThisOne": "An Oscar winner, and the song behind 'Couch Potato'."
+    }
+  ]
+}

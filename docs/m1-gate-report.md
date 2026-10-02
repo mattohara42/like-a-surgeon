@@ -8,13 +8,13 @@ Regenerate with `npm run report`. This report describes the dataset only;
 
 | | now | M1 target | |
 |---|---:|---:|---|
-| artists | 209 | 120 | met |
+| artists | 214 | 120 | met |
 | machines | 33 | 25 | met |
 | scenes | 21 | 20 | met |
 | labels | 36 | 30 | met |
-| edges | 449 | 350 | met |
+| edges | 457 | 350 | met |
 | threads | 6 | 5 | met |
-| crossLineageEdges | 185 | 60 | met |
+| crossLineageEdges | 190 | 60 | met |
 | edgesWithDemo | 19 | 30 | 63% |
 
 ## Counts by lineage
@@ -23,14 +23,14 @@ Every node type, since machines, scenes and labels carry a lineage too.
 
 | lineage | count |
 |---|---:|
-| rock | 71 |
+| rock | 74 |
 | electronic | 66 |
-| hiphop | 61 |
+| hiphop | 62 |
 | dub | 23 |
 | soul | 19 |
 | other | 16 |
 | funk | 15 |
-| pop | 12 |
+| pop | 13 |
 | jazz | 8 |
 | country | 5 |
 | blues | 3 |
@@ -39,13 +39,13 @@ Artists alone:
 
 | lineage | count |
 |---|---:|
-| rock | 53 |
-| hiphop | 49 |
+| rock | 56 |
+| hiphop | 50 |
 | electronic | 35 |
 | dub | 15 |
 | soul | 15 |
 | funk | 13 |
-| pop | 12 |
+| pop | 13 |
 | jazz | 8 |
 | country | 5 |
 | blues | 2 |
@@ -55,13 +55,13 @@ Artists alone:
 
 | edge type | count |
 |---|---:|
-| direct | 135 |
-| production | 72 |
+| direct | 140 |
+| production | 73 |
 | label | 62 |
 | technological | 56 |
 | sample | 49 |
 | scene | 37 |
-| cover | 32 |
+| cover | 34 |
 | reaction-against | 5 |
 | rediscovery | 1 |
 
@@ -69,7 +69,7 @@ Artists alone:
 
 | tier | count |
 |---|---:|
-| documented | 354 |
+| documented | 362 |
 | consensus | 94 |
 | asserted | 1 |
 
@@ -243,7 +243,7 @@ Evidence: The Sex Pistols and the Clash are the two foundational bands of the 19
 
 ## Six Degrees of "Weird Al" Yankovic
 
-208 of 208 artists are within 6 hops,
+213 of 213 artists are within 6 hops,
 counting any edge in either direction through any node type, plus each
 artist's own scene membership. The artists below are out of reach, which
 usually means they are short of edges.
@@ -252,126 +252,126 @@ Every artist is in reach.
 
 ## 20 sampled `whatToListenFor` fields
 
-Drawn with seed 1 from the 448 edges that carry one.
+Drawn with seed 1 from the 456 edges that carry one.
 Reading these is the real quality check on the dataset (BUILD_PLAN.md).
 Pass `--seed=N` for a different draw.
 
-### 1. `e-herc-flash`
+### 1. `e-atkins-may`
 
-DJ Kool Herc, "park jams and rec-room parties, the merry-go-round" (1973) to Grandmaster Flash, "The Adventures of Grandmaster Flash on the Wheels of Steel" (1981)
+Cybotron, "Clear" (1983) to Rhythim Is Rhythim, "Nude Photo" (1987)
 
-Listen for precision, because that is the whole difference. Herc's idea is that the break repeats. Flash's contribution is that the repeat lands exactly where the next bar would have started, so the loop is seamless and you stop noticing there are two records. On 'Wheels of Steel' the joins are so tight that the record sounds composed rather than performed, which is the point Flash was chasing.
+Both share the same cold, sequenced foundation, but May's record adds a warmth and swing Atkins' more rigid, Kraftwerk-indebted arrangements don't reach for.
 
-### 2. `e-jones-mjackson`
+### 2. `e-isley-publicenemy`
 
-Michael Jackson, "Off the Wall" (1979) to Michael Jackson, "Thriller" (1982)
+The Isley Brothers, "Fight the Power (Part 1)" (1975) to Public Enemy, "Fight the Power" (1989)
 
-Both albums share Jones's dense, horn-inflected arrangement style, a jazz arranger's ear applied to disco and pop. 'Thriller' pushes the same approach further, into rock guitar (Eddie Van Halen's solo on 'Beat It') and horror-movie theater.
+The Isleys' original is a smooth, horn-driven funk protest song about censorship on the radio. Public Enemy keeps the title and a fragment of the groove but buries both under the Bomb Squad's usual density, turning a specific, contained complaint into a much broader, louder one.
 
-### 3. `e-mirage-saunderson`
-
-Ensoniq, "Mirage, an eight-bit sampler at 1,695 dollars" (1984) to Inner City, "Big Fun" (1988)
-
-Listen to how the record is put together underneath the vocal: short stabs that all stop dead rather than ring out, repeating in the same place every bar. Then notice what the sampler let him do that the others could not, which is put a full sung performance on top of it. Detroit techno arriving on daytime radio starts here.
-
-### 4. `e-bowie-nirvana`
-
-David Bowie, "The Man Who Sold the World" (1970) to Nirvana, "The Man Who Sold the World" (1994)
-
-Bowie's original is glam-adjacent art rock with a clean, almost detached vocal. Nirvana's version, acoustic guitars and Cobain's rawer, more strained voice, turns the same melody considerably more haunted, recorded only months before his death.
-
-### 5. `e-premier-nas`
+### 3. `e-premier-nas`
 
 Gang Starr, "Mass Appeal" (1994) to Nas, "N.Y. State of Mind" (1994)
 
 Premier made both in the same year, and his hands are audible in both: short, hard, tightly trimmed drums, and a small fragment looped until it becomes a mood. On 'Mass Appeal' the fragment is a thin, repeating figure that sounds almost like elevator music, a joke that fits a song mocking rap made for the charts. On 'N.Y. State of Mind' it's a dark, minor-key piano figure sitting low under the drums. Same method, opposite weather.
 
-### 6. `e-bjork-radiohead`
+### 4. `e-marvingaye-massiveattack`
 
-Björk, "Jóga" (1997) to Radiohead, "Everything in Its Right Place" (2000)
+Marvin Gaye, "I Want You" (1976) to Madonna and Massive Attack, "I Want You" (1995)
 
-Both put a voice and a few warm keyboard or string sounds against cold, electronic beats, and let the space between them do the work. Listen for how each singer's voice is treated as one sound among the others, not the thing everything else supports.
+Gaye's original is a slow, sliding soul groove with his voice stacked in layers. Massive Attack keep the melody and slow it into trip-hop: a heavy, unhurried beat, lots of space, and Madonna singing close to the microphone, almost breathing the words. Listen for which parts of the 1976 record survive, and how much the beat changes the mood.
 
-### 7. `e-schaeffer-stockhausen`
+### 5. `e-bambaataa-nativetongues`
 
-Pierre Schaeffer, "Étude aux chemins de fer" (1948) to Karlheinz Stockhausen, "Konkrete Etüde" (1952)
+Afrika Bambaataa & the Soulsonic Force, "Planet Rock" (1982) to Jungle Brothers, "I'll House You" (1988)
 
-Schaeffer's piece is built from what the microphone caught: engine chuffs, whistles, wheels on joins, looped until they swing. Stockhausen's study is three minutes long and sounds far more controlled. He recorded short, struck sounds and cut them into precise lengths on tape, so the piece is about duration and order rather than about trains. Listen for the same razor-blade method used by two different minds: one looking for rhythm in noise, the other imposing a plan on it.
+'Planet Rock' puts rapping over a Kraftwerk melody and a drum machine, music nobody in the Bronx was supposed to like. 'I'll House You' does the same trick six years later with Chicago and New York house: a four-on-the-floor kick, a house bassline and piano stabs under rapping. Listen for the kick drum. Almost all rap in 1988 swung on a broken beat, and this one runs straight like a dance record. The shared idea is that a rap group can take whatever dance music is around and rap over it.
 
-### 8. `e-tubby-uroy`
+### 6. `e-rubin-beastieboys`
 
-The Techniques, "You Don't Care" (null) to U-Roy, "Wake the Town" (1970)
+LL Cool J, "I Can't Live Without My Radio" (1985) to Beastie Boys, "No Sleep till Brooklyn" (1986)
 
-'You Don't Care' is a rocksteady song, sung all the way through. At Tubby's dances the vocal was pulled out and U-Roy talked over the rhythm that was left. No recording of those nights is linked here, so listen to 'Wake the Town' instead: a year later, the same practice on a record, with U-Roy chanting and shouting over a rhythm made for someone else's song.
+Same producer, a year apart. On LL's record Rubin cut everything down to a booming drum machine and a voice. On 'No Sleep till Brooklyn' he keeps the booming drums and adds the other thing he loved: heavy metal guitar, riffs he played himself and a solo from Slayer's Kerry King. Listen for the moment the solo tears through. Rap and metal on one track, from a producer making Slayer's album in the same period.
 
-### 9. `e-peterock-dilla`
+### 7. `e-samcooke-aretha`
 
-Pete Rock and CL Smooth, "They Reminisce Over You (T.R.O.Y.)" (1992) to Slum Village, "Fall in Love" (2000)
+Sam Cooke, "You Send Me" (1957) to Aretha Franklin, "Do Right Woman, Do Right Man" (1967)
 
-Both build the beat from a soft, melancholy sample of an older jazz record, filtered warm, with the drums rather than the melody carrying the energy. That much Dilla took from Pete Rock. Now listen to the timing. On 'T.R.O.Y.' the drums sit where you expect them. On 'Fall in Love' the kicks land early or late against the loop, so the beat seems to lean. That lean is where the student stopped copying the teacher.
+Both singers keep church phrasing inside a secular song: notes bent and held, a word stretched across several notes. Listen to how quietly each one starts, and how they save the gospel force for later.
 
-### 10. `e-mirage-may`
+### 8. `e-can-radiohead`
 
-Michael James, "a piano piece played at Derrick May's house" (null) to Rhythim Is Rhythim, "Strings of Life" (1987)
+Can, "Halleluhwah" (1971) to Radiohead, "The National Anthem" (2000)
 
-The strings are not strings and the piano is not really a piano. Both are a couple of seconds of recorded sound being retriggered from a keyboard, which is why the chords all cut off at the same instant instead of decaying the way a real instrument would. Listen for the edges of those cuts. The record is exhilarating partly because it is so obviously assembled.
+'Halleluhwah' is eighteen minutes on one tight drum and bass groove that never changes. 'The National Anthem' is built the same way, on one repeated, distorted bass riff, with free-jazz horns piling up on top until it nearly collapses. Listen to the bass line and count how long it stays the same.
 
-### 11. `e-mantronix-beastieboys`
+### 9. `e-casablanca-summer`
 
-Mantronix, "Fresh Is the Word" (1985) to Beastie Boys, "Jimmy James" (1992)
+Donna Summer, "Love to Love You Baby (single edit)" (1975) to Donna Summer, "Love to Love You Baby (album version)" (1975)
 
-'Fresh Is the Word' is stark: Kurtis Mantronik's drum machine hits hard and clean with almost nothing else around it, an early example of dance music built entirely from electronic instruments rather than samples. 'Jimmy James' pulls a piece of that pattern into a thicker, guitar-inflected mix. Listen for the drum sound underneath everything else; that dry, punchy hit is Mantronix's signature.
+The short version is a pleasant, slow disco song. The long version, the one Casablanca asked for, takes the same groove and holds it for a whole side of an LP, with the vocal coming and going over it. Listen for the length itself. A record built to keep a dance floor moving for sixteen minutes was a label decision before it was an art form.
 
-### 12. `e-tubby-madprofessor`
+### 10. `e-tubby-gangoffour`
 
-King Tubby, "Home-built mixing desk, Waterhouse" (1968) to Mad Professor, "Ariwa Sounds, home-built desk" (1979)
+King Tubby, "King Tubby Meets Rockers Uptown" (1976) to Gang of Four, "Damaged Goods" (1978)
 
-Both men's records treat the mixing desk itself, not a mixed-down finished master, as the instrument being played live. The specific tools differ by a decade of electronics, but the gesture is the same.
+Listen to how much of "Damaged Goods" is empty: guitar stabs land in the gaps a dub mixer would leave for echo. Gang of Four never actually uses a dub production style, but the structural habit, thin out everything except bass and rhythm, is the same one Tubby's records established.
 
-### 13. `e-kevinsaunderson-chezdamier`
+### 11. `e-eps16-rza`
 
-The Music Institute, "Club residencies, 1988-89" (1988) to Chez Damier, "Can You Feel It" (1992)
+Ensoniq, "EPS-16 Plus, sixteen-bit keyboard sampler" (1990) to Wu-Tang Clan, "C.R.E.A.M." (1993)
 
-There is no early Damier record to compare against; the claim here is about proximity, not a specific production choice. 'Can You Feel It' arrived four years after the two men shared a DJ booth, made inside the label Saunderson ran.
+Listen to the length of the loop. The piano phrase in 'C.R.E.A.M.' runs for bars, a whole musical sentence repeating, which the SP-1200's ten seconds made hard. The sound is also cleaner at the top, without the SP's crunch, though RZA kept it dusty and dark. That's the machine allowing the long, sad phrase to become the song's whole mood.
 
-### 14. `e-bowie-joydivision`
+### 12. `e-kraftwerk-dilla`
 
-David Bowie, "Warszawa" (1977) to Joy Division, "Decades" (1980)
+Kraftwerk, "Trans-Europe Express" (1977) to Jay Dee, "B.B.E. (Big Booty Express)" (2001)
 
-'Warszawa' is slow, built from synthesiser chords that hang in the air, with no drums and a voice singing in an invented language. 'Decades', the last track on 'Closer', moves almost as slowly. A synthesiser carries the melody over a steady drum pattern, and Ian Curtis sings low and flat. This is a punk band from Manchester, three years after its first gig, sounding closer to Bowie's Berlin side two than to the Sex Pistols.
+Listen to how Kraftwerk say the title: flat, chanted, treated voices over a clanking rhythm meant to sound like a train. Then listen to how Dilla's track keeps the shape and rhythm of that chant and swaps the words, so the hook is instantly familiar and slightly ridiculous. Underneath, the music is his, not a sample of theirs. It is a Detroit hip-hop producer quoting the record Detroit's techno producers learned from.
 
-### 15. `e-lamonteyoung-riley`
+### 13. `e-jamesbrown-fela`
 
-La Monte Young, "Trio for Strings" (1958) to Terry Riley, "In C" (1964)
+James Brown, "Cold Sweat" (1967) to Fela Kuti, "Zombie" (1976)
 
-Young's trio is almost motionless: long tones, long silences. 'In C' keeps the idea of one harmony held for a long time, but fills it with short, bright, repeating phrases over a steady pulse. Listen for how both pieces refuse to go anywhere in the usual sense. The difference is that Riley's version moves, and that is the version rock musicians picked up.
+'Cold Sweat' is built on short, choppy guitar and horn figures locked to a drum pattern, with almost no chord changes. 'Zombie' takes the same idea and stretches it out for twelve minutes: two guitars playing small interlocking parts, a horn section punching riffs, and Tony Allen's drums running several patterns at once. Listen for what Afrobeat keeps from funk, the one-chord groove, and what it adds, the length and the layering.
 
-### 16. `e-stockhausen-beatles`
+### 14. `e-bootee-mellemel`
 
-Karlheinz Stockhausen, "Hymnen" (1967) to The Beatles, "Revolution 9" (1968)
+Duke Bootee, "The Message, written and demoed" (1980) to Grandmaster Flash and the Furious Five, "The Message" (1982)
 
-Both pieces are made of fragments that arrive, overlap and vanish: radio noise, snatches of orchestral music, voices. In 'Revolution 9' listen for the loop of a voice repeating 'number nine', the crowd noise, the reversed tape and the stretches where several unrelated recordings play at once. That layering of found sound, with no beat and no tune to hold it together, is the Cologne studio's method in the middle of the best-selling band in the world.
+There are two rappers on this record and they do not sound alike. Bootee's delivery is even and conversational, closer to someone talking you through something. Mel's is heavier, slower, landing on the beat like a weight. The famous part, the last verse that turns the song from description into a life, is Mel. Knowing which voice is which changes how the record reads.
 
-### 17. `e-honeydrippers-marleymarl`
+### 15. `e-hankwilliams-willie`
 
-The Honey Drippers, "Impeach the President" (1973) to MC Shan, "The Bridge (produced by Marley Marl)" (1986)
+Hank Williams, "I'm So Lonesome I Could Cry" (1949) to Willie Nelson, "Blue Eyes Crying in the Rain" (1975)
 
-The song opens on its drums alone for a few bars: a bouncy kick, a snare with a bright crack, and an open hi-hat that breathes between hits. Then play 'The Bridge'. Marl has lifted that kick and snare and set them against the steady tick of a drum machine's hi-hat. Listen for the two sources side by side: the real drum carrying a room and a tape hiss, the machine's hat perfectly even.
+Both are sad country songs carried almost entirely by one plain voice. Hank Williams sings over a slow, simple band with steel guitar. Willie Nelson's record is even barer, mostly his voice and his guitar. Listen to how little either singer decorates the melody.
 
-### 18. `e-knuckles-atkins`
+### 16. `e-marleymarl-ericbrakim`
 
-Frankie Knuckles, "Warehouse-era DJ sets" (1982) to Model 500 (Juan Atkins), "No UFOs" (1985)
+MC Shan, "The Bridge (produced by Marley Marl)" (1986) to Eric B. & Rakim, "Eric B. Is President" (1986)
 
-Detroit techno's four-on-the-floor structure owes something to house records like Knuckles' sets reaching Detroit via radio and record pools; listen for how close the underlying drum pattern is, even as the two genres' moods diverge sharply.
+Play them back to back and compare the drums. Both are built on hard, sampled breaks cut into short, repeating loops, with a heavy low end and very little else, which is the Queensbridge room sound of 1986. Then listen to the voice on top. MC Shan is loud and pushing forward. Rakim is calm, slightly behind the beat, and packs rhymes into the middle of his lines. Same kind of beat, and a completely different way of rapping on it.
 
-### 19. `e-cbsuk-clash`
+### 17. `e-dubplate-tubby`
 
-The Clash, "Remote Control" (1977) to The Clash, "Complete Control" (1977)
+Jamaican sound systems, "one-off acetates cut as exclusives" (1950) to King Tubby, "dub mixes cut for named sound systems" (1972)
 
-Play the single CBS chose, then the band's answer a few months later. 'Remote Control' is an album track about bans and bureaucracy that the label put out on its own. 'Complete Control' is a song about that decision, so listen to the words as much as the guitars: the verses tell the story of the release, the chorus throws the phrase back at the label and the manager, and the record exists because the band lost an argument.
+Listen for who the record is talking to. A sound system's name gets shouted over the top of the mix, or the singer greets a crew by name, and you realise the record is not addressed to you or to a radio audience. It was made for one crowd in one yard on one night, on a disc that would be worn out within a few months.
 
-### 20. `e-bronx-theclash`
+### 18. `e-mellotron-beatles`
 
-Grandmaster Flash and the Furious Five, "Superrappin'" (1979) to The Clash, "The Magnificent Seven" (1980)
+Mellotron, "flute tape bank, as sold" (1963) to The Beatles, "Strawberry Fields Forever" (1967)
 
-'The Magnificent Seven' is a British rock band attempting rap for the first time: a looped bassline, spoken verses, and a chorus that owes more to the sound Jones heard on the street than to anything in punk. It is usually credited as the first rap song by a rock band.
+Listen to the opening seconds: a flute that isn't quite a flute. Each key on a Mellotron plays a strip of tape with a real flute note recorded on it, so the sound wobbles slightly and every note stops after about eight seconds. McCartney's chords sound a little out of tune with themselves because the flute recordings don't quite match. That wobble is a recording of a recording, playing back as an instrument.
+
+### 19. `e-swinginglondon-hendrix`
+
+The Who, "My Generation" (1965) to The Jimi Hendrix Experience, "Purple Haze" (1967)
+
+London in 1965 was already playing loud: listen to the feedback and the smashed chords at the end of 'My Generation'. Then play 'Purple Haze' a year and a half later. An American who arrived in that scene took the same noise, the fuzz and the feedback, and made it melodic, with the distortion carrying the tune instead of wrecking it. The scene gave him an audience ready for that.
+
+### 20. `e-plank-neu`
+
+Kraftwerk, "Kraftwerk (as engineered by Conny Plank)" (1970) to Neu!, "Neu!" (1972)
+
+The first Neu! album was made in four nights. Listen past the beat to the space around it. Sounds pan and fade, guitars are treated until they drone, and water and noise wash between tracks. Plank's hand is in how much room each sound gets and in how the tape is treated. The same sense of a studio being played shows in the Kraftwerk records he recorded just before.

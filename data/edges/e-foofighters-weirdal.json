@@ -1,0 +1,28 @@
+{
+  "id": "e-foofighters-weirdal",
+  "from": "foo-fighters",
+  "to": "weird-al-yankovic",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Mandatory Fun' (released 15 July 2014): 'My Own Eyes' is a style parody of the Foo Fighters. Typed `direct` because it copies a band's style, not one song.",
+  "year": 2014,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Foo Fighters",
+      "title": "Everlong",
+      "year": 1997
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "My Own Eyes",
+      "year": 2014
+    },
+    "whatToListenFor": "The Foo Fighters' sound is loud, driving guitars and a chorus that Grohl shouts at full strength. 'My Own Eyes' copies that sound for a list of absurd sights the singer claims to have witnessed. Listen for the chorus, sung as if every ridiculous thing in it were a matter of life and death."
+  },
+  "explanation": {
+    "age13": "'My Own Eyes' is a new song written to sound like the Foo Fighters, about strange things the singer says he has seen.",
+    "adult": "With the Nirvana and Pixies edges, it puts Yankovic on three points of one line: the Pixies influenced Nirvana, Nirvana's drummer founded the Foo Fighters, and Yankovic parodied all three."
+  },
+  "tags": []
+}

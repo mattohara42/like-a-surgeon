@@ -1,0 +1,28 @@
+{
+  "id": "e-zappa-weirdal",
+  "from": "frank-zappa",
+  "to": "weird-al-yankovic",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Poodle Hat' (released 20 May 2003): 'Genius in France' emulates Frank Zappa's style, with Dweezil Zappa playing the guitar introduction. Typed `direct` because it copies a style, not one song.",
+  "year": 2003,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Frank Zappa",
+      "title": "Peaches en Regalia",
+      "year": 1969
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "Genius in France",
+      "year": 2003
+    },
+    "whatToListenFor": "Zappa's music jumps between styles without warning, rock to jazz to something like an orchestra, often in the middle of a joke. 'Genius in France' copies that habit. Listen for the sudden changes of style, and for the opening guitar, played by Zappa's son Dweezil."
+  },
+  "explanation": {
+    "age13": "'Genius in France' is a song written to sound like Frank Zappa, full of sudden changes in style. Zappa's son Dweezil plays the guitar at the start.",
+    "adult": "A pastiche of a satirist by a satirist, with the subject's family taking part, ten years after Zappa's death."
+  },
+  "tags": []
+}
