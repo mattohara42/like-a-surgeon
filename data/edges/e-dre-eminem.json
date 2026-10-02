@@ -1,0 +1,30 @@
+{
+  "id": "e-dre-eminem",
+  "from": "dr-dre",
+  "to": "eminem",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on Eminem: Dr. Dre discovered him through a demo tape after the 1997 Rap Olympics and signed him to Aftermath and Interscope on 9 March 1998; Dre said in his career he had never before found an artist from a demo. Dre produced 'The Slim Shady LP' (1999), which broke him.",
+  "year": 1999,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Dr. Dre",
+      "title": "Nuthin' but a 'G' Thang",
+      "year": 1992
+    },
+    "later": {
+      "artist": "Eminem",
+      "title": "My Name Is",
+      "year": 1999
+    },
+    "whatToListenFor": "Dre's own records are slow and rolling. 'My Name Is' is lighter and bouncier, built for Eminem's cartoonish, fast-talking character. Listen for the producer adapting to the rapper, with a sparse beat that leaves room for the jokes."
+  },
+  "explanation": {
+    "age13": "Dr. Dre heard Eminem on a demo tape after a rap competition, signed him, and produced the album that made him famous.",
+    "adult": "A discovery Dre himself called unique in his career, and the signing that made Eminem's career on Dre's label."
+  },
+  "tags": [
+    "production"
+  ]
+}

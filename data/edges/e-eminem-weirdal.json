@@ -1,0 +1,28 @@
+{
+  "id": "e-eminem-weirdal",
+  "from": "eminem",
+  "to": "weird-al-yankovic",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Couch Potato' (2003, on 'Poodle Hat'): it parodies Eminem's 'Lose Yourself'. Eminem approved the audio but refused permission for a music video, after pre-production had begun, out of concern, as the article reports it, that a video could detract from his standing as a serious hip-hop artist.",
+  "year": 2003,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Eminem",
+      "title": "Lose Yourself",
+      "year": 2002
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "Couch Potato",
+      "year": 2003
+    },
+    "whatToListenFor": "'Lose Yourself' is tense and urgent, a guitar figure and a driving beat under a story about one chance to succeed. 'Couch Potato' keeps the music and the urgency and spends it on television. Listen for how the same rising tension sounds when the stakes are a remote control."
+  },
+  "explanation": {
+    "age13": "'Couch Potato' copies Eminem's 'Lose Yourself' and makes it about watching too much TV. Eminem said yes to the song but no to a music video, so there isn't one.",
+    "adult": "A partial permission: the audio approved, the video refused late, after work had started. The reported reason, protecting his standing as a serious artist, is the inverse of the Chamillionaire case on this map."
+  },
+  "tags": []
+}
