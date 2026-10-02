@@ -1,0 +1,28 @@
+{
+  "id": "e-tonibasil-weirdal",
+  "from": "toni-basil",
+  "to": "weird-al-yankovic",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on Yankovic's debut album ('\"Weird Al\" Yankovic', released 3 May 1983, produced by Rick Derringer): 'Ricky' parodies Toni Basil's 'Mickey' as a tribute to 'I Love Lucy', with Yankovic as Ricky Ricardo and Tress MacNeille as Lucy. The single reached number 63 on the Billboard Hot 100.",
+  "year": 1983,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Toni Basil",
+      "title": "Mickey",
+      "year": 1982
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "Ricky",
+      "year": 1983
+    },
+    "whatToListenFor": "'Mickey' is a cheerleader chant over a pounding drum beat. 'Ricky' keeps the chant and drums but swaps in a 1950s sitcom, with a second voice playing Lucy. Listen for the two voices arguing over the same beat that cheerleaders shout over in the original."
+  },
+  "explanation": {
+    "age13": "'Ricky' copies the music of Toni Basil's cheerleader hit 'Mickey' and turns it into a song about the old TV show 'I Love Lucy', with Weird Al playing Ricky and the voice actor Tress MacNeille playing Lucy.",
+    "adult": "One of the singles from the debut album, joining a 1982 chart hit to a 1950s television show his audience's parents would have known."
+  },
+  "tags": []
+}

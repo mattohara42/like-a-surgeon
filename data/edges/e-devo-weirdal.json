@@ -1,0 +1,28 @@
+{
+  "id": "e-devo-weirdal",
+  "from": "devo",
+  "to": "weird-al-yankovic",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Dare to Be Stupid': the title song of Yankovic's 1985 album is a pastiche of Devo, copying their nonsensical lyrics and musical style. Yankovic played it to Mark Mothersbaugh in 1985; Mothersbaugh's later praise on VH1's 'Behind the Music' (1999) was, Yankovic has said, deadpan humour. It was used in 'The Transformers: The Movie' (1986). Typed `direct` because it copies a band's style, not one song.",
+  "year": 1985,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Devo",
+      "title": "Whip It",
+      "year": 1980
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "Dare to Be Stupid",
+      "year": 1985
+    },
+    "whatToListenFor": "Devo's sound is synthesizers, stiff, jerky rhythms and slogans sung like instructions. 'Dare to Be Stupid' copies all of it in a new song, a list of silly commands sung in a flat, robotic voice. Listen to the two back to back: the joke is that a band already making fun of people can still be parodied."
+  },
+  "explanation": {
+    "age13": "'Dare to Be Stupid' is not a copy of one Devo song. It is a new song that sounds exactly like Devo, with the same synthesizers and the same stiff, robotic singing. It was later used in the 1986 Transformers movie.",
+    "adult": "A style parody of a band that was itself satirical. Mothersbaugh's on-camera praise, years later, has been read by Yankovic as a joke delivered with a straight face."
+  },
+  "tags": []
+}

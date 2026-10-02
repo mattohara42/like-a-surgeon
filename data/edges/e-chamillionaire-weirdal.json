@@ -1,0 +1,28 @@
+{
+  "id": "e-chamillionaire-weirdal",
+  "from": "chamillionaire",
+  "to": "weird-al-yankovic",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'White & Nerdy' (2006, on 'Straight Outta Lynwood'): it parodies Chamillionaire's 'Ridin'' featuring Krayzie Bone, and reached number 9 on the Billboard Hot 100. Chamillionaire posted it on his MySpace page, praised Yankovic's rapping, and later thanked him at the Grammy Awards, saying the parody made it undeniable that 'Ridin'' was the rap song of the year. The video loosely parodies the 'Ridin'' video.",
+  "year": 2006,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Chamillionaire featuring Krayzie Bone",
+      "title": "Ridin'",
+      "year": 2006
+    },
+    "later": {
+      "artist": "\"Weird Al\" Yankovic",
+      "title": "White & Nerdy",
+      "year": 2006
+    },
+    "whatToListenFor": "'Ridin'' is slow, heavy Houston rap with a sung hook. 'White & Nerdy' keeps the beat and the hook's shape, and Yankovic raps fast and clean about being a nerd. Listen for the speed of the verses: Chamillionaire himself said he did not know Yankovic could rap like that."
+  },
+  "explanation": {
+    "age13": "'White & Nerdy' copies Chamillionaire's 'Ridin'' and is about being a nerd. It was a top-ten hit. Chamillionaire liked it, praised Weird Al's rapping, and thanked him when 'Ridin'' won a Grammy.",
+    "adult": "A top-ten single more than two decades into Yankovic's career. The original artist publicly credited the parody with helping his own song, the reverse of the usual relationship."
+  },
+  "tags": []
+}
