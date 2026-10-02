@@ -1,0 +1,5 @@
+# GitHub's language bar (linguist). The design prototypes and their frozen
+# data snapshot are reference material, not the app, so they should not
+# count toward the repo's languages.
+design/data-snapshot.js linguist-generated
+design/*.html linguist-documentation
