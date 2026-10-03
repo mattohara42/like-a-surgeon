@@ -1,0 +1,25 @@
+{
+  "id": "e-hendrix-redhotchilipeppers",
+  "from": "jimi-hendrix",
+  "to": "red-hot-chili-peppers",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Mother's Milk' (1989): the album includes the band's cover of Jimi Hendrix's 'Fire', which a contemporary review notes they had already released as a B-side a couple of years earlier. Wikipedia's article on the band lists Hendrix among their influences and says guitarist Hillel Slovak, who died in 1988, was influenced mainly by hard rock players such as Hendrix.",
+  "year": 1989,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "The Jimi Hendrix Experience",
+      "title": "Fire",
+      "year": 1967
+    },
+    "later": {
+      "artist": "Red Hot Chili Peppers",
+      "title": "Fire",
+      "year": 1989
+    },
+    "whatToListenFor": "Listen to the drums on Hendrix's 'Fire', then play the Chili Peppers' version. Ask what they kept and what they changed: the speed, the weight of the guitar, and whether it still sounds like 1967 or like a 1980s punk band."
+  },
+  "explanation": "The Red Hot Chili Peppers covered Jimi Hendrix's 'Fire' more than once. Their original guitarist, Hillel Slovak, was mainly influenced by Hendrix, and the band named Hendrix among its influences.",
+  "tags": []
+}

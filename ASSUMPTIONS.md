@@ -4698,3 +4698,65 @@ small and worth having in front of Matt alongside everything else here.
     architecture notes in `docs/` describe the features as they were built.
   - **CLAUDE.md** changes with this: its writing rule now reads "one text,
     every fact, in words the reader knows". It used to govern three registers.
+
+- **A344. Six popular artists, chosen for how many nodes they connect:
+  Aerosmith, Snoop Dogg, Kendrick Lamar, the Red Hot Chili Peppers, Herbie
+  Hancock and Portishead.** Matt asked for "more important or popular
+  artists" and left the choice to me. I picked acts that are widely known
+  and that join hubs already on the map (Dr. Dre, George Clinton and
+  P-Funk, Rick Rubin, Run-D.M.C., Miles Davis, Massive Attack, Isaac
+  Hayes), so each new dot arrives with two to four edges. All facts are
+  from English Wikipedia articles I read in this session (each artist,
+  plus 'Walk This Way', 'Train Kept A-Rollin'', 'Doggystyle', 'Who Am I?
+  (What's My Name?)', 'Good Kid, M.A.A.D City', 'To Pimp a Butterfly',
+  'Freaky Styley', 'Mother's Milk', 'Higher Ground', 'Head Hunters',
+  'Rockit', 'E.S.P.', 'Dummy', 'Black Moses' and Geoff Barrow).
+  - **Fifteen edges, all `documented`:** `e-yardbirds-aerosmith` (cover),
+    `e-aerosmith-rundmc` (cover; Aerosmith later sang their own chorus
+    Run-D.M.C.'s way, so the influence ran both ways),
+    `e-dre-snoopdogg` (production), `e-clinton-snoopdogg` (sample, 'Atomic
+    Dog'), `e-dre-kendricklamar` (direct, a signing and collaboration per
+    A239), `e-parliamentfunkadelic-kendricklamar` (direct, Lamar's own
+    account plus Clinton's guest spot), `e-clinton-redhotchilipeppers`
+    (production), `e-steviewonder-redhotchilipeppers` (cover),
+    `e-hendrix-redhotchilipeppers` (cover), `e-rubin-redhotchilipeppers`
+    (production), `e-miles-herbiehancock` (direct, band membership per
+    A239, paired on 'Little One', which both bands recorded in 1965),
+    `e-sly-herbiehancock` (direct; the dedication of 'Sly' is the
+    documented part, and the evidence says the rest is inference),
+    `e-dmx-herbiehancock` (technological, 'Rockit'),
+    `e-massiveattack-portishead` (direct, Barrow working on 'Blue Lines'
+    per A239) and `e-hayes-portishead` (sample, 'Ike's Rap II').
+  - **Lineages:** Aerosmith and the Chili Peppers `rock`, Snoop and Lamar
+    `hiphop`, Hancock `jazz`, Portishead `electronic` (following Massive
+    Attack).
+  - **Scenes:** Snoop Dogg joins `los-angeles-gangsta-rap` (1986 to 1996),
+    which needed his id in the scene's `memberIds` as well. Lamar's career
+    starts after the scene's end year, so he is not a member.
+  - **Dates:** Lamar's first mixtape is dated "2004 or 2005" by the
+    source, so `activeFrom` is 2005, the year he signed with Top Dawg.
+    Hancock starts at 1962, his first solo album. Aerosmith, the Chili
+    Peppers, Portishead and Snoop have `activeTo: null`; Aerosmith stopped
+    touring in 2024 but released an EP in 2025.
+  - **`whatToListenFor`:** where a source did not describe a record's
+    sound, the text is framed as something to listen for rather than a
+    claim about it. The one sourced sound fact is the Moog bass and
+    clavinet on Wonder's 'Higher Ground'.
+  - **Conduct, as fact:** Snoop's 1993 murder charge and 1996 acquittal
+    (it shaped the music and his own account of leaving the gangsta
+    lifestyle); the Chili Peppers' heroin use and Slovak's 1988 death
+    (it is why Rubin first refused them). Unresolved civil allegations
+    against Snoop were left out, since they are not part of why his
+    reputation changed.
+  - **Dropped:** a Miles Davis edge into Lamar (sourced, but I could not
+    write a specific track pair from what I read), a Taylor Swift edge
+    ('Bad Blood' remix; a collaboration but thin as influence), and the
+    claim that the Chili Peppers' 'Fire' on 'Mother's Milk' is the
+    Slovak-era recording, which no source I read confirmed.
+  - **Crosscheck** (`tools/crosscheck.js`): no disagreements on start or
+    end years. 'Under the Bridge' moved to 1991, the album's year, after
+    MusicBrainz flagged it. The other MusicBrainz flags are reissues or
+    mismatches and were left: Aerosmith's 'Train Kept A-Rollin'' (1973 vs
+    our 1974, 'Get Your Wings' came out in 1974), 'Alright' (2014 vs 2015)
+    and the Chili Peppers' 'Fire' (1983, which cannot be the 'Mother's
+    Milk' recording).

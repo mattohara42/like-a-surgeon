@@ -1,0 +1,27 @@
+{
+  "id": "e-clinton-redhotchilipeppers",
+  "from": "george-clinton",
+  "to": "red-hot-chili-peppers",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Freaky Styley' (1985): after fans compared them to Parliament-Funkadelic, the band asked EMI for George Clinton, who agreed, and EMI paid him $25,000 to produce. The band stayed at Clinton's house near Detroit and recorded at United Sound Studios there. Wikipedia's article on the band says Clinton introduced elements of punk and funk into their repertoire, that the album did not chart, and that the band and Clinton used large amounts of cocaine during the sessions.",
+  "year": 1985,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "George Clinton",
+      "title": "Atomic Dog",
+      "year": 1982
+    },
+    "later": {
+      "artist": "Red Hot Chili Peppers",
+      "title": "Freaky Styley",
+      "year": 1985
+    },
+    "whatToListenFor": "Listen to how Clinton works on his own record: a slow groove that keeps going, with voices and noises dropping in and out on top. Then hear the Chili Peppers' title track three years later, a punk band's energy with that same idea of a groove that never stops and voices thrown on top."
+  },
+  "explanation": "The Red Hot Chili Peppers asked for George Clinton as their producer because fans kept saying they sounded like Parliament-Funkadelic. Clinton produced their second album in Detroit. It sold badly, but it set the band's mix of punk and funk.",
+  "tags": [
+    "production"
+  ]
+}

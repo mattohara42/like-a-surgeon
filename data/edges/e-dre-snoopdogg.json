@@ -1,0 +1,29 @@
+{
+  "id": "e-dre-snoopdogg",
+  "from": "dr-dre",
+  "to": "snoop-dogg",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on Snoop Dogg: Warren G gave Dr. Dre a tape of Snoop Dogg, and Dre called him to audition in 1991 and signed him to the label that became Death Row. Dre featured him on the 1992 'Deep Cover' title song and on 'The Chronic' (1992), and produced his debut, 'Doggystyle' (1993), which entered the Billboard 200 at number one with 806,000 copies sold in its first week.",
+  "year": 1993,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Dr. Dre",
+      "title": "Deep Cover",
+      "year": 1992
+    },
+    "later": {
+      "artist": "Snoop Doggy Dogg",
+      "title": "Gin and Juice",
+      "year": 1993,
+      "search": "Snoop Dogg Gin and Juice"
+    },
+    "whatToListenFor": "'Deep Cover' is the first record the two made together, and Snoop's calm, unhurried voice is already there. 'Gin and Juice' is the same partnership a year later. Listen for how Dre builds around a voice that never rushes: the slow tempo, the deep bass and the high, whining synthesizer lines that the G-funk sound is known for."
+  },
+  "explanation": "Dr. Dre heard Snoop Dogg on a tape passed to him by Warren G, signed him, and put him on almost every track of his own album 'The Chronic'. Then he produced Snoop's first album, 'Doggystyle', which went straight to number one. Snoop's voice and Dre's production were the sound of G-funk.",
+  "tags": [
+    "production",
+    "labels"
+  ]
+}

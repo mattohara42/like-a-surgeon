@@ -1,0 +1,28 @@
+{
+  "id": "e-dmx-herbiehancock",
+  "from": "oberheim-dmx",
+  "to": "herbie-hancock",
+  "type": "technological",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Rockit' (1983): producer Michael Beinhorn laid down the basic beat on a new Oberheim DMX drum machine at BC Studio in Brooklyn, Daniel Ponce added batá drums, and Grand Mixer D.ST scratched records over it. Before agreeing, Hancock had gone with Bill Laswell to hear DJs including Afrika Bambaataa and D.ST at the Roxy in New York. The track won a Grammy and five MTV Video Music Awards.",
+  "year": 1983,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Run-D.M.C.",
+      "title": "Sucker M.C.'s",
+      "year": 1983
+    },
+    "later": {
+      "artist": "Herbie Hancock",
+      "title": "Rockit",
+      "year": 1983
+    },
+    "whatToListenFor": "Both records start from the same machine. 'Sucker M.C.'s' is almost nothing but the DMX and two voices. 'Rockit' puts the same kind of hard, punchy drum machine beat under a jazz musician's keyboards, Afro-Cuban drums and a DJ scratching. Listen for the drums underneath everything else, and hear one machine turn up in a rap record and a jazz musician's hit in the same year."
+  },
+  "explanation": "'Rockit' was built on an Oberheim DMX drum machine, the same model behind Run-D.M.C.'s first records, with a hip-hop DJ scratching on top. It took a jazz pianist onto MTV with the sound of New York hip-hop clubs.",
+  "tags": [
+    "technology",
+    "production"
+  ]
+}

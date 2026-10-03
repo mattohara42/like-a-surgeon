@@ -1,0 +1,27 @@
+{
+  "id": "e-dre-kendricklamar",
+  "from": "dr-dre",
+  "to": "kendrick-lamar",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on Kendrick Lamar: after seeing the video for Lamar's 'Ignorance Is Bliss' on YouTube, Dr. Dre contacted him, and in March 2012 Lamar signed a joint deal with Dre's Aftermath Entertainment and Interscope, with Top Dawg Entertainment staying his main label. Wikipedia's article on 'Good Kid, M.A.A.D City' (2012) lists Dre among its producers and as a guest, and describes him as Lamar's mentor on the song 'Compton'. This is a signing and a collaboration, which stands in for influence here (A239). The same article says one critic compared the album's smooth music under rough stories to Dre's early 1990s G-funk.",
+  "year": 2012,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Dr. Dre",
+      "title": "Nuthin' but a 'G' Thang",
+      "year": 1992
+    },
+    "later": {
+      "artist": "Kendrick Lamar",
+      "title": "Compton",
+      "year": 2012
+    },
+    "whatToListenFor": "'Nuthin' but a 'G' Thang' is Dre's own sound from 1992: slow, smooth and warm. 'Compton', twenty years later, has Dre himself rapping with Lamar about the city both of them come from. Listen for the smooth, sunny music under hard stories, the thing one critic said 'Good Kid, M.A.A.D City' took from Dre."
+  },
+  "explanation": "Dr. Dre found Kendrick Lamar through a video online, signed him to his label and became his mentor. He also raps alongside him on 'Compton', on the album that made Lamar famous. Both come from Compton, twenty years apart.",
+  "tags": [
+    "labels"
+  ]
+}

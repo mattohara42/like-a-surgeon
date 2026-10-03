@@ -1,0 +1,27 @@
+{
+  "id": "e-hayes-portishead",
+  "from": "isaac-hayes",
+  "to": "portishead",
+  "type": "sample",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Dummy' (1994) credits 'Glory Box' with a sample of Isaac Hayes's 'Ike's Rap II'. Wikipedia's article on Hayes's 'Black Moses' (released 1 November 1971 on Stax's Enterprise label) includes the track and names Portishead's 'Glory Box' as its best-known sampling, with Tricky among others.",
+  "year": 1994,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Isaac Hayes",
+      "title": "Ike's Rap II",
+      "year": 1971
+    },
+    "later": {
+      "artist": "Portishead",
+      "title": "Glory Box",
+      "year": 1994
+    },
+    "whatToListenFor": "'Ike's Rap II' is Hayes talking over the music, one of the spoken 'raps' he put on his albums. Listen to the music behind his voice. Then play 'Glory Box' and listen for the moment you recognise the same music under Beth Gibbons's singing and a hip-hop beat."
+  },
+  "explanation": "Portishead built 'Glory Box' on a loop from Isaac Hayes's 'Ike's Rap II', recorded 23 years earlier. It is the best-known use of that recording, which other artists, Tricky among them, have also sampled.",
+  "tags": [
+    "production"
+  ]
+}

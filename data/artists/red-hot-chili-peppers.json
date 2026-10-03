@@ -1,0 +1,36 @@
+{
+  "id": "red-hot-chili-peppers",
+  "name": "Red Hot Chili Peppers",
+  "sortName": "Red Hot Chili Peppers",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1982,
+  "activeTo": null,
+  "originCity": "Los Angeles",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "george-clinton",
+    "rick-rubin"
+  ],
+  "hook": "A Los Angeles band that mixed punk rock with funk, had George Clinton produce their second album, and influenced the funk metal and rap rock that followed.",
+  "blurb": "The Red Hot Chili Peppers formed in Los Angeles in 1982: singer Anthony Kiedis, bassist Flea, guitarist Hillel Slovak and drummer Jack Irons, who had been at Fairfax High School together. Fans kept comparing them to Parliament-Funkadelic, so they asked their label for George Clinton as producer. Clinton agreed for a fee of $25,000. The band lived at his house outside Detroit for a while and recorded 'Freaky Styley' (1985) at United Sound Studios there. The band and Clinton used a lot of cocaine during the sessions, and Kiedis and Slovak were addicted to heroin. The album did not sell. Slovak died of a heroin overdose in June 1988. With new members, the guitarist John Frusciante and the drummer Chad Smith, they made 'Mother's Milk' (1989), which included covers of Stevie Wonder's 'Higher Ground' and Jimi Hendrix's 'Fire'. Flea said they covered 'Higher Ground' as a tribute to Wonder. Rick Rubin had turned them down in 1987 because of their drug problems. He agreed in 1991 and produced 'Blood Sugar Sex Magik', with 'Give It Away' and 'Under the Bridge'. They have sold over 120 million records.",
+  "signatureTracks": [
+    {
+      "title": "Higher Ground",
+      "year": 1989,
+      "whyThisOne": "Their cover of Stevie Wonder's 1973 song, the single that helped make them known outside the US."
+    },
+    {
+      "title": "Give It Away",
+      "year": 1991,
+      "whyThisOne": "Produced by Rick Rubin, and their first number one on the US modern rock chart."
+    },
+    {
+      "title": "Under the Bridge",
+      "year": 1991,
+      "whyThisOne": "A slow ballad that reached number 2 in the US, their highest place on the main chart."
+    }
+  ]
+}

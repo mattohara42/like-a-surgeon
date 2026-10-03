@@ -1,0 +1,25 @@
+{
+  "id": "e-yardbirds-aerosmith",
+  "from": "the-yardbirds",
+  "to": "aerosmith",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Train Kept A-Rollin'': the Yardbirds recorded it on their first American tour in 1965 and issued it on 'Having a Rave Up' (15 November 1965). Steven Tyler, Joe Perry and Tom Hamilton played it before Aerosmith existed, it was in the set at the band's first gig in 1970, and Aerosmith recorded it for 'Get Your Wings' (1974). The article says Jeff Beck's 1965 and 1966 recordings with the Yardbirds inspired Tyler and Perry. Wikipedia's article on Aerosmith lists the Yardbirds among the band's influences.",
+  "year": 1974,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "The Yardbirds",
+      "title": "Train Kept A-Rollin'",
+      "year": 1965
+    },
+    "later": {
+      "artist": "Aerosmith",
+      "title": "Train Kept A-Rollin'",
+      "year": 1974
+    },
+    "whatToListenFor": "Play the Yardbirds' version first and listen for the riff, a short pattern that keeps repeating while the drums push it along. Then play Aerosmith's, nine years later. Listen for the same riff and ask what has changed: how fast it goes, how heavy the guitars sound, and how the song has grown from a short club number into something for a big hall."
+  },
+  "explanation": "Aerosmith learned their trade on British blues-rock, and the Yardbirds' version of 'Train Kept A-Rollin'' was a song they played before the band even had a name. They recorded it on their second album in 1974 and it became so linked to them that Jeff Beck, who had played on the Yardbirds' version, was sometimes told he was playing an Aerosmith song.",
+  "tags": []
+}

@@ -1,0 +1,36 @@
+{
+  "id": "kendrick-lamar",
+  "name": "Kendrick Lamar",
+  "sortName": "Lamar, Kendrick",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 2005,
+  "activeTo": null,
+  "originCity": "Compton, California",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Sounwave"
+  ],
+  "hook": "A Compton rapper, signed through Dr. Dre's label, who pulled jazz and P-Funk into hip-hop on 'To Pimp a Butterfly' and became the first winner of the Pulitzer Prize for Music from outside classical and jazz.",
+  "blurb": "Kendrick Lamar was born in Compton, California, in 1987, the city N.W.A had made famous, and started releasing tapes as K.Dot while still in high school. He signed with the independent label Top Dawg Entertainment in 2005. After Dr. Dre saw one of his videos online, Lamar signed a joint deal with Dre's Aftermath label and Interscope in 2012. Dre became his mentor and appeared on the song 'Compton' on 'Good Kid, M.A.A.D City' (2012), an album about growing up around gangs in that city. Lamar has named Tupac Shakur as his biggest influence, and has said Eazy-E and Snoop Dogg mattered to him as a child. For 'To Pimp a Butterfly' (2015) he said he listened over and over to Miles Davis and Parliament-Funkadelic, and George Clinton appears on its first track, 'Wesley's Theory'. The album mixes rap with jazz, funk and soul, played by musicians from the Los Angeles jazz scene. Its song 'Alright' became a rallying cry for the Black Lives Matter movement. His next album, 'Damn' (2017), won the 2018 Pulitzer Prize for Music, the first time the prize went to music outside classical and jazz. In 2024 his feud with Drake produced 'Not Like Us', which won five Grammy Awards.",
+  "signatureTracks": [
+    {
+      "title": "Alright",
+      "year": 2015,
+      "whyThisOne": "From 'To Pimp a Butterfly', and the song that Black Lives Matter protesters took up."
+    },
+    {
+      "title": "Wesley's Theory",
+      "year": 2015,
+      "whyThisOne": "The album's opening track, a 1970s funk groove with George Clinton on it."
+    },
+    {
+      "title": "Humble.",
+      "year": 2017,
+      "search": "Kendrick Lamar Humble",
+      "whyThisOne": "His second US number one, from the Pulitzer-winning album 'Damn'."
+    }
+  ]
+}

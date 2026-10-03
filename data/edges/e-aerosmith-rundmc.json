@@ -1,0 +1,28 @@
+{
+  "id": "e-aerosmith-rundmc",
+  "from": "aerosmith",
+  "to": "run-dmc",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Walk This Way': Aerosmith released it on 'Toys in the Attic' (1975), and it reached number 10 on the Billboard Hot 100 in early 1977. Run-D.M.C. covered it with Steven Tyler and Joe Perry on vocals and guitar for 'Raising Hell' (1986), produced by Rick Rubin and Russell Simmons, and it reached number 4, higher than the original. The article adds that Aerosmith adopted a change in the chorus from Run-D.M.C.'s version in most of their later live performances. The story of who suggested the cover is on the Rick Rubin edge to Run-D.M.C.",
+  "year": 1986,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Aerosmith",
+      "title": "Walk This Way",
+      "year": 1975
+    },
+    "later": {
+      "artist": "Run-D.M.C.",
+      "title": "Walk This Way (with Aerosmith)",
+      "year": 1986,
+      "search": "Run DMC Aerosmith Walk This Way"
+    },
+    "whatToListenFor": "Listen to Steven Tyler's voice on both. In 1975 he is the only singer. In 1986 he trades lines with Run and D.M.C. Then listen to the chorus of each and to a later Aerosmith live version: the band went on singing the chorus the way the 1986 record does, so the influence ran back the other way too."
+  },
+  "explanation": "Run-D.M.C.'s 'Walk This Way' is a cover with Aerosmith's own singer and guitarist playing on it. It took a 1975 rock song higher up the charts than the original had gone, and it gave Aerosmith, whose career had stalled, a new audience. The influence also went back: Aerosmith started singing their own chorus the way Run-D.M.C. had.",
+  "tags": [
+    "production"
+  ]
+}

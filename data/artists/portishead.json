@@ -1,0 +1,28 @@
+{
+  "id": "portishead",
+  "name": "Portishead",
+  "sortName": "Portishead",
+  "type": "artist",
+  "lineage": "electronic",
+  "activeFrom": 1991,
+  "activeTo": null,
+  "originCity": "Bristol",
+  "originCountry": "UK",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A Bristol trio who used hip-hop sampling and scratching to make slow, dark, spy-film soul, and whose debut became the best-known trip-hop album despite the band disliking the name.",
+  "blurb": "Geoff Barrow was a tape operator at the Coach House studio in Bristol. While he was helping on Massive Attack's 'Blue Lines' in 1991, that band let him use spare studio time for his own ideas. In 1991 he met the singer Beth Gibbons on the Enterprise Allowance scheme, a government course for unemployed people starting their own businesses, and they named their band after Portishead, the small town near Bristol that they called their dreary home town. The guitarist Adrian Utley joined later. Barrow worked like a hip-hop producer, looping bits of old soundtracks and soul records. With Utley they also recorded their own music, pressed it onto vinyl, and then sampled and scratched those records, so they had samples nobody else had. 'Glory Box' is built on a sample of Isaac Hayes's 'Ike's Rap II'. Their first album, 'Dummy' (1994), won the Mercury Music Prize in 1995 and is often named as the main trip-hop album, a label the band disliked. They have released only two more studio albums, in 1997 and 2008.",
+  "signatureTracks": [
+    {
+      "title": "Glory Box",
+      "year": 1994,
+      "whyThisOne": "Built on Isaac Hayes's 'Ike's Rap II', with Beth Gibbons singing over it."
+    },
+    {
+      "title": "Sour Times",
+      "year": 1994,
+      "whyThisOne": "Built on a sample of Lalo Schifrin's spy-film piece 'The Danube Incident'."
+    }
+  ]
+}

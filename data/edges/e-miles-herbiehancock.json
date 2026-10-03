@@ -1,0 +1,27 @@
+{
+  "id": "e-miles-herbiehancock",
+  "from": "miles-davis",
+  "to": "herbie-hancock",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on Herbie Hancock: Davis sought Hancock out and hired him in May 1963 for what became his Second Great Quintet, and later had him play electric keyboards such as the Fender Rhodes. Hancock kept appearing on Davis's records after leaving in 1968. Wikipedia's article on 'E.S.P.' (recorded January 1965, released August 1965) says Hancock's tune 'Little One' is on it and was recorded again for Hancock's 'Maiden Voyage' about two months later, and quotes Hancock describing how Davis cut down and reshaped the band's compositions. The quotation is Wikipedia's, from John Szwed's biography of Davis, and is not repeated here. This is a band membership, which stands in for influence (A239).",
+  "year": 1965,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Miles Davis",
+      "title": "Little One",
+      "year": 1965,
+      "search": "Miles Davis Little One E.S.P."
+    },
+    "later": {
+      "artist": "Herbie Hancock",
+      "title": "Little One",
+      "year": 1965,
+      "search": "Herbie Hancock Little One Maiden Voyage"
+    },
+    "whatToListenFor": "The same tune by Hancock, recorded twice within two months: first by Davis's quintet with Hancock on piano, then by Hancock's own group. Play them one after the other. Listen for what stays the same, and for what changes when Davis's trumpet is not there to lead it."
+  },
+  "explanation": "Miles Davis hired Herbie Hancock at 23 and kept him for five years. Davis cut tunes back to their bones and left room for the band, and pushed Hancock onto electric piano. Hancock's tune 'Little One' was recorded by both bands within two months in 1965.",
+  "tags": []
+}

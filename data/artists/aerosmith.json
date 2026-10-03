@@ -1,0 +1,33 @@
+{
+  "id": "aerosmith",
+  "name": "Aerosmith",
+  "sortName": "Aerosmith",
+  "type": "artist",
+  "lineage": "rock",
+  "activeFrom": 1970,
+  "activeTo": null,
+  "originCity": "Boston",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [],
+  "hook": "A Boston hard rock band that carried the Yardbirds' blues-rock into 1970s American arenas, and whose 'Walk This Way' became the record that put rap on rock radio when Run-D.M.C. remade it with them in 1986.",
+  "blurb": "Aerosmith formed in Boston in 1970: singer Steven Tyler, guitarist Joe Perry, bassist Tom Hamilton, drummer Joey Kramer and, from 1971, guitarist Brad Whitford. They built their sound on British blues-rock, and named the Beatles, the Rolling Stones, the Yardbirds and Led Zeppelin among their influences. Their version of 'Train Kept A-Rollin'', which the Yardbirds had recorded in 1965, was played at their very first show in 1970 and went on their second album in 1974. 'Toys in the Attic' (1975) and 'Rocks' (1976) made them one of the biggest hard rock bands in the world. Drug addiction and fighting inside the band drove Perry out in 1979 and Whitford in 1981, and their records stopped selling. Both came back in 1984, but the comeback was slow. Then in 1986 the producer Rick Rubin had the rap group Run-D.M.C. remake Aerosmith's 'Walk This Way', with Tyler and Perry playing on it. It reached number 4 in the US, higher than the original, and its video showed a rock band and a rap group breaking through the wall between their studios. It was played on rock radio stations as well as Black radio stations, and it helped bring Aerosmith's career back. In 2024 the band stopped touring after Tyler could not recover from an injury to his vocal cords.",
+  "signatureTracks": [
+    {
+      "title": "Dream On",
+      "year": 1973,
+      "whyThisOne": "Their first single, a slow piano-and-guitar ballad that became a Top 10 hit when it was re-released in 1976."
+    },
+    {
+      "title": "Walk This Way",
+      "year": 1975,
+      "whyThisOne": "A Top 10 hit in 1977, and the riff Run-D.M.C. rapped over ten years later."
+    },
+    {
+      "title": "Train Kept A-Rollin'",
+      "year": 1974,
+      "whyThisOne": "Their hard rock version of the song the Yardbirds recorded in 1965, played at their first gig."
+    }
+  ]
+}

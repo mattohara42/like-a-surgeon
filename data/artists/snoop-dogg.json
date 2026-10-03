@@ -1,0 +1,37 @@
+{
+  "id": "snoop-dogg",
+  "name": "Snoop Dogg",
+  "sortName": "Snoop Dogg",
+  "type": "artist",
+  "lineage": "hiphop",
+  "activeFrom": 1992,
+  "activeTo": null,
+  "originCity": "Long Beach, California",
+  "originCountry": "USA",
+  "scenes": [
+    "los-angeles-gangsta-rap"
+  ],
+  "labels": [],
+  "keyProducers": [
+    "dr-dre"
+  ],
+  "hook": "The voice of Dr. Dre's G-funk records, whose slow, drawled delivery over George Clinton's grooves became the sound of West Coast rap in the early 1990s.",
+  "blurb": "Calvin Broadus was born in Long Beach, California, in 1971. After high school he was arrested for cocaine possession and spent much of the next three years in and out of jail. With his cousin Nate Dogg and his friend Warren G he made homemade tapes, and Warren G passed one to Dr. Dre. Dre signed him in 1991 to the label that became Death Row Records, and put him on the 'Deep Cover' soundtrack single and then all over his own album 'The Chronic' (1992), including 'Nuthin' but a 'G' Thang'. Dre produced Snoop's first album, 'Doggystyle' (1993). It went straight to number one, selling 806,000 copies in its first week. Like 'The Chronic', it was built on 1970s P-Funk: its first single, 'Who Am I? (What's My Name?)', samples George Clinton's 'Atomic Dog'. In 1993 Snoop was charged with murder over the shooting of a rival gang member, who was killed by Snoop's bodyguard. He was found not guilty in February 1996, and said afterwards that he wanted to leave the gangsta lifestyle behind. His friend and labelmate Tupac Shakur was killed later that year. He left Death Row, kept making hit records for three more decades, and bought Death Row Records himself in 2022.",
+  "signatureTracks": [
+    {
+      "title": "Who Am I? (What's My Name?)",
+      "year": 1993,
+      "whyThisOne": "His first single, produced by Dr. Dre and built on George Clinton's 'Atomic Dog'."
+    },
+    {
+      "title": "Gin and Juice",
+      "year": 1993,
+      "whyThisOne": "The other big hit from 'Doggystyle', and the laid-back G-funk sound at its most famous."
+    },
+    {
+      "title": "Drop It Like It's Hot",
+      "year": 2004,
+      "whyThisOne": "His first US number one, more than ten years after his first album, made with Pharrell."
+    }
+  ]
+}

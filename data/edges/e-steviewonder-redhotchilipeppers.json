@@ -1,0 +1,25 @@
+{
+  "id": "e-steviewonder-redhotchilipeppers",
+  "from": "stevie-wonder",
+  "to": "red-hot-chili-peppers",
+  "type": "cover",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Mother's Milk' (1989): the band's cover of Stevie Wonder's 'Higher Ground' (written and first recorded by Wonder in 1973) was its first single, and the album became the band's first gold record. Flea said the band covered the song to pay tribute to Wonder and the role he played in popular music. Wonder declined to appear in the video. Wikipedia's article on 'Higher Ground' says the original's bass line is a Moog synthesizer programmed by co-producers Malcolm Cecil and Robert Margouleff, and its clavinet sound came from a Mu-Tron III envelope filter pedal.",
+  "year": 1989,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Stevie Wonder",
+      "title": "Higher Ground",
+      "year": 1973
+    },
+    "later": {
+      "artist": "Red Hot Chili Peppers",
+      "title": "Higher Ground",
+      "year": 1989
+    },
+    "whatToListenFor": "On Wonder's record the bass line is not a bass guitar. It is a Moog synthesizer, programmed by his co-producers Malcolm Cecil and Robert Margouleff, and the bright, choppy keyboard is a clavinet run through a wah effect pedal. The Chili Peppers play the same parts on a bass guitar and an electric guitar. Listen for the same tune moved from keyboards to a rock band."
+  },
+  "explanation": "The Red Hot Chili Peppers covered Stevie Wonder's 'Higher Ground' as a tribute to him, and it was the first single from the album that first sold big for them. It moved a 1973 soul song into rock, played by a funk-loving punk band.",
+  "tags": []
+}

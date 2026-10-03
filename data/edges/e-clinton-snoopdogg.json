@@ -1,0 +1,28 @@
+{
+  "id": "e-clinton-snoopdogg",
+  "from": "george-clinton",
+  "to": "snoop-dogg",
+  "type": "sample",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Who Am I? (What's My Name?)' (1993), produced by Dr. Dre: it samples and interpolates George Clinton's 'Atomic Dog' (1982) in its chorus and throughout, uses the bass line of Funkadelic's '(Not Just) Knee Deep', and interpolates Parliament's 'Give Up the Funk (Tear the Roof off the Sucker)'. Wikipedia's article on 'Doggystyle' adds that the album's artwork quotes 'Atomic Dog', and a Q review called the album an homage to it.",
+  "year": 1993,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "George Clinton",
+      "title": "Atomic Dog",
+      "year": 1982
+    },
+    "later": {
+      "artist": "Snoop Doggy Dogg",
+      "title": "Who Am I? (What's My Name?)",
+      "year": 1993,
+      "search": "Snoop Dogg Who Am I What's My Name"
+    },
+    "whatToListenFor": "Listen for the barking chant in Clinton's chorus, then hear Snoop's first single turn it into his own name tag. Then listen underneath it: the bass line comes from Funkadelic's '(Not Just) Knee Deep', and the call-and-response voices are P-Funk's, rebuilt on a 1990s rap beat."
+  },
+  "explanation": "Snoop Dogg's first single is built on George Clinton's 'Atomic Dog' and two other P-Funk records. Clinton's barking chant became Snoop's introduction to the world. The whole 'Doggystyle' album leans on 'Atomic Dog', from its music to its cover art.",
+  "tags": [
+    "production"
+  ]
+}

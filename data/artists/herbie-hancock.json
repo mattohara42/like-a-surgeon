@@ -1,0 +1,35 @@
+{
+  "id": "herbie-hancock",
+  "name": "Herbie Hancock",
+  "sortName": "Hancock, Herbie",
+  "type": "artist",
+  "lineage": "jazz",
+  "activeFrom": 1962,
+  "activeTo": null,
+  "originCity": "Chicago",
+  "originCountry": "USA",
+  "scenes": [],
+  "labels": [],
+  "keyProducers": [
+    "Bill Laswell"
+  ],
+  "hook": "Miles Davis's pianist in the 1960s, who took jazz into funk on 'Head Hunters' and then put a hip-hop DJ's scratching on MTV with 'Rockit'.",
+  "blurb": "Herbie Hancock was born in Chicago in 1940 and played a Mozart concerto with the Chicago Symphony Orchestra when he was 11. In 1963 Miles Davis hired him for the band now called his Second Great Quintet, with Wayne Shorter, Ron Carter and the 17-year-old drummer Tony Williams. It is often counted among the best jazz groups ever. Davis pushed him to play electric keyboards like the Fender Rhodes, and Hancock kept playing on Davis's records after he left the band in 1968. His own album 'Head Hunters' (1973) turned jazz toward funk grooves. It had no guitar, used a clavinet and synthesizers instead, and included a track called 'Sly', dedicated to Sly Stone. It reached number 13 on the US album chart. Many jazz fans criticised it at the time. It went on to inspire funk, soul and hip-hop musicians. In 1983 the producers Bill Laswell and Michael Beinhorn built 'Rockit' for him on an Oberheim DMX drum machine, with the DJ Grand Mixer D.ST scratching records on it. Its video, full of robot sculptures, was played heavily on MTV and won five MTV Video Music Awards. He has won 14 Grammy Awards and an Academy Award.",
+  "signatureTracks": [
+    {
+      "title": "Maiden Voyage",
+      "year": 1965,
+      "whyThisOne": "The title track of his 1965 album, made while he was in Miles Davis's band. It began as music for a cologne advert and became a jazz standard."
+    },
+    {
+      "title": "Chameleon",
+      "year": 1973,
+      "whyThisOne": "From 'Head Hunters', with its bass line played on an ARP Odyssey synthesizer."
+    },
+    {
+      "title": "Rockit",
+      "year": 1983,
+      "whyThisOne": "A drum machine, a DJ scratching, and a hit on MTV."
+    }
+  ]
+}

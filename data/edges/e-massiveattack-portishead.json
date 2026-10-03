@@ -1,0 +1,27 @@
+{
+  "id": "e-massiveattack-portishead",
+  "from": "massive-attack",
+  "to": "portishead",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on Geoff Barrow: he started as a tape operator at the Coach House Studios in Bristol soon after it opened in 1989, and in 1991, while assisting on Massive Attack's 'Blue Lines', the band let him use spare studio time to record his own ideas. Wikipedia's article on Portishead says the band formed in 1991 and met guitarist Adrian Utley while recording at the Coach House. A review quoted in the article on 'Dummy' places it in the same terrain as Massive Attack and Bristol hip-hop. This is working in the same studio on the same record, which stands in for influence (A239).",
+  "year": 1991,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Massive Attack",
+      "title": "Safe from Harm",
+      "year": 1991
+    },
+    "later": {
+      "artist": "Portishead",
+      "title": "Glory Box",
+      "year": 1994
+    },
+    "whatToListenFor": "Both are Bristol records built like hip-hop, with a loop, a heavy beat and a woman singing over it: Shara Nelson on 'Safe from Harm', Beth Gibbons on 'Glory Box'. Listen for what they share, and for how the mood differs between them."
+  },
+  "explanation": "Geoff Barrow of Portishead was a young tape operator at the Bristol studio where Massive Attack made 'Blue Lines', and they let him use the studio's spare time to start his own music. Portishead formed the same year and recorded in the same studio.",
+  "tags": [
+    "production"
+  ]
+}

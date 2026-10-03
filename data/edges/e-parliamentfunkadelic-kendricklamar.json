@@ -1,0 +1,25 @@
+{
+  "id": "e-parliamentfunkadelic-kendricklamar",
+  "from": "parliament-funkadelic",
+  "to": "kendrick-lamar",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'To Pimp a Butterfly' (2015): Lamar said he listened often to Miles Davis and Parliament-Funkadelic while recording it, and George Clinton is a guest on its opening track, 'Wesley's Theory', produced by Flying Lotus with Thundercat. The article describes the opener as inspired by 1970s funk.",
+  "year": 2015,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Parliament",
+      "title": "Mothership Connection (Star Child)",
+      "year": 1975
+    },
+    "later": {
+      "artist": "Kendrick Lamar",
+      "title": "Wesley's Theory",
+      "year": 2015
+    },
+    "whatToListenFor": "Listen to the bass on 'Mothership Connection', then on 'Wesley's Theory', which has the bassist Thundercat and George Clinton's own voice on it, forty years later. Ask how much of the old P-Funk sound you can hear: the bass at the front, the voices talking over each other, the slow, heavy groove."
+  },
+  "explanation": "Kendrick Lamar said he listened to Parliament-Funkadelic over and over while making 'To Pimp a Butterfly', and its first song has George Clinton on it. The album brought 1970s funk, along with jazz and soul, into hip-hop at a time when most rap sounded very different.",
+  "tags": []
+}

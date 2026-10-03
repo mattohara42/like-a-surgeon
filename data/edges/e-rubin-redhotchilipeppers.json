@@ -1,0 +1,28 @@
+{
+  "id": "e-rubin-redhotchilipeppers",
+  "from": "rick-rubin",
+  "to": "red-hot-chili-peppers",
+  "type": "production",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on the Red Hot Chili Peppers: the band tried to hire Rick Rubin for their third album, but he turned them down in 1987 because of their drug problems. He agreed in 1991, feeling they were healthier and more focused, and produced 'Blood Sugar Sex Magik', recorded at his suggestion in a house in Laurel Canyon. Its singles 'Give It Away' and 'Under the Bridge' became the band's first number one on the Modern Rock chart and its highest Hot 100 hit, at number two.",
+  "year": 1991,
+  "crossLineage": false,
+  "trackPair": {
+    "earlier": {
+      "artist": "Run-D.M.C.",
+      "title": "Walk This Way (with Aerosmith)",
+      "year": 1986,
+      "search": "Run DMC Aerosmith Walk This Way"
+    },
+    "later": {
+      "artist": "Red Hot Chili Peppers",
+      "title": "Give It Away",
+      "year": 1991
+    },
+    "whatToListenFor": "Rubin made his name producing Run-D.M.C. and the Beastie Boys, rap records built mostly from drums and voices. Listen to 'Give It Away' with that in mind: how much space there is between the bass, the drums, the short bursts of guitar and Kiedis's half-rapped vocal."
+  },
+  "explanation": "Rick Rubin turned the Red Hot Chili Peppers down in 1987 because of their drug use. Four years later he produced 'Blood Sugar Sex Magik', which made them one of the biggest bands in the world. Rubin had made his name producing rap, with Run-D.M.C. and the Beastie Boys, and also produced rock bands.",
+  "tags": [
+    "production"
+  ]
+}

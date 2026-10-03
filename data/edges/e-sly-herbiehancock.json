@@ -1,0 +1,25 @@
+{
+  "id": "e-sly-herbiehancock",
+  "from": "sly-and-the-family-stone",
+  "to": "herbie-hancock",
+  "type": "direct",
+  "confidence": "documented",
+  "evidence": "Wikipedia's article on 'Head Hunters' (1973): the album's track 'Sly' is dedicated to Sly Stone of Sly and the Family Stone. The album crossed over to funk and rock audiences, reached number 13 on the Billboard 200, used a clavinet and no guitar, and was criticised by jazz listeners at the time. The dedication is the documented part. How much of the album's sound came from Sly is an inference.",
+  "year": 1973,
+  "crossLineage": true,
+  "trackPair": {
+    "earlier": {
+      "artist": "Sly and the Family Stone",
+      "title": "Thank You (Falettinme Be Mice Elf Agin)",
+      "year": 1969
+    },
+    "later": {
+      "artist": "Herbie Hancock",
+      "title": "Sly",
+      "year": 1973
+    },
+    "whatToListenFor": "Listen to how 'Thank You' is built: one groove repeated, with the bass right at the front. Then play Hancock's 'Sly'. Listen for the moments where it grooves like a funk band and the moments where it turns back into jazz, with solos over the top."
+  },
+  "explanation": "On 'Head Hunters', the album where Herbie Hancock turned to funk, he named one track 'Sly' after Sly Stone. The album sold to funk and rock fans, and many jazz fans did not like it.",
+  "tags": []
+}
