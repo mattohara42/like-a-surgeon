@@ -12,10 +12,7 @@
   "labels": [],
   "keyProducers": [],
   "hook": "The singer of 'Blurred Lines', which a jury found had copied Marvin Gaye, and which Weird Al turned into a song about grammar.",
-  "blurb": {
-    "age13": "Robin Thicke was born in Los Angeles in 1977 and started out writing songs for other R&B singers as a teenager. 'Blurred Lines' (2013), with Pharrell Williams and T.I., was one of the best-selling singles ever. It was also criticised for lyrics and a video that many people said disrespected women. Marvin Gaye's family sued, saying it copied Gaye's 'Got to Give It Up', and in 2015 a jury agreed.",
-    "adult": "Born in Los Angeles in 1977, the son of actors Alan Thicke and Gloria Loring, Thicke wrote and produced for R&B acts from his teens, signed to Interscope at 16, and broke through with 'The Evolution of Robin Thicke' (2006). 'Blurred Lines' (2013), produced by Pharrell Williams with T.I., topped the Hot 100 and drew wide criticism as misogynistic; Thicke later called a remark of his in GQ about degrading women a bad joke. Gaye's heirs sued in 2013, a jury found infringement of 'Got to Give It Up' in 2015, damages were set at $5.3 million plus royalties, and the Ninth Circuit affirmed in 2018."
-  },
+  "blurb": "Robin Thicke was born in Los Angeles in 1977, the son of the actors Alan Thicke and Gloria Loring. He started writing and producing songs for other R&B singers as a teenager, signed to Interscope at 16, and broke through with 'The Evolution of Robin Thicke' (2006). 'Blurred Lines' (2013), produced by Pharrell Williams with T.I., went to number one in America and was one of the best-selling singles ever. It was also widely criticised for lyrics and a video that many people called disrespectful to women, and Thicke later called a remark of his in GQ about degrading women a bad joke. Marvin Gaye's family sued in 2013, saying it copied Gaye's 'Got to Give It Up'. In 2015 a jury agreed, damages were set at $5.3 million plus royalties, and an appeals court, the Ninth Circuit, upheld it in 2018.",
   "signatureTracks": [
     {
       "title": "Blurred Lines",

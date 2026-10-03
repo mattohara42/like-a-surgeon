@@ -14,11 +14,7 @@
   "labels": [],
   "keyProducers": [],
   "hook": "An American who talked his way into a London studio and ended up producing the Kinks and the Who within a year of each other.",
-  "blurb": {
-    "age7": "Shel Talmy was an American record producer who moved to London and helped two of Britain's biggest rock bands make their first hit songs sound the way they do.",
-    "age13": "Talmy was a Chicago-born producer who moved to London in the early 1960s and, according to the widely repeated story, got his first job partly by playing test pressings and letting people assume he had produced them himself. He went on to produce the Kinks' 'You Really Got Me' (1964) and the Who's 'I Can't Explain' (1965), giving both bands a harder, more compressed guitar sound than most British records of the time. He died in Los Angeles in November 2024, aged 87.",
-    "adult": "Talmy is this dataset's clearest case of a single producer acting as the transmission mechanism for a specific sound across two otherwise unconnected bands. His deal structure also matters as much as his ear: the Who's early contract ran through Decca's UK Brunswick imprint specifically because that was Talmy's arrangement, and the band's split from him in 1966 ended their use of that imprint in the same move. He died in Los Angeles on 13 November 2024."
-  },
+  "blurb": "Talmy was a Chicago-born producer who moved to London in the early 1960s. According to the widely repeated story, he got his first job partly by playing test pressings and letting people assume he had produced them himself. He went on to produce the Kinks' 'You Really Got Me' (1964) and the Who's 'I Can't Explain' (1965), giving both bands a harder, more compressed guitar sound than most British records of the time. He is the clearest case on this map of one producer carrying a sound between two otherwise unconnected bands. His contracts mattered as much as his ear: the Who's early records came out on Decca's UK Brunswick label because that was Talmy's arrangement, and when the band split from him in 1966 they left that label in the same move. He died in Los Angeles on 13 November 2024, aged 87.",
   "signatureTracks": [
     {
       "title": "You Really Got Me (produced for the Kinks)",

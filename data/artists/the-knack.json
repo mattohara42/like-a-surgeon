@@ -12,10 +12,7 @@
   "labels": [],
   "keyProducers": [],
   "hook": "The Los Angeles band whose 'My Sharona' was the number-one song of 1979, and whose singer helped Weird Al get his first record deal.",
-  "blurb": {
-    "age13": "The Knack formed in Los Angeles in 1978. Their first single, 'My Sharona', was number one in America for five weeks and was the biggest song of 1979. Capitol Records had paid more to sign them than any band before, and their album cover looked so much like an early Beatles cover that critics called them copycats. The backlash was fast. They split in 1982, reformed several times, and ended for good when their singer Doug Fieger died in 2010.",
-    "adult": "Formed in Los Angeles in 1978 by Doug Fieger, Berton Averre, Prescott Niles and Bruce Gary, the Knack signed to Capitol for the largest sum in the label's history. 'My Sharona' held number one for five weeks and was the top song of 1979, but the marketing, the sleeve's resemblance to 'Meet the Beatles!' and the perceived subject matter of the songs set off a 'Knuke the Knack' backlash. They split in 1982, reunited in 1986, 1994 and 1996, and ended with Fieger's death in February 2010. By Yankovic's account, Fieger told a Capitol executive backstage at Cal Poly that the label should release 'My Bologna'."
-  },
+  "blurb": "The Knack formed in Los Angeles in 1978: Doug Fieger, Berton Averre, Prescott Niles and Bruce Gary. Capitol Records paid more to sign them than it had ever paid any band. Their first single, 'My Sharona', was number one in America for five weeks and was the biggest song of 1979. But the marketing, an album cover that looked so much like the Beatles' 'Meet the Beatles!' that critics called them copycats, and what people took the songs to be about set off a fast backlash, with the slogan 'Knuke the Knack'. They split in 1982, reformed in 1986, 1994 and 1996, and ended for good when Fieger died in February 2010. By Yankovic's account, Fieger told a Capitol executive backstage at Cal Poly that the label should release 'My Bologna'.",
   "signatureTracks": [
     {
       "title": "My Sharona",

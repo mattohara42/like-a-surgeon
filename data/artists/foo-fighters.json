@@ -12,10 +12,7 @@
   "labels": [],
   "keyProducers": [],
   "hook": "The band Nirvana's drummer started alone after Kurt Cobain's death, and later the subject of a Weird Al style parody.",
-  "blurb": {
-    "age13": "After Kurt Cobain died in April 1994, Nirvana's drummer, Dave Grohl, did not join another band. Instead he recorded an album almost entirely by himself, playing nearly every instrument, and called the project Foo Fighters, a World War II name for unexplained flying objects. It became a full band and one of the biggest rock groups of the next thirty years. Their drummer Taylor Hawkins died in 2022.",
-    "adult": "Grohl founded the project in Seattle in 1994, recording the debut mostly alone that October and releasing it in 1995 under a name chosen for anonymity. It grew into a band that has won 15 Grammys, five of them for Best Rock Album, with 'Wasting Light' (2011) reaching number one. They entered the Rock and Roll Hall of Fame in 2021, their first year of eligibility. Taylor Hawkins, drummer from 1997, died in March 2022."
-  },
+  "blurb": "After Kurt Cobain died in April 1994, Nirvana's drummer, Dave Grohl, did not join another band. Instead, that October in Seattle, he recorded an album almost entirely by himself, playing nearly every instrument, and released it in 1995 as Foo Fighters, a World War II name for unexplained flying objects, chosen so nobody would know it was him. It grew into a full band and one of the biggest rock groups of the next thirty years, winning 15 Grammys, five of them for Best Rock Album, with 'Wasting Light' (2011) reaching number one. They entered the Rock and Roll Hall of Fame in 2021, the first year they could. Taylor Hawkins, their drummer from 1997, died in March 2022.",
   "signatureTracks": [
     {
       "title": "This Is a Call",

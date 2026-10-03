@@ -12,11 +12,7 @@
   "labels": [],
   "keyProducers": [],
   "hook": "A gospel trio that outlasted six musical eras, briefly employed a young Jimi Hendrix, and left behind two of the most sampled records in hip-hop.",
-  "blurb": {
-    "age7": "The Isley Brothers started out singing gospel, then made rock, soul and funk hits for decades. Rap songs sample their records all the time.",
-    "age13": "O'Kelly, Rudolph and Ronald Isley began singing gospel together in Cincinnati in 1954 and moved through doo-wop, soul and rock, briefly employing a young guitarist named Jimi Hendrix in their backing band in the mid-1960s. They started their own label, T-Neck Records, and their 1969 hit 'It's Your Thing' and 1975's 'Fight the Power' became two of the most sampled records in hip-hop.",
-    "adult": "The Isley Brothers' six-decade catalogue crosses gospel, doo-wop, rock and roll, soul and funk, and their willingness to keep changing sound, adding younger brothers Ernie and Marvin and brother-in-law Chris Jasper as an in-house rock/funk band in the early 1970s, kept them commercially relevant across every one of those eras. 'Fight the Power' (1975), a protest record about censorship on the radio, gave Public Enemy's own 1989 song of the same title both its name and, per sample-credit databases, part of its rhythm track."
-  },
+  "blurb": "O'Kelly, Rudolph and Ronald Isley began singing gospel together in Cincinnati in 1954 and moved through doo-wop, rock and roll, soul and funk over six decades, briefly employing a young guitarist named Jimi Hendrix in their backing band in the mid-1960s. They started their own label, T-Neck Records. In the early 1970s they added the younger brothers Ernie and Marvin and their brother-in-law Chris Jasper as an in-house rock and funk band, and their willingness to keep changing kept them selling in every era. Their 1969 hit 'It's Your Thing' and 1975's 'Fight the Power' became two of the most sampled records in hip-hop. 'Fight the Power', a protest record about censorship on the radio, gave Public Enemy's own 1989 song both its name and, according to sample-credit databases, part of its rhythm track.",
   "signatureTracks": [
     {
       "title": "It's Your Thing",

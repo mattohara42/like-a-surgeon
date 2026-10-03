@@ -18,10 +18,7 @@
   ],
   "keyProducers": [],
   "hook": "A Camden band named after a Prince Buster song, whose first single was a tribute to him and whose first album opened with one of his songs.",
-  "blurb": {
-    "age13": "Madness formed in Camden Town, London, in 1976. They named themselves after Prince Buster's song 'Madness' in 1979, and their first single, 'The Prince', released on 2 Tone, was a tribute to him. Then they left 2 Tone, as its contracts allowed, and joined Stiff Records. Their first album, 'One Step Beyond...' (1979), took its title from another Prince Buster song and reached number two.",
-    "adult": "Formed in Camden Town in 1976 as the North London Invaders and renamed Madness in 1979 in tribute to Prince Buster. 'The Prince', written by Lee Thompson, was their only 2 Tone release and reached number 16; the label's one-single clause let them move to Stiff, where 'One Step Beyond...' was recorded in October 1979 and reached number two on the album chart."
-  },
+  "blurb": "Madness formed in Camden Town, London, in 1976 as the North London Invaders. They renamed themselves in 1979 after Prince Buster's song 'Madness', and their first single, 'The Prince', written by Lee Thompson and released on 2 Tone, was a tribute to him. It reached number 16 and was their only 2 Tone release: the label's contracts let bands leave after one single, and they moved to Stiff Records. Their first album, 'One Step Beyond...', recorded in October 1979, took its title from another Prince Buster song and reached number two on the album chart.",
   "signatureTracks": [
     {
       "title": "The Prince",

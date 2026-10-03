@@ -12,11 +12,7 @@
   "labels": [],
   "keyProducers": [],
   "hook": "Called 'the fifth Beatle' for good reason: a classically trained producer who turned the studio itself into an instrument for a rock band.",
-  "blurb": {
-    "age7": "George Martin was the Beatles' producer. He knew about orchestras and tape tricks, and he helped the band make sounds nobody had made before.",
-    "age13": "Martin became head of EMI's Parlophone label in 1955 and signed the Beatles in 1962. As the band grew more ambitious, he brought classical arranging, tape loops, and orchestras into their records, turning ideas like John Lennon's 'make my voice sound like the Dalai Lama chanting on a mountaintop' into actual studio techniques.",
-    "adult": "Martin's classical training and EMI engineering background gave the Beatles technical vocabulary they didn't have themselves, and the gap between 'Love Me Do' (1962) and 'Tomorrow Never Knows' (1966), four years, same producer, same band, is one of the clearest documented growth arcs in popular music."
-  },
+  "blurb": "Martin became head of EMI's Parlophone label in 1955 and signed the Beatles in 1962. His classical training and EMI engineering background gave the band a technical vocabulary they didn't have themselves. As they grew more ambitious, he brought classical arranging, tape loops and orchestras into their records, turning ideas like John Lennon's 'make my voice sound like the Dalai Lama chanting on a mountaintop' into real studio techniques. The distance from 'Love Me Do' (1962) to 'Tomorrow Never Knows' (1966), four years apart with the same producer and the same band, is one of the clearest documented stories of growth in popular music.",
   "signatureTracks": [
     {
       "title": "Tomorrow Never Knows (produced for the Beatles)",

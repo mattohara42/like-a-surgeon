@@ -12,11 +12,7 @@
   "labels": [],
   "keyProducers": [],
   "hook": "A jazz trumpeter and arranger who became the producer behind the best-selling album ever made.",
-  "blurb": {
-    "age7": "Quincy Jones started out playing jazz trumpet, then became a famous music producer. He helped make Michael Jackson's biggest albums.",
-    "age13": "Jones began his career as a jazz trumpeter and arranger in the early 1950s before moving into film scoring and pop production. He produced Michael Jackson's 'Off the Wall' (1979) and 'Thriller' (1982), the best-selling album in history, bringing a jazz arranger's ear for horns and rhythm to mainstream pop.",
-    "adult": "Jones's career arc, from big-band jazz arranger to the producer of the best-selling album ever made, is this dataset's clearest jazz-to-pop crossover, and it makes his production work on Jackson's records a genuinely cross-lineage edge rather than a same-genre credit."
-  },
+  "blurb": "Jones began his career as a jazz trumpeter and arranger for big bands in the early 1950s before moving into film scoring and pop production. He produced Michael Jackson's 'Off the Wall' (1979) and 'Thriller' (1982), the best-selling album in history, bringing a jazz arranger's ear for horns and rhythm to mainstream pop. That path, from big-band jazz to the best-selling album ever, is the clearest jazz-to-pop crossing on this map, which makes his work on Jackson's records a real connection between lineages rather than a credit inside one genre.",
   "signatureTracks": [
     {
       "title": "Off the Wall (produced for Michael Jackson)",

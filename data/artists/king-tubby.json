@@ -14,11 +14,7 @@
   "labels": [],
   "keyProducers": [],
   "hook": "An electronics repairman who rebuilt his own mixing desk and, in doing so, invented the remix.",
-  "blurb": {
-    "age7": "King Tubby took songs apart and made the empty spaces into the music.",
-    "age13": "Osbourne Ruddock repaired radios and ran a sound system in Kingston. He modified his mixing board so he could drop instruments in and out live and slam echo onto whatever was left. Instead of a song with singing, you got a version with the singing mostly gone and the drums, bass, and echo enormous. That idea, that a finished record is raw material you can rebuild, underlies almost all dance music and hip-hop.",
-    "adult": "Tubby's innovation was as much electrical engineering as music. He built a custom high-pass filter into his MCI board and used spring reverb and tape delay as performance instruments rather than corrective effects. The economic driver matters: Jamaican sound systems needed exclusive material, and B-side versions were a cheap way to get it. Scarcity produced a form."
-  },
+  "blurb": "Osbourne Ruddock repaired radios and ran a sound system in Kingston. What he did was as much electrical engineering as music. He modified his MCI mixing board, building in his own high-pass filter, so he could drop instruments in and out live and slam echo onto whatever was left, and he played spring reverb and tape delay like instruments rather than using them to fix a sound. Instead of a song with singing, you got a version with the singing mostly gone and the drums, bass and echo enormous. Money drove it: Jamaican sound systems needed music no rival had, and versions on the B-side were a cheap way to get it, so scarcity produced a form. The idea that a finished record is raw material you can rebuild underlies almost all dance music and hip-hop.",
   "signatureTracks": [
     {
       "title": "Dub From The Roots",

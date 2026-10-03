@@ -14,11 +14,7 @@
   "labels": [],
   "keyProducers": [],
   "hook": "An American who moved to London to produce records and ended up following David Bowie to a studio 150 metres from the Berlin Wall.",
-  "blurb": {
-    "age7": "Tony Visconti produced many of David Bowie's albums over several decades, including ones made in Berlin.",
-    "age13": "Visconti moved from Brooklyn to London in the late 1960s and began a decades-long, on-and-off production partnership with David Bowie. He produced 'Young Americans' (1975) and then, alongside Brian Eno, two of the three Berlin Trilogy albums recorded at Hansa Studios: 'Low' and '\"Heroes\"' (both 1977).",
-    "adult": "Visconti's collaboration with Bowie spans decades and styles, from the 'plastic soul' of 'Young Americans' to the Eno-assisted Berlin records, making him one of this dataset's clearest examples of a producer whose relationship with one artist outlasted any single genre both of them passed through."
-  },
+  "blurb": "Visconti moved from Brooklyn to London in the late 1960s and began a production partnership with David Bowie that went on, on and off, for decades. He produced 'Young Americans' (1975), Bowie's 'plastic soul' album, and then, with Brian Eno, two of the three Berlin Trilogy albums recorded at Hansa Studios: 'Low' and '\"Heroes\"' (both 1977). He is one of the clearest examples on this map of a producer whose work with one artist outlasted every genre both of them passed through.",
   "signatureTracks": [
     {
       "title": "Young Americans (produced for David Bowie)",

@@ -14,11 +14,7 @@
   "labels": [],
   "keyProducers": [],
   "hook": "The radio engineer who made the first music out of recorded noise, eight years before anyone sampled anything with a machine built for it.",
-  "blurb": {
-    "age7": "A man in Paris recorded trains, cut up the tape, and put the pieces back together as music.",
-    "age13": "Pierre Schaeffer was an engineer at French national radio. In 1948 he recorded steam trains, then cut, looped and reversed the recordings until they had rhythm and shape. The station broadcast the result that year. He called the method musique concrète, meaning music made from real recorded sound instead of written notes. Every sampler on this map does a version of what he did with records and razor blades.",
-    "adult": "Schaeffer worked first with disc cutters and locked grooves, then with tape, inside a state broadcaster that paid for the studio. His studio became the Groupe de Recherches de Musique Concrète in 1951 and the GRM in 1958. He was a theorist as much as a composer, and his idea that a recorded sound could be heard for itself, cut off from its source, is the premise every sampling edge in this dataset rests on. He died in 1995. The end year here is his death, since his active composing stopped much earlier."
-  },
+  "blurb": "Pierre Schaeffer was an engineer at French national radio, which paid for his studio. In 1948 he recorded steam trains, then cut, looped and reversed the recordings until they had rhythm and shape, first with disc cutters and grooves that played in a loop, then with tape. The station broadcast the result that year. He called the method musique concrète, meaning music made from real recorded sound instead of written notes. He was a thinker about sound as much as a composer, and his idea that a recorded sound could be heard for itself, cut off from where it came from, is what every sampling connection on this map rests on: every sampler here does a version of what he did with records and razor blades. His studio became the Groupe de Recherches de Musique Concrète in 1951 and the GRM in 1958. He died in 1995; the end year here is his death, though he stopped composing much earlier.",
   "signatureTracks": [
     {
       "title": "Étude aux chemins de fer",
