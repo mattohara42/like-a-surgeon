@@ -86,13 +86,6 @@
   /* SPEC: edges with a demo get visual emphasis. Brighter at rest than a
      quiet edge, not as bright as a lit one, so its mark can be found. */
   .edge.has-demo:not(.lit):not(.unborn):not(.edge-hovered) { opacity: 0.65; }
-  /* A lens (docs/m5-architecture.md section 4, Q36): its edges rest as
-     bright as a demo edge, the rest drop well below a quiet edge, and nodes
-     that touch no lit edge dim. No new colour. */
-  .edge.lens-on:not(.lit):not(.unborn):not(.edge-hovered) { opacity: 0.65; }
-  .edge.lens-off:not(.lit):not(.unborn):not(.edge-hovered) { opacity: 0.06; }
-  .node.lens-off:not(.selected):not(.touched):not(.unborn),
-  .node-labels.lens-off:not(.selected):not(.touched):not(.unborn) { opacity: 0.3; }
   .edge-gold { pointer-events: none; animation: gold-shimmer 3.2s ease-in-out infinite; }
   @keyframes gold-shimmer {
     0%, 100% { stroke-opacity: 0.18; }
@@ -308,6 +301,10 @@
   }
   .panel-body p.body { font-size: var(--t-body); line-height: var(--lh-body); color: var(--body); margin: 0 0 14px; }
   .panel-body p.note { font-size: var(--t-note); line-height: var(--lh-note); color: var(--dim); margin: 0 0 12px; }
+  /* An edge's overlay tags (reading/edgePanel.js). */
+  .edge-tags { list-style: none; margin: 0 0 14px; padding: 0; }
+  .edge-tags li { font-size: var(--t-note); line-height: var(--lh-note); color: var(--body); margin: 0 0 8px; }
+  .edge-tags strong { color: var(--ink); font-weight: 600; }
   .panel-body p.listen {
     font-family: var(--serif); font-size: var(--t-listen); line-height: var(--lh-listen); color: var(--ink);
     margin: 14px 0 6px; padding-left: 14px; border-left: 2px solid rgba(150,180,235,0.35);
@@ -657,7 +654,6 @@
   <nav id="dock">
     <div id="layers" role="group" aria-label="Which records to show"></div>
     <div id="registers" role="group"></div>
-    <div id="lens" role="group"></div>
   </nav>
   <a id="cards-link" href="?view=cards"></a>
   <div id="search" role="search"></div>

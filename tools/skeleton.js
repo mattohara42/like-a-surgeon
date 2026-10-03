@@ -27,7 +27,7 @@ export const SKELETON_FIELDS = {
   scenes: ['id', 'type', 'lineage', 'name', 'sortName', 'hook', 'yearFrom', 'yearTo', ...PERIOD,
     'city', 'country', 'memberIds', 'palette', 'motif'],
   labels: ['id', 'type', 'lineage', 'name', 'sortName', 'hook', 'foundedYear', 'closedYear', ...PERIOD, 'city'],
-  edges: ['id', 'from', 'to', 'type', 'confidence', 'year', 'crossLineage', 'tags', 'demoId',
+  edges: ['id', 'from', 'to', 'type', 'confidence', 'year', 'crossLineage', 'demoId',
     'demoCaption'],
 };
 

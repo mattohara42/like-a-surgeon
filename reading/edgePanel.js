@@ -25,6 +25,24 @@ function trackLine(side, register) {
   );
 }
 
+// The edge's overlay tags, each named with what it covers. Listed in the
+// order COPY.tags gives them, and any tag the copy does not know is left
+// out rather than printed raw.
+function tagsSection(edge, reg) {
+  const known = Object.keys(COPY.tags).filter((key) => key !== 'heading' && edge.tags?.includes(key));
+  if (known.length === 0) return null;
+  return [
+    h('h3', {}, pick(COPY.tags.heading, reg)),
+    h(
+      'ul',
+      { class: 'edge-tags' },
+      ...known.map((key) =>
+        h('li', {}, h('strong', {}, pick(COPY.tags[key].name, reg)), ' ', pick(COPY.tags[key].line, reg)),
+      ),
+    ),
+  ];
+}
+
 function endRow(label, node, ctx) {
   return h(
     'button',
@@ -77,6 +95,8 @@ export function renderEdgePanel(edge, ctx) {
       h('p', { class: 'note' }, pick(tier?.explain, reg)),
     ),
     edge.evidence ? h('p', { class: 'body' }, edge.evidence) : null,
+
+    tagsSection(edge, reg),
 
     heading('eitherEnd'),
     endRow('from', edge.from, ctx),

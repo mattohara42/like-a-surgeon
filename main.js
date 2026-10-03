@@ -25,7 +25,6 @@ import { createEngine } from './audio/engine.js';
 import { stopDemo, withEdgeCaption } from './reading/demoBlock.js';
 import { createThreads } from './reading/threads.js';
 import { createSixDegrees } from './reading/sixDegrees.js';
-import { loadLens, saveLens, createLensControl, renderLensCard } from './reading/lens.js';
 import { createSceneMembers } from './reading/members.js';
 import { createDock } from './reading/dock.js';
 import { chooseView } from './cards/route.js';
@@ -41,7 +40,6 @@ const searchEl = document.getElementById('search');
 const goalEl = document.getElementById('goal-chip');
 const threadChipEl = document.getElementById('thread-chip');
 const sixChipEl = document.getElementById('six-chip');
-const lensEl = document.getElementById('lens');
 const dockEl = document.getElementById('dock');
 const cardsLinkEl = document.getElementById('cards-link');
 
@@ -94,7 +92,6 @@ async function main() {
   const registers = availableRegisters(data);
   let register = loadRegister(registers);
   let layers = loadLayers();
-  let lens = loadLens();
   let graph = null;
 
   const legend = createLegend(legendEl, data.meta);
@@ -105,7 +102,6 @@ async function main() {
   function updateDock() {
     dock.setChanged('show', Object.keys(CONFIG.layers.defaults).some((k) => layers[k] !== CONFIG.layers.defaults[k]));
     dock.setChanged('read', register !== CONFIG.reading.defaultRegister);
-    dock.setChanged('spotlight', lens !== null);
   }
   const search = createSearch(searchEl, {
     nodes: data.nodes,
@@ -235,7 +231,6 @@ async function main() {
     }
     if (target.kind === 'six') return sixDegrees.render(panelContext());
     if (target.kind === 'thread') return threads.render(target, panelContext());
-    if (target.kind === 'lens') return renderLensCard(target.id, data.edges, { ...panelContext(), clearLens: () => applyLens(null) });
     return renderRecord(target);
   }
 
@@ -301,9 +296,8 @@ async function main() {
   }
 
   function focusTarget(target) {
-    // Stepping back to the welcome card or a lens card leaves the camera
-    // where it is.
-    if (target.kind === 'welcome' || target.kind === 'lens') return;
+    // Stepping back to the welcome card leaves the camera where it is.
+    if (target.kind === 'welcome') return;
     if (target.kind === 'thread') {
       threads.focus(target);
       return;
@@ -357,7 +351,7 @@ async function main() {
       return { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
     };
     // A closed row keeps its size while hidden, so only the open one counts.
-    const rows = [layersEl, registersEl, lensEl].filter((el) => el.parentElement.classList.contains('open'));
+    const rows = [layersEl, registersEl].filter((el) => el.parentElement.classList.contains('open'));
     const controls = [dockEl, ...rows].map(rect).filter((r) => r.right > r.left);
     const cluster = controls.length
       ? controls.reduce((a, b) => ({
@@ -373,7 +367,7 @@ async function main() {
     graph?.rerender();
   }
   const overlayObserver = new ResizeObserver(measureOverlays);
-  for (const el of [dockEl, layersEl, registersEl, lensEl, legendEl]) overlayObserver.observe(el);
+  for (const el of [dockEl, layersEl, registersEl, legendEl]) overlayObserver.observe(el);
   window.addEventListener('resize', measureOverlays);
 
   function build({ opening = false } = {}) {
@@ -401,8 +395,7 @@ async function main() {
       onSelectEdge: (edge) => panel.open({ kind: 'edge', id: edge.id }),
     });
 
-    // A rebuild keeps the lens and a thread's route, as it keeps the year.
-    graph.setLens(lens);
+    // A rebuild keeps a thread's route, as it keeps the year.
     if (carried.path) graph.setPath(carried.path);
 
     window.__graph = graph; // for manual/automated inspection during dev
@@ -421,18 +414,6 @@ async function main() {
     build();
   }
 
-  // A lens relights the map in place; no rebuild. Choosing one opens its
-  // card, and clearing it closes the card if that is what is showing.
-  function applyLens(next) {
-    lens = next;
-    saveLens(lens);
-    createLensControl(lensEl, lens, register, applyLens);
-    updateDock();
-    graph?.setLens(lens);
-    if (lens) panel.open({ kind: 'lens', id: lens });
-    else if (panel.current()?.kind === 'lens') panel.close();
-  }
-
   function applyRegister(next) {
     register = next;
     saveRegister(register);
@@ -443,7 +424,6 @@ async function main() {
     welcome.setRegister(register);
     threads.setRegister(register);
     sixDegrees.setRegister(register);
-    createLensControl(lensEl, lens, register, applyLens);
     dock.setRegister(register);
     updateDock();
     cardsLinkEl.textContent = pick(COPY.cards.toCards, register);
@@ -451,7 +431,6 @@ async function main() {
 
   createLayerToggles(layersEl, layers, applyLayers);
   createRegisterSelector(registersEl, registers, register, applyRegister);
-  createLensControl(lensEl, lens, register, applyLens);
   legend.setRegister(register);
   search.setRegister(register);
   welcome.setRegister(register);
