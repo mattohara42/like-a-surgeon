@@ -5,7 +5,6 @@
 
 import { CONFIG } from '../config.js';
 import { computeLayout } from './layout.js';
-import { buildLanePlan } from './arrange.js';
 import { createViewportState, transformString, visibleContentRange, screenToContent, flyTo, pullBackIntoView, zoomAt } from './viewport.js';
 import { zoomLevelForScale } from './zoomLevels.js';
 import { attachPanZoomHandlers } from './interactions.js';
@@ -92,31 +91,27 @@ function drawAxis(axisG, layout) {
   }
 }
 
-// Lane bands and titles. A lane that stands for a scene or a label
-// (Arrange by, Q19) titles itself with that record's name, next to its
-// earliest member, and the title is a button that opens the record: this is
-// how scenes, which are otherwise only atmosphere, become clickable.
-// Band rectangles go in `bandsG`, under everything. Titles go in `titlesG`,
-// which sits above the edges and nodes: a lane title is a button, and under
-// the edges an edge's wide invisible hit area would swallow its clicks.
+// Lane bands and titles. Band rectangles go in `bandsG`, under everything.
+// Titles go in `titlesG`, above the edges and nodes, so no marker paints
+// over a lane's name.
 //
 // Returns where each title sits, so label placement can keep node names
 // clear of titles without measuring text in the DOM every frame.
-function drawBands(bandsG, titlesG, layout, onSelectGroup) {
+function drawBands(bandsG, titlesG, layout) {
   const originX = layout.timeScale.toX(layout.timeScale.year0);
   const titleSpecs = [];
-  const spec = (x, y, text, { isGroup = false, atContent = false } = {}) => ({
+  const { fontPx, dxPx, dyPx, trackingEm } = CONFIG.laneTitles;
+  const spec = (x, y, text) => ({
     // Screen px the title is pushed right this frame to clear a fixed
     // control drawn over it (updateTitleShifts).
     shiftPx: 0,
     x,
     y,
     chars: text.length,
-    anchorEnd: atContent,
-    fontPx: isGroup ? CONFIG.arrange.groupTitleFontSize : 11,
-    dxPx: atContent ? -CONFIG.arrange.groupTitleLeadPx : 4,
-    dyPx: isGroup ? 18 : 14,
-    trackingEm: isGroup ? CONFIG.arrange.titleTrackingEm.group : CONFIG.arrange.titleTrackingEm.lane,
+    fontPx,
+    dxPx,
+    dyPx,
+    trackingEm,
   });
 
   // Bands run past both ends of the axis, and the outermost lanes past the
@@ -137,34 +132,16 @@ function drawBands(bandsG, titlesG, layout, onSelectGroup) {
         opacity: 0.024,
       }),
     );
-    const isGroup = lane.groupId !== null;
-    // Scene and label views title every lane next to its earliest member.
-    // At the axis origin a title could sit on top of a marker from the
-    // same years, and it was the part the legend covered.
-    const atContent = lane.titleAtContent;
     const label = svgEl('text', {
-      class: ['band-label', isGroup && 'band-link', atContent && 'band-at-content'].filter(Boolean).join(' '),
-      x: atContent ? lane.firstX : originX,
+      class: 'band-label',
+      x: originX,
       y: lane.y,
       fill: lane.color,
       'font-weight': 600,
-      'text-anchor': atContent ? 'end' : 'start',
     });
-    label.textContent = isGroup ? `${lane.title} ›` : lane.title;
-    label.__spec = spec(atContent ? lane.firstX : originX, lane.y, label.textContent, { isGroup, atContent });
+    label.textContent = lane.title;
+    label.__spec = spec(originX, lane.y, label.textContent);
     titleSpecs.push(label.__spec);
-    if (isGroup) {
-      label.setAttribute('tabindex', '0');
-      label.setAttribute('role', 'button');
-      label.setAttribute('aria-label', `Open ${lane.title}`);
-      label.addEventListener('click', () => onSelectGroup(lane.groupId));
-      label.addEventListener('keydown', (e) => {
-        if (e.key !== 'Enter' && e.key !== ' ') return;
-        e.preventDefault();
-        e.stopPropagation();
-        onSelectGroup(lane.groupId);
-      });
-    }
     titlesG.appendChild(label);
   });
 
@@ -188,16 +165,13 @@ function drawBands(bandsG, titlesG, layout, onSelectGroup) {
 // or under a fixed control (the dock, the legend), where it prints through
 // as a collision. Each frame, a title that would start past the left edge
 // is held at it, like a frozen row header, and one that would sit under a
-// control steps right to just past it. Titles placed beside their content
-// (scene and label views) already sit clear of the origin and are left
-// alone. `overlays` are screen rects, cached by the caller, so this reads
-// no layout.
+// control steps right to just past it. `overlays` are screen rects, cached
+// by the caller, so this reads no layout.
 function updateTitleShifts(titleSpecs, vp, overlays) {
   const { labelCharWidthEm } = CONFIG.node;
-  const { titleOverlayGapPx: gap, titleEdgePx } = CONFIG.arrange;
+  const { overlayGapPx: gap, edgePx: titleEdgePx } = CONFIG.laneTitles;
   for (const t of titleSpecs) {
     t.shiftPx = 0;
-    if (t.anchorEnd) continue;
     const width = t.chars * t.fontPx * (labelCharWidthEm + t.trackingEm);
     const baseline = t.y * vp.scale + vp.ty + t.dyPx;
     const top = baseline - t.fontPx;
@@ -225,13 +199,12 @@ function updateStaticLayerScale(axisG, titlesG, scale) {
     label.setAttribute('y', 14 / scale);
     label.setAttribute('dx', 4 / scale);
   }
+  const { fontPx, dxPx, dyPx, haloPx } = CONFIG.laneTitles;
   for (const label of titlesG.querySelectorAll('.band-label')) {
-    const isGroup = label.classList.contains('band-link');
-    const atContent = label.classList.contains('band-at-content');
-    label.setAttribute('font-size', (isGroup ? CONFIG.arrange.groupTitleFontSize : 11) / scale);
-    label.setAttribute('dx', ((atContent ? -CONFIG.arrange.groupTitleLeadPx : 4) + (label.__spec?.shiftPx ?? 0)) / scale);
-    label.setAttribute('dy', (isGroup ? 18 : 14) / scale);
-    label.setAttribute('stroke-width', CONFIG.arrange.titleHaloPx / scale);
+    label.setAttribute('font-size', fontPx / scale);
+    label.setAttribute('dx', (dxPx + (label.__spec?.shiftPx ?? 0)) / scale);
+    label.setAttribute('dy', dyPx / scale);
+    label.setAttribute('stroke-width', haloPx / scale);
   }
 }
 
@@ -258,9 +231,6 @@ export function createGraph(container, data, callbacks = {}) {
   const {
     onSelectNode = () => {},
     onSelectEdge = () => {},
-    // A scene or label lane title was chosen (Arrange by, Q19).
-    onSelectGroup = () => {},
-    arrange = CONFIG.arrange.default,
     transportEl = null,
     layers = CONFIG.layers.defaults,
     initialViewport = null,
@@ -326,10 +296,7 @@ export function createGraph(container, data, callbacks = {}) {
   const graphNodeIds = new Set(graphNodes.map((n) => n.id));
   const graphEdges = data.edges.filter((e) => graphNodeIds.has(e.from.id) && graphNodeIds.has(e.to.id));
 
-  // Lanes come from every loaded record, not just the drawn ones, so a
-  // scene or label lane exists even while that layer is off.
-  const plan = buildLanePlan(arrange, data.nodes);
-  const layout = computeLayout(graphNodes, { withSubstrate: layers.machines, plan });
+  const layout = computeLayout(graphNodes, { withSubstrate: layers.machines });
   const vp = createViewportState();
   if (initialViewport) Object.assign(vp, { tx: initialViewport.tx, ty: initialViewport.ty, scale: initialViewport.scale });
 
@@ -362,7 +329,7 @@ export function createGraph(container, data, callbacks = {}) {
   root.append(defs, viewportG);
   container.appendChild(root);
 
-  const titleSpecs = drawBands(bandsG, titlesG, layout, onSelectGroup);
+  const titleSpecs = drawBands(bandsG, titlesG, layout);
   if (layout.substrate) drawSubstrate(floorG, layout);
   drawAxis(axisG, layout);
   drawNebulae(nebulaG, sceneRecords, layout);
@@ -515,7 +482,7 @@ export function createGraph(container, data, callbacks = {}) {
       const width = t.chars * t.fontPx * (labelCharWidthEm + t.trackingEm);
       const x = t.x * vp.scale + vp.tx + t.dxPx + t.shiftPx;
       const baseline = t.y * vp.scale + vp.ty + t.dyPx;
-      return { x0: t.anchorEnd ? x - width : x, x1: t.anchorEnd ? x : x + width, y0: baseline - t.fontPx, y1: baseline + labelPadPx };
+      return { x0: x, x1: x + width, y0: baseline - t.fontPx, y1: baseline + labelPadPx };
     });
     const fits = (box) => !placed.some((p) => box.x0 < p.x1 && box.x1 > p.x0 && box.y0 < p.y1 && box.y1 > p.y0);
     const boxAround = (cx, baselineY, chars, fontSize) => {
@@ -1055,7 +1022,6 @@ export function createGraph(container, data, callbacks = {}) {
     focusEdge,
     frameNodes,
     focusYear,
-    arrange,
     yearBounds: () => ({ min: layout.minYear, max: layout.maxYear }),
     selectedId: () => selectedId,
     // A demo keeping time on the map (docs/m4-architecture.md section 6):

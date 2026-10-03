@@ -246,14 +246,6 @@
   }
   .layer-toggle:focus-visible { outline: 1px solid rgba(150,180,235,0.7); outline-offset: 3px; }
 
-  /* A scene or label lane title is a button (Arrange by, Q19). */
-  /* Names, not category headings, so ordinary letter-spacing: the wide
-     tracking suits a six-letter "ROCK" and stretches "Kingston Sound
-     Systems and Dub" across half the map. */
-  .band-label.band-link { pointer-events: auto; cursor: pointer; letter-spacing: 0.02em; }
-  .band-label.band-link:hover, .band-label.band-link:focus-visible {
-    text-decoration: underline; outline: none;
-  }
   .register-caption {
     font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--dim); margin-right: 3px;
@@ -665,7 +657,6 @@
   <nav id="dock">
     <div id="layers" role="group" aria-label="Which records to show"></div>
     <div id="registers" role="group"></div>
-    <div id="arrange" role="group"></div>
     <div id="lens" role="group"></div>
   </nav>
   <a id="cards-link" href="?view=cards"></a>

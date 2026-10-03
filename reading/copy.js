@@ -72,7 +72,6 @@ export const COPY = {
     label: { age13: 'Map controls', adult: 'Map controls' },
     show: { age13: 'Show', adult: 'Layers' },
     read: { age13: 'Reading level', adult: 'Reading level' },
-    arrange: { age13: 'Arrange by', adult: 'Arrange by' },
     spotlight: { age13: 'Spotlight', adult: 'Spotlight' },
     changed: { age13: 'changed from the start', adult: 'not the default' },
   },
@@ -98,8 +97,8 @@ export const COPY = {
     labels: {
       name: { age13: 'Labels', adult: 'Labels' },
       intro: {
-        age13: 'Lights the connections that ran through record labels: who put out whose records, and which labels built a sound. Try it with Arrange by label.',
-        adult: 'Influence carried by labels and the business of releasing records. Pairs with Arrange by label, which lays the map out by roster.',
+        age13: 'Lights the connections that ran through record labels: who put out whose records, and which labels built a sound.',
+        adult: 'Influence carried by labels and the business of releasing records.',
       },
     },
     politics: {

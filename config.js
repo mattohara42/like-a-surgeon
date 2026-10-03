@@ -245,7 +245,6 @@ export const CONFIG = {
     items: [
       { key: 'show', el: 'layers', glyph: '◎', color: '#3ddfa4' },
       { key: 'read', el: 'registers', glyph: 'Aa', color: '#f3c46a' },
-      { key: 'arrange', el: 'arrange', glyph: '☰', color: '#b48cff' },
       { key: 'spotlight', el: 'lens', glyph: '◐', color: '#5fa8ff' },
     ],
   },
@@ -350,37 +349,23 @@ export const CONFIG = {
     youtubeSearchUrl: 'https://www.youtube.com/results?search_query=',
   },
 
-  // "Arrange by" (Q19, docs/m3-architecture.md section 7a): which lanes the
-  // map is sorted into. Lane titles here are plain uppercase, like the
-  // lineage lane titles and "THE MACHINES".
-  arrange: {
+  // Lane titles (render/graph.js drawBands): plain uppercase, like "THE
+  // MACHINES". Screen px, counter-scaled like every other label.
+  laneTitles: {
+    fontPx: 11,
+    dxPx: 4,
+    dyPx: 14,
+    // Letter-spacing, mirroring `.band-label` in index.html, so label
+    // placement can size a title without measuring the DOM every frame.
+    trackingEm: 0.18,
     // Screen px a lane title keeps from a fixed control it steps past.
-    titleOverlayGapPx: 10,
+    overlayGapPx: 10,
     // A lane title whose start would scroll past the screen's left edge
     // stays this many screen px in from it instead (A316).
-    titleEdgePx: 12,
+    edgePx: 12,
     // A dark halo behind lane titles, in screen px, so a title that steps
     // onto a marker still reads.
-    titleHaloPx: 3.5,
-    options: [
-      { key: 'lineage', label: 'Lineage' },
-      { key: 'scene', label: 'Scene' },
-      { key: 'label', label: 'Label' },
-    ],
-    default: 'lineage',
-    storageKey: 'lineage.arrange.v1',
-    ungroupedTitles: { scene: 'NOT IN A SCENE YET', label: 'NO LABEL ON THE MAP YET' },
-    // Marker kinds that are not the grouping get a lane of their own.
-    kindLaneTitles: { label: 'LABELS' },
-    // Scene and label lane titles are buttons, so they are drawn larger
-    // than the lineage titles, and sit this far before the lane's first
-    // member (screen px, counter-scaled like every other label).
-    groupTitleFontSize: 14,
-    groupTitleLeadPx: 14,
-    // Letter-spacing of lane titles, mirroring `.band-label` and
-    // `.band-link` in index.html, so label placement can size a title
-    // without measuring the DOM on every frame.
-    titleTrackingEm: { lane: 0.18, group: 0.02 },
+    haloPx: 3.5,
   },
 
   // The confidence legend. Open on a first visit, because the tiers are

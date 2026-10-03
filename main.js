@@ -10,7 +10,6 @@ import { CONFIG } from './config.js';
 import { loadGraphData, loadRecord, SHARD_FOR_KIND } from './render/loader.js';
 import { createGraph } from './render/graph.js';
 import { loadLayers, saveLayers, createLayerToggles } from './render/layers.js';
-import { loadArrange, saveArrange, createArrangeControl } from './render/arrange.js';
 import { availableRegisters, loadRegister, saveRegister, createRegisterSelector, pick } from './reading/registers.js';
 import { buildNeighbours } from './reading/neighbours.js';
 import { createPanel } from './reading/panel.js';
@@ -39,7 +38,6 @@ const registersEl = document.getElementById('registers');
 const panelEl = document.getElementById('panel');
 const legendEl = document.getElementById('legend');
 const searchEl = document.getElementById('search');
-const arrangeEl = document.getElementById('arrange');
 const goalEl = document.getElementById('goal-chip');
 const threadChipEl = document.getElementById('thread-chip');
 const sixChipEl = document.getElementById('six-chip');
@@ -93,15 +91,9 @@ async function main() {
 
   const sceneMembers = createSceneMembers(data.nodes, nodesById);
 
-  // A label's roster: the artists that name it.
-  function labelMembers(labelId) {
-    return data.nodes.filter((n) => n.kind === 'artist' && n.raw.labels?.some((l) => l.labelId === labelId));
-  }
-
   const registers = availableRegisters(data);
   let register = loadRegister(registers);
   let layers = loadLayers();
-  let arrange = loadArrange();
   let lens = loadLens();
   let graph = null;
 
@@ -113,7 +105,6 @@ async function main() {
   function updateDock() {
     dock.setChanged('show', Object.keys(CONFIG.layers.defaults).some((k) => layers[k] !== CONFIG.layers.defaults[k]));
     dock.setChanged('read', register !== CONFIG.reading.defaultRegister);
-    dock.setChanged('arrange', arrange !== CONFIG.arrange.default);
     dock.setChanged('spotlight', lens !== null);
   }
   const search = createSearch(searchEl, {
@@ -334,12 +325,6 @@ async function main() {
       graph.frameNodes(sceneMembers(node.id).map((m) => m.id));
       return;
     }
-    // Arranged by label, a label is its lane: frame the roster rather than
-    // switching the Labels layer on underneath the reader.
-    if (node.kind === 'label' && arrange === 'label') {
-      graph.frameNodes([node.id, ...labelMembers(node.id).map((m) => m.id)]);
-      return;
-    }
     ensureLayersFor([node.kind]);
     graph.focusNode(node.id);
   }
@@ -372,7 +357,7 @@ async function main() {
       return { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
     };
     // A closed row keeps its size while hidden, so only the open one counts.
-    const rows = [layersEl, registersEl, arrangeEl, lensEl].filter((el) => el.parentElement.classList.contains('open'));
+    const rows = [layersEl, registersEl, lensEl].filter((el) => el.parentElement.classList.contains('open'));
     const controls = [dockEl, ...rows].map(rect).filter((r) => r.right > r.left);
     const cluster = controls.length
       ? controls.reduce((a, b) => ({
@@ -388,7 +373,7 @@ async function main() {
     graph?.rerender();
   }
   const overlayObserver = new ResizeObserver(measureOverlays);
-  for (const el of [dockEl, layersEl, registersEl, arrangeEl, lensEl, legendEl]) overlayObserver.observe(el);
+  for (const el of [dockEl, layersEl, registersEl, lensEl, legendEl]) overlayObserver.observe(el);
   window.addEventListener('resize', measureOverlays);
 
   function build({ opening = false } = {}) {
@@ -400,7 +385,6 @@ async function main() {
     graph = createGraph(appEl, data, {
       transportEl: document.getElementById('transport'),
       layers,
-      arrange,
       initialViewport: carried.viewport,
       initialYear: carried.year,
       initialSelectedId: carried.selected,
@@ -408,15 +392,13 @@ async function main() {
       // The opening view starts clear of the legend (M3 step 5).
       leftInset: () => legendEl.offsetLeft + legendEl.offsetWidth,
       overlays: () => overlayRects,
-      // Only the first build frames the way in. A later rebuild without a
-      // camera (Arrange by) re-fits the whole map, as it always has.
+      // Only the first build frames the way in.
       openingFrameIds: opening ? OPENING_FRAME_IDS : [],
       goldenIds,
       playableDemoIds: new Set(Object.values(data.demos).filter((d) => d.status !== 'draft').map((d) => d.id)),
       // The graph has already flown the camera; the panel only opens.
       onSelectNode: (node) => panel.open({ kind: 'node', id: node.id }),
       onSelectEdge: (edge) => panel.open({ kind: 'edge', id: edge.id }),
-      onSelectGroup: (id) => goNode(id),
     });
 
     // A rebuild keeps the lens and a thread's route, as it keeps the year.
@@ -436,20 +418,6 @@ async function main() {
     saveLayers(layers);
     createLayerToggles(layersEl, layers, applyLayers);
     updateDock();
-    build();
-  }
-
-  // Re-laning moves every node, so like a layer toggle it rebuilds. The
-  // camera is not carried across: the old view's coordinates point at a
-  // different part of a different layout, so the map re-fits instead.
-  function applyArrange(next) {
-    if (next === arrange) return;
-    arrange = next;
-    saveArrange(arrange);
-    createArrangeControl(arrangeEl, arrange, applyArrange);
-    updateDock();
-    graph?.destroy();
-    graph = null;
     build();
   }
 
@@ -483,7 +451,6 @@ async function main() {
 
   createLayerToggles(layersEl, layers, applyLayers);
   createRegisterSelector(registersEl, registers, register, applyRegister);
-  createArrangeControl(arrangeEl, arrange, applyArrange);
   createLensControl(lensEl, lens, register, applyLens);
   legend.setRegister(register);
   search.setRegister(register);

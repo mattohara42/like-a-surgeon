@@ -1,7 +1,7 @@
 // The control dock, top left (Q42, A312). One round, coloured button per
-// row of controls (Show, Reading level, Arrange by, Spotlight). Each opens
-// its row sideways, one at a time, so the corner holds four small buttons
-// instead of four rows of pills. Sound is not here: its volume lives in
+// row of controls (Show, Reading level, Spotlight). Each opens
+// its row sideways, one at a time, so the corner holds small buttons
+// instead of rows of pills. Sound is not here: its volume lives in
 // each demo, where the sound is (A317).
 //
 // The rows themselves are drawn by their own modules, into the elements

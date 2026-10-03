@@ -4,7 +4,7 @@
 // exactly the same thing.
 //
 // The skeleton is every record cut down to the fields the graph, search,
-// Arrange by and the scene atmosphere read: ids, names, years, lineage,
+// the scene atmosphere and the panels read: ids, names, years, lineage,
 // hook, membership, places, and each edge's endpoints, type, tier and year.
 // Everything else (blurbs, evidence, trackPairs, whatToListenFor, the
 // scene essays) is loaded one record at a time when a panel opens

@@ -10,6 +10,7 @@
 // into yet are dropped rather than drawn empty.
 
 import { CONFIG } from '../config.js';
+import { lineageIds, lineageColor, lineageName } from './lineages.js';
 
 
 function makeTimeScale(minYear, maxYear) {
@@ -66,10 +67,8 @@ function packIntoRows(items) {
   return { rowOf, rowCount: Math.max(1, rowEnds.length) };
 }
 
-// `plan` (render/arrange.js) says which lanes exist, in what order, and
-// which lane each node belongs to. Lineage lanes are one plan among several
-// (Q19), so nothing here knows what a lane means.
-export function computeLayout(nodes, { withSubstrate = true, plan }) {
+// One lane per lineage, in the lineages' own order (data/lineages/).
+export function computeLayout(nodes, { withSubstrate = true }) {
   const positioned = nodes.filter((n) => n.startYear !== null);
   const years = positioned.flatMap((n) => [n.startYear, n.endYear]);
   const minYear = years.length ? Math.min(...years) : new Date().getFullYear() - 1;
@@ -85,13 +84,14 @@ export function computeLayout(nodes, { withSubstrate = true, plan }) {
   const byLane = new Map();
   for (const node of positioned) {
     if (node.kind === 'machine') continue;
-    const key = plan.laneOf(node);
+    const key = node.lineage;
     if (!byLane.has(key)) byLane.set(key, []);
     byLane.get(key).push(node);
   }
 
   const lanes = [];
-  for (const spec of plan.lanes) {
+  for (const lineage of lineageIds()) {
+    const spec = { key: lineage, title: lineageName(lineage).toUpperCase(), color: lineageColor(lineage) };
     const laneNodes = byLane.get(spec.key) ?? [];
     if (dropEmptyLanes && laneNodes.length === 0) continue;
 
@@ -110,10 +110,7 @@ export function computeLayout(nodes, { withSubstrate = true, plan }) {
       });
     }
 
-    // Where the lane's content starts on the time axis, so a group lane can
-    // title itself next to its earliest member rather than at the far left.
-    const firstX = Math.min(...laneNodes.map((n) => timeScale.toX(n.startYear)));
-    lanes.push({ ...spec, y: laneTop, height: contentHeight, rowCount: pack.rowCount, firstX });
+    lanes.push({ ...spec, y: laneTop, height: contentHeight, rowCount: pack.rowCount });
     y += contentHeight + laneGap;
   }
 
