@@ -358,11 +358,13 @@ async function main() {
       : null;
     // Drawn with the graph (render/transport.js), so looked up each time.
     const playEl = document.getElementById('transport-play');
-    overlayRects = [cluster, rect(legendEl), playEl && rect(playEl)].filter(Boolean);
+    // The status line at the top left prints over the first lane title
+    // otherwise.
+    overlayRects = [cluster, rect(statusEl), rect(legendEl), playEl && rect(playEl)].filter((r) => r && r.right > r.left);
     graph?.rerender();
   }
   const overlayObserver = new ResizeObserver(measureOverlays);
-  for (const el of [dockEl, layersEl, legendEl]) overlayObserver.observe(el);
+  for (const el of [statusEl, dockEl, layersEl, legendEl]) overlayObserver.observe(el);
   window.addEventListener('resize', measureOverlays);
 
   function build({ opening = false } = {}) {

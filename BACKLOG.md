@@ -253,17 +253,6 @@ correct response to a good idea arriving mid-milestone.
 
 ## Observed problems
 
-- **Big Daddy Kane's blurb and Jay-Z's disagree about the hype man.**
-  `big-daddy-kane.json` says Kane brought Jay-Z on tour as his hype man;
-  `jay-z.json` and `e-kane-jayz` say Kane himself corrects that to guest
-  appearances. The A343 merge kept each record's own facts, so the two
-  records still disagree. One of them needs a source read and a fix
-  (found during A343).
-
-- **The dev status line prints over the top lane title.** "248 nodes, 421
-  edges", top left, overlaps the first lane's title (HIP-HOP) when the map
-  is zoomed out. Seen in a screenshot during A342; not touched.
-
 - **`coolio.json` calls 'Pastime Paradise' a sample.** Wikipedia's
   article on 'Gangsta's Paradise' says it is an interpolation, replayed
   rather than lifted from the record, with Wonder credited as a writer.
