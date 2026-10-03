@@ -223,10 +223,15 @@ export function updateEdgeElement(g, edge, anchors, scale, gradientIds) {
   }
 
   // Only start the animations once per element, not on every pan frame.
+  // They start paused: a quiet edge hides its comet, and hundreds of hidden
+  // comets still running kept the map repainting every frame.
   if (!g.__cometRunning) {
-    runComet(comet, length, scale);
-    if (edge.crossLineage) runComet(ghost, length, scale, CONFIG.edge.comet.ghostDelayMs);
+    g.__comets = [
+      runComet(comet, length, scale),
+      edge.crossLineage ? runComet(ghost, length, scale, CONFIG.edge.comet.ghostDelayMs) : null,
+    ].filter(Boolean);
     g.__cometRunning = true;
+    syncComets(g);
   } else {
     // Zoom changed the on-screen dash size; keep it constant.
     const dash = (length * CONFIG.edge.comet.lengthFraction) / scale;
@@ -268,8 +273,23 @@ export function updateDemoBadge(g, at, scale, color) {
   setAttrs(g.querySelector('.demo-badge-glyph'), { fill: color, 'font-size': M.fontPx / scale });
 }
 
+// A comet runs only while it can be seen: on a lit or hovered edge.
+function syncComets(g) {
+  const show = g.classList.contains('lit') || g.classList.contains('edge-hovered');
+  for (const anim of g.__comets ?? []) {
+    if (show && anim.playState !== 'running') anim.play();
+    else if (!show && anim.playState === 'running') anim.pause();
+  }
+}
+
+export function setEdgeLit(g, lit) {
+  g.classList.toggle('lit', lit);
+  syncComets(g);
+}
+
 export function setEdgeHovered(g, edge, hovered) {
   g.classList.toggle('edge-hovered', hovered);
+  syncComets(g);
   const line = g.querySelector('.edge-line');
   if (!line) return;
   line.setAttribute('stroke-opacity', hovered ? CONFIG.edge.hoverOpacity : tierAdjustedOpacity(edge));

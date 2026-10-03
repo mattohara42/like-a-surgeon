@@ -10,8 +10,8 @@ import { createViewportState, transformString, visibleContentRange, screenToCont
 import { zoomLevelForScale } from './zoomLevels.js';
 import { attachPanZoomHandlers } from './interactions.js';
 import { svgEl, setAttrs } from './svg.js';
-import { createNodeElement, updateNodeElement, setNodeHovered } from './nodes.js';
-import { createEdgeElement, updateEdgeElement, setEdgeHovered, isBeam, curvePath, approxCurveLength, createDemoBadge, updateDemoBadge, curvePoint } from './edges.js';
+import { createNodeElement, updateNodeElement, setNodeHovered, setNodeBreathing } from './nodes.js';
+import { createEdgeElement, updateEdgeElement, setEdgeHovered, setEdgeLit, isBeam, curvePath, approxCurveLength, createDemoBadge, updateDemoBadge, curvePoint } from './edges.js';
 import { createSparks } from './sparks.js';
 import { createSubstrateDefs, drawSubstrate, updateSubstrateScale } from './substrate.js';
 import { createEdgeGradients, createHaloGradients, trailGradientId, beamGradientId, colorFor } from './gradients.js';
@@ -297,6 +297,8 @@ export function createGraph(container, data, callbacks = {}) {
   // The node under the pointer, whose edges light up like a selection's.
   let hoveredNodeId = null;
   let hoverTimer = null;
+  // The edge the pointer is resting on, lit once it has rested.
+  let edgeHoverTimer = null;
   // Nodes ringed as "what the selected node touched", for Follow the
   // producer. Cleared whenever the selection moves.
   let touchedIds = new Set();
@@ -396,6 +398,38 @@ export function createGraph(container, data, callbacks = {}) {
       maxY: Math.max(entry.anchors.y1, entry.anchors.y2),
     }))
     .sort((a, b) => a.minX - b.minX);
+
+  // How much each edge matters when there is only room for some of them
+  // (CONFIG.edge.quietBudget). A rule read off the data, so it holds as
+  // the map grows: golden edges, then playable demos, then crossings
+  // between lineages, then the evidence tier, then how connected the two
+  // ends are. Ties break by id so the choice is stable between frames.
+  const TIER_RANK = { documented: 2, consensus: 1, asserted: 0 };
+  const edgeDegree = new Map();
+  for (const e of graphEdges) {
+    for (const id of [e.from.id, e.to.id]) edgeDegree.set(id, (edgeDegree.get(id) ?? 0) + 1);
+  }
+  const importanceRank = new Map(
+    [...graphEdges]
+      .map((e) => ({
+        id: e.id,
+        key: [
+          goldenIds.has(e.id) ? 1 : 0,
+          playableDemoIds.has(e.demoId) ? 1 : 0,
+          e.crossLineage ? 1 : 0,
+          TIER_RANK[e.confidence] ?? 0,
+          (edgeDegree.get(e.from.id) ?? 0) + (edgeDegree.get(e.to.id) ?? 0),
+        ],
+      }))
+      .sort((a, b) => {
+        for (let i = 0; i < a.key.length; i++) if (a.key[i] !== b.key[i]) return b.key[i] - a.key[i];
+        return a.id.localeCompare(b.id);
+      })
+      .map((e, i) => [e.id, i]),
+  );
+  // Whether nodes were last told to breathe, so a frame only touches the
+  // animations when the zoom level crosses CONFIG.node.breathLevels.
+  let breathing = false;
 
   const sparks = createSparks(fxG);
 
@@ -730,6 +764,9 @@ export function createGraph(container, data, callbacks = {}) {
     const ignites = (y) => ignitingFrom !== null && y > ignitingFrom && y <= year;
 
     const level = zoomLevelForScale(vp.scale);
+    const breathe = CONFIG.node.breathLevels.includes(level);
+    const breathChanged = breathe !== breathing;
+    breathing = breathe;
     const range = visibleContentRange(vp, containerRect.width, containerRect.height);
     // The screen itself, without the culling margin. An edge with neither
     // end in here is only passing through the view, and is drawn faintly
@@ -803,9 +840,11 @@ export function createGraph(container, data, callbacks = {}) {
           nodeElements.set(node.id, created);
           updateNodeElement(created, node, pos, level, vp.scale, degreeFactor);
           setNodeState(created, node.startYear > year, node.id === selectedId);
+          setNodeBreathing(created, breathe);
         } else {
           updateNodeElement(el, node, pos, level, vp.scale, degreeFactor);
           setNodeState(el, node.startYear > year, node.id === selectedId);
+          if (breathChanged) setNodeBreathing(el, breathe);
         }
       } else if (el) {
         removeNode(node.id, el);
@@ -820,6 +859,22 @@ export function createGraph(container, data, callbacks = {}) {
     const litNodes = new Set([selectedId, hoveredNodeId].filter((id) => id && positionById.has(id)));
     const isLit = (edge) =>
       edge.id === selectedId || pathEdgeIds.has(edge.id) || litNodes.has(edge.from.id) || litNodes.has(edge.to.id);
+    const edgeInView = ({ minX, maxX, minY, maxY }) =>
+      minX <= range.x2 && maxX >= range.x1 && maxY >= range.y1 && minY <= range.y2;
+
+    // Only the most important quiet edges in view are drawn at this zoom
+    // level (CONFIG.edge.quietBudget). Lit edges never count against it.
+    const budget = CONFIG.edge.quietBudget[level] ?? Infinity;
+    let keptQuiet = null;
+    if (Number.isFinite(budget)) {
+      keptQuiet = new Set(
+        boundEdges
+          .filter((entry) => !isLit(entry.edge) && edgeInView(entry))
+          .sort((a, b) => importanceRank.get(a.edge.id) - importanceRank.get(b.edge.id))
+          .slice(0, budget)
+          .map((entry) => entry.edge.id),
+      );
+    }
 
     // Demo badges placed so far this frame, in screen px. A badge that would
     // overlap one slides along its own curve until it has room, so two
@@ -858,7 +913,9 @@ export function createGraph(container, data, callbacks = {}) {
         }
         continue;
       }
-      const visible = maxX >= range.x1 && maxY >= range.y1 && minY <= range.y2;
+      const lit = isLit(edge);
+      const visible = maxX >= range.x1 && maxY >= range.y1 && minY <= range.y2 &&
+        (lit || keptQuiet === null || keptQuiet.has(edge.id));
       const passing = !onScreen(anchors.x1, anchors.y1) && !onScreen(anchors.x2, anchors.y2);
       if (visible && ignites(edge.year)) pulseEdge({ edge, anchors }, 0, CONFIG.sparks.pulse.durationMs);
       if (visible) {
@@ -869,8 +926,18 @@ export function createGraph(container, data, callbacks = {}) {
             edge,
             (e) => selectAndFlyTo(e, midX, midY, onSelectEdge, () => edgeFrameScale(anchors)),
             (e, hovered) => {
-              const current = edgeElements.get(e.id);
-              if (current) setEdgeHovered(current, e, hovered);
+              // Lights only once the pointer rests, like a node's edges:
+              // sweeping across a tangle of edges lights none of them.
+              clearTimeout(edgeHoverTimer);
+              if (hovered) {
+                edgeHoverTimer = setTimeout(() => {
+                  const current = edgeElements.get(e.id);
+                  if (current) setEdgeHovered(current, e, true);
+                }, CONFIG.edge.hoverDwellMs);
+              } else {
+                const current = edgeElements.get(e.id);
+                if (current) setEdgeHovered(current, e, false);
+              }
             },
             goldenIds.has(edge.id),
             playableDemoIds.has(edge.demoId),
@@ -883,7 +950,7 @@ export function createGraph(container, data, callbacks = {}) {
           created.classList.toggle('lens-off', lens !== null && !edge.tags?.includes(lens));
           created.classList.toggle('selected', edge.id === selectedId);
           created.classList.toggle('passing', passing);
-          created.classList.toggle('lit', isLit(edge));
+          setEdgeLit(created, lit);
         } else {
           updateEdgeElement(el, edge, anchors, vp.scale, gradientIdsFor(edge));
           el.classList.toggle('unborn', edge.year > year);
@@ -891,7 +958,7 @@ export function createGraph(container, data, callbacks = {}) {
           el.classList.toggle('lens-off', lens !== null && !edge.tags?.includes(lens));
           el.classList.toggle('selected', edge.id === selectedId);
           el.classList.toggle('passing', passing);
-          el.classList.toggle('lit', isLit(edge));
+          setEdgeLit(el, lit);
         }
       } else if (el) {
         el.remove();
@@ -1039,6 +1106,7 @@ export function createGraph(container, data, callbacks = {}) {
     },
     destroy: () => {
       clearTimeout(hoverTimer);
+      clearTimeout(edgeHoverTimer);
       resizeObserver.disconnect();
       transport?.stop();
       dust.stop();

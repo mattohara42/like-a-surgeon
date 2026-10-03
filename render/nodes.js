@@ -123,7 +123,9 @@ export function createNodeElement(node, onSelect, onHover) {
     g.insertBefore(defs, span);
   }
 
-  breathe(body, node.id);
+  // Paused until graph.js says the zoom level wants it (CONFIG.node.breathLevels).
+  g.__breath = breathe(body, node.id);
+  g.__breath?.pause();
 
   g.addEventListener('click', () => onSelect(node));
   g.addEventListener('mouseenter', () => onHover(node, true));
@@ -274,6 +276,13 @@ export function updateNodeElement(g, node, position, zoomLevel, scale, degreeFac
     const hookText = truncate(node.hook, CONFIG.node.hookMaxChars);
     if (hook.textContent !== hookText) hook.textContent = hookText;
   }
+}
+
+export function setNodeBreathing(g, on) {
+  const anim = g.__breath;
+  if (!anim) return;
+  if (on && anim.playState !== 'running') anim.play();
+  else if (!on && anim.playState === 'running') anim.pause();
 }
 
 export function setNodeHovered(g, hovered, scale) {

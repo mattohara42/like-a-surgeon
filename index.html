@@ -76,21 +76,21 @@
      with no comet running. The selected edge, and the edges of the
      selected or hovered node, get the class `lit` and draw in full.
      :not(.unborn) keeps "not yet" fainter still. */
-  .edge:not(.lit):not(.unborn):not(:hover) { opacity: 0.3; }
-  .edge:not(.lit):not(:hover) .edge-comet,
-  .edge:not(.lit):not(:hover) .edge-comet-ghost { visibility: hidden; }
+  .edge:not(.lit):not(.unborn):not(.edge-hovered) { opacity: 0.3; }
+  .edge:not(.lit):not(.edge-hovered) .edge-comet,
+  .edge:not(.lit):not(.edge-hovered) .edge-comet-ghost { visibility: hidden; }
   /* Neither end on screen: only passing through, so fainter again. */
-  .edge.passing:not(.lit):not(.unborn):not(:hover) { opacity: 0.14; }
+  .edge.passing:not(.lit):not(.unborn):not(.edge-hovered) { opacity: 0.14; }
   /* Golden edges (A263) stay findable while quiet, and shimmer. */
-  .edge.golden:not(.lit):not(.unborn):not(:hover) { opacity: 0.75; }
+  .edge.golden:not(.lit):not(.unborn):not(.edge-hovered) { opacity: 0.75; }
   /* SPEC: edges with a demo get visual emphasis. Brighter at rest than a
      quiet edge, not as bright as a lit one, so its mark can be found. */
-  .edge.has-demo:not(.lit):not(.unborn):not(:hover) { opacity: 0.65; }
+  .edge.has-demo:not(.lit):not(.unborn):not(.edge-hovered) { opacity: 0.65; }
   /* A lens (docs/m5-architecture.md section 4, Q36): its edges rest as
      bright as a demo edge, the rest drop well below a quiet edge, and nodes
      that touch no lit edge dim. No new colour. */
-  .edge.lens-on:not(.lit):not(.unborn):not(:hover) { opacity: 0.65; }
-  .edge.lens-off:not(.lit):not(.unborn):not(:hover) { opacity: 0.06; }
+  .edge.lens-on:not(.lit):not(.unborn):not(.edge-hovered) { opacity: 0.65; }
+  .edge.lens-off:not(.lit):not(.unborn):not(.edge-hovered) { opacity: 0.06; }
   .node.lens-off:not(.selected):not(.touched):not(.unborn),
   .node-labels.lens-off:not(.selected):not(.touched):not(.unborn) { opacity: 0.3; }
   .edge-gold { pointer-events: none; animation: gold-shimmer 3.2s ease-in-out infinite; }

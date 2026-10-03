@@ -4621,3 +4621,28 @@ small and worth having in front of Matt alongside everything else here.
   batch prompt template and the BACKLOG entry now describe the game as
   built. CLAUDE.md gains one pointer to the guide under the scope rule; its
   rules are unchanged.
+
+## Added with the simplification pass (one arrangement, one text, no Spotlight)
+
+- **A342. A zoomed-out map draws only its most important quiet edges.** Matt
+  reported on 2026-10-03 that the map still flashed when zoomed out, because
+  the screen could not keep up with everything trying to draw as the mouse
+  moved. Measured in headless Chromium, the zoomed-out map was running about
+  770 animations at rest: a comet on every edge (hidden but still animating),
+  a breath on every dot, and the rest. Every edge the pointer crossed also lit
+  at once through CSS `:hover`. Four changes, all tunable in `CONFIG`:
+  - Each zoom level has a budget of quiet (unlit) edges drawn in view at
+    once, `CONFIG.edge.quietBudget`: 45 collapsed, 100 mid, no limit at
+    detail. The edges kept are ranked by a rule read off the data, never by
+    hand: golden first, then playable demos, then crossings between
+    lineages, then the evidence tier, then how connected the two ends are,
+    with ties broken by id. Lit edges (the selection, a hovered node's edges,
+    a thread's route) always draw, whatever the budget. The budget is per
+    screen, not per map, so it holds as the roster grows.
+  - An edge lights only after the pointer rests on it for
+    `CONFIG.edge.hoverDwellMs`, as nodes already did (A277).
+  - A comet animates only while its edge is lit or hovered. Otherwise it is
+    paused, since it is hidden anyway.
+  - Dots breathe only at the zoom levels in `CONFIG.node.breathLevels`
+    (detail). Further out the movement is too small to see and kept the whole
+    SVG repainting every frame.

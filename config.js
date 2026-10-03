@@ -96,6 +96,11 @@ export const CONFIG = {
     // is stable across reloads. They never sync up, which is the
     // difference between a living thing and a loading spinner.
     breath: { minMs: 4600, maxMs: 7800, amount: 0.09 },
+    // Breathing runs only at these zoom levels. Further out a dot is a few
+    // px across, the movement cannot be seen, and two hundred animated
+    // dots kept the whole map repainting every frame, which is what made
+    // a zoomed-out map flash as the pointer moved over it.
+    breathLevels: ['detail'],
   },
 
   edge: {
@@ -117,6 +122,17 @@ export const CONFIG = {
     // Multiplies the line's base opacity (and the legend swatch's).
     tierOpacity: { documented: 1, consensus: 0.55, asserted: 0.9 },
     hitAreaWidth: 14,
+    // The most quiet (unlit) edges drawn on screen at once, per zoom level.
+    // Zoomed out, every edge on the map is on screen together and they
+    // read as a tangle; the pointer crossed dozens of them per second.
+    // The ones kept are the most important (graph.js, edgeImportance):
+    // golden edges, then playable demos, then crossings between lineages,
+    // then the stronger evidence tiers, then edges between hubs. Lit edges
+    // (selection, hover, a thread's route) always draw, whatever the budget.
+    quietBudget: { collapsed: 45, mid: 100, detail: Infinity },
+    // How long the pointer must rest on an edge before it lights, as with
+    // CONFIG.node.hoverDwellMs: passing over lights nothing.
+    hoverDwellMs: 160,
     opacity: 0.5,
     hoverOpacity: 0.95,
     crossLineageOpacity: 0.75,
