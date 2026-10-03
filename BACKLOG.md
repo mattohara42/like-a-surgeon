@@ -253,6 +253,14 @@ correct response to a good idea arriving mid-milestone.
 
 ## Observed problems
 
+- **'Mothership Connection (Star Child)' carries two different years.**
+  `e-parliamentfunkadelic-dre` dates it 1976, while
+  `e-casablanca-parliamentfunkadelic` and the new
+  `e-parliamentfunkadelic-kendricklamar` say 1975 (the album came out in
+  December 1975; the single followed in 1976). The map should pick one
+  convention for a track pair: album year or single year. Left alone here
+  because it is outside the batch (found during A344).
+
 - **`coolio.json` calls 'Pastime Paradise' a sample.** Wikipedia's
   article on 'Gangsta's Paradise' says it is an interpolation, replayed
   rather than lifted from the record, with Wonder credited as a writer.
