@@ -20,10 +20,7 @@
     },
     "whatToListenFor": "Pablo's own melodica records made the label's reputation; two years later he put that same production behind a teenager's songwriting instead of his own instrument, and 'Africa Must Be Free By 1983' is a vocal album built on the same spacious, echo-heavy platform."
   },
-  "explanation": {
-    "age13": "Augustus Pablo ran his own record label, Rockers International, and used it to release an album he produced for a teenage singer named Hugh Mundell, who wrote every song on it himself.",
-    "adult": "A non-founder case of the label-shapes-output claim this dataset requires: Rockers International existed to release Pablo's own productions, and its decision to put a full album behind an unknown teenager, rather than another Pablo instrumental, is what put Mundell's songwriting on record at all."
-  },
+  "explanation": "Augustus Pablo ran his own record label, Rockers International, and used it to release an album he produced for a teenage singer named Hugh Mundell, who wrote every song on it himself. The label existed to release Pablo's own productions, and its decision to back a full album by an unknown teenager, rather than another Pablo instrumental, is what got Mundell's songwriting on record at all, a case of a label shaping its output beyond its founder's own records.",
   "tags": [
     "labels",
     "production"

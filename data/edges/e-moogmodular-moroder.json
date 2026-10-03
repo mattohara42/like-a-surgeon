@@ -21,10 +21,7 @@
     },
     "whatToListenFor": "Listen for the bass line: a fast, bubbling pattern of notes, perfectly even, repeating without a single human wobble. That is a sequencer driving a Moog. Around it, the hi-hats and effects come from the same machine. Only the kick drum and the voice are human. Listen for how the pattern never tires and never drifts in time, and imagine how strange that sounded in a club in 1977."
   },
-  "explanation": {
-    "age13": "'I Feel Love' was made almost entirely with a Moog synthesizer. A machine called a sequencer played the notes in perfect time, and a click track kept it in step with the tape. The only human sounds are Donna Summer's voice and the kick drum.",
-    "adult": "The technological edge that puts sequenced synthesis at the centre of a pop hit. The detail that the Moog kept drifting out of tune, forcing short takes, is the practical story behind a record that sounds effortlessly mechanical."
-  },
+  "explanation": "'I Feel Love' was made almost entirely with a Moog synthesizer, which put sequenced synthesizers at the centre of a pop hit. A machine called a sequencer played the notes in perfect time, and a click track kept it in step with the tape. The only human sounds are Donna Summer's voice and the kick drum. The Moog kept drifting out of tune, which forced short takes: the practical story behind a record that sounds effortlessly mechanical.",
   "tags": [
     "technology"
   ]

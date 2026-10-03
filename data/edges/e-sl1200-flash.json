@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "Listen for what never happens: the beat does not sag. The same few bars come round again and again dead in time, and in the gaps you can hear a record being hauled backwards and dropped back in exactly on the one. A belt-driven deck would lag on every restart and the whole thing would slide. Everything frantic on this record rests on the machine underneath it being rigid."
   },
-  "explanation": {
-    "age7": "He needed a record player that could be stopped and started instantly, and this was the only one that could.",
-    "age13": "Holding one drum break going means grabbing the record, pushing it back to the start of the break and letting go, over and over, without the speed changing. Most turntables are pulled round by a rubber belt and cannot survive that or recover fast enough. The Technics had the motor directly under the platter, so it snapped back to speed the moment you let go. The technique is only possible because of how the motor was built.",
-    "adult": "The clearest enabling-technology edge on the map. Matsushita optimised for speed stability in a hi-fi context and, as a side effect, produced the only consumer deck whose torque and restart behaviour tolerate being played as a percussion instrument. Flash's contribution is the theory of what to do with it; the deck is what made the theory executable."
-  },
+  "explanation": "Holding one drum break going means grabbing the record, pushing it back to the start of the break and letting go, over and over, without the speed changing. Most turntables are pulled round by a rubber belt and cannot survive that or recover fast enough. The Technics had the motor directly under the platter, so it snapped back to speed the moment you let go. Matsushita designed it for steady speed in home hi-fi and, as a side effect, made the only home deck strong enough to be played like a drum. It is the clearest case on the map of a technology making a technique possible: Flash worked out what to do with it, and the deck is what let him do it.",
   "tags": [
     "technology"
   ]

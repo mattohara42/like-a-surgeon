@@ -21,10 +21,7 @@
     },
     "whatToListenFor": "Listen for the drum machine first: a deep, booming kick, thin clicky handclaps, a ticking snare and hissy hi-hats, all perfectly even. Nobody tried to make it sound like a drummer. Then notice that this is a slow love song by one of Motown's great singers, not an electro record from the Bronx, and that the machine works there too."
   },
-  "explanation": {
-    "age13": "Marvin Gaye was living in Belgium, far from his old band. He used a Roland TR-808 drum machine to make 'Sexual Healing' because it let him make music on his own. It was his biggest hit, in the same year that 'Planet Rock' made the 808 famous in hip-hop.",
-    "adult": "The 808 reaching soul in the same year as electro, by the same logic: a machine that let one person make a whole record. Its slow, sparse use here is the line that runs to later R&B production."
-  },
+  "explanation": "Marvin Gaye was living in Belgium, far from his old band. He used a Roland TR-808 drum machine to make 'Sexual Healing' because it let him make a whole record on his own. It was his biggest hit, in the same year that 'Planet Rock' made the 808 famous in hip-hop: the machine reached soul and electro at once, for the same reason. Its slow, sparse use here runs on to later R&B production.",
   "demoId": "demo-808-voices",
   "tags": ["technology"]
 }

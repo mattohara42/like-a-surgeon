@@ -20,11 +20,7 @@
     },
     "whatToListenFor": "Stockhausen's piece treats a boy's voice as raw material, cut, layered and processed inside a studio built for exactly that. Fifteen years later and a few miles away, Can builds an eighteen-minute rock groove the same way: recorded loosely, then shaped and trimmed on tape until the editing itself is the composition, a studio-first method the city, not just the man, made available to them."
   },
-  "explanation": {
-    "age7": "Cologne had a special studio for making music out of recorded sounds. Two men who later started the band Can learned there, and used those ideas in rock music.",
-    "age13": "Cologne ran an electronic music studio for German radio, where the composer Stockhausen worked and taught. Two future members of Can studied there before starting the band in 1968, and they brought his method, record first and shape it afterward, into rock music.",
-    "adult": "This scene edge and `e-stockhausen-can` tell two sides of the same fact: this one names the institution, an electronic music studio Cologne had funded since 1951, as the general condition; `e-stockhausen-can` names the specific teacher and students as the mechanism. Cologne having the studio at all is what made Stockhausen's Cologne courses possible in the first place."
-  },
+  "explanation": "Cologne had funded an electronic music studio for German radio since 1951, where the composer Stockhausen worked and taught. Two future members of Can studied with him there before starting the band in 1968, and they brought his method, record first and shape it afterward, into rock music. This connection names the place as the general condition, while Stockhausen's own connection to Can names the teacher and students as the way it happened. Cologne having the studio at all is what made Stockhausen's Cologne courses possible.",
   "tags": [
     "technology"
   ]

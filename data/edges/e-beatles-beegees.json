@@ -20,9 +20,6 @@
     },
     "whatToListenFor": "A sad story-song, close harmony, and a dark, simple accompaniment with strings. Listen to the vocal harmonies and the way the melody falls at the end of each line. Then imagine hearing the Bee Gees song on the radio in 1967 with no name on the label."
   },
-  "explanation": {
-    "age13": "The Bee Gees' first big hit outside Australia sounded so like the Beatles that their American record company sent it to radio stations with no name on it, and many DJs played it thinking it was a secret Beatles record. Maurice Gibb later said it was a copy of the Beatles.",
-    "adult": "A documented imitation, admitted by the imitator and recognised by the imitated, and used deliberately as a marketing trick by the label. The trackPair's earlier record is a representative 1966 Beatles ballad, not one the Gibbs named."
-  },
+  "explanation": "The Bee Gees' first big hit outside Australia sounded so like the Beatles that their American record company sent it to radio stations with no name on it, a deliberate marketing trick, and many DJs played it thinking it was a secret Beatles record. Maurice Gibb later said it was a copy of the Beatles, so this imitation was admitted by the imitator and recognised by the imitated. The earlier song paired here is a typical 1966 Beatles ballad, not one the Gibbs named.",
   "tags": ["labels"]
 }

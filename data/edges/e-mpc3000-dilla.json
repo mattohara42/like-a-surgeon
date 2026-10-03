@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "A quantise setting moves every drum hit onto the nearest point of a grid, so a beat stays perfectly even. Listen to 'Fall in Love' with that in mind. The kick drums do not land where a grid would put them: some come early, some late. The beat seems to stagger and yet it grooves, because the unevenness repeats. That is a person refusing the machine's correction on the machine itself."
   },
-  "explanation": {
-    "age7": "J Dilla made beats on this machine and turned off the setting that makes every drum hit land exactly on time.",
-    "age13": "Samplers like the MPC3000 can snap every drum hit exactly onto the beat. J Dilla usually switched that off and placed hits a bit early or a bit late by feel. His drums sound like they are leaning or tripping, but they still groove. Musicians who played real drums started copying it. His own MPC3000 is now in the Smithsonian museum in Washington.",
-    "adult": "The canonical case on this map of a user working against a machine's intended behaviour, alongside the 303 and Phuture. The MPC's quantise was designed to make programmed rhythm correct, and Dilla's rejection of it produced a rhythmic language that then moved back into live playing (the drummers of the Soulquarians circle are the usual example). Documented for the instrument, and the unquantised method is described by those who worked with him."
-  },
+  "explanation": "Samplers like the MPC3000 can snap every drum hit exactly onto the beat, a setting called quantise, designed to make programmed rhythm correct. J Dilla usually switched it off and placed hits a bit early or a bit late by feel. His drums sound like they are leaning or tripping, but they still groove. With the 303 and Phuture, it is the classic case on this map of someone working against what a machine was meant to do. Musicians who played real drums started copying it, so the feel moved back into live playing, the drummers of the Soulquarians circle being the usual example. His use of the instrument is documented, and those who worked with him describe the unquantised method. His own MPC3000 is now in the Smithsonian museum in Washington.",
   "tags": [
     "technology",
     "production"

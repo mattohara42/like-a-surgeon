@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "Listen to the drums. Each hit is a single, short, tightly trimmed sound, a kick, a snare, a hat, played from the pads rather than looped as a chunk of someone else's drummer. That is why they sound so punchy and separate. Then listen to the sample on top. It has been cut into small pieces and replayed in a new order, so you hear a phrase you almost recognise that never quite goes where the original did."
   },
-  "explanation": {
-    "age7": "DJ Premier made his beats by playing tiny pieces of records on the MPC60's pads.",
-    "age13": "DJ Premier used an MPC60 to control a separate sampler. He cut drum sounds and bits of old records into tiny pieces, put them on the pads, and played them in new patterns. His drums sound short and punchy, and his samples sound familiar but rearranged. Lots of 90s New York rap sounds like this because of him.",
-    "adult": "The MPC's pad-and-sequencer workflow suits chopping: short fragments assigned to pads and replayed in new orders, rather than long loops. Premier is the clearest exponent. Consensus because the setup is documented in gear profiles for his later period rather than tied to particular sessions."
-  },
+  "explanation": "DJ Premier used an MPC60 to control a separate sampler. He cut drum sounds and bits of old records into tiny pieces, put them on the pads, and played them in new patterns: the MPC's pads and sequencer suit chopping short fragments and replaying them in new orders, rather than long loops, and Premier is the clearest example. His drums sound short and punchy, and his samples sound familiar but rearranged, and lots of 1990s New York rap sounds like this because of him. It is held at consensus because the setup is documented in gear profiles of his later work rather than tied to particular sessions.",
   "tags": [
     "technology",
     "production"

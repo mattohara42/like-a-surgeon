@@ -20,10 +20,7 @@
     },
     "whatToListenFor": "Listen to who keeps time. 'Ruckzuck' is a flute riff over drums played by a person, speeding up as they go. 'Trans-Europe Express' is made in the same private room seven years later, and the rhythm is a machine's, steady and mechanical, with the synthesizer patterns running from sequencers the band had built for them. The studio is how they got from one to the other without anyone else's clock."
   },
-  "explanation": {
-    "age13": "Kraftwerk's studio, Kling Klang, was a room in a Düsseldorf workshop that the band set up in 1970. Because it was theirs, they could spend as long as they liked there and build their own equipment. They say that room was the real start of Kraftwerk.",
-    "adult": "A scene edge where the scene is mostly one room. The Düsseldorf scene record is defined by Kling Klang, and the causal claim is the room's: time and control that a commercial studio could not have given, which is where the drum machines and sequencers came in."
-  },
+  "explanation": "Kraftwerk's studio, Kling Klang, was a room in a Düsseldorf workshop that the band set up in 1970. The Düsseldorf scene on this map is defined by that room. Because it was theirs, they could spend as long as they liked there and build their own equipment, time and control no commercial studio could have given, and that is where their drum machines and sequencers came in. They say that room was the real start of Kraftwerk.",
   "tags": [
     "technology",
     "production"

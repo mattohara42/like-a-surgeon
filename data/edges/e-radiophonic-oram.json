@@ -22,9 +22,6 @@
     },
     "whatToListenFor": "There's no shared recording to compare here: Oram fought to get the Workshop opened, then left it almost immediately for a studio of her own. Listen instead to what she built next: Oramics turned drawn shapes on film into sound, with no keyboard or tape splicing at all, a technique nobody else in Britain had. Leaving is what let her build it."
   },
-  "explanation": {
-    "age13": "Daphne Oram was one of the two people who started the BBC Radiophonic Workshop in 1958. She left after less than a year to build her own electronic music studio, where she invented a way to turn drawings into sound.",
-    "adult": "This edge exists to put Oram's founding role on the map alongside her successor Delia Derbyshire's, already linked from the Workshop. The two never overlapped there, so this is a founding-and-departure edge rather than a working relationship, and the map is honest about that in the framing."
-  },
+  "explanation": "Daphne Oram was one of the two people who started the BBC Radiophonic Workshop in 1958. She left after less than a year to build her own electronic music studio, where she invented a way to turn drawings into sound. This puts her founding role on the map next to Delia Derbyshire's. The two never overlapped at the Workshop, so this is about a founding and a departure, not a working relationship.",
   "tags": ["technology"]
 }

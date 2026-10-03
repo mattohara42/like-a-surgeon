@@ -22,10 +22,7 @@
     },
     "whatToListenFor": "There isn't a before-and-after here: Ariwa is the room Mad Professor built to make dub in, so his whole catalogue was made inside it. Listen to any 'Dub Me Crazy' volume for a home studio's dub sound: a small, dry room, echo and reverb doing the work a bigger studio's space would otherwise do."
   },
-  "explanation": {
-    "age13": "Mad Professor built his own recording studio in his living room in 1979 and named it Ariwa. He has released almost everything he's made through it ever since.",
-    "adult": "Ariwa is unusual on this map as a label that is really one producer's own room, the same shape as Kling Klang for Kraftwerk. The edge exists mainly to make that relationship, already stated in Mad Professor's own `labels` field, visible as a line on the map."
-  },
+  "explanation": "Mad Professor built his own recording studio in his living room in 1979 and named it Ariwa, and he has released almost everything he has made through it ever since. That makes Ariwa unusual on this map, a label that is really one producer's own room, the same shape as Kling Klang for Kraftwerk. This connection mainly makes that relationship, already listed in Mad Professor's own labels, visible as a line on the map.",
   "tags": [
     "labels"
   ]

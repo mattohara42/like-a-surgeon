@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "The 808 carries almost the entire track: a hard, dry kick-and-hi-hat pattern with almost no live instrumentation layered over it, an early example of hip-hop production built to sound like a machine rather than to disguise one."
   },
-  "explanation": {
-    "age7": "Mantronix made their first song using a drum machine that Kurtis Mantronik had never used before, and taught himself how to program it during the recording session.",
-    "age13": "Kurtis Mantronik walked into the studio to record 'Fresh Is the Word' (1985) and found a Roland TR-808 he had never programmed. He taught himself during the session, and the resulting beat became the foundation of Mantronix's stripped-down, machine-forward style.",
-    "adult": "One of several documented 'self-taught in the room' 808 stories on this map (compare e-808-manparrish): a commercially failed drum machine, cheap enough to end up in small studios like this one, reprogrammed on the spot by producers with no formal training on it."
-  },
+  "explanation": "Kurtis Mantronik walked into the studio to record 'Fresh Is the Word' (1985) and found a Roland TR-808 he had never programmed. He taught himself during the session, and the beat became the foundation of Mantronix's stripped-down, machine-first style. It is one of several documented stories on this map, like Man Parrish's, of the 808 learned in the room: a drum machine that had failed in shops, cheap enough to end up in small studios, programmed on the spot by producers with no training on it.",
   "demoId": "demo-808-voices",
   "tags": ["technology"]
 }

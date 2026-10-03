@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "Wait for the pulse. A short row of bass notes repeats, bubbling, while its brightness slowly opens and closes as someone turns a filter knob. Nobody is playing those notes. The sequencer is. The musicians play over it: drifting Mellotron, echoing synth lines. Listen for the loop slightly changing pitch and tone over minutes, which is the hand on the knob, and for how long it keeps going without ever settling into a song."
   },
-  "explanation": {
-    "age7": "A machine played the same notes over and over by itself, and Tangerine Dream made music around it.",
-    "age13": "A sequencer is a unit that plays a short row of notes in a loop, over and over, without anyone touching the keys. Tangerine Dream's Moog had one, and on Phaedra that pulsing loop runs through the whole record while the band plays around it. It became the sound of a lot of electronic music afterwards.",
-    "adult": "Phaedra is often called the first commercial album to feature a sequencer. That is disputed, so the edge claims less: it's the record that put the sequencer's pulse at the centre of a hit. Everything later on this map that is driven by a machine playing a pattern, from the 808 to the 303, is a relative of this sound."
-  },
+  "explanation": "A sequencer is a unit that plays a short row of notes in a loop, over and over, without anyone touching the keys. Tangerine Dream's Moog had one, and on Phaedra that pulsing loop runs through the whole record while the band plays around it. Phaedra is often called the first commercial album to feature a sequencer, but that is disputed, so this claims less: it is the record that put the sequencer's pulse at the centre of a hit. It became the sound of a lot of electronic music afterwards, and everything later on this map driven by a machine playing a pattern, from the 808 to the 303, is related to it.",
   "tags": [
     "technology"
   ]

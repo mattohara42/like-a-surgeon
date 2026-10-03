@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "Almost the entire record is 808 and synthesizer, with the drum machine given none of the studio disguise a live band would demand. Compare the cowbell and clap to 'Planet Rock' and they are close to identical factory sounds."
   },
-  "explanation": {
-    "age7": "This song used the same drum machine as 'Planet Rock,' maybe even a little earlier.",
-    "age13": "Both this record and 'Planet Rock' are often called the first to build a whole song around the 808, and nobody has settled which came first. Both are true in the sense that matters: the machine had arrived and two different scenes reached for it at once.",
-    "adult": "A useful teaching case for tiering: the 'first' claim is popular-history common knowledge repeated in liner notes and retrospectives on both sides, but it is not resolvable from primary sources here, so it earns consensus rather than documented, with the dispute stated plainly rather than picking a winner."
-  },
+  "explanation": "Both this record and 'Planet Rock' are often called the first to build a whole song around the 808, and nobody has settled which came first. The claim is repeated in liner notes and retrospectives on both sides, but it cannot be settled from primary sources here, so it is held at consensus rather than documented, with the dispute stated rather than a winner picked. Both are true in the sense that matters: the machine had arrived and two different scenes reached for it at once.",
   "demoId": "demo-808-voices",
   "tags": [
     "technology"

@@ -22,11 +22,7 @@
     },
     "whatToListenFor": "Compare two snares. The 808's is a short burst of noise with a tuned ring under it, always identical, sitting cleanly in its own space. A snare lifted off a record brings the room with it: the drummer's touch, the tape compression, a trace of whatever else was playing at that instant. Listen for that smear of extra information. It is the sound of a recording rather than the sound of a circuit."
   },
-  "explanation": {
-    "age7": "He realised a drum sound taken from an old record sounded better than the one his machine made.",
-    "age13": "Drum machines make their drum sounds electronically, so every hit is identical and clean. In 1984 Marl accidentally captured a snare off a record and heard something the machine could not do: a real drummer hitting a real drum in a real room, with all the mess that comes with. From then on the drums on a hip-hop record mostly came off other records rather than out of a circuit.",
-    "adult": "The edge runs from the 808 because the comparison is the content: Marl's insight is legible only against what the drum machine already offered. The shift from synthesised to sampled percussion changes what a drum sound contains, carrying a performance, a room and a recording chain rather than a set of parameters, and it sets up the copyright regime that followed once the provenance of those sounds became a legal question."
-  },
+  "explanation": "This connection runs from the 808 because the comparison is the point. Drum machines make their drum sounds electronically, so every hit is identical and clean. In 1984 Marl accidentally captured a snare off a record and heard something the machine could not do: a real drummer hitting a real drum in a real room, with all the mess that comes with it. A sampled drum carries a performance, a room and a recording, not just settings. From then on the drums on a hip-hop record mostly came off other records rather than out of a circuit, and once people asked where those sounds came from, the copyright rules that followed were set up.",
   "tags": [
     "technology",
     "production"

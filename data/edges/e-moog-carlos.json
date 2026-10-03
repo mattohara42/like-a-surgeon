@@ -22,11 +22,7 @@
     },
     "whatToListenFor": "Listen for the attack of each note. A harpsichord or a violin has its own way of starting a sound. Here each line has a different electronic tone that Carlos set up by hand, then recorded one part at a time, because the machine played only one note at once. The parts are perfectly in time and slightly too clean. That buzzing, reedy brightness was the first synthesizer sound most listeners in 1968 had ever heard."
   },
-  "explanation": {
-    "age7": "Wendy Carlos used a Moog synthesizer to play Bach, and that record made the synthesizer famous.",
-    "age13": "The Moog could only play one note at a time, so Carlos recorded every part of the Bach separately and stacked them on tape. It took months. The album sold enormously and made record companies believe a synthesizer could sell records.",
-    "adult": "The machine had existed for three years before this record. The edge is about the moment it stopped being lab equipment in the public mind, which is a reception fact, well documented in sales and in the flood of Moog records that followed."
-  },
+  "explanation": "The Moog could only play one note at a time, so Carlos recorded every part of the Bach separately and stacked them on tape. It took months. The machine had existed for three years before this record, but this is the moment the public stopped seeing it as lab equipment. The album sold enormously and made record companies believe a synthesizer could sell records, which is well documented in its sales and the flood of Moog records that followed.",
   "tags": [
     "technology"
   ]

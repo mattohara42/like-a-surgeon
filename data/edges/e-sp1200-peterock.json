@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "Listen for the grain of the SP-1200's twelve-bit sound on the drums, a slight crunch on the snare and hi-hats. Then listen to the bass: it sounds rounded and dark, as if the top has been cut off. Cutting the top end is how producers of the period pulled a bassline out of a full record, and Pete Rock is one of the best known for it. The short memory still sets the structure: one horn phrase, over and over, with changes made by dropping parts in and out."
   },
-  "explanation": {
-    "age7": "Pete Rock was given an SP-1200 when he was seventeen and taught himself to make beats on it.",
-    "age13": "The rapper Freddie Foxx gave Pete Rock an SP-1200 when he was seventeen. It could only hold a few seconds of sound, and everything it recorded came out a little rough. Pete Rock learned to work inside those limits, finding one perfect horn line or bass part and building a whole song from it.",
-    "adult": "Documented as a learning and working relationship, in the same way as e-ms10-atkins: the claim rests on the producer's own account of his instrument, not on a session sheet for a particular record. Together with e-sp1200-marleymarl it shows the machine's aesthetic passing from one generation of New York producers to the next."
-  },
+  "explanation": "The rapper Freddie Foxx gave Pete Rock an SP-1200 when he was seventeen. It could only hold a few seconds of sound, and everything it recorded came out a little rough. Pete Rock learned to work inside those limits, finding one perfect horn line or bass part and building a whole song from it. Like Juan Atkins and his Korg, it is documented as learning and working with an instrument, resting on the producer's own account rather than a session sheet for a particular record. With Marley Marl's, it shows the machine's sound passing from one generation of New York producers to the next.",
   "demoId": "demo-sp1200-grit",
   "tags": [
     "technology",

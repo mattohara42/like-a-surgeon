@@ -20,10 +20,7 @@
     },
     "whatToListenFor": "'Bring the Noise' stacks dense layers of sirens, horn stabs and vocal snatches on top of each other, chaotic on purpose. 'Protect Ya Neck' takes the same cut-up instinct and strips it back to one or two grimy loops, murky and minimal rather than maximal, RZA's own turn on the same technique."
   },
-  "explanation": {
-    "age13": "The Bomb Squad, Public Enemy's production team, built beats out of many chopped-up samples layered on top of each other. RZA learned from that method but used far fewer samples, aiming for something darker and rawer instead.",
-    "adult": "This is the sampling-aesthetic lineage this dataset traces from the Bomb Squad's maximalism to RZA's minimalism: both build records almost entirely from other records cut into pieces, but where the Bomb Squad piles samples on for density and noise, RZA strips down to one or two loops for atmosphere and menace."
-  },
+  "explanation": "The Bomb Squad, Public Enemy's production team, built beats out of many chopped-up samples layered on top of each other. RZA learned from that method but used far fewer samples, aiming for something darker and rawer. Both built records almost entirely from other records cut into pieces, but where the Bomb Squad piled samples on for density and noise, RZA stripped down to one or two loops for atmosphere and menace, a line this map traces from maximal to minimal.",
   "tags": [
     "production"
   ]

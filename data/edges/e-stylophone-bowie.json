@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "Listen in the gaps between the sung lines for a thin, reedy, buzzing melody. It plays one note at a time, with no chords and no warmth. It is exactly the sound of the toy, and it is placed at the centre of a record about a man alone in space. The cheapness is part of what makes it sound lonely."
   },
-  "explanation": {
-    "age7": "A toy keyboard makes the buzzing sound on a famous song about an astronaut.",
-    "age13": "Bowie got a Stylophone, a toy you play with a metal pen, and wrote 'Space Oddity' around its thin buzzing sound. The song became his first big hit. A children's gadget ended up as the sound of an astronaut floating away from Earth.",
-    "adult": "The Stylophone is a single-voice toy, and Bowie used it as one rather than disguising it. That treatment of a limited machine as a distinctive voice, instead of a poor imitation of a better instrument, runs through a great deal of electronic music later on this map."
-  },
+  "explanation": "Bowie got a Stylophone, a toy you play with a metal pen, and wrote 'Space Oddity' around its thin buzzing sound. The song became his first big hit, and a children's gadget ended up as the sound of an astronaut floating away from Earth. It plays one note at a time, and Bowie used it as exactly that rather than disguising it. Treating a limited machine as a voice of its own, instead of a poor copy of a better instrument, runs through a great deal of the electronic music later on this map.",
   "demoId": "demo-stylophone",
   "tags": [
     "technology"

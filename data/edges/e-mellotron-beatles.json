@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "Listen to the opening seconds: a flute that isn't quite a flute. Each key on a Mellotron plays a strip of tape with a real flute note recorded on it, so the sound wobbles slightly and every note stops after about eight seconds. McCartney's chords sound a little out of tune with themselves because the flute recordings don't quite match. That wobble is a recording of a recording, playing back as an instrument."
   },
-  "explanation": {
-    "age7": "The strange flute at the start of 'Strawberry Fields Forever' comes from a machine that plays recordings on tape.",
-    "age13": "The Mellotron is a keyboard where each key plays a short tape of a real instrument. Paul McCartney used its flute sound for the start of 'Strawberry Fields Forever'. Because it's playing tapes, the sound wobbles and sounds a bit ghostly, and that's part of what makes the song feel dreamlike.",
-    "adult": "A pre-sampling sampler in everything but name (see A109 for why it's filed as `instrument`), used by the band this map treats as the studio-as-instrument ancestor of hip-hop production."
-  },
+  "explanation": "The Mellotron is a keyboard where each key plays a short tape of a real instrument, a sampler before samplers in everything but name. Paul McCartney used its flute sound for the start of 'Strawberry Fields Forever'. Because it is playing tapes, the sound wobbles and sounds a bit ghostly, and that is part of what makes the song feel dreamlike. It was used by the band this map treats as the ancestor of hip-hop production, for using the studio as an instrument.",
   "tags": [
     "technology"
   ]

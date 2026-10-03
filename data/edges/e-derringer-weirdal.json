@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "Derringer's own hit is straightforward hard rock guitar. On 'Eat It' he applies the same playing to a note-for-note re-creation of someone else's solo, the session-guitarist skill his solo career doesn't usually call for."
   },
-  "explanation": {
-    "age7": "Rick Derringer, a rock guitar player, produced Weird Al's albums for about ten years and even replayed a famous guitar solo for one of his songs.",
-    "age13": "Derringer produced every Weird Al Yankovic album from 1983 to 1992, and personally re-played Michael Jackson's 'Beat It' guitar solo for the 'Eat It' parody rather than using a sample.",
-    "adult": "A straightforward producer-to-artist credit spanning nearly a decade, notable mainly for how much of a stylistic detour it was from Derringer's own hard rock catalogue, filed here as crossLineage since Yankovic sits outside the enum's genre lineages entirely."
-  },
+  "explanation": "Derringer produced every Weird Al Yankovic album from 1983 to 1992, and played Michael Jackson's 'Beat It' guitar solo again himself for the 'Eat It' parody rather than using a sample. It is a straightforward producer credit over nearly a decade, notable mostly as a big detour from Derringer's own hard rock records. It counts as crossing lineages because Yankovic sits outside the map's genre lineages entirely.",
   "tags": [
     "production"
   ]

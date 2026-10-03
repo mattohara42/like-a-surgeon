@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "Ignore the squelch for a minute and listen underneath it. The drums are plain and steady: a kick on every beat, claps, and a hi-hat that never changes. That flat, clean grid is what lets the 303 line move so much without the record falling apart."
   },
-  "explanation": {
-    "age7": "The drums on the first acid house record came from a small Roland drum machine.",
-    "age13": "Everyone remembers the 303 on 'Acid Tracks', but a record needs drums too. Those came from a Roland TR-707, a plainer and less famous machine than the famous 808 and 909.",
-    "adult": "Acid house's origin story is usually told as one machine, the 303. The drums under it were a 707, a less celebrated box, which is a reminder that the genre was built from whatever Roland gear was to hand rather than from a chosen kit."
-  },
+  "explanation": "Acid house's origin story is usually told as one machine, the 303. But a record needs drums too, and the drums under 'Acid Tracks' came from a Roland TR-707, a plainer and less celebrated machine than the famous 808 and 909. The genre was built from whatever Roland gear was to hand, not from a chosen kit.",
   "tags": [
     "technology"
   ]

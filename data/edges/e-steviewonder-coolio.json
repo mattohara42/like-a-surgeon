@@ -20,9 +20,6 @@
     },
     "whatToListenFor": "Wonder's song is a dark, circling string-synth figure with choir and percussion, a song about people wasting their lives looking back or looking ahead. Coolio's version replays the same figure, slower and heavier, with L.V.'s chorus stacked like a choir, and turns the subject into one young man's life in violence. Listen to how little of the musical idea needed to change."
   },
-  "explanation": {
-    "age13": "Coolio's 'Gangsta's Paradise', one of the biggest songs of 1995, is built on Stevie Wonder's 'Pastime Paradise' from 1976. Wonder only agreed to it after Coolio took the swear words out.",
-    "adult": "Strictly an interpolation, the part replayed rather than lifted from the record, which is why the type is sample in this schema's sense rather than a tape sample. The writer's veto over the lyric is a rare documented case of the source artist shaping the new record's words."
-  },
+  "explanation": "Coolio's 'Gangsta's Paradise', one of the biggest songs of 1995, is built on Stevie Wonder's 'Pastime Paradise' from 1976. Strictly it is an interpolation, the part played again rather than lifted from the record, which still counts as a sample on this map. Wonder only agreed to it after Coolio took the swear words out, a rare documented case of the original artist shaping the new record's words.",
   "tags": []
 }

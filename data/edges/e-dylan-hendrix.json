@@ -20,9 +20,6 @@
     },
     "whatToListenFor": "Dylan's version is two and a half minutes of acoustic guitar, harmonica, bass and drums, the same three chords going round. Hendrix keeps the three chords and turns each gap between verses into a guitar section with its own sound, including a slide passage and a wah-wah passage. Then listen to a Dylan live version from any year after 1974: he plays Hendrix's arrangement."
   },
-  "explanation": {
-    "age13": "Jimi Hendrix recorded Bob Dylan's song 'All Along the Watchtower' a few weeks after it came out. Dylan liked Hendrix's version so much that he has played the song Hendrix's way ever since.",
-    "adult": "A cover that changed the original's author. It is the clearest case on the map of an influence edge with a return current, and it ties the Dylan node into the Hendrix and Chas Chandler cluster in London."
-  },
+  "explanation": "Jimi Hendrix recorded Bob Dylan's song 'All Along the Watchtower' a few weeks after it came out. Dylan liked Hendrix's version so much that he has played the song Hendrix's way ever since. A cover changed the original's author, the clearest case on the map of influence flowing back the other way, and it ties Dylan to the Hendrix and Chas Chandler cluster in London.",
   "tags": []
 }

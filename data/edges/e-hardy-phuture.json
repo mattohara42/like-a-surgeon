@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "'Acid Tracks' was reportedly played at the Music Box on cassette for months before release; Hardy's sets are part of why a twelve-minute record built from one squelching filter sweep had an audience ready for it."
   },
-  "explanation": {
-    "age7": "Before \"Acid Tracks\" was an official record, Ron Hardy was already playing an early tape of it at the Music Box.",
-    "age13": "Phuture tested \"Acid Tracks\" at the Music Box on tape before it was pressed, the same pipeline Larry Heard and Marshall Jefferson used.",
-    "adult": "Ties this dataset's existing e-303-phuture edge (the machine-as-protagonist story) to the scene mechanism that actually got the record heard and eventually pressed."
-  },
+  "explanation": "Phuture tested \"Acid Tracks\" on tape at the Music Box before it was pressed, the same route Larry Heard and Marshall Jefferson used. It ties the story of the 303 machine to the club that actually got the record heard and, in the end, pressed.",
   "tags": [
     "production",
     "technology"

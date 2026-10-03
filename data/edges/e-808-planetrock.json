@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "The handclap and the cowbell are unmistakably the machine, straight out of the box with no attempt to hide it. The kick's decay is set long so it rings on like a bass note. Once you know those three sounds you will hear them in a thousand records after this one."
   },
-  "explanation": {
-    "age7": "The drum sounds on this song come from a machine, and you can hear that it is a machine.",
-    "age13": "The 808 had failed in shops because it did not sound like real drums. On 'Planet Rock' nobody tries to hide that. Sounding electronic is the point, and after this record it stays the point.",
-    "adult": "The moment the 808's perceived defect is reframed as its value. Everything downstream in hip-hop's low end follows from this reframing."
-  },
+  "explanation": "The 808 had failed in shops because it did not sound like real drums. On 'Planet Rock' nobody tries to hide that. Sounding electronic is the point, and after this record it stays the point: the machine's flaw became its value, and everything that follows in hip-hop's low end comes from that.",
   "demoId": "demo-808-voices",
   "tags": [
     "technology"

@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "In the Stravinsky, wait for the Infernal Dance to begin: the whole orchestra hits one chord together, loud and sudden. Now play 'Planet Rock' and listen for the short orchestral blast that punches in between the electronic beats. That is a single chord from a recording like the first one, cut short, pitched down and played from a keyboard. A century of concert music has become a drum hit."
   },
-  "explanation": {
-    "age7": "A famous orchestra sound became a blast on a hip-hop record, thanks to a computer that could record sounds.",
-    "age13": "The Fairlight came with a built-in sound of an orchestra playing one loud chord, taken from a recording of Stravinsky's 'Firebird'. On 'Planet Rock', that orchestra blast punches in between the drum machine beats. After this record the 'orchestra hit' turned up on so many songs that it became one of the most famous sounds of the 1980s.",
-    "adult": "The ORCH5 story is the clearest early example on the map of sampling as a cultural transfer: a fragment of a European concert score, digitised by a studio engineer, shipped as a factory preset, and made into a hip-hop gesture. Fink's essay is careful about the chain of custody, which makes this one of the better-documented sounds in the dataset."
-  },
+  "explanation": "The Fairlight came with a built-in sound, ORCH5, of an orchestra playing one loud chord, taken from a recording of Stravinsky's 'Firebird'. On 'Planet Rock', that orchestra blast punches in between the drum machine beats. After this record the 'orchestra hit' turned up on so many songs that it became one of the most famous sounds of the 1980s. It is the clearest early example on the map of sampling carrying culture from one world to another: a piece of a European concert score, digitised by a studio engineer, shipped as a factory preset, and made into a hip-hop gesture. Robert Fink's essay traces each step carefully, which makes this one of the best-documented sounds on the map.",
   "tags": [
     "technology",
     "production"

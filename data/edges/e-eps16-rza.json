@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "Listen to the length of the loop. The piano phrase in 'C.R.E.A.M.' runs for bars, a whole musical sentence repeating, which the SP-1200's ten seconds made hard. The sound is also cleaner at the top, without the SP's crunch, though RZA kept it dusty and dark. That's the machine allowing the long, sad phrase to become the song's whole mood."
   },
-  "explanation": {
-    "age7": "RZA made Wu-Tang beats on this keyboard sampler. It could hold longer pieces of music than his old machine.",
-    "age13": "RZA swapped his SP-1200 for an Ensoniq EPS-16 Plus, a keyboard that could sample longer and clearer. That let him loop whole musical phrases, like the sad piano on 'C.R.E.A.M.', instead of short chopped bits.",
-    "adult": "A contrast edge to the SP-1200 records on the map. More memory and sixteen-bit sound changed the unit of composition from the fragment to the phrase."
-  },
+  "explanation": "RZA swapped his SP-1200 for an Ensoniq EPS-16 Plus, a keyboard that could sample longer and clearer, with more memory and sixteen-bit sound. That let him loop whole musical phrases, like the sad piano on 'C.R.E.A.M.', instead of short chopped bits: the unit he built songs from changed from the fragment to the phrase, in contrast to the SP-1200 records on the map.",
   "tags": [
     "technology",
     "production"

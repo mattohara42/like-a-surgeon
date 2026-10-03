@@ -21,11 +21,7 @@
     },
     "whatToListenFor": "Same producer, same short riff-and-compression approach, a year apart. The Who ask for the Kinks' sound specifically, and Talmy is the person who could actually supply it."
   },
-  "explanation": {
-    "age7": "Shel Talmy also recorded the Who's first hit, using some of the same tricks he'd used for the Kinks.",
-    "age13": "Talmy produced the Who's 'I Can't Explain' (1965) and their debut album, applying a version of the same compressed guitar sound he had just used on the Kinks. The band split from him in 1966 over contract terms.",
-    "adult": "The Who's contract with Talmy ran through Decca's UK Brunswick imprint specifically, which is why the imprint's own record in this dataset names the same 1966 split as the reason its Who releases stopped."
-  },
+  "explanation": "Talmy produced the Who's 'I Can't Explain' (1965) and their first album, applying a version of the same compressed guitar sound he had just used on the Kinks. The Who's contract with Talmy ran through Decca's UK Brunswick label in particular. The band split from him in 1966 over contract terms, which is why Brunswick's own entry gives the same split as the reason its Who releases stopped.",
   "tags": [
     "production"
   ]

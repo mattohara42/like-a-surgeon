@@ -21,10 +21,7 @@
     },
     "whatToListenFor": "The famous opening is the DMX on its own: a kick drum firing in a stuttering sixteenth-note burst, then settling into a steady beat. Listen for how mechanical and exact it is, and how it keeps going unchanged under everything else. That opening is why DJs played it."
   },
-  "explanation": {
-    "age13": "'Blue Monday' starts with a drum machine, an Oberheim DMX, playing a fast, stuttering kick drum. Bernard Sumner built his own gadget to keep it in time with the synthesizers, because the standard way of connecting them didn't exist yet.",
-    "adult": "A technological edge with a specific, well-known sound attached. The home-made sync circuit is part of the story: it is what a band had to build to make machines play together before MIDI."
-  },
+  "explanation": "'Blue Monday' starts with a drum machine, an Oberheim DMX, playing a fast, stuttering kick drum: a well-known sound tied to one machine. Bernard Sumner built his own gadget to keep it in time with the synthesizers, because the standard way of connecting them, MIDI, didn't exist yet. That home-made circuit is part of the story: it is what a band had to build to make machines play together.",
   "tags": [
     "technology"
   ]
