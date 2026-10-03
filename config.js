@@ -244,27 +244,12 @@ export const CONFIG = {
     slideMs: 220,
     items: [
       { key: 'show', el: 'layers', glyph: '◎', color: '#3ddfa4' },
-      { key: 'read', el: 'registers', glyph: 'Aa', color: '#f3c46a' },
     ],
   },
 
   layers: {
     defaults: { scenes: true, labels: false, machines: true },
     storageKey: 'lineage.layers.v1',
-  },
-
-  // The reading surface (docs/m3-architecture.md). Registers are offered in
-  // this order, and only the ones every reader-facing record carries appear
-  // at all (Q15), so `age7` stays listed here and stays hidden until the
-  // Track D Kid pass is complete.
-  reading: {
-    registers: [
-      { key: 'age7', label: 'Kid' },
-      { key: 'age13', label: 'Teen' },
-      { key: 'adult', label: 'Adult' },
-    ],
-    defaultRegister: 'age13',
-    storageKey: 'lineage.register.v1',
   },
 
   // Type scale for the reading surface (M3 step 5). Applied as CSS custom

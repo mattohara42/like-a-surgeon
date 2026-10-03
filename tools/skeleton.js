@@ -42,37 +42,6 @@ function pickFields(record, fields) {
   return out;
 }
 
-// Every reader-facing register object in the data: blurbs, edge
-// explanations, demo captions, thread text. Same set reading/registers.js
-// used to walk on the client, moved here because the client no longer has
-// the prose at startup.
-function* registerObjects(records) {
-  for (const shard of ['artists', 'machines', 'scenes', 'labels']) {
-    for (const r of Object.values(records[shard])) if (r.blurb) yield r.blurb;
-  }
-  for (const e of Object.values(records.edges)) if (e.explanation) yield e.explanation;
-  for (const d of Object.values(records.demos)) if (d.caption) yield d.caption;
-  for (const t of Object.values(records.threads)) {
-    if (t.intro) yield t.intro;
-    if (t.outro) yield t.outro;
-    for (const step of t.steps ?? []) if (step.framing) yield step.framing;
-  }
-}
-
-// The register keys that every data register object carries, non-empty
-// (Q15). The client intersects this with its own configured registers and
-// interface copy, so the Kid register still appears on its own the day the
-// Track D pass completes (A11).
-function completeRegisters(records) {
-  let complete = null;
-  for (const obj of registerObjects(records)) {
-    const keys = Object.keys(obj).filter((k) => typeof obj[k] === 'string' && obj[k].trim());
-    complete = complete ? complete.filter((k) => keys.includes(k)) : keys;
-    if (complete.length === 0) break;
-  }
-  return complete ?? [];
-}
-
 // Reads every record once and returns both halves: the skeleton index and
 // the full records, so bundle.js can write the per-record files from the
 // same read.
@@ -91,7 +60,7 @@ export function readDataset(dataDir) {
       }
     }
   }
-  const index = { meta: manifest.meta, registers: completeRegisters(records) };
+  const index = { meta: manifest.meta };
   for (const shard of Object.keys(records)) {
     const fields = SKELETON_FIELDS[shard];
     index[shard] = {};

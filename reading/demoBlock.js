@@ -1,7 +1,7 @@
 // The demo inside a panel (docs/m4-architecture.md section 6): play and
 // stop, the switch between versions (A/B, straight or chopped, dry or
 // through an effect), pads, sliders, a row of step lights, and the
-// caption in the reader's register.
+// caption.
 //
 // Controls are native buttons and range inputs, so keyboard, touch and
 // screen readers work without custom widgets.
@@ -11,7 +11,6 @@
 
 import { COPY, LANE_LABELS, CONTROL_LABELS, FX_LABELS } from './copy.js';
 import { h } from './dom.js';
-import { pick } from './registers.js';
 import { createPlayer } from '../audio/player.js';
 import { CONFIG } from '../config.js';
 
@@ -37,16 +36,15 @@ export function withEdgeCaption(demo, edge) {
 }
 
 export function renderDemoBlock(demo, ctx) {
-  const reg = ctx.register;
-  const heading = h('h3', {}, pick(COPY.demo.heading, reg));
+  const heading = h('h3', {}, COPY.demo.heading);
   if (!demo) return null;
-  if (demo.status === 'draft') return [heading, h('p', { class: 'note' }, pick(COPY.demo.draft, reg))];
+  if (demo.status === 'draft') return [heading, h('p', { class: 'note' }, COPY.demo.draft)];
 
   stopDemo();
   const player = createPlayer(ctx.audio, demo);
   current = player;
   const params = demo.params;
-  const failed = h('p', { class: 'note demo-failed', hidden: true }, pick(COPY.demo.failed, reg));
+  const failed = h('p', { class: 'note demo-failed', hidden: true }, COPY.demo.failed);
   const guard = (promise) =>
     promise.catch((err) => {
       console.error(err);
@@ -69,7 +67,7 @@ export function renderDemoBlock(demo, ctx) {
   // Play / stop.
   const playButton = h('button', { type: 'button', class: 'demo-play', 'aria-pressed': 'false' });
   function setPlaying(on) {
-    playButton.textContent = `${on ? '■' : '▶'} ${pick(on ? COPY.demo.stop : COPY.demo.play, reg)}`;
+    playButton.textContent = `${on ? '■' : '▶'} ${(on ? COPY.demo.stop : COPY.demo.play)}`;
     playButton.setAttribute('aria-pressed', String(on));
   }
   setPlaying(false);
@@ -92,7 +90,7 @@ export function renderDemoBlock(demo, ctx) {
       h(
         'button',
         { type: 'button', class: 'demo-side', 'aria-pressed': String(idx === 0) },
-        `${letters[idx]} · ${pick(v.label, reg)}`,
+        `${letters[idx]} · ${v.label}`,
       ),
     );
     buttons.forEach((button, idx) =>
@@ -101,14 +99,14 @@ export function renderDemoBlock(demo, ctx) {
         buttons.forEach((b, j) => b.setAttribute('aria-pressed', String(j === idx)));
       }),
     );
-    sides = h('div', { class: 'demo-sides', role: 'group', 'aria-label': pick(COPY.demo.version, reg) }, buttons);
+    sides = h('div', { class: 'demo-sides', role: 'group', 'aria-label': COPY.demo.version }, buttons);
   }
 
   // Pads.
   const pads = params.pads
     ? h(
         'div',
-        { class: 'demo-pads', role: 'group', 'aria-label': pick(COPY.demo.pads, reg) },
+        { class: 'demo-pads', role: 'group', 'aria-label': COPY.demo.pads },
         params.pads.map((lane) =>
           h('button', { type: 'button', class: 'demo-pad', onClick: () => guard(player.hit(lane)) }, LANE_LABELS[lane] ?? lane),
         ),
@@ -132,7 +130,7 @@ export function renderDemoBlock(demo, ctx) {
     };
     keys = h(
       'div',
-      { class: 'demo-keys', role: 'group', 'aria-label': pick(COPY.demo.keys, reg) },
+      { class: 'demo-keys', role: 'group', 'aria-label': COPY.demo.keys },
       params.keys.map((note) => {
         const name = NAMES[note % 12];
         const key = h('button', { type: 'button', class: `demo-key${name.length > 1 ? ' sharp' : ''}` }, `${name}${Math.floor(note / 12) - 1}`);
@@ -167,7 +165,7 @@ export function renderDemoBlock(demo, ctx) {
   // engine's setting, so it carries from one demo to the next.
   const volume = h('input', { type: 'range', class: 'demo-volume', min: 0, max: 1, step: 'any', value: ctx.audio.volume });
   volume.addEventListener('input', () => ctx.audio.setVolume(Number(volume.value)));
-  controls.push(h('label', { class: 'demo-control' }, h('span', {}, pick(COPY.demo.volume, reg)), volume));
+  controls.push(h('label', { class: 'demo-control' }, h('span', {}, COPY.demo.volume), volume));
 
   return h(
     'section',
@@ -179,8 +177,8 @@ export function renderDemoBlock(demo, ctx) {
     pads,
     keys,
     h('div', { class: 'demo-controls' }, controls),
-    h('p', { class: 'demo-caption' }, pick(demo.caption, reg)),
-    h('p', { class: 'note' }, pick(COPY.demo.synthesized, reg)),
+    h('p', { class: 'demo-caption' }, demo.caption),
+    h('p', { class: 'note' }, COPY.demo.synthesized),
     failed,
   );
 }

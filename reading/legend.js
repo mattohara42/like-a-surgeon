@@ -14,7 +14,6 @@
 import { CONFIG } from '../config.js';
 import { COPY } from './copy.js';
 import { h, tierSwatch } from './dom.js';
-import { pick } from './registers.js';
 
 const TIERS = ['documented', 'consensus', 'asserted'];
 
@@ -48,13 +47,12 @@ function readableDate(iso) {
 
 export function createLegend(root, meta) {
   let open = loadOpen();
-  let register = CONFIG.reading.defaultRegister;
 
   function stamp() {
     const parts = [];
-    if (meta.version) parts.push(`${pick(COPY.legend.version, register)} ${meta.version}`);
+    if (meta.version) parts.push(`${COPY.legend.version} ${meta.version}`);
     const date = readableDate(meta.generatedAt);
-    if (date) parts.push(`${pick(COPY.legend.updated, register)} ${date}`);
+    if (date) parts.push(`${COPY.legend.updated} ${date}`);
     // The link to the card view moved to its own place (Q41, main.js).
     return parts.length ? h('p', { class: 'legend-stamp' }, parts.join(' · ')) : null;
   }
@@ -78,11 +76,11 @@ export function createLegend(root, meta) {
             type: 'button',
             class: 'legend-reopen',
             'aria-expanded': 'false',
-            'aria-label': pick(COPY.legend.reopen, register),
+            'aria-label': COPY.legend.reopen,
             onClick: () => setOpen(true),
           },
           h('span', { class: 'legend-reopen-swatches', 'aria-hidden': 'true' }, TIERS.map((tier) => tierSwatch(tier))),
-          h('span', {}, pick(COPY.legend.title, register)),
+          h('span', {}, COPY.legend.title),
         ),
       );
       return;
@@ -91,14 +89,14 @@ export function createLegend(root, meta) {
     const header = h(
       'div',
       { class: 'legend-header' },
-      h('span', { class: 'legend-title' }, pick(COPY.legend.title, register)),
+      h('span', { class: 'legend-title' }, COPY.legend.title),
       h(
         'button',
         {
           type: 'button',
           class: 'legend-close',
           'aria-expanded': 'true',
-          'aria-label': pick(COPY.legend.close, register),
+          'aria-label': COPY.legend.close,
           onClick: () => setOpen(false),
         },
         '×',
@@ -107,13 +105,13 @@ export function createLegend(root, meta) {
     const body = h(
       'div',
       { id: 'legend-body' },
-      h('p', { class: 'legend-intro' }, pick(COPY.legend.intro, register)),
+      h('p', { class: 'legend-intro' }, COPY.legend.intro),
       TIERS.map((tier) =>
         h(
           'div',
           { class: 'legend-row' },
-          h('span', { class: 'tier' }, tierSwatch(tier), pick(COPY.tiers[tier].name, register)),
-          h('p', { class: 'legend-explain' }, pick(COPY.tiers[tier].explain, register)),
+          h('span', { class: 'tier' }, tierSwatch(tier), COPY.tiers[tier].name),
+          h('p', { class: 'legend-explain' }, COPY.tiers[tier].explain),
         ),
       ),
     );
@@ -124,10 +122,5 @@ export function createLegend(root, meta) {
   root.setAttribute('aria-label', 'Confidence legend');
   root.style.bottom = `${CONFIG.viewport.fitBottomInsetPx}px`;
 
-  return {
-    setRegister(next) {
-      register = next;
-      draw();
-    },
-  };
+  draw();
 }

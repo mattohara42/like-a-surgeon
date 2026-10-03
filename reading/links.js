@@ -10,7 +10,6 @@
 import { CONFIG } from '../config.js';
 import { COPY } from './copy.js';
 import { h } from './dom.js';
-import { pick } from './registers.js';
 
 // What to search for, for one side of an edge's trackPair (Q17, A78):
 // absent -> "artist title", a string -> that query, false -> no link.
@@ -20,9 +19,9 @@ export function trackPairQuery(side) {
   return [side.artist, side.title].filter(Boolean).join(' ') || null;
 }
 
-export function youtubeLink(query, register) {
+export function youtubeLink(query) {
   if (!query) return null;
-  const label = pick(COPY.links.youtube, register);
+  const label = COPY.links.youtube;
   return h(
     'a',
     {
@@ -30,7 +29,7 @@ export function youtubeLink(query, register) {
       href: `${CONFIG.links.youtubeSearchUrl}${encodeURIComponent(query)}`,
       target: '_blank',
       rel: 'noopener noreferrer',
-      'aria-label': `${label}: ${query} (${pick(COPY.links.newTab, register)})`,
+      'aria-label': `${label}: ${query} (${COPY.links.newTab})`,
     },
     `${label} ↗`,
   );

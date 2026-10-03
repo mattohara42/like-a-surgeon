@@ -122,12 +122,6 @@ export function createPanel(el, { renderTarget, renderLoading, renderFailed, onN
     back,
     isOpen,
     current: () => current,
-    // Re-draw in place, for a register change. Keeps the stack and scroll
-    // position's meaning; does not move focus.
-    redraw: () => {
-      if (!current) return;
-      draw({ scrollTop: el.scrollTop });
-    },
     // Width the drawer covers right now, for the camera inset. offsetWidth
     // ignores the slide transform, so this is correct mid-animation.
     coveredWidth: () => (isOpen() ? el.offsetWidth : 0),

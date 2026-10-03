@@ -18,7 +18,6 @@
 import { CONFIG } from '../config.js';
 import { COPY, EDGE_TYPE_LABELS } from './copy.js';
 import { h } from './dom.js';
-import { pick } from './registers.js';
 import { buildHops } from './hops.js';
 
 const TARGET = { kind: 'six', id: 'game' };
@@ -42,7 +41,6 @@ export function createSixDegrees(chipEl, { nodes, nodesById, edges, edgesById, s
     return n.kind === 'artist' && d >= minStartHops && d <= maxHops && hops.neighbours(n.id).length >= minStartLinks;
   });
 
-  let register = null;
   // { start, steps: [{ id, edgeId }], route: [{ id, edgeId }] | null }
   // `route` is the revealed shortest route from the current stop.
   let game = null;
@@ -110,17 +108,17 @@ export function createSixDegrees(chipEl, { nodes, nodesById, edges, edgesById, s
       chipEl.replaceChildren();
       return;
     }
-    const label = `${pick(COPY.sixDegrees.chip, register)} · ${game.steps.length} ${pick(COPY.sixDegrees.hopsWord, register)}`;
+    const label = `${COPY.sixDegrees.chip} · ${game.steps.length} ${COPY.sixDegrees.hopsWord}`;
     chipEl.hidden = false;
     chipEl.replaceChildren(
-      h('button', { type: 'button', class: 'thread-back', 'aria-label': `${pick(COPY.sixDegrees.backTo, register)}: ${label}`, onClick: show }, `↩ ${label}`),
-      h('button', { type: 'button', class: 'thread-end', 'aria-label': pick(COPY.sixDegrees.end, register), onClick: end }, '×'),
+      h('button', { type: 'button', class: 'thread-back', 'aria-label': `${COPY.sixDegrees.backTo}: ${label}`, onClick: show }, `↩ ${label}`),
+      h('button', { type: 'button', class: 'thread-end', 'aria-label': COPY.sixDegrees.end, onClick: end }, '×'),
     );
   }
 
   // What links two stops, in a few words: the edge type, or the scene.
   function linkLabel(step, ctx) {
-    if (!step.edgeId) return pick(COPY.sixDegrees.sceneLink, ctx.register);
+    if (!step.edgeId) return COPY.sixDegrees.sceneLink;
     return EDGE_TYPE_LABELS[edgesById.get(step.edgeId)?.type] ?? '';
   }
 
@@ -150,28 +148,28 @@ export function createSixDegrees(chipEl, { nodes, nodesById, edges, edgesById, s
     return h(
       'div',
       { class: 'thread-nav' },
-      h('button', { type: 'button', class: 'thread-again', onClick: () => begin(game.start) }, pick(COPY.sixDegrees.sameStart, ctx.register)),
-      h('button', { type: 'button', class: 'thread-next', onClick: () => begin() }, `${pick(COPY.sixDegrees.newStart, ctx.register)} →`),
+      h('button', { type: 'button', class: 'thread-again', onClick: () => begin(game.start) }, COPY.sixDegrees.sameStart),
+      h('button', { type: 'button', class: 'thread-next', onClick: () => begin() }, `${COPY.sixDegrees.newStart} →`),
     );
   }
 
   function page(ctx, ...children) {
-    return h('article', { class: 'panel-body thread six' }, h('div', { class: 'kicker' }, pick(COPY.sixDegrees.kicker, ctx.register)), ...children);
+    return h('article', { class: 'panel-body thread six' }, h('div', { class: 'kicker' }, COPY.sixDegrees.kicker), ...children);
   }
 
   function render(ctx) {
     if (refused) {
       const name = nameOf(refused.id);
       const why = refused.reason === 'target'
-        ? pick(COPY.sixDegrees.isTarget, ctx.register)
+        ? COPY.sixDegrees.isTarget
         : refused.reason === 'none'
-          ? `${name} ${pick(COPY.sixDegrees.noRoute, ctx.register)}`
-          : `${name} ${pick(COPY.sixDegrees.isAway, ctx.register)} ${refused.hops} ${pick(COPY.sixDegrees.tooFar, ctx.register)}`;
+          ? `${name} ${COPY.sixDegrees.noRoute}`
+          : `${name} ${COPY.sixDegrees.isAway} ${refused.hops} ${COPY.sixDegrees.tooFar}`;
       return page(
         ctx,
         h('h2', {}, name),
         h('p', { class: 'body' }, why),
-        h('div', { class: 'thread-nav' }, h('button', { type: 'button', class: 'thread-next', onClick: () => begin() }, `${pick(COPY.sixDegrees.newStart, ctx.register)} →`)),
+        h('div', { class: 'thread-nav' }, h('button', { type: 'button', class: 'thread-next', onClick: () => begin() }, `${COPY.sixDegrees.newStart} →`)),
       );
     }
 
@@ -179,13 +177,13 @@ export function createSixDegrees(chipEl, { nodes, nodesById, edges, edgesById, s
     if (won()) {
       const best = par();
       const score = taken === best
-        ? pick(COPY.sixDegrees.onPar, ctx.register)
-        : `${pick(COPY.sixDegrees.shortestWas, ctx.register)} ${best}.`;
+        ? COPY.sixDegrees.onPar
+        : `${COPY.sixDegrees.shortestWas} ${best}.`;
       return page(
         ctx,
-        h('h2', {}, pick(COPY.sixDegrees.won, ctx.register)),
-        h('p', { class: 'body' }, `${nameOf(game.start)} → ${nameOf(targetId)}: ${taken} ${pick(COPY.sixDegrees.hopsWord, ctx.register)}. ${score}`),
-        h('h3', {}, pick(COPY.sixDegrees.yourRoute, ctx.register)),
+        h('h2', {}, COPY.sixDegrees.won),
+        h('p', { class: 'body' }, `${nameOf(game.start)} → ${nameOf(targetId)}: ${taken} ${COPY.sixDegrees.hopsWord}. ${score}`),
+        h('h3', {}, COPY.sixDegrees.yourRoute),
         routeList(game.steps, game.start, ctx),
         againButtons(ctx),
       );
@@ -202,26 +200,26 @@ export function createSixDegrees(chipEl, { nodes, nodesById, edges, edgesById, s
     return page(
       ctx,
       h('h2', {}, `${nameOf(game.start)} → ${nameOf(targetId)}`),
-      taken === 0 ? h('p', { class: 'body' }, pick(COPY.sixDegrees.intro, ctx.register)) : null,
+      taken === 0 ? h('p', { class: 'body' }, COPY.sixDegrees.intro) : null,
       h(
         'p',
         { class: `six-count${over ? ' over' : ''}` },
-        `${pick(COPY.sixDegrees.hopsLabel, ctx.register)} ${taken} / ${maxHops}`,
-        over ? ` · ${pick(COPY.sixDegrees.overLimit, ctx.register)}` : '',
+        `${COPY.sixDegrees.hopsLabel} ${taken} / ${maxHops}`,
+        over ? ` · ${COPY.sixDegrees.overLimit}` : '',
       ),
-      h('h3', {}, `${pick(COPY.sixDegrees.youAreAt, ctx.register)} ${nameOf(at)}`),
+      h('h3', {}, `${COPY.sixDegrees.youAreAt} ${nameOf(at)}`),
       h(
         'div',
         { class: 'six-here' },
-        h('button', { type: 'button', class: 'link-row', onClick: () => ctx.goNode(at) }, pick(COPY.sixDegrees.readStop, ctx.register)),
+        h('button', { type: 'button', class: 'link-row', onClick: () => ctx.goNode(at) }, COPY.sixDegrees.readStop),
         last?.edgeId
-          ? h('button', { type: 'button', class: 'link-row', onClick: () => ctx.goEdge(last.edgeId) }, pick(COPY.sixDegrees.readLink, ctx.register))
+          ? h('button', { type: 'button', class: 'link-row', onClick: () => ctx.goEdge(last.edgeId) }, COPY.sixDegrees.readLink)
           : null,
       ),
       game.route
-        ? h('div', { class: 'six-reveal' }, h('h3', {}, pick(COPY.sixDegrees.routeHeading, ctx.register)), routeList(game.route, at, ctx))
+        ? h('div', { class: 'six-reveal' }, h('h3', {}, COPY.sixDegrees.routeHeading), routeList(game.route, at, ctx))
         : null,
-      h('h3', {}, pick(COPY.sixDegrees.whereNext, ctx.register)),
+      h('h3', {}, COPY.sixDegrees.whereNext),
       h(
         'div',
         { class: 'six-choices' },
@@ -237,11 +235,13 @@ export function createSixDegrees(chipEl, { nodes, nodesById, edges, edgesById, s
       h(
         'div',
         { class: 'thread-nav' },
-        game.route ? null : h('button', { type: 'button', class: 'thread-again', onClick: reveal }, pick(COPY.sixDegrees.showRoute, ctx.register)),
-        h('button', { type: 'button', class: 'thread-again', onClick: () => begin() }, pick(COPY.sixDegrees.newStart, ctx.register)),
+        game.route ? null : h('button', { type: 'button', class: 'thread-again', onClick: reveal }, COPY.sixDegrees.showRoute),
+        h('button', { type: 'button', class: 'thread-again', onClick: () => begin() }, COPY.sixDegrees.newStart),
       ),
     );
   }
+
+  drawChip();
 
   return {
     available: () => available && starts.length > 0,
@@ -259,10 +259,6 @@ export function createSixDegrees(chipEl, { nodes, nodesById, edges, edgesById, s
     // Called on every panel change (null when the drawer closes).
     noticeTarget(target) {
       showing = target?.kind === 'six';
-      drawChip();
-    },
-    setRegister(next) {
-      register = next;
       drawChip();
     },
   };

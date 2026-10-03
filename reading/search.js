@@ -14,7 +14,6 @@
 import { CONFIG } from '../config.js';
 import { COPY, KIND_LABELS } from './copy.js';
 import { h } from './dom.js';
-import { pick } from './registers.js';
 import { lineageColor } from '../render/lineages.js';
 
 // "Motörhead!" -> "motorhead", "Atkins, Juan" -> "atkins juan"
@@ -118,7 +117,6 @@ export function createSearch(root, { nodes, yearBounds, onSelectNode, onSelectYe
   // Threads match on their title (docs/m5-architecture.md section 3).
   // `threads` is a function, read when searching.
   const threadIndex = () => threads().map((t) => ({ thread: t, title: fold(t.title) }));
-  let register = CONFIG.reading.defaultRegister;
   let options = []; // [{ el, select }]
   let active = -1;
 
@@ -131,6 +129,8 @@ export function createSearch(root, { nodes, yearBounds, onSelectNode, onSelectYe
     'aria-autocomplete': 'list',
     'aria-expanded': 'false',
     'aria-controls': 'search-results',
+    placeholder: COPY.search.placeholder,
+    'aria-label': COPY.search.label,
   });
   const list = h('div', { id: 'search-results', role: 'listbox', hidden: true });
   root.replaceChildren(input, list);
@@ -203,7 +203,7 @@ export function createSearch(root, { nodes, yearBounds, onSelectNode, onSelectYe
       parts.push(
         option(
           [
-            h('span', { class: 'search-name' }, `${pick(COPY.search.goToYear, register)} ${res.year}`),
+            h('span', { class: 'search-name' }, `${COPY.search.goToYear} ${res.year}`),
           ],
           () => onSelectYear(res.year),
         ),
@@ -215,23 +215,23 @@ export function createSearch(root, { nodes, yearBounds, onSelectNode, onSelectYe
         ? threadIndex().filter((t) => matchRank(t.title, typedNow) !== null).map((t) => t.thread)
         : [];
     if (threadHits.length) {
-      parts.push(h('div', { class: 'search-group', role: 'presentation' }, pick(COPY.threads.searchGroup, register)));
+      parts.push(h('div', { class: 'search-group', role: 'presentation' }, COPY.threads.searchGroup));
       for (const t of threadHits) {
         parts.push(
           option(
-            [h('span', { class: 'search-name' }, t.title), h('span', { class: 'search-meta' }, `${t.steps.length} ${pick(COPY.threads.stops, register)}`)],
+            [h('span', { class: 'search-name' }, t.title), h('span', { class: 'search-meta' }, `${t.steps.length} ${COPY.threads.stops}`)],
             () => onSelectThread(t.id),
           ),
         );
       }
     }
     if (res.names.length) {
-      parts.push(h('div', { class: 'search-group', role: 'presentation' }, pick(COPY.search.names, register)));
+      parts.push(h('div', { class: 'search-group', role: 'presentation' }, COPY.search.names));
       parts.push(...res.names.map(nodeRow));
     }
     for (const group of res.places) {
       parts.push(
-        h('div', { class: 'search-group', role: 'presentation' }, `${pick(COPY.search.from, register)} ${group.label}`),
+        h('div', { class: 'search-group', role: 'presentation' }, `${COPY.search.from} ${group.label}`),
       );
       parts.push(...group.nodes.map(nodeRow));
     }
@@ -248,7 +248,7 @@ export function createSearch(root, { nodes, yearBounds, onSelectNode, onSelectYe
         close();
         return;
       }
-      parts.push(h('div', { class: 'search-empty' }, pick(COPY.search.none, register)));
+      parts.push(h('div', { class: 'search-empty' }, COPY.search.none));
     }
     list.replaceChildren(...parts);
     list.hidden = false;
@@ -294,12 +294,4 @@ export function createSearch(root, { nodes, yearBounds, onSelectNode, onSelectYe
     }
   });
 
-  return {
-    setRegister(next) {
-      register = next;
-      input.placeholder = pick(COPY.search.placeholder, register);
-      input.setAttribute('aria-label', pick(COPY.search.label, register));
-      if (!list.hidden) render();
-    },
-  };
 }

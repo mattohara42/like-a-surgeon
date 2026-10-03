@@ -14,13 +14,12 @@
 // any order. The one shown is the first still unfound. Once all are found
 // the card points at the rest of the map instead.
 //
-// Door and mission targets are record ids, kept out of COPY because
-// registers.js reads every all-string object there as register text.
+// Door and mission targets are record ids, kept out of COPY, which holds
+// only text the reader sees.
 
 import { CONFIG } from '../config.js';
 import { COPY } from './copy.js';
 import { h } from './dom.js';
-import { pick } from './registers.js';
 
 const DOORS = [
   { key: 'herc', nodeId: 'kool-herc' },
@@ -46,7 +45,7 @@ const MISSIONS = [
 // the map are skipped, and with none left the map fits everything.
 export const OPENING_FRAME_IDS = ['king-tubby', 'u-roy', 'kool-herc', 'grandmaster-flash', 'afrika-bambaataa'];
 
-// Guarded like every other storage access (registers.js): private mode or
+// Guarded like every other storage access: private mode or
 // blocked site data must not stop the map from opening. Version 1 stored
 // `found` as a boolean for the single Planet Rock goal, which carries over
 // as that mission found.
@@ -75,7 +74,6 @@ function saveState(state) {
 export function createWelcome(chipEl, { nodesById, edgesById, goldenIds = new Set(), openCard }) {
   const state = loadState();
   const missions = MISSIONS.filter((m) => m.edgeIds.some((id) => edgesById.has(id)));
-  let register = null;
   let justFound = null;
   // A golden edge just collected, shown in the chip like a found mission.
   let justGolden = false;
@@ -88,16 +86,16 @@ export function createWelcome(chipEl, { nodesById, edgesById, goldenIds = new Se
   function drawChip() {
     const mission = current();
     const text = justFound
-      ? h('span', { class: 'goal-text found' }, pick(missionCopy(justFound).found, register))
+      ? h('span', { class: 'goal-text found' }, missionCopy(justFound).found)
       : justGolden
         ? h('span', { class: 'goal-text found' },
-            `${pick(COPY.welcome.golden.flash, register)}: ${goldenCount()} / ${goldenIds.size}`)
+            `${COPY.welcome.golden.flash}: ${goldenCount()} / ${goldenIds.size}`)
       : mission
-        ? h('button', { type: 'button', class: 'goal-text', onClick: openCard }, pick(missionCopy(mission).chip, register))
+        ? h('button', { type: 'button', class: 'goal-text', onClick: openCard }, missionCopy(mission).chip)
         : null;
     chipEl.hidden = false;
     chipEl.replaceChildren(
-      h('button', { type: 'button', class: 'start-here', onClick: openCard }, pick(COPY.welcome.kicker, register)),
+      h('button', { type: 'button', class: 'start-here', onClick: openCard }, COPY.welcome.kicker),
       text,
     );
   }
@@ -107,8 +105,8 @@ export function createWelcome(chipEl, { nodesById, edgesById, goldenIds = new Se
       h(
         'button',
         { type: 'button', class: 'door', onClick: () => ctx.goNode(d.nodeId) },
-        h('span', { class: 'door-title' }, pick(COPY.welcome.doors[d.key].title, ctx.register)),
-        h('span', { class: 'door-line' }, pick(COPY.welcome.doors[d.key].line, ctx.register)),
+        h('span', { class: 'door-title' }, COPY.welcome.doors[d.key].title),
+        h('span', { class: 'door-line' }, COPY.welcome.doors[d.key].line),
       ),
     );
 
@@ -119,16 +117,16 @@ export function createWelcome(chipEl, { nodesById, edgesById, goldenIds = new Se
     return h(
       'article',
       { class: 'panel-body welcome' },
-      h('div', { class: 'kicker' }, pick(COPY.welcome.kicker, ctx.register)),
-      h('h2', {}, pick(COPY.welcome.title, ctx.register)),
-      h('p', { class: 'body' }, pick(COPY.welcome.intro, ctx.register)),
+      h('div', { class: 'kicker' }, COPY.welcome.kicker),
+      h('h2', {}, COPY.welcome.title),
+      h('p', { class: 'body' }, COPY.welcome.intro),
       h('div', { class: 'doors' }, doors, ctx.gameDoor ?? null),
       ctx.threadList
         ? h(
             'div',
             { class: 'goal threads' },
-            h('h3', {}, pick(COPY.threads.listHeading, ctx.register)),
-            h('p', { class: 'body' }, pick(COPY.threads.listLine, ctx.register)),
+            h('h3', {}, COPY.threads.listHeading),
+            h('p', { class: 'body' }, COPY.threads.listLine),
             ctx.threadList,
           )
         : null,
@@ -140,24 +138,24 @@ export function createWelcome(chipEl, { nodesById, edgesById, goldenIds = new Se
               'h3',
               {},
               mission
-                ? `${pick(COPY.welcome.goalHeading, ctx.register)} · ${pick(COPY.welcome.progress, ctx.register)} ${position} / ${missions.length}`
-                : pick(COPY.welcome.goalHeading, ctx.register),
+                ? `${COPY.welcome.goalHeading} · ${COPY.welcome.progress} ${position} / ${missions.length}`
+                : COPY.welcome.goalHeading,
             ),
             h(
               'p',
               { class: 'body' },
-              mission ? pick(missionCopy(mission).goal, ctx.register) : pick(COPY.welcome.allFound, ctx.register),
+              mission ? missionCopy(mission).goal : COPY.welcome.allFound,
             ),
             found.length
               ? h(
                   'div',
                   { class: 'found-list' },
-                  h('div', { class: 'found-heading' }, pick(COPY.welcome.foundHeading, ctx.register)),
+                  h('div', { class: 'found-heading' }, COPY.welcome.foundHeading),
                   found.map((m) =>
                     h(
                       'button',
                       { type: 'button', class: 'link-row', onClick: () => ctx.goEdge(m.edgeIds.find((id) => edgesById.has(id))) },
-                      h('span', { class: 'link-name' }, `✓ ${pick(missionCopy(m).title, ctx.register)}`),
+                      h('span', { class: 'link-name' }, `✓ ${missionCopy(m).title}`),
                     ),
                   ),
                 )
@@ -168,13 +166,15 @@ export function createWelcome(chipEl, { nodesById, edgesById, goldenIds = new Se
         ? h(
             'div',
             { class: 'goal golden' },
-            h('h3', {}, `${pick(COPY.welcome.golden.heading, ctx.register)} · ${goldenCount()} / ${goldenIds.size} ${pick(COPY.welcome.golden.found, ctx.register)}`),
-            h('p', { class: 'body' }, pick(COPY.welcome.golden.hint, ctx.register)),
+            h('h3', {}, `${COPY.welcome.golden.heading} · ${goldenCount()} / ${goldenIds.size} ${COPY.welcome.golden.found}`),
+            h('p', { class: 'body' }, COPY.welcome.golden.hint),
           )
         : null,
-      h('button', { type: 'button', class: 'welcome-skip', onClick: ctx.close }, pick(COPY.welcome.skip, ctx.register)),
+      h('button', { type: 'button', class: 'welcome-skip', onClick: ctx.close }, COPY.welcome.skip),
     );
   }
+
+  drawChip();
 
   return {
     // True once per browser: the caller opens the card when this says so.
@@ -204,10 +204,6 @@ export function createWelcome(chipEl, { nodesById, edgesById, goldenIds = new Se
         justGolden = false;
         drawChip();
       }, CONFIG.welcome.foundLingerMs);
-    },
-    setRegister(next) {
-      register = next;
-      drawChip();
     },
   };
 }

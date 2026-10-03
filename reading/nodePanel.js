@@ -1,14 +1,12 @@
 // Content for a node's panel: artist, machine, scene, or label.
 //
-// `ctx` carries the reader's register and the ways out of this panel:
-//   register, nodesById, neighbours, sceneMembers(id),
-//   goNode(id), goEdge(id)
+// `ctx` carries the ways out of this panel:
+//   nodesById, neighbours, sceneMembers(id), goNode(id), goEdge(id)
 
 import { CONFIG } from '../config.js';
 import { COPY, KIND_LABELS, EDGE_TYPE_LABELS } from './copy.js';
 import { lineageColor, lineageName } from '../render/lineages.js';
 import { h, tierSwatch } from './dom.js';
-import { pick } from './registers.js';
 import { youtubeLink } from './links.js';
 import { renderDemoBlock } from './demoBlock.js';
 
@@ -18,8 +16,8 @@ export function yearSpan(from, to, endUnknown = false) {
   return `${from ?? '?'}–${to ?? (endUnknown ? '?' : 'now')}`;
 }
 
-function heading(key, register) {
-  return h('h3', {}, pick(COPY.headings[key], register));
+function heading(key) {
+  return h('h3', {}, COPY.headings[key]);
 }
 
 function metaLine(node) {
@@ -85,7 +83,7 @@ function producerButton(node, ctx) {
   return h(
     'button',
     { type: 'button', class: 'follow-producer', onClick: () => ctx.showProduced(node.id) },
-    `${pick(COPY.headings.followProducer, ctx.register)} (${produced.length})`,
+    `${COPY.headings.followProducer} (${produced.length})`,
   );
 }
 
@@ -98,7 +96,7 @@ function signatureQuery(r, t) {
 
 // Shared by an artist's signature tracks and a label's songs-about-it list:
 // a title, an optional year, a line of prose, and a YouTube search link.
-function trackRow(title, year, note, ytQuery, reg, lead = null) {
+function trackRow(title, year, note, ytQuery, lead = null) {
   return h(
     'div',
     { class: 'track' },
@@ -110,12 +108,11 @@ function trackRow(title, year, note, ytQuery, reg, lead = null) {
       year ? h('span', { class: 'year' }, ` ${year}`) : null,
     ),
     para(note, 'w'),
-    youtubeLink(ytQuery, reg),
+    youtubeLink(ytQuery),
   );
 }
 
 function artistSections(r, ctx) {
-  const reg = ctx.register;
   // A demo reached from the artist (Matt: from the machine, the artist, or
   // the line). The first playable demo on any edge touching this artist;
   // one per panel, since only one demo plays at a time.
@@ -127,67 +124,62 @@ function artistSections(r, ctx) {
     // above whatever tracks it has.
     r.signatureTracks?.length || r.signatureTracksNote
       ? [
-          heading('listenTo', reg),
+          heading('listenTo'),
           para(r.signatureTracksNote),
-          (r.signatureTracks ?? []).map((t) => trackRow(t.title, t.year, t.whyThisOne, signatureQuery(r, t), reg)),
+          (r.signatureTracks ?? []).map((t) => trackRow(t.title, t.year, t.whyThisOne, signatureQuery(r, t))),
         ]
       : null,
-    r.scenes?.length ? [heading('scenes', reg), chipRow(r.scenes.map((id) => nodeRef(id, null, ctx)))] : null,
+    r.scenes?.length ? [heading('scenes'), chipRow(r.scenes.map((id) => nodeRef(id, null, ctx)))] : null,
     r.labels?.length
-      ? [heading('labels', reg), chipRow(r.labels.map((l) => nodeRef(l.labelId, null, ctx)))]
+      ? [heading('labels'), chipRow(r.labels.map((l) => nodeRef(l.labelId, null, ctx)))]
       : null,
     r.keyProducers?.length
-      ? [heading('producers', reg), chipRow(r.keyProducers.map((p) => nodeRef(p, p, ctx)))]
+      ? [heading('producers'), chipRow(r.keyProducers.map((p) => nodeRef(p, p, ctx)))]
       : null,
   ];
 }
 
 function machineSections(r, ctx) {
-  const reg = ctx.register;
   return [
-    r.originalPurpose ? [heading('whatItWasFor', reg), para(r.originalPurpose)] : null,
-    r.whatActuallyHappened ? [heading('whatHappened', reg), para(r.whatActuallyHappened)] : null,
-    r.priceStory ? [heading('whatItCost', reg), para(r.priceStory)] : null,
+    r.originalPurpose ? [heading('whatItWasFor'), para(r.originalPurpose)] : null,
+    r.whatActuallyHappened ? [heading('whatHappened'), para(r.whatActuallyHappened)] : null,
+    r.priceStory ? [heading('whatItCost'), para(r.priceStory)] : null,
     r.demoId ? renderDemoBlock(ctx.demos?.[r.demoId], ctx) : null,
   ];
 }
 
-// The five backing fields are adult-only by schema (SCHEMA.md, Q7): they
-// inform the blurb, which carries the same facts at every level.
+// The five backing fields go deeper than the blurb, which carries the same
+// facts in brief (SCHEMA.md, Q7).
 function sceneSections(node, ctx) {
   const r = node.raw;
-  const reg = ctx.register;
   const members = ctx.sceneMembers(node.id);
-  const backing = reg === 'adult'
-    ? [
-        ['geopolitics', r.geopolitics],
-        ['whatWasNew', r.whatWasNew],
-        ['production', r.production],
-        ['sceneLabels', r.labels],
-        ['politics', r.politics],
-      ].map(([key, text]) => (text ? [heading(key, reg), para(text)] : null))
-    : [];
+  const backing = [
+    ['geopolitics', r.geopolitics],
+    ['whatWasNew', r.whatWasNew],
+    ['production', r.production],
+    ['sceneLabels', r.labels],
+    ['politics', r.politics],
+  ].map(([key, text]) => (text ? [heading(key), para(text)] : null));
   return [
     members.length
-      ? [heading('members', reg), chipRow(members.map((m) => nodeRef(m.id, null, ctx)))]
+      ? [heading('members'), chipRow(members.map((m) => nodeRef(m.id, null, ctx)))]
       : null,
     backing,
   ];
 }
 
 function labelSections(r, ctx) {
-  const reg = ctx.register;
   const founders = Array.isArray(r.founders) ? r.founders : [r.founders].filter(Boolean);
   return [
-    founders.length ? [heading('founders', reg), para(founders.join(', '))] : null,
-    r.ownershipStory ? [heading('ownership', reg), para(r.ownershipStory)] : null,
+    founders.length ? [heading('founders'), para(founders.join(', '))] : null,
+    r.ownershipStory ? [heading('ownership'), para(r.ownershipStory)] : null,
     r.songsAboutLabel?.length
       ? [
-          heading('songsAboutLabel', reg),
+          heading('songsAboutLabel'),
           r.songsAboutLabel.map((s) => {
             const artistNode = ctx.nodesById.get(s.artist);
             const artistName = artistNode ? artistNode.name : s.artist;
-            return trackRow(s.title, s.year, s.note, `${artistName} ${s.title}`, reg, [
+            return trackRow(s.title, s.year, s.note, `${artistName} ${s.title}`, [
               nodeRef(s.artist, s.artist, ctx),
               ' — ',
             ]);
@@ -198,24 +190,22 @@ function labelSections(r, ctx) {
 }
 
 function connectionSections(node, ctx) {
-  const reg = ctx.register;
   const { outbound, inbound } = ctx.neighbours.of(node.id);
   if (!outbound.length && !inbound.length) {
-    return [h('h3', {}, pick(COPY.headings.changed, reg)), para(pick(COPY.headings.noConnections, reg), 'note')];
+    return [h('h3', {}, COPY.headings.changed), para(COPY.headings.noConnections, 'note')];
   }
   return [
     outbound.length
-      ? [heading('changed', reg), outbound.map((e) => connectionRow(e, e.to, ctx))]
+      ? [heading('changed'), outbound.map((e) => connectionRow(e, e.to, ctx))]
       : null,
     inbound.length
-      ? [heading('changedBy', reg), inbound.map((e) => connectionRow(e, e.from, ctx))]
+      ? [heading('changedBy'), inbound.map((e) => connectionRow(e, e.from, ctx))]
       : null,
   ];
 }
 
 export function renderNodePanel(node, ctx) {
   const r = node.raw;
-  const reg = ctx.register;
   const kindSections = {
     artist: () => artistSections(r, ctx),
     machine: () => machineSections(r, ctx),
@@ -237,8 +227,8 @@ export function renderNodePanel(node, ctx) {
     // Near the top, so what this record touched is found without
     // scrolling (Matt's review, A311).
     h('div', { class: 'connections' }, connectionSections(node, ctx)),
-    para(pick(r.blurb, reg)),
-    node.startYear === null ? para(pick(COPY.headings.offMap, reg), 'note') : null,
+    para(r.blurb),
+    node.startYear === null ? para(COPY.headings.offMap, 'note') : null,
     producerButton(node, ctx),
     ctx.sixDegreesStart?.(node) ?? null,
     ctx.threadStops ?? null,

@@ -10,7 +10,6 @@
 //   back       the Back button steps back card by card and is off on the
 //              first card
 //   random     Random opens a different card
-//   register   the reading-level switch redraws the card and remembers
 //   addresses  a card's address opens that card; a bad one falls back
 //   switch     a laptop-width screen gets the map; ?view= overrides both
 //   every      every record and every connection opens as a card with no
@@ -130,18 +129,6 @@ async function run(browser, label, base) {
   // random
   const random = await clickAndWait('.cards-random');
   if (random === first || !random.startsWith('#/')) fail(`Random gave ${random}`);
-
-  // register
-  const registerLabels = await page.evaluate(() => [...document.querySelectorAll('.cards-register')].map((b) => b.getAttribute('aria-pressed')));
-  if (registerLabels.length >= 2) {
-    const other = registerLabels.indexOf('false');
-    await page.tap(`.cards-register >> nth=${other}`);
-    await waitShown(random);
-    const pressed = await page.evaluate((i) => document.querySelectorAll('.cards-register')[i].getAttribute('aria-pressed'), other);
-    if (pressed !== 'true') fail('the reading-level switch did not take');
-    await page.tap(`.cards-register >> nth=${other === 0 ? 1 : 0}`);
-    await waitShown(random);
-  }
 
   // addresses
   const known = '#/edge/e-kraftwerk-planetrock';

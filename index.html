@@ -624,9 +624,6 @@
   }
   .cards-button:disabled { opacity: 0.35; cursor: default; }
   .cards-random { flex: 1 1 auto; font-weight: 600; border-color: rgba(150,180,235,0.45); }
-  .cards-registers { display: flex; gap: 4px; }
-  .cards-register { padding: 0 10px; }
-  .cards-register[aria-pressed="true"] { background: rgba(150,180,235,0.22); border-color: rgba(150,180,235,0.6); }
   .cards-button:focus-visible, .cards-go:focus-visible { outline: 1px solid rgba(150,180,235,0.7); outline-offset: 3px; }
 
   /* All motion here is decoration over a layout that is already complete
@@ -653,7 +650,6 @@
   <div id="status">Loading&hellip;</div>
   <nav id="dock">
     <div id="layers" role="group" aria-label="Which records to show"></div>
-    <div id="registers" role="group"></div>
   </nav>
   <a id="cards-link" href="?view=cards"></a>
   <div id="search" role="search"></div>

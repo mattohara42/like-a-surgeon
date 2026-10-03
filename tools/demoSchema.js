@@ -2,9 +2,9 @@
 // (docs/m4-architecture.md section 5). Used by tools/validate.js, and unit
 // tested on its own (test/demoSchema.test.js).
 //
-// Returns a list of error strings, empty when the demo is sound. Register
-// text (caption, A/B labels) is checked by the validator's own register
-// check, which is passed in as `checkRegister(field, value)`.
+// Returns a list of error strings, empty when the demo is sound. Reader
+// text (caption, A/B labels) is checked by the validator's own text check,
+// which is passed in as `checkText(field, value)`.
 
 import { INSTRUMENTS, controlTargets } from '../audio/instruments.js';
 import { parsePattern } from '../audio/pattern.js';
@@ -14,7 +14,7 @@ import { CONFIG } from '../config.js';
 // Kinds with a player (audio/player.js).
 export const DEMO_KINDS = ['machine-voice', 'ab', 'pattern', 'fx-chain'];
 
-export function checkDemo(demo, checkRegister = () => {}) {
+export function checkDemo(demo, checkText = () => {}) {
   const errors = [];
 
   // A draft names a demo that is planned but cannot play yet. It must say
@@ -124,7 +124,7 @@ export function checkDemo(demo, checkRegister = () => {}) {
         errors.push(`params.${side} must be an object`);
         continue;
       }
-      checkRegister(`params.${side}.label`, s.label);
+      checkText(`params.${side}.label`, s.label);
       pattern(s.pattern, `params.${side}.pattern`);
     }
   }
@@ -140,7 +140,7 @@ export function checkDemo(demo, checkRegister = () => {}) {
     } else {
       for (const [i, v] of params.versions.entries()) {
         const where = `params.versions[${i}]`;
-        checkRegister(`${where}.label`, v?.label);
+        checkText(`${where}.label`, v?.label);
         if (v?.order === undefined) continue;
         const steps = parsed?.steps ?? CONFIG.audio.stepsPerPattern;
         if (!Array.isArray(v.order) || v.order.length !== steps) {
@@ -195,7 +195,7 @@ export function checkDemo(demo, checkRegister = () => {}) {
     } else {
       for (const [i, v] of params.versions.entries()) {
         const where = `params.versions[${i}]`;
-        checkRegister(`${where}.label`, v?.label);
+        checkText(`${where}.label`, v?.label);
         if (!Array.isArray(v?.fx)) {
           errors.push(`${where}.fx must list the effects this version switches in ([] for none)`);
           continue;

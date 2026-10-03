@@ -19,7 +19,6 @@
 import { CONFIG } from '../config.js';
 import { COPY } from './copy.js';
 import { h } from './dom.js';
-import { pick } from './registers.js';
 
 function loadFinished() {
   try {
@@ -55,7 +54,6 @@ export function createThreads(chipEl, { threads, nodesById, edgesById, open, ren
   );
   const byId = new Map(list.map((t) => [t.id, t]));
   const finished = loadFinished();
-  let register = null;
   let active = null; // { id, step } while a thread is in progress
   let showing = false; // is a thread page in the drawer right now
 
@@ -87,7 +85,7 @@ export function createThreads(chipEl, { threads, nodesById, edgesById, open, ren
       return;
     }
     const n = thread.steps.length;
-    const where = active.step < 0 ? '' : active.step >= n ? ` · ${pick(COPY.threads.finished, register)}` : ` · ${active.step + 1} ${pick(COPY.threads.of, register)} ${n}`;
+    const where = active.step < 0 ? '' : active.step >= n ? ` · ${COPY.threads.finished}` : ` · ${active.step + 1} ${COPY.threads.of} ${n}`;
     chipEl.hidden = false;
     chipEl.replaceChildren(
       h(
@@ -95,13 +93,13 @@ export function createThreads(chipEl, { threads, nodesById, edgesById, open, ren
         {
           type: 'button',
           class: 'thread-back',
-          'aria-label': `${pick(COPY.threads.backTo, register)}: ${thread.title}${where}`,
-          title: pick(COPY.threads.backTo, register),
+          'aria-label': `${COPY.threads.backTo}: ${thread.title}${where}`,
+          title: COPY.threads.backTo,
           onClick: () => open({ kind: 'thread', id: thread.id, step: active.step }),
         },
         `↩ ${thread.title}${where}`,
       ),
-      h('button', { type: 'button', class: 'thread-end', 'aria-label': pick(COPY.threads.end, register), onClick: end }, '×'),
+      h('button', { type: 'button', class: 'thread-end', 'aria-label': COPY.threads.end, onClick: end }, '×'),
     );
   }
 
@@ -116,9 +114,9 @@ export function createThreads(chipEl, { threads, nodesById, edgesById, open, ren
   function navigation(thread, step, ctx) {
     const n = thread.steps.length;
     const go = (to) => open({ kind: 'thread', id: thread.id, step: to });
-    const prev = step >= 0 ? h('button', { type: 'button', class: 'thread-prev', onClick: () => go(step - 1) }, `← ${pick(COPY.threads.previous, ctx.register)}`) : null;
+    const prev = step >= 0 ? h('button', { type: 'button', class: 'thread-prev', onClick: () => go(step - 1) }, `← ${COPY.threads.previous}`) : null;
     const nextLabel = step < 0 ? COPY.threads.start : step === n - 1 ? COPY.threads.finish : COPY.threads.next;
-    const next = step < n ? h('button', { type: 'button', class: 'thread-next', onClick: () => go(step + 1) }, `${pick(nextLabel, ctx.register)} →`) : null;
+    const next = step < n ? h('button', { type: 'button', class: 'thread-next', onClick: () => go(step + 1) }, `${nextLabel} →`) : null;
     const nav = h('div', { class: 'thread-nav' }, prev, next);
     const keys = (e) => {
       if (e.target.closest('input, select, textarea')) return;
@@ -133,7 +131,7 @@ export function createThreads(chipEl, { threads, nodesById, edgesById, open, ren
   function others(thread, ctx) {
     const rest = list.filter((t) => t.id !== thread.id);
     if (!rest.length) return null;
-    return h('div', { class: 'thread-more' }, h('h3', {}, pick(COPY.threads.more, ctx.register)), listButtons(rest, ctx));
+    return h('div', { class: 'thread-more' }, h('h3', {}, COPY.threads.more), listButtons(rest, ctx));
   }
 
   function listButtons(threadsToList, ctx) {
@@ -145,7 +143,7 @@ export function createThreads(chipEl, { threads, nodesById, edgesById, open, ren
           'button',
           { type: 'button', class: 'door thread-door', onClick: () => open({ kind: 'thread', id: t.id, step: -1 }) },
           h('span', { class: 'door-title' }, `${finished.has(t.id) ? '✓ ' : ''}${t.title}`),
-          h('span', { class: 'door-line' }, `${t.subtitle} · ${t.steps.length} ${pick(COPY.threads.stops, ctx.register)}`),
+          h('span', { class: 'door-line' }, `${t.subtitle} · ${t.steps.length} ${COPY.threads.stops}`),
         ),
       ),
     );
@@ -169,31 +167,31 @@ export function createThreads(chipEl, { threads, nodesById, edgesById, open, ren
 
     if (step < 0) {
       return page(
-        h('div', { class: 'kicker' }, `${pick(COPY.threads.kicker, ctx.register)} · ${n} ${pick(COPY.threads.stops, ctx.register)}`),
+        h('div', { class: 'kicker' }, `${COPY.threads.kicker} · ${n} ${COPY.threads.stops}`),
         h('h2', {}, thread.title),
         h('p', { class: 'thread-subtitle' }, thread.subtitle),
-        h('p', { class: 'body' }, pick(thread.intro, ctx.register)),
+        h('p', { class: 'body' }, thread.intro),
         nav,
       );
     }
     if (step === n) {
       return page(
-        h('div', { class: 'kicker' }, `${thread.title} · ${pick(COPY.threads.ended, ctx.register)}`),
+        h('div', { class: 'kicker' }, `${thread.title} · ${COPY.threads.ended}`),
         h('h2', {}, thread.title),
-        h('p', { class: 'body' }, pick(thread.outro, ctx.register)),
+        h('p', { class: 'body' }, thread.outro),
         nav,
-        h('button', { type: 'button', class: 'thread-again', onClick: () => open({ kind: 'thread', id: thread.id, step: -1 }) }, pick(COPY.threads.again, ctx.register)),
+        h('button', { type: 'button', class: 'thread-again', onClick: () => open({ kind: 'thread', id: thread.id, step: -1 }) }, COPY.threads.again),
         others(thread, ctx),
       );
     }
 
     const s = thread.steps[step];
-    const heading = `${pick(COPY.threads.stop, ctx.register)} ${step + 1} ${pick(COPY.threads.of, ctx.register)} ${n}`;
+    const heading = `${COPY.threads.stop} ${step + 1} ${COPY.threads.of} ${n}`;
     return renderRecord(recordTarget(s), { inThread: true }).then((record) =>
       page(
         h('div', { class: 'kicker' }, thread.title),
         h('h2', { class: 'thread-heading' }, heading),
-        h('p', { class: 'thread-framing' }, pick(s.framing, ctx.register)),
+        h('p', { class: 'thread-framing' }, s.framing),
         nav,
         h('div', { class: 'thread-record' }, record),
         navigation(thread, step, ctx).nav,
@@ -217,17 +215,19 @@ export function createThreads(chipEl, { threads, nodesById, edgesById, open, ren
     return h(
       'div',
       { class: 'thread-stops' },
-      h('h3', {}, pick(COPY.threads.partOf, ctx.register)),
+      h('h3', {}, COPY.threads.partOf),
       stops.map(({ thread, step }) =>
         h(
           'button',
           { type: 'button', class: 'link-row', onClick: () => open({ kind: 'thread', id: thread.id, step }) },
           h('span', { class: 'link-name' }, `${finished.has(thread.id) ? '✓ ' : ''}${thread.title}`),
-          h('span', { class: 'link-meta' }, ` · ${pick(COPY.threads.stop, ctx.register)} ${step + 1} ${pick(COPY.threads.of, ctx.register)} ${thread.steps.length}`),
+          h('span', { class: 'link-meta' }, ` · ${COPY.threads.stop} ${step + 1} ${COPY.threads.of} ${thread.steps.length}`),
         ),
       ),
     );
   }
+
+  drawChip();
 
   return {
     list: () => list,
@@ -260,10 +260,6 @@ export function createThreads(chipEl, { threads, nodesById, edgesById, open, ren
     // chip shows only while a thread is in progress and not on screen.
     noticeTarget(target) {
       showing = target?.kind === 'thread';
-      drawChip();
-    },
-    setRegister(next) {
-      register = next;
       drawChip();
     },
   };

@@ -15,7 +15,6 @@
 import { CONFIG } from '../config.js';
 import { loadRecord, SHARD_FOR_KIND } from '../render/loader.js';
 import { lineageColor } from '../render/lineages.js';
-import { availableRegisters, loadRegister, saveRegister, pick } from '../reading/registers.js';
 import { buildNeighbours } from '../reading/neighbours.js';
 import { createSceneMembers } from '../reading/members.js';
 import { renderNodePanel } from '../reading/nodePanel.js';
@@ -33,9 +32,6 @@ export function startCards(data) {
   const counts = connectionCounts(data.edges);
   const randomIds = poolWithAtLeast(counts, nodesById, 1);
   const openingIds = openingPool(counts, nodesById, CONFIG.cards.openingMinConnections);
-
-  const registers = availableRegisters(data);
-  let register = loadRegister(registers);
 
   // The map's chrome is hidden by the stylesheet under this class.
   const root = document.documentElement;
@@ -59,7 +55,6 @@ export function startCards(data) {
   let drawToken = 0;
 
   const ctx = () => ({
-    register,
     nodesById,
     neighbours,
     sceneMembers,
@@ -92,7 +87,7 @@ export function startCards(data) {
       'p',
       { class: 'cards-count' },
       h('span', { class: 'cards-count-n' }, String(n)),
-      ` ${pick(n === 1 ? COPY.cards.connectionOne : COPY.cards.connectionMany, register)}`,
+      ` ${(n === 1 ? COPY.cards.connectionOne : COPY.cards.connectionMany)}`,
     );
   }
 
@@ -108,7 +103,7 @@ export function startCards(data) {
         style: `border-color:${lineageColor(far.lineage)}`,
         onClick: () => go({ kind: 'node', id: far.id }),
       },
-      `${pick(COPY.cards.goTo, register)} ${far.name} →`,
+      `${COPY.cards.goTo} ${far.name} →`,
     );
   }
 
@@ -147,16 +142,15 @@ export function startCards(data) {
     return [h(
       'p',
       { class: 'cards-foot' },
-      h('a', { href: `?view=map`, class: 'search-link' }, pick(COPY.cards.fullMap, register)),
+      h('a', { href: `?view=map`, class: 'search-link' }, COPY.cards.fullMap),
     )];
   }
 
-  function show(target, { keepScroll = false } = {}) {
+  function show(target) {
     current = target;
     const token = ++drawToken;
     drawBar();
-    const scrollY = keepScroll ? window.scrollY : 0;
-    cardEl.replaceChildren(notice(pick(COPY.headings.loading, register)));
+    cardEl.replaceChildren(notice(COPY.headings.loading));
     delete cardEl.dataset.route;
     render(target).then(
       ({ card, title }) => {
@@ -165,19 +159,17 @@ export function startCards(data) {
         // Which card is on screen, for tools/cards-check.js.
         cardEl.dataset.route = routeFor(target, nodesById);
         document.title = `${title} · Lineage`;
-        window.scrollTo(0, scrollY);
-        if (!keepScroll) {
-          const heading = card.querySelector('h2');
-          if (heading) {
-            heading.tabIndex = -1;
-            heading.focus({ preventScroll: true });
-          }
+        window.scrollTo(0, 0);
+        const heading = card.querySelector('h2');
+        if (heading) {
+          heading.tabIndex = -1;
+          heading.focus({ preventScroll: true });
         }
       },
       (err) => {
         console.error(err);
         if (token !== drawToken) return;
-        cardEl.replaceChildren(notice(pick(COPY.cards.loadFailed, register)), ...foot());
+        cardEl.replaceChildren(notice(COPY.cards.loadFailed), ...foot());
         cardEl.dataset.route = 'failed';
       },
     );
@@ -187,26 +179,9 @@ export function startCards(data) {
     const button = (label, onClick, attrs = {}) =>
       h('button', { type: 'button', class: 'cards-button', onClick, ...attrs }, label);
     barEl.replaceChildren(
-      button(`← ${pick(COPY.cards.back, register)}`, () => history.back(), { disabled: depth === 0 }),
-      button(pick(COPY.cards.random, register), random, { class: 'cards-button cards-random' }),
-      h(
-        'div',
-        { class: 'cards-registers', role: 'group', 'aria-label': 'Reading level' },
-        registers.map((r) =>
-          button(r.label, () => setRegister(r.key), {
-            class: 'cards-button cards-register',
-            'aria-pressed': String(r.key === register),
-          }),
-        ),
-      ),
+      button(`← ${COPY.cards.back}`, () => history.back(), { disabled: depth === 0 }),
+      button(COPY.cards.random, random, { class: 'cards-button cards-random' }),
     );
-  }
-
-  function setRegister(key) {
-    if (key === register) return;
-    register = key;
-    saveRegister(register);
-    show(current, { keepScroll: true });
   }
 
   // Back, the phone's back gesture, and an address typed or pasted in.

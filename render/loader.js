@@ -148,8 +148,5 @@ export async function loadGraphData() {
     demos: bundle.demos ?? {},
     threads: bundle.threads ?? {},
     meta: bundle.meta ?? {},
-    // Register keys every data register object carries, computed when the
-    // index is built, since the prose is not loaded yet (Q15).
-    registers: bundle.registers ?? [],
   };
 }

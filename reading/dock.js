@@ -13,7 +13,6 @@
 import { CONFIG } from '../config.js';
 import { COPY } from './copy.js';
 import { h } from './dom.js';
-import { pick } from './registers.js';
 
 // `onLayout` runs when a row opens or closes, since the space the dock
 // covers on the map changes with it. `yieldTo` lists other fixed
@@ -21,7 +20,6 @@ import { pick } from './registers.js';
 // the row closes, which on a narrow screen is the search box and the goal
 // pills at the top centre.
 export function createDock(root, onLayout = () => {}, yieldTo = []) {
-  let register = CONFIG.reading.defaultRegister;
   let openKey = null;
   let closeTimer = null;
   const items = new Map();
@@ -96,8 +94,8 @@ export function createDock(root, onLayout = () => {}, yieldTo = []) {
 
   function label(key) {
     const { button, changed } = items.get(key);
-    const name = pick(COPY.dock[key], register);
-    const text = changed ? `${name} (${pick(COPY.dock.changed, register)})` : name;
+    const name = COPY.dock[key];
+    const text = changed ? `${name} (${COPY.dock.changed})` : name;
     button.setAttribute('aria-label', text);
     button.title = name;
   }
@@ -114,7 +112,7 @@ export function createDock(root, onLayout = () => {}, yieldTo = []) {
     if (openKey !== null && !root.contains(e.target)) setOpen(null);
   });
 
-  root.setAttribute('aria-label', pick(COPY.dock.label, register));
+  root.setAttribute('aria-label', COPY.dock.label);
   for (const key of items.keys()) label(key);
 
   return {
@@ -124,11 +122,6 @@ export function createDock(root, onLayout = () => {}, yieldTo = []) {
       item.changed = changed;
       item.wrap.classList.toggle('changed', changed);
       label(key);
-    },
-    setRegister(next) {
-      register = next;
-      root.setAttribute('aria-label', pick(COPY.dock.label, register));
-      for (const key of items.keys()) label(key);
     },
   };
 }

@@ -10,7 +10,6 @@ import { CONFIG } from './config.js';
 import { loadGraphData, loadRecord, SHARD_FOR_KIND } from './render/loader.js';
 import { createGraph } from './render/graph.js';
 import { loadLayers, saveLayers, createLayerToggles } from './render/layers.js';
-import { availableRegisters, loadRegister, saveRegister, createRegisterSelector, pick } from './reading/registers.js';
 import { buildNeighbours } from './reading/neighbours.js';
 import { createPanel } from './reading/panel.js';
 import { renderNodePanel } from './reading/nodePanel.js';
@@ -33,7 +32,6 @@ import { startCards } from './cards/app.js';
 const statusEl = document.getElementById('status');
 const appEl = document.getElementById('app');
 const layersEl = document.getElementById('layers');
-const registersEl = document.getElementById('registers');
 const panelEl = document.getElementById('panel');
 const legendEl = document.getElementById('legend');
 const searchEl = document.getElementById('search');
@@ -89,8 +87,6 @@ async function main() {
 
   const sceneMembers = createSceneMembers(data.nodes, nodesById);
 
-  const registers = availableRegisters(data);
-  let register = loadRegister(registers);
   let layers = loadLayers();
   let graph = null;
 
@@ -101,9 +97,8 @@ async function main() {
   // Each dock button's dot: is its row away from the default?
   function updateDock() {
     dock.setChanged('show', Object.keys(CONFIG.layers.defaults).some((k) => layers[k] !== CONFIG.layers.defaults[k]));
-    dock.setChanged('read', register !== CONFIG.reading.defaultRegister);
   }
-  const search = createSearch(searchEl, {
+  createSearch(searchEl, {
     nodes: data.nodes,
     yearBounds: () => graph.yearBounds(),
     onSelectNode: (id) => goNode(id),
@@ -133,7 +128,7 @@ async function main() {
   }
 
   const panelContext = () => ({
-    register, nodesById, neighbours, sceneMembers, goNode, goEdge,
+    nodesById, neighbours, sceneMembers, goNode, goEdge,
     producedBy,
     audio,
     demos: data.demos,
@@ -207,7 +202,7 @@ async function main() {
 
   function sixDegreesButton(node, ctx) {
     if (!sixDegrees.canStartFrom(node)) return null;
-    return h('button', { type: 'button', class: 'follow-producer', onClick: () => sixDegrees.begin(node.id) }, pick(COPY.sixDegrees.startHere, ctx.register));
+    return h('button', { type: 'button', class: 'follow-producer', onClick: () => sixDegrees.begin(node.id) }, COPY.sixDegrees.startHere);
   }
 
   function sixDegreesDoor(ctx) {
@@ -215,8 +210,8 @@ async function main() {
     return h(
       'button',
       { type: 'button', class: 'door six-door', onClick: () => sixDegrees.begin() },
-      h('span', { class: 'door-title' }, pick(COPY.sixDegrees.doorTitle, ctx.register)),
-      h('span', { class: 'door-line' }, pick(COPY.sixDegrees.doorLine, ctx.register)),
+      h('span', { class: 'door-title' }, COPY.sixDegrees.doorTitle),
+      h('span', { class: 'door-line' }, COPY.sixDegrees.doorLine),
     );
   }
 
@@ -264,7 +259,7 @@ async function main() {
       'article',
       { class: 'panel-body' },
       h('h2', {}, title ?? ''),
-      h('p', { class: 'note' }, pick(COPY.headings[copyKey], register)),
+      h('p', { class: 'note' }, COPY.headings[copyKey]),
     );
   }
 
@@ -351,7 +346,7 @@ async function main() {
       return { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
     };
     // A closed row keeps its size while hidden, so only the open one counts.
-    const rows = [layersEl, registersEl].filter((el) => el.parentElement.classList.contains('open'));
+    const rows = [layersEl].filter((el) => el.parentElement.classList.contains('open'));
     const controls = [dockEl, ...rows].map(rect).filter((r) => r.right > r.left);
     const cluster = controls.length
       ? controls.reduce((a, b) => ({
@@ -367,7 +362,7 @@ async function main() {
     graph?.rerender();
   }
   const overlayObserver = new ResizeObserver(measureOverlays);
-  for (const el of [dockEl, layersEl, registersEl, legendEl]) overlayObserver.observe(el);
+  for (const el of [dockEl, layersEl, legendEl]) overlayObserver.observe(el);
   window.addEventListener('resize', measureOverlays);
 
   function build({ opening = false } = {}) {
@@ -414,32 +409,10 @@ async function main() {
     build();
   }
 
-  function applyRegister(next) {
-    register = next;
-    saveRegister(register);
-    createRegisterSelector(registersEl, registers, register, applyRegister);
-    panel.redraw();
-    legend.setRegister(register);
-    search.setRegister(register);
-    welcome.setRegister(register);
-    threads.setRegister(register);
-    sixDegrees.setRegister(register);
-    dock.setRegister(register);
-    updateDock();
-    cardsLinkEl.textContent = pick(COPY.cards.toCards, register);
-  }
-
   createLayerToggles(layersEl, layers, applyLayers);
-  createRegisterSelector(registersEl, registers, register, applyRegister);
-  legend.setRegister(register);
-  search.setRegister(register);
-  welcome.setRegister(register);
-  threads.setRegister(register);
-  sixDegrees.setRegister(register);
-  dock.setRegister(register);
   updateDock();
   // The way to the card view (Q39), in its own place (Q41).
-  cardsLinkEl.textContent = pick(COPY.cards.toCards, register);
+  cardsLinkEl.textContent = COPY.cards.toCards;
   // The card opens before the first build so the opening frame can leave
   // room for the drawer it sits in.
   if (welcome.shouldOpen()) {

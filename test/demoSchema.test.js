@@ -118,7 +118,7 @@ test('303 controls map onto the worklet parameter ranges', () => {
   assert.strictEqual(voiceParamValue('resonance', 0.4), 0.4);
 });
 
-const label = { age13: 'x', adult: 'x' };
+const label = 'x';
 const loop = { bpm: 100, steps: STEPS, parts: { 'tr-909': { bd: four } } };
 const chopDemo = (versions) => ({ id: 'demo-c', kind: 'pattern', safety: { maxGain: 0.7 }, params: { pattern: loop, versions } });
 const echoDemo = (chain, controls = [], versions = [{ label, fx: [] }, { label, fx: chain.map((c) => c.fx) }], route = 'send') => ({

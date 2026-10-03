@@ -56,7 +56,7 @@ const SHARD_TO_TYPE = {
 // type tag.
 const NODE_SHARDS = ['artists', 'machines', 'scenes', 'labels'];
 
-const REGISTER_FIELDS = {
+const TEXT_FIELDS = {
   artists: ['blurb'],
   machines: ['blurb'],
   scenes: ['blurb'],
@@ -183,21 +183,12 @@ function looksLikeId(value) {
   return typeof value === 'string' && /^[a-z0-9]+(-[a-z0-9]+)*$/.test(value);
 }
 
-function checkRegisterObject(where, fieldName, value) {
-  // Merged text (one string, no reading levels) is replacing register
-  // objects record by record.
-  if (typeof value === 'string') {
-    if (!value.trim()) fail(`${where}: ${fieldName} must be non-empty`);
-    return;
-  }
-  if (value == null || typeof value !== 'object') {
-    fail(`${where}: ${fieldName} must be a register object`);
-    return;
-  }
-  for (const key of ['age13', 'adult']) {
-    if (!value[key] || typeof value[key] !== 'string' || !value[key].trim()) {
-      fail(`${where}: ${fieldName}.${key} is required and must be non-empty`);
-    }
+// Reader-facing text is one string per field: there are no reading levels
+// (A343). An object here is a record that still carries the old Teen and
+// Adult split.
+function checkText(where, fieldName, value) {
+  if (typeof value !== 'string' || !value.trim()) {
+    fail(`${where}: ${fieldName} must be a non-empty string`);
   }
 }
 
@@ -219,8 +210,8 @@ for (const shard of SHARD_TYPES) {
       }
     }
 
-    for (const field of REGISTER_FIELDS[shard] || []) {
-      if (record[field] !== undefined) checkRegisterObject(where, field, record[field]);
+    for (const field of TEXT_FIELDS[shard] || []) {
+      if (record[field] !== undefined) checkText(where, field, record[field]);
     }
 
     // A warning, not an error: an unsourced founding year stays null
@@ -374,7 +365,7 @@ for (const [id, artist] of records.artists) {
 // (tools/demoSchema.js, docs/m4-architecture.md section 5)
 for (const [id, demo] of records.demos) {
   const where = `demos/${id}.json`;
-  const errs = checkDemo(demo, (field, value) => checkRegisterObject(where, field, value));
+  const errs = checkDemo(demo, (field, value) => checkText(where, field, value));
   for (const e of errs) fail(`${where}: ${e}`);
 }
 
@@ -403,10 +394,10 @@ for (const [id, edge] of records.edges) {
   }
   checkDemoId(where, edge.demoId);
   // An edge's own demoCaption replaces the demo's caption on its panels
-  // (A297), so it needs a demo to caption and the same registers.
+  // (A297), so it needs a demo to caption.
   if (edge.demoCaption !== undefined) {
     if (edge.demoId === undefined) fail(`${where}: demoCaption without a demoId`);
-    checkRegisterObject(where, 'demoCaption', edge.demoCaption);
+    checkText(where, 'demoCaption', edge.demoCaption);
   }
   // trackPair side `search` (Q17, A78): absent means "artist title", a
   // non-empty string replaces the query, false means no link. Anything else
@@ -441,7 +432,7 @@ for (const [id, thread] of records.threads) {
     fail(`${where}: a thread needs at least ${CONFIG.threads.minSteps} steps, has ${steps.length}`);
   }
   for (const [i, step] of steps.entries()) {
-    checkRegisterObject(where, `steps[${i}].framing`, step.framing);
+    checkText(where, `steps[${i}].framing`, step.framing);
     for (const key of Object.keys(step)) {
       if (!['nodeId', 'edgeId', 'framing', 'demoId'].includes(key)) fail(`${where}: steps[${i}].${key} is not a step field`);
     }
