@@ -264,10 +264,6 @@ correct response to a good idea arriving mid-milestone.
   edges", top left, overlaps the first lane's title (HIP-HOP) when the map
   is zoomed out. Seen in a screenshot during A342; not touched.
 
-- **`.register-caption` is now misnamed.** The CSS class captions the
-  layers row (render/layers.js) and the dock flyout; there are no
-  registers any more (A343). A rename across index.html and layers.js.
-
 - **`coolio.json` calls 'Pastime Paradise' a sample.** Wikipedia's
   article on 'Gangsta's Paradise' says it is an interpolation, replayed
   rather than lifted from the record, with Wonder credited as a writer.
