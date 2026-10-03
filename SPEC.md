@@ -149,12 +149,14 @@ and the demo if one exists. Clicking a node opens its panel with inbound and
 outbound edges as navigable links. Panels are the primary reading surface and
 deserve real typographic care.
 
-**Overlays.** Recolor and refilter the whole graph by Production, Labels,
-Politics, or Technology. Each overlay has its own short intro written at all
-reading levels.
+**Edge tags.** An edge can be part of the story of Production, Labels,
+Politics, or Technology. Its panel names each tag it carries, with a line on
+what that tag covers. (These began as overlays that relit the whole graph,
+the Spotlight, removed on 2026-10-03 as confusing, A343.)
 
-**Reading level.** Persistent three-way selector: Kid, Teen, Adult. Swaps every
-blurb in the interface. Stored in localStorage. Not buried in a settings menu.
+**One text.** Every record has one text per field, written for the primary
+reader with every fact in it. The Kid, Teen and Adult reading levels were
+removed on 2026-10-03 and the Teen and Adult texts merged (A343).
 
 **Search.** Type anything. Artists, machines, cities, labels, years. Jumps and
 frames.

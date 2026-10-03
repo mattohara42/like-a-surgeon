@@ -75,24 +75,22 @@ search for the record itself.
 
 ## Writing rules
 
-**Reading levels change vocabulary, never facts.** This is the governing rule
-for all three registers. A shorter sentence and a simpler word are allowed. A
-removed fact is not. If a scene cannot be explained honestly to an 11-year-old
-without mentioning redlining, deindustrialization, or colonial economics, then
-the 11-year-old gets told about redlining, deindustrialization, and colonial
-economics, in words he knows. No softening, no euphemism, no omission by
-kindness.
-
-The Kid register is deferred to Track D (see `BUILD_PLAN.md`). Write Teen and
-Adult first. `data/seed.json` already carries Kid text on every record, which
-exists as the exemplar for when that pass happens, not as a requirement now.
+**One text, every fact, in words the reader knows.** Each record has one
+text per field, written for the primary reader: there are no reading levels
+(Matt removed the Teen and Adult split on 2026-10-03, A343). A shorter sentence
+and a simpler word are allowed. A removed fact is not. If a scene cannot be
+explained honestly to a 13-year-old without mentioning redlining,
+deindustrialization, or colonial economics, then he gets told about redlining,
+deindustrialization, and colonial economics, in words he knows. No softening,
+no euphemism, no omission by kindness. A technical term is fine when the
+sentence explains it.
 
 **Historical importance is not endorsement.** Artists who mattered and who
 neither of us would recommend belong on the map. Their `hook` states what they
 changed and why they are here. It does not praise the music, and it does not
 editorialize about the person either. State what happened and let the reader
 decide. If an artist's conduct is a documented part of why their reputation
-changed, that belongs in the adult register as fact, not as adjective.
+changed, that belongs in the text as fact, not as adjective.
 
 ## Accuracy rules, non-negotiable
 
@@ -104,7 +102,7 @@ changed, that belongs in the adult register as fact, not as adjective.
 3. Tier confidence honestly. `asserted` is a respectable answer. Do not upgrade
    a tier to make the graph look more authoritative.
 4. Widely repeated popular-history claims that are actually disputed get
-   `consensus` at best, and the dispute earns a sentence in the adult text.
+   `consensus` at best, and the dispute earns a sentence in the text.
    Those sentences are some of the best content in the project.
 5. Log every unasked decision in `ASSUMPTIONS.md`. Log every question for Matt
    in `QUESTIONS.md`.

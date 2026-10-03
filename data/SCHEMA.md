@@ -17,7 +17,7 @@ index** (`tools/skeleton.js`): each artist, machine, scene, label and edge
 cut down to the fields the map draws with, plus lineages, demos and
 threads whole. A record's full text loads when its panel opens. The
 skeleton's field lists are whitelists, so a new field that anything other
-than the reading panels needs (the graph, search, Arrange by, the scene
+than the reading panels needs (the graph, search, the scene
 atmosphere) has to be added to `SKELETON_FIELDS` there too, or the map
 will not see it. Dev serves the index at `data/index.json`, built fresh on
 each request, and the release writes it to `dist/data.js`.
@@ -35,15 +35,12 @@ validator rejects `endUnknown` on a record whose end year is set, and
 rejects any value other than `true`. Leave the flag out entirely when it
 doesn't apply.
 
-All prose fields come in registers:
-`{ "age7": "...", "age13": "...", "adult": "..." }`
-
-`age13` and `adult` are **required**. `age7` is **optional and deferred to
-Track D**. Write the first two now. The seed file carries `age7` on every
-record as the exemplar for that later pass.
-
-Registers differ in vocabulary and sentence length only. They never differ in
-which facts are present. See "Writing rules" in `CLAUDE.md`.
+Every prose field is one plain string, written for the primary reader, with
+every fact in it (A343). There are no reading levels: the Teen and Adult
+registers were merged into one text, and the Kid register was dropped. See
+"Writing rules" in `CLAUDE.md`. The validator rejects a prose field that is
+not a non-empty string. `data/seed.json` is a frozen reference copy from M1
+and still has the old register objects.
 
 ---
 
@@ -95,7 +92,7 @@ keyProducers  [artist ids or plain names]. An id drives "Follow the
               producer"; it is not an edge and not a hop, so a documented
               production on the map also gets a `production` edge.
 hook          one sentence, why this node exists on the map
-blurb         three registers
+blurb         one text
 signatureTracks [ { title, year, whyThisOne, search? } ]   2 to 3
               search is optional, as on trackPair (Q17): absent means
               "<artist name> <title>", a string replaces that query, false
@@ -141,7 +138,7 @@ yearFrom, yearTo, country
 city          a city name, or a list of them when the scene genuinely
               spanned several (UK post-punk: London, Manchester, Leeds)
 hook          one sentence, why this scene exists on the map
-blurb         three registers
+blurb         one text
 geopolitics   concrete, not vibes. Conscription, unemployment, rent, race and
               immigration policy, who controlled the radio, gear prices.
 whatWasNew    what a listener at the time had literally never heard before,
@@ -155,10 +152,10 @@ palette       { ink, paper, accent, accent2 }   hero card colors
 motif         motif key for the generated hero card
 ```
 
-`hook` and `blurb` are the reader-facing, register-aware summary, same
-pattern as artist and machine. `geopolitics`, `whatWasNew`, `production`,
-`labels`, and `politics` stay plain adult-only strings: backing detail that
-informs the blurb, not shown at every reading level on their own.
+`hook` and `blurb` are the reader-facing summary, same pattern as artist
+and machine. `geopolitics`, `whatWasNew`, `production`, `labels`, and
+`politics` are the backing detail behind the blurb, each shown as its own
+section of the scene's panel.
 
 ## label
 
@@ -214,14 +211,16 @@ trackPair       { earlier: {artist, title, year, search?},
                 produced for MC Shan" -> "MC Shan The Bridge"). false: no
                 link, for a side that is not a record (a DJ set, a machine
                 as sold, a practice). The validator rejects anything else.
-explanation     three registers
+explanation     one text
 demoId          optional
-demoCaption     optional, register object like a demo's caption. Replaces
+demoCaption     optional, one text like a demo's caption. Replaces
                 the demo's own caption wherever this edge's demo is shown
                 (the edge panel, and an artist panel that picks this edge's
                 demo). Use it when the demo's caption names another edge's
                 record. Needs a demoId.
-tags            ["production","labels","politics","technology"] for overlays
+tags            ["production","labels","politics","technology"]. Each tag
+                is named, with a line on what it covers, in the edge's
+                panel under "Part of the story of".
 ```
 
 ## demo
@@ -240,7 +239,7 @@ kind is one of:
   "morph"           a sequence that transforms from one era's sound to another
                                                                    (M5)
 params            kind-specific, below
-caption           three registers, what to listen for
+caption           one text, what to listen for
 safety            { maxGain }    above 0, at most 1: a kid is wearing headphones
 status            optional, "draft": planned but cannot play yet. A draft
                   needs `pending`, a sentence saying what it waits for, and
@@ -273,14 +272,14 @@ pattern     optional on a drum machine that has pads, required otherwise
 ab params:
 
 ```
-a, b        each { label (register object), pattern }
+a, b        each { label (one text), pattern }
 ```
 
 pattern params (a chop switches on the next bar):
 
 ```
 pattern     one pattern
-versions    two or more { label (register object), order (optional) }.
+versions    two or more { label (one text), order (optional) }.
             A version without `order` plays the pattern straight. `order`
             lists, for each step, the step number (1-based) to play in its
             place, or null for silence: [1, 2, 3, 4, 13, 14, ...]
@@ -307,7 +306,7 @@ chain       effects in order, each { fx, ...settings in real units }
               "fuzz"          driveDb, toneHz, outDb
               "torn-speaker"  driveDb, rattleHz, rattleDb, outDb
               "crusher"       rateHz, bits (a whole number)
-versions    two or more { label (register object), fx: [effect ids] }.
+versions    two or more { label (one text), fx: [effect ids] }.
             fx: [] is the plain sound. On a send, a version engages the
             whole chain or none of it.
 controls    optional, as machine-voice. Targets are "fx.knob"
@@ -341,13 +340,12 @@ A curated ordered path through the graph. How readers enter.
 
 ```
 id, title, subtitle
-intro           three registers
+intro           one text
 steps           at least three: [ { nodeId or edgeId, framing, demoId
-                    (optional) } ]. framing is register text (Teen and
-                    Adult required): two or three sentences in the
+                    (optional) } ]. framing is one text: two or three sentences in the
                     thread's own voice, saying why this stop comes next.
                     It restates what the step's records say and adds no
                     new facts. The camera frames the record itself, so
                     there is no camera hint.
-outro           three registers
+outro           one text
 ```

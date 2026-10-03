@@ -23,7 +23,8 @@ pull request gets its own Netlify preview.
   M5 on 2026-09-30. The by-ear listen and the Safari and Firefox check
   (Q27) are still to do, and the Planet Rock A/B is a draft (Q30).
 - **M5 (timeline, threads, lenses):** built 2026-09-30. Six threads, the
-  receding past, and the four lenses. The gate is still to run: a reader
+  receding past, and the four lenses, which became the "Part of the story
+  of" list on each edge's panel on 2026-10-03 (A343). The gate is still to run: a reader
   who has never seen the map finishes a thread and explains what it was
   about. `docs/m5-gate-notes.md` is the script.
 - **Six Degrees of Weird Al:** built 2026-10-02, ahead of the M5 gate at
@@ -61,9 +62,9 @@ pull request gets its own Netlify preview.
 | `tools/crosscheck.js` | Checks the data against Wikidata and MusicBrainz and lists disagreements in `docs/crosscheck-report.md`. Dev only, and the only tool that uses the network. `npm run crosscheck`. |
 | `index.html`, `main.js` | The app shell and entry point. |
 | `config.js` | Every tuning value in the project. No magic numbers in logic. |
-| `render/` | The graph renderer: layout, lane plans (`arrange.js`), substrate, nodes, edges, gradients, atmosphere, transport, viewport culling, semantic zoom, label placement. |
+| `render/` | The graph renderer: layout in lineage lanes, substrate, nodes, edges, gradients, atmosphere, transport, viewport culling, semantic zoom, label placement. |
 | `cards/` | Cards, the phone version: the view switch, card addresses, the opening and random pools, and the card shell. |
-| `reading/` | The reading surface: the drawer and its node and edge panels, reading levels, legend and version stamp, search, YouTube links, interface copy in registers, the type scale, the welcome card and missions, the thread player (`threads.js`), the lenses, and Six Degrees of Weird Al (`sixDegrees.js`, on the shared hop graph in `hops.js`). |
+| `reading/` | The reading surface: the drawer and its node and edge panels, legend and version stamp, search, YouTube links, interface copy, the type scale, the welcome card and missions, the thread player (`threads.js`), and Six Degrees of Weird Al (`sixDegrees.js`, on the shared hop graph in `hops.js`). |
 | `audio/` | The audio engine: machine voices, the 303 worklet, the dub effects, pattern playback. |
 | `docs/` | Milestone designs (`m1-` to `m5-architecture.md`, `cards-architecture.md`), the data report, the M3 and M5 gate notes, the source policy (`sources.md`), and the guide to adding artists (`adding-artists.md`). |
 | `netlify.toml` | Builds `dist/` for the Netlify site and its PR previews. |
@@ -83,9 +84,9 @@ pull request gets its own Netlify preview.
 
 Scroll to zoom, drag to pan, and drag the year cursor or press play. Click a
 dot or a line to open its panel, and follow the links in the panel sideways.
-Press `/` to search by name, place or year. The top-left controls switch
-the layers, the reading level (Teen, Adult), the arrangement (Lineage,
-Scene, Label) and the lens. The legend bottom-left explains how sure each
+Press `/` to search by name, place or year. The top-left control switches
+the layers. The map is always laid out by lineage, and every record has one
+text, with no reading levels (A343). The legend bottom-left explains how sure each
 line is. The welcome card ("Start here") opens the missions, the threads
 and Six Degrees of Weird Al.
 

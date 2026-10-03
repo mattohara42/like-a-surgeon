@@ -4646,3 +4646,55 @@ small and worth having in front of Matt alongside everything else here.
   - Dots breathe only at the zoom levels in `CONFIG.node.breathLevels`
     (detail). Further out the movement is too small to see and kept the whole
     SVG repainting every frame.
+
+- **A343. One arrangement, one text, no Spotlight.** Matt asked on 2026-10-03
+  for three things to go completely, because they confused readers: "Arrange
+  by" (Lineage, Scene, Label), the Teen and Adult reading levels, and the
+  Spotlight lenses, whose content was to move into the sidebar text. He chose
+  a hand-written merge of every Teen and Adult pair (over showing both, or
+  keeping Adult only) and deleting the Kid text.
+  - **Arrange by.** The map is always laid out in lineage lanes.
+    `render/arrange.js` and its lane-plan abstraction are gone:
+    `computeLayout` builds one lane per lineage itself, and lane titles keep a
+    small `CONFIG.laneTitles` block. Scenes were clickable as lane titles only
+    in the Scene arrangement; they are still reached from artist panels and
+    search.
+  - **Spotlight.** The lens row, its drawer card and the map dimming are
+    gone. What each lens said about its tag now sits in the edge's own panel
+    under "Part of the story of", one line per tag the edge carries
+    (`COPY.tags`). The tags stay in the data. They are no longer in the
+    skeleton index, since nothing on the map reads them.
+  - **The data merge.** About 830 texts (artist, machine, scene and label
+    blurbs, edge explanations and demo captions, demo captions and version
+    labels, thread intros, framings and outros) were rewritten by hand as one
+    text each. The rules: keep every fact either register had (names, dates,
+    numbers, disputes, conduct, money, the evidence tier's reasoning); say a
+    shared fact once; use the Teen register's plain words and explain any
+    technical term the Adult text used; keep both sides of every disputed
+    account. A script compared every number, year and quoted title in the
+    old pair against the new text, and the handful of real drops it found
+    were restored. Two kinds of Adult text were rewritten rather than kept
+    word for word: notes about the map's own records (edge ids, "the labels
+    overlay", BACKLOG pointers, "see A109"), which became plain prose or were
+    dropped, and two claims that a record was not on the map when it now is
+    (MC Shan, Dr. Dre). Merged texts run longer than the Teen ones, so an
+    edge's explanation is now set as body text rather than in the large
+    italic hook style.
+  - **Interface copy.** Each `COPY` entry keeps the Teen wording, the primary
+    reader's, with Adult facts merged in where it had more to say: the Herc
+    door's address, the "found" lines for the missions, the gold-thread hint.
+    "Our reading" stays the reader's name for the asserted tier.
+  - **Scenes.** The five background sections on a scene panel (the
+    conditions, what was new, how it was made, who paid, what it argued) were
+    shown only at the Adult level. They now always show.
+  - **Code.** `reading/registers.js` is gone, with `pick()`, the selector, the
+    dock's reading-level button and its CSS, and the card view's level
+    switch. The validator requires every prose field to be one non-empty
+    string (`checkText`), and the skeleton no longer computes which registers
+    are complete. The dock now holds one button, Show; it stays, so the
+    corner does not change shape.
+  - **Left alone.** `data/seed.json` (the frozen M1 reference copy) and the
+    `design/` prototypes still carry register objects. Historical
+    architecture notes in `docs/` describe the features as they were built.
+  - **CLAUDE.md** changes with this: its writing rule now reads "one text,
+    every fact, in words the reader knows". It used to govern three registers.

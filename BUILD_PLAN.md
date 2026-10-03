@@ -75,7 +75,9 @@ Confidence legend. Search. Outbound streaming-search links. Typography pass.
 
 **Build complete, gate open.** Every step in `docs/m3-architecture.md`
 shipped in PRs #16 to #21, plus Arrange by (Q19), which Matt asked for
-mid-milestone. `docs/m3-gate-notes.md` covers how to run the gate session.
+mid-milestone. On 2026-10-03 Matt removed Arrange by and the reading-level
+selector as confusing: the map is laid out by lineage only, and the Teen and
+Adult texts were merged into one (A343). `docs/m3-gate-notes.md` covers how to run the gate session.
 M4 does not open until the gate is passed.
 
 **Gate passed.** Matt passed M3 in chat on 2026-09-29 and opened M4. The
@@ -117,7 +119,8 @@ sign-off before any code, as M1 to M4 did. Most of the timeline already
 exists, so M5 is mainly the thread player and the lenses.
 
 **Built** 2026-09-30, steps 1 to 6 (A281 to A288): the receding past, the
-thread player, five launch threads, and the lenses. Waiting on the gate,
+thread player, five launch threads, and the lenses (replaced on 2026-10-03
+by the tag list on each edge's panel, A343). Waiting on the gate,
 which Matt runs with a cold reader; `docs/m5-gate-notes.md` is the script.
 
 **Added ahead of the gate** 2026-10-02, at Matt's request: Six Degrees of
@@ -160,8 +163,8 @@ Suggested batch order after M1:
 3. Outre electronic: musique concrete, Radiophonic Workshop, krautrock, IDM.
 4. Fill the rock spine forward to the present.
 5. Machines and labels to full coverage.
-6. Kid (7-11) register written across the whole dataset, once Teen and Adult
-   text is stable and proven with a real reader.
+6. ~~Kid (7-11) register written across the whole dataset.~~ Dropped on
+   2026-10-03 when the reading levels were removed (A343).
 7. Long tail, forever.
 
 Progress: batches so far have covered dub, electro and Detroit, the UK

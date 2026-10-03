@@ -226,6 +226,7 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   than tied to the layer toggles. Artists with no scene or label go in **one
   lane at the bottom**, and it is **built next, before step 5**. See
   `docs/m3-architecture.md` section 7a.
+  **Superseded 2026-10-03:** Matt removed Arrange by as confusing. The map is laid out by lineage only (A343).
 
 - **Q18. The app does not run from `file://`, and never has.** Resolved:
   **the recommendation, (a).** `npm run build` now writes `dist/`, where the
@@ -253,6 +254,7 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
 - **Q15. When does the Kid register appear in the selector?** Resolved:
   **only when complete.** A register is offered only if every reader-facing
   record carries it, so Kid stays hidden until the Track D pass finishes.
+  **Superseded 2026-10-03:** there is no reading-level selector any more (A343).
 
 - **Q12. Should the map draw a Kingston-to-Bronx edge at all?** Resolved:
   **yes, it should connect.** Drawn as `e-kingston-bronx`, from the
@@ -331,6 +333,7 @@ Things Claude Code needs from Matt. Answer inline and mark resolved.
   reader. The reading-level selector ships two-way at M3 and reads available
   registers from the data rather than hardcoding the count. `age7` fields in
   `data/seed.json` stay as the exemplar for that later pass.
+  **Superseded 2026-10-03:** Matt removed the reading levels. The Teen and Adult texts are merged into one text per field and the Kid register is dropped (A343).
 
 - **Q2. Indefensible but important artists.** Resolved: **include them.** The
   `hook` field states what they changed and why they are on the map. It does

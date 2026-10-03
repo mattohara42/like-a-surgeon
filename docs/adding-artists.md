@@ -27,16 +27,16 @@ There is no manifest to edit; `tools/manifest.js` finds it.
 - **originCity.** Where a person was born, or where a band formed.
 - **hook.** One sentence on why this node is on the map. It states what the
   artist changed. It does not praise them.
-- **blurb.** Teen (`age13`) and Adult (`adult`) registers. The Kid register
-  is deferred to Track D. The two registers differ in vocabulary, never in
-  facts. Documented conduct that is part of why a reputation changed goes in
-  the adult text as plain fact, not adjective (CLAUDE.md, "Writing rules").
+- **blurb.** One text (A343): plain words a curious 13-year-old can follow,
+  with every fact in it, including the disputes, the business and the
+  conduct. Documented conduct that is part of why a reputation changed goes
+  in as plain fact, not adjective (CLAUDE.md, "Writing rules").
 - **signatureTracks.** Two or three. An act that matters for one record gets
   one track plus a `signatureTracksNote` saying why (Q32).
 - **scenes.** Scene ids the artist belonged to. This field matters beyond
   the panel: it is a hop in Six Degrees (section 4).
-- **labels.** The labels that mattered. Shown on the panel and used by
-  Arrange by label, but not a Six Degrees hop.
+- **labels.** The labels that mattered. Shown on the panel, but not a Six
+  Degrees hop.
 - **keyProducers.** Artist ids or plain names. An id here powers "Follow the
   producer", but it is not an edge and not a hop. If the production is
   documented and the producer is on the map, also write a `production` edge
@@ -67,7 +67,7 @@ to nodes already on the map.
 - **confidence.** `documented` needs a first-person statement or a primary
   record (a credit, an interview, a court case). An article's summary of
   someone's influences is `consensus`. Disputed popular history is
-  `consensus` at best, with the dispute in the adult text.
+  `consensus` at best, with the dispute in the text.
 - **evidence.** What the source says, in prose. Never a quotation you have
   not seen, and never an invented one. If the edge year places a paired
   record rather than a documented moment, say so (A336).
@@ -77,7 +77,7 @@ to nodes already on the map.
   be specific to this pair. When you cannot say what one side sounds like
   from a source, frame it as something to listen for, not a claim.
 - **tags.** `production`, `labels`, `politics` or `technology`, if the edge
-  belongs in that lens.
+  is part of that story. The edge's panel names each tag it carries.
 
 ## 3. What picks it up with no code
 
@@ -88,7 +88,7 @@ Once the file and its edges validate, all of this updates by itself:
 - search, by name and city
 - a scene's member list, through the artist's `scenes`
 - "Follow the producer", through `keyProducers` ids and `production` edges
-- the lenses, through edge `tags`
+- the "Part of the story of" list on an edge's panel, through its `tags`
 - golden edges, if a `documented` cross-lineage edge spans far enough
 - the cards view on phones, and its Random pool
 - any thread that stops at the artist, through `stopsSection`
@@ -136,7 +136,7 @@ one artist file, one edge into `weird-al-yankovic` (`cover` for a song
 parody, `direct` for a style parody, `crossLineage` against `pop`), and
 where the source supports it, a second edge tying the new artist to the
 rest of the map (Eno to Devo, Dre to Eminem, Nirvana to Foo Fighters).
-The permission story, when sourced, belongs in the evidence and adult text,
+The permission story, when sourced, belongs in the evidence and the text,
 told as whose account it is.
 
 If the hop rule itself changes, change it in `reading/hops.js`'s callers
