@@ -17,11 +17,7 @@
     },
     "note": "A square oscillator through a fixed low-pass, switched on and off with no envelope, standing in for the Stylophone's circuit rather than modelling it. The looped melody is original. The keys are one octave from middle C, chosen to fit the panel, not the instrument's own range."
   },
-  "caption": {
-    "age7": "Press a key and it buzzes. Only one note can play at a time.",
-    "age13": "Hold down a key, or play the loop. The Stylophone plays one note at a time, with a thin, buzzing tone, and you played it by touching a metal pen to a metal keyboard. Bowie wrote 'Space Oddity' around this sound.",
-    "adult": "One oscillator, one note at a time, and no envelope: a note starts when the pen touches a key and stops when it lifts. That is the whole instrument. Bowie used it as a voice in its own right, thin and buzzing, rather than as a stand-in for something fuller."
-  },
+  "caption": "Hold down a key, or play the loop. The Stylophone has one oscillator and plays one note at a time, with a thin, buzzing tone. You played it by touching a metal pen to a metal keyboard: a note starts when the pen touches a key and stops when it lifts, with no shaping of the sound at all. That is the whole instrument. Bowie wrote 'Space Oddity' around this sound and used it as a voice in its own right, not as a stand-in for something fuller.",
   "safety": {
     "maxGain": 0.6
   }

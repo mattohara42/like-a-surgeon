@@ -17,26 +17,16 @@
     },
     "versions": [
       {
-        "label": {
-          "age13": "Looped as played",
-          "adult": "Looped"
-        }
+        "label": "Looped as played"
       },
       {
-        "label": {
-          "age13": "Chopped",
-          "adult": "Chopped and re-sequenced"
-        },
+        "label": "Chopped and re-sequenced",
         "order": [1, 2, 3, 4, 13, 14, 15, 16, 1, 2, 5, 6, 5, 6, 5, 6]
       }
     ],
     "note": "The break is an original one-bar funk pattern on the 909 kit, not the Amen break or any other recorded break. The chop cuts it into sixteenth-note slices and plays them in a new order, ending in a snare roll made of one slice repeated."
   },
-  "caption": {
-    "age7": "The same drums, cut up and put back in a new order.",
-    "age13": "A break is a few bars where only the drums play. N.W.A looped the Amen break as it was played. Jungle producers later cut the same break into tiny slices and played them back in a new order. Switch between the two and watch the lights: when it is chopped, they jump around.",
-    "adult": "Looping and chopping are the two basic uses of a sampled break. A loop keeps the drummer's phrasing intact. A chop treats each hit as a separate sound to re-sequence, which is how jungle producers rebuilt the Amen break. The break here is an original pattern on a synthesized kit, not the Amen."
-  },
+  "caption": "A break is a few bars where only the drums play, and looping and chopping are the two basic ways to use one once it is sampled. A loop keeps the drummer's phrasing intact: N.W.A looped the Amen break as it was played. A chop treats each hit as a separate sound to put in a new order, which is how jungle producers later rebuilt the same break. Switch between the two and watch the lights: when it is chopped, they jump around. The break here is an original pattern on a synthesized kit, not the Amen itself.",
   "safety": {
     "maxGain": 0.7
   }

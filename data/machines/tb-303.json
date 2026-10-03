@@ -11,10 +11,6 @@
   "whatActuallyHappened": "It was difficult to program, did not convincingly imitate a bass guitar, and failed commercially. Secondhand units reached Chicago cheaply, where people ignored the intended use and turned the filter and resonance knobs while the sequence ran. The result is the acid sound.",
   "priceStory": "Roughly 400 US dollars new, then very cheap used in the mid-eighties, then thousands of dollars once the sound became iconic.",
   "hook": "Sold as a fake bass player, repurposed as a screaming filter and the name of a genre.",
-  "blurb": {
-    "age7": "A machine that was bad at its job and great at something nobody expected.",
-    "age13": "The 303 was meant to be a robot bass player for practising guitarists, and it was not good at it. But if you turn the two big knobs while a pattern plays, the sound slides and squelches and cuts. Nobody designed that. People found it.",
-    "adult": "The 303 is the strongest argument for modelling machines as nodes. Its diode-ladder filter with high resonance and its slide and accent behaviour produce a timbre that its designers did not intend and that a generation of musicians organized an entire genre around."
-  },
+  "blurb": "The 303 was meant to be a robot bass player for practising guitarists, and it was not good at it. But if you turn the two big knobs while a pattern plays, the sound slides and squelches and cuts. That comes from its filter, pushed to high resonance, and its slide and accent, and nobody designed it to sound like that. People found it, and a generation of musicians built a whole genre around it. It is the strongest argument for putting machines on this map alongside people.",
   "demoId": "demo-303-twist"
 }

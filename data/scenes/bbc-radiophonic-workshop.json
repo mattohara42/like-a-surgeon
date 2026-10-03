@@ -8,11 +8,7 @@
   "city": "London",
   "country": "UK",
   "hook": "A BBC department in a former roller-skating rink that put electronic music into British homes years before bands could afford it.",
-  "blurb": {
-    "age7": "The BBC had a special room where people made strange sounds and music for radio and TV shows.",
-    "age13": "The BBC opened the Radiophonic Workshop in 1958 at its Maida Vale studios, to make sounds for radio plays. It was set up by Daphne Oram and Desmond Briscoe, using old tape machines and oscillators. In 1963 Delia Derbyshire made the Doctor Who theme there. For a lot of British children, that was the first electronic music they ever heard.",
-    "adult": "The Workshop is the licence-fee route into electronic music. It was a public broadcaster's service department, making effects and signature tunes to order, and it was often not allowed to call its output music. Staff went uncredited for years. The reach was enormous anyway, because everything it made was broadcast. It closed in 1998."
-  },
+  "blurb": "The BBC opened the Radiophonic Workshop in 1958 at its Maida Vale studios, to make sounds for radio plays. It was set up by Daphne Oram and Desmond Briscoe, using old tape machines and oscillators. It was a service department of a public broadcaster paid for by the licence fee, making effects and theme tunes to order, and it was often not allowed to call what it made music. Its staff went uncredited for years. In 1963 Delia Derbyshire made the Doctor Who theme there. Because everything it made was broadcast, its reach was enormous: for a lot of British children, it was the first electronic music they ever heard. It closed in 1998.",
   "geopolitics": "Funded by the licence fee, so there was no commercial pressure and no commercial credit either. BBC rules kept staff anonymous. Equipment was surplus and improvised because nothing commercial existed to buy.",
   "whatWasNew": "Electronic and tape sound used every day for a mass audience, as sound effects and signature tunes rather than as concert art.",
   "production": "Tape machines, oscillators, a plucked-string sound source and hand-cut splices in the early years. Synthesizers like the EMS VCS3 arrived from about 1970.",

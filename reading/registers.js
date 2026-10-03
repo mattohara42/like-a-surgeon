@@ -69,6 +69,7 @@ export function saveRegister(key) {
 // malformed record the validator would already have flagged.
 export function pick(obj, key) {
   if (!obj) return '';
+  if (typeof obj === 'string') return obj;
   if (obj[key]) return obj[key];
   for (const r of CONFIG.reading.registers) {
     if (obj[r.key]) return obj[r.key];

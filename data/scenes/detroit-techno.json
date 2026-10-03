@@ -8,11 +8,7 @@
   "city": "Detroit",
   "country": "USA",
   "hook": "Machine music made in a city the machines had just finished putting out of work.",
-  "blurb": {
-    "age7": "In Detroit, after the car factories closed, some young musicians made whole songs out of machines and called it music about the future.",
-    "age13": "Detroit lost most of its car-making jobs and a large share of its population in the decades before 1981. A radio DJ called the Electrifying Mojo played European electronic music right next to funk, which gave young Detroiters like Juan Atkins a reason to combine the two. They named the result techno themselves, on their own labels.",
-    "adult": "Detroit techno emerged from the city's deindustrialization and the resulting cheap rent and secondhand gear, filtered through the Electrifying Mojo's unusually unsegregated radio programming. Its makers named the genre themselves and mostly kept ownership of their masters through artist-run labels like Metroplex, a rarity in this dataset."
-  },
+  "blurb": "Detroit lost most of its car-making jobs and a large share of its population in the decades before 1981, which left cheap rent and cheap secondhand equipment behind. A radio DJ called the Electrifying Mojo played European electronic music right next to funk, at a time when most radio kept Black and white music apart, which gave young Detroiters like Juan Atkins a reason to combine the two. They named the result techno themselves and released it on their own labels, like Metroplex, so they mostly kept ownership of their recordings, which is rare on this map.",
   "geopolitics": "Detroit lost a vast share of its manufacturing jobs and more than half its population across the second half of the twentieth century. The 1967 uprising and subsequent white flight hollowed the tax base. Cheap rent and cheap secondhand equipment are consequences of that collapse, and so is the imagery: music about machines and the future, made by young Black men in a city that machines had just finished with.",
   "whatWasNew": "European electronic form married to American funk feel, with no live instrumentation and no apology for sounding synthetic. Named as a genre by its own makers rather than by journalists.",
   "production": "Home studios, drum machines and sequencers, mixed on modest equipment. Metroplex and Transmat were artist-owned, which is unusual and matters.",

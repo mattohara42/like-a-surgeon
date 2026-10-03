@@ -18,11 +18,7 @@
     },
     "melody": "the shared melodic contour, played on synthesized voices, not sampled from either record"
   },
-  "caption": {
-    "age7": "Same tune, two different outfits. Switch between them.",
-    "age13": "The notes do not change. What changes is speed, the sharpness of the sound, and what the drums are doing. That is most of what made the second record feel new.",
-    "adult": "Deliberately synthesized rather than sampled. Isolating the melodic contour from its two treatments demonstrates the interpolation question better than either recording would."
-  },
+  "caption": "The notes do not change. What changes is speed, the sharpness of the sound, and what the drums are doing, and that is most of what made the second record feel new. This is synthesized on purpose rather than sampled: pulling the melody away from both recordings shows how one was built from the other better than either record could.",
   "safety": {
     "maxGain": 0.7
   }

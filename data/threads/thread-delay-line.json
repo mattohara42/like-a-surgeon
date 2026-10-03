@@ -2,58 +2,32 @@
   "id": "thread-delay-line",
   "title": "The Delay Line",
   "subtitle": "From a repair shop in Kingston to London punk and a Bristol album",
-  "intro": {
-    "age7": "Follow an echo from Jamaica all the way to London.",
-    "age13": "A man who fixed radios in Kingston figured out that you could take a song apart and make the leftover space into the music. Follow that idea across an ocean and watch it change punk.",
-    "adult": "Traces the dub structural logic from Tubby and Perry into English punk and post-punk, and shows the difference between surface borrowing and structural transfer."
-  },
+  "intro": "A man who fixed radios in Kingston figured out that you could take a song apart and make the leftover space into the music. Follow that idea from King Tubby and Lee Perry across an ocean into English punk and post-punk, and watch the difference between borrowing how dub sounds and borrowing how it is built.",
   "steps": [
     {
       "nodeId": "king-tubby",
-      "framing": {
-        "age13": "Start in Kingston with King Tubby, who repaired electronics for a living and rebuilt his own mixing desk. His idea was to take a finished song apart and let the gaps become the music.",
-        "adult": "The thread starts with a technique rather than a record: a mixing desk used to take things away, so that space and echo carry the track."
-      }
+      "framing": "Start in Kingston with King Tubby, who repaired electronics for a living and rebuilt his own mixing desk. The thread starts with a technique rather than a record: a desk used to take a finished song apart, so that the gaps and the echo carry the track."
     },
     {
       "edgeId": "e-perry-clash-cover",
-      "framing": {
-        "age13": "Lee Perry was working in Kingston in the same years. By 1977 a song he had produced turned up on a London punk album, covered by the Clash and six minutes long.",
-        "adult": "The first crossing is a cover: a Perry production carried into a punk album more or less as a song, which is borrowing at the surface."
-      }
+      "framing": "Lee Perry was working in Kingston in the same years. By 1977 a song he had produced turned up on a London punk album, covered by the Clash and six minutes long. This first crossing is a cover, carried over more or less as a song: borrowing at the surface."
     },
     {
       "edgeId": "e-perry-clash-production",
-      "framing": {
-        "age13": "Next the Clash brought Perry himself to London to produce them. Listen to how little the result sounds like his own records: a studio sound is hard to carry across.",
-        "adult": "The second crossing moves a person rather than a song. The distance between the finished single and Perry's own studio sound is the point of this stop."
-      }
+      "framing": "Next the Clash brought Perry himself to London to produce them, so this crossing moves a person rather than a song. Listen to how little the finished single sounds like his own records: a studio sound is hard to carry across, and that gap is the point of this stop."
     },
     {
       "edgeId": "e-tubby-pil",
-      "framing": {
-        "age13": "The deepest crossing comes last. PiL took dub's shape, not its sound: the bass in front, the guitar as texture, the silence on purpose.",
-        "adult": "The thread ends on structural transfer, the kind of influence that is hardest to document, which is why this edge is held at consensus rather than documented."
-      }
+      "framing": "The deepest crossing comes here. PiL took dub's shape, not its sound: the bass in front, the guitar as texture, the silence on purpose. That kind of influence is the hardest to document, which is why this connection is held at consensus rather than documented."
     },
     {
       "edgeId": "e-tubby-madprofessor",
-      "framing": {
-        "age13": "Back to the desk. In London in 1979, Mad Professor, who had also trained in electronics, built his own mixing board and used it the way Tubby had, keeping dub going in a new country.",
-        "adult": "The thread returns to the technique itself, carried into the UK's Jamaican community. Held at consensus: the parallel with Tubby is strong and widely noted, but not a documented apprenticeship."
-      }
+      "framing": "Back to the desk. In London in 1979, Mad Professor, who had also trained in electronics, built his own mixing board and used it the way Tubby had, carrying the technique into Britain's Jamaican community. This is held at consensus: the likeness to Tubby is strong and widely noted, but there was no documented apprenticeship."
     },
     {
       "edgeId": "e-madprofessor-massiveattack",
-      "framing": {
-        "age13": "In 1995 a Bristol band, Massive Attack, asked Mad Professor to remake their whole album as dub. The echo that started on a rebuilt desk in Kingston ended up remaking a whole album from Bristol.",
-        "adult": "The line ends with an invitation rather than an influence: a band descended from a UK sound system asks a dub engineer to rebuild its record, and the structural logic the thread began with is applied to it wholesale."
-      }
+      "framing": "In 1995 a Bristol band, Massive Attack, which grew out of a UK sound system, asked Mad Professor to remake their whole album as dub. The line ends with an invitation rather than an influence: the echo that started on a rebuilt desk in Kingston ended up rebuilding a whole album from Bristol."
     }
   ],
-  "outro": {
-    "age7": "The echo kept travelling and it never really stopped.",
-    "age13": "An idea from one studio in Kingston crossed to London twice: once into punk, and once through Mad Professor into a Bristol album. Once you know what dub does, you will hear its space and echo in records that sound nothing like reggae.",
-    "adult": "Two routes out of Kingston: borrowing and structural transfer into punk and post-punk, and direct continuation through Mad Professor into Bristol. The thread could go on through jungle and later bass music once those records are on the map."
-  }
+  "outro": "An idea from one studio in Kingston crossed to London twice: once into punk and post-punk, by borrowing and then by copying its structure, and once straight on through Mad Professor into a Bristol album. Once you know what dub does, you will hear its space and echo in records that sound nothing like reggae. The thread could go on through jungle and later bass music once those records are on the map."
 }

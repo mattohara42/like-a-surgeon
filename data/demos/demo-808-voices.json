@@ -45,11 +45,7 @@
     },
     "note": "Synthesized recreation (SQUELCH's 808 worklet). The beat is an original electro-style pattern, not taken from any record. The kick is a sine with a fast pitch drop, the snare a tuned body plus filtered noise, the clap a burst of noise gated three times then a tail."
   },
-  "caption": {
-    "age7": "Press the buttons. These are the drum sounds from a machine, not a real drum kit.",
-    "age13": "Turn the kick's decay all the way up. It stops sounding like a drum hit and rings on like a bass note. That trick is behind a lot of hip-hop's low end.",
-    "adult": "Synthesized approximation of the TR-808 voice architecture. The 808's kick has tone and decay controls but no tuning; the long decay is the specific parameter that reframed the machine's perceived weakness as its value."
-  },
+  "caption": "A synthesized copy of how the TR-808 makes its sounds. The 808's kick has tone and decay controls but no tuning. Turn its decay all the way up and it stops sounding like a drum hit and rings on like a bass note. That long decay turned what people heard as the machine's weakness into its value, and it is behind a lot of hip-hop's low end.",
   "safety": {
     "maxGain": 0.7
   }

@@ -2,46 +2,26 @@
   "id": "thread-machine-nobody-wanted",
   "title": "The Machine Nobody Wanted",
   "subtitle": "Two Roland failures that rebuilt popular music",
-  "intro": {
-    "age7": "Two machines nobody wanted to buy changed music forever.",
-    "age13": "Roland made a drum machine and a bass machine that both failed. Because they failed they got cheap, and because they got cheap the right people got hold of them.",
-    "adult": "The economic chain from commercial failure to affordability to genre formation, told through the 808 and the 303."
-  },
+  "intro": "Roland made a drum machine and a bass machine that both failed. Because they failed they got cheap, and because they got cheap the right people got hold of them and built new kinds of music. This is that chain, told through the 808 and the 303.",
   "steps": [
     {
       "nodeId": "tr-808",
-      "framing": {
-        "age13": "Start with a drum machine that failed. The 808 did not sound like a drum kit, so it sold badly and was dropped after about three years. Press play and hear what people did not want.",
-        "adult": "The first failure: an instrument judged on realism, discontinued after roughly three years, and left to the secondhand market."
-      },
+      "framing": "Start with a drum machine that failed. The 808 was judged on whether it sounded like a real drum kit, and it did not, so it sold badly, was dropped after about three years, and was left to the secondhand market. Press play and hear what people did not want.",
       "demoId": "demo-808-voices"
     },
     {
       "edgeId": "e-808-planetrock",
-      "framing": {
-        "age13": "On 'Planet Rock' in 1982, the 808's machine sound is not a problem to hide. It is the point.",
-        "adult": "The reframing: the quality that sank the machine in shops becomes the reason to use it."
-      }
+      "framing": "On 'Planet Rock' in 1982, the 808's machine sound is not a problem to hide. It is the point: the quality that sank the machine in shops became the reason to use it."
     },
     {
       "nodeId": "tb-303",
-      "framing": {
-        "age13": "Roland's second failure was sold as a fake bass player. It was hard to program and did not sound like a bass guitar. Turn its knobs while it plays, which is exactly what nobody at Roland expected.",
-        "adult": "The pattern repeats with the 303: a product that missed its market, a cheap secondhand supply, and a use nobody designed for."
-      },
+      "framing": "Roland's second failure, the 303, was sold as a fake bass player. It was hard to program and did not sound like a bass guitar, so the same pattern repeated: it missed its market, turned up cheap secondhand, and found a use nobody had designed for. Turn its knobs while it plays, which is exactly what nobody at Roland expected.",
       "demoId": "demo-303-twist"
     },
     {
       "edgeId": "e-303-phuture",
-      "framing": {
-        "age13": "In Chicago, Phuture got a secondhand 303 without its manual and turned the knobs while it played. A whole genre is named after the sound that came out.",
-        "adult": "Access by people with no stake in the intended use: the step the whole thread has been building toward."
-      }
+      "framing": "In Chicago, Phuture got a secondhand 303 without its manual and turned the knobs while it played. A whole genre is named after the sound that came out. This is the step the thread has been building to: a machine reaching people with no stake in how it was meant to be used."
     }
   ],
-  "outro": {
-    "age7": "Being bad at the job you were built for is sometimes the best thing that can happen.",
-    "age13": "Neither machine was used the way it was designed. That is the pattern to watch for everywhere else on this map.",
-    "adult": "Sets up the machine-as-protagonist reading that recurs through the sampler, the four-track, and the dub plate."
-  }
+  "outro": "Neither machine was used the way it was designed. That is the pattern to watch for everywhere else on this map: it comes back with the sampler, the four-track and the dub plate."
 }

@@ -61,26 +61,17 @@
     ],
     "versions": [
       {
-        "label": {
-          "age13": "Clean",
-          "adult": "Clean"
-        },
+        "label": "Clean",
         "fx": []
       },
       {
-        "label": {
-          "age13": "Fuzz box",
-          "adult": "Fuzz"
-        },
+        "label": "Fuzz box",
         "fx": [
           "fuzz"
         ]
       },
       {
-        "label": {
-          "age13": "Slashed speaker",
-          "adult": "Torn cone"
-        },
+        "label": "Slashed speaker",
         "fx": [
           "torn-speaker"
         ]
@@ -88,11 +79,7 @@
     ],
     "note": "An original power-chord riff on a synthesized plucked string (the string worklet), with 909 drums keeping time. Only the guitar goes through the effects. The fuzz is an asymmetric waveshaper and a tone filter. The torn speaker is a softer waveshaper plus a rattle: the signal multiplied by noise and band-passed, so the rattle is as loud as the chord and dies with it. Neither models the FZ-1's circuit or Davies's amplifier."
   },
-  "caption": {
-    "age7": "The same guitar, clean, then fuzzy, then buzzing from a broken speaker.",
-    "age13": "The same riff three ways. A is a clean guitar. B runs it through a fuzz box, which squashes each chord into a buzzing, held tone, the kind of sound Keith Richards used on 'Satisfaction'. C runs it through a torn speaker, like the amp Dave Davies slashed with a razor blade for 'You Really Got Me'. Listen for the papery rattle riding on each chord.",
-    "adult": "Two routes to distortion within a year of each other. The fuzz box clips the signal on purpose, in a circuit built to do it. The slashed cone is damage: the rattle is a torn speaker flapping, so it is loudest when the guitar is loudest and dies away with each chord. The three versions are matched in loudness, so the difference is the character of the sound, not its volume."
-  },
+  "caption": "The same riff three ways, showing two routes to distortion found within a year of each other. A is a clean guitar. B runs it through a fuzz box, a circuit built to clip the signal on purpose, which squashes each chord into a buzzing, held tone, the kind of sound Keith Richards used on 'Satisfaction'. C runs it through a torn speaker, like the amp Dave Davies slashed with a razor blade for 'You Really Got Me'. That rattle is damage, the torn cone flapping, so it is loudest when the guitar is loudest and dies away with each chord. Listen for it riding on each chord. The three are matched in loudness, so what you hear is the character of the sound, not its volume.",
   "safety": {
     "maxGain": 0.55
   }

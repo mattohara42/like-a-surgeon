@@ -2,56 +2,32 @@
   "id": "thread-loud-guitars",
   "title": "Loud Guitars",
   "subtitle": "From a slashed speaker to post-punk",
-  "intro": {
-    "age13": "Loud guitar started with damage: a speaker cut with a razor blade. Follow that sound through the Who, punk, and the bands that came after punk.",
-    "adult": "Traces a line of amplified aggression from 1964 to 1979, through imitation, covers, rivalry and refusal. Two of its links are held at consensus, and the thread says which."
-  },
+  "intro": "Loud guitar started with damage: a speaker cut with a razor blade. Follow that sound from 1964 to 1979, through the Who, punk, and the bands that came after punk, by way of imitation, covers, rivalry and refusal. Two of its links are held at consensus, and the thread says which.",
   "steps": [
     {
       "edgeId": "e-elpico-kinks",
-      "framing": {
-        "age13": "Start in 1964 with a cut-up speaker. Dave Davies of the Kinks slashed his amp's speaker cone with a razor blade, and the buzzing, torn chords on 'You Really Got Me' come from that damage. Try the demo to hear clean, fuzz and slashed side by side.",
-        "adult": "The thread starts with a machine and an event that are the same thing: one amplifier, damaged once, on purpose."
-      }
+      "framing": "Start in 1964 with a cut-up speaker. Dave Davies of the Kinks slashed his amp's speaker cone with a razor blade, and the buzzing, torn chords on 'You Really Got Me' come from that damage: one amplifier, damaged once, on purpose. Try the demo to hear clean, fuzz and slashed side by side."
     },
     {
       "edgeId": "e-kinks-who",
-      "framing": {
-        "age13": "The Who wrote 'I Can't Explain' to sound like the Kinks, and they used the same producer, Shel Talmy, to get there.",
-        "adult": "Influence brokered by a producer: Talmy produced both bands, and the imitation was commercial strategy rather than homage."
-      }
+      "framing": "The Who wrote 'I Can't Explain' to sound like the Kinks, and they used the same producer, Shel Talmy, to get there. Talmy produced both bands, and the imitation was a business plan rather than a tribute."
     },
     {
       "edgeId": "e-who-sexpistols",
-      "framing": {
-        "age13": "The first song the Sex Pistols played at their first gig, in 1975, was the Who's 'Substitute' from 1966. Punk said it was starting from nothing, but its set lists say otherwise.",
-        "adult": "Punk's rhetoric of year zero against its own set list: the Pistols opened their first gig with a 1966 Who single."
-      }
+      "framing": "The first song the Sex Pistols played at their first gig, in 1975, was the Who's 'Substitute' from 1966. Punk said it was starting from nothing, but its set lists say otherwise."
     },
     {
       "edgeId": "e-pistols-clash",
-      "framing": {
-        "age13": "The Sex Pistols and the Clash shared stages and had rival managers in the same small London scene in 1976. Neither simply copied the other.",
-        "adult": "Held at consensus: a shared scene rather than a documented act of influence, and the thread does not draw a firmer line than the evidence does."
-      }
+      "framing": "The Sex Pistols and the Clash shared stages and had rival managers in the same small London scene in 1976. Neither simply copied the other. This one is held at consensus: a shared scene rather than a documented act of influence, and the thread does not draw a firmer line than the evidence does."
     },
     {
       "edgeId": "e-pistols-pil",
-      "framing": {
-        "age13": "Then John Lydon left the Sex Pistols and formed Public Image Ltd. He has said plainly that he built it to get away from what punk had become.",
-        "adult": "A reaction-against edge, documented in Lydon's own words many times: influence as refusal."
-      }
+      "framing": "Then John Lydon left the Sex Pistols and formed Public Image Ltd. He has said plainly, many times, that he built it to get away from what punk had become. This is influence as refusal."
     },
     {
       "edgeId": "e-pil-joydivision",
-      "framing": {
-        "age13": "PiL and Joy Division belong to the same post-punk moment, both built around a big, dominant bass sound. Nobody has documented direct contact between them, so treat this last line as a likeness, not a handoff.",
-        "adult": "The thread ends on a scene-level claim held at consensus, where loud guitar gives way to bass-led, atmospheric music."
-      }
+      "framing": "PiL and Joy Division belong to the same post-punk moment, both built around a big, dominant bass sound, and here loud guitar gives way to bass-led, atmospheric music. Nobody has documented direct contact between them, so this last line is held at consensus: treat it as a likeness, not a handoff."
     }
   ],
-  "outro": {
-    "age13": "From one slashed speaker to bands that turned the bass up and let the guitar become texture. Loud guitar music kept going after this, and those later records are still to be added to the map.",
-    "adult": "Ends in 1979 for now. The later loud-guitar records are not on the map yet, so the thread stops where the map does."
-  }
+  "outro": "From one slashed speaker to bands that turned the bass up and let the guitar become texture. The thread ends in 1979 for now: loud guitar music kept going after this, and the thread stops where the map does until those later records are added."
 }

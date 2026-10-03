@@ -66,11 +66,7 @@
     },
     "note": "Synthesized with SQUELCH's 303 worklet: a sawtooth into a four-pole ladder filter with resonance, accent and slide. The sixteen-step line is original, not taken from any record."
   },
-  "caption": {
-    "age7": "The notes stay the same. Move the slider and listen to the sound change shape.",
-    "age13": "Every knob here changes how the sound is filtered, not which note is played. Push resonance high and open the cutoff slowly. That squelch is what acid house is named after.",
-    "adult": "A four-pole ladder filter with high resonance, modelled on the 303's, plus its slide and accent behaviour. The parameter space is the instrument, not the note sequence."
-  },
+  "caption": "Every knob here changes how the sound is filtered, not which note is played. The filter is modelled on the 303's own, a four-pole ladder filter, along with its slide and accent. Push resonance high and open the cutoff slowly. That squelch is what acid house is named after: the instrument is the knobs, not the notes.",
   "safety": {
     "maxGain": 0.6
   }

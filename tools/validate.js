@@ -184,6 +184,12 @@ function looksLikeId(value) {
 }
 
 function checkRegisterObject(where, fieldName, value) {
+  // Merged text (one string, no reading levels) is replacing register
+  // objects record by record.
+  if (typeof value === 'string') {
+    if (!value.trim()) fail(`${where}: ${fieldName} must be non-empty`);
+    return;
+  }
   if (value == null || typeof value !== 'object') {
     fail(`${where}: ${fieldName} must be a register object`);
     return;

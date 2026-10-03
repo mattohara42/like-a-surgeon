@@ -8,11 +8,7 @@
   "city": ["London", "Manchester", "Leeds"],
   "country": "UK",
   "hook": "Punk's negation turned into experimentation: dub bass, funk rhythm, and art-school theory smuggled back into guitar music punk had tried to strip bare.",
-  "blurb": {
-    "age7": "After punk, some bands got even stranger and more experimental, mixing in reggae bass sounds and unusual, artistic ideas.",
-    "age13": "Bands like Public Image Ltd, Joy Division, and Gang of Four took punk's energy but rejected its simple three-chord format, bringing in dub reggae's bass-heavy sound, funk rhythm, and political theory instead.",
-    "adult": "Post-punk (roughly 1978-84) treated punk's rejection of the mainstream as a starting point rather than an endpoint, pulling in dub reggae's structural logic (PiL), Situationist and Marxist theory (Gang of Four), and a bleaker, more atmospheric guitar sound shaped partly by industrial Manchester and Leeds (Joy Division, Gang of Four). It is the point where this dataset's dub lineage most directly crosses into British guitar rock."
-  },
+  "blurb": "Post-punk, from roughly 1978 to 1984, treated punk's rejection of the mainstream as a starting point rather than an ending. Bands like Public Image Ltd, Joy Division and Gang of Four took punk's energy but dropped its simple three-chord format. They brought in the way dub reggae is built, with the bass in front (PiL), funk rhythm, Situationist and Marxist political theory (Gang of Four), and a bleaker, more atmospheric guitar sound shaped partly by industrial Manchester and Leeds (Joy Division, Gang of Four). It is where this map's dub lineage most directly crosses into British guitar rock.",
   "geopolitics": "Late-1970s Britain under growing economic strain and, from 1979, Thatcherite austerity; Manchester and Leeds in particular were deep into industrial decline, which shaped the bleaker, more overtly political tone of bands from those cities compared to London's scene.",
   "whatWasNew": "Applying dub reggae's structural approach (bass and space as the song's foundation) and explicit political or theoretical content to guitar-based rock, rather than treating punk's simplicity as a fixed rulebook.",
   "production": "A mix of major-label deals (Gang of Four on EMI internationally) and fiercely independent operations, most famously Tony Wilson's Factory Records in Manchester, known as much for its design and ethos as its music.",

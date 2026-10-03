@@ -25,27 +25,17 @@
     ],
     "versions": [
       {
-        "label": {
-          "age13": "Full quality",
-          "adult": "Full quality"
-        },
+        "label": "Full quality",
         "fx": []
       },
       {
-        "label": {
-          "age13": "Through the SP-1200",
-          "adult": "12-bit, 26.04 kHz"
-        },
+        "label": "Through the SP-1200 (12-bit, 26.04 kHz)",
         "fx": ["crusher"]
       }
     ],
     "note": "An original beat on the 909 kit, played at full quality, then resampled at the SP-1200's 26.04 kHz and 12 bits with each sample held and no smoothing afterwards (Wikipedia, E-mu SP-1200: the reconstruction filter was deliberately omitted). A crusher worklet, not a model of the machine's converters or its analog filters."
   },
-  "caption": {
-    "age7": "Switch it on and the drums get a little bit crunchy at the top.",
-    "age13": "Switch to B and listen to the hi-hats. The SP-1200 stored sound as 12-bit numbers, 26,040 times a second, and its makers left out the filter that would have smoothed the result. That puts a slight crunchy edge on the top of everything, and hip-hop producers wanted it.",
-    "adult": "B resamples the loop at the SP-1200's rate and resolution and holds each sample with no reconstruction filter, so images above the Nyquist frequency brighten the top end. The difference is meant to be small: it is the slight crunch the machine is known for, not a lo-fi effect. The other half of the machine's story, ten seconds of sampling time, cannot be heard in a loop this short."
-  },
+  "caption": "Switch to B and listen to the hi-hats. The SP-1200 stored sound as 12-bit numbers, 26,040 times a second, and its makers left out the filter that would have smoothed the result. B does the same to this loop, so stray high frequencies brighten the top end. The difference is meant to be small: a slight crunchy edge on everything, not a lo-fi effect, and hip-hop producers wanted it. The other half of the machine's story, only ten seconds of sampling time, cannot be heard in a loop this short.",
   "safety": {
     "maxGain": 0.7
   }

@@ -4,10 +4,7 @@
   "kind": "ab",
   "params": {
     "a": {
-      "label": {
-        "age13": "Bass guitar",
-        "adult": "Plucked string"
-      },
+      "label": "Bass guitar",
       "pattern": {
         "bpm": 100,
         "steps": 16,
@@ -25,10 +22,7 @@
       }
     },
     "b": {
-      "label": {
-        "age13": "Synth bass",
-        "adult": "Mono synth"
-      },
+      "label": "Synth bass",
       "pattern": {
         "bpm": 100,
         "steps": 16,
@@ -48,11 +42,7 @@
     },
     "note": "The bassline is original, not the 'Flash Light' part. The bass guitar is Karplus-Strong synthesis (a burst of noise circulating in a delay one period long); the synth is three detuned sawtooths into two low-passes with a filter envelope, gliding on the walk-down. Neither models a specific instrument's circuit. The 909 drums are a stand-in drummer."
   },
-  "caption": {
-    "age7": "The same tune played on a bass guitar, then on a synthesizer.",
-    "age13": "Same notes, same drums. A sounds like a plucked string. B is a synthesizer: three buzzing oscillators and a filter that opens on every note, sliding between the last notes. On 'Flash Light', Bernie Worrell played the bass part on linked Minimoogs, and Bootsy Collins, the band's bass player, played drums instead.",
-    "adult": "Every note, accent and drum hit is shared between the two sides, so only the instrument changes. The plucked string decays from the moment it is struck. The synth holds its level for as long as the note is held, and it can glide from note to note, which no fretted string does without a slide. In funk, where the bass had carried the groove, that is a different instrument doing the same job."
-  },
+  "caption": "Same notes, same accents, same drums, so only the instrument changes. A sounds like a plucked string, which starts to fade the moment it is struck. B is a synthesizer: three buzzing oscillators and a filter that opens on every note. It holds its level for as long as the note is held, and it glides between the last notes, which no fretted string can do without a slide. In funk, where the bass carried the groove, that is a different instrument doing the same job. On 'Flash Light', Bernie Worrell played the bass part on linked Minimoogs, and Bootsy Collins, the band's bass player, played drums instead.",
   "safety": {
     "maxGain": 0.55
   }
