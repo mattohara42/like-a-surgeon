@@ -62,11 +62,6 @@ export const CONFIG = {
     // The target is narrowed to the node's own name when that is shorter
     // than halfWidthPx, plus this much either side.
     hitNamePadPx: 6,
-    // How long the pointer must rest on a node before its edges light.
-    // Passing over nodes lights nothing: at mid zoom the dots sit closer
-    // than their names are wide, and lighting on every enter flashed whole
-    // edge sets on and off as the mouse moved.
-    hoverDwellMs: 160,
     radius: { collapsed: 3, mid: 7, detail: 10 },
     strokeWidth: 1.5,
     hoverStrokeWidth: 3,
@@ -130,8 +125,8 @@ export const CONFIG = {
     // then the stronger evidence tiers, then edges between hubs. Lit edges
     // (selection, hover, a thread's route) always draw, whatever the budget.
     quietBudget: { collapsed: 45, mid: 100, detail: Infinity },
-    // How long the pointer must rest on an edge before it lights, as with
-    // CONFIG.node.hoverDwellMs: passing over lights nothing.
+    // How long the pointer must rest on an edge before it lights: passing
+    // over lights nothing.
     hoverDwellMs: 160,
     opacity: 0.5,
     hoverOpacity: 0.95,

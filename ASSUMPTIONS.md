@@ -4760,3 +4760,25 @@ small and worth having in front of Matt alongside everything else here.
     our 1974, 'Get Your Wings' came out in 1974), 'Alright' (2014 vs 2015)
     and the Chili Peppers' 'Fire' (1983, which cannot be the 'Mother's
     Milk' recording).
+
+## Added with the hover rethink
+
+- **A345. Hovering a node rings it and changes nothing else.** Matt reported
+  on 2026-10-17 that the map still flickered on mouseover, after A277, A311
+  and A342, and asked for hover to go or be rethought. He chose ring only.
+  Measured in headless Chromium at 1280x800 before the change: resting on a
+  node at mid zoom added up to 13 edges to the map 160 ms later (King Tubby),
+  and a slow sweep across the map added and removed 33 edges. The dwell from
+  A311 only delayed the pop. Separately, the render that lit the edges also
+  restyled the hovered node's ring back to its lineage colour, so the white
+  hover ring flashed off 160 ms after it appeared.
+  - A node's edges now light only for the selection (and a thread's route),
+    never for hover. `CONFIG.node.hoverDwellMs` is gone.
+  - Hover still rings the node in white, and every render keeps that style
+    while the pointer stays (`render/nodes.js` `styleRing`).
+  - Edge hover is unchanged: one edge brightens after
+    `CONFIG.edge.hoverDwellMs`, and nothing else on the map moves.
+  - After the change the same probes show no edges added or removed on
+    hover or sweep, and a click still lights the node's edges.
+  - Hover now carries no information a click does not, which also suits
+    the touch wall-panel build, where there is no hover.
