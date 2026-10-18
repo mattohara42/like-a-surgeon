@@ -264,9 +264,6 @@ export function createGraph(container, data, callbacks = {}) {
   // Carried across rebuilds by the caller, since a layer toggle recreates
   // the whole graph.
   let selectedId = initialSelectedId;
-  // The node under the pointer, whose edges light up like a selection's.
-  let hoveredNodeId = null;
-  let hoverTimer = null;
   // The edge the pointer is resting on, lit once it has rested.
   let edgeHoverTimer = null;
   // Nodes ringed as "what the selected node touched", for Follow the
@@ -779,21 +776,12 @@ export function createGraph(container, data, callbacks = {}) {
           const created = createNodeElement(
             node,
             (n) => selectAndFlyTo(n, pos.x1, pos.y, onSelectNode),
+            // Hover rings the node and changes nothing else on the map
+            // (A345). Lighting its edges on hover made whole edge sets pop
+            // in and out as the pointer moved; they light on click.
             (n, hovered) => {
               const current = nodeElements.get(n.id);
               if (current) setNodeHovered(current, hovered, vp.scale);
-              clearTimeout(hoverTimer);
-              if (hovered) {
-                // The ring answers at once; the edges wait for the pointer
-                // to rest (CONFIG.node.hoverDwellMs).
-                hoverTimer = setTimeout(() => {
-                  hoveredNodeId = n.id;
-                  scheduleRender();
-                }, CONFIG.node.hoverDwellMs);
-              } else if (hoveredNodeId === n.id) {
-                hoveredNodeId = null;
-                scheduleRender();
-              }
             },
           );
           nodesG.appendChild(created);
@@ -816,8 +804,8 @@ export function createGraph(container, data, callbacks = {}) {
 
     // Edges are quiet by default and lit only around what the reader is
     // looking at: the selected edge, and every edge touching the selected
-    // or hovered node (A253). The quiet and lit looks live in index.html.
-    const litNodes = new Set([selectedId, hoveredNodeId].filter((id) => id && positionById.has(id)));
+    // node (A253, A345). The quiet and lit looks live in index.html.
+    const litNodes = new Set([selectedId].filter((id) => id && positionById.has(id)));
     const isLit = (edge) =>
       edge.id === selectedId || pathEdgeIds.has(edge.id) || litNodes.has(edge.from.id) || litNodes.has(edge.to.id);
     const edgeInView = ({ minX, maxX, minY, maxY }) =>
@@ -1046,7 +1034,6 @@ export function createGraph(container, data, callbacks = {}) {
       scheduleRender();
     },
     destroy: () => {
-      clearTimeout(hoverTimer);
       clearTimeout(edgeHoverTimer);
       resizeObserver.disconnect();
       transport?.stop();

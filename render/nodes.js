@@ -203,17 +203,14 @@ export function updateNodeElement(g, node, position, zoomLevel, scale, degreeFac
     opacity: CONFIG.node.haloOpacity,
   });
 
-  setAttrs(ring, {
-    cx: 0, cy: 0,
-    r: radius + CONFIG.node.ringGap / scale,
-    stroke: color,
-    'stroke-width': 0.9 / scale,
-    'stroke-opacity': isMachine ? 0.55 : 0.38,
-  });
+  setAttrs(ring, { cx: 0, cy: 0, r: radius + CONFIG.node.ringGap / scale });
   // Hover recolours the ring white and no render is scheduled on mouse
   // leave, so un-hover has to restore the colour itself rather than wait
-  // for the next frame.
+  // for the next frame. Every render restyles the ring through
+  // styleRing, so a render while hovered keeps it white instead of
+  // flipping it back to its lineage colour.
   ring.dataset.baseStroke = color;
+  styleRing(g, scale);
 
   if (isMachine) {
     const ticks = g.querySelectorAll('.node-ticks line');
@@ -287,8 +284,12 @@ export function setNodeBreathing(g, on) {
 
 export function setNodeHovered(g, hovered, scale) {
   g.classList.toggle('node-hovered', hovered);
+  styleRing(g, scale);
+}
+
+function styleRing(g, scale) {
   const ring = g.querySelector('.node-ring');
-  if (hovered) {
+  if (g.classList.contains('node-hovered')) {
     ring.setAttribute('stroke', '#fff');
     ring.setAttribute('stroke-width', String(CONFIG.node.hoverStrokeWidth / scale));
     ring.setAttribute('stroke-opacity', '0.9');
